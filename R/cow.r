@@ -1,5 +1,6 @@
 #' Sling messages and warnings with flair
 #' 
+#' @importFrom lubridate with_tz
 #' @param what What do you want to say?
 #' @param by Type of thing, one of cow, chicken, poop
 #' @param type One of message (default), warning, or string (returns string)

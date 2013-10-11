@@ -1,8 +1,14 @@
 Package: cowsay
-Title: 
-Description: 
-Version: 0.1
-Authors@R: # getOptions('devtools.desc.author')
-Depends: R (>= 3.0.2)
-License: # getOptions('devtools.desc.license')
-LazyData: true
+Title: messages/warnings/etc. with ascii art
+Description: messages/warnings/etc. with ascii art
+Version: 0.00000000001
+Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com"))
+Depends:
+    R (>= 3.0.2)
+License: MIT
+Imports:
+    lubridate
+Collate:
+    'cow.r'
+    'cowsay-package.r'
