@@ -1,6 +1,6 @@
 #' Sling messages and warnings with flair
 #' 
-#' @importFrom lubridate with_tz
+#' @importFrom lubridate now
 #' @param what What do you want to say?
 #' @param by Type of thing, one of cow, chicken, poop
 #' @param type One of message (default), warning, or string (returns string)
@@ -15,6 +15,7 @@
 #' say("ain't that some shit", "poop")
 #' say("ain't that some shit", "poop", "warning")
 #' say("ain't that some shit", "poop", "string")
+#' say("icanhazpdf?", "cat")
 #' @export
 
 say <- function(what="Hello world!", by="cow", type="message")
@@ -43,21 +44,42 @@ say <- function(what="Hello world!", by="cow", type="message")
     ( \\_
   _(_\\\ \\)__
  (____\\\ ___)) "
-  by <- match.arg(by, choices=c("cow","chicken","poop"))
+  
+  cat <- 
+    "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+               \\`*-.
+                 )  _`-.                 
+                .  : `. .                
+                : _   '  \               
+                ; *` _.   `*-._          
+                `-.-'          `-.       
+                  ;       `       `.     
+                  :.       .       \\
+                  .\\  .   :   .-'   .   
+                  '  `+.;  ;  '      :   
+                  :  '  |    ;       ;-. 
+                  ; '   : :`-:     _.`* ;
+               .*' /  .*' ; .*`- +'  `*' 
+               `*-*   `*-*  `*-*'        
+    "
+  
+  ant <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+       '\\__
+      (o )     ___
+      <>(_)(_)(___)
+        < < > >
+        ' ' ` `
+  "  
+    
+    
+  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant"))
   if(what=="time")
-    what <- with_tz(Sys.time(), "")
+    what <- now()
   switch(type, 
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),
          string = sprintf(eval(parse(text=by)), what))
 }
-
-# aardvark <- 
-# message("
-#              _.---._    /\\\\\ 
-#           ./'       '--`\\//
-#       ./              o \\\ 
-#     /./\\\  )______   \__ \\\
-#     \\. /  / / \\\ \\\   | \\\ \\\  \\\ \\\ ")
-#     / /  \\\ \\\  | |\\\ \\\  \\\7
-# ")
