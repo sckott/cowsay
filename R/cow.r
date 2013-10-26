@@ -89,7 +89,17 @@ say <- function(what="Hello world!", by="cow", type="message")
           ''*-.,_______,.-*'
   "
   
-  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin"))
+  ghost <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+     .-.
+    (o o)
+    | O \\\
+     \\\   \\\
+      `~~~'
+  "
+  
+  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin","ghost"))
   if(what=="time")
     what <- now()
   switch(type, 
