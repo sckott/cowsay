@@ -26,5 +26,7 @@ say("ain't that some shit", "poop")
 say("ain't that some shit", "poop")
 say("ain't that some shit", "poop", "warning")
 say("ain't that some shit", "poop", "string")
+say("icanhazpdf?", "cat")
+say("boo!", "pumpkin")
 }
 

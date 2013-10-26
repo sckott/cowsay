@@ -1,2 +1,2 @@
 export(say)
-importFrom(lubridate,with_tz)
+importFrom(lubridate,now)

@@ -16,6 +16,7 @@
 #' say("ain't that some shit", "poop", "warning")
 #' say("ain't that some shit", "poop", "string")
 #' say("icanhazpdf?", "cat")
+#' say("boo!", "pumpkin")
 #' @export
 
 say <- function(what="Hello world!", by="cow", type="message")
@@ -73,9 +74,22 @@ say <- function(what="Hello world!", by="cow", type="message")
         < < > >
         ' ' ` `
   "  
-    
-    
-  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant"))
+  
+  pumpkin <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+                  ___
+               ___)__|_
+          .-*'          '*-,
+         /      /|   |\\\     \\\
+        ;      /_|   |_\\\     ;
+        ;   |\\\           /|  ;
+        ;   | ''--...--'' |  ;
+         \\\  ''---.....--''  /
+          ''*-.,_______,.-*'
+  "
+  
+  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin"))
   if(what=="time")
     what <- now()
   switch(type, 
