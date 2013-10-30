@@ -1,8 +1,10 @@
 #' Sling messages and warnings with flair
 #' 
 #' @importFrom lubridate now
+#' @import fortunes
 #' @param what What do you want to say?
-#' @param by Type of thing, one of cow, chicken, poop
+#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, ghost, 
+#' or spider
 #' @param type One of message (default), warning, or string (returns string)
 #' @examples
 #' say()
@@ -12,11 +14,19 @@
 #' say("ain't that some shit")
 #' say("ain't that some shit", "chicken")
 #' say("ain't that some shit", "poop")
-#' say("ain't that some shit", "poop")
 #' say("ain't that some shit", "poop", "warning")
 #' say("ain't that some shit", "poop", "string")
 #' say("icanhazpdf?", "cat")
 #' say("boo!", "pumpkin")
+#' say("fortune", "spider")
+#' 
+#' # Vary type of output, default calls message()
+#' say("hell no!")
+#' say("hell no!", type="warning")
+#' say("hell no!", type="string")
+#' 
+#' # Using fortunes
+#' say(what="fortune")
 #' @export
 
 say <- function(what="Hello world!", by="cow", type="message")
@@ -98,10 +108,26 @@ say <- function(what="Hello world!", by="cow", type="message")
      \\\   \\\
       `~~~'
   "
-  
-  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin","ghost"))
+ 
+  spider <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+              |
+              |
+              |
+             __ 
+          | /  \\\ |
+         \\_\\\\  //_/
+          .'/()\\\'.
+           \\\\\  //
+  "
+    
+  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin","ghost","spider"))
   if(what=="time")
     what <- now()
+  if(what=="fortune")
+    what <- fortune(sample(1:316,1))
+    what <- paste(as.character(what), collapse="\n ")
   switch(type, 
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),

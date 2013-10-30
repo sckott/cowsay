@@ -66,3 +66,45 @@ say("boo!", "ghost")
       `~~~'
   
 ```
+
+### Vary type of output, default calls message()
+
+```coffee
+say("hell no!")
+```
+
+```
+ ----- 
+ hell no! 
+ ------ 
+    \   ^__^ 
+     \  (oo)\ ________ 
+        (__)\         )\ /\ 
+             ||------w|
+             ||      ||
+```
+
+```coffee
+say("hell no!", type="warning")
+```
+
+```
+Warning message:
+In say("hell no!", type = "warning") : 
+ ----- 
+ hell no! 
+ ------ 
+    \   ^__^ 
+     \  (oo)\ ________ 
+        (__)\         )\ /\ 
+             ||------w|
+             ||      ||
+```
+
+```coffee
+say("hell no!", type="string")
+```
+
+```
+[1] "\n ----- \n hell no! \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
+```

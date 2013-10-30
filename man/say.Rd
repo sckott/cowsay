@@ -7,7 +7,8 @@
 \arguments{
   \item{what}{What do you want to say?}
 
-  \item{by}{Type of thing, one of cow, chicken, poop}
+  \item{by}{Type of thing, one of cow, chicken, poop, cat,
+  ant, pumpkin, ghost, or spider}
 
   \item{type}{One of message (default), warning, or string
   (returns string)}
@@ -23,10 +24,18 @@ say('time', "poop")
 say("ain't that some shit")
 say("ain't that some shit", "chicken")
 say("ain't that some shit", "poop")
-say("ain't that some shit", "poop")
 say("ain't that some shit", "poop", "warning")
 say("ain't that some shit", "poop", "string")
 say("icanhazpdf?", "cat")
 say("boo!", "pumpkin")
+say("fortune", "spider")
+
+# Vary type of output, default calls message()
+say("hell no!")
+say("hell no!", type="warning")
+say("hell no!", type="string")
+
+# Using fortunes
+say(what="fortune")
 }
 
