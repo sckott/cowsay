@@ -1,7 +1,7 @@
 cowsay
 ======
 
-dependency: lubridate
+dependencies: lubridate, fortunes
 
 Quick start
 
