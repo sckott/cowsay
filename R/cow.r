@@ -122,7 +122,34 @@ say <- function(what="Hello world!", by="cow", type="message")
            \\\\\  //
   "
     
-  by <- match.arg(by, choices=c("cow","chicken","poop","cat","ant","pumpkin","ghost","spider"))
+  rabbit <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+      ( )_( )
+      (='.'=)
+      (^)_(^)
+  "    
+
+  pig <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+       _//| .-~~~-.
+     _/oo  }       }-@
+    ('')_  }       |
+     `--'| { }--{  }
+          //_/  /_/
+  "    
+
+  snowman <- 
+  '
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+     _[_]_  
+      (")  
+  >--( : )--<
+    (__:__)
+  '  
+  by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
+      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman"))
   if(what=="time")
     what <- now()
   if(what=="fortune")
