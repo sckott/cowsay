@@ -1,9 +1,11 @@
 Package: cowsay
 Title: messages/warnings/etc. with ascii art
 Description: messages/warnings/etc. with ascii art
-Version: 0.00000000000000001
-Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com"))
+Version: 0.1
+Date: 2013-11-30
+Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
+    "myrmecocystus@gmail.com"), person("Tyler", "Rinker", role = c("aut"),
+    email = "tyler.rinker@gmail.com"))
 Depends:
     R (>= 3.0.2)
 License: MIT
