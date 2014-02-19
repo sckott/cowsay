@@ -1,14 +1,28 @@
 cowsay
 ======
 
-dependencies: lubridate, fortunes
+### What is this?
 
-Quick start
+If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
+
+### Contributors
+
+* Scott Chamberlain
+* Tyler Rinker
+
+### Dependencies: 
+
+* lubridate
+* fortunes
+
+### Quick start
 
 ```coffee
-install_github("cowsay", "SChamberlain")
+install_github("cowsay", "sckott")
 library(cowsay)
 ```
+
+p.s. or `install_github("sckott/cowsay")` if you have a newer version of devtools
 
 ```coffee
 say('time')
@@ -67,7 +81,7 @@ say("boo!", "ghost")
   
 ```
 
-### Vary type of output, default calls message()
+#### Vary type of output, default calls message()
 
 ```coffee
 say("hell no!")

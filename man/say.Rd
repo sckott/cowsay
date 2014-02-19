@@ -2,7 +2,7 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-  say(what = "Hello world!", by = "cow", type = "message")
+say(what = "Hello world!", by = "cow", type = "message")
 }
 \arguments{
   \item{what}{What do you want to say?}
@@ -14,7 +14,7 @@
   (returns string)}
 }
 \description{
-  Sling messages and warnings with flair
+Sling messages and warnings with flair
 }
 \examples{
 say()
