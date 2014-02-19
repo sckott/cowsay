@@ -37,5 +37,8 @@ say("hell no!", type="string")
 
 # Using fortunes
 say(what="fortune")
+
+# Using catfacts
+say("catfact", "cat")
 }
 
