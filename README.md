@@ -9,11 +9,18 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 * Scott Chamberlain
 * Tyler Rinker
+* Thomas Leeper
+
+That's right, it takes 3 people to make `cowsay` - it's that hard.
 
 ### Dependencies: 
 
 * lubridate
 * fortunes
+
+### Quick watch start
+
+Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
 
 ### Quick start
 
@@ -121,4 +128,35 @@ say("hell no!", type="string")
 
 ```
 [1] "\n ----- \n hell no! \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
+```
+
+#### Catfacts!!!!
+
+From the [catfacts API](http://catfacts-api.appspot.com/)
+
+```coffee
+say("catfact", "cat")
+```
+
+```coffee
+ ----- 
+ The average cat food meal is the equivalent to about five mice. 
+ ------ 
+    \   
+     \  
+               \`*-.
+                 )  _`-.                 
+                .  : `. .                
+                : _   '                 
+                ; *` _.   `*-._          
+                `-.-'          `-.       
+                  ;       `       `.     
+                  :.       .       \
+                  .\  .   :   .-'   .   
+                  '  `+.;  ;  '      :   
+                  :  '  |    ;       ;-. 
+                  ; '   : :`-:     _.`* ;
+               .*' /  .*' ; .*`- +'  `*' 
+               `*-*   `*-*  `*-*'        
+    
 ```

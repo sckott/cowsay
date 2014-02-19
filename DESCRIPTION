@@ -1,14 +1,16 @@
 Package: cowsay
 Title: messages/warnings/etc. with ascii art
 Description: messages/warnings/etc. with ascii art
-Version: 0.1
+Version: 0.2
 Date: 2014-02-19
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     "myrmecocystus@gmail.com"), person("Tyler", "Rinker", role = c("aut"),
-    email = "tyler.rinker@gmail.com"))
+    email = "tyler.rinker@gmail.com"), person("Thomas", "Leeper", role =
+    c("aut"), email = "thosjleeper@gmail.com"))
 Depends:
     R (>= 3.0.2)
 Imports:
     lubridate,
-    fortunes
+    fortunes,
+    RJSONIO
