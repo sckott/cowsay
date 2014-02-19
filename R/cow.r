@@ -1,6 +1,7 @@
 #' Sling messages and warnings with flair
 #' 
 #' @importFrom lubridate now
+#' @importFrom RJSONIO fromJSON
 #' @import fortunes
 #' @param what What do you want to say?
 #' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, ghost, 
@@ -27,6 +28,9 @@
 #' 
 #' # Using fortunes
 #' say(what="fortune")
+#'
+#' # Using catfacts
+#' say("catfact", "cat")
 #' @export
 
 say <- function(what="Hello world!", by="cow", type="message")
@@ -152,9 +156,12 @@ say <- function(what="Hello world!", by="cow", type="message")
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman"))
   if(what=="time")
     what <- now()
-  if(what=="fortune")
+  if(what=="fortune") {
     what <- fortune(sample(1:316,1))
     what <- paste(as.character(what), collapse="\n ")
+  }
+  if(what=="catfact")
+    what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
   switch(type, 
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),

@@ -4,6 +4,6 @@
 \alias{cowsay-package}
 \title{cowsay}
 \description{
-  cowsay
+cowsay
 }
 

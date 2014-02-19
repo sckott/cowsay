@@ -1,3 +1,4 @@
 export(say)
 import(fortunes)
+importFrom(RJSONIO,fromJSON)
 importFrom(lubridate,now)

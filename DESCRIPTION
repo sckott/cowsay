@@ -12,6 +12,3 @@ License: MIT
 Imports:
     lubridate,
     fortunes
-Collate:
-    'cow.r'
-    'cowsay-package.r'
