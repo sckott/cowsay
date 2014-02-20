@@ -10,8 +10,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Scott Chamberlain
 * Tyler Rinker
 * Thomas Leeper
+* Noam Ross
 
-That's right, it takes 3 people to make `cowsay` - it's that hard.
+That's right, it takes 4 people to make `cowsay` - it's that hard.
 
 ### Dependencies: 
 
