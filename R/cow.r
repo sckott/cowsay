@@ -164,9 +164,35 @@ say <- function(what="Hello world!", by="cow", type="message")
    )_/ /|\\   /|\\ \\_(
   "
 
-  
+  # From here:
+  # http://chris.com/ascii/index.php?art=television/futurama
+  hypnotoad <-
+  "
+\n ----- \n %s \n ------
+    \\\          ,'``.._   ,'``.
+     \\\        :,--._:)\\,:,._,.:
+      \\\       :`--,''   :`...';\\
+               `,'       `---'  `.
+               /                 :
+              /                   \\
+            ,'                     :\\.___,-.
+           `...,---'``````-..._    |:       \\
+             (                 )   ;:    )   \\  _,-.
+              `.              (   //          `'    \\
+               :               `.//  )      )     , ;
+             ,-|`.            _,'/       )    ) ,' ,'
+            (  :`.`-..____..=:.-':     .     _,' ,'
+             `,'\\ ``--....-)='    `._,  \\  ,') _ '``._
+          _.-/ _ `.       (_)      /     )' ; / \\ \\`-.'
+         `--(   `-:`.     `' ___..'  _,-'   |/   `.)
+             `-. `.`.``-----``--,  .'
+               |/`.\\`'        ,','); SSt
+                   `         (/  (/
+  "
+
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
-      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog"))
+      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
+      "hypnotoad"))
   if(what=="time")
     what <- now()
   if(what=="fortune") {
@@ -177,7 +203,10 @@ say <- function(what="Hello world!", by="cow", type="message")
     what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
   }
-  switch(type, 
+  if(by=="hypnotoad"){
+    what <- "All Glory to the HYPNO TOAD!"
+  }
+  switch(type,
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),
          string = sprintf(eval(parse(text=by)), what))
