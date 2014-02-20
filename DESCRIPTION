@@ -7,7 +7,8 @@ License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     "myrmecocystus@gmail.com"), person("Tyler", "Rinker", role = c("aut"),
     email = "tyler.rinker@gmail.com"), person("Thomas", "Leeper", role =
-    c("aut"), email = "thosjleeper@gmail.com"))
+    c("aut"), email = "thosjleeper@gmail.com"), person("Noam", "Ross", role =
+    c("aut"), email = "noam.ross@gmail.com"))
 Depends:
     R (>= 3.0.2)
 Imports:
