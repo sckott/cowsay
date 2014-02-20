@@ -5,7 +5,7 @@
 #' @import fortunes
 #' @param what What do you want to say?
 #' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, ghost, 
-#' or spider
+#' spider, or frog
 #' @param type One of message (default), warning, or string (returns string)
 #' @examples
 #' say()
@@ -19,6 +19,7 @@
 #' say("ain't that some shit", "poop", "string")
 #' say("icanhazpdf?", "cat")
 #' say("boo!", "pumpkin")
+#' say("hot diggity", "frog")
 #' say("fortune", "spider")
 #' 
 #' # Vary type of output, default calls message()
@@ -151,9 +152,22 @@ say <- function(what="Hello world!", by="cow", type="message")
       (")  
   >--( : )--<
     (__:__)
-  '  
+  '
+  
+  frog <- 
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+        (.)_(.)
+     _ (   _   ) _
+    / \\/`-----'\\/ \\
+  __\\ ( (     ) ) /__
+  )   /\\ \\._./ /\\   (
+   )_/ /|\\   /|\\ \\_(
+  "
+
+  
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
-      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman"))
+      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog"))
   if(what=="time")
     what <- now()
   if(what=="fortune") {

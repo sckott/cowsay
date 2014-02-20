@@ -2,19 +2,19 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cow", type = "message")
+  say(what = "Hello world!", by = "cow", type = "message")
 }
 \arguments{
   \item{what}{What do you want to say?}
 
   \item{by}{Type of thing, one of cow, chicken, poop, cat,
-  ant, pumpkin, ghost, or spider}
+  ant, pumpkin, ghost, spider, or frog}
 
   \item{type}{One of message (default), warning, or string
   (returns string)}
 }
 \description{
-Sling messages and warnings with flair
+  Sling messages and warnings with flair
 }
 \examples{
 say()
@@ -28,6 +28,7 @@ say("ain't that some shit", "poop", "warning")
 say("ain't that some shit", "poop", "string")
 say("icanhazpdf?", "cat")
 say("boo!", "pumpkin")
+say("hot diggity", "frog")
 say("fortune", "spider")
 
 # Vary type of output, default calls message()
