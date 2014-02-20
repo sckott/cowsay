@@ -209,5 +209,5 @@ say <- function(what="Hello world!", by="cow", type="message")
   switch(type,
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),
-         string = sprintf(eval(parse(text=by)), what))
+         string = sprintf(get(by), what))
 }
