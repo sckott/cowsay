@@ -173,9 +173,10 @@ say <- function(what="Hello world!", by="cow", type="message")
     what <- fortune(sample(1:316,1))
     what <- paste(as.character(what), collapse="\n ")
   }
-  if(what=="catfact")
+  if(what=="catfact"){
     what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
+  }
   switch(type, 
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),
