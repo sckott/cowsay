@@ -4,9 +4,10 @@
 #' @importFrom RJSONIO fromJSON
 #' @import fortunes
 #' @param what What do you want to say?
-#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, ghost, 
-#' spider, or frog
+#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, 
+#' ghost, spider, rabbit, pig, snowman, or frog
 #' @param type One of message (default), warning, or string (returns string)
+#' @export
 #' @examples
 #' say()
 #' say("what")
@@ -32,7 +33,6 @@
 #'
 #' # Using catfacts
 #' say("catfact", "cat")
-#' @export
 
 say <- function(what="Hello world!", by="cow", type="message")
 {
@@ -176,6 +176,7 @@ say <- function(what="Hello world!", by="cow", type="message")
   }
   if(what=="catfact")
     what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
+    by <- 'cat'
   switch(type, 
          message = message(sprintf(eval(parse(text=by)), what)),
          warning = warning(sprintf(eval(parse(text=by)), what)),
