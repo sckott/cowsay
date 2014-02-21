@@ -11,6 +11,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Tyler Rinker
 * Thomas Leeper
 * Noam Ross
+* Rich FitzJohn
 
 That's right, it takes 4 people to make `cowsay` - it's that hard.
 
@@ -18,6 +19,7 @@ That's right, it takes 4 people to make `cowsay` - it's that hard.
 
 * lubridate
 * fortunes
+* RJSONIO
 
 ### Quick watch start
 

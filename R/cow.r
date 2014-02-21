@@ -215,8 +215,6 @@ say <- function(what="Hello world!", by="cow", type="message")
     what <- "All Glory to the HYPNO TOAD!"
   }
   switch(type,
-#          message = message(sprintf(eval(parse(text=by)), what)),
-#          warning = warning(sprintf(eval(parse(text=by)), what)),
          message = message(sprintf(get(by), what)),
          warning = warning(sprintf(get(by), what)),
          string = sprintf(get(by), what))
