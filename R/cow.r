@@ -1,6 +1,5 @@
 #' Sling messages and warnings with flair
 #' 
-#' @importFrom lubridate now
 #' @importFrom RJSONIO fromJSON
 #' @import fortunes
 #' @param what What do you want to say?
@@ -202,7 +201,7 @@ say <- function(what="Hello world!", by="cow", type="message")
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
       "hypnotoad"))
   if(what=="time")
-    what <- now()
+    what <- as.character(Sys.time())
   if(what=="fortune") {
     what <- fortune(sample(1:316,1))
     what <- paste(as.character(what), collapse="\n ")
