@@ -27,11 +27,10 @@ Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
 ### Quick start
 
 ```coffee
-install_github("cowsay", "sckott")
-library(cowsay)
+library("devtools")
+install_github("sckott/cowsay")
+library("cowsay")
 ```
-
-p.s. or `install_github("sckott/cowsay")` if you have a newer version of devtools
 
 ```coffee
 say('time')
