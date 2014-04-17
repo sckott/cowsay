@@ -16,8 +16,6 @@
 #' say('time', "poop")
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
-#' say("ain't that some shit", "poop", "warning")
-#' say("ain't that some shit", "poop", "string")
 #' say("icanhazpdf?", "cat")
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
@@ -33,9 +31,6 @@
 #'
 #' # Using catfacts
 #' say("catfact", "cat")
-#' 
-#' # The hypnotoad
-#' say(by="hypnotoad")
 #' 
 #' # The hypnotoad
 #' say(by="hypnotoad")

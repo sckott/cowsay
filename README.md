@@ -13,11 +13,10 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 
-That's right, it takes 4 people to make `cowsay` - it's that hard.
+That's right, it takes 5 people to make `cowsay` - it's that hard.
 
 ### Dependencies: 
 
-* lubridate
 * fortunes
 * RJSONIO
 
