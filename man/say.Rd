@@ -6,7 +6,7 @@
 say(what = "Hello world!", by = "cow", type = "message")
 }
 \arguments{
-\item{what}{What do you want to say?}
+\item{what}{What do you want to say? See details.}
 
 \item{by}{Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
 ghost, spider, rabbit, pig, snowman, frog, or hypnotoad. We use match.arg
@@ -17,6 +17,20 @@ like "g" for "ghost" because there's no other animal that starts with "g".}
 }
 \description{
 Sling messages and warnings with flair
+}
+\details{
+You can put in any phrase you like, OR you can type in one of a few special phrases
+that do particular things. They are:
+
+\itemize{
+ \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
+ \item iheart A random quote from http://iheartquotes.com/api
+ \item fortune A random quote from an R coder, from fortunes library
+ \item time Print the current time
+}
+
+Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine,
+'All Glory to the HYPNO TOAD!'.
 }
 \examples{
 say()
@@ -40,6 +54,9 @@ say(what="fortune")
 
 # Using catfacts
 say("catfact", "cat")
+
+# Using iheartquotes
+say("iheart", "chicken")
 
 # The hypnotoad
 say(by="hypnotoad")

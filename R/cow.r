@@ -1,14 +1,29 @@
 #' Sling messages and warnings with flair
-#' 
+#'
 #' @importFrom RJSONIO fromJSON
 #' @import fortunes
-#' @param what What do you want to say?
-#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin, 
+#' @export
+#' 
+#' @param what What do you want to say? See details.
+#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
 #' ghost, spider, rabbit, pig, snowman, frog, or hypnotoad. We use match.arg
-#' internally, so you can use unique parts of words that don't conflict with others, 
+#' internally, so you can use unique parts of words that don't conflict with others,
 #' like "g" for "ghost" because there's no other animal that starts with "g".
 #' @param type One of message (default), warning, or string (returns string)
-#' @export
+#' 
+#' @details You can put in any phrase you like, OR you can type in one of a few special phrases
+#' that do particular things. They are:
+#' 
+#' \itemize{
+#'  \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
+#'  \item iheart A random quote from http://iheartquotes.com/api
+#'  \item fortune A random quote from an R coder, from fortunes library
+#'  \item time Print the current time
+#' }
+#' 
+#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine, 
+#' 'All Glory to the HYPNO TOAD!'. 
+#' 
 #' @examples
 #' say()
 #' say("what")
@@ -20,18 +35,21 @@
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
 #' say("fortune", "spider")
-#' 
+#'
 #' # Vary type of output, default calls message()
 #' say("hell no!")
 #' say("hell no!", type="warning")
 #' say("hell no!", type="string")
-#' 
+#'
 #' # Using fortunes
 #' say(what="fortune")
 #'
 #' # Using catfacts
 #' say("catfact", "cat")
-#' 
+#'
+#' # Using iheartquotes
+#' say("iheart", "chicken")
+#'
 #' # The hypnotoad
 #' say(by="hypnotoad")
 
@@ -39,7 +57,7 @@ say <- function(what="Hello world!", by="cow", type="message")
 {
   cow <- "\n ----- \n %s \n ------ \n    \\\   ^__^ \n     \\\  (oo)\\\ ________ \n        (__)\\\         )\\\ /\\\ \n             ||------w|\n             ||      ||"
   chicken <- "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
          _
        _/ }
       `>' \\\
@@ -52,48 +70,48 @@ say <- function(what="Hello world!", by="cow", type="message")
             _| _|
             /` /`
   "
-  poop <- 
+  poop <-
     "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
      (   )
   (   ) (
    ) _   )
     ( \\_
   _(_\\\ \\)__
  (____\\\ ___)) "
-  
-  cat <- 
+
+  cat <-
     "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
                \\`*-.
-                 )  _`-.                 
-                .  : `. .                
-                : _   '  \               
-                ; *` _.   `*-._          
-                `-.-'          `-.       
-                  ;       `       `.     
+                 )  _`-.
+                .  : `. .
+                : _   '  \
+                ; *` _.   `*-._
+                `-.-'          `-.
+                  ;       `       `.
                   :.       .       \\
-                  .\\  .   :   .-'   .   
-                  '  `+.;  ;  '      :   
-                  :  '  |    ;       ;-. 
+                  .\\  .   :   .-'   .
+                  '  `+.;  ;  '      :
+                  :  '  |    ;       ;-.
                   ; '   : :`-:     _.`* ;
-               .*' /  .*' ; .*`- +'  `*' 
-               `*-*   `*-*  `*-*'        
+               .*' /  .*' ; .*`- +'  `*'
+               `*-*   `*-*  `*-*'
     "
-  
-  ant <- 
+
+  ant <-
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
        '\\__
       (o )     ___
       <>(_)(_)(___)
         < < > >
         ' ' ` `
-  "  
-  
-  pumpkin <- 
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+
+  pumpkin <-
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
                   ___
                ___)__|_
           .-*'          '*-,
@@ -104,60 +122,60 @@ say <- function(what="Hello world!", by="cow", type="message")
          \\\  ''---.....--''  /
           ''*-.,_______,.-*'
   "
-  
-  ghost <- 
+
+  ghost <-
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
      .-.
     (o o)
     | O \\\
      \\\   \\\
       `~~~'
   "
- 
-  spider <- 
+
+  spider <-
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
               |
               |
               |
-             __ 
+             __
           | /  \\\ |
          \\_\\\\  //_/
           .'/()\\\'.
            \\\\\  //
   "
-    
-  rabbit <- 
+
+  rabbit <-
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
       ( )_( )
       (='.'=)
       (^)_(^)
-  "    
-
-  pig <- 
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+
+  pig <-
+  "
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
        _//| .-~~~-.
      _/oo  }       }-@
     ('')_  }       |
      `--'| { }--{  }
           //_/  /_/
-  "    
+  "
 
-  snowman <- 
+  snowman <-
   '
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
-     _[_]_  
-      (")  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
+     _[_]_
+      (")
   >--( : )--<
     (__:__)
   '
-  
-  frog <- 
+
+  frog <-
   "
-\n ----- \n %s \n ------ \n    \\\   \n     \\\  
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
         (.)_(.)
      _ (   _   ) _
     / \\/`-----'\\/ \\
@@ -204,6 +222,11 @@ say <- function(what="Hello world!", by="cow", type="message")
   if(what=="catfact"){
     what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
+  }
+  if(what=="iheart"){
+    tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
+    tmp <- gsub("\t|\n|\r", "", tmp)
+    what <- gsub('\"', "'", tmp)
   }
   if(by=="hypnotoad"){
     what <- "All Glory to the HYPNO TOAD!"

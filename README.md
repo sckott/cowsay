@@ -15,7 +15,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 That's right, it takes 5 people to make `cowsay` - it's that hard.
 
-### Dependencies: 
+### Dependencies:
 
 * fortunes
 * RJSONIO
@@ -37,12 +37,12 @@ say('time')
 ```
 
 ```
- ----- 
- 2013-10-10 17:11:53 
- ------ 
-    \   ^__^ 
-     \  (oo)\ ________ 
-        (__)\         )\ /\ 
+ -----
+ 2013-10-10 17:11:53
+ ------
+    \   ^__^
+     \  (oo)\ ________
+        (__)\         )\ /\
              ||------w|
              ||      ||
 ```
@@ -52,10 +52,10 @@ say("ain't that some shit", "chicken")
 ```
 
 ```
- ----- 
- ain't that some shit 
- ------ 
-    \   
+ -----
+ ain't that some shit
+ ------
+    \
      \  
          _
        _/ }
@@ -76,17 +76,17 @@ say("boo!", "ghost")
 ```
 
 ```
- ----- 
- boo! 
- ------ 
-    \   
+ -----
+ boo!
+ ------
+    \
      \  
      .-.
     (o o)
     | O \
      \   \
       `~~~'
-  
+
 ```
 
 #### Vary type of output, default calls message()
@@ -96,12 +96,12 @@ say("hell no!")
 ```
 
 ```
- ----- 
- hell no! 
- ------ 
-    \   ^__^ 
-     \  (oo)\ ________ 
-        (__)\         )\ /\ 
+ -----
+ hell no!
+ ------
+    \   ^__^
+     \  (oo)\ ________
+        (__)\         )\ /\
              ||------w|
              ||      ||
 ```
@@ -112,13 +112,13 @@ say("hell no!", type="warning")
 
 ```
 Warning message:
-In say("hell no!", type = "warning") : 
- ----- 
- hell no! 
- ------ 
-    \   ^__^ 
-     \  (oo)\ ________ 
-        (__)\         )\ /\ 
+In say("hell no!", type = "warning") :
+ -----
+ hell no!
+ ------
+    \   ^__^
+     \  (oo)\ ________
+        (__)\         )\ /\
              ||------w|
              ||      ||
 ```
@@ -140,24 +140,51 @@ say("catfact", "cat")
 ```
 
 ```coffee
- ----- 
- The average cat food meal is the equivalent to about five mice. 
- ------ 
-    \   
+ -----
+ The average cat food meal is the equivalent to about five mice.
+ ------
+    \
      \  
                \`*-.
-                 )  _`-.                 
-                .  : `. .                
-                : _   '                 
-                ; *` _.   `*-._          
-                `-.-'          `-.       
-                  ;       `       `.     
+                 )  _`-.
+                .  : `. .
+                : _   '
+                ; *` _.   `*-._
+                `-.-'          `-.
+                  ;       `       `.
                   :.       .       \
-                  .\  .   :   .-'   .   
-                  '  `+.;  ;  '      :   
-                  :  '  |    ;       ;-. 
+                  .\  .   :   .-'   .
+                  '  `+.;  ;  '      :
+                  :  '  |    ;       ;-.
                   ; '   : :`-:     _.`* ;
-               .*' /  .*' ; .*`- +'  `*' 
-               `*-*   `*-*  `*-*'        
-    
+               .*' /  .*' ; .*`- +'  `*'
+               `*-*   `*-*  `*-*'
+
+```
+
+#### Random quote
+
+From the [iheartquotes API](http://iheartquotes.com/api)
+
+```coffee
+say("iheart", "chicken")
+```
+
+```coffee
+  -----
+ The pyramids will not last a moment compared with the daisy.-- D. H. Laurence
+ ------
+    \
+     \
+         _
+       _/ }
+      `>' \
+      `|   \
+       |   /'-.     .-.
+        \'     ';`--' .'
+         \'.    `'-./
+          '.`-..-;`
+            `;-..'
+            _| _|
+            /` /`
 ```
