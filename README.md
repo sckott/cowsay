@@ -1,6 +1,8 @@
 cowsay
 ======
 
+[![Build Status](https://api.travis-ci.org/sckott/cowsay.png)](https://travis-ci.org/sckott/cowsay)
+
 ### What is this?
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
