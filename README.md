@@ -14,6 +14,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Thomas Leeper
 * Noam Ross
 * Rich FitzJohn
+* You?
 
 That's right, it takes 5 people to make `cowsay` - it's that hard.
 
