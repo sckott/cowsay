@@ -191,3 +191,41 @@ say("iheart", "chicken")
             _| _|
             /` /`
 ```
+
+#### Long cat
+
+From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
+
+```coffee
+say("it's caturday", "longcat")
+```
+
+```coffee
+ -----
+ it's caturday
+ ------
+    \
+     \
+    .ﾊ,,ﾊ
+    ( ﾟωﾟ)
+    |つ　つ
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    |　　|
+    Ｕ"Ｕ
+```
