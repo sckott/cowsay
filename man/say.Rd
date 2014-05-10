@@ -9,7 +9,7 @@ say(what = "Hello world!", by = "cow", type = "message")
 \item{what}{What do you want to say? See details.}
 
 \item{by}{Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
-ghost, spider, rabbit, pig, snowman, frog, or hypnotoad. We use match.arg
+ghost, spider, rabbit, pig, snowman, frog, hypnotoad, or longcat. We use match.arg
 internally, so you can use unique parts of words that don't conflict with others,
 like "g" for "ghost" because there's no other animal that starts with "g".}
 
@@ -60,5 +60,8 @@ say("iheart", "chicken")
 
 # The hypnotoad
 say(by="hypnotoad")
+
+# The longcat
+say("it's caturday", "longcat")
 }
 
