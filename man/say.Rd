@@ -3,17 +3,19 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cow", type = "message")
+say(what = "Hello world!", by = "cow", type = "message", length = 18)
 }
 \arguments{
-\item{what}{What do you want to say? See details.}
+\item{what}{(character) What do you want to say? See details.}
 
-\item{by}{Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
+\item{by}{(character) Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
 ghost, spider, rabbit, pig, snowman, frog, hypnotoad, or longcat. We use match.arg
 internally, so you can use unique parts of words that don't conflict with others,
 like "g" for "ghost" because there's no other animal that starts with "g".}
 
-\item{type}{One of message (default), warning, or string (returns string)}
+\item{type}{(character) One of message (default), warning, or string (returns string)}
+
+\item{length}{(integer) Length of longcat. Ignored if other animals used.}
 }
 \description{
 Sling messages and warnings with flair
@@ -30,7 +32,7 @@ that do particular things. They are:
 }
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine,
-'All Glory to the HYPNO TOAD!'.
+'All Glory to the HYPNO TOAD!'. For reference see \url{http://knowyourmeme.com/memes/hypnotoad}.
 }
 \examples{
 say()
@@ -61,7 +63,9 @@ say("iheart", "chicken")
 # The hypnotoad
 say(by="hypnotoad")
 
-# The longcat
-say("it's caturday", "longcat")
+# The longcat, from BoingBoing
+say("it's caturday!", "longcat")
+say("i'm so short", "longcat", length=0)
+say("that's better", "longcat", length=6)
 }
 

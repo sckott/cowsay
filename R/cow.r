@@ -4,12 +4,13 @@
 #' @import fortunes
 #' @export
 #' 
-#' @param what What do you want to say? See details.
-#' @param by Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
+#' @param what (character) What do you want to say? See details.
+#' @param by (character) Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
 #' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, or longcat. We use match.arg
 #' internally, so you can use unique parts of words that don't conflict with others,
 #' like "g" for "ghost" because there's no other animal that starts with "g".
-#' @param type One of message (default), warning, or string (returns string)
+#' @param type (character) One of message (default), warning, or string (returns string)
+#' @param length (integer) Length of longcat. Ignored if other animals used.
 #' 
 #' @details You can put in any phrase you like, OR you can type in one of a few special phrases
 #' that do particular things. They are:
@@ -22,7 +23,7 @@
 #' }
 #' 
 #' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine, 
-#' 'All Glory to the HYPNO TOAD!'. 
+#' 'All Glory to the HYPNO TOAD!'. For reference see \url{http://knowyourmeme.com/memes/hypnotoad}.
 #' 
 #' @examples
 #' say()
@@ -53,10 +54,12 @@
 #' # The hypnotoad
 #' say(by="hypnotoad")
 #' 
-#' # The longcat
-#' say("it's caturday", "longcat")
+#' # The longcat, from BoingBoing
+#' say("it's caturday!", "longcat")
+#' say("i'm so short", "longcat", length=0)
+#' say("that's better", "longcat", length=6)
 
-say <- function(what="Hello world!", by="cow", type="message")
+say <- function(what="Hello world!", by="cow", type="message", length=18)
 {
   cow <- "\n ----- \n %s \n ------ \n    \\\   ^__^ \n     \\\  (oo)\\\ ________ \n        (__)\\\         )\\\ /\\\ \n             ||------w|\n             ||      ||"
   chicken <- "
@@ -215,32 +218,29 @@ say <- function(what="Hello world!", by="cow", type="message")
   
   # From here:
   # https://twitter.com/BoingBoing/status/465170473194512384
-  longcat <-
+  shortcat <-
   '
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
     .ﾊ,,ﾊ
     ( ﾟωﾟ)
     |つ　つ
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
     Ｕ"Ｕ
     '
+  
+  longcat <-
+    '
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
+    .ﾊ,,ﾊ
+    ( ﾟωﾟ)
+    |つ　つ
+%s
+    Ｕ"Ｕ
+    '
+  if(!length==0){
+    body <- paste(rep('    |　　|\n', length), collapse = "")
+    body <- gsub('\n$', '', body)
+    longcat <- sprintf(longcat, "%s", body)
+  } else { longcat <- shortcat }
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
