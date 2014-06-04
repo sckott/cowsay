@@ -14,9 +14,10 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Thomas Leeper
 * Noam Ross
 * Rich FitzJohn
+* Kiyoko Gotanda
 * You?
 
-That's right, it takes 5 people to make `cowsay` - it's that hard.
+That's right, it takes 6 people to make `cowsay` - it's that hard.
 
 ### Dependencies:
 
@@ -228,4 +229,19 @@ say("it's caturday", "longcat")
     |　　|
     |　　|
     Ｕ"Ｕ
+```
+
+#### Fish
+
+```coffee
+say(by='fish')
+```
+
+```coffee
+ -----
+ Hello world!
+ ------
+    \
+     \
+  ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 ```
