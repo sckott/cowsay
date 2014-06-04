@@ -6,9 +6,9 @@
 #' 
 #' @param what (character) What do you want to say? See details.
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
-#' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, or longcat. We use match.arg
-#' internally, so you can use unique parts of words that don't conflict with others,
-#' like "g" for "ghost" because there's no other animal that starts with "g".
+#' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, longcat, shortcat or fish. We use 
+#' \code{match.arg()} internally, so you can use unique parts of words that don't conflict with 
+#' others, like "g" for "ghost" because there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' 
@@ -56,8 +56,11 @@
 #' 
 #' # The longcat, from BoingBoing
 #' say("it's caturday!", "longcat")
-#' say("i'm so short", "longcat", length=0)
+#' say("i'm so short", "longcat", length=0) # AKA - shortcat
 #' say("that's better", "longcat", length=6)
+#' 
+#' # Fish
+#' say(by='fish')
 
 say <- function(what="Hello world!", by="cow", type="message", length=18)
 {
@@ -221,30 +224,37 @@ say <- function(what="Hello world!", by="cow", type="message", length=18)
   shortcat <-
   '
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
-    .ﾊ,,ﾊ
-    ( ﾟωﾟ)
-    |つ　つ
-    Ｕ"Ｕ
+    .\uFF8A,,\uFF8A
+    ( \uFF9F\u03C9\uFF9F)
+    |\u3064  \u3064
+    U " U
     '
   
   longcat <-
     '
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
-    .ﾊ,,ﾊ
-    ( ﾟωﾟ)
-    |つ　つ
+    .\uFF8A,,\uFF8A
+    ( \uFF9F\u03C9\uFF9F)
+    |\u3064  \u3064
 %s
-    Ｕ"Ｕ
+    U " U
     '
+  
+  fish <- 
+    '
+\n ----- \n %s \n ------ \n    \\\   \n     \\\
+  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>
+    '
+  
   if(!length==0){
-    body <- paste(rep('    |　　|\n', length), collapse = "")
+    body <- paste(rep('    |    |\n', length), collapse = "")
     body <- gsub('\n$', '', body)
     longcat <- sprintf(longcat, "%s", body)
   } else { longcat <- shortcat }
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
-      "hypnotoad","longcat"))
+      "hypnotoad","longcat","shortcat","fish"))
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
