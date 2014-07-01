@@ -245,3 +245,35 @@ say(by='fish')
      \
   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 ```
+
+#### R fortunes
+
+```coffee
+say('fortune','cat')
+```
+
+```coffee
+ -----
+ Nothing exceeds like Excel.
+ Roger Koenker
+ in reply to a question why it takes so long to paste 19,000 lines of R code from Excel into R
+ R-help
+ October 2008
+ ------
+    \
+     \
+               \`*-.
+                 )  _`-.
+                .  : `. .
+                : _   '
+                ; *` _.   `*-._
+                `-.-'          `-.
+                  ;       `       `.
+                  :.       .       \
+                  .\  .   :   .-'   .
+                  '  `+.;  ;  '      :
+                  :  '  |    ;       ;-.
+                  ; '   : :`-:     _.`* ;
+               .*' /  .*' ; .*`- +'  `*'
+               `*-*   `*-*  `*-*'
+```
