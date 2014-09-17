@@ -232,10 +232,10 @@ say("it's caturday", "longcat")
     Ｕ"Ｕ
 ```
 
-#### Cat Holding a sign
+#### Bunny Holding a sign
 
 ```coffee
-say(by='signcat')
+say(by='signbunny')
 ```
 
 ```coffee
