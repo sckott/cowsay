@@ -6,7 +6,7 @@
 #' 
 #' @param what (character) What do you want to say? See details.
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
-#' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, longcat, shortcat or fish. We use 
+#' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, longcat, shortcat, signcat, or fish. We use 
 #' \code{match.arg()} internally, so you can use unique parts of words that don't conflict with 
 #' others, like "g" for "ghost" because there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
@@ -61,6 +61,9 @@
 #' 
 #' # Fish
 #' say(by='fish')
+#' 
+#' # Cat holding a sign
+#' say(by='signcat')
 
 say <- function(what="Hello world!", by="cow", type="message", length=18)
 {
@@ -245,6 +248,13 @@ say <- function(what="Hello world!", by="cow", type="message", length=18)
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
   ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>
     '
+
+  signcat <-
+    '\n -------------- \n%s \n --------------
+(\\__/) || 
+(•ㅅ•) ||
+/ 　 づ  
+    '
   
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
@@ -254,7 +264,7 @@ say <- function(what="Hello world!", by="cow", type="message", length=18)
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
-      "hypnotoad","longcat","shortcat","fish"))
+      "hypnotoad","longcat","shortcat","fish", "signcat"))
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
