@@ -65,7 +65,7 @@
 #' # Cat holding a sign
 #' say(by='signcat')
 
-say <- function(what="Hello world!", by="cow", type="message", length=18)
+say <- function(what="Hello world!", by="cat", type="message", length=18)
 {
   cow <- "\n ----- \n %s \n ------ \n    \\\   ^__^ \n     \\\  (oo)\\\ ________ \n        (__)\\\         )\\\ /\\\ \n             ||------w|\n             ||      ||"
   chicken <- "
