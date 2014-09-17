@@ -3,7 +3,7 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cow", type = "message", length = 18)
+say(what = "Hello world!", by = "cat", type = "message", length = 18)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}

@@ -65,7 +65,7 @@
 #' # Cat holding a sign
 #' say(by='signcat')
 
-say <- function(what="Hello world!", by="cow", type="message", length=18)
+say <- function(what="Hello world!", by="cat", type="message", length=18)
 {
   cow <- "\n ----- \n %s \n ------ \n    \\\   ^__^ \n     \\\  (oo)\\\ ________ \n        (__)\\\         )\\\ /\\\ \n             ||------w|\n             ||      ||"
   chicken <- "
@@ -252,10 +252,10 @@ say <- function(what="Hello world!", by="cow", type="message", length=18)
   signcat <-
     '\n -------------- \n%s \n --------------
 (\\__/) || 
-(•ㅅ•) ||
-/ 　 づ  
+(\u2022\u3145\u2022) ||
+/   \u3065  
     '
-  
+
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
     body <- gsub('\n$', '', body)
