@@ -232,6 +232,21 @@ say("it's caturday", "longcat")
     Ｕ"Ｕ
 ```
 
+#### Cat Holding a sign
+
+```coffee
+say(by='signcat')
+```
+
+```coffee
+ ------------- 
+Hello world! 
+ -------------
+(\__/) || 
+(•ㅅ•) ||
+/ 　 づ  
+```
+
 #### Fish
 
 ```coffee
