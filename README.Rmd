@@ -1,0 +1,111 @@
+cowsay
+======
+
+[![Build Status](https://api.travis-ci.org/sckott/cowsay.png)](https://travis-ci.org/sckott/cowsay)
+[![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
+
+### What is this?
+
+If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
+
+### Contributors
+
+* Scott Chamberlain
+* Tyler Rinker
+* Thomas Leeper
+* Noam Ross
+* Rich FitzJohn
+* Kiyoko Gotanda
+
+That's right, it takes 6 people to make `cowsay` - it's that hard.
+
+### Dependencies:
+
+* `fortunes`
+* `jsonlite`
+
+### Quick watch start
+
+Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
+
+### Quick start
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("sckott/cowsay")
+```
+
+```{r}
+library("cowsay")
+```
+
+```{r}
+say('time')
+```
+
+```{r}
+say("ain't that some shit", "chicken")
+```
+
+```{r}
+say("boo!", "ghost")
+```
+
+#### Vary type of output, default calls message()
+
+```{r}
+say("hell no!")
+```
+
+
+```{r}
+say("hell no!", type="warning")
+```
+
+
+```{r}
+say("hell no!", type="string")
+```
+
+
+#### Catfacts!!!!
+
+From the [catfacts API](http://catfacts-api.appspot.com/)
+
+```{r}
+say("catfact", "cat")
+```
+
+#### Random quote
+
+From the [iheartquotes API](http://iheartquotes.com/api)
+
+```{r}
+say("iheart", "chicken")
+```
+
+#### Long cat
+
+From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
+
+```{r}
+say("it's caturday", "longcat")
+```
+
+#### Bunny Holding a sign
+
+```{r}
+say(by='signbunny')
+```
+
+#### Fish
+
+```{r}
+say(by='fish')
+```
+
+#### R fortunes
+
+```{r}
+say('fortune','cat')
+```

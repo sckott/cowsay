@@ -16,14 +16,13 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 * Kiyoko Gotanda
-* You?
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
 ### Dependencies:
 
-* fortunes
-* RJSONIO
+* `fortunes`
+* `jsonlite`
 
 ### Quick watch start
 
@@ -31,265 +30,345 @@ Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
 
 ### Quick start
 
-```coffee
-library("devtools")
-install_github("sckott/cowsay")
+
+```r
+install.packages("devtools")
+devtools::install_github("sckott/cowsay")
+```
+
+
+```r
 library("cowsay")
 ```
 
-```coffee
+
+```r
 say('time')
 ```
 
 ```
- -----
- 2013-10-10 17:11:53
- ------
-    \   ^__^
-     \  (oo)\ ________
-        (__)\         )\ /\
-             ||------w|
-             ||      ||
+## 
+## 
+##  ----- 
+##  2014-09-17 22:49:49 
+##  ------ 
+##     \   
+##      \
+##                \`*-.
+##                  )  _`-.
+##                 .  : `. .
+##                 : _   '  
+##                 ; *` _.   `*-._
+##                 `-.-'          `-.
+##                   ;       `       `.
+##                   :.       .       \
+##                   .\  .   :   .-'   .
+##                   '  `+.;  ;  '      :
+##                   :  '  |    ;       ;-.
+##                   ; '   : :`-:     _.`* ;
+##                .*' /  .*' ; .*`- +'  `*'
+##                `*-*   `*-*  `*-*'
+## 
 ```
 
-```coffee
+
+```r
 say("ain't that some shit", "chicken")
 ```
 
 ```
- -----
- ain't that some shit
- ------
-    \
-     \  
-         _
-       _/ }
-      `>' \
-      `|   \
-       |   /'-.     .-.
-        \'     ';`--' .'
-         \'.    `'-./
-          '.`-..-;`
-            `;-..'
-            _| _|
-            /` /`
+## 
+## 
+##  ----- 
+##  ain't that some shit 
+##  ------ 
+##     \   
+##      \
+##          _
+##        _/ }
+##       `>' \
+##       `|   \
+##        |   /'-.     .-.
+##         \'     ';`--' .'
+##          \'.    `'-./
+##           '.`-..-;`
+##             `;-..'
+##             _| _|
+##             /` /`
+## 
 ```
 
 
-```coffee
+```r
 say("boo!", "ghost")
 ```
 
 ```
- -----
- boo!
- ------
-    \
-     \  
-     .-.
-    (o o)
-    | O \
-     \   \
-      `~~~'
-
+## 
+## 
+##  ----- 
+##  boo! 
+##  ------ 
+##     \   
+##      \
+##      .-.
+##     (o o)
+##     | O \
+##      \   \
+##       `~~~'
+## 
 ```
 
 #### Vary type of output, default calls message()
 
-```coffee
+
+```r
 say("hell no!")
 ```
 
 ```
- -----
- hell no!
- ------
-    \   ^__^
-     \  (oo)\ ________
-        (__)\         )\ /\
-             ||------w|
-             ||      ||
+## 
+## 
+##  ----- 
+##  hell no! 
+##  ------ 
+##     \   
+##      \
+##                \`*-.
+##                  )  _`-.
+##                 .  : `. .
+##                 : _   '  
+##                 ; *` _.   `*-._
+##                 `-.-'          `-.
+##                   ;       `       `.
+##                   :.       .       \
+##                   .\  .   :   .-'   .
+##                   '  `+.;  ;  '      :
+##                   :  '  |    ;       ;-.
+##                   ; '   : :`-:     _.`* ;
+##                .*' /  .*' ; .*`- +'  `*'
+##                `*-*   `*-*  `*-*'
+## 
 ```
 
-```coffee
+
+
+```r
 say("hell no!", type="warning")
 ```
 
 ```
-Warning message:
-In say("hell no!", type = "warning") :
- -----
- hell no!
- ------
-    \   ^__^
-     \  (oo)\ ________
-        (__)\         )\ /\
-             ||------w|
-             ||      ||
+## Warning: 
+## 
+##  ----- 
+##  hell no! 
+##  ------ 
+##     \   
+##      \
+##                \`*-.
+##                  )  _`-.
+##                 .  : `. .
+##                 : _   '  
+##                 ; *` _.   `*-._
+##                 `-.-'          `-.
+##                   ;       `       `.
+##                   :.       .       \
+##                   .\  .   :   .-'   .
+##                   '  `+.;  ;  '      :
+##                   :  '  |    ;       ;-.
+##                   ; '   : :`-:     _.`* ;
+##                .*' /  .*' ; .*`- +'  `*'
+##                `*-*   `*-*  `*-*'
+## 
 ```
 
-```coffee
+
+
+```r
 say("hell no!", type="string")
 ```
 
 ```
-[1] "\n ----- \n hell no! \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
+## [1] "\n\n ----- \n hell no! \n ------ \n    \\   \n     \\\n               \\`*-.\n                 )  _`-.\n                .  : `. .\n                : _   '  \n                ; *` _.   `*-._\n                `-.-'          `-.\n                  ;       `       `.\n                  :.       .       \\\n                  .\\  .   :   .-'   .\n                  '  `+.;  ;  '      :\n                  :  '  |    ;       ;-.\n                  ; '   : :`-:     _.`* ;\n               .*' /  .*' ; .*`- +'  `*'\n               `*-*   `*-*  `*-*'\n    "
 ```
+
 
 #### Catfacts!!!!
 
 From the [catfacts API](http://catfacts-api.appspot.com/)
 
-```coffee
+
+```r
 say("catfact", "cat")
 ```
 
-```coffee
- -----
- The average cat food meal is the equivalent to about five mice.
- ------
-    \
-     \  
-               \`*-.
-                 )  _`-.
-                .  : `. .
-                : _   '
-                ; *` _.   `*-._
-                `-.-'          `-.
-                  ;       `       `.
-                  :.       .       \
-                  .\  .   :   .-'   .
-                  '  `+.;  ;  '      :
-                  :  '  |    ;       ;-.
-                  ; '   : :`-:     _.`* ;
-               .*' /  .*' ; .*`- +'  `*'
-               `*-*   `*-*  `*-*'
-
+```
+## 
+## 
+##  ----- 
+##  Almost 10% of a cat's bones are in its tail, and the tail is used to maintain balance. 
+##  ------ 
+##     \   
+##      \
+##                \`*-.
+##                  )  _`-.
+##                 .  : `. .
+##                 : _   '  
+##                 ; *` _.   `*-._
+##                 `-.-'          `-.
+##                   ;       `       `.
+##                   :.       .       \
+##                   .\  .   :   .-'   .
+##                   '  `+.;  ;  '      :
+##                   :  '  |    ;       ;-.
+##                   ; '   : :`-:     _.`* ;
+##                .*' /  .*' ; .*`- +'  `*'
+##                `*-*   `*-*  `*-*'
+## 
 ```
 
 #### Random quote
 
 From the [iheartquotes API](http://iheartquotes.com/api)
 
-```coffee
+
+```r
 say("iheart", "chicken")
 ```
 
-```coffee
-  -----
- The pyramids will not last a moment compared with the daisy.-- D. H. Laurence
- ------
-    \
-     \
-         _
-       _/ }
-      `>' \
-      `|   \
-       |   /'-.     .-.
-        \'     ';`--' .'
-         \'.    `'-./
-          '.`-..-;`
-            `;-..'
-            _| _|
-            /` /`
+```
+## 
+## 
+##  ----- 
+##  If there are epigrams, there must be meta-epigrams. 
+##  ------ 
+##     \   
+##      \
+##          _
+##        _/ }
+##       `>' \
+##       `|   \
+##        |   /'-.     .-.
+##         \'     ';`--' .'
+##          \'.    `'-./
+##           '.`-..-;`
+##             `;-..'
+##             _| _|
+##             /` /`
+## 
 ```
 
 #### Long cat
 
 From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
 
-```coffee
+
+```r
 say("it's caturday", "longcat")
 ```
 
-```coffee
- -----
- it's caturday
- ------
-    \
-     \
-    .ﾊ,,ﾊ
-    ( ﾟωﾟ)
-    |つ　つ
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    |　　|
-    Ｕ"Ｕ
+```
+## 
+## 
+##  ----- 
+##  it's caturday 
+##  ------ 
+##     \   
+##      \
+##     .ﾊ,,ﾊ
+##     ( ﾟωﾟ)
+##     |つ  つ
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     |    |
+##     U " U
+## 
 ```
 
 #### Bunny Holding a sign
 
-```coffee
+
+```r
 say(by='signbunny')
 ```
 
-```coffee
- ------------- 
-Hello world! 
- -------------
-(\__/) || 
-(•ㅅ•) ||
-/ 　 づ  
+```
+## 
+##  -------------- 
+## Hello world! 
+##  --------------
+## (\__/) || 
+## (•ㅅ•) ||
+## /   づ  
+## 
 ```
 
 #### Fish
 
-```coffee
+
+```r
 say(by='fish')
 ```
 
-```coffee
- -----
- Hello world!
- ------
-    \
-     \
-  ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
+```
+## 
+## 
+##  ----- 
+##  Hello world! 
+##  ------ 
+##     \   
+##      \
+##   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
+## 
 ```
 
 #### R fortunes
 
-```coffee
+
+```r
 say('fortune','cat')
 ```
 
-```coffee
- -----
- Nothing exceeds like Excel.
- Roger Koenker
- in reply to a question why it takes so long to paste 19,000 lines of R code from Excel into R
- R-help
- October 2008
- ------
-    \
-     \
-               \`*-.
-                 )  _`-.
-                .  : `. .
-                : _   '
-                ; *` _.   `*-._
-                `-.-'          `-.
-                  ;       `       `.
-                  :.       .       \
-                  .\  .   :   .-'   .
-                  '  `+.;  ;  '      :
-                  :  '  |    ;       ;-.
-                  ; '   : :`-:     _.`* ;
-               .*' /  .*' ; .*`- +'  `*'
-               `*-*   `*-*  `*-*'
+```
+## 
+## 
+##  ----- 
+##  Michael Dewey: When I started I found the free documents useful but I made most progress when I bought MASS. I do realise that liking books is a bit last millennium.<x>Thomas Lumley: Very late last millenium, though. "When I were young[er] we didn't have all these fancy yellow books."
+##  Michael Dewey and Thomas Lumley
+##  about different kinds of documentation for R
+##  R-help
+##  January 2006 
+##  ------ 
+##     \   
+##      \
+##                \`*-.
+##                  )  _`-.
+##                 .  : `. .
+##                 : _   '  
+##                 ; *` _.   `*-._
+##                 `-.-'          `-.
+##                   ;       `       `.
+##                   :.       .       \
+##                   .\  .   :   .-'   .
+##                   '  `+.;  ;  '      :
+##                   :  '  |    ;       ;-.
+##                   ; '   : :`-:     _.`* ;
+##                .*' /  .*' ; .*`- +'  `*'
+##                `*-*   `*-*  `*-*'
+## 
 ```
