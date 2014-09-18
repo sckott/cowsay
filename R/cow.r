@@ -6,9 +6,10 @@
 #'
 #' @param what (character) What do you want to say? See details.
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, bigcat, longcat, shortcat, 
-#' ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad, signbunny, or fish. We use
-#' \code{match.arg()} internally, so you can use unique parts of words that don't conflict with
-#' others, like "g" for "ghost" because there's no other animal that starts with "g".
+#' behindcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad, signbunny, 
+#' stretchycat, or  fish. We use \code{match.arg()} internally, so you can use unique parts of 
+#' words that don't conflict with others, like "g" for "ghost" because there's no other animal that 
+#' starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #'
@@ -265,6 +266,38 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
         =(:^:)=
            U
   '
+  
+  behindcat <- 
+  '\n -------------- \n%s \n --------------
+      \u005c
+        \u005c
+          \u005c
+            \u007c\u005c___/\u007c
+            )     (
+           =\\\     /=
+             )===(
+            /     \u005c
+            |     |
+           /       \u005c
+           \u005c       /
+      jgs   \u005c__  _/
+              ( (
+               ) )
+              (_(
+  '
+  
+  stretchycat <- 
+  '\n -------------- \n%s \n --------------
+    \u005c
+      \u005c
+        \u005c
+                        ,/\u007c         _.--\u201B\u201B^``-...___.._.,;
+                      /, \u005c\u201B.     _-\u201B          ,--,,,--\u201B\u201B\u201B
+                     {  \u005c    `_-\u201B\u201B       \u201B    /}\u201B
+Jill                    `;;\u201B             ;   ; ;
+                  ._.--\u201B\u201B     ._,,, _..\u201B  .;.\u201B
+                  (,_....----\u201B\u201B\u201B     (,..--\u201B\u201B
+  '
 
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
@@ -274,7 +307,8 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
-      "hypnotoad","longcat","shortcat","fish", "signbunny"))
+      "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat",
+      "fish", "signbunny"))
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {

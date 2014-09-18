@@ -9,9 +9,10 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18)
 \item{what}{(character) What do you want to say? See details.}
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, bigcat, longcat, shortcat,
-ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad, signbunny, or fish. We use
-\code{match.arg()} internally, so you can use unique parts of words that don't conflict with
-others, like "g" for "ghost" because there's no other animal that starts with "g".}
+behindcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad, signbunny,
+stretchycat, or  fish. We use \code{match.arg()} internally, so you can use unique parts of
+words that don't conflict with others, like "g" for "ghost" because there's no other animal that
+starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string (returns string)}
 
