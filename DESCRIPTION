@@ -14,4 +14,4 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
 Roxygen: list(wrap = FALSE)
 Imports:
     fortunes,
-    RJSONIO
+    jsonlite
