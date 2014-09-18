@@ -3,28 +3,28 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom fortunes fortune
 #' @export
-#' 
+#'
 #' @param what (character) What do you want to say? See details.
-#' @param by (character) Type of thing, one of cow, chicken, poop, cat, ant, pumpkin,
-#' ghost, spider, rabbit, pig, snowman, frog, hypnotoad, longcat, shortcat, signbunny, or fish. We use 
-#' \code{match.arg()} internally, so you can use unique parts of words that don't conflict with 
+#' @param by (character) Type of thing, one of cow, chicken, poop, cat, bigcat, longcat, shortcat, 
+#' ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad, signbunny, or fish. We use
+#' \code{match.arg()} internally, so you can use unique parts of words that don't conflict with
 #' others, like "g" for "ghost" because there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
-#' 
+#'
 #' @details You can put in any phrase you like, OR you can type in one of a few special phrases
 #' that do particular things. They are:
-#' 
+#'
 #' \itemize{
 #'  \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
 #'  \item iheart A random quote from http://iheartquotes.com/api
 #'  \item fortune A random quote from an R coder, from fortunes library
 #'  \item time Print the current time
 #' }
-#' 
-#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine, 
+#'
+#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you could imagine,
 #' 'All Glory to the HYPNO TOAD!'. For reference see \url{http://knowyourmeme.com/memes/hypnotoad}.
-#' 
+#'
 #' @examples
 #' say()
 #' say("what")
@@ -53,15 +53,15 @@
 #'
 #' # The hypnotoad
 #' say(by="hypnotoad")
-#' 
+#'
 #' # The longcat, from BoingBoing
 #' say("it's caturday!", "longcat")
 #' say("i'm so short", "longcat", length=0) # AKA - shortcat
 #' say("that's better", "longcat", length=6)
-#' 
+#'
 #' # Fish
 #' say(by='fish')
-#' 
+#'
 #' # Bunny holding a sign
 #' say(by='signbunny')
 
@@ -92,7 +92,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
   _(_\\\ \\)__
  (____\\\ ___)) "
 
-  cat <-
+  bigcat <-
     "
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
                \\`*-.
@@ -221,7 +221,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
                |/`.\\`'        ,','); SSt
                    `         (/  (/
   "
-  
+
   # From here:
   # https://twitter.com/BoingBoing/status/465170473194512384
   shortcat <-
@@ -232,7 +232,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
     |\u3064  \u3064
     U " U
     '
-  
+
   longcat <-
     '
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
@@ -242,8 +242,8 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
 %s
     U " U
     '
-  
-  fish <- 
+
+  fish <-
     '
 \n ----- \n %s \n ------ \n    \\\   \n     \\\
   ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>  ><((((\u00BA>
@@ -251,10 +251,20 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
 
   signbunny <-
     '\n -------------- \n%s \n --------------
-(\\__/) || 
+(\\__/) ||
 (\u2022\u3145\u2022) ||
-/   \u3065  
+/   \u3065
     '
+
+  cat <-
+  '\n -------------- \n%s \n --------------
+    \\\
+      \\\
+         /\\\ /\\\
+         (O o)
+        =(:^:)=
+           U
+  '
 
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
