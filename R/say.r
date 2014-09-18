@@ -1,14 +1,14 @@
 #' Sling messages and warnings with flair
 #'
-#' @importFrom jsonlite fromJSON
+#' @importFrom RJSONIO fromJSON
 #' @importFrom fortunes fortune
 #' @export
 #'
 #' @param what (character) What do you want to say? See details.
-#' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat, 
-#' shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, 
-#' frog, hypnotoad, signbunny, stretchycat, or  fish. We use \code{match.arg()} internally, so you 
-#' can use unique parts of words that don't conflict with others, like "g" for "ghost" because 
+#' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
+#' shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman,
+#' frog, hypnotoad, signbunny, stretchycat, or  fish. We use \code{match.arg()} internally, so you
+#' can use unique parts of words that don't conflict with others, like "g" for "ghost" because
 #' there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
@@ -89,11 +89,11 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
     what <- paste(as.character(what), collapse="\n ")
   }
   if(what=="catfact"){
-    what <- jsonlite::fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
+    what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
   }
   if(what=="iheart"){
-    tmp <- jsonlite::fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
+    tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
     tmp <- gsub("\t|\n|\r", "", tmp)
     what <- gsub('\"', "'", tmp)
   }
