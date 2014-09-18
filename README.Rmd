@@ -22,7 +22,7 @@ That's right, it takes 6 people to make `cowsay` - it's that hard.
 ### Dependencies:
 
 * `fortunes`
-* `jsonlite`
+* `RJSONIO`
 
 ### Quick watch start
 

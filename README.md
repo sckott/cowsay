@@ -22,7 +22,7 @@ That's right, it takes 6 people to make `cowsay` - it's that hard.
 ### Dependencies:
 
 * `fortunes`
-* `jsonlite`
+* `RJSONIO`
 
 ### Quick watch start
 
@@ -49,7 +49,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2014-09-18 07:41:40 
+## 2014-09-18 08:16:15 
 ##  --------------
 ##     \
 ##       \
@@ -191,13 +191,9 @@ say("catfact", "cat")
 ```
 
 ```
-## Warning: Unexpected Content-Type: application/javascript
-```
-
-```
 ## 
 ##  -------------- 
-## It may take as long as 2 weeks for a kitten to be able to hear well.  Their eyes usually open between 7 and 10 days, but sometimes it happens in as little as 2 days. 
+## Tylenol and chocolate are both poisionous to cats. 
 ##  --------------
 ##     \
 ##       \
@@ -228,7 +224,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  Satire is what closes Saturday night.-- George Kaufman 
+##  I do not know myself and God forbid that I should.-- Johann Wolfgang von Goethe 
 ##  ------ 
 ##     \   
 ##      \
@@ -335,11 +331,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## If we told you all of R's secrets, we'd have to kill you.
-##  Duncan Murdoch
-##  answering a request for too detailed documentation
+## If 'fools rush in where angels fear to tread', then Bayesians 'jump' in where frequentists fear to 'step'.
+##  Charles C. Berry
+##  about Bayesian model selection as an alternative to stepwise regression
 ##  R-help
-##  October 2011 
+##  November 2009 
 ##  --------------
 ##     \
 ##       \
