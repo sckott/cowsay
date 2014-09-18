@@ -5,9 +5,9 @@
 #' @export
 #'
 #' @param what (character) What do you want to say? See details.
-#' @param by (character) Type of thing, one of cow, chicken, poop, cat, bigcat, longcat, shortcat, 
-#' behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, 
-#' hypnotoad, signbunny, stretchycat, or  fish. We use \code{match.arg()} internally, so you 
+#' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat, 
+#' shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, 
+#' frog, hypnotoad, signbunny, stretchycat, or  fish. We use \code{match.arg()} internally, so you 
 #' can use unique parts of words that don't conflict with others, like "g" for "ghost" because 
 #' there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
@@ -38,6 +38,9 @@
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
 #' say("fortune", "spider")
+#' say("fortune", "facecat")
+#' say("fortune", "stretchycat")
+#' say("fortune", "behindcat")
 #'
 #' # Vary type of output, default calls message()
 #' say("hell no!")
@@ -258,7 +261,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
 /   \u3065
     '
 
-  cat <-
+  facecat <-
   '\n -------------- \n%s \n --------------
     \\\
       \\\
@@ -329,6 +332,23 @@ Jill                    `;;\u201B             ;   ; ;
        \u007c\u007c  \u007c---\u201B\u005c  \u005c
   jgs  (_(__\u007c   ((__\u007c
   '
+  
+  cat <- 
+  '\n -------------- \n%s \n --------------
+    \u005c
+      \u005c
+        \u005c
+            \u007c\u005c___/\u007c
+          ==) ^Y^ (==
+            \u005c  ^  /
+             )=*=(
+            /     \u005c
+            \u007c     \u007c
+           /\u007c \u007c \u007c \u007c\u005c
+           \u005c\u007c \u007c \u007c_\u007c/\u005c
+      jgs  //_// ___/
+               \u005c_)
+  '
 
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
@@ -336,7 +356,7 @@ Jill                    `;;\u201B             ;   ; ;
     longcat <- sprintf(longcat, "%s", body)
   } else { longcat <- shortcat }
 
-  by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
+  by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "facecat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
       "longtailcat","fish", "signbunny"))
