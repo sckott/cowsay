@@ -1,6 +1,8 @@
 Package: cowsay
-Title: messages/warnings/etc. with ascii art
-Description: messages/warnings/etc. with ascii art
+Title: Messages/warnings/etc. with ascii animals.
+Description: This package allow printing of character strings as
+    messages/warnings/etc. with ascii animals, including cats, cows, frogs,
+    chickens, ghosts, and more.
 Version: 0.2.9.99
 Date: 2014-09-17
 License: MIT + file LICENSE
