@@ -315,6 +315,20 @@ Jill                    `;;\u201B             ;   ; ;
         ) ) /-\u201B\u005c  ,_.\u201B
   jgs  (,(,/ ((,,/
   '
+  
+  longtailcat <- 
+  '\n -------------- \n%s \n --------------
+    \u005c
+      \u005c
+        \u005c
+     /\u005c-/\u005c
+    /a a  \u005c                                 _
+   =\u005c Y  =/-~~~~~~-,_______________________/ )
+     \u201B^--\u201B          ________________________/
+       \u005c           /
+       \u007c\u007c  \u007c---\u201B\u005c  \u005c
+  jgs  (_(__\u007c   ((__\u007c
+  '
 
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
@@ -325,7 +339,7 @@ Jill                    `;;\u201B             ;   ; ;
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
-      "fish", "signbunny"))
+      "longtailcat","fish", "signbunny"))
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
