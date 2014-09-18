@@ -3,3 +3,4 @@ CONTRIBUTING.md
 ^.*\.Rproj$
 ^\.Rproj\.user$
 appveyor.yml
+README.Rmd
