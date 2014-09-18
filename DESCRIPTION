@@ -9,8 +9,8 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     email = "tyler.rinker@gmail.com"), person("Thomas", "Leeper", role =
     c("aut"), email = "thosjleeper@gmail.com"), person("Noam", "Ross", role =
     c("aut"), email = "noam.ross@gmail.com"), person("Rich", "FitzJohn", role =
-    c("aut"), email = "rich.fitzjohn at gmail.com"), person("Kiyoko", "Gotanda",
-    role = c("aut"), email = "photopidge at gmail.com"))
+    c("aut"), email = "rich.fitzjohn@gmail.com"), person("Kiyoko", "Gotanda",
+    role = c("aut"), email = "photopidge@gmail.com"))
 Roxygen: list(wrap = FALSE)
 Imports:
     fortunes,
