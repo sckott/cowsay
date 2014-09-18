@@ -34,6 +34,7 @@
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
+#' say("yeppers", "anxiouscat")
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
 #' say("fortune", "spider")
@@ -298,6 +299,22 @@ Jill                    `;;\u201B             ;   ; ;
                   ._.--\u201B\u201B     ._,,, _..\u201B  .;.\u201B
                   (,_....----\u201B\u201B\u201B     (,..--\u201B\u201B
   '
+  
+  anxiouscat <- 
+  '\n -------------- \n%s \n --------------
+    \u005c
+      \u005c
+        \u005c
+        /\u005c_/\u005c         _
+       /``   \u005c       / )
+       \u007cn n   \u007c__   ( (
+      =(Y =.\u201B`   `\u005c  \u005c \u005c
+      {`"`        \u005c  ) )
+      {       /    \u007c/ /
+       \u005c\u005c   ,(     / /
+        ) ) /-\u201B\u005c  ,_.\u201B
+  jgs  (,(,/ ((,,/
+  '
 
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
@@ -307,7 +324,7 @@ Jill                    `;;\u201B             ;   ; ;
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
-      "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat",
+      "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
       "fish", "signbunny"))
   if(what=="time")
     what <- as.character(Sys.time())
