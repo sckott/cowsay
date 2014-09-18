@@ -89,11 +89,11 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
     what <- paste(as.character(what), collapse="\n ")
   }
   if(what=="catfact"){
-    what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
+    what <- jsonlite::fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
   }
   if(what=="iheart"){
-    tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
+    tmp <- jsonlite::fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
     tmp <- gsub("\t|\n|\r", "", tmp)
     what <- gsub('\"', "'", tmp)
   }
