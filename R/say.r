@@ -81,7 +81,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "facecat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
-      "longtailcat","fish", "signbunny"))
+      "longtailcat","fish", "signbunny", "rms"))
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
