@@ -19,10 +19,47 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
-### Dependencies:
+### Where to find ASCII animal art
 
-* `fortunes`
-* `RJSONIO`
+Sources to look in:
+
+* http://www.retrojunkie.com/asciiart/asciiart.htm - apprently this person just collects ascii art, doesn't make any, 
+* http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc. 
+* http://www.asciiworld.com/
+
+Permissions
+
+In the [ascii art mailing list](https://groups.google.com/forum/#!forum/alt.ascii-art) they say:
+
+```
+ As for posting other people's ASCII art, 
+    after a discussion in news:alt.ascii-art       _     ___ 
+    the following rules were agreed upon:         #_~`--'__ `===-, 
+    1.  If an ASCII ART picture has initials      `.`.     `#.,// 
+        on it, leave them on when posting it      ,_\_\     ## #\ 
+    2.  If an ASCII ART picture doesn't have      `__.__    `####\ 
+        initials on it,  mention  that  you            ~~\ ,###'~ 
+        didn't  draw  it  when  posting  it.              \##' 
+    3.  If somebody  posts a picture without                  [nosig] 
+        initials and you have an original copy 
+        with initials on, feel free to re-post the original version. 
+        *   The re-post ought not to be taken personally, as we all 
+            know that ASCII art often loses proper credits. 
+            Responses to the re-post are not necessary. 
+
+    One contributor, name of Krogg, suggested the following: 
+
+    1.) Ultra polite:...ya make yer own ascii and use it. 
+    2.)  Very polite:...Ya contact the author and ask if ya 
+                        can use it... 
+    3.)       polite:...Ya use it but you keep the Credits 
+                        in there like they should be. 
+    4.)         rude:...Ya use it and strip credits. 
+    5.)    Very rude:...Ya use it and claim that it Is 
+                        _Your_ very own creation... 
+```
+
+So, let's go with this rule: Let's include found (on the web) ascii art in this pkg, include signature if there, and if no signature, put in a `[nosig]` (see above). 
 
 ### Quick watch start
 
