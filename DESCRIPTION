@@ -3,7 +3,7 @@ Title: Messages/warnings/etc. with ascii animals.
 Description: This package allow printing of character strings as
     messages/warnings/etc. with ascii animals, including cats, cows, frogs,
     chickens, ghosts, and more.
-Version: 0.2.9.99
+Version: 0.2.9.999
 Date: 2015-01-21
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
