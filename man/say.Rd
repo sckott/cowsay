@@ -12,9 +12,9 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18,
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
 shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman,
-frog, hypnotoad, signbunny, stretchycat, or  fish. We use \code{match.arg()} internally, so you
-can use unique parts of words that don't conflict with others, like "g" for "ghost" because
-there's no other animal that starts with "g".}
+frog, hypnotoad, signbunny, stretchycat, fish, or trilobite. We use \code{match.arg()}
+internally, so you can use unique parts of words that don't conflict with others, like "g"
+for "ghost" because there's no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string (returns string)}
 
@@ -45,6 +45,8 @@ Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you 
 Signbunny: It's not for sure known who invented signbunny, but this article
 \url{http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained} thinks they found the
 first use in this tweet: \url{https://twitter.com/wei_bluebear/status/329101645780770817}
+
+Trilobite: from \url{http://www.retrojunkie.com/asciiart/animals/dinos.htm}
 }
 \examples{
 say()
