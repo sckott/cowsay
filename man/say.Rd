@@ -96,5 +96,8 @@ say(by='fish')
 
 # Bunny holding a sign
 say(by='signbunny')
+
+# Bunny holding a sign
+say(by='trilobite')
 }
 

@@ -83,6 +83,9 @@
 #'
 #' # Bunny holding a sign
 #' say(by='signbunny')
+#' 
+#' # Bunny holding a sign
+#' say(by='trilobite')
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
   if(!length==0){
