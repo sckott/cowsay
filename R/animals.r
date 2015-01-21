@@ -172,7 +172,7 @@
     ( \uFF9F\u03C9\uFF9F)
     |\u3064  \u3064
 %s
-    U " U
+    U "  U
         [BoingBoing]
     '
 
