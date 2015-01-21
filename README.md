@@ -86,7 +86,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2014-11-05 14:38:52 
+## 2015-01-21 08:31:57 
 ##  --------------
 ##     \
 ##       \
@@ -127,7 +127,7 @@ say("ain't that some shit", "chicken")
 ##           '.`-..-;`
 ##             `;-..'
 ##             _| _|
-##             /` /`
+##             /` /` [nosig]
 ## 
 ```
 
@@ -148,7 +148,7 @@ say("boo!", "ghost")
 ##     (o o)
 ##     | O \
 ##      \   \
-##       `~~~'
+##       `~~~' [nosig]
 ## 
 ```
 
@@ -230,7 +230,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## Unlike humans, cats do not need to blink their eyes on a regular basis to keep their eyes lubricated. 
+## It is estimated that cats can make over 60 different sounds. 
 ##  --------------
 ##     \
 ##       \
@@ -261,7 +261,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  See these?  American donuts.  Glazed, powdered, and raspberry-filled.Now, how's that for freedom of choice.       -- Homer Simpson   The Crepes of Wrath 
+##  I work on the helpdesk for a very large hotel chain. One day, one of our hotels called in reporting that the system wouldn't power on. After going through the usual -- making sure that the correct power button is being pressed, checking to see that it's plugged in, checking the outlet, etc -- I had determined that the power supply had probably failed and needed to be replaced. Just as I was about to end the call and dispatch a technician, the desk clerk stated very matter-of-factly, 'Oh, by the way, lightning hit our hotel last night. Do you think that might have something to do with it?' 
 ##  ------ 
 ##     \   
 ##      \
@@ -275,7 +275,7 @@ say("iheart", "chicken")
 ##           '.`-..-;`
 ##             `;-..'
 ##             _| _|
-##             /` /`
+##             /` /` [nosig]
 ## 
 ```
 
@@ -317,7 +317,8 @@ say("it's caturday", "longcat")
 ##     |    |
 ##     |    |
 ##     |    |
-##     U " U
+##     U "  U
+##         [BoingBoing]
 ## 
 ```
 
@@ -336,6 +337,7 @@ say(by='signbunny')
 ## (\__/) ||
 ## (•ㅅ•) ||
 ## /   づ
+##           [nosig]
 ## 
 ```
 
@@ -355,6 +357,7 @@ say(by='fish')
 ##     \   
 ##      \
 ##   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
+##       Kiyoko Gotanda
 ## 
 ```
 
@@ -368,11 +371,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## There are companies whose yearly license fees to SAS total millions of dollars. Then those companies hire armies of SAS programmers to program an archaic macro language using old statistical methods to produce ugly tables and the worst graphics in the statistical software world.
-##  Frank Harrell
-##  NA
+## I'd have called them .Rob for the current .rds file format (single object), and .Ros for the current .rda file format (>1 objects). [actually I would have called them .Rob or .Robject, and .Rwk or .Rworkspace but then I noticed that if you had a .Rob you had to have a .Ros so as not to favour one or other of the project originators :)]
+##  Barry Rowlingson
+##  in a discussion about .rda and .rds formats
 ##  R-help
-##  November 2004 
+##  April 2012 
 ##  --------------
 ##     \
 ##       \
@@ -387,5 +390,109 @@ say('fortune','cat')
 ##            \| | |_|/\
 ##       jgs  //_// ___/
 ##                \_)
+## 
+```
+
+#### Trilobite
+
+
+```r
+say("Hi there :)", by='trilobite')
+```
+
+```
+## 
+##   
+##  -------------- 
+## Hi there :) 
+##  --------------
+##     \
+##       \
+##         \
+##           _____
+##        .'` ,-. `'.
+##       /   ([ ])   \
+##      /.-""`(`)`""-.\
+##       <'```(.)```'>
+##       <'```(.)```'>
+##        <'``(.)``'>
+##    sk   <``\_/``>
+##          `'---'`
+## 
+```
+
+#### Shark
+
+
+```r
+say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+```
+
+```
+## 
+##     
+##  -------------- 
+## Q: What do you call a solitary shark
+## A: A lone shark 
+##  --------------
+##     \
+##       \
+##         \
+##               /""-._
+##               .       '-,
+##                :          '',
+##                 ;      *     '.
+##                  ' *         () '.
+##                    \               \
+##                     \      _.---.._ '.
+##                     :  .' _.--''-''  \ ,'
+##         .._           '/.'             . ;
+##         ; `-.          ,                \'
+##          ;   `,         ;              ._\
+##           ;    \     _,-'                ''--._
+##           :    \_,-'                          '-._
+##           \ ,-'                       .          '-._
+##           .'         __.-'';            \...,__       '.
+##         .'      _,-'        \              \   ''--.,__  '\
+##         /    _,--' ;         \              ;           \^.}
+##         ;_,-' )     \  )\      )            ;
+##              /       \/  \_.,-'             ;
+##             /                              ;
+##          ,-'  _,-'''-.    ,-.,            ;      PFA
+##       ,-' _.-'        \  /    |/'-._...--'
+##      :--``             )/
+##   '
+## 
+```
+
+#### Buffalo
+
+
+```r
+say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+```
+
+```
+## 
+##     
+##  -------------- 
+## Q: What do you call a single buffalo?
+## A: A buffalonely 
+##  --------------
+##     \
+##       \
+##         \
+##                    _.-````'-,_
+##          _,.,_ ,-'`           `'-.,_
+##        /)     (                   '``-.
+##       ((      ) )                      `\
+##         \)    (_/                        )\
+##         |       /)           '    ,'    / \
+##         `\    ^'            '     (    /  ))
+##           |      _/\ ,     /    ,,`\   (  "`
+##           \Y,   |   \  \  | ````| / \_ \
+##             `)_/      \  \  )    ( >  ( >
+##                        \( \(     |/   |/
+##           mic & dwb  /_(/_(    /_(  /_(
 ## 
 ```

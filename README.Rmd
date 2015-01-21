@@ -146,3 +146,21 @@ say(by='fish')
 ```{r}
 say('fortune','cat')
 ```
+
+#### Trilobite
+
+```{r}
+say("Hi there :)", by='trilobite')
+```
+
+#### Shark
+
+```{r}
+say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+```
+
+#### Buffalo
+
+```{r}
+say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+```
