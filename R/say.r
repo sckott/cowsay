@@ -12,6 +12,9 @@
 #' there's no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
+#' @param fortune An integer specifying the row number of fortunes.data. Alternatively which can 
+#' be a character and grep is used to try to find a suitable row.
+#' @param ... Further args passed on to \code{\link[fortunes]{fortune}}
 #'
 #' @details You can put in any phrase you like, OR you can type in one of a few special phrases
 #' that do particular things. They are:
@@ -49,6 +52,11 @@
 #'
 #' # Using fortunes
 #' say(what="fortune")
+#' say("fortune", fortune=10)
+#' say("fortune", fortune=100)
+#' say("fortune", fortune='whatever')
+#' say("fortune", fortune=7)
+#' say("fortune", fortune=45)
 #'
 #' # Using catfacts
 #' say("catfact", "cat")
@@ -70,13 +78,14 @@
 #' # Bunny holding a sign
 #' say(by='signbunny')
 
-say <- function(what="Hello world!", by="cat", type="message", length=18)
-{
+say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
   if(!length==0){
     body <- paste(rep('    |    |\n', length), collapse = "")
     body <- gsub('\n$', '', body)
     longcat <- sprintf(longcat, "%s", body)
-  } else { longcat <- shortcat }
+  } else { 
+    longcat <- shortcat 
+  }
 
   by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "facecat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
@@ -85,8 +94,9 @@ say <- function(what="Hello world!", by="cat", type="message", length=18)
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
-    what <- fortune(sample(1:316,1))
-    what <- paste(as.character(what), collapse="\n ")
+    if( is.null(fortune) ) fortune <- sample(1:360,1)
+    what <- fortune(which = fortune, ...)
+    what <- gsub("<x>", "\n", paste(as.character(what), collapse="\n "))
   }
   if(what=="catfact"){
     what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
