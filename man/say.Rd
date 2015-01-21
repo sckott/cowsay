@@ -12,7 +12,7 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18,
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
 shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman,
-frog, hypnotoad, signbunny, stretchycat, fish, or trilobite. We use \code{match.arg()}
+frog, hypnotoad, signbunny, stretchycat, fish, trilobite, or shark. We use \code{match.arg()}
 internally, so you can use unique parts of words that don't conflict with others, like "g"
 for "ghost" because there's no other animal that starts with "g".}
 
@@ -97,7 +97,10 @@ say(by='fish')
 # Bunny holding a sign
 say(by='signbunny')
 
-# Bunny holding a sign
+# Trilobite
 say(by='trilobite')
+
+# Shark
+say('Q: What do you call a solitary shark\\nA: A lone shark', by='shark')
 }
 
