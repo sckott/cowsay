@@ -86,7 +86,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-21 08:31:57 
+## 2015-01-22 23:49:37 
 ##  --------------
 ##     \
 ##       \
@@ -230,7 +230,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## It is estimated that cats can make over 60 different sounds. 
+## On September 6,1950, a four-month-old kitten belonging to Josephine Aufdenblatten of Geneva, Switzerland followed a group of climbers to the top of the 14,691 -ft. Matterhorn in the Alps. 
 ##  --------------
 ##     \
 ##       \
@@ -261,7 +261,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  I work on the helpdesk for a very large hotel chain. One day, one of our hotels called in reporting that the system wouldn't power on. After going through the usual -- making sure that the correct power button is being pressed, checking to see that it's plugged in, checking the outlet, etc -- I had determined that the power supply had probably failed and needed to be replaced. Just as I was about to end the call and dispatch a technician, the desk clerk stated very matter-of-factly, 'Oh, by the way, lightning hit our hotel last night. Do you think that might have something to do with it?' 
+##  'It took me fifteen years to discover that I had no talent for writing,but I couldn't give up because by that time I was too famous.'-- Robert Benchly 
 ##  ------ 
 ##     \   
 ##      \
@@ -322,6 +322,65 @@ say("it's caturday", "longcat")
 ## 
 ```
 
+#### Grumpy cat
+
+
+```r
+say('NO!', by='grumpycat')
+```
+
+```
+## 
+##    
+##  -------------- 
+##  NO! 
+##  --------------
+##     \
+##       \
+##         \
+##       ﾊ _ ﾊ
+##       ಠ X ಠ
+## 
+```
+
+
+```r
+say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+```
+
+```
+## 
+##    
+##  -------------- 
+##  WOKE UP TODAY, IT WAS TERRIBLE 
+##  --------------
+##     \
+##       \
+##         \
+##       ﾊ _ ﾊ
+##       ಠ X ಠ
+## 
+```
+
+
+```r
+say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
+```
+
+```
+## 
+##    
+##  -------------- 
+##  I HAD FUN ONCE, IT WAS AWFUL 
+##  --------------
+##     \
+##       \
+##         \
+##       ﾊ _ ﾊ
+##       ಠ X ಠ
+## 
+```
+
 #### Bunny Holding a sign
 
 
@@ -371,11 +430,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## I'd have called them .Rob for the current .rds file format (single object), and .Ros for the current .rda file format (>1 objects). [actually I would have called them .Rob or .Robject, and .Rwk or .Rworkspace but then I noticed that if you had a .Rob you had to have a .Ros so as not to favour one or other of the project originators :)]
-##  Barry Rowlingson
-##  in a discussion about .rda and .rds formats
+## We also have huge amounts of work going into calibration transfer, i.e. making quantitative predictive models work on a different instrument. This is always a whole lot of work, and for some fields of problems at the moment considered basically impossible even between two instruments of the same model and manufacturer.
+##  Claudia Beleites
+##  in a discussion about publication bias and scientific validity
 ##  R-help
-##  April 2012 
+##  January 2011 
 ##  --------------
 ##     \
 ##       \
@@ -496,3 +555,4 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ##           mic & dwb  /_(/_(    /_(  /_(
 ## 
 ```
+

@@ -129,6 +129,20 @@ From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/stat
 say("it's caturday", "longcat")
 ```
 
+#### Grumpy cat
+
+```{r}
+say('NO!', by='grumpycat')
+```
+
+```{r}
+say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+```
+
+```{r}
+say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
+```
+
 #### Bunny Holding a sign
 
 ```{r}
@@ -164,3 +178,4 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 ```{r}
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ```
+
