@@ -11,11 +11,10 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18,
 \item{what}{(character) What do you want to say? See details.}
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
-shortcat, behindcat, longtailcat, anxiouscat, ant, pumpkin, ghost, spider, rabbit, pig, snowman,
-frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, or buffalo.
+shortcat, behindcat, longtailcat, anxiouscat, grumpycat, ant, pumpkin, ghost, spider, rabbit,
+pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, or buffalo.
 We use \code{match.arg()} internally, so you can use unique parts of words that don't
-conflict with others, like "g" for "ghost" because there's no other animal that
-starts with "g".}
+conflict with others, like "g" for "ghost" because there's no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string (returns string)}
 
@@ -91,6 +90,11 @@ say(by="hypnotoad")
 say("it's caturday!", "longcat")
 say("i'm so short", "longcat", length=0) # AKA - shortcat
 say("that's better", "longcat", length=6)
+
+# Grumpy cat
+say('NO!', by='grumpycat')
+say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 
 # Fish
 say(by='fish')
