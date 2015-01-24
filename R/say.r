@@ -107,7 +107,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
     longcat <- shortcat 
   }
 
-  by <- match.arg(by, choices=c("cow", "chicken", "poop", "cat", "facecat", "ant",
+  by <- match.arg(by, choices=c("cow", "chicken", "clippy", "poop", "cat", "facecat", "ant",
       "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
       "longtailcat","fish", "signbunny", "rms", "trilobite", "shark", "buffalo", "grumpycat"))
@@ -130,8 +130,9 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
   if(by=="hypnotoad"){
     what <- "All Glory to the HYPNO TOAD!"
   }
+  who <- get(by)
   switch(type,
-         message = message(sprintf(get(by), what)),
-         warning = warning(sprintf(get(by), what)),
-         string = sprintf(get(by), what))
+         message = message(sprintf(who, what)),
+         warning = warning(sprintf(who, what)),
+         string = sprintf(who, what))
 }
