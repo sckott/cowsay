@@ -16,6 +16,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 * Kiyoko Gotanda
+* Carson Sievert
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
@@ -86,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-22 23:49:37 
+## 2015-01-26 08:47:35 
 ##  --------------
 ##     \
 ##       \
@@ -230,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## On September 6,1950, a four-month-old kitten belonging to Josephine Aufdenblatten of Geneva, Switzerland followed a group of climbers to the top of the 14,691 -ft. Matterhorn in the Alps. 
+## There are approximately 100 breeds of cat. 
 ##  --------------
 ##     \
 ##       \
@@ -261,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  'It took me fifteen years to discover that I had no talent for writing,but I couldn't give up because by that time I was too famous.'-- Robert Benchly 
+##  I'm not an Iranian!!  I voted for Dianne Feinstein!! 
 ##  ------ 
 ##     \   
 ##      \
@@ -430,11 +431,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## We also have huge amounts of work going into calibration transfer, i.e. making quantitative predictive models work on a different instrument. This is always a whole lot of work, and for some fields of problems at the moment considered basically impossible even between two instruments of the same model and manufacturer.
-##  Claudia Beleites
-##  in a discussion about publication bias and scientific validity
+## It is unusual for the actual data not to be available in real problems.
+##  Brian D. Ripley
+##  in reply to a question how to fit a distribution if not the data but only their histogram is available
 ##  R-help
-##  January 2011 
+##  June 2006 
 ##  --------------
 ##     \
 ##       \
@@ -556,3 +557,31 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ## 
 ```
 
+#### Clippy 
+
+
+```r
+say("fortune", fortune=59, by="clippy")
+```
+
+```
+## 
+## 
+##  ----- 
+##  Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
+##  Brian D. Ripley
+##  'Statistical Methods Need Software: A View of Statistical Computing'
+##  Opening lecture RSS 2002, Plymouth
+##  September 2002 
+##  ------ 
+##     \   
+##      \
+##    __
+##    / \
+##    | |
+##    @ @
+##   || ||
+##   || ||
+##   |\_/|
+##   \___/
+```

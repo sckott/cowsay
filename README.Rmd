@@ -16,6 +16,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 * Kiyoko Gotanda
+* Carson Sievert
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
@@ -179,3 +180,8 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ```
 
+#### Clippy 
+
+```{r}
+say("fortune", fortune=59, by="clippy")
+```
