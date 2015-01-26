@@ -87,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-26 09:17:58 
+## 2015-01-26 12:59:16 
 ##  --------------
 ##     \
 ##       \
@@ -231,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## Among many other diseases, cats can suffer from anorexia, senility, feline AIDS and acne. 
+## Many cats love having their forehead gently stroked. 
 ##  --------------
 ##     \
 ##       \
@@ -262,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  Well thaaaaaaat's okay. 
+##  Top Ten Signs The Apocalypse Is Dawning: McDonald's sign reads 'Over 666 billion sold.' Two words... Jesse 'The Governor of Minnesota' Ventura. Movies no longer are preceded by previews of coming attractions. Mr. Rogers starts wearing a hooded black cape and carrying a big ol' scythe. Your dearly departed grandmother has come over for tea a few too many times in the last few weeks. Driving through brimstone makes driving through snow seem easy. Next on Jerry Springer: 'My wife had slept with all four horsemen, and I want a divorce!' Uncle Gordon's trick knee is acting up something awful. CNN has an 'Approaching Apocalypse' logo and theme music. God's polling numbers are low so he's making 'selected public appearances' in hopes of revitalizing his image. 
 ##  ------ 
 ##     \   
 ##      \
@@ -431,11 +431,12 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## /* some real insanity to keep Duncan sane */
-##  Luke Tierney
-##  NA
-##  in src/main/context.c
-##  June 2001 
+## The good way to do it is to include the following comment at the beginning:
+## # This is a holy Script, please edit it not
+##  Kenn Konstabel
+##  on "... how to protect R Script files from inadvertent editing by users."
+##  R-help
+##  April 2011 
 ##  --------------
 ##     \
 ##       \
@@ -493,12 +494,12 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-## Joshua Ulrich: That's the magic_pony function.
-##  Justin and Joshua Ulrich
+## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+##  Tom Backer Johnsen and Barry Rowlingson
 ##  NA
-##  stackoverflow.com
-##  June 2013 
+##  R-help
+##  February 2006 
 ##  --------------
 ##     \
 ##       \
@@ -647,6 +648,60 @@ say(fortune=59, by="clippy")
 ##   || ||
 ##   |\_/|
 ##   \___/ GB
+```
+
+#### Yoda
+
+
+```r
+say("You must unlearn what you have learned", by="yoda")
+```
+
+```
+## 
+## 
+## 
+##  ----- 
+##  You must unlearn what you have learned 
+##  ------ 
+##     \   
+##      \
+##                    ____                  
+##                 _.' :  `._               
+##             .-.'`.  ;   .'`.-.           
+##    __      / : ___\ ;  /___ ; \      __  
+##   ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
+##   :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
+##        `:-.._J '-.-'L__ `-- ' L_..-;'     
+##           "-.__ ;  .-"  "-.  : __.-"       
+##              L ' /.------.\ ' J           
+##              "-.   "--"   .-"            
+##              __.l"-:_JL_;-";.__           
+##          .-j/'.;  ;""""  / .'\"-.        
+##          .' /:`. "-.:     .-" .';  `.      
+##       .-"  / ;  "-. "-..-" .-"  :    "-.   
+##   .+"-.  : :      "-.__.-"      ;-._   \  
+##   ; \  `.; ;                    : : "+. ; 
+##   :  ;   ; ;                    : ;  : \: 
+##   ;  :   ; :                    ;:   ;  : 
+##   : \  ;  :  ;                  : ;  /  :: 
+##   ;  ; :   ; :                  ;   :   ;: 
+##   :  :  ;  :  ;                : :  ;  : ; 
+##   ;\    :   ; :                ; ;     ; ; 
+##   : `."-;   :  ;              :  ;    /  ; 
+##  ;    -:   ; :              ;  : .-"   : 
+##   :\     \  :  ;            : \.-"      : 
+##   ;`.    \  ; :            ;.'_..--  / ; 
+##   :  "-.  "-:  ;          :/."      .'  :
+##    \         \ :          ;/  __        :
+##     \       .-`.\        /t-""  ":-+.   :
+##      `.  .-"    `l    __/ /`. :  ; ; \  ;
+##        \   .-" .-"-.-"  .' .'j \  /   ;/ 
+##         \ / .-"   /.     .'.' ;_:'    ;  
+##   :-""-.`./-.'     /    `.___.'   
+##                \ `t  ._  /  bug          
+##                 "-.t-._:'                
+## 
 ```
 
 #### Using pipes
