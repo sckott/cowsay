@@ -72,11 +72,12 @@ say("hell no!", type="string")
 
 # Using fortunes
 say(what="fortune")
-say("fortune", fortune=10)
-say("fortune", fortune=100)
-say("fortune", fortune='whatever')
-say("fortune", fortune=7)
-say("fortune", fortune=45)
+## you don't have to pass anything to the `what` parameter if `fortune` is not null
+say(fortune=10)
+say(fortune=100)
+say(fortune='whatever')
+say(fortune=7)
+say(fortune=45)
 
 # Using catfacts
 say("catfact", "cat")
@@ -113,6 +114,6 @@ say('Q: What do you call a solitary shark\\nA: A lone shark', by='shark')
 say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
 
 # Clippy
-say("fortune", fortune=59, by="clippy")
+say(fortune=59, by="clippy")
 }
 

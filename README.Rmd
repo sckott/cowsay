@@ -162,6 +162,16 @@ say(by='fish')
 say('fortune','cat')
 ```
 
+You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
+
+```{r}
+say(fortune=100)
+```
+
+```{r}
+say(fortune='whatever')
+```
+
 #### Trilobite
 
 ```{r}

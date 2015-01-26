@@ -87,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-26 08:47:35 
+## 2015-01-26 09:06:49 
 ##  --------------
 ##     \
 ##       \
@@ -231,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## There are approximately 100 breeds of cat. 
+## Lions are the only cats that live in groups, called prides. Every female within the pride is usually related. 
 ##  --------------
 ##     \
 ##       \
@@ -262,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  I'm not an Iranian!!  I voted for Dianne Feinstein!! 
+##  paycheck:The weekly $5.27 that remains after deductions for federalwithholding, state withholding, city withholding, FICA,medical/dental, long-term disability, unemployment insurance,Christmas Club, and payroll savings plan contributions. 
 ##  ------ 
 ##     \   
 ##      \
@@ -431,11 +431,74 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## It is unusual for the actual data not to be available in real problems.
-##  Brian D. Ripley
-##  in reply to a question how to fit a distribution if not the data but only their histogram is available
+## Careful now, or I'll get into a rant about how much you pay for ArcGIS and whether you are getting value for money if bugs become 'well-known'! Bugs in R tend to be either 'obscure' or 'fixed' :)
+##  Barry Rowlingson
+##  in response to a request for rgdal to work around a well-known bug in ArcGIS
+##  R-SIG-Geo
+##  March 2012 
+##  --------------
+##     \
+##       \
+##         \
+##             |\___/|
+##           ==) ^Y^ (==
+##             \  ^  /
+##              )=*=(
+##             /     \
+##             |     |
+##            /| | | |\
+##            \| | |_|/\
+##       jgs  //_// ___/
+##                \_)
+## 
+```
+
+You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
+
+
+```r
+say(fortune=100)
+```
+
+```
+## 
+##  -------------- 
+## I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
+##  Peter Dalgaard
+##  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
 ##  R-help
-##  June 2006 
+##  January 2005 
+##  --------------
+##     \
+##       \
+##         \
+##             |\___/|
+##           ==) ^Y^ (==
+##             \  ^  /
+##              )=*=(
+##             /     \
+##             |     |
+##            /| | | |\
+##            \| | |_|/\
+##       jgs  //_// ___/
+##                \_)
+## 
+```
+
+
+```r
+say(fortune='whatever')
+```
+
+```
+## 
+##  -------------- 
+## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+##  Tom Backer Johnsen and Barry Rowlingson
+##  NA
+##  R-help
+##  February 2006 
 ##  --------------
 ##     \
 ##       \
