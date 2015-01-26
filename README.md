@@ -87,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-26 09:16:11 
+## 2015-01-26 09:17:58 
 ##  --------------
 ##     \
 ##       \
@@ -231,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## There is a species of cat smaller than the average housecat. It is native to Africa and it is the Black-footed cat (Felis nigripes). Its top weight is 5.5 pounds. 
+## Among many other diseases, cats can suffer from anorexia, senility, feline AIDS and acne. 
 ##  --------------
 ##     \
 ##       \
@@ -262,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  Laws of Serendipity:-- (1) In order to discover anything, you must be looking for  something.(2) If you wish to make an improved product, you must already  be engaged in making an inferior one. 
+##  Well thaaaaaaat's okay. 
 ##  ------ 
 ##     \   
 ##      \
@@ -431,12 +431,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## Thomas Lumley: The algorithm in glm.fit, while not perfect, is a little smarter than a simple IRLS. It uses step-halving to back away from the edge, and when the parameter space is convex it has a reasonable chance of creeping along the boundary to the true MLE.
-## Peter Dalgaard: Hmm. That wasn't my experience. I had a situation where there was like a (virtual) maximum outside the boundary, and the algorithm would basically stay on the path to that peak, banging its little head into the same point of the wall repeatedly, so to speak.
-##  Thomas Lumley and Peter Dalgaard
-##  about problems with constrained optimzation in GLMs and "the little optimizer that couldn't"
-##  R-help
-##  November 2004 
+## /* some real insanity to keep Duncan sane */
+##  Luke Tierney
+##  NA
+##  in src/main/context.c
+##  June 2001 
 ##  --------------
 ##     \
 ##       \
@@ -494,12 +493,12 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-##  Tom Backer Johnsen and Barry Rowlingson
+## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+## Joshua Ulrich: That's the magic_pony function.
+##  Justin and Joshua Ulrich
 ##  NA
-##  R-help
-##  February 2006 
+##  stackoverflow.com
+##  June 2013 
 ##  --------------
 ##     \
 ##       \
@@ -625,7 +624,7 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 
 ```r
-say("fortune", fortune=59, by="clippy")
+say(fortune=59, by="clippy")
 ```
 
 ```
