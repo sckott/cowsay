@@ -117,6 +117,7 @@ say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
 say(fortune=59, by="clippy")
 
 # using pipes
+library(magrittr)
 "I HAD FUN ONCE, IT WAS AWFUL" \%>\% say('grumpycat')
 }
 
