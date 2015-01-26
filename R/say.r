@@ -108,7 +108,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
   }
 
   by <- match.arg(by, choices=c("cow", "chicken", "clippy", "poop", "cat", "facecat", "ant",
-      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
+      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog", "yoda",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
       "longtailcat","fish", "signbunny", "rms", "trilobite", "shark", "buffalo", "grumpycat"))
   if(what=="time")
