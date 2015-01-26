@@ -87,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-26 09:06:49 
+## 2015-01-26 09:14:34 
 ##  --------------
 ##     \
 ##       \
@@ -231,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## Lions are the only cats that live in groups, called prides. Every female within the pride is usually related. 
+## Has your cat ever brought its prey to your door? Cats do that because they regard their owners as their "kittens." The cats are teaching their "kittens" how to hunt by bringing them food. Most people aren't too delighted when a pet brings in their kill. Instead of punishing your cat, praise it for its efforts, accept the prey, and then secretly throw it away. 
 ##  --------------
 ##     \
 ##       \
@@ -262,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  paycheck:The weekly $5.27 that remains after deductions for federalwithholding, state withholding, city withholding, FICA,medical/dental, long-term disability, unemployment insurance,Christmas Club, and payroll savings plan contributions. 
+##  FIRE!Recently, just as an ecumenical gathering was commencing, a secretary rushed in shouting, 'The building is on fire!' The Methodists gathered in a corner and prayed. The Baptists cried, 'Where is the water?' The Quakers quietly praised God for blessings fire brings. The Lutherans posted a notice on the door declaring the fire was evil. The Roman Catholics passed the plate to cover the damage. The Jews posted symbols on the doors hoping the fire would pass. The Congregationalists shouted, 'Every man for himself!' The Fundamentalists proclaimed, 'It's the vengeance of God!' The Episcopalians formed a procession and marched out. The Christian Scientists concluded that the fire would burn itself out. The Presbyterians appointed a chairperson, who was to appoint a committee to look into the matter and submit a written report. The Unity Students proclaimed the fire had no power over them. Some Atheists in attendance didn't believe there was a fire. The Secretary grabbed the fire extinguisher and put out the fire.%CHANGECorporal Conroy needed to use a pay phone, but didn't have change for a dollar. He saw Private Duncan mopping the floors, and asked him, 'Soldier, do you have change for a dollar?' Private Duncan replied, 'Sure.' The Corporal gave him an icy stare. He said, 'That's no way to address a superior officer! Now let's try it again. Private, do you have change for a dollar?' Private Duncan replied, 'No, SIR!' 
 ##  ------ 
 ##     \   
 ##      \
@@ -431,11 +431,11 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## Careful now, or I'll get into a rant about how much you pay for ArcGIS and whether you are getting value for money if bugs become 'well-known'! Bugs in R tend to be either 'obscure' or 'fixed' :)
-##  Barry Rowlingson
-##  in response to a request for rgdal to work around a well-known bug in ArcGIS
-##  R-SIG-Geo
-##  March 2012 
+## Getting flamed for asking dumb questions on a public mailing list is all part of growing up and being a man/woman.
+##  Michael Watson
+##  in a discussion on whether answers on R-help should be more polite
+##  R-help
+##  December 2004 
 ##  --------------
 ##     \
 ##       \
@@ -493,12 +493,12 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-##  Tom Backer Johnsen and Barry Rowlingson
+## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+## Joshua Ulrich: That's the magic_pony function.
+##  Justin and Joshua Ulrich
 ##  NA
-##  R-help
-##  February 2006 
+##  stackoverflow.com
+##  June 2013 
 ##  --------------
 ##     \
 ##       \
@@ -647,4 +647,26 @@ say("fortune", fortune=59, by="clippy")
 ##   || ||
 ##   |\_/|
 ##   \___/
+```
+
+#### Using pipes
+
+
+```r
+library("magrittr")
+"I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+```
+
+```
+## 
+##    
+##  -------------- 
+##  I HAD FUN ONCE, IT WAS AWFUL 
+##  --------------
+##     \
+##       \
+##         \
+##       ﾊ _ ﾊ
+##       ಠ X ಠ
+## 
 ```

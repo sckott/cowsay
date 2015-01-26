@@ -102,6 +102,9 @@
 #' 
 #' # Clippy
 #' say(fortune=59, by="clippy")
+#' 
+#' # using pipes
+#' "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
   if(!length==0){

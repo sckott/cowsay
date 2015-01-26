@@ -115,5 +115,8 @@ say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
 
 # Clippy
 say(fortune=59, by="clippy")
+
+# using pipes
+"I HAD FUN ONCE, IT WAS AWFUL" \%>\% say('grumpycat')
 }
 

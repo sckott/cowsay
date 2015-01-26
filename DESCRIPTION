@@ -18,3 +18,5 @@ Roxygen: list(wrap = FALSE)
 Imports:
     fortunes,
     RJSONIO
+Enhances:
+    magrittr
