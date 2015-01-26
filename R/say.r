@@ -7,9 +7,10 @@
 #' @param what (character) What do you want to say? See details.
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
 #' shortcat, behindcat, longtailcat, anxiouscat, grumpycat, ant, pumpkin, ghost, spider, rabbit, 
-#' pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, or buffalo. 
-#' We use \code{match.arg()} internally, so you can use unique parts of words that don't 
-#' conflict with others, like "g" for "ghost" because there's no other animal that starts with "g".
+#' pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, buffalo, 
+#' or clippy.  We use \code{match.arg()} internally, so you can use unique parts of words that 
+#' don't conflict with others, like "g" for "ghost" because there's no other animal that 
+#' starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. Alternatively which can 
@@ -97,6 +98,9 @@
 #' 
 #' # Buffalo
 #' say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+#' 
+#' # Clippy
+#' say("fortune", fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
   if(!length==0){
