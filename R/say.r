@@ -104,6 +104,7 @@
 #' say(fortune=59, by="clippy")
 #' 
 #' # using pipes
+#' library(magrittr)
 #' "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
@@ -118,7 +119,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
   if(!is.null(fortune)) what <- "fortune"
 
   by <- match.arg(by, choices=c("cow", "chicken", "clippy", "poop", "cat", "facecat", "ant",
-      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog",
+      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog", "yoda",
       "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
       "longtailcat","fish", "signbunny", "rms", "trilobite", "shark", "buffalo", "grumpycat"))
   if(what=="time")

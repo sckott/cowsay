@@ -196,6 +196,12 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 say(fortune=59, by="clippy")
 ```
 
+#### Yoda
+
+```{r}
+say("You must unlearn what you have learned", by="yoda")
+```
+
 #### Using pipes
 
 ```{r}
