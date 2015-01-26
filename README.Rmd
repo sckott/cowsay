@@ -16,6 +16,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 * Kiyoko Gotanda
+* Carson Sievert
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
@@ -161,6 +162,16 @@ say(by='fish')
 say('fortune','cat')
 ```
 
+You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
+
+```{r}
+say(fortune=100)
+```
+
+```{r}
+say(fortune='whatever')
+```
+
 #### Trilobite
 
 ```{r}
@@ -179,3 +190,15 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ```
 
+#### Clippy 
+
+```{r}
+say(fortune=59, by="clippy")
+```
+
+#### Using pipes
+
+```{r}
+library("magrittr")
+"I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+```

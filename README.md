@@ -16,6 +16,7 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Noam Ross
 * Rich FitzJohn
 * Kiyoko Gotanda
+* Carson Sievert
 
 That's right, it takes 6 people to make `cowsay` - it's that hard.
 
@@ -86,7 +87,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-22 23:49:37 
+## 2015-01-26 09:17:58 
 ##  --------------
 ##     \
 ##       \
@@ -230,7 +231,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## On September 6,1950, a four-month-old kitten belonging to Josephine Aufdenblatten of Geneva, Switzerland followed a group of climbers to the top of the 14,691 -ft. Matterhorn in the Alps. 
+## Among many other diseases, cats can suffer from anorexia, senility, feline AIDS and acne. 
 ##  --------------
 ##     \
 ##       \
@@ -261,7 +262,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  'It took me fifteen years to discover that I had no talent for writing,but I couldn't give up because by that time I was too famous.'-- Robert Benchly 
+##  Well thaaaaaaat's okay. 
 ##  ------ 
 ##     \   
 ##      \
@@ -430,11 +431,74 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## We also have huge amounts of work going into calibration transfer, i.e. making quantitative predictive models work on a different instrument. This is always a whole lot of work, and for some fields of problems at the moment considered basically impossible even between two instruments of the same model and manufacturer.
-##  Claudia Beleites
-##  in a discussion about publication bias and scientific validity
+## /* some real insanity to keep Duncan sane */
+##  Luke Tierney
+##  NA
+##  in src/main/context.c
+##  June 2001 
+##  --------------
+##     \
+##       \
+##         \
+##             |\___/|
+##           ==) ^Y^ (==
+##             \  ^  /
+##              )=*=(
+##             /     \
+##             |     |
+##            /| | | |\
+##            \| | |_|/\
+##       jgs  //_// ___/
+##                \_)
+## 
+```
+
+You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
+
+
+```r
+say(fortune=100)
+```
+
+```
+## 
+##  -------------- 
+## I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
+##  Peter Dalgaard
+##  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
 ##  R-help
-##  January 2011 
+##  January 2005 
+##  --------------
+##     \
+##       \
+##         \
+##             |\___/|
+##           ==) ^Y^ (==
+##             \  ^  /
+##              )=*=(
+##             /     \
+##             |     |
+##            /| | | |\
+##            \| | |_|/\
+##       jgs  //_// ___/
+##                \_)
+## 
+```
+
+
+```r
+say(fortune='whatever')
+```
+
+```
+## 
+##  -------------- 
+## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+## Joshua Ulrich: That's the magic_pony function.
+##  Justin and Joshua Ulrich
+##  NA
+##  stackoverflow.com
+##  June 2013 
 ##  --------------
 ##     \
 ##       \
@@ -556,3 +620,53 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ## 
 ```
 
+#### Clippy 
+
+
+```r
+say(fortune=59, by="clippy")
+```
+
+```
+## 
+## 
+##  ----- 
+##  Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
+##  Brian D. Ripley
+##  'Statistical Methods Need Software: A View of Statistical Computing'
+##  Opening lecture RSS 2002, Plymouth
+##  September 2002 
+##  ------ 
+##     \   
+##      \
+##    __
+##    / \
+##    | |
+##    @ @
+##   || ||
+##   || ||
+##   |\_/|
+##   \___/ GB
+```
+
+#### Using pipes
+
+
+```r
+library("magrittr")
+"I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+```
+
+```
+## 
+##    
+##  -------------- 
+##  I HAD FUN ONCE, IT WAS AWFUL 
+##  --------------
+##     \
+##       \
+##         \
+##       ﾊ _ ﾊ
+##       ಠ X ಠ
+## 
+```

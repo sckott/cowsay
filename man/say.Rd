@@ -12,9 +12,10 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18,
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
 shortcat, behindcat, longtailcat, anxiouscat, grumpycat, ant, pumpkin, ghost, spider, rabbit,
-pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, or buffalo.
-We use \code{match.arg()} internally, so you can use unique parts of words that don't
-conflict with others, like "g" for "ghost" because there's no other animal that starts with "g".}
+pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, buffalo,
+or clippy.  We use \code{match.arg()} internally, so you can use unique parts of words that
+don't conflict with others, like "g" for "ghost" because there's no other animal that
+starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string (returns string)}
 
@@ -71,11 +72,12 @@ say("hell no!", type="string")
 
 # Using fortunes
 say(what="fortune")
-say("fortune", fortune=10)
-say("fortune", fortune=100)
-say("fortune", fortune='whatever')
-say("fortune", fortune=7)
-say("fortune", fortune=45)
+## you don't have to pass anything to the `what` parameter if `fortune` is not null
+say(fortune=10)
+say(fortune=100)
+say(fortune='whatever')
+say(fortune=7)
+say(fortune=45)
 
 # Using catfacts
 say("catfact", "cat")
@@ -110,5 +112,11 @@ say('Q: What do you call a solitary shark\\nA: A lone shark', by='shark')
 
 # Buffalo
 say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
+
+# Clippy
+say(fortune=59, by="clippy")
+
+# using pipes
+"I HAD FUN ONCE, IT WAS AWFUL" \%>\% say('grumpycat')
 }
 
