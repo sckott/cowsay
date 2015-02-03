@@ -10,7 +10,8 @@
 #' pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, buffalo, 
 #' or clippy.  We use \code{\link{match.arg}} internally, so you can use unique parts of words that 
 #' don't conflict with others, like "g" for "ghost" because there's no other animal that 
-#' starts with "g".
+#' starts with "g". There are several animals that are not available on Windows due to the fact 
+#' that they use non-ASCII characters.
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. Alternatively which can 
@@ -108,30 +109,22 @@
 #' "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
-  if(!length==0){
-    body <- paste(rep('    |    |\n', length), collapse = "")
-    body <- gsub('\n$', '', body)
-    longcat <- sprintf(longcat, "%s", body)
-  } else { 
-    longcat <- shortcat 
+  
+  if(what=="catfact"){
+    what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
+    by <- 'cat'
   }
   
+  who <- get_who(by, length = length)
+  
   if(!is.null(fortune)) what <- "fortune"
-
-  by <- match.arg(by, choices=c("cow", "chicken", "clippy", "poop", "cat", "facecat", "ant",
-      "pumpkin", "ghost", "spider", "rabbit", "pig", "snowman", "frog", "yoda",
-      "hypnotoad","longcat","shortcat","bigcat","behindcat","stretchycat","anxiouscat",
-      "longtailcat","fish", "signbunny", "rms", "trilobite", "shark", "buffalo", "grumpycat"))
+  
   if(what=="time")
     what <- as.character(Sys.time())
   if(what=="fortune") {
     if( is.null(fortune) ) fortune <- sample(1:360,1)
     what <- fortune(which = fortune, ...)
     what <- gsub("<x>", "\n", paste(as.character(what), collapse="\n "))
-  }
-  if(what=="catfact"){
-    what <- fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
-    by <- 'cat'
   }
   if(what=="iheart"){
     tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
@@ -141,7 +134,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
   if(by=="hypnotoad"){
     what <- "All Glory to the HYPNO TOAD!"
   }
-  who <- get(by)
+  
   switch(type,
          message = message(sprintf(who, what)),
          warning = warning(sprintf(who, what)),
