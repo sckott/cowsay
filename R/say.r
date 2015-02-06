@@ -8,10 +8,10 @@
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat, bigcat, longcat,
 #' shortcat, behindcat, longtailcat, anxiouscat, grumpycat, ant, pumpkin, ghost, spider, rabbit, 
 #' pig, snowman, frog, hypnotoad, signbunny, stretchycat, fish, trilobite, shark, buffalo, 
-#' or clippy.  We use \code{\link{match.arg}} internally, so you can use unique parts of words that 
+#' or clippy. Alternatively, use "random" to have your message spoken by a random character. 
+#' We use \code{\link{match.arg}} internally, so you can use unique parts of words that 
 #' don't conflict with others, like "g" for "ghost" because there's no other animal that 
-#' starts with "g". There are several animals that are not available on Windows due to the fact 
-#' that they use non-ASCII characters.
+#' starts with "g".
 #' @param type (character) One of message (default), warning, or string (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. Alternatively which can 
@@ -35,7 +35,11 @@
 #' \url{http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained} thinks they found the 
 #' first use in this tweet: \url{https://twitter.com/wei_bluebear/status/329101645780770817}
 #' 
-#' Trilobite: from \url{http://www.retrojunkie.com/asciiart/animals/dinos.htm}
+#' Trilobite: from \url{http://www.retrojunkie.com/asciiart/animals/dinos.htm}.
+#' 
+#' Note to Windows users: there are some animals (shortcat, longcat, fish, signbunny, 
+#' stretchycat, anxiouscat, longtailcat, grumpycat) that are not available 
+#' because they use non-ASCII characters that don't display properly in R on Windows.
 #'
 #' @examples
 #' say()

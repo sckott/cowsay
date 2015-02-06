@@ -1,17 +1,19 @@
 get_who <- function(by, length) {
-  
+
   animals <- get_animals()
-  
-  by <- match.arg(by, c(choices=names(animals), "rms"))
-  
-  if (by == "rms") {
+
+  by <- match.arg(by, c(choices=names(animals), "rms", "random"))
+
+  if (by == "random") {
+    who <- sample(animals, 1)
+  } else if (by == "rms") {
     who <- rms
   } else if (by == "longcat") {
     if(!length==0){
       body <- paste(rep('    |    |\n', length), collapse = "")
       body <- gsub('\n$', '', body)
       who <- sprintf(animals[by], "%s", body)
-    } else { 
+    } else {
       who <- animals['shortcat']
     }
   } else {
