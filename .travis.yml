@@ -8,7 +8,7 @@ before_install:
 install:
 - ./travis-tool.sh install_r magrittr
 - ./travis-tool.sh install_deps
-- Rscript -e 'install.packages("magrittr")'
+- Rscript -e 'options(repos=c(CRAN="http://cran.rstudio.com")); install.packages("magrittr")'
 
 script: ./travis-tool.sh run_tests
 
