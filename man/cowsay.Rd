@@ -17,6 +17,7 @@ Contributors:
  \item Thomas Leeper
  \item Noam Ross
  \item Rich FitzJohn
+ \item Andy Teucher
 }
 
 There is only one function in the cowsay package. Simplicity for the win.
