@@ -49,12 +49,10 @@
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
-#' say("yeppers", "anxiouscat")
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
 #' say("fortune", "spider")
 #' say("fortune", "facecat")
-#' say("fortune", "stretchycat")
 #' say("fortune", "behindcat")
 #'
 #' # Vary type of output, default calls message()
@@ -79,22 +77,6 @@
 #'
 #' # The hypnotoad
 #' say(by="hypnotoad")
-#'
-#' # The longcat, from BoingBoing
-#' say("it's caturday!", "longcat")
-#' say("i'm so short", "longcat", length=0) # AKA - shortcat
-#' say("that's better", "longcat", length=6)
-#'
-#' # Grumpy cat
-#' say('NO!', by='grumpycat')
-#' say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
-#' say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
-#'
-#' # Fish
-#' say(by='fish')
-#'
-#' # Bunny holding a sign
-#' say(by='signbunny')
 #'
 #' # Trilobite
 #' say(by='trilobite')
