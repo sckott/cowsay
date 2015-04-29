@@ -17,8 +17,10 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Rich FitzJohn
 * Kiyoko Gotanda
 * Carson Sievert
+* Andy Teucher
+* Karl Broman
 
-That's right, it takes 6 people to make `cowsay` - it's that hard.
+That's right, it takes 9 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
