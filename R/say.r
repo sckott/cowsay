@@ -54,6 +54,7 @@
 #' say("fortune", "spider")
 #' say("fortune", "facecat")
 #' say("fortune", "behindcat")
+#' say("fortune", "smallcat")
 #'
 #' # Vary type of output, default calls message()
 #' say("hell no!")

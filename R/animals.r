@@ -372,7 +372,12 @@ Jill                    `;;\u201B             ;   ; ;
       \u0CA0 X \u0CA0
   '
 
-  ,smallcat = '       \\\ \n        \\\
+  ,smallcat = 
+  '
+   \n -------------- \n %s \n --------------
+    \u005c
+     \u005c
+      \u005c
          /\\_/\\
         ( o.o )
          > ^ <      [nosig]\n\n' # from https://user.xmission.com/~emailbox/ascii_cats.htm
