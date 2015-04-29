@@ -13,7 +13,7 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     c("aut"), email = "rich.fitzjohn@gmail.com"), person("Carson", "Sievert",
     role = c("aut"), email = "cpsievert1@gmail.com"), person("Kiyoko", "Gotanda",
     role = c("aut"), email = "photopidge@gmail.com"), person("Andy", "Teucher", 
-    role = c("aut"), email = "andy.teucher@gmail.com"), person("Karl", "Browman",
+    role = c("aut"), email = "andy.teucher@gmail.com"), person("Karl", "Broman",
     role = c("aut"), email = "kbroman@gmail.com"))
 Roxygen: list(wrap = FALSE)
 Imports:

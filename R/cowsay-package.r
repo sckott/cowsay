@@ -10,7 +10,10 @@
 #'  \item Thomas Leeper
 #'  \item Noam Ross
 #'  \item Rich FitzJohn
+#'  \item Kiyoko Gotanda
+#'  \item Carson Sievert
 #'  \item Andy Teucher
+#'  \item Karl Broman
 #' }
 #' 
 #' There is only one function in the cowsay package. Simplicity for the win. 
