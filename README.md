@@ -19,8 +19,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Carson Sievert
 * Andy Teucher
 * Karl Broman
+* Franz-Sebastian Krah
 
-That's right, it takes 9 people to make `cowsay` - it's that hard.
+That's right, it takes 10 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -89,7 +90,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-01-26 12:59:16 
+## 2015-04-30 19:41:09 
 ##  --------------
 ##     \
 ##       \
@@ -233,7 +234,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## Many cats love having their forehead gently stroked. 
+## A queen (female cat) can begin mating when she is between 5 and 9 months old. 
 ##  --------------
 ##     \
 ##       \
@@ -264,7 +265,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  Top Ten Signs The Apocalypse Is Dawning: McDonald's sign reads 'Over 666 billion sold.' Two words... Jesse 'The Governor of Minnesota' Ventura. Movies no longer are preceded by previews of coming attractions. Mr. Rogers starts wearing a hooded black cape and carrying a big ol' scythe. Your dearly departed grandmother has come over for tea a few too many times in the last few weeks. Driving through brimstone makes driving through snow seem easy. Next on Jerry Springer: 'My wife had slept with all four horsemen, and I want a divorce!' Uncle Gordon's trick knee is acting up something awful. CNN has an 'Approaching Apocalypse' logo and theme music. God's polling numbers are low so he's making 'selected public appearances' in hopes of revitalizing his image. 
+##  I will never lie to you. 
 ##  ------ 
 ##     \   
 ##      \
@@ -433,12 +434,12 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## The good way to do it is to include the following comment at the beginning:
-## # This is a holy Script, please edit it not
-##  Kenn Konstabel
-##  on "... how to protect R Script files from inadvertent editing by users."
+## Marc R. Feldesman: I'm trying to figure out what could have possibly changed [...] that make Brian Ripley's posts (in particular) not show up on my mail server [...]
+## Peter Dalgaard: Did you remember to turn off the Oxford-sarcasm filter?
+##  Marc R. Feldesman and Peter Dalgaard
+##  Marc R. Feldesman having some e-mail problems
 ##  R-help
-##  April 2011 
+##  January 2005 
 ##  --------------
 ##     \
 ##       \
@@ -496,12 +497,12 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-##  Tom Backer Johnsen and Barry Rowlingson
+## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+## Joshua Ulrich: That's the magic_pony function.
+##  Justin and Joshua Ulrich
 ##  NA
-##  R-help
-##  February 2006 
+##  stackoverflow.com
+##  June 2013 
 ##  --------------
 ##     \
 ##       \
@@ -668,41 +669,41 @@ say("You must unlearn what you have learned", by="yoda")
 ##  ------ 
 ##     \   
 ##      \
-##                    ____                  
-##                 _.' :  `._               
-##             .-.'`.  ;   .'`.-.           
-##    __      / : ___\ ;  /___ ; \      __  
+##                    ____
+##                 _.' :  `._
+##             .-.'`.  ;   .'`.-.
+##    __      / : ___\ ;  /___ ; \      __
 ##   ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
 ##   :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
-##        `:-.._J '-.-'L__ `-- ' L_..-;'     
-##           "-.__ ;  .-"  "-.  : __.-"       
-##              L ' /.------.\ ' J           
-##              "-.   "--"   .-"            
-##              __.l"-:_JL_;-";.__           
-##          .-j/'.;  ;""""  / .'\"-.        
-##          .' /:`. "-.:     .-" .';  `.      
-##       .-"  / ;  "-. "-..-" .-"  :    "-.   
-##   .+"-.  : :      "-.__.-"      ;-._   \  
-##   ; \  `.; ;                    : : "+. ; 
-##   :  ;   ; ;                    : ;  : \: 
-##   ;  :   ; :                    ;:   ;  : 
-##   : \  ;  :  ;                  : ;  /  :: 
-##   ;  ; :   ; :                  ;   :   ;: 
-##   :  :  ;  :  ;                : :  ;  : ; 
-##   ;\    :   ; :                ; ;     ; ; 
-##   : `."-;   :  ;              :  ;    /  ; 
-##  ;    -:   ; :              ;  : .-"   : 
-##   :\     \  :  ;            : \.-"      : 
-##   ;`.    \  ; :            ;.'_..--  / ; 
+##        `:-.._J '-.-'L__ `-- ' L_..-;'
+##           "-.__ ;  .-"  "-.  : __.-"
+##              L ' /.------.\ ' J
+##              "-.   "--"   .-"
+##              __.l"-:_JL_;-";.__
+##          .-j/'.;  ;""""  / .'\"-.
+##          .' /:`. "-.:     .-" .';  `.
+##       .-"  / ;  "-. "-..-" .-"  :    "-.
+##   .+"-.  : :      "-.__.-"      ;-._   \
+##   ; \  `.; ;                    : : "+. ;
+##   :  ;   ; ;                    : ;  : \:
+##   ;  :   ; :                    ;:   ;  :
+##   : \  ;  :  ;                  : ;  /  ::
+##   ;  ; :   ; :                  ;   :   ;:
+##   :  :  ;  :  ;                : :  ;  : ;
+##   ;\    :   ; :                ; ;     ; ;
+##   : `."-;   :  ;              :  ;    /  ;
+##  ;    -:   ; :              ;  : .-"   :
+##   :\     \  :  ;            : \.-"      :
+##   ;`.    \  ; :            ;.'_..--  / ;
 ##   :  "-.  "-:  ;          :/."      .'  :
 ##    \         \ :          ;/  __        :
 ##     \       .-`.\        /t-""  ":-+.   :
 ##      `.  .-"    `l    __/ /`. :  ; ; \  ;
-##        \   .-" .-"-.-"  .' .'j \  /   ;/ 
-##         \ / .-"   /.     .'.' ;_:'    ;  
-##   :-""-.`./-.'     /    `.___.'   
-##                \ `t  ._  /  bug          
-##                 "-.t-._:'                
+##        \   .-" .-"-.-"  .' .'j \  /   ;/
+##         \ / .-"   /.     .'.' ;_:'    ;
+##   :-""-.`./-.'     /    `.___.'
+##                \ `t  ._  /  bug
+##                 "-.t-._:'
 ## 
 ```
 

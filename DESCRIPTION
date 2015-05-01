@@ -2,8 +2,7 @@ Package: cowsay
 Title: Messages/warnings/strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc. 
     with ascii animals, including cats, cows, frogs, chickens, ghosts, and more.
-Version: 0.3.0.999
-Date: 2015-04-28
+Version: 0.3.1.999
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     "myrmecocystus@gmail.com"), person("Tyler", "Rinker", role = c("aut"),
@@ -14,7 +13,8 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     role = c("aut"), email = "cpsievert1@gmail.com"), person("Kiyoko", "Gotanda",
     role = c("aut"), email = "photopidge@gmail.com"), person("Andy", "Teucher", 
     role = c("aut"), email = "andy.teucher@gmail.com"), person("Karl", "Broman",
-    role = c("aut"), email = "kbroman@gmail.com"))
+    role = c("aut"), email = "kbroman@gmail.com"), person("Franz-Sebastian", "Krah",
+    role = c("aut"), email = "f.krah@mailbox.org"))
 Roxygen: list(wrap = FALSE)
 Imports:
     fortunes,
