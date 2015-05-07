@@ -113,6 +113,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
   if (what == "fortune") {
     if ( is.null(fortune) ) fortune <- sample(1:360, 1)
     what <- fortune(which = fortune, ...)
+    what <- what[!is.na(what)] # remove missing pieces (e.g. "context")
     what <- gsub("<x>", "\n", paste(as.character(what), collapse = "\n "))
   }
   if (what == "iheart") {
