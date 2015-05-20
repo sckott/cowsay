@@ -27,8 +27,8 @@ That's right, it takes 10 people to make `cowsay` - it's that hard.
 
 Sources to look in:
 
-* http://www.retrojunkie.com/asciiart/asciiart.htm - apprently this person just collects ascii art, doesn't make any, 
-* http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc. 
+* http://www.retrojunkie.com/asciiart/asciiart.htm - apprently this person just collects ascii art, doesn't make any,
+* http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc.
 * http://www.asciiworld.com/
 
 Permissions
@@ -36,34 +36,34 @@ Permissions
 In the [ascii art mailing list](https://groups.google.com/forum/#!forum/alt.ascii-art) they say:
 
 ```
- As for posting other people's ASCII art, 
-    after a discussion in news:alt.ascii-art       _     ___ 
-    the following rules were agreed upon:         #_~`--'__ `===-, 
-    1.  If an ASCII ART picture has initials      `.`.     `#.,// 
-        on it, leave them on when posting it      ,_\_\     ## #\ 
-    2.  If an ASCII ART picture doesn't have      `__.__    `####\ 
-        initials on it,  mention  that  you            ~~\ ,###'~ 
-        didn't  draw  it  when  posting  it.              \##' 
-    3.  If somebody  posts a picture without                  [nosig] 
-        initials and you have an original copy 
-        with initials on, feel free to re-post the original version. 
-        *   The re-post ought not to be taken personally, as we all 
-            know that ASCII art often loses proper credits. 
-            Responses to the re-post are not necessary. 
+ As for posting other people's ASCII art,
+    after a discussion in news:alt.ascii-art       _     ___
+    the following rules were agreed upon:         #_~`--'__ `===-,
+    1.  If an ASCII ART picture has initials      `.`.     `#.,//
+        on it, leave them on when posting it      ,_\_\     ## #\
+    2.  If an ASCII ART picture doesn't have      `__.__    `####\
+        initials on it,  mention  that  you            ~~\ ,###'~
+        didn't  draw  it  when  posting  it.              \##'
+    3.  If somebody  posts a picture without                  [nosig]
+        initials and you have an original copy
+        with initials on, feel free to re-post the original version.
+        *   The re-post ought not to be taken personally, as we all
+            know that ASCII art often loses proper credits.
+            Responses to the re-post are not necessary.
 
-    One contributor, name of Krogg, suggested the following: 
+    One contributor, name of Krogg, suggested the following:
 
-    1.) Ultra polite:...ya make yer own ascii and use it. 
-    2.)  Very polite:...Ya contact the author and ask if ya 
-                        can use it... 
-    3.)       polite:...Ya use it but you keep the Credits 
-                        in there like they should be. 
-    4.)         rude:...Ya use it and strip credits. 
-    5.)    Very rude:...Ya use it and claim that it Is 
-                        _Your_ very own creation... 
+    1.) Ultra polite:...ya make yer own ascii and use it.
+    2.)  Very polite:...Ya contact the author and ask if ya
+                        can use it...
+    3.)       polite:...Ya use it but you keep the Credits
+                        in there like they should be.
+    4.)         rude:...Ya use it and strip credits.
+    5.)    Very rude:...Ya use it and claim that it Is
+                        _Your_ very own creation...
 ```
 
-So, let's go with this rule: Let's include found (on the web) ascii art in this pkg, include signature if there, and if no signature, put in a `[nosig]` (see above). 
+So, let's go with this rule: Let's include found (on the web) ascii art in this pkg, include signature if there, and if no signature, put in a `[nosig]` (see above).
 
 ### Quick watch start
 
@@ -90,7 +90,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-04-30 19:41:09 
+## 2015-05-20 13:20:15 
 ##  --------------
 ##     \
 ##       \
@@ -234,7 +234,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## A queen (female cat) can begin mating when she is between 5 and 9 months old. 
+## Cats have the largest eyes of any mammal. 
 ##  --------------
 ##     \
 ##       \
@@ -265,7 +265,7 @@ say("iheart", "chicken")
 ## 
 ## 
 ##  ----- 
-##  I will never lie to you. 
+##  NATHAN ... your PARENTS were in a CARCRASH!!  They're VOIDED -- TheyCOLLAPSED They had no CHAINSAWS ... They had no MONEY MACHINES ... Theydid PILLS in SKIMPY GRASS SKIRTS ... Nathan, I EMULATED them ... butthey were OFF-KEY ... 
 ##  ------ 
 ##     \   
 ##      \
@@ -434,12 +434,10 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## Marc R. Feldesman: I'm trying to figure out what could have possibly changed [...] that make Brian Ripley's posts (in particular) not show up on my mail server [...]
-## Peter Dalgaard: Did you remember to turn off the Oxford-sarcasm filter?
-##  Marc R. Feldesman and Peter Dalgaard
-##  Marc R. Feldesman having some e-mail problems
-##  R-help
-##  January 2005 
+## Please do think hard before you tell other people what they 'should' do for you.
+##  Brian D. Ripley
+##  R-devel
+##  January 2006 
 ##  --------------
 ##     \
 ##       \
@@ -497,12 +495,11 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-## Joshua Ulrich: That's the magic_pony function.
-##  Justin and Joshua Ulrich
-##  NA
-##  stackoverflow.com
-##  June 2013 
+## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+##  Tom Backer Johnsen and Barry Rowlingson
+##  R-help
+##  February 2006 
 ##  --------------
 ##     \
 ##       \
@@ -624,7 +621,7 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 ## 
 ```
 
-#### Clippy 
+#### Clippy
 
 
 ```r
@@ -705,6 +702,47 @@ say("You must unlearn what you have learned", by="yoda")
 ##                \ `t  ._  /  bug
 ##                 "-.t-._:'
 ## 
+```
+
+#### Endless horse
+
+
+```r
+endless_horse()
+## -----
+## Hello world!
+## ------
+##    \
+##     \
+##      \
+##       ,
+##    _,,)\.~,,._
+##     (()`  ``)\))),,_
+##      |     \ ''((\)))),,_          ____
+##      |6`   |   ''((\())) "-.____.-"    `-.-,
+##      |    .'\    ''))))'                  \)))
+##      |   |   `.     ''                     ((((
+##      \, _)     \/                          |))))
+##       `'        |                          (((((
+##                 \                  |       ))))))
+##                  `|    |           ,\     /((((((
+##                   |   / `-.______.<  \   |  )))))
+##                   |   |  /         `. \  \  ((((
+##                   |  / \ |           `.\  | (((
+##                   \  | | |             )| |  ))
+##                    | | | |             || |  '   [endless.horse]
+##                    | | | |             || |
+##
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
+##                    | | | |             || |
 ```
 
 #### Using pipes

@@ -15,7 +15,7 @@ endless_horse <- function(what="Hello world!", endless = TRUE, n = 10) {
   horse <- get_who("endlesshorse", NULL)
   message(sprintf(horse, what), appendLF = FALSE)
   if (endless) {
-    for(i in 1:n){
+    for (i in 1:n) {
       iterendless()
     } 
   }
