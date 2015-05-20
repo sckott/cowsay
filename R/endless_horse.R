@@ -1,5 +1,7 @@
 #' Endless horse
 #' 
+#' Each time you press enter, the horse keeps going...and going...
+#' 
 #' @export
 #' @param what (character) What do you want to say? See details.
 #' @param endless (logical) Should horse be enless, you better say yes. Default: TRUE

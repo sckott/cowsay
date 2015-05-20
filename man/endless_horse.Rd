@@ -14,7 +14,7 @@ endless_horse(what = "Hello world!", endless = TRUE, n = 10)
 \item{n}{(integer) Number of leg segments. Default: 10}
 }
 \description{
-Endless horse
+Each time you press enter, the horse keeps going...and going...
 }
 \examples{
 \dontrun{
