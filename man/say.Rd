@@ -37,7 +37,8 @@ special phrases that do particular things. They are:
 
 \itemize{
  \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
- \item iheart A random quote from http://iheartquotes.com/api
+ \item iheart A random quote from http://iheartquotes.com/api - DOWN RIGHT NOW,
+ REMOVED
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
 }
@@ -90,7 +91,8 @@ say(fortune=45)
 say("catfact", "cat")
 
 # Using iheartquotes
-say("iheart", "chicken")
+## DOESN'T WORK RIGHT NOW
+# say("iheart", "chicken")
 
 # The hypnotoad
 say(by="hypnotoad")

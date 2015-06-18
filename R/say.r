@@ -24,7 +24,8 @@
 #'
 #' \itemize{
 #'  \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
-#'  \item iheart A random quote from http://iheartquotes.com/api
+#'  \item iheart A random quote from http://iheartquotes.com/api - DOWN RIGHT NOW, 
+#'  REMOVED
 #'  \item fortune A random quote from an R coder, from fortunes library
 #'  \item time Print the current time
 #' }
@@ -77,7 +78,8 @@
 #' say("catfact", "cat")
 #'
 #' # Using iheartquotes
-#' say("iheart", "chicken")
+#' ## DOESN'T WORK RIGHT NOW
+#' # say("iheart", "chicken")
 #'
 #' # The hypnotoad
 #' say(by="hypnotoad")
@@ -116,11 +118,11 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
     what <- what[!is.na(what)] # remove missing pieces (e.g. "context")
     what <- gsub("<x>", "\n", paste(as.character(what), collapse = "\n "))
   }
-  if (what == "iheart") {
-    tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
-    tmp <- gsub("\t|\n|\r", "", tmp)
-    what <- gsub('\"', "'", tmp)
-  }
+#   if (what == "iheart") {
+#     tmp <- fromJSON('http://www.iheartquotes.com/api/v1/random?format=json')$quote
+#     tmp <- gsub("\t|\n|\r", "", tmp)
+#     what <- gsub('\"', "'", tmp)
+#   }
   if (by == "hypnotoad") {
     what <- "All Glory to the HYPNO TOAD!"
   }

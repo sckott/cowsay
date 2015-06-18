@@ -121,7 +121,9 @@ say("catfact", "cat")
 
 From the [iheartquotes API](http://iheartquotes.com/api)
 
-```{r}
+> DOESN'T WORK RIGHT NOW
+
+```{r eval=FALSE}
 say("iheart", "chicken")
 ```
 

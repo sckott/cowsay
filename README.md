@@ -90,7 +90,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-05-20 13:20:15 
+## 2015-06-18 07:14:02 
 ##  --------------
 ##     \
 ##       \
@@ -256,31 +256,11 @@ say("catfact", "cat")
 
 From the [iheartquotes API](http://iheartquotes.com/api)
 
+> DOESN'T WORK RIGHT NOW
+
 
 ```r
 say("iheart", "chicken")
-```
-
-```
-## 
-## 
-##  ----- 
-##  NATHAN ... your PARENTS were in a CARCRASH!!  They're VOIDED -- TheyCOLLAPSED They had no CHAINSAWS ... They had no MONEY MACHINES ... Theydid PILLS in SKIMPY GRASS SKIRTS ... Nathan, I EMULATED them ... butthey were OFF-KEY ... 
-##  ------ 
-##     \   
-##      \
-##          _
-##        _/ }
-##       `>' \
-##       `|   \
-##        |   /'-.     .-.
-##         \'     ';`--' .'
-##          \'.    `'-./
-##           '.`-..-;`
-##             `;-..'
-##             _| _|
-##             /` /` [nosig]
-## 
 ```
 
 #### Long cat
@@ -434,10 +414,10 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## Please do think hard before you tell other people what they 'should' do for you.
-##  Brian D. Ripley
-##  R-devel
-##  January 2006 
+## The compuational ease with which an abundance of parameters can be estimated should not be allowed to obscure the probable unwisdom of such estimation from limited data.
+##  Arthur P. Dempster
+##  in "Covariance selection", Biometrics 28 (1), 157-175
+##  March 1972 
 ##  --------------
 ##     \
 ##       \
@@ -495,11 +475,11 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-##  Tom Backer Johnsen and Barry Rowlingson
-##  R-help
-##  February 2006 
+## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+## Joshua Ulrich: That's the magic_pony function.
+##  Justin and Joshua Ulrich
+##  stackoverflow.com
+##  June 2013 
 ##  --------------
 ##     \
 ##       \
