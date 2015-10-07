@@ -1,13 +1,13 @@
 #' @title Animals
-#' 
+#'
 #' @description Named vector of animals
-#' 
-#' @details \code{animals} is a named character vector of animals, 
+#'
+#' @details \code{animals} is a named character vector of animals,
 #' with each element a character string of variable length specifying
-#' an ASCII animal. Note that some have unicode characters that won't 
+#' an ASCII animal. Note that some have unicode characters that won't
 #' play well on some operating systems.
 #' @export
-#' @examples 
+#' @examples
 #' animals['cow']
 #' animals['clippy']
 #' animals[['clippy']]
@@ -470,5 +470,39 @@ Jill                    `;;\u201B             ;   ; ;
                    |  / \\ |           `.\\  | (((
                    \\  | | |             )| |  ))
                     | | | |             || |  '   [endless.horse]
-                    | | | |             || |"
+                    | | | |             || |",
+
+bat =
+"
+\n ------------- \n%s \n -------------- \n              \\\   \n               \\\  \n                \\\
+        __.--'\\     \\.__./     /'--.__
+    _.-'       '.__.'    '.__.'       '-._
+  .'                                      '.
+ /                                          \\
+|                                            |
+|                                            |
+ \\         .---.              .---.         /
+  '._    .'     '.''.    .''.'     '.    _.'
+     '-./            \\  /           \\.-'
+                      ''mrf
+",
+bat2 =
+"
+\n ------------- \n%s \n -------------- \n              \\\   \n               \\\  \n                \\\
+_____________________                              _____________________
+`-._                 \\           |\\__/|           /                 _.-'
+    \\                 \\          |    |          /                 /
+     \\                 `-_______/      \\_______-'                 /
+      |                                                          |
+      |                                                          |
+      |                                                          |
+      /                                                          \\
+     /_____________                                  _____________\\
+                   `----._                    _.----'
+                          `--.            .--'
+                              `-.      .-'
+                                 \\    / :F_P:
+                                  \\  /
+                                   \\/
+"
 )
