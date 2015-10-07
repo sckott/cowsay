@@ -2,7 +2,7 @@ Package: cowsay
 Title: Messages/warnings/strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc. 
     with ascii animals, including cats, cows, frogs, chickens, ghosts, and more.
-Version: 0.3.3.9600
+Version: 0.3.3.9900
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     "myrmecocystus@gmail.com"), person("Tyler", "Rinker", role = c("aut"),
