@@ -80,6 +80,14 @@ devtools::install_github("sckott/cowsay")
 library("cowsay")
 ```
 
+#### The animals
+
+```{r}
+sort(names(animals))
+```
+
+#### Say Something
+
 ```{r}
 say('time')
 ```

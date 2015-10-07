@@ -22,7 +22,7 @@
 #' 
 #' say('hello world!')
 #'
-#' @importFrom RJSONIO fromJSON
+#' @importFrom jsonlite fromJSON
 #' @importFrom fortunes fortune
 #' @name cowsay
 #' @docType package

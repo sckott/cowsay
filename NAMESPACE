@@ -3,5 +3,5 @@
 export(animals)
 export(endless_horse)
 export(say)
-importFrom(RJSONIO,fromJSON)
 importFrom(fortunes,fortune)
+importFrom(jsonlite,fromJSON)

@@ -82,6 +82,27 @@ devtools::install_github("sckott/cowsay")
 library("cowsay")
 ```
 
+#### The animals
+
+
+```r
+sort(names(animals))
+```
+
+```
+##  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
+##  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
+##  [9] "chicken"      "clippy"       "cow"          "endlesshorse"
+## [13] "facecat"      "fish"         "frog"         "ghost"       
+## [17] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" 
+## [21] "mushroom"     "pig"          "poop"         "pumpkin"     
+## [25] "rabbit"       "shark"        "shortcat"     "signbunny"   
+## [29] "smallcat"     "snowman"      "spider"       "stretchycat" 
+## [33] "trilobite"    "yoda"
+```
+
+#### Say Something
+
 
 ```r
 say('time')
@@ -90,7 +111,7 @@ say('time')
 ```
 ## 
 ##  -------------- 
-## 2015-06-18 07:14:02 
+## 2015-10-07 15:43:26 
 ##  --------------
 ##     \
 ##       \
@@ -117,7 +138,7 @@ say("ain't that some shit", "chicken")
 ## 
 ## 
 ##  ----- 
-##  ain't that some shit 
+## ain't that some shit 
 ##  ------ 
 ##     \   
 ##      \
@@ -144,7 +165,7 @@ say("boo!", "ghost")
 ## 
 ## 
 ##  ----- 
-##  boo! 
+## boo! 
 ##  ------ 
 ##     \   
 ##      \
@@ -234,7 +255,7 @@ say("catfact", "cat")
 ```
 ## 
 ##  -------------- 
-## Cats have the largest eyes of any mammal. 
+## When a cat drinks, its tongue - which has tiny barbs on it - scoops the liquid up backwards. 
 ##  --------------
 ##     \
 ##       \
@@ -276,7 +297,7 @@ say("it's caturday", "longcat")
 ## 
 ## 
 ##  ----- 
-##  it's caturday 
+## it's caturday 
 ##  ------ 
 ##     \   
 ##      \
@@ -317,7 +338,7 @@ say('NO!', by='grumpycat')
 ## 
 ##    
 ##  -------------- 
-##  NO! 
+## NO! 
 ##  --------------
 ##     \
 ##       \
@@ -336,7 +357,7 @@ say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 ## 
 ##    
 ##  -------------- 
-##  WOKE UP TODAY, IT WAS TERRIBLE 
+## WOKE UP TODAY, IT WAS TERRIBLE 
 ##  --------------
 ##     \
 ##       \
@@ -355,7 +376,7 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 ## 
 ##    
 ##  -------------- 
-##  I HAD FUN ONCE, IT WAS AWFUL 
+## I HAD FUN ONCE, IT WAS AWFUL 
 ##  --------------
 ##     \
 ##       \
@@ -395,7 +416,7 @@ say(by='fish')
 ## 
 ## 
 ##  ----- 
-##  Hello world! 
+## Hello world! 
 ##  ------ 
 ##     \   
 ##      \
@@ -414,10 +435,10 @@ say('fortune','cat')
 ```
 ## 
 ##  -------------- 
-## The compuational ease with which an abundance of parameters can be estimated should not be allowed to obscure the probable unwisdom of such estimation from limited data.
-##  Arthur P. Dempster
-##  in "Covariance selection", Biometrics 28 (1), 157-175
-##  March 1972 
+## For the S system, which has forever altered the way people analyze, visualize, and manipulate data .... S is an elegant, widely accepted, and enduring software system, with conceptual integrity, thanks to the insight, taste, and effort of John Chambers.
+##  Association for Computing Machinery
+##  ACM/Software System Award citation
+##  1998 
 ##  --------------
 ##     \
 ##       \
@@ -475,11 +496,11 @@ say(fortune='whatever')
 ```
 ## 
 ##  -------------- 
-## Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-## Joshua Ulrich: That's the magic_pony function.
-##  Justin and Joshua Ulrich
-##  stackoverflow.com
-##  June 2013 
+## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+##  Tom Backer Johnsen and Barry Rowlingson
+##  R-help
+##  February 2006 
 ##  --------------
 ##     \
 ##       \
@@ -612,7 +633,7 @@ say(fortune=59, by="clippy")
 ## 
 ## 
 ##  ----- 
-##  Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
+## Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
 ##  Brian D. Ripley
 ##  'Statistical Methods Need Software: A View of Statistical Computing'
 ##  Opening lecture RSS 2002, Plymouth
@@ -642,7 +663,7 @@ say("You must unlearn what you have learned", by="yoda")
 ## 
 ## 
 ##  ----- 
-##  You must unlearn what you have learned 
+## You must unlearn what you have learned 
 ##  ------ 
 ##     \   
 ##      \
@@ -737,7 +758,7 @@ library("magrittr")
 ## 
 ##    
 ##  -------------- 
-##  I HAD FUN ONCE, IT WAS AWFUL 
+## I HAD FUN ONCE, IT WAS AWFUL 
 ##  --------------
 ##     \
 ##       \
