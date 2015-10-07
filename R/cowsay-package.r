@@ -22,6 +22,8 @@
 #' 
 #' say('hello world!')
 #'
+#' @importFrom RJSONIO fromJSON
+#' @importFrom fortunes fortune
 #' @name cowsay
 #' @docType package
 NULL

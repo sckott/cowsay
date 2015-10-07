@@ -1,7 +1,5 @@
 #' Sling messages and warnings with flair
 #'
-#' @importFrom RJSONIO fromJSON
-#' @importFrom fortunes fortune
 #' @export
 #'
 #' @param what (character) What do you want to say? See details.
