@@ -1,6 +1,8 @@
 cowsay
 ======
 
+
+
 [![Build Status](https://api.travis-ci.org/sckott/cowsay.png)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
 
@@ -87,18 +89,15 @@ library("cowsay")
 
 ```r
 sort(names(animals))
-```
-
-```
-##  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
-##  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
-##  [9] "chicken"      "clippy"       "cow"          "endlesshorse"
-## [13] "facecat"      "fish"         "frog"         "ghost"       
-## [17] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" 
-## [21] "mushroom"     "pig"          "poop"         "pumpkin"     
-## [25] "rabbit"       "shark"        "shortcat"     "signbunny"   
-## [29] "smallcat"     "snowman"      "spider"       "stretchycat" 
-## [33] "trilobite"    "yoda"
+#>  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
+#>  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
+#>  [9] "chicken"      "clippy"       "cow"          "endlesshorse"
+#> [13] "facecat"      "fish"         "frog"         "ghost"       
+#> [17] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" 
+#> [21] "mushroom"     "pig"          "poop"         "pumpkin"     
+#> [25] "rabbit"       "shark"        "shortcat"     "signbunny"   
+#> [29] "smallcat"     "snowman"      "spider"       "stretchycat" 
+#> [33] "trilobite"    "yoda"
 ```
 
 #### Say Something
@@ -106,75 +105,66 @@ sort(names(animals))
 
 ```r
 say('time')
-```
-
-```
-## 
-##  -------------- 
-## 2015-10-07 15:43:26 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> 2015-10-07 15:53:32 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 
 ```r
 say("ain't that some shit", "chicken")
-```
-
-```
-## 
-## 
-##  ----- 
-## ain't that some shit 
-##  ------ 
-##     \   
-##      \
-##          _
-##        _/ }
-##       `>' \
-##       `|   \
-##        |   /'-.     .-.
-##         \'     ';`--' .'
-##          \'.    `'-./
-##           '.`-..-;`
-##             `;-..'
-##             _| _|
-##             /` /` [nosig]
-## 
+#> 
+#> 
+#>  ----- 
+#> ain't that some shit 
+#>  ------ 
+#>     \   
+#>      \
+#>          _
+#>        _/ }
+#>       `>' \
+#>       `|   \
+#>        |   /'-.     .-.
+#>         \'     ';`--' .'
+#>          \'.    `'-./
+#>           '.`-..-;`
+#>             `;-..'
+#>             _| _|
+#>             /` /` [nosig]
+#> 
 ```
 
 
 ```r
 say("boo!", "ghost")
-```
-
-```
-## 
-## 
-##  ----- 
-## boo! 
-##  ------ 
-##     \   
-##      \
-##      .-.
-##     (o o)
-##     | O \
-##      \   \
-##       `~~~' [nosig]
-## 
+#> 
+#> 
+#>  ----- 
+#> boo! 
+#>  ------ 
+#>     \   
+#>      \
+#>      .-.
+#>     (o o)
+#>     | O \
+#>      \   \
+#>       `~~~' [nosig]
+#> 
 ```
 
 #### Vary type of output, default calls message()
@@ -182,64 +172,55 @@ say("boo!", "ghost")
 
 ```r
 say("hell no!")
-```
-
-```
-## 
-##  -------------- 
-## hell no! 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> hell no! 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 
 
 ```r
 say("hell no!", type="warning")
-```
-
-```
-## Warning in say("hell no!", type = "warning"): 
-##  -------------- 
-## hell no! 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> Warning in say("hell no!", type = "warning"): 
+#>  -------------- 
+#> hell no! 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 
 
 ```r
 say("hell no!", type="string")
-```
-
-```
-## [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "
+#> [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "
 ```
 
 
@@ -250,27 +231,24 @@ From the [catfacts API](http://catfacts-api.appspot.com/)
 
 ```r
 say("catfact", "cat")
-```
-
-```
-## 
-##  -------------- 
-## When a cat drinks, its tongue - which has tiny barbs on it - scoops the liquid up backwards. 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> A cat sees about 6 times better than a human at night, and needs 1/6 the amount of of light that a human does - it has a layer of extra reflecting cells which absorb light. 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 #### Random quote
@@ -291,40 +269,37 @@ From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/stat
 
 ```r
 say("it's caturday", "longcat")
-```
-
-```
-## 
-## 
-##  ----- 
-## it's caturday 
-##  ------ 
-##     \   
-##      \
-##     .ﾊ,,ﾊ
-##     ( ﾟωﾟ)
-##     |つ  つ
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     |    |
-##     U "  U
-##         [BoingBoing]
-## 
+#> 
+#> 
+#>  ----- 
+#> it's caturday 
+#>  ------ 
+#>     \   
+#>      \
+#>     .ﾊ,,ﾊ
+#>     ( ﾟωﾟ)
+#>     |つ  つ
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     U "  U
+#>         [BoingBoing]
+#> 
 ```
 
 #### Grumpy cat
@@ -332,58 +307,49 @@ say("it's caturday", "longcat")
 
 ```r
 say('NO!', by='grumpycat')
-```
-
-```
-## 
-##    
-##  -------------- 
-## NO! 
-##  --------------
-##     \
-##       \
-##         \
-##       ﾊ _ ﾊ
-##       ಠ X ಠ
-## 
+#> 
+#>    
+#>  -------------- 
+#> NO! 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>       ﾊ _ ﾊ
+#>       ಠ X ಠ
+#> 
 ```
 
 
 ```r
 say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
-```
-
-```
-## 
-##    
-##  -------------- 
-## WOKE UP TODAY, IT WAS TERRIBLE 
-##  --------------
-##     \
-##       \
-##         \
-##       ﾊ _ ﾊ
-##       ಠ X ಠ
-## 
+#> 
+#>    
+#>  -------------- 
+#> WOKE UP TODAY, IT WAS TERRIBLE 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>       ﾊ _ ﾊ
+#>       ಠ X ಠ
+#> 
 ```
 
 
 ```r
 say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
-```
-
-```
-## 
-##    
-##  -------------- 
-## I HAD FUN ONCE, IT WAS AWFUL 
-##  --------------
-##     \
-##       \
-##         \
-##       ﾊ _ ﾊ
-##       ಠ X ಠ
-## 
+#> 
+#>    
+#>  -------------- 
+#> I HAD FUN ONCE, IT WAS AWFUL 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>       ﾊ _ ﾊ
+#>       ಠ X ಠ
+#> 
 ```
 
 #### Bunny Holding a sign
@@ -391,18 +357,15 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 
 ```r
 say(by='signbunny')
-```
-
-```
-## 
-##  -------------- 
-## Hello world! 
-##  --------------
-## (\__/) ||
-## (•ㅅ•) ||
-## /   づ
-##           [nosig]
-## 
+#> 
+#>  -------------- 
+#> Hello world! 
+#>  --------------
+#> (\__/) ||
+#> (•ㅅ•) ||
+#> /   づ
+#>           [nosig]
+#> 
 ```
 
 #### Fish
@@ -410,19 +373,16 @@ say(by='signbunny')
 
 ```r
 say(by='fish')
-```
-
-```
-## 
-## 
-##  ----- 
-## Hello world! 
-##  ------ 
-##     \   
-##      \
-##   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
-##       Kiyoko Gotanda
-## 
+#> 
+#> 
+#>  ----- 
+#> Hello world! 
+#>  ------ 
+#>     \   
+#>      \
+#>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
+#>       Kiyoko Gotanda
+#> 
 ```
 
 #### R fortunes
@@ -430,30 +390,39 @@ say(by='fish')
 
 ```r
 say('fortune','cat')
-```
-
-```
-## 
-##  -------------- 
-## For the S system, which has forever altered the way people analyze, visualize, and manipulate data .... S is an elegant, widely accepted, and enduring software system, with conceptual integrity, thanks to the insight, taste, and effort of John Chambers.
-##  Association for Computing Machinery
-##  ACM/Software System Award citation
-##  1998 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> Kevin Wright: Doug already mentioned the limitations of open source optimization code. Open source has benefits, but simply being open doesn't necessarily mean better.
+#> 
+#> Joshua Wiley: Actually, a series of studies I have conducted including theoretical proofs and empirical evidence proves open source to be unequivocally better. If you are interested, you can pay me to use the assertion, but the supporting details are restricted so you must accept that my internal checks and quality control are sufficient and the findings are correct and accurate. Details follow.
+#> 
+#> License and Use of I. Ben Fooled's findings:
+#> 
+#> "Open source is unequivocally better" is $10 for personal use or $20 for each public use of the assertion. It is also possible to get a yearly license, but note that this does not include updates. Support is extra. If you wish to use the assertions on a multicore system, there is an additional $5 per core per assertion fee. A student version is available for pedagogical purposes only: "pn src s nqvcll bttr". If you need more than 20 letters, please upgrade to the full version.
+#> 
+#> This is the best thing since bread, but don't take my word for it. Here are some trite testimonials putatively from customers:
+#> 
+#> "Using I. Ben Fooled's assertion has really revolutionized my work. I love it. I use it every day" ~ Jane, Data Expert
+#> 
+#> "I lost 130 lbs on this system", 'wait, this isn't a weightloss testimonial? Sorry!' "My work is easily twice as efficient since I switched to I. Ben Fooled's product." ~ John, Entrepeneur
+#>  Kevin Wright and Joshua Wiley
+#>  R-SIG-Mixed-Models
+#>  October 2011 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
@@ -461,61 +430,55 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 
 ```r
 say(fortune=100)
-```
-
-```
-## 
-##  -------------- 
-## I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
-##  Peter Dalgaard
-##  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
-##  R-help
-##  January 2005 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
+#>  Peter Dalgaard
+#>  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
+#>  R-help
+#>  January 2005 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 
 ```r
 say(fortune='whatever')
-```
-
-```
-## 
-##  -------------- 
-## Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-## Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-##  Tom Backer Johnsen and Barry Rowlingson
-##  R-help
-##  February 2006 
-##  --------------
-##     \
-##       \
-##         \
-##             |\___/|
-##           ==) ^Y^ (==
-##             \  ^  /
-##              )=*=(
-##             /     \
-##             |     |
-##            /| | | |\
-##            \| | |_|/\
-##       jgs  //_// ___/
-##                \_)
-## 
+#> 
+#>  -------------- 
+#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+#> Joshua Ulrich: That's the magic_pony function.
+#>  Justin and Joshua Ulrich
+#>  stackoverflow.com
+#>  June 2013 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>             |\___/|
+#>           ==) ^Y^ (==
+#>             \  ^  /
+#>              )=*=(
+#>             /     \
+#>             |     |
+#>            /| | | |\
+#>            \| | |_|/\
+#>       jgs  //_// ___/
+#>                \_)
+#> 
 ```
 
 #### Trilobite
@@ -523,27 +486,24 @@ say(fortune='whatever')
 
 ```r
 say("Hi there :)", by='trilobite')
-```
-
-```
-## 
-##   
-##  -------------- 
-## Hi there :) 
-##  --------------
-##     \
-##       \
-##         \
-##           _____
-##        .'` ,-. `'.
-##       /   ([ ])   \
-##      /.-""`(`)`""-.\
-##       <'```(.)```'>
-##       <'```(.)```'>
-##        <'``(.)``'>
-##    sk   <``\_/``>
-##          `'---'`
-## 
+#> 
+#>   
+#>  -------------- 
+#> Hi there :) 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>           _____
+#>        .'` ,-. `'.
+#>       /   ([ ])   \
+#>      /.-""`(`)`""-.\
+#>       <'```(.)```'>
+#>       <'```(.)```'>
+#>        <'``(.)``'>
+#>    sk   <``\_/``>
+#>          `'---'`
+#> 
 ```
 
 #### Shark
@@ -551,43 +511,40 @@ say("Hi there :)", by='trilobite')
 
 ```r
 say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
-```
-
-```
-## 
-##     
-##  -------------- 
-## Q: What do you call a solitary shark
-## A: A lone shark 
-##  --------------
-##     \
-##       \
-##         \
-##               /""-._
-##               .       '-,
-##                :          '',
-##                 ;      *     '.
-##                  ' *         () '.
-##                    \               \
-##                     \      _.---.._ '.
-##                     :  .' _.--''-''  \ ,'
-##         .._           '/.'             . ;
-##         ; `-.          ,                \'
-##          ;   `,         ;              ._\
-##           ;    \     _,-'                ''--._
-##           :    \_,-'                          '-._
-##           \ ,-'                       .          '-._
-##           .'         __.-'';            \...,__       '.
-##         .'      _,-'        \              \   ''--.,__  '\
-##         /    _,--' ;         \              ;           \^.}
-##         ;_,-' )     \  )\      )            ;
-##              /       \/  \_.,-'             ;
-##             /                              ;
-##          ,-'  _,-'''-.    ,-.,            ;      PFA
-##       ,-' _.-'        \  /    |/'-._...--'
-##      :--``             )/
-##   '
-## 
+#> 
+#>     
+#>  -------------- 
+#> Q: What do you call a solitary shark
+#> A: A lone shark 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>               /""-._
+#>               .       '-,
+#>                :          '',
+#>                 ;      *     '.
+#>                  ' *         () '.
+#>                    \               \
+#>                     \      _.---.._ '.
+#>                     :  .' _.--''-''  \ ,'
+#>         .._           '/.'             . ;
+#>         ; `-.          ,                \'
+#>          ;   `,         ;              ._\
+#>           ;    \     _,-'                ''--._
+#>           :    \_,-'                          '-._
+#>           \ ,-'                       .          '-._
+#>           .'         __.-'';            \...,__       '.
+#>         .'      _,-'        \              \   ''--.,__  '\
+#>         /    _,--' ;         \              ;           \^.}
+#>         ;_,-' )     \  )\      )            ;
+#>              /       \/  \_.,-'             ;
+#>             /                              ;
+#>          ,-'  _,-'''-.    ,-.,            ;      PFA
+#>       ,-' _.-'        \  /    |/'-._...--'
+#>      :--``             )/
+#>   '
+#> 
 ```
 
 #### Buffalo
@@ -595,31 +552,28 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 
 ```r
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
-```
-
-```
-## 
-##     
-##  -------------- 
-## Q: What do you call a single buffalo?
-## A: A buffalonely 
-##  --------------
-##     \
-##       \
-##         \
-##                    _.-````'-,_
-##          _,.,_ ,-'`           `'-.,_
-##        /)     (                   '``-.
-##       ((      ) )                      `\
-##         \)    (_/                        )\
-##         |       /)           '    ,'    / \
-##         `\    ^'            '     (    /  ))
-##           |      _/\ ,     /    ,,`\   (  "`
-##           \Y,   |   \  \  | ````| / \_ \
-##             `)_/      \  \  )    ( >  ( >
-##                        \( \(     |/   |/
-##           mic & dwb  /_(/_(    /_(  /_(
-## 
+#> 
+#>     
+#>  -------------- 
+#> Q: What do you call a single buffalo?
+#> A: A buffalonely 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>                    _.-````'-,_
+#>          _,.,_ ,-'`           `'-.,_
+#>        /)     (                   '``-.
+#>       ((      ) )                      `\
+#>         \)    (_/                        )\
+#>         |       /)           '    ,'    / \
+#>         `\    ^'            '     (    /  ))
+#>           |      _/\ ,     /    ,,`\   (  "`
+#>           \Y,   |   \  \  | ````| / \_ \
+#>             `)_/      \  \  )    ( >  ( >
+#>                        \( \(     |/   |/
+#>           mic & dwb  /_(/_(    /_(  /_(
+#> 
 ```
 
 #### Clippy
@@ -627,28 +581,25 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 ```r
 say(fortune=59, by="clippy")
-```
-
-```
-## 
-## 
-##  ----- 
-## Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
-##  Brian D. Ripley
-##  'Statistical Methods Need Software: A View of Statistical Computing'
-##  Opening lecture RSS 2002, Plymouth
-##  September 2002 
-##  ------ 
-##     \   
-##      \
-##    __
-##    / \
-##    | |
-##    @ @
-##   || ||
-##   || ||
-##   |\_/|
-##   \___/ GB
+#> 
+#> 
+#>  ----- 
+#> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
+#>  Brian D. Ripley
+#>  'Statistical Methods Need Software: A View of Statistical Computing'
+#>  Opening lecture RSS 2002, Plymouth
+#>  September 2002 
+#>  ------ 
+#>     \   
+#>      \
+#>    __
+#>    / \
+#>    | |
+#>    @ @
+#>   || ||
+#>   || ||
+#>   |\_/|
+#>   \___/ GB
 ```
 
 #### Yoda
@@ -656,54 +607,78 @@ say(fortune=59, by="clippy")
 
 ```r
 say("You must unlearn what you have learned", by="yoda")
+#> 
+#> 
+#> 
+#>  ----- 
+#> You must unlearn what you have learned 
+#>  ------ 
+#>     \   
+#>      \
+#>                    ____
+#>                 _.' :  `._
+#>             .-.'`.  ;   .'`.-.
+#>    __      / : ___\ ;  /___ ; \      __
+#>   ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
+#>   :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
+#>        `:-.._J '-.-'L__ `-- ' L_..-;'
+#>           "-.__ ;  .-"  "-.  : __.-"
+#>              L ' /.------.\ ' J
+#>              "-.   "--"   .-"
+#>              __.l"-:_JL_;-";.__
+#>          .-j/'.;  ;""""  / .'\"-.
+#>          .' /:`. "-.:     .-" .';  `.
+#>       .-"  / ;  "-. "-..-" .-"  :    "-.
+#>   .+"-.  : :      "-.__.-"      ;-._   \
+#>   ; \  `.; ;                    : : "+. ;
+#>   :  ;   ; ;                    : ;  : \:
+#>   ;  :   ; :                    ;:   ;  :
+#>   : \  ;  :  ;                  : ;  /  ::
+#>   ;  ; :   ; :                  ;   :   ;:
+#>   :  :  ;  :  ;                : :  ;  : ;
+#>   ;\    :   ; :                ; ;     ; ;
+#>   : `."-;   :  ;              :  ;    /  ;
+#>  ;    -:   ; :              ;  : .-"   :
+#>   :\     \  :  ;            : \.-"      :
+#>   ;`.    \  ; :            ;.'_..--  / ;
+#>   :  "-.  "-:  ;          :/."      .'  :
+#>    \         \ :          ;/  __        :
+#>     \       .-`.\        /t-""  ":-+.   :
+#>      `.  .-"    `l    __/ /`. :  ; ; \  ;
+#>        \   .-" .-"-.-"  .' .'j \  /   ;/
+#>         \ / .-"   /.     .'.' ;_:'    ;
+#>   :-""-.`./-.'     /    `.___.'
+#>                \ `t  ._  /  bug
+#>                 "-.t-._:'
+#> 
 ```
 
+#### Bats!
+
+
+```r
+say("hi, i'm a bat", by="bat")
+#> 
+#> 
+#>  ------------- 
+#> hi, i'm a bat 
+#>  -------------- 
+#>               \   
+#>                \  
+#>                 \
+#>         __.--'\     \.__./     /'--.__
+#>     _.-'       '.__.'    '.__.'       '-._
+#>   .'                                      '.
+#>  /                                          \
+#> |                                            |
+#> |                                            |
+#>  \         .---.              .---.         /
+#>   '._    .'     '.''.    .''.'     '.    _.'
+#>      '-./            \  /           \.-'
+#>                       ''mrf
 ```
-## 
-## 
-## 
-##  ----- 
-## You must unlearn what you have learned 
-##  ------ 
-##     \   
-##      \
-##                    ____
-##                 _.' :  `._
-##             .-.'`.  ;   .'`.-.
-##    __      / : ___\ ;  /___ ; \      __
-##   ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
-##   :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
-##        `:-.._J '-.-'L__ `-- ' L_..-;'
-##           "-.__ ;  .-"  "-.  : __.-"
-##              L ' /.------.\ ' J
-##              "-.   "--"   .-"
-##              __.l"-:_JL_;-";.__
-##          .-j/'.;  ;""""  / .'\"-.
-##          .' /:`. "-.:     .-" .';  `.
-##       .-"  / ;  "-. "-..-" .-"  :    "-.
-##   .+"-.  : :      "-.__.-"      ;-._   \
-##   ; \  `.; ;                    : : "+. ;
-##   :  ;   ; ;                    : ;  : \:
-##   ;  :   ; :                    ;:   ;  :
-##   : \  ;  :  ;                  : ;  /  ::
-##   ;  ; :   ; :                  ;   :   ;:
-##   :  :  ;  :  ;                : :  ;  : ;
-##   ;\    :   ; :                ; ;     ; ;
-##   : `."-;   :  ;              :  ;    /  ;
-##  ;    -:   ; :              ;  : .-"   :
-##   :\     \  :  ;            : \.-"      :
-##   ;`.    \  ; :            ;.'_..--  / ;
-##   :  "-.  "-:  ;          :/."      .'  :
-##    \         \ :          ;/  __        :
-##     \       .-`.\        /t-""  ":-+.   :
-##      `.  .-"    `l    __/ /`. :  ; ; \  ;
-##        \   .-" .-"-.-"  .' .'j \  /   ;/
-##         \ / .-"   /.     .'.' ;_:'    ;
-##   :-""-.`./-.'     /    `.___.'
-##                \ `t  ._  /  bug
-##                 "-.t-._:'
-## 
-```
+
+See also `bat2`
 
 #### Endless horse
 
@@ -752,18 +727,26 @@ endless_horse()
 ```r
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+#> 
+#>    
+#>  -------------- 
+#> I HAD FUN ONCE, IT WAS AWFUL 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>       ﾊ _ ﾊ
+#>       ಠ X ಠ
+#> 
 ```
 
-```
-## 
-##    
-##  -------------- 
-## I HAD FUN ONCE, IT WAS AWFUL 
-##  --------------
-##     \
-##       \
-##         \
-##       ﾊ _ ﾊ
-##       ಠ X ಠ
-## 
+#### I just want the animals!
+
+Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
+
+
+```r
+animals['clippy']
+#>                                                                                                                      clippy 
+#> "\n\n ----- \n%s \n ------ \n    \\   \n     \\\n   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
 ```

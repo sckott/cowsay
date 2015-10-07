@@ -1,6 +1,13 @@
 cowsay
 ======
 
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
 [![Build Status](https://api.travis-ci.org/sckott/cowsay.png)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
 
@@ -215,6 +222,14 @@ say(fortune=59, by="clippy")
 say("You must unlearn what you have learned", by="yoda")
 ```
 
+#### Bats!
+
+```{r}
+say("hi, i'm a bat", by="bat")
+```
+
+See also `bat2`
+
 #### Endless horse
 
 ```{r eval=FALSE}
@@ -260,4 +275,12 @@ endless_horse()
 ```{r}
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+```
+
+#### I just want the animals!
+
+Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
+
+```{r}
+animals['clippy']
 ```
