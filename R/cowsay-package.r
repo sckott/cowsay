@@ -23,6 +23,7 @@
 #' say('hello world!')
 #'
 #' @importFrom fortunes fortune
+#' @importFrom jsonlite fromJSON
 #' @name cowsay
 #' @docType package
 NULL

@@ -17,8 +17,7 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email =
     role = c("aut"), email = "f.krah@mailbox.org"))
 Roxygen: list(wrap = FALSE)
 Imports:
-    fortunes
-Suggests:
+    fortunes,
     jsonlite
 Enhances:
     magrittr

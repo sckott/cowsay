@@ -100,7 +100,6 @@
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
 
   if (what == "catfact") {
-    check4jsonlite()
     what <- jsonlite::fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
   }
