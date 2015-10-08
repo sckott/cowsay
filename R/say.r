@@ -73,7 +73,7 @@
 #' say(fortune=45)
 #'
 #' # Using catfacts
-#' say("catfact", "cat")
+#' # say("catfact", "cat")
 #'
 #' # Using iheartquotes
 #' ## DOESN'T WORK RIGHT NOW

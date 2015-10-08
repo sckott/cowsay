@@ -128,8 +128,24 @@ say("hell no!", type="string")
 
 From the [catfacts API](http://catfacts-api.appspot.com/)
 
-```{r}
+```{r eval=FALSE}
 say("catfact", "cat")
+#> --------------
+#> When a domestic cat goes after mice, about 1 pounce in 3 results in a catch.
+#> --------------
+#>    \
+#>      \
+#>        \
+#>            |\___/|
+#>          ==) ^Y^ (==
+#>            \  ^  /
+#>             )=*=(
+#>            /     \
+#>            |     |
+#>           /| | | |\
+#>           \| | |_|/\
+#>      jgs  //_// ___/
+#>               \_)
 ```
 
 #### Random quote

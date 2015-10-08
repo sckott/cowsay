@@ -1,11 +1,2 @@
 language: r
-
 warnings_are_errors: true
-
-apt_packages:
-- libcurl-devel
-- libcurl4-openssl-dev
-
-r_packages:
-- curl
-- jsonlite

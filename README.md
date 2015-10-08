@@ -107,7 +107,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2015-10-07 15:53:32 
+#> 2015-10-07 17:47:12 
 #>  --------------
 #>     \
 #>       \
@@ -231,24 +231,22 @@ From the [catfacts API](http://catfacts-api.appspot.com/)
 
 ```r
 say("catfact", "cat")
-#> 
-#>  -------------- 
-#> A cat sees about 6 times better than a human at night, and needs 1/6 the amount of of light that a human does - it has a layer of extra reflecting cells which absorb light. 
-#>  --------------
-#>     \
-#>       \
-#>         \
-#>             |\___/|
-#>           ==) ^Y^ (==
-#>             \  ^  /
-#>              )=*=(
-#>             /     \
-#>             |     |
-#>            /| | | |\
-#>            \| | |_|/\
-#>       jgs  //_// ___/
-#>                \_)
-#> 
+#> --------------
+#> When a domestic cat goes after mice, about 1 pounce in 3 results in a catch.
+#> --------------
+#>    \
+#>      \
+#>        \
+#>            |\___/|
+#>          ==) ^Y^ (==
+#>            \  ^  /
+#>             )=*=(
+#>            /     \
+#>            |     |
+#>           /| | | |\
+#>           \| | |_|/\
+#>      jgs  //_// ___/
+#>               \_)
 ```
 
 #### Random quote
@@ -392,22 +390,11 @@ say(by='fish')
 say('fortune','cat')
 #> 
 #>  -------------- 
-#> Kevin Wright: Doug already mentioned the limitations of open source optimization code. Open source has benefits, but simply being open doesn't necessarily mean better.
-#> 
-#> Joshua Wiley: Actually, a series of studies I have conducted including theoretical proofs and empirical evidence proves open source to be unequivocally better. If you are interested, you can pay me to use the assertion, but the supporting details are restricted so you must accept that my internal checks and quality control are sufficient and the findings are correct and accurate. Details follow.
-#> 
-#> License and Use of I. Ben Fooled's findings:
-#> 
-#> "Open source is unequivocally better" is $10 for personal use or $20 for each public use of the assertion. It is also possible to get a yearly license, but note that this does not include updates. Support is extra. If you wish to use the assertions on a multicore system, there is an additional $5 per core per assertion fee. A student version is available for pedagogical purposes only: "pn src s nqvcll bttr". If you need more than 20 letters, please upgrade to the full version.
-#> 
-#> This is the best thing since bread, but don't take my word for it. Here are some trite testimonials putatively from customers:
-#> 
-#> "Using I. Ben Fooled's assertion has really revolutionized my work. I love it. I use it every day" ~ Jane, Data Expert
-#> 
-#> "I lost 130 lbs on this system", 'wait, this isn't a weightloss testimonial? Sorry!' "My work is easily twice as efficient since I switched to I. Ben Fooled's product." ~ John, Entrepeneur
-#>  Kevin Wright and Joshua Wiley
-#>  R-SIG-Mixed-Models
-#>  October 2011 
+#> I would heed the warnings and diagnostics. They are there for a reason. The Ostrich algorithm does not help you.
+#>  Dirk Eddelbuettel
+#>  in reply to a questioner who said he had not run R CMD check because he suspected other problems would be found
+#>  Stackoverflow
+#>  November 2013 
 #>  --------------
 #>     \
 #>       \
