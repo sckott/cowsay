@@ -1,0 +1,103 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{cowsay tutorial}
+%\VignetteEncoding{UTF-8}
+-->
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
+cowsay tutorial
+===============
+
+`cowsay` makes it easy to print messages, warnings, or character strings with various animals and other creatures.
+
+## Installation
+
+Stable version from CRAN
+
+```{r eval=FALSE}
+install.packages("cowsay")
+```
+
+or dev version from GitHub
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("sckott/cowsay")
+```
+
+```{r}
+library("cowsay")
+```
+
+## The animals
+
+The animals, and other ascii creatures, are all in a single named character vector that is exported from the package. Thus, you can access each animal yourself, and do whatever you want with it. 
+
+As of this writing, there are `r length(animals)` animals.
+
+The names of the animals:
+
+```{r}
+sort(names(animals))
+```
+
+For example, access the cow
+
+```{r}
+cow <- animals[['cow']]
+cat(cow)
+```
+
+## Say something
+
+We expose the function `say()` in this package, which you can use to envoke any animal in the package, and make it say whatever you want. Some examples:
+
+```{r}
+say("why did the chicken cross the road", "chicken")
+```
+
+```{r}
+say("boo!", "ghost")
+```
+
+```{r}
+say("nope, don't do that", type = "warning")
+```
+
+```{r}
+say('WOKE UP TODAY, IT WAS TERRIBLE', by = 'grumpycat')
+```
+
+There's the special `time`, that will print out the time
+
+```{r}
+say('time')
+```
+
+## It's how you say it
+
+You can use `say()` and give back a string, message, or warning
+
+Message
+
+```{r}
+say("hello world", by = "cow")
+```
+
+Warning
+
+```{r}
+say("hello world", by = "cow", type = "warning")
+```
+
+String
+
+```{r}
+say("hello world", by = "cow", type = "string")
+```

@@ -99,6 +99,10 @@
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
 
+  if (length(what) > 1) {
+    stop("what has to be of length 1", call. = FALSE)
+  }
+  
   if (what == "catfact") {
     check4jsonlite()
     what <- jsonlite::fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
