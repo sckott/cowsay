@@ -40,7 +40,7 @@
 #' Trilobite: from \url{http://www.retrojunkie.com/asciiart/animals/dinos.htm}.
 #'
 #' Note to Windows users: there are some animals (shortcat, longcat, fish, signbunny,
-#' stretchycat, anxiouscat, longtailcat, grumpycat) that are not available
+#' stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that are not available
 #' because they use non-ASCII characters that don't display properly in R on Windows.
 #'
 #' @examples

@@ -1,12 +1,12 @@
 get_who <- function(by, length) {
 
-  animals <- get_animals()
-
+  # animals <- get_animals()
   if (.Platform$OS.type == "windows") {
-    ua <- names(grep("[^\\x01-\\x7f]", animals, perl = TRUE, value = TRUE))
+    ua <- c('shortcat','longcat','fish','signbunny','stretchycat',
+            'anxiouscat','longtailcat','grumpycat','mushroom')
     if (by %in% ua) {
       stop("If you're on Windows, you can't use:\n", 
-           paste0(ua, collapse = "\n"), call. = FALSE)
+           paste0(sort(ua), collapse = "\n"), call. = FALSE)
     }
   }
   
@@ -30,11 +30,11 @@ get_who <- function(by, length) {
   who
 }
 
-get_animals <- function() {
-  if (.Platform$OS.type == "windows") {
-    # Find animals with unicode characters in them and remove
-    unicode_animals <- grep("[^\\x01-\\x7f]", animals, perl = TRUE)
-    animals <- animals[-unicode_animals]
-  }
-  animals
-}
+# get_animals <- function() {
+#   if (.Platform$OS.type == "windows") {
+#     # Find animals with unicode characters in them and remove
+#     unicode_animals <- grep("[^\\x01-\\x7f]", animals, perl = TRUE)
+#     animals <- animals[-unicode_animals]
+#   }
+#   animals
+# }
