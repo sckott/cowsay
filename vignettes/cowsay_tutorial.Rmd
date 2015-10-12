@@ -70,10 +70,6 @@ say("boo!", "ghost")
 say("nope, don't do that", type = "warning")
 ```
 
-```{r}
-say('WOKE UP TODAY, IT WAS TERRIBLE', by = 'grumpycat')
-```
-
 There's the special `time`, that will print out the time
 
 ```{r}
