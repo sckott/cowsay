@@ -1,14 +1,4 @@
-cowsay 0.2
+cowsay 0.4
 ===============
 
-EXTREME AWESOMENESS ADDED
-
-* Added the catfacts API!  via Thomas Leeper
-
-
-cowsay 0.1
-===============
-
-BUG FIXES
-
-* Making this was a bugfix because it didn't exist before it happened.
+* First release to CRAN

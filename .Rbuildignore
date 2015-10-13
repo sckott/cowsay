@@ -4,3 +4,4 @@ CONTRIBUTING.md
 ^\.Rproj\.user$
 appveyor.yml
 README.Rmd
+cran-comments.md
