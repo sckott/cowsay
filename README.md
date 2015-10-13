@@ -251,7 +251,7 @@ say("catfact", "cat")
 
 #### Random quote
 
-From the [iheartquotes API](http://iheartquotes.com/api)
+From the iheartquotes API (http://iheartquotes.com/api)
 
 > DOESN'T WORK RIGHT NOW
 
