@@ -73,7 +73,16 @@ So, let's go with this rule: Let's include found (on the web) ascii art in this 
 
 Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
 
-### Quick start
+### Install
+
+From CRAN
+
+
+```r
+install.packages("cowsay")
+```
+
+Dev version
 
 
 ```r
@@ -86,7 +95,7 @@ devtools::install_github("sckott/cowsay")
 library("cowsay")
 ```
 
-#### The animals
+### The animals
 
 
 ```r
@@ -102,14 +111,14 @@ sort(names(animals))
 #> [33] "trilobite"    "yoda"
 ```
 
-#### Say Something
+### Say Something
 
 
 ```r
 say('time')
 #> 
 #>  -------------- 
-#> 2015-10-07 17:47:12 
+#> 2015-10-13 08:00:07 
 #>  --------------
 #>     \
 #>       \
@@ -169,7 +178,7 @@ say("boo!", "ghost")
 #> 
 ```
 
-#### Vary type of output, default calls message()
+### Vary type of output, default calls message()
 
 
 ```r
@@ -226,7 +235,7 @@ say("hell no!", type="string")
 ```
 
 
-#### Catfacts!!!!
+### Catfacts!!!!
 
 From the [catfacts API](http://catfacts-api.appspot.com/)
 
@@ -251,7 +260,7 @@ say("catfact", "cat")
 #>               \_)
 ```
 
-#### Random quote
+### Random quote
 
 From the iheartquotes API (http://iheartquotes.com/api)
 
@@ -262,7 +271,7 @@ From the iheartquotes API (http://iheartquotes.com/api)
 say("iheart", "chicken")
 ```
 
-#### Long cat
+### Long cat
 
 From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
 
@@ -302,7 +311,7 @@ say("it's caturday", "longcat")
 #> 
 ```
 
-#### Grumpy cat
+### Grumpy cat
 
 
 ```r
@@ -352,7 +361,7 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 #> 
 ```
 
-#### Bunny Holding a sign
+### Bunny Holding a sign
 
 
 ```r
@@ -368,7 +377,7 @@ say(by='signbunny')
 #> 
 ```
 
-#### Fish
+### Fish
 
 
 ```r
@@ -385,18 +394,18 @@ say(by='fish')
 #> 
 ```
 
-#### R fortunes
+### R fortunes
 
 
 ```r
 say('fortune','cat')
 #> 
 #>  -------------- 
-#> I would heed the warnings and diagnostics. They are there for a reason. The Ostrich algorithm does not help you.
-#>  Dirk Eddelbuettel
-#>  in reply to a questioner who said he had not run R CMD check because he suspected other problems would be found
-#>  Stackoverflow
-#>  November 2013 
+#> This has been discussed before in this list, and Ripley said "no, no!". I do it all the time, but only in secrecy.
+#>  Jari Oksanen
+#>  about replacing zero distances with tiny values for isoMDS()
+#>  R-help
+#>  April 2006 
 #>  --------------
 #>     \
 #>       \
@@ -470,7 +479,7 @@ say(fortune='whatever')
 #> 
 ```
 
-#### Trilobite
+### Trilobite
 
 
 ```r
@@ -495,7 +504,7 @@ say("Hi there :)", by='trilobite')
 #> 
 ```
 
-#### Shark
+### Shark
 
 
 ```r
@@ -536,7 +545,7 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #> 
 ```
 
-#### Buffalo
+### Buffalo
 
 
 ```r
@@ -565,7 +574,7 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #> 
 ```
 
-#### Clippy
+### Clippy
 
 
 ```r
@@ -591,7 +600,7 @@ say(fortune=59, by="clippy")
 #>   \___/ GB
 ```
 
-#### Yoda
+### Yoda
 
 
 ```r
@@ -642,7 +651,7 @@ say("You must unlearn what you have learned", by="yoda")
 #> 
 ```
 
-#### Bats!
+### Bats!
 
 
 ```r
@@ -669,7 +678,7 @@ say("hi, i'm a bat", by="bat")
 
 See also `bat2`
 
-#### Endless horse
+### Endless horse
 
 
 ```r
@@ -710,7 +719,7 @@ endless_horse()
 ##                    | | | |             || |
 ```
 
-#### Using pipes
+### Using pipes
 
 
 ```r
@@ -729,7 +738,7 @@ library("magrittr")
 #> 
 ```
 
-#### I just want the animals!
+### I just want the animals!
 
 Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
 
