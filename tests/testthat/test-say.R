@@ -19,3 +19,9 @@ test_that("say by works as expected", {
 test_that("say fails well", {
   expect_error(say(list(4, 5)), "what has to be of length 1")
 })
+
+test_that("say fails with certain characters on windows", {
+  skip_on_os(c("mac", "linux", "solaris"))
+  expect_error(say("Hi", by = "longcat"), "If you're on Windows, you can't use")
+})
+
