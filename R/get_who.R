@@ -4,10 +4,13 @@ get_who <- function(by, length) {
   if (.Platform$OS.type == "windows") {
     ua <- c('shortcat','longcat','fish','signbunny','stretchycat',
             'anxiouscat','longtailcat','grumpycat','mushroom')
+    
     if (by %in% ua) {
       stop("If you're on Windows, you can't use:\n", 
            paste0(sort(ua), collapse = "\n"), call. = FALSE)
     }
+    
+    animals <- animals[setdiff(names(animals), ua)]
   }
   
   by <- match.arg(by, c(choices = names(animals), "rms", "random"))
