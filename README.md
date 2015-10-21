@@ -604,12 +604,12 @@ say(fortune=59, by="clippy")
 
 
 ```r
-say("You must unlearn what you have learned", by="yoda")
+say("Unlearn you must what learned you have", by="yoda")
 #> 
 #> 
 #> 
 #>  ----- 
-#> You must unlearn what you have learned 
+#> Unlearn you must what learned you have 
 #>  ------ 
 #>     \   
 #>      \
