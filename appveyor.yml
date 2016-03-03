@@ -8,7 +8,6 @@ install:
   ps: Bootstrap
 
 build_script:
-  - travis-tool.sh install_github hadley/testthat
   - travis-tool.sh install_deps
 
 test_script:
