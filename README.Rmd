@@ -36,7 +36,6 @@ That's right, it takes 10 people to make `cowsay` - it's that hard.
 
 Sources to look in:
 
-* http://www.retrojunkie.com/asciiart/asciiart.htm - apprently this person just collects ascii art, doesn't make any,
 * http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc.
 * http://www.asciiworld.com/
 
