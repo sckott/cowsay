@@ -1,6 +1,6 @@
 Package: cowsay
 Title: Messages, Warnings, Strings with Ascii Animals
-Description: Allows printing of character strings as messages/warnings/etc. 
+Description: Allows printing of character strings as messages/warnings/etc.
     with ASCII animals, including cats, cows, frogs, chickens, ghosts, and more.
 Version: 0.4.0.9000
 License: MIT + file LICENSE
@@ -25,5 +25,5 @@ Suggests:
     jsonlite,
     testthat,
     knitr
-Enhances:
-    magrittr
+Enhances: magrittr
+RoxygenNote: 5.0.1

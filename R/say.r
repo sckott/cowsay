@@ -37,7 +37,7 @@
 #' they found the first use in this tweet:
 #' \url{https://twitter.com/wei_bluebear/status/329101645780770817}
 #'
-#' Trilobite: from \url{http://www.retrojunkie.com/asciiart/animals/dinos.htm}.
+#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site down though)
 #'
 #' Note to Windows users: there are some animals (shortcat, longcat, fish, signbunny,
 #' stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that are not available
