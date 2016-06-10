@@ -41,13 +41,13 @@ special phrases that do particular things. They are:
  REMOVED
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
+ \item rms Prints a random 'fact' about Richard Stallman from the \code{\link[rmsfact]{rmsfact}}
+ package. Best paired with \code{by = "rms"}.
 }
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you
 could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
-\url{http://knowyourmeme.com/memes/hypnotoad}. Also, if you choose \code{by='rms'}, 
-Richard Stallman will say something from the \code{\link[rmsfact]{rmsfact}} 
-package, and not whatever it was you told him to say (obviously).
+\url{http://knowyourmeme.com/memes/hypnotoad}.
 
 Signbunny: It's not for sure known who invented signbunny, but this article
 \url{http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained} thinks
@@ -74,6 +74,7 @@ say("fortune", "spider")
 say("fortune", "facecat")
 say("fortune", "behindcat")
 say("fortune", "smallcat")
+say("rms", "rms")
 
 # Vary type of output, default calls message()
 say("hell no!")
