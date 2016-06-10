@@ -28,7 +28,7 @@ get_who <- function(by, length) {
 }
 
 make_longcat <- function(length) {
-  if (!length == 0) {
+  if (length > 0) {
     body <- paste(rep('    |    |\n', length), collapse = "")
     body <- gsub('\n$', '', body)
     longcat <- sprintf(animals['longcat'], "%s", body)
