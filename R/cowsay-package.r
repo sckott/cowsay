@@ -23,6 +23,7 @@
 #' say('hello world!')
 #'
 #' @importFrom fortunes fortune
+#' @importFrom rmsfact rmsfact
 #' @name cowsay
 #' @docType package
 NULL

@@ -20,7 +20,8 @@ BugReports: http://www.github.com/sckott/cowsay/issues
 LazyData: yes
 VignetteBuilder: knitr
 Imports:
-    fortunes
+    fortunes,
+    rmsfact
 Suggests:
     jsonlite,
     testthat,

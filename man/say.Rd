@@ -45,7 +45,9 @@ special phrases that do particular things. They are:
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you
 could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
-\url{http://knowyourmeme.com/memes/hypnotoad}.
+\url{http://knowyourmeme.com/memes/hypnotoad}. Also, if you choose \code{by='rms'}, 
+Richard Stallman will say something from the \code{\link[rmsfact]{rmsfact}} 
+package, and not whatever it was you told him to say (obviously).
 
 Signbunny: It's not for sure known who invented signbunny, but this article
 \url{http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained} thinks
