@@ -13,7 +13,8 @@ say(what = "Hello world!", by = "cat", type = "message", length = 18,
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat,
 bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
 smallcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad,
-signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, or mushroom.
+signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, mushroom, 
+or rms for Richard Stallman.
 Alternatively, use "random" to have your message spoken by a random character.
 We use \code{\link{match.arg}} internally, so you can use unique parts of
 words that don't conflict with others, like "g" for "ghost" because there's no
@@ -41,6 +42,8 @@ special phrases that do particular things. They are:
  REMOVED
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
+ \item rms Prints a random 'fact' about Richard Stallman from the \code{\link[rmsfact]{rmsfact}}
+ package. Best paired with \code{by = "rms"}.
 }
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you
@@ -72,6 +75,7 @@ say("fortune", "spider")
 say("fortune", "facecat")
 say("fortune", "behindcat")
 say("fortune", "smallcat")
+say("rms", "rms")
 
 # Vary type of output, default calls message()
 say("hell no!")

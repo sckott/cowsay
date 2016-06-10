@@ -16,21 +16,26 @@ get_who <- function(by, length) {
   by <- match.arg(by, c(choices = names(animals), "rms", "random"))
 
   if (by == "random") {
-    who <- sample(animals, 1)
-  } else if (by == "rms") {
-    who <- rms
-  } else if (by == "longcat") {
-    if (!length == 0) {
-      body <- paste(rep('    |    |\n', length), collapse = "")
-      body <- gsub('\n$', '', body)
-      who <- sprintf(animals[by], "%s", body)
-    } else {
-      who <- animals['shortcat']
-    }
-  } else {
-    who <- animals[by]
+    by <- sample(c("rms", names(animals)), 1)
   }
+  
+  who <- switch(by, 
+                rms = rms, 
+                longcat = make_longcat(length), 
+                animals[by])
+  
   who
+}
+
+make_longcat <- function(length) {
+  if (length > 0) {
+    body <- paste(rep('    |    |\n', length), collapse = "")
+    body <- gsub('\n$', '', body)
+    longcat <- sprintf(animals['longcat'], "%s", body)
+  } else {
+    longcat <- animals['shortcat']
+  }
+  longcat
 }
 
 # get_animals <- function() {
