@@ -21,6 +21,8 @@ Contributors:
  \item Carson Sievert
  \item Andy Teucher
  \item Karl Broman
+ \item Franz-Sebastian Krah
+ \item Lucy D'Agostino McGowan
 }
 
 There is only one function in the cowsay package. Simplicity for the win.

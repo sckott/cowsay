@@ -7,32 +7,37 @@
 #' bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
 #' smallcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad,
 #' signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, mushroom, 
-#' or rms for Richard Stallman.
-#' Alternatively, use "random" to have your message spoken by a random character.
+#' monkey, or rms for Richard Stallman.
+#' Alternatively, use "random" to have your message spoken by a random 
+#' character.
 #' We use \code{\link{match.arg}} internally, so you can use unique parts of
-#' words that don't conflict with others, like "g" for "ghost" because there's no
-#' other animal that starts with "g".
-#' @param type (character) One of message (default), warning, or string (returns string)
+#' words that don't conflict with others, like "g" for "ghost" because there's 
+#' no other animal that starts with "g".
+#' @param type (character) One of message (default), warning, or string 
+#' (returns string)
 #' @param length (integer) Length of longcat. Ignored if other animals used.
-#' @param fortune An integer specifying the row number of fortunes.data. Alternatively
-#' which can be a character and grep is used to try to find a suitable row.
+#' @param fortune An integer specifying the row number of fortunes.data. 
+#' Alternatively which can be a character and grep is used to try to find a 
+#' suitable row.
 #' @param ... Further args passed on to \code{\link[fortunes]{fortune}}
 #'
 #' @details You can put in any phrase you like, OR you can type in one of a few
 #' special phrases that do particular things. They are:
 #'
 #' \itemize{
-#'  \item catfact A random cat fact from http://catfacts-api.appspot.com/doc.html
-#'  \item iheart A random quote from http://iheartquotes.com/api - DOWN RIGHT NOW,
-#'  REMOVED
+#'  \item catfact A random cat fact from 
+#'  http://catfacts-api.appspot.com/doc.html
+#'  \item iheart A random quote from http://iheartquotes.com/api - 
+#'  DOWN RIGHT NOW, REMOVED
 #'  \item fortune A random quote from an R coder, from fortunes library
 #'  \item time Print the current time
-#'  \item rms Prints a random 'fact' about Richard Stallman from the \code{\link[rmsfact]{rmsfact}}
+#'  \item rms Prints a random 'fact' about Richard Stallman from the 
+#'  \code{\link[rmsfact]{rmsfact}}
 #'  package. Best paired with \code{by = "rms"}.
 #' }
 #'
-#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, as you
-#' could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
+#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, 
+#' as you could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
 #' \url{http://knowyourmeme.com/memes/hypnotoad}.
 #'
 #' Signbunny: It's not for sure known who invented signbunny, but this article
@@ -40,11 +45,13 @@
 #' they found the first use in this tweet:
 #' \url{https://twitter.com/wei_bluebear/status/329101645780770817}
 #'
-#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site down though)
+#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site 
+#' down though)
 #'
-#' Note to Windows users: there are some animals (shortcat, longcat, fish, signbunny,
-#' stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that are not available
-#' because they use non-ASCII characters that don't display properly in R on Windows.
+#' Note to Windows users: there are some animals (shortcat, longcat, fish, 
+#' signbunny, stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that 
+#' are not available because they use non-ASCII characters that don't display 
+#' properly in R on Windows.
 #'
 #' @examples
 #' say()
@@ -60,6 +67,7 @@
 #' say("fortune", "facecat")
 #' say("fortune", "behindcat")
 #' say("fortune", "smallcat")
+#' say("fortune", "monkey")
 #' say("rms", "rms")
 #'
 #' # Vary type of output, default calls message()
@@ -69,7 +77,8 @@
 #'
 #' # Using fortunes
 #' say(what="fortune")
-#' ## you don't have to pass anything to the `what` parameter if `fortune` is not null
+#' ## you don't have to pass anything to the `what` parameter if `fortune` is 
+#' ## not null
 #' say(fortune=10)
 #' say(fortune=100)
 #' say(fortune='whatever')
@@ -98,7 +107,8 @@
 #' # Clippy
 #' say(fortune=59, by="clippy")
 
-say <- function(what="Hello world!", by="cat", type="message", length=18, fortune=NULL, ...){
+say <- function(what="Hello world!", by="cat", type="message", length=18, 
+                fortune=NULL, ...) {
 
   if (length(what) > 1) {
     stop("what has to be of length 1", call. = FALSE)
@@ -106,7 +116,9 @@ say <- function(what="Hello world!", by="cat", type="message", length=18, fortun
 
   if (what == "catfact") {
     check4jsonlite()
-    what <- jsonlite::fromJSON('http://catfacts-api.appspot.com/api/facts?number=1')$facts
+    what <- 
+      jsonlite::fromJSON(
+        'http://catfacts-api.appspot.com/api/facts?number=1')$facts
     by <- 'cat'
   }
 
