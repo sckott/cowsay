@@ -13,7 +13,9 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myr
              person("Kiyoko", "Gotanda", role = c("aut"), email = "photopidge@gmail.com"), 
              person("Andy", "Teucher", role = c("aut"), email = "andy.teucher@gmail.com"), 
              person("Karl", "Broman", role = c("aut"), email = "kbroman@gmail.com"), 
-             person("Franz-Sebastian", "Krah", role = c("aut"), email = "f.krah@mailbox.org")
+             person("Franz-Sebastian", "Krah", role = c("aut"), email = "f.krah@mailbox.org"),
+             person("Lucy", "D'Agostino McGowan", role = c("aut"), email = "lucydagostino@gmail.com")
+
              )
 URL: https://github.com/sckott/cowsay
 BugReports: http://www.github.com/sckott/cowsay/issues
