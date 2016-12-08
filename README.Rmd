@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://api.travis-ci.org/sckott/cowsay.png)](https://travis-ci.org/sckott/cowsay)
+[![Build Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/cowsay)](http://cran.rstudio.com/web/packages/cowsay)
@@ -252,6 +252,14 @@ say("Unlearn you must what learned you have", by="yoda")
 
 ```{r}
 say("hi, i'm a bat", by="bat")
+```
+
+See also `bat2`
+
+### Monkey!
+
+```{r}
+say("fortune", by = "monkey")
 ```
 
 See also `bat2`
