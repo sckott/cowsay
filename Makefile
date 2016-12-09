@@ -28,3 +28,5 @@ clean:
 	cd ..;\
 	$(RM) -r $(PKGNAME).Rcheck/
 
+test: build2 install
+	Rscript -e 'library(cowsay); say("hello there", names(animals)[length(animals)])'
