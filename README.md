@@ -25,8 +25,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Karl Broman
 * Franz-Sebastian Krah
 * Lucy D'Agostino McGowan
+* Guangchuang Yu
 
-That's right, it takes 11 people to make `cowsay` - it's that hard.
+That's right, it takes 12 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -100,14 +101,14 @@ library("cowsay")
 
 ```r
 sort(names(animals))
-#>  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
-#>  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
+#>  [1] "ant"          "anxiouscat"   "bat"          "bat2"
+#>  [5] "behindcat"    "bigcat"       "buffalo"      "cat"
 #>  [9] "chicken"      "clippy"       "cow"          "endlesshorse"
-#> [13] "facecat"      "fish"         "frog"         "ghost"       
-#> [17] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" 
-#> [21] "monkey"       "mushroom"     "pig"          "poop"        
-#> [25] "pumpkin"      "rabbit"       "shark"        "shortcat"    
-#> [29] "signbunny"    "smallcat"     "snowman"      "spider"      
+#> [13] "facecat"      "fish"         "frog"         "ghost"
+#> [17] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat"
+#> [21] "monkey"       "mushroom"     "pig"          "poop"
+#> [25] "pumpkin"      "rabbit"       "shark"        "shortcat"
+#> [29] "signbunny"    "smallcat"     "snowman"      "spider"
 #> [33] "stretchycat"  "trilobite"    "turkey"       "yoda"
 ```
 
@@ -116,9 +117,9 @@ sort(names(animals))
 
 ```r
 say('time')
-#> 
-#>  -------------- 
-#> 2016-12-08 08:14:20 
+#>
+#>  --------------
+#> 2016-12-08 08:14:20
 #>  --------------
 #>     \
 #>       \
@@ -133,18 +134,18 @@ say('time')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 
 ```r
 say("ain't that some shit", "chicken")
-#> 
-#> 
-#>  ----- 
-#> ain't that some shit 
-#>  ------ 
-#>     \   
+#>
+#>
+#>  -----
+#> ain't that some shit
+#>  ------
+#>     \
 #>      \
 #>          _
 #>        _/ }
@@ -157,25 +158,25 @@ say("ain't that some shit", "chicken")
 #>             `;-..'
 #>             _| _|
 #>             /` /` [nosig]
-#> 
+#>
 ```
 
 
 ```r
 say("boo!", "ghost")
-#> 
-#> 
-#>  ----- 
-#> boo! 
-#>  ------ 
-#>     \   
+#>
+#>
+#>  -----
+#> boo!
+#>  ------
+#>     \
 #>      \
 #>      .-.
 #>     (o o)
 #>     | O \
 #>      \   \
 #>       `~~~' [nosig]
-#> 
+#>
 ```
 
 ### Vary type of output, default calls message()
@@ -183,9 +184,9 @@ say("boo!", "ghost")
 
 ```r
 say("hell no!")
-#> 
-#>  -------------- 
-#> hell no! 
+#>
+#>  --------------
+#> hell no!
 #>  --------------
 #>     \
 #>       \
@@ -200,16 +201,16 @@ say("hell no!")
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 
 
 ```r
 say("hell no!", type="warning")
-#> Warning in say("hell no!", type = "warning"): 
-#>  -------------- 
-#> hell no! 
+#> Warning in say("hell no!", type = "warning"):
+#>  --------------
+#> hell no!
 #>  --------------
 #>     \
 #>       \
@@ -224,7 +225,7 @@ say("hell no!", type="warning")
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 
@@ -278,12 +279,12 @@ From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/stat
 
 ```r
 say("it's caturday", "longcat")
-#> 
-#> 
-#>  ----- 
-#> it's caturday 
-#>  ------ 
-#>     \   
+#>
+#>
+#>  -----
+#> it's caturday
+#>  ------
+#>     \
 #>      \
 #>     .ﾊ,,ﾊ
 #>     ( ﾟωﾟ)
@@ -308,7 +309,7 @@ say("it's caturday", "longcat")
 #>     |    |
 #>     U "  U
 #>         [BoingBoing]
-#> 
+#>
 ```
 
 ### Grumpy cat
@@ -316,49 +317,49 @@ say("it's caturday", "longcat")
 
 ```r
 say('NO!', by='grumpycat')
-#> 
-#>    
-#>  -------------- 
-#> NO! 
+#>
+#>
+#>  --------------
+#> NO!
 #>  --------------
 #>     \
 #>       \
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
+#>
 ```
 
 
 ```r
 say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
-#> 
-#>    
-#>  -------------- 
-#> WOKE UP TODAY, IT WAS TERRIBLE 
+#>
+#>
+#>  --------------
+#> WOKE UP TODAY, IT WAS TERRIBLE
 #>  --------------
 #>     \
 #>       \
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
+#>
 ```
 
 
 ```r
 say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
-#> 
-#>    
-#>  -------------- 
-#> I HAD FUN ONCE, IT WAS AWFUL 
+#>
+#>
+#>  --------------
+#> I HAD FUN ONCE, IT WAS AWFUL
 #>  --------------
 #>     \
 #>       \
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
+#>
 ```
 
 ### Bunny Holding a sign
@@ -366,15 +367,15 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 
 ```r
 say(by='signbunny')
-#> 
-#>  -------------- 
-#> Hello world! 
+#>
+#>  --------------
+#> Hello world!
 #>  --------------
 #> (\__/) ||
 #> (•ㅅ•) ||
 #> /   づ
 #>           [nosig]
-#> 
+#>
 ```
 
 ### Fish
@@ -382,16 +383,16 @@ say(by='signbunny')
 
 ```r
 say(by='fish')
-#> 
-#> 
-#>  ----- 
-#> Hello world! 
-#>  ------ 
-#>     \   
+#>
+#>
+#>  -----
+#> Hello world!
+#>  ------
+#>     \
 #>      \
 #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 #>       Kiyoko Gotanda
-#> 
+#>
 ```
 
 ### R fortunes
@@ -399,13 +400,13 @@ say(by='fish')
 
 ```r
 say('fortune','cat')
-#> 
-#>  -------------- 
+#>
+#>  --------------
 #> Tested solutions offered when reproducible examples are provided.
 #>  David Winsemius
 #>  suggesting a potential solution to a vague problem description
 #>  R-help
-#>  April 2011 
+#>  April 2011
 #>  --------------
 #>     \
 #>       \
@@ -420,7 +421,7 @@ say('fortune','cat')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
@@ -428,13 +429,13 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 
 ```r
 say(fortune=100)
-#> 
-#>  -------------- 
+#>
+#>  --------------
 #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
 #>  Peter Dalgaard
 #>  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
 #>  R-help
-#>  January 2005 
+#>  January 2005
 #>  --------------
 #>     \
 #>       \
@@ -449,19 +450,19 @@ say(fortune=100)
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 
 ```r
 say(fortune='whatever')
-#> 
-#>  -------------- 
+#>
+#>  --------------
 #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
 #> Joshua Ulrich: That's the magic_pony function.
 #>  Justin and Joshua Ulrich
 #>  stackoverflow.com
-#>  June 2013 
+#>  June 2013
 #>  --------------
 #>     \
 #>       \
@@ -476,7 +477,7 @@ say(fortune='whatever')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
+#>
 ```
 
 ### Trilobite
@@ -484,10 +485,10 @@ say(fortune='whatever')
 
 ```r
 say("Hi there :)", by='trilobite')
-#> 
-#>   
-#>  -------------- 
-#> Hi there :) 
+#>
+#>
+#>  --------------
+#> Hi there :)
 #>  --------------
 #>     \
 #>       \
@@ -501,7 +502,7 @@ say("Hi there :)", by='trilobite')
 #>        <'``(.)``'>
 #>    sk   <``\_/``>
 #>          `'---'`
-#> 
+#>
 ```
 
 ### Shark
@@ -509,11 +510,11 @@ say("Hi there :)", by='trilobite')
 
 ```r
 say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
-#> 
-#>     
-#>  -------------- 
+#>
+#>
+#>  --------------
 #> Q: What do you call a solitary shark
-#> A: A lone shark 
+#> A: A lone shark
 #>  --------------
 #>     \
 #>       \
@@ -542,7 +543,7 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #>       ,-' _.-'        \  /    |/'-._...--'
 #>      :--``             )/
 #>   '
-#> 
+#>
 ```
 
 ### Buffalo
@@ -550,11 +551,11 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 
 ```r
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
-#> 
-#>     
-#>  -------------- 
+#>
+#>
+#>  --------------
 #> Q: What do you call a single buffalo?
-#> A: A buffalonely 
+#> A: A buffalonely
 #>  --------------
 #>     \
 #>       \
@@ -571,7 +572,7 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #>             `)_/      \  \  )    ( >  ( >
 #>                        \( \(     |/   |/
 #>           mic & dwb  /_(/_(    /_(  /_(
-#> 
+#>
 ```
 
 ### Clippy
@@ -579,16 +580,16 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 ```r
 say(fortune=59, by="clippy")
-#> 
-#> 
-#>  ----- 
+#>
+#>
+#>  -----
 #> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
 #>  Brian D. Ripley
 #>  'Statistical Methods Need Software: A View of Statistical Computing'
 #>  Opening lecture RSS 2002, Plymouth
-#>  September 2002 
-#>  ------ 
-#>     \   
+#>  September 2002
+#>  ------
+#>     \
 #>      \
 #>    __
 #>    / \
@@ -605,13 +606,13 @@ say(fortune=59, by="clippy")
 
 ```r
 say("Unlearn you must what learned you have", by="yoda")
-#> 
-#> 
-#> 
-#>  ----- 
-#> Unlearn you must what learned you have 
-#>  ------ 
-#>     \   
+#>
+#>
+#>
+#>  -----
+#> Unlearn you must what learned you have
+#>  ------
+#>     \
 #>      \
 #>                    ____
 #>                 _.' :  `._
@@ -648,7 +649,7 @@ say("Unlearn you must what learned you have", by="yoda")
 #>   :-""-.`./-.'     /    `.___.'
 #>                \ `t  ._  /  bug
 #>                 "-.t-._:'
-#> 
+#>
 ```
 
 ### Bats!
@@ -656,13 +657,13 @@ say("Unlearn you must what learned you have", by="yoda")
 
 ```r
 say("hi, i'm a bat", by="bat")
-#> 
-#> 
-#>  ------------- 
-#> hi, i'm a bat 
-#>  -------------- 
-#>               \   
-#>                \  
+#>
+#>
+#>  -------------
+#> hi, i'm a bat
+#>  --------------
+#>               \
+#>                \
 #>                 \
 #>         __.--'\     \.__./     /'--.__
 #>     _.-'       '.__.'    '.__.'       '-._
@@ -683,20 +684,20 @@ See also `bat2`
 
 ```r
 say("fortune", by = "monkey")
-#> 
-#> 
-#>  ------------- 
+#>
+#>
+#>  -------------
 #> Douglas Bates: If you really want to be cautious you could use an octal representation like sep="\\007" to get a character that is very unlikely to occur in a factor level.
 #> Ed L. Cashin: I definitely want to be cautious. Instead of the bell character I think I'll use the field separator character, "\\034", just because this is the first time I've been able to use it for it's intended purpose! ;)
 #> Douglas Bates: Yes, but with "\\034" you don't get to make obscure James Bond references :-)
 #>  Douglas Bates and Ed L. Cashin
 #>  R-help
-#>  April 2004 
-#>  -------------- 
-#>               \   
-#>                \  
+#>  April 2004
+#>  --------------
+#>               \
+#>                \
 #>                 \
-#> 
+#>
 #>                   .="=.
 #>                 _/.-.-.\_     _
 #>                ( ( o o ) )    ))
@@ -760,17 +761,17 @@ endless_horse()
 ```r
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
-#> 
-#>    
-#>  -------------- 
-#> I HAD FUN ONCE, IT WAS AWFUL 
+#>
+#>
+#>  --------------
+#> I HAD FUN ONCE, IT WAS AWFUL
 #>  --------------
 #>     \
 #>       \
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
+#>
 ```
 
 ### I just want the animals!
@@ -780,6 +781,6 @@ Okay, hold your endless horses. Just use the exported vector `animals`, and you 
 
 ```r
 animals['clippy']
-#>                                                                                                                      clippy 
+#>                                                                                                                      clippy
 #> "\n\n ----- \n%s \n ------ \n    \\   \n     \\\n   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
 ```
