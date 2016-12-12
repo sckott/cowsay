@@ -30,8 +30,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Karl Broman
 * Franz-Sebastian Krah
 * Lucy D'Agostino McGowan
+* Guangchuang Yu
 
-That's right, it takes 11 people to make `cowsay` - it's that hard.
+That's right, it takes 12 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -261,6 +262,13 @@ See also `bat2`
 ```{r}
 say("fortune", by = "monkey")
 ```
+
+### Daemon!
+
+```{r}
+say("fortune", by = "daemon")
+```
+
 
 See also `bat2`
 
