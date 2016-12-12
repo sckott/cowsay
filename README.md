@@ -111,7 +111,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2016-12-12 11:47:47 
+    #> 2016-12-12 11:50:18 
     #>  --------------
     #>     \
     #>       \
@@ -350,10 +350,22 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Tradition among experienced S programmers has always been that loops (typically 'for' loops) are intrinsically inefficient: expressing computations without loops has provided a measure of entry into the inner circle of S programming.
-    #>  John Chambers
-    #>  Programming With Data, p. 173
-    #>  1998 
+    #> Kevin Wright: Doug already mentioned the limitations of open source optimization code. Open source has benefits, but simply being open doesn't necessarily mean better.
+    #> 
+    #> Joshua Wiley: Actually, a series of studies I have conducted including theoretical proofs and empirical evidence proves open source to be unequivocally better. If you are interested, you can pay me to use the assertion, but the supporting details are restricted so you must accept that my internal checks and quality control are sufficient and the findings are correct and accurate. Details follow.
+    #> 
+    #> License and Use of I. Ben Fooled's findings:
+    #> 
+    #> "Open source is unequivocally better" is $10 for personal use or $20 for each public use of the assertion. It is also possible to get a yearly license, but note that this does not include updates. Support is extra. If you wish to use the assertions on a multicore system, there is an additional $5 per core per assertion fee. A student version is available for pedagogical purposes only: "pn src s nqvcll bttr". If you need more than 20 letters, please upgrade to the full version.
+    #> 
+    #> This is the best thing since bread, but don't take my word for it. Here are some trite testimonials putatively from customers:
+    #> 
+    #> "Using I. Ben Fooled's assertion has really revolutionized my work. I love it. I use it every day" ~ Jane, Data Expert
+    #> 
+    #> "I lost 130 lbs on this system", 'wait, this isn't a weightloss testimonial? Sorry!' "My work is easily twice as efficient since I switched to I. Ben Fooled's product." ~ John, Entrepeneur
+    #>  Kevin Wright and Joshua Wiley
+    #>  R-SIG-Mixed-Models
+    #>  October 2011 
     #>  --------------
     #>     \
     #>       \
@@ -609,11 +621,12 @@ See also `bat2`
     #> 
     #> 
     #>  ------------- 
-    #> Jesus and the rest of the R-help community: Thanks for your help.
-    #>  Mike Saunders
-    #>  after Jesus Frias answered his question about split-split plots
+    #> David Winsemius: Any of your staff can view the (open) source code just as any other member of the human race.
+    #> Uwe Ligges: I do not think the GPL excludes other species...
+    #>  David Winsemius and Uwe Ligges
+    #>  following a request for access to the R sources
     #>  R-help
-    #>  February 2005 
+    #>  December 2011 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -637,11 +650,12 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> The widespread use of spreadsheets or SPSS data sets or SAS data sets which encourage the "single table with a gargantuan number of columns, most of which are missing data in most cases" approach to organization of longitudinal data is regrettable.
-    #>  Douglas Bates
-    #>  in a discussion about software for hierarchical data sets
+    #> See pages 45 and 46 of V&R's S PROGRAMMING for a definitive discussion of how to do this.
+    #> (Confession: I treat anything that V&R say as definitive).
+    #>  Berton Gunter
+    #>  in reply to the question how to parse a '...' function argument
     #>  R-help
-    #>  February 2010 
+    #>  June 2005 
     #>  ------ 
     #>     \   
     #>      \  
@@ -664,7 +678,7 @@ See also `bat2`
     #>               \       /
     #>         ______( (_  / \______
     #>       ,'  ,-----'   |        \
-    #>       `--{__________)        \/
+    #>       `--{__________)        \/ [nosig]
 
 See also `bat2`
 
