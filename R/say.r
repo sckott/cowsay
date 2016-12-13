@@ -146,6 +146,13 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
   if (what == "rms") {
     what <- rmsfact::rmsfact()
   }
+  
+  if (what =="arresteddevelopment"||what=="doctorwho"||what=="dexter"||what=="futurama"||what=="holygrail"||what=="simpsons"||what=="starwars"||what=="loremipsum") {
+    check4jsonlite()
+    what <- 
+      jsonlite::fromJSON(
+        paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
+  }
 
   switch(type,
          message = message(sprintf(who, what)),
