@@ -145,11 +145,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
   
   if (what == "rms") {
     what <- rmsfact::rmsfact()
-  }
-    
-  if(by=="yoda") {
-    what <- "starwars"
-  }
+  }  
   
   if (what =="arresteddevelopment"||what=="doctorwho"||what=="dexter"||what=="futurama"||what=="holygrail"||what=="simpsons"||what=="starwars"||what=="loremipsum") {
     check4jsonlite()
