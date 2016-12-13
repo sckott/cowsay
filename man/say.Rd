@@ -84,6 +84,7 @@ say("fortune", "behindcat")
 say("fortune", "smallcat")
 say("fortune", "monkey")
 say("rms", "rms")
+say("starwars","yoda")
 
 # Vary type of output, default calls message()
 say("hell no!")
