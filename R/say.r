@@ -147,7 +147,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
     what <- rmsfact::rmsfact()
   }  
   
-  if (what =="arresteddevelopment"||what=="doctorwho"||what=="dexter"||what=="futurama"||what=="holygrail"||what=="simpsons"||what=="starwars"||what=="loremipsum") {
+  if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum")) {
     check4jsonlite()
     what <- 
       jsonlite::fromJSON(
