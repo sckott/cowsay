@@ -247,7 +247,7 @@ say(fortune=59, by="clippy")
 ### Yoda
 
 ```{r}
-say("Unlearn you must what learned you have", by="yoda")
+say("starwars", by="yoda")
 ```
 
 ### Bats!
