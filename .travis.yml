@@ -2,3 +2,6 @@ language: r
 sudo: false
 cache: packages
 warnings_are_errors: true
+
+r_binary_packages:
+  - curl
