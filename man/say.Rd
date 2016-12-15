@@ -46,11 +46,6 @@ special phrases that do particular things. They are:
  DOWN RIGHT NOW, REMOVED
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
- \item starwars A random starwars quote from http://chrisvalleskey.com/fillerama/
- Best paired with \code{by = "yoda"}
- \item futurama A random futurama quote from http://chrisvalleskey.com/fillerama/
- \item doctorwho A random doctorwho quote from http://chrisvalleskey.com/fillerama/ 
- \item dexter A random dexter quote from http://chrisvalleskey.com/fillerama/
  \item rms Prints a random 'fact' about Richard Stallman from the 
  \code{\link[rmsfact]{rmsfact}}
  package. Best paired with \code{by = "rms"}.
@@ -89,7 +84,6 @@ say("fortune", "behindcat")
 say("fortune", "smallcat")
 say("fortune", "monkey")
 say("rms", "rms")
-say("starwars","yoda")
 
 # Vary type of output, default calls message()
 say("hell no!")

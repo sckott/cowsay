@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/cowsay)](http://cran.rstudio.com/web/packages/cowsay)
+[![cran version](http://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
 ### What is this?
 
@@ -246,8 +246,8 @@ say(fortune=59, by="clippy")
 
 ### Yoda
 
-```{r}
-say("starwars", by="yoda")
+```{r eval=FALSE}
+say("starwars", by = "yoda")
 ```
 
 ### Bats!
