@@ -31,8 +31,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 * Franz-Sebastian Krah
 * Lucy D'Agostino McGowan
 * Guangchuang Yu
+* Paolo Sonego
 
-That's right, it takes 12 people to make `cowsay` - it's that hard.
+That's right, it takes 13 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -246,7 +247,7 @@ say(fortune=59, by="clippy")
 ### Yoda
 
 ```{r}
-say("Unlearn you must what learned you have", by="yoda")
+say("starwars", by="yoda")
 ```
 
 ### Bats!
