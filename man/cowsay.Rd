@@ -6,8 +6,8 @@
 \alias{cowsay-package}
 \title{Sling messages and warnings with flair}
 \description{
-If you are familiar with `cowsay` on the cli, then you know what this is, but 
-for R.  If not, read below.  Why?  Why not?
+If you are familiar with `cowsay` on the cli, then you know what this 
+is, but for R.  If not, read below.  Why?  Why not?
 }
 \details{
 Contributors:
@@ -23,6 +23,8 @@ Contributors:
  \item Karl Broman
  \item Franz-Sebastian Krah
  \item Lucy D'Agostino McGowan
+ \item Guangchuang Yu
+ \item Paolo Sonego
 }
 
 There is only one function in the cowsay package. Simplicity for the win.

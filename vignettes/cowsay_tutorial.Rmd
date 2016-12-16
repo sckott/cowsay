@@ -1,8 +1,17 @@
-<!--
-%\VignetteEngine{knitr::knitr}
-%\VignetteIndexEntry{cowsay tutorial}
-%\VignetteEncoding{UTF-8}
--->
+---
+title: "Introduction to cowsay"
+author: "Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D'Agostino McGowan, Guangchuang Yu, and Paolo Sonego"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{cowsay tutorial}
+  %\VignetteEncoding{UTF-8}
+---
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -10,9 +19,6 @@ knitr::opts_chunk$set(
   collapse = TRUE
 )
 ```
-
-cowsay tutorial
-===============
 
 `cowsay` makes it easy to print messages, warnings, or character strings with various animals and other creatures.
 

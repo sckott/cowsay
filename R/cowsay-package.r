@@ -1,7 +1,7 @@
 #' Sling messages and warnings with flair
 #' 
-#' If you are familiar with `cowsay` on the cli, then you know what this is, but 
-#' for R.  If not, read below.  Why?  Why not?
+#' If you are familiar with `cowsay` on the cli, then you know what this 
+#' is, but for R.  If not, read below.  Why?  Why not?
 #' 
 #' Contributors:
 #' \itemize{
@@ -16,6 +16,8 @@
 #'  \item Karl Broman
 #'  \item Franz-Sebastian Krah
 #'  \item Lucy D'Agostino McGowan
+#'  \item Guangchuang Yu
+#'  \item Paolo Sonego
 #' }
 #' 
 #' 
