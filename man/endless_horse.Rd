@@ -25,4 +25,3 @@ endless_horse()
 endless_horse(endless = FALSE)
 }
 }
-

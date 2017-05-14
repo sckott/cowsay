@@ -160,16 +160,6 @@ say("catfact", "cat")
 #>               \_)
 ```
 
-### Random quote
-
-From the iheartquotes API (http://iheartquotes.com/api)
-
-> DOESN'T WORK RIGHT NOW
-
-```{r eval=FALSE}
-say("iheart", "chicken")
-```
-
 ### Long cat
 
 From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)

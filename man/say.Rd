@@ -42,8 +42,6 @@ special phrases that do particular things. They are:
 \itemize{
  \item catfact A random cat fact from 
  http://catfacts-api.appspot.com/doc.html
- \item iheart A random quote from http://iheartquotes.com/api - 
- DOWN RIGHT NOW, REMOVED
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
  \item rms Prints a random 'fact' about Richard Stallman from the 
@@ -103,10 +101,6 @@ say(fortune=45)
 # Using catfacts
 # say("catfact", "cat")
 
-# Using iheartquotes
-## DOESN'T WORK RIGHT NOW
-# say("iheart", "chicken")
-
 # The hypnotoad
 say(by="hypnotoad")
 
@@ -122,4 +116,3 @@ say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
 # Clippy
 say(fortune=59, by="clippy")
 }
-

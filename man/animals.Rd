@@ -23,4 +23,3 @@ animals['clippy']
 animals[['clippy']]
 }
 \keyword{datasets}
-
