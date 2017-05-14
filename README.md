@@ -121,7 +121,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2016-12-14 16:46:02 
+#> 2017-05-14 08:35:59 
 #>  --------------
 #>     \
 #>       \
@@ -263,17 +263,6 @@ say("catfact", "cat")
 #>               \_)
 ```
 
-### Random quote
-
-From the iheartquotes API (http://iheartquotes.com/api)
-
-> DOESN'T WORK RIGHT NOW
-
-
-```r
-say("iheart", "chicken")
-```
-
 ### Long cat
 
 From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
@@ -404,10 +393,11 @@ say(by='fish')
 say('fortune','cat')
 #> 
 #>  -------------- 
-#> Tradition among experienced S programmers has always been that loops (typically 'for' loops) are intrinsically inefficient: expressing computations without loops has provided a measure of entry into the inner circle of S programming.
-#>  John Chambers
-#>  Programming With Data, p. 173
-#>  1998 
+#> Perhaps one is the real forge and the other is a forgery? Or a forge-R-y? I'll get my coat...
+#>  Barry Rowlingson
+#>  on the question whether http://www.RForge.net/ or http://R-Forge.R-project.org/ is the official forge server
+#>  R-help
+#>  April 2007 
 #>  --------------
 #>     \
 #>       \
@@ -644,9 +634,8 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> The Huli of Papua New Guinea use '15' to mean a very large number and '15 times 15 samting (something)' to mean something close to infinity.
-#>  David Whiting
-#>  in a discussion about trying to estimate the number of R users
+#> Sorting is a wonderful topic! Especially because you can discuss different fundamental ideas like brute force, divide and conquer, and questions of efficiency, tradeoffs of space and time, etc.
+#>  Peter Wolf
 #>  R-help
 #>  April 2004 
 #>  -------------- 
@@ -675,13 +664,11 @@ say("fortune", by = "monkey")
 say("fortune", by = "daemon")
 #> 
 #>  ----- 
-#> (3 times...rrrrgh...) and why do you think the mailing list is called R-*packages* ???????????
-#> Please do
-#>   for(i in 1:20) cat("It's a package!\n")
-#>  Martin Maechler
-#>  after a newly released *package* has been called *library* three times in its announcement on R-packages
+#> Nothing exceeds like Excel.
+#>  Roger Koenker
+#>  in reply to a question why it takes so long to paste 19,000 lines of R code from Excel into R
 #>  R-help
-#>  March 2006 
+#>  October 2008 
 #>  ------ 
 #>     \   
 #>      \  
