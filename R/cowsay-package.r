@@ -18,6 +18,7 @@
 #'  \item Lucy D'Agostino McGowan
 #'  \item Guangchuang Yu
 #'  \item Paolo Sonego
+#'  \item Philipp Boersch-Supan
 #' }
 #' 
 #' 

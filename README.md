@@ -14,21 +14,25 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 ### Contributors
 
-* Scott Chamberlain
-* Tyler Rinker
-* Thomas Leeper
-* Noam Ross
-* Rich FitzJohn
-* Kiyoko Gotanda
-* Carson Sievert
-* Andy Teucher
-* Karl Broman
-* Franz-Sebastian Krah
-* Lucy D'Agostino McGowan
-* Guangchuang Yu
-* Paolo Sonego
 
-That's right, it takes 13 people to make `cowsay` - it's that hard.
+
+
+ * Scott Chamberlain
+ * Tyler Rinker
+ * Thomas Leeper
+ * Noam Ross
+ * Rich FitzJohn
+ * Kiyoko Gotanda
+ * Carson Sievert
+ * Andy Teucher
+ * Karl Broman
+ * Franz-Sebastian Krah
+ * Lucy D'Agostino McGowan
+ * Guangchuang Yu
+ * Paolo Sonego
+ * Philipp Boersch-Supan
+
+That's right, it takes 14 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -105,13 +109,13 @@ sort(names(animals))
 #>  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
 #>  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
 #>  [9] "chicken"      "clippy"       "cow"          "daemon"      
-#> [13] "endlesshorse" "facecat"      "fish"         "frog"        
-#> [17] "ghost"        "grumpycat"    "hypnotoad"    "longcat"     
-#> [21] "longtailcat"  "monkey"       "mushroom"     "pig"         
-#> [25] "poop"         "pumpkin"      "rabbit"       "shark"       
-#> [29] "shortcat"     "signbunny"    "smallcat"     "snowman"     
-#> [33] "spider"       "stretchycat"  "trilobite"    "turkey"      
-#> [37] "yoda"
+#> [13] "egret"        "endlesshorse" "facecat"      "fish"        
+#> [17] "frog"         "ghost"        "grumpycat"    "hypnotoad"   
+#> [21] "longcat"      "longtailcat"  "monkey"       "mushroom"    
+#> [25] "pig"          "poop"         "pumpkin"      "rabbit"      
+#> [29] "shark"        "shortcat"     "signbunny"    "smallcat"    
+#> [33] "snowman"      "spider"       "stretchycat"  "trilobite"   
+#> [37] "turkey"       "yoda"
 ```
 
 ### Say Something
@@ -121,7 +125,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2017-05-14 08:35:59 
+#> 2017-06-27 10:08:41 
 #>  --------------
 #>     \
 #>       \
@@ -393,11 +397,10 @@ say(by='fish')
 say('fortune','cat')
 #> 
 #>  -------------- 
-#> Perhaps one is the real forge and the other is a forgery? Or a forge-R-y? I'll get my coat...
-#>  Barry Rowlingson
-#>  on the question whether http://www.RForge.net/ or http://R-Forge.R-project.org/ is the official forge server
+#> I think that it's generally a good idea not to resist the most natural way of programming in R.
+#>  John Fox
 #>  R-help
-#>  April 2007 
+#>  March 2004 
 #>  --------------
 #>     \
 #>       \
@@ -634,10 +637,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Sorting is a wonderful topic! Especially because you can discuss different fundamental ideas like brute force, divide and conquer, and questions of efficiency, tradeoffs of space and time, etc.
-#>  Peter Wolf
-#>  R-help
-#>  April 2004 
+#> If we do that, I predict that the total amount of r-help time wasted on it will exceed the CPU time saved by orders of magnitude.
+#>  Duncan Murdoch
+#>  after a specialized function speeding up detection of NAs was suggested for base R
+#>  R-devel
+#>  April 2006 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -664,11 +668,12 @@ say("fortune", by = "monkey")
 say("fortune", by = "daemon")
 #> 
 #>  ----- 
-#> Nothing exceeds like Excel.
-#>  Roger Koenker
-#>  in reply to a question why it takes so long to paste 19,000 lines of R code from Excel into R
+#> Amer Siddique: looking for some thoughts on incorporating R functionality to create histograms of data stored in an informix db. im gonna write the app in .Net and will use a managed provider to access the data. what R libs might I have to package in the assemblies? (sorry my Q is general as Ive only just looked at wanting this yet)
+#> Brian D. Ripley: Could you translate the question into English? My guess is that you are writing in a lower-cased version of some Microsoft internal language, but you don't even mention that this is for Windows (if it is).
+#>  Amer Siddique and Brian D. Ripley
+#>  on using R in .NET apps
 #>  R-help
-#>  October 2008 
+#>  November 2004 
 #>  ------ 
 #>     \   
 #>      \  
@@ -692,6 +697,30 @@ say("fortune", by = "daemon")
 #>         ______( (_  / \______
 #>       ,'  ,-----'   |        \
 #>       `--{__________)        \/ [nosig]
+```
+
+### Egret
+
+
+```r
+say("je ne regrette rien", by = "egret")
+#> 
+#>  ----- 
+#> je ne regrette rien 
+#>  ------ 
+#>     \   
+#>      \  
+#>       \
+#>        \   _,
+#>       -==<' `
+#>           ) /
+#>          / (_.
+#>         |  ,-,`\
+#>          \\   \ \
+#>           `\,  \ \
+#>            ||\  \`|,
+#>  jgs      _|| `=`-'
+#>          ~~`~`
 ```
 
 

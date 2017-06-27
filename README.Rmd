@@ -19,21 +19,30 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 ### Contributors
 
-* Scott Chamberlain
-* Tyler Rinker
-* Thomas Leeper
-* Noam Ross
-* Rich FitzJohn
-* Kiyoko Gotanda
-* Carson Sievert
-* Andy Teucher
-* Karl Broman
-* Franz-Sebastian Krah
-* Lucy D'Agostino McGowan
-* Guangchuang Yu
-* Paolo Sonego
+```{r echo=FALSE}
+peeps <- c(
+  "Scott Chamberlain",
+  "Tyler Rinker",
+  "Thomas Leeper",
+  "Noam Ross",
+  "Rich FitzJohn",
+  "Kiyoko Gotanda",
+  "Carson Sievert",
+  "Andy Teucher",
+  "Karl Broman",
+  "Franz-Sebastian Krah",
+  "Lucy D'Agostino McGowan",
+  "Guangchuang Yu",
+  "Paolo Sonego",
+  "Philipp Boersch-Supan"
+)
+```
 
-That's right, it takes 13 people to make `cowsay` - it's that hard.
+```{r results='asis', echo=FALSE}
+cat(c("", peeps), sep = "\n * ")
+```
+
+That's right, it takes `r length(peeps)` people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -258,6 +267,12 @@ say("fortune", by = "monkey")
 
 ```{r}
 say("fortune", by = "daemon")
+```
+
+### Egret
+
+```{r}
+say("je ne regrette rien", by = "egret")
 ```
 
 

@@ -25,6 +25,7 @@ Contributors:
  \item Lucy D'Agostino McGowan
  \item Guangchuang Yu
  \item Paolo Sonego
+ \item Philipp Boersch-Supan
 }
 
 There is only one function in the cowsay package. Simplicity for the win.

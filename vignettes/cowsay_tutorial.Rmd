@@ -1,6 +1,6 @@
 ---
 title: "Introduction to cowsay"
-author: "Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D'Agostino McGowan, Guangchuang Yu, and Paolo Sonego"
+author: "Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D'Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan"
 date: "`r Sys.Date()`"
 output:
   html_document:
