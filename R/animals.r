@@ -561,4 +561,19 @@ daemon =
         ______( (_  / \\______
       ,'  ,-----'   |        \\
       `--{__________)        \\/ [nosig]
+",
+#egret by Joan Stark from http://www.chris.com/ascii/joan/www.geocities.com/SoHo/7373/birds.html#egret 
+egret =
+  "\n ----- \n%s \n ------ \n    \\\   \n     \\\  \n      \\\
+       \\   _,
+      -==<' `\
+          ) /
+         / (_.
+        |  ,-,`\\
+         \\\\   \\ \\
+          `\\,  \\ \\
+           ||\\  \\`|,
+ jgs      _|| `=`-'
+         ~~`~`
 ")
+
