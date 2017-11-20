@@ -575,5 +575,25 @@ egret =
            ||\\  \\`|,
  jgs      _|| `=`-'
          ~~`~`
-")
+",
+# duckling by Andreas Brandmaier
+duckling = 
+  "\n ----- \n%s \n ------ \n    \\\   \n     \\\  \n      \\\
+       \\
+
+        >o  .
+         ===
+",
+# duck by Andreas Brandmaier
+duck =
+  "\n ----- \n%s \n ------ \n    \\\   \n     \\\  \n      \\\
+         __
+        /o \\
+      <=   |         ==
+        |__|        /===
+        |   \\______/  =
+        \\     ====   /
+         \\__________/
+"
+)
 
