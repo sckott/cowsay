@@ -130,7 +130,7 @@ say("boo!", "ghost")
 ```
 
 ```{r}
-say("I love hooo you are!, "owl")
+say("I love hooo you are!", "owl")
 ```
 
 ### Vary type of output, default calls message()
