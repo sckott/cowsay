@@ -116,7 +116,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2017-11-20 21:25:33 
+    #> 2017-11-20 21:27:49 
     #>  --------------
     #>     \
     #>       \
@@ -181,7 +181,7 @@ Dev version
     #>        {o}{o}|
     #>        \ v  /|
     #>        |    \ \
-    #>         \___/_/
+    #>         \___/_/       [ab] 
     #>           | |
 
 ### Vary type of output, default calls message()
@@ -362,11 +362,15 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Although there is almost never a "No" in R, the best short answer is: "No".
-    #>  Uwe Ligges
-    #>  in response to the question whether R has a concept of "const objects" as in C++ that avoid modification
+    #> As a general rule (subject to numerous exceptions, caveats, etc.):
+    #> 1) it is programming and debugging time that most impacts 'overall' program execution time;
+    #> 2) this is most strongly impacted by code readability and size (the smaller the better);
+    #> 3) both of which are enhanced by modular construction and reuseability, which argues for avoiding inline code and using separate functions.
+    #> These days, I would argue that most of the time it is program clarity and correctness (they are related) that is the important issue, not execution speed.
+    #>  Berton Gunter
+    #>  in a discussion about parsing speed
     #>  R-help
-    #>  March 2011 
+    #>  May 2005 
     #>  --------------
     #>     \
     #>       \
@@ -414,11 +418,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-    #>  Tom Backer Johnsen and Barry Rowlingson
-    #>  R-help
-    #>  February 2006 
+    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+    #> Joshua Ulrich: That's the magic_pony function.
+    #>  Justin and Joshua Ulrich
+    #>  stackoverflow.com
+    #>  June 2013 
     #>  --------------
     #>     \
     #>       \
@@ -578,10 +582,12 @@ See also `bat2`
     #> 
     #> 
     #>  ------------- 
-    #> I'm always thrilled when people discover what lexical scoping really means.
-    #>  Robert Gentleman
-    #>  Statistical Computing 2003, Reisensburg
-    #>  June 2003 
+    #> Jarek Tuszynski: At one company [...] I had to run all the licenses of all the software [...] through the legal department. When they read the GNU Public License (GPL) their only comment was: We have no idea what that license means. Do not touch any software using it.
+    #> Rolf Turner: This is typical of lawyers' minds. If something is clear, rational, lucid, straightforward, unambigous, means what it says ... they can't understand it.
+    #>  Jarek Tuszynski and Rolf Turner
+    #>  in a discussion about the GPL and 'buying R'
+    #>  R-help
+    #>  May 2006 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -605,11 +611,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Yes we CRAN!
-    #>  Aurelien Latouche
-    #>  suggestion for a T-shirt slogan
-    #>  private communication
-    #>  July 2009 
+    #> In many cases a) often looks difficult, but on closer inspection turns out to be impossible.
+    #>  Bill Venables
+    #>  about calculating the negative log-likelihood from a non-independence model
+    #>  R-help
+    #>  April 2008 
     #>  ------ 
     #>     \   
     #>      \  
