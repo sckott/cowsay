@@ -3,7 +3,7 @@ Title: Messages, Warnings, Strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc.
     with ASCII animals, including cats, cows, frogs, chickens, ghosts,
     and more.
-Version: 0.5.2.9100
+Version: 0.5.2.9200
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -19,7 +19,8 @@ Authors@R: c(
     person("Franz-Sebastian", "Krah", role = "ctb"),
     person("Lucy", "D'Agostino McGowan", role = "ctb"),
     person("Guangchuang", "Yu", role = "ctb"),
-    person("Philipp", "Boersch-Supan", role = "ctb")
+    person("Philipp", "Boersch-Supan", role = "ctb"),
+    person("Andreas","Brandmaier", role="ctb")
     )
 URL: https://github.com/sckott/cowsay
 BugReports: https://github.com/sckott/cowsay/issues

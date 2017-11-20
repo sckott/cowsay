@@ -34,7 +34,8 @@ peeps <- c(
   "Lucy D'Agostino McGowan",
   "Guangchuang Yu",
   "Paolo Sonego",
-  "Philipp Boersch-Supan"
+  "Philipp Boersch-Supan",
+  "Andreas Brandmaier"
 )
 ```
 
@@ -126,6 +127,10 @@ say("ain't that some shit", "chicken")
 
 ```{r}
 say("boo!", "ghost")
+```
+
+```{r}
+say("I love hooo you are!, "owl")
 ```
 
 ### Vary type of output, default calls message()
