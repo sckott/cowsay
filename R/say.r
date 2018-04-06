@@ -113,7 +113,7 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
     check4jsonlite()
     what <- 
       jsonlite::fromJSON(
-        'http://catfacts-api.appspot.com/api/facts?number=1')$facts
+        'https://catfact.ninja/fact')$fact
     by <- 'cat'
   }
 
