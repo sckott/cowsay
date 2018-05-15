@@ -16,7 +16,7 @@
 
 ## Reverse dependencies
 
-There are no downstream dependencies.
+Checked the 1 downstream dependency, and there were no problems.
 
 ---
 
