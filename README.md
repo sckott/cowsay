@@ -725,3 +725,8 @@ and you can select the animal you want by name.
     animals['clippy']
     #>                                                                                                                      clippy 
     #> "\n\n ----- \n%s \n ------ \n    \\   \n     \\\n   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
+
+## Meta
+
+* License: MIT
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.

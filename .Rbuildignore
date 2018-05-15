@@ -7,3 +7,4 @@ README.Rmd
 cran-comments.md
 Makefile
 ^cran-comments\.md$
+CODE_OF_CONDUCT.md
