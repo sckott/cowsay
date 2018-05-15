@@ -1,3 +1,11 @@
+cowsay 0.6
+==========
+
+### BUG FIXES
+
+* Fix catfact API usage (#56) (#57)
+
+
 cowsay 0.5
 ==========
 
