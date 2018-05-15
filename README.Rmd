@@ -54,7 +54,7 @@ Sources to look in:
 
 Permissions
 
-In the [ascii art mailing list](https://groups.google.com/forum/#!forum/alt.ascii-art) they say:
+In the ascii art mailing list https://groups.google.com/forum/#!forum/alt.ascii-art they say:
 
 ```
  As for posting other people's ASCII art,
@@ -88,7 +88,7 @@ So, let's go with this rule: Let's include found (on the web) ascii art in this 
 
 ### Quick watch start
 
-Asciicast: [https://asciinema.org/a/7745](https://asciinema.org/a/7745)
+Asciicast: <https://asciinema.org/a/7745>
 
 ### Install
 
@@ -152,7 +152,7 @@ say("hell no!", type="string")
 
 ### Catfacts!!!!
 
-From the [catfacts API](http://catfacts-api.appspot.com/)
+From the catfacts API  at <https://catfact.ninja>
 
 ```{r eval=FALSE}
 say("catfact", "cat")
