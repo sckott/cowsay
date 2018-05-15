@@ -40,8 +40,7 @@ You can put in any phrase you like, OR you can type in one of a few
 special phrases that do particular things. They are:
 
 \itemize{
- \item catfact A random cat fact from 
- http://catfacts-api.appspot.com/doc.html
+ \item catfact A random cat fact from https://catfact.ninja
  \item fortune A random quote from an R coder, from fortunes library
  \item time Print the current time
  \item rms Prints a random 'fact' about Richard Stallman from the 
@@ -51,12 +50,12 @@ special phrases that do particular things. They are:
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be, 
 as you could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
-\url{http://knowyourmeme.com/memes/hypnotoad}.
+http://knowyourmeme.com/memes/hypnotoad
 
 Signbunny: It's not for sure known who invented signbunny, but this article
-\url{http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained} thinks
+http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained thinks
 they found the first use in this tweet:
-\url{https://twitter.com/wei_bluebear/status/329101645780770817}
+https://twitter.com/wei_bluebear/status/329101645780770817
 
 Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site 
 down though)
