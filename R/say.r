@@ -16,7 +16,7 @@
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
 #' @param color (character) If \code{type} is "message", a 
-#' \code{\href{http://rstudio.com}{crayon}}-suported text color.
+#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
@@ -105,7 +105,7 @@
 #' say(fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", 
-                type="message", color="cyan", 
+                type="message", color=NULL,  
                 length=18, fortune=NULL, ...) {
 
   if (length(what) > 1) {
@@ -148,7 +148,11 @@ say <- function(what="Hello world!", by="cat",
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
   
-  color <- crayon::make_style(color)
+  if (!is.null(color)) {
+    color <- crayon::make_style(color)
+  } else {
+    color <- function(x) message(x)
+  }
 
   switch(type,
          message = message(cat(color(sprintf(who, what)))),

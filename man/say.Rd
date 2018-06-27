@@ -4,7 +4,7 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message", color = "cyan",
+say(what = "Hello world!", by = "cat", type = "message", color = NULL,
   length = 18, fortune = NULL, ...)
 }
 \arguments{
@@ -25,7 +25,7 @@ no other animal that starts with "g".}
 (returns string)}
 
 \item{color}{(character) If \code{type} is "message", a 
-\code{\href{http://rstudio.com}{crayon}}-suported text color.}
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 

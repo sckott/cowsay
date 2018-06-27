@@ -9,6 +9,11 @@ test_that("say types works as expected", {
   
   # expect string on type=string
   expect_is(say(type = "string"), "character")
+  
+  expect_equal(
+    length(say("foo", color = "cyan")) + 1,
+    length(say("foo", type = "warning"))
+  )
 })
 
 test_that("say by works as expected", {
