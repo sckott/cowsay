@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 cowsay
 ======
 
@@ -125,8 +129,10 @@ say('time')
 say("ain't that some shit", "chicken")
 ```
 
+Add some color: 
+
 ```{r}
-say("boo!", "ghost")
+say("boo!", "ghost", color = "cyan")
 ```
 
 ```{r}

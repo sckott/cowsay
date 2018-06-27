@@ -1,52 +1,54 @@
-cowsay
-======
 
+# cowsay
 
-
-[![Build Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
-[![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
+[![Build
+Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
+[![Build
+status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
+[![rstudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
+[![cran
+version](http://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
 ### What is this?
 
-If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
+If you are familiar with `cowsay` on the cli, then you know what this
+is, but for R. If not, read below. Why? Why not?
 
 ### Contributors
 
+  - Scott Chamberlain
+  - Tyler Rinker
+  - Thomas Leeper
+  - Noam Ross
+  - Rich FitzJohn
+  - Kiyoko Gotanda
+  - Carson Sievert
+  - Andy Teucher
+  - Karl Broman
+  - Franz-Sebastian Krah
+  - Lucy D’Agostino McGowan
+  - Guangchuang Yu
+  - Paolo Sonego
+  - Philipp Boersch-Supan
+  - Andreas Brandmaier
 
-
-
- * Scott Chamberlain
- * Tyler Rinker
- * Thomas Leeper
- * Noam Ross
- * Rich FitzJohn
- * Kiyoko Gotanda
- * Carson Sievert
- * Andy Teucher
- * Karl Broman
- * Franz-Sebastian Krah
- * Lucy D'Agostino McGowan
- * Guangchuang Yu
- * Paolo Sonego
- * Philipp Boersch-Supan
- * Andreas Brandmaier
-
-That's right, it takes 15 people to make `cowsay` - it's that hard.
+That’s right, it takes 15 people to make `cowsay` - it’s that hard.
 
 ### Where to find ASCII animal art
 
 Sources to look in:
 
-* http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc.
-* http://www.asciiworld.com/
+  - <http://www.chris.com/ascii/> - again, this person only collects
+    them - no mention of license, permissions, etc.
+  - <http://www.asciiworld.com/>
 
 Permissions
 
-In the ascii art mailing list https://groups.google.com/forum/#!forum/alt.ascii-art they say:
+In the ascii art mailing list
+<https://groups.google.com/forum/#!forum/alt.ascii-art> they say:
 
-```
+``` 
  As for posting other people's ASCII art,
     after a discussion in news:alt.ascii-art       _     ___
     the following rules were agreed upon:         #_~`--'__ `===-,
@@ -74,7 +76,9 @@ In the ascii art mailing list https://groups.google.com/forum/#!forum/alt.ascii-
                         _Your_ very own creation...
 ```
 
-So, let's go with this rule: Let's include found (on the web) ascii art in this pkg, include signature if there, and if no signature, put in a `[nosig]` (see above).
+So, let’s go with this rule: Let’s include found (on the web) ascii art
+in this pkg, include signature if there, and if no signature, put in a
+`[nosig]` (see above).
 
 ### Quick watch start
 
@@ -84,28 +88,24 @@ Asciicast: <https://asciinema.org/a/7745>
 
 From CRAN
 
-
-```r
+``` r
 install.packages("cowsay")
 ```
 
 Dev version
 
-
-```r
+``` r
 install.packages("devtools")
 devtools::install_github("sckott/cowsay")
 ```
 
-
-```r
+``` r
 library("cowsay")
 ```
 
 ### The animals
 
-
-```r
+``` r
 sort(names(animals))
 #>  [1] "ant"          "anxiouscat"   "bat"          "bat2"        
 #>  [5] "behindcat"    "bigcat"       "buffalo"      "cat"         
@@ -122,12 +122,11 @@ sort(names(animals))
 
 ### Say Something
 
-
-```r
+``` r
 say('time')
 #> 
 #>  -------------- 
-#> 2018-05-15 10:34:25 
+#> 2018-06-26 22:04:59 
 #>  --------------
 #>     \
 #>       \
@@ -143,10 +142,10 @@ say('time')
 #>       jgs  //_// ___/
 #>                \_)
 #> 
+#> 
 ```
 
-
-```r
+``` r
 say("ain't that some shit", "chicken")
 #> 
 #> 
@@ -167,11 +166,13 @@ say("ain't that some shit", "chicken")
 #>             _| _|
 #>             /` /` [nosig]
 #> 
+#> 
 ```
 
+Add some color:
 
-```r
-say("boo!", "ghost")
+``` r
+say("boo!", "ghost", color = "cyan")
 #> 
 #> 
 #>  ----- 
@@ -185,10 +186,10 @@ say("boo!", "ghost")
 #>      \   \
 #>       `~~~' [nosig]
 #> 
+#> 
 ```
 
-
-```r
+``` r
 say("I love hooo you are!", "owl")
 #> 
 #>  ----- 
@@ -203,12 +204,12 @@ say("I love hooo you are!", "owl")
 #>        |    \ \
 #>         \___/_/       [ab] 
 #>           | |
+#> 
 ```
 
 ### Vary type of output, default calls message()
 
-
-```r
+``` r
 say("hell no!")
 #> 
 #>  -------------- 
@@ -228,11 +229,10 @@ say("hell no!")
 #>       jgs  //_// ___/
 #>                \_)
 #> 
+#> 
 ```
 
-
-
-```r
+``` r
 say("hell no!", type="warning")
 #> Warning in say("hell no!", type = "warning"): 
 #>  -------------- 
@@ -254,20 +254,16 @@ say("hell no!", type="warning")
 #> 
 ```
 
-
-
-```r
+``` r
 say("hell no!", type="string")
 #> [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "
 ```
 
+### Catfacts\!\!\!\!
 
-### Catfacts!!!!
+From the catfacts API at <https://catfact.ninja>
 
-From the catfacts API  at <https://catfact.ninja>
-
-
-```r
+``` r
 say("catfact", "cat")
 #> --------------
 #> When a domestic cat goes after mice, about 1 pounce in 3 results in a catch.
@@ -289,10 +285,10 @@ say("catfact", "cat")
 
 ### Long cat
 
-From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
+From the [a Boing Boing tweet
+on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
 
-
-```r
+``` r
 say("it's caturday", "longcat")
 #> 
 #> 
@@ -325,12 +321,12 @@ say("it's caturday", "longcat")
 #>     U "  U
 #>         [BoingBoing]
 #> 
+#> 
 ```
 
 ### Grumpy cat
 
-
-```r
+``` r
 say('NO!', by='grumpycat')
 #> 
 #>    
@@ -343,10 +339,10 @@ say('NO!', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
+#> 
 ```
 
-
-```r
+``` r
 say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 #> 
 #>    
@@ -359,10 +355,10 @@ say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
+#> 
 ```
 
-
-```r
+``` r
 say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 #> 
 #>    
@@ -375,12 +371,12 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
+#> 
 ```
 
 ### Bunny Holding a sign
 
-
-```r
+``` r
 say(by='signbunny')
 #> 
 #>  -------------- 
@@ -391,12 +387,12 @@ say(by='signbunny')
 #> /   づ
 #>           [nosig]
 #> 
+#> 
 ```
 
 ### Fish
 
-
-```r
+``` r
 say(by='fish')
 #> 
 #> 
@@ -408,19 +404,21 @@ say(by='fish')
 #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 #>       Kiyoko Gotanda
 #> 
+#> 
 ```
 
 ### R fortunes
 
-
-```r
+``` r
 say('fortune','cat')
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> So apparently you wish to report as a bug the fact that R 1.8.0 is different from R 1.4.0.
-#>  Douglas Bates
-#>  R-devel
-#>  October 2003 
+#> And the fear of getting Ripleyed on the mailing list also makes me think, read, and improve before submitting half baked questions to the list.
+#>  Eric Kort
+#>  R-help
+#>  January 2006 
 #>  --------------
 #>     \
 #>       \
@@ -436,13 +434,17 @@ say('fortune','cat')
 #>       jgs  //_// ___/
 #>                \_)
 #> 
+#> 
 ```
 
-You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
+You can also pick a particular fortune by number or regex search - if
+the `fortune` parameter is not `NULL` you don’t have pass anything to
+the `what` parameter (the 1st parameter)
 
-
-```r
+``` r
 say(fortune=100)
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
 #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
@@ -465,18 +467,20 @@ say(fortune=100)
 #>       jgs  //_// ___/
 #>                \_)
 #> 
+#> 
 ```
 
-
-```r
+``` r
 say(fortune='whatever')
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-#> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-#>  Tom Backer Johnsen and Barry Rowlingson
-#>  R-help
-#>  February 2006 
+#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+#> Joshua Ulrich: That's the magic_pony function.
+#>  Justin and Joshua Ulrich
+#>  stackoverflow.com
+#>  June 2013 
 #>  --------------
 #>     \
 #>       \
@@ -492,12 +496,12 @@ say(fortune='whatever')
 #>       jgs  //_// ___/
 #>                \_)
 #> 
+#> 
 ```
 
 ### Trilobite
 
-
-```r
+```` r
 say("Hi there :)", by='trilobite')
 #> 
 #>   
@@ -517,12 +521,12 @@ say("Hi there :)", by='trilobite')
 #>    sk   <``\_/``>
 #>          `'---'`
 #> 
-```
+#> 
+````
 
 ### Shark
 
-
-```r
+``` r
 say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #> 
 #>     
@@ -558,12 +562,12 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #>      :--``             )/
 #>   '
 #> 
+#> 
 ```
 
 ### Buffalo
 
-
-```r
+````` r
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #> 
 #>     
@@ -587,13 +591,15 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #>                        \( \(     |/   |/
 #>           mic & dwb  /_(/_(    /_(  /_(
 #> 
-```
+#> 
+`````
 
 ### Clippy
 
-
-```r
+``` r
 say(fortune=59, by="clippy")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ----- 
@@ -613,19 +619,18 @@ say(fortune=59, by="clippy")
 #>   || ||
 #>   |\_/|
 #>   \___/ GB
+#> 
 ```
 
 ### Yoda
 
-
-```r
+``` r
 say("starwars", by = "yoda")
 ```
 
-### Bats!
+### Bats\!
 
-
-```r
+``` r
 say("hi, i'm a bat", by="bat")
 #> 
 #> 
@@ -645,22 +650,29 @@ say("hi, i'm a bat", by="bat")
 #>   '._    .'     '.''.    .''.'     '.    _.'
 #>      '-./            \  /           \.-'
 #>                       ''mrf
+#> 
 ```
 
 See also `bat2`
 
-### Monkey!
+### Monkey\!
 
-
-```r
+``` r
 say("fortune", by = "monkey")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ------------- 
-#> My best advice regarding R^2 statistics with nonlinear models is, as Nancy Reagan suggested, "Just say no.".
-#>  Douglas Bates
+#> As a general rule (subject to numerous exceptions, caveats, etc.):
+#> 1) it is programming and debugging time that most impacts 'overall' program execution time;
+#> 2) this is most strongly impacted by code readability and size (the smaller the better);
+#> 3) both of which are enhanced by modular construction and reuseability, which argues for avoiding inline code and using separate functions.
+#> These days, I would argue that most of the time it is program clarity and correctness (they are related) that is the important issue, not execution speed.
+#>  Berton Gunter
+#>  in a discussion about parsing speed
 #>  R-help
-#>  August 2000 
+#>  May 2005 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -678,20 +690,22 @@ say("fortune", by = "monkey")
 #>                /   /    \  /
 #>           ,--`,--'\/\    /
 #>           '-- "--'  '--'
+#> 
 ```
 
-### Daemon!
+### Daemon\!
 
-
-```r
+``` r
 say("fortune", by = "daemon")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> For recursive objects, search for recursive objects.
-#>  Barry Rowlingson
-#>  in a thread about "Recursive objects" and how to search for former discussions about the topic
-#>  R-devel
-#>  May 2011 
+#> Jason Horn: Can anyone think of a way to create a pretty() sequence that excludes zero? Or a way to remove the zero from a sequence after using pretty()?
+#> Peter Dalgaard: The former is rather hard because zero is generally considered just about the prettiest number around...
+#>  Jason Horn and Peter Dalgaard
+#>  R-help
+#>  October 2005 
 #>  ------ 
 #>     \   
 #>      \  
@@ -715,12 +729,12 @@ say("fortune", by = "daemon")
 #>         ______( (_  / \______
 #>       ,'  ,-----'   |        \
 #>       `--{__________)        \/ [nosig]
+#> 
 ```
 
 ### Egret
 
-
-```r
+``` r
 say("je ne regrette rien", by = "egret")
 #> 
 #>  ----- 
@@ -739,15 +753,14 @@ say("je ne regrette rien", by = "egret")
 #>            ||\  \`|,
 #>  jgs      _|| `=`-'
 #>          ~~`~`
+#> 
 ```
-
 
 See also `bat2`
 
 ### Endless horse
 
-
-```r
+``` r
 endless_horse()
 ## -----
 ## Hello world!
@@ -787,8 +800,7 @@ endless_horse()
 
 ### Using pipes
 
-
-```r
+``` r
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 #> 
@@ -802,14 +814,15 @@ library("magrittr")
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
+#> 
 ```
 
-### I just want the animals!
+### I just want the animals\!
 
-Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
+Okay, hold your endless horses. Just use the exported vector `animals`,
+and you can select the animal you want by name.
 
-
-```r
+``` r
 animals['clippy']
 #>                                                                                                                      clippy 
 #> "\n\n ----- \n%s \n ------ \n    \\   \n     \\\n   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
@@ -817,5 +830,7 @@ animals['clippy']
 
 ## Meta
 
-* License: MIT
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+  - License: MIT
+  - Please note that this project is released with a [Contributor Code
+    of Conduct](CODE_OF_CONDUCT.md). By participating in this project
+    you agree to abide by its terms.
