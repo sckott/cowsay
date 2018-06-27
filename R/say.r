@@ -155,7 +155,7 @@ say <- function(what="Hello world!", by="cat",
   }
 
   switch(type,
-         message = message(cat(color(sprintf(who, what)))),
+         message = message(color(sprintf(who, what))),
          warning = warning(sprintf(who, what)),
          string = sprintf(who, what))
 }
