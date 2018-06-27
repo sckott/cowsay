@@ -151,11 +151,11 @@ say <- function(what="Hello world!", by="cat",
   if (!is.null(color)) {
     color <- crayon::make_style(color)
   } else {
-    color <- function(x) message(x)
+    color <- function(x) x
   }
 
   switch(type,
          message = message(color(sprintf(who, what))),
-         warning = warning(sprintf(who, what)),
-         string = sprintf(who, what))
+         warning = warning(color(sprintf(who, what))),
+         string = color(sprintf(who, what)))
 }
