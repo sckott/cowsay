@@ -4,8 +4,8 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message", length = 18,
-  color = "blue", fortune = NULL, ...)
+say(what = "Hello world!", by = "cat", type = "message", color = "cyan",
+  length = 18, fortune = NULL, ...)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -23,6 +23,9 @@ no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string 
 (returns string)}
+
+\item{color}{(character) If \code{type} is "message", a 
+\code{\href{http://rstudio.com}{crayon}}-suported text color.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
@@ -68,8 +71,9 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
+say("meow", "cat", color = "blue")
 say('time')
-say('time', "poop")
+say('time', "poop", color = "bold")
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")
 say("icanhazpdf?", "cat")

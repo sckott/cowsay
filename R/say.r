@@ -15,6 +15,8 @@
 #' no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
+#' @param color (character) If \code{type} is "message", a 
+#' \code{\href{http://rstudio.com}{crayon}}-suported text color.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
@@ -53,8 +55,9 @@
 #' @examples
 #' say()
 #' say("what")
+#' say("meow", "cat", color = "blue")
 #' say('time')
-#' say('time', "poop")
+#' say('time', "poop", color = "bold")
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
@@ -101,9 +104,9 @@
 #' # Clippy
 #' say(fortune=59, by="clippy")
 
-say <- function(what="Hello world!", by="cat", type="message", length=18, 
-                color="blue",
-                fortune=NULL, ...) {
+say <- function(what="Hello world!", by="cat", 
+                type="message", color="cyan", 
+                length=18, fortune=NULL, ...) {
 
   if (length(what) > 1) {
     stop("what has to be of length 1", call. = FALSE)
@@ -149,6 +152,6 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
 
   switch(type,
          message = message(cat(color(sprintf(who, what)))),
-         warning = warning(cat(color(sprintf(who, what)))),
-         string = cat(color(sprintf(who, what))))
+         warning = warning(sprintf(who, what)),
+         string = sprintf(who, what))
 }
