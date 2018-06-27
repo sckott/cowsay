@@ -102,6 +102,7 @@
 #' say(fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", type="message", length=18, 
+                color="blue",
                 fortune=NULL, ...) {
 
   if (length(what) > 1) {
@@ -143,9 +144,11 @@ say <- function(what="Hello world!", by="cat", type="message", length=18,
       jsonlite::fromJSON(
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
+  
+  color <- crayon::make_style(color)
 
   switch(type,
-         message = message(sprintf(who, what)),
-         warning = warning(sprintf(who, what)),
-         string = sprintf(who, what))
+         message = message(cat(color(sprintf(who, what)))),
+         warning = warning(cat(color(sprintf(who, what)))),
+         string = cat(color(sprintf(who, what))))
 }
