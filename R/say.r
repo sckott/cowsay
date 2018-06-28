@@ -111,6 +111,11 @@ say <- function(what="Hello world!", by="cat",
   if (length(what) > 1) {
     stop("what has to be of length 1", call. = FALSE)
   }
+  
+  if (!is.null(color) & !is.character(color)) {
+    stop("color must be of type character", 
+         call. = FALSE)
+  }
 
   if (what == "catfact") {
     check4jsonlite()

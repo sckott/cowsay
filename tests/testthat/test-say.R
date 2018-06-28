@@ -14,6 +14,11 @@ test_that("say types works as expected", {
     length(say("foo", color = "cyan")) + 1,
     length(say("foo", type = "warning"))
   )
+  
+  expect_error(
+    say(color = 123),
+    "color must be of type character"
+  )
 })
 
 test_that("say by works as expected", {
