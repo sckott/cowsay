@@ -15,8 +15,12 @@
 #' no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
-#' @param color (character) If \code{type} is "message", a 
-#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.
+#' @param what_color (character) A 
+#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+#' for \code{what}.
+#' @param by_color (character) A 
+#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+#' for \code{who}.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
@@ -55,9 +59,9 @@
 #' @examples
 #' say()
 #' say("what")
-#' say("meow", "cat", color = "blue")
+#' say("meow", "cat", what_color = "blue")
 #' say('time')
-#' say('time', "poop", color = "bold")
+#' say('time', "poop", by_color = "cyan", what_color = "pink")
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
@@ -105,15 +109,21 @@
 #' say(fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", 
-                type="message", color=NULL,  
+                type="message", 
+                what_color=NULL, by_color=NULL,  
                 length=18, fortune=NULL, ...) {
 
   if (length(what) > 1) {
     stop("what has to be of length 1", call. = FALSE)
   }
   
-  if (!is.null(color) & !is.character(color)) {
-    stop("color must be of type character", 
+  if (!is.null(what_color) & !is.character(what_color)) {
+    stop("what_color must be of type character", 
+         call. = FALSE)
+  }
+  
+  if (!is.null(by_color) & !is.character(by_color)) {
+    stop("by_color must be of type character", 
          call. = FALSE)
   }
 
@@ -153,14 +163,29 @@ say <- function(what="Hello world!", by="cat",
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
   
-  if (!is.null(color)) {
-    color <- crayon::make_style(color)
+  if (!is.null(what_color)) {
+    what_color <- crayon::make_style(what_color)
   } else {
-    color <- function(x) x
+    what_color <- function(x) x
   }
-
+  
+  if (!is.null(by_color)) {
+    by_color <- crayon::make_style(by_color)
+  } else {
+    by_color <- function(x) x
+  }
+  
+  what_pos_start <- 
+    regexpr('%s', who)[1] - 1
+    
+  what_pos_end <- what_pos_start + 3
+  
+  out <- paste0(by_color(substr(who, 1, what_pos_start)),
+                what_color(what),
+                by_color(substr(who, what_pos_end, nchar(who))))
+  
   switch(type,
-         message = message(color(sprintf(who, what))),
-         warning = warning(color(sprintf(who, what))),
-         string = color(sprintf(who, what)))
+         message = message(out),
+         warning = warning(out),
+         string = out)
 }

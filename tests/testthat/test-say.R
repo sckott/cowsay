@@ -11,13 +11,18 @@ test_that("say types works as expected", {
   expect_is(say(type = "string"), "character")
   
   expect_equal(
-    length(say("foo", color = "cyan")) + 1,
+    length(say("foo", by_color = "cyan")) + 1,
     length(say("foo", type = "warning"))
   )
   
   expect_error(
-    say(color = 123),
+    say(by_color = 123),
     "color must be of type character"
+  )
+  
+  expect_equal(
+    "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m",
+    say("salut", "poop", by_color = "cyan", what_color = "pink", type = "string")
   )
 })
 

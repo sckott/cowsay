@@ -128,7 +128,7 @@ say("ain't that some shit", "chicken")
 Add some color: 
 
 ```{r}
-say("boo!", "ghost", color = "cyan")
+say("boo!", "ghost", what_color = "blue", by_color = "cyan")
 ```
 
 ```{r}

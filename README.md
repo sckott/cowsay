@@ -127,7 +127,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-27 09:25:24 
+#> 2018-06-28 14:26:34 
 #>  --------------
 #>     \
 #>       \
@@ -142,7 +142,6 @@ say('time')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -168,14 +167,13 @@ say("ain't that some shit", "chicken")
 #>             _| _|
 #>             /` /` [nosig]
 #> 
-#> 
 ```
 
 Add some color: 
 
 
 ```r
-say("boo!", "ghost", color = "cyan")
+say("boo!", "ghost", what_color = "blue", by_color = "cyan")
 #> 
 #> 
 #>  ----- 
@@ -207,7 +205,6 @@ say("I love hooo you are!", "owl")
 #>        |    \ \
 #>         \___/_/       [ab] 
 #>           | |
-#> 
 ```
 
 ### Vary type of output, default calls message()
@@ -232,7 +229,6 @@ say("hell no!")
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -331,7 +327,6 @@ say("it's caturday", "longcat")
 #>     U "  U
 #>         [BoingBoing]
 #> 
-#> 
 ```
 
 ### Grumpy cat
@@ -350,7 +345,6 @@ say('NO!', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
-#> 
 ```
 
 
@@ -366,7 +360,6 @@ say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
 #> 
 ```
 
@@ -384,7 +377,6 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
-#> 
 ```
 
 ### Bunny Holding a sign
@@ -400,7 +392,6 @@ say(by='signbunny')
 #> (•ㅅ•) ||
 #> /   づ
 #>           [nosig]
-#> 
 #> 
 ```
 
@@ -419,7 +410,6 @@ say(by='fish')
 #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 #>       Kiyoko Gotanda
 #> 
-#> 
 ```
 
 ### R fortunes
@@ -431,10 +421,14 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> My institution has a particularly diabolical policy on intellectual property, especially on software.
-#>  Ross Ihaka
+#> Happy families are all alike; every unhappy family is unhappy in its own way.
+#> Leo Tolstoy
+#> 
+#> and every messy data is messy in its own way - it's easy to define the characteristics of a clean dataset (rows are observations, columns are variables, columns contain values of consistent types). If you start to look at real life data you'll see every way you can imagine data being messy (and many that you can't)!
+#>  Hadley Wickham
+#>  answering 'in what way messy data sets are messy'
 #>  R-help
-#>  August 2003 
+#>  January 2008 
 #>  --------------
 #>     \
 #>       \
@@ -449,7 +443,6 @@ say('fortune','cat')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -482,7 +475,6 @@ say(fortune=100)
 #>       jgs  //_// ___/
 #>                \_)
 #> 
-#> 
 ```
 
 
@@ -512,7 +504,6 @@ say(fortune='whatever')
 #>       jgs  //_// ___/
 #>                \_)
 #> 
-#> 
 ```
 
 ### Trilobite
@@ -537,7 +528,6 @@ say("Hi there :)", by='trilobite')
 #>        <'``(.)``'>
 #>    sk   <``\_/``>
 #>          `'---'`
-#> 
 #> 
 ```
 
@@ -580,7 +570,6 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #>      :--``             )/
 #>   '
 #> 
-#> 
 ```
 
 ### Buffalo
@@ -610,7 +599,6 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #>                        \( \(     |/   |/
 #>           mic & dwb  /_(/_(    /_(  /_(
 #> 
-#> 
 ```
 
 ### Clippy
@@ -639,7 +627,6 @@ say(fortune=59, by="clippy")
 #>   || ||
 #>   |\_/|
 #>   \___/ GB
-#> 
 ```
 
 ### Yoda
@@ -672,7 +659,6 @@ say("hi, i'm a bat", by="bat")
 #>   '._    .'     '.''.    .''.'     '.    _.'
 #>      '-./            \  /           \.-'
 #>                       ''mrf
-#> 
 ```
 
 See also `bat2`
@@ -687,11 +673,12 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Finally, as author of the code used to put CG in optim, I'll advise against its use. One of my least successful pieces of code. Rcgmin is better, but you really do need analytic derivatives to make it sing. For 5 parameters, use NM, or better the nmk from dfoptim package.
-#>  John C. Nash
-#>  in a discussion about optimization of a multinomial log-likelihood
+#> I use R. My company benefits from it. My clients benefit from it.
+#> ...and I sleep just fine (when I do sleep)... :-)
+#>  Marc Schwartz, Medanalytics
+#>  about the 'costs' of free software
 #>  R-help
-#>  May 2012 
+#>  June 2004 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -709,7 +696,6 @@ say("fortune", by = "monkey")
 #>                /   /    \  /
 #>           ,--`,--'\/\    /
 #>           '-- "--'  '--'
-#> 
 ```
 
 ### Daemon!
@@ -721,11 +707,12 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> I think the amount of people on this list who understand your question is roughly zero.
-#>  Uwe Ligges
-#>  in response to a non-reproducible problem for which additionally subject and body did not match well
-#>  R-help
-#>  January 2012 
+#> Etienne B. Racine: I haven't seen any documentation about this behavior.
+#> Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?
+#> Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.
+#>  Etienne B. Racine, Edzer Pebesma, and Tom Gottfried
+#>  R-SIG-Geo
+#>  February 2012 
 #>  ------ 
 #>     \   
 #>      \  
@@ -749,7 +736,6 @@ say("fortune", by = "daemon")
 #>         ______( (_  / \______
 #>       ,'  ,-----'   |        \
 #>       `--{__________)        \/ [nosig]
-#> 
 ```
 
 ### Egret
@@ -774,7 +760,6 @@ say("je ne regrette rien", by = "egret")
 #>            ||\  \`|,
 #>  jgs      _|| `=`-'
 #>          ~~`~`
-#> 
 ```
 
 
@@ -837,7 +822,6 @@ library("magrittr")
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
 #> 
 ```
 
