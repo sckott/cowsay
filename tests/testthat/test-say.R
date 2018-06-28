@@ -11,8 +11,8 @@ test_that("say types works as expected", {
   expect_is(say(type = "string"), "character")
   
   expect_equal(
-    length(say("foo", by_color = "cyan")) + 1,
-    length(say("foo", type = "warning"))
+    length(suppressMessages(say("foo", by_color = "cyan"))) + 1,
+    length(suppressWarnings(say("foo", type = "warning")))
   )
   
   expect_error(
@@ -22,7 +22,7 @@ test_that("say types works as expected", {
   
   expect_equal(
     "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m",
-    say("salut", "poop", by_color = "cyan", what_color = "pink", type = "string")
+    suppressMessages(say("salut", "poop", by_color = "cyan", what_color = "pink", type = "string"))
   )
 })
 
