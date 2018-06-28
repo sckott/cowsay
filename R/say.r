@@ -105,7 +105,8 @@
 #' say(fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", 
-                type="message", color=NULL,  
+                type="message", 
+                what_color=NULL, by_color=NULL,  
                 length=18, fortune=NULL, ...) {
 
   if (length(what) > 1) {
@@ -148,14 +149,20 @@ say <- function(what="Hello world!", by="cat",
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
   
-  if (!is.null(color)) {
-    color <- crayon::make_style(color)
+  if (!is.null(what_color)) {
+    what_color <- crayon::make_style(what_color)
   } else {
-    color <- function(x) x
+    what_color <- function(x) x
+  }
+  
+  if (!is.null(by_color)) {
+    by_color <- crayon::make_style(by_color)
+  } else {
+    by_color <- function(x) x
   }
 
   switch(type,
-         message = message(color(sprintf(who, what))),
-         warning = warning(color(sprintf(who, what))),
-         string = color(sprintf(who, what)))
+         message = message(sprintf(by_color(who), what_color(what))),
+         warning = warning(sprintf(by_color(who), what_color(what))),
+         string = sprintf(by_color(who), what_color(what)))
 }

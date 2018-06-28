@@ -4,8 +4,8 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message", color = NULL,
-  length = 18, fortune = NULL, ...)
+say(what = "Hello world!", by = "cat", type = "message",
+  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, ...)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -24,9 +24,6 @@ no other animal that starts with "g".}
 \item{type}{(character) One of message (default), warning, or string 
 (returns string)}
 
-\item{color}{(character) If \code{type} is "message", a 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.}
-
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
 \item{fortune}{An integer specifying the row number of fortunes.data. 
@@ -34,6 +31,9 @@ Alternatively which can be a character and grep is used to try to find a
 suitable row.}
 
 \item{...}{Further args passed on to \code{\link[fortunes]{fortune}}}
+
+\item{color}{(character) If \code{type} is "message", a 
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.}
 }
 \description{
 Sling messages and warnings with flair
