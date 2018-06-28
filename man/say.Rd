@@ -24,6 +24,14 @@ no other animal that starts with "g".}
 \item{type}{(character) One of message (default), warning, or string 
 (returns string)}
 
+\item{what_color}{(character) A 
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+for \code{what}.}
+
+\item{by_color}{(character) A 
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+for \code{who}.}
+
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
 \item{fortune}{An integer specifying the row number of fortunes.data. 
@@ -31,9 +39,6 @@ Alternatively which can be a character and grep is used to try to find a
 suitable row.}
 
 \item{...}{Further args passed on to \code{\link[fortunes]{fortune}}}
-
-\item{color}{(character) If \code{type} is "message", a 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.}
 }
 \description{
 Sling messages and warnings with flair
@@ -71,9 +76,9 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
-say("meow", "cat", color = "blue")
+say("meow", "cat", what_color = "blue")
 say('time')
-say('time', "poop", color = "bold")
+say('time', "poop", by_color = "cyan", what_color = "pink")
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")
 say("icanhazpdf?", "cat")
