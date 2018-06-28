@@ -4,7 +4,8 @@
 \alias{endless_horse}
 \title{Endless horse}
 \usage{
-endless_horse(what = "Hello world!", endless = TRUE, wait = 0.5)
+endless_horse(what = "Hello world!", endless = TRUE, wait = 0.5,
+  what_color = NULL, horse_color = NULL)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -15,6 +16,14 @@ endless_horse(what = "Hello world!", endless = TRUE, wait = 0.5)
 geometrically after the first iteration in order to keep the horse
 on screen for a while, but it \emph{will} keep going forever.  Or
 until you hit escape/Ctrl-C depending on your platform).}
+
+\item{what_color}{(character) A 
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+for \code{what}.}
+
+\item{horse_color}{(character) A 
+\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+for your steed.}
 }
 \description{
 Each time you press enter, the horse keeps going...and going...
