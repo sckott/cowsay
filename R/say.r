@@ -15,8 +15,12 @@
 #' no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
-#' @param color (character) If \code{type} is "message", a 
-#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.
+#' @param what_color (character) A 
+#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+#' for \code{what}.
+#' @param by_color (character) A 
+#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+#' for \code{who}.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
@@ -55,9 +59,9 @@
 #' @examples
 #' say()
 #' say("what")
-#' say("meow", "cat", color = "blue")
+#' say("meow", "cat", what_color = "blue")
 #' say('time')
-#' say('time', "poop", color = "bold")
+#' say('time', "poop", by_color = "cyan", what_color = "pink")
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
@@ -162,16 +166,16 @@ say <- function(what="Hello world!", by="cat",
   }
   
   what_pos_start <- 
-    regexpr('%s', animals[["cat"]])[1] 
+    regexpr('%s', who)[1] - 1
     
-  what_pos_end <- what_pos_start + 2
+  what_pos_end <- what_pos_start + 3
   
-  str <- paste0(by_color(substr(who, 1, what_pos_start)),
+  out <- paste0(by_color(substr(who, 1, what_pos_start)),
                 what_color(what),
                 by_color(substr(who, what_pos_end, nchar(who))))
   
   switch(type,
-         message = message(str),
-         warning = warning(str),
-         string = sprintf(str))
+         message = message(out),
+         warning = warning(out),
+         string = out)
 }
