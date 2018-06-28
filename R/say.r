@@ -160,9 +160,18 @@ say <- function(what="Hello world!", by="cat",
   } else {
     by_color <- function(x) x
   }
-
+  
+  what_pos_start <- 
+    regexpr('%s', animals[["cat"]])[1] 
+    
+  what_pos_end <- what_pos_start + 2
+  
+  str <- paste0(by_color(substr(who, 1, what_pos_start)),
+                what_color(what),
+                by_color(substr(who, what_pos_end, nchar(who))))
+  
   switch(type,
-         message = message(sprintf(by_color(who), what_color(what))),
-         warning = warning(sprintf(by_color(who), what_color(what))),
-         string = sprintf(by_color(who), what_color(what)))
+         message = message(str),
+         warning = warning(str),
+         string = sprintf(str))
 }
