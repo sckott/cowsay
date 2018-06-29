@@ -24,13 +24,15 @@ no other animal that starts with "g".}
 \item{type}{(character) One of message (default), warning, or string 
 (returns string)}
 
-\item{what_color}{(character) A 
-\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
-for \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.}
+\item{what_color}{(character or crayon function) A 
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color 
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.}
 
-\item{by_color}{(character) A 
+\item{by_color}{(character or crayon function) A 
 \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
-for \code{who}.}
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{who}.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 

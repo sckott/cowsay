@@ -15,12 +15,14 @@
 #' no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
-#' @param what_color (character) A 
+#' @param what_color (character or crayon function) A 
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color 
+#' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+#'  \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
+#' @param by_color (character or crayon function) A 
 #' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
-#' for \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
-#' @param by_color (character) A 
-#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
-#' for \code{who}.
+#' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+#'  \code{who}.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
