@@ -128,11 +128,13 @@ say("ain't that some shit", "chicken")
 Add some color: 
 
 ```{r}
-say("boo!", "ghost", what_color = "blue", by_color = "cyan")
+say("boo!", "ghost", 
+    what_color = "cyan", by_color = "saddlebrown")
 ```
 
 ```{r}
-say("I love hooo you are!", "owl")
+say("I love hooo you are!", "owl", 
+    what_color = rgb(0, 1, 1), by_color = "#FF0000")
 ```
 
 ### Vary type of output, default calls message()

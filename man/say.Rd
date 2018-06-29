@@ -25,11 +25,11 @@ no other animal that starts with "g".}
 (returns string)}
 
 \item{what_color}{(character) A 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
-for \code{what}.}
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
+for \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.}
 
 \item{by_color}{(character) A 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
 for \code{who}.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}

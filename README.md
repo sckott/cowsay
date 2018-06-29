@@ -127,7 +127,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-28 14:26:34 
+#> 2018-06-28 22:30:02 
 #>  --------------
 #>     \
 #>       \
@@ -173,7 +173,8 @@ Add some color:
 
 
 ```r
-say("boo!", "ghost", what_color = "blue", by_color = "cyan")
+say("boo!", "ghost", 
+    what_color = "cyan", by_color = "saddlebrown")
 #> 
 #> 
 #>  ----- 
@@ -191,7 +192,8 @@ say("boo!", "ghost", what_color = "blue", by_color = "cyan")
 
 
 ```r
-say("I love hooo you are!", "owl")
+say("I love hooo you are!", "owl", 
+    what_color = rgb(0, 1, 1), by_color = "#FF0000")
 #> 
 #>  ----- 
 #> I love hooo you are! 
@@ -421,14 +423,11 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Happy families are all alike; every unhappy family is unhappy in its own way.
-#> Leo Tolstoy
-#> 
-#> and every messy data is messy in its own way - it's easy to define the characteristics of a clean dataset (rows are observations, columns are variables, columns contain values of consistent types). If you start to look at real life data you'll see every way you can imagine data being messy (and many that you can't)!
-#>  Hadley Wickham
-#>  answering 'in what way messy data sets are messy'
+#> Perhaps one is the real forge and the other is a forgery? Or a forge-R-y? I'll get my coat...
+#>  Barry Rowlingson
+#>  on the question whether http://www.RForge.net/ or http://R-Forge.R-project.org/ is the official forge server
 #>  R-help
-#>  January 2008 
+#>  April 2007 
 #>  --------------
 #>     \
 #>       \
@@ -484,11 +483,11 @@ say(fortune='whatever')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-#> Joshua Ulrich: That's the magic_pony function.
-#>  Justin and Joshua Ulrich
-#>  stackoverflow.com
-#>  June 2013 
+#> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+#> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+#>  Tom Backer Johnsen and Barry Rowlingson
+#>  R-help
+#>  February 2006 
 #>  --------------
 #>     \
 #>       \
@@ -673,12 +672,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> I use R. My company benefits from it. My clients benefit from it.
-#> ...and I sleep just fine (when I do sleep)... :-)
-#>  Marc Schwartz, Medanalytics
-#>  about the 'costs' of free software
+#> Soham: How to compute the p-value of a statistic generally?
+#> Berton Gunter: runif(1)
+#>  Soham and Berton Gunter
 #>  R-help
-#>  June 2004 
+#>  May 2010 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -707,12 +705,11 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> Etienne B. Racine: I haven't seen any documentation about this behavior.
-#> Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?
-#> Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.
-#>  Etienne B. Racine, Edzer Pebesma, and Tom Gottfried
-#>  R-SIG-Geo
-#>  February 2012 
+#> The wiki spamming is a serious problem, [...]. What does a logfile with IPs help? The spammers are strangers selling viagra. I don't want to find them :-)
+#>  Detlef Steuer
+#>  in a discussion on R wikis
+#>  R-help
+#>  January 2006 
 #>  ------ 
 #>     \   
 #>      \  

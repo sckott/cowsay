@@ -16,10 +16,10 @@
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string)
 #' @param what_color (character) A 
-#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
-#' for \code{what}.
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
+#' for \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
 #' @param by_color (character) A 
-#' \href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
 #' for \code{who}.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
@@ -118,12 +118,12 @@ say <- function(what="Hello world!", by="cat",
   }
   
   if (!is.null(what_color) & !is.character(what_color)) {
-    stop("what_color must be of type character", 
+    stop("what_color must be of type character",
          call. = FALSE)
   }
-  
+
   if (!is.null(by_color) & !is.character(by_color)) {
-    stop("by_color must be of type character", 
+    stop("by_color must be of type character",
          call. = FALSE)
   }
 

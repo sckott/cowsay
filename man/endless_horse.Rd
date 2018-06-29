@@ -18,11 +18,11 @@ on screen for a while, but it \emph{will} keep going forever.  Or
 until you hit escape/Ctrl-C depending on your platform).}
 
 \item{what_color}{(character) A 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
-for \code{what}.}
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
+for \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.}
 
 \item{horse_color}{(character) A 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
 for your steed.}
 }
 \description{
