@@ -101,17 +101,6 @@ one_foo <-
   left_join(full_dict, by = c("num" = "rn")) %>% 
   select(-lines)
 
-# one_num <- 
-#   one %>% 
-#   unnest(num) %>%
-#   filter(num > 0) %>%
-#   left_join(dict) %>% 
-#   select(-char, -lines)
-
-# two <- one_foo %>% 
-#   left_join(one_chars, by = "line_id") %>% 
-#   drop_na() 
-  # distinct(line_id, split_chars, .keep_all = TRUE)
 
 three <- 
   one_foo %>% 
@@ -130,19 +119,8 @@ three <-
   # filter(num == max(num)) %>% 
   select(-style) 
 
-unique(three$res) %>% 
+three$res %>% 
   # distinct(res) %>% 
   # str_c("\n") %>% 
   str_c(collapse = "") %>%  cat()
-
-
-four <-
-  three %>% 
-  nest(-line_id) 
-  three$data %>% 
-  pluck(res)
-
-three$data[[4]]$out %>% str_c(sep = "") %>% cat()
-
-three
 
