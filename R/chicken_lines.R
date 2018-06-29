@@ -69,6 +69,13 @@ rbow$out %>% str_c(collapse = "") %>% cat()
 
 
 
+
+full_dict <- 
+  dict %>% 
+  mutate(
+    rn = row_number()
+  )
+
   
 
 one <- 
@@ -83,29 +90,47 @@ one <-
 
 one_chars <- 
   one %>% 
-  unnest(split_chars)
+  unnest(split_chars) %>% 
+  group_by(line_id) %>% 
+  mutate(
+    num = row_number()
+  )
 
-one_num <- 
-  one %>% 
-  unnest(num) %>%
-  filter(num > 0) %>%
-  left_join(dict) %>% 
-  select(-char, -lines)
+one_foo <- 
+  one_chars %>% 
+  left_join(full_dict, by = c("num" = "rn")) %>% 
+  select(-lines)
 
-two <- one_num %>% 
-  left_join(one_chars, by = "line_id") %>% 
-  drop_na() 
+# one_num <- 
+#   one %>% 
+#   unnest(num) %>%
+#   filter(num > 0) %>%
+#   left_join(dict) %>% 
+#   select(-char, -lines)
+
+# two <- one_foo %>% 
+#   left_join(one_chars, by = "line_id") %>% 
+#   drop_na() 
+  # distinct(line_id, split_chars, .keep_all = TRUE)
 
 three <- 
-  two %>% 
+  one_foo %>% 
   rowwise() %>% 
   mutate(
     style = crayon::make_style(color) %>% list(),
-    out = style(split_chars)
+    out = style(split_chars),
+    res = out %>% str_c(collapse = "")
   ) %>% 
-  select(-style) %>% 
-  nest(-lines) 
+  select(-style) 
 
+three$res %>% str_c(collapse = "") %>%  cat()
+
+
+four <-
+  two %>% 
+  nest(-lines) 
+  three$data %>% 
+  pluck(res)
 
 three$data[[4]]$out %>% str_c(sep = "") %>% cat()
 
