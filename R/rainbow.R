@@ -11,15 +11,15 @@ rainbow_dict <-
     num = 1:length(rainbow_colors)
   )
 
-make_rainbow <- function(a) {
-  a <- animals[[a]]
+make_rainbow <- function(who) {
+  who <- get_who(who)
   
-  a_lines <- 
+  whose_line <- 
     tibble(
-      full = a
+      full = who
     ) %>% 
     mutate(
-      lines = a %>% str_split("\\n") 
+      lines = who %>% str_split("\\n") 
     ) %>% 
     unnest(lines) %>% 
     mutate(
@@ -28,11 +28,12 @@ make_rainbow <- function(a) {
   
   # Find the line with the max number of characters
   max_char <- 
-    a_lines %>% 
+    whose_line %>% 
     filter(n_char == max(n_char)) %>% 
     pull(lines) %>% 
     first()
   
+  # Cut into roughly equal buckets
   max_assigned <- 
     cut(seq(nchar(max_char)), length(rainbow_colors),
         include.lowest = TRUE,
@@ -40,7 +41,8 @@ make_rainbow <- function(a) {
     as.numeric() %>% 
     round() 
   
-  full_dict <- 
+  # Assign a color for every possible character index based on the longest line
+  dict <- 
     tibble(num = max_assigned) %>% 
     left_join(rainbow_dict) %>% 
     mutate(
@@ -50,7 +52,7 @@ make_rainbow <- function(a) {
     )
   
   tbl <- 
-    a_lines %>% 
+    whose_line %>% 
     select(lines) %>% 
     mutate(line_id = row_number()) %>% 
     rowwise() %>% 
@@ -61,23 +63,23 @@ make_rainbow <- function(a) {
     unnest(split_chars) %>% 
     group_by(line_id) %>% 
     mutate(
-      num = row_number()
+      rn = row_number()
     ) %>% 
-    left_join(full_dict, by = c("num" = "rn")) %>% 
+    left_join(dict, by = "rn") %>% 
     select(-lines) %>% 
     rowwise() %>% 
     mutate(
-      style = crayon::make_style(color) %>% list(),
-      out = style(split_chars)
+      # Save the function in a list because we can't store a function in a col
+      color_fun = crayon::make_style(color) %>% list(),  
+      styled = color_fun(split_chars)
     ) %>% 
     ungroup() %>% 
     group_by(line_id) %>% 
     mutate(
-      res = ifelse(num == max(num),
-                   out %>% paste("\n", sep = ""),
-                   out)
-    ) %>% 
-    select(-style) 
+      res = ifelse(rn == max(rn),
+                   styled %>% paste("\n", sep = ""),
+                   styled)
+    ) 
   
   tbl$res %>% 
     str_c(collapse = "") %>% cat()
@@ -86,4 +88,6 @@ make_rainbow <- function(a) {
 
 
 make_rainbow("yoda")
+make_rainbow("rabbit")
+make_rainbow("rms")
 
