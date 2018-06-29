@@ -117,13 +117,13 @@ say <- function(what="Hello world!", by="cat",
     stop("what has to be of length 1", call. = FALSE)
   }
   
-  if (!is.null(what_color) & !is.character(what_color)) {
-    stop("what_color must be of type character",
+  if (!is.null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
+    stop("what_color must be of type character or crayon",
          call. = FALSE)
   }
 
-  if (!is.null(by_color) & !is.character(by_color)) {
-    stop("by_color must be of type character",
+  if (!is.null(by_color) & !(inherits(by_color, c("crayon", "character")))) {
+    stop("by_color must be of type character or crayon",
          call. = FALSE)
   }
 
@@ -163,14 +163,18 @@ say <- function(what="Hello world!", by="cat",
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
   
-  if (!is.null(what_color)) {
+  if (!is.null(what_color) & is.character(what_color)) {
     what_color <- crayon::make_style(what_color)
+  } else if (!is.null(what_color) & is.function(what_color)) {
+    what_color <- what_color
   } else {
     what_color <- function(x) x
   }
   
-  if (!is.null(by_color)) {
+  if (!is.null(by_color) & is.character(by_color)) {
     by_color <- crayon::make_style(by_color)
+  } else if (!is.null(by_color) & is.function(by_color)) {
+    by_color <- by_color
   } else {
     by_color <- function(x) x
   }

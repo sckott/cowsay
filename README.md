@@ -127,7 +127,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-28 22:30:02 
+#> 2018-06-28 22:53:09 
 #>  --------------
 #>     \
 #>       \
@@ -208,6 +208,39 @@ say("I love hooo you are!", "owl",
 #>         \___/_/       [ab] 
 #>           | |
 ```
+
+String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
+
+
+```r
+say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic)
+#> 
+#> 
+#>  ----- 
+#>  Richard Stallman's beard makes ads for Gillette and Braun appear. 
+#>  ------ 
+#>     \   
+#>      \
+#>                     @@@@@@ @
+#>                   @@@@     @@
+#>                  @@@@ =   =  @@ 
+#>                 @@@ @ _   _   @@ 
+#>                  @@@ @(0)|(0)  @@ 
+#>                 @@@@   ~ | ~   @@
+#>                 @@@ @  (o1o)    @@
+#>                @@@    #######    @
+#>                @@@   ##{+++}##   @@
+#>               @@@@@ ## ##### ## @@@@
+#>               @@@@@#############@@@@
+#>              @@@@@@@###########@@@@@@
+#>             @@@@@@@#############@@@@@
+#>             @@@@@@@### ## ### ###@@@@
+#>              @ @  @              @  @
+#>                @                    @
+```
+
 
 ### Vary type of output, default calls message()
 
@@ -423,11 +456,12 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Perhaps one is the real forge and the other is a forgery? Or a forge-R-y? I'll get my coat...
-#>  Barry Rowlingson
-#>  on the question whether http://www.RForge.net/ or http://R-Forge.R-project.org/ is the official forge server
-#>  R-help
-#>  April 2007 
+#> Uwe Ligges: Please stop sending unsensible bug reports! Those have to be handled manually in the bug repository!
+#> Barry Rowlingson: Really? They seem to be being handled automatically and frighteningly well by the Uwe-bot at the moment. Congratulations, you've passed the Turing Test.
+#>  Uwe Ligges and Barry Rowlingson
+#>  after several nonsensical mails to R-bugs
+#>  R-devel
+#>  July 2004 
 #>  --------------
 #>     \
 #>       \
@@ -672,11 +706,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Soham: How to compute the p-value of a statistic generally?
-#> Berton Gunter: runif(1)
-#>  Soham and Berton Gunter
+#> Most optimization problems have more than one answer, and the "wrong" ones often seem to be easier to find.
+#>  John C. Nash
+#>  about nonlinear optimization problems
 #>  R-help
-#>  May 2010 
+#>  April 2013 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -705,11 +739,12 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> The wiki spamming is a serious problem, [...]. What does a logfile with IPs help? The spammers are strangers selling viagra. I don't want to find them :-)
-#>  Detlef Steuer
-#>  in a discussion on R wikis
-#>  R-help
-#>  January 2006 
+#> Excellent, Berwin!
+#> Specifically the part about why the bug never really triggers wrong behavior. Your mail should be saved in 'The Annals of R' ...
+#>  Martin Maechler
+#>  after Berwin A Turlach reported a buglet in 'spline_eval'
+#>  R-devel
+#>  July 2005 
 #>  ------ 
 #>     \   
 #>      \  

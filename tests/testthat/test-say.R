@@ -17,7 +17,13 @@ test_that("say types works as expected", {
   
   expect_error(
     say(by_color = 123),
-    "color must be of type character"
+    "by_color must be of type character or crayon"
+  )
+  
+  expect_message(
+    say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic)
   )
   
   blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"
