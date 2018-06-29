@@ -25,12 +25,12 @@ chicken_lines <-
     n_char = nchar(lines)
   )
 
-chicken_lines %>% 
-  filter(n_char == max(n_char)) %>% 
-  mutate(
-    splits = split(lines,
-                   rainbow_colors) %>% list()
-  ) 
+# chicken_lines %>% 
+#   filter(n_char == max(n_char)) %>% 
+#   mutate(
+#     splits = split(lines,
+#                    rainbow_colors) %>% list()
+#   ) 
   
 max_char <- 
   chicken_lines %>% 
@@ -57,12 +57,57 @@ dict <-
       str_split("") %>% .[[1]]
   )
 
-foo <- dict %>% 
+rbow <- dict %>% 
   rowwise() %>% 
   mutate(
     style = crayon::make_style(color) %>% list(),
     out = style(char)
   )
 
-foo$out %>% str_c(collapse = "") %>% cat()
+rbow$out %>% str_c(collapse = "") %>% cat()
+
+
+
+
+  
+
+one <- 
+  chicken_lines %>% 
+  select(lines) %>% 
+  mutate(line_id = row_number()) %>% 
+  rowwise() %>% 
+  mutate(
+    num = seq(nchar(lines)) %>% list(),
+    split_chars = lines %>% str_split("")
+  ) 
+
+one_chars <- 
+  one %>% 
+  unnest(split_chars)
+
+one_num <- 
+  one %>% 
+  unnest(num) %>%
+  filter(num > 0) %>%
+  left_join(dict) %>% 
+  select(-char, -lines)
+
+two <- one_num %>% 
+  left_join(one_chars, by = "line_id") %>% 
+  drop_na() 
+
+three <- 
+  two %>% 
+  rowwise() %>% 
+  mutate(
+    style = crayon::make_style(color) %>% list(),
+    out = style(split_chars)
+  ) %>% 
+  select(-style) %>% 
+  nest(-lines) 
+
+
+three$data[[4]]$out %>% str_c(sep = "") %>% cat()
+
+three
 
