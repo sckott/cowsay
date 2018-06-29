@@ -118,12 +118,12 @@ say <- function(what="Hello world!", by="cat",
   }
   
   if (!is.null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
-    stop("what_color must be of type character or crayon",
+    stop("what_color must be of class character or crayon",
          call. = FALSE)
   }
 
   if (!is.null(by_color) & !(inherits(by_color, c("crayon", "character")))) {
-    stop("by_color must be of type character or crayon",
+    stop("by_color must be of class character or crayon",
          call. = FALSE)
   }
 

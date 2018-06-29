@@ -17,7 +17,12 @@ test_that("say types works as expected", {
   
   expect_error(
     say(by_color = 123),
-    "by_color must be of type character or crayon"
+    "by_color must be of class character or crayon"
+  )
+  
+  expect_error(
+    say(what_color = mean),
+    "what_color must be of class character or crayon"
   )
   
   expect_message(

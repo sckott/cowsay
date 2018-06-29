@@ -22,24 +22,28 @@
 endless_horse <- function(what="Hello world!", endless = TRUE, wait = 0.5, 
                           what_color = NULL, horse_color = NULL) {
   
-  if (!is.null(what_color) & !is.character(what_color)) {
-    stop("what_color must be of type character", 
+  if (!is.null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
+    stop("what_color must be of class character or crayon",
          call. = FALSE)
   }
   
-  if (!is.null(horse_color) & !is.character(horse_color)) {
-    stop("horse_color must be of type character", 
+  if (!is.null(horse_color) & !(inherits(horse_color, c("crayon", "character")))) {
+    stop("by_color must be of class character or crayon",
          call. = FALSE)
   }
   
-  if (!is.null(what_color)) {
+  if (!is.null(what_color) & is.character(what_color)) {
     what_color <- crayon::make_style(what_color)
+  } else if (!is.null(what_color) & is.function(what_color)) {
+    what_color <- what_color
   } else {
     what_color <- function(x) x
   }
   
-  if (!is.null(horse_color)) {
+  if (!is.null(horse_color) & is.character(horse_color)) {
     horse_color <- crayon::make_style(horse_color)
+  } else if (!is.null(horse_color) & is.function(horse_color)) {
+    horse_color <- horse_color
   } else {
     horse_color <- function(x) x
   }
