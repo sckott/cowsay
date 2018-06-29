@@ -1,3 +1,5 @@
+library(crayon)
+
 context("say")
 
 test_that("say types works as expected", {
@@ -25,10 +27,10 @@ test_that("say types works as expected", {
     "what_color must be of class character or crayon"
   )
   
-  expect_message(
-    say(what = "rms", by = "rms", 
+  expect_silent(
+    suppressMessages(say(what = "rms", by = "rms", 
         what_color = yellow$bgMagenta$bold,
-        by_color = cyan$italic)
+        by_color = cyan$italic))
   )
   
   # blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"
