@@ -118,17 +118,27 @@ three <-
   rowwise() %>% 
   mutate(
     style = crayon::make_style(color) %>% list(),
-    out = style(split_chars),
-    res = out %>% str_c(collapse = "")
+    out = style(split_chars)
   ) %>% 
+  ungroup() %>% 
+  group_by(line_id) %>% 
+  mutate(
+    res = ifelse(num == max(num),
+                 out %>% paste("\n", sep = ""),
+                 out)
+  ) %>% 
+  # filter(num == max(num)) %>% 
   select(-style) 
 
-three$res %>% str_c(collapse = "") %>%  cat()
+unique(three$res) %>% 
+  # distinct(res) %>% 
+  # str_c("\n") %>% 
+  str_c(collapse = "") %>%  cat()
 
 
 four <-
-  two %>% 
-  nest(-lines) 
+  three %>% 
+  nest(-line_id) 
   three$data %>% 
   pluck(res)
 
