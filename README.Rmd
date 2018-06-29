@@ -128,11 +128,30 @@ say("ain't that some shit", "chicken")
 Add some color: 
 
 ```{r}
-say("boo!", "ghost", color = "cyan")
+say("boo!", "ghost", 
+    what_color = "cyan", by_color = "saddlebrown")
 ```
 
 ```{r}
-say("I love hooo you are!", "owl")
+say("I love hooo you are!", "owl", 
+    what_color = rgb(0, 1, 1), by_color = "#FF0000")
+```
+
+String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
+
+```{r}
+say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic)
+```
+
+This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+
+```{r}
+say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
+    by = "trilobite", 
+    what_color = bgBlue$cyan$italic,
+    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 ```
 
 ### Vary type of output, default calls message()

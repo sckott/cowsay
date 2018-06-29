@@ -39,6 +39,7 @@ devtools::install_github("sckott/cowsay")
 
 ```{r}
 library("cowsay")
+library("crayon")
 ```
 
 ## The animals
@@ -103,3 +104,39 @@ String
 ```{r}
 say("hello world", by = "cow", type = "string")
 ```
+
+
+## Add color
+
+We rely on the [`crayon`](https://github.com/r-lib/crayon) package for color. The arguments you supply to `what_color` and `by_color` can be strings -- either the color name or a hex value -- or a [function of class `crayon`](https://github.com/r-lib/crayon#styles).
+
+
+```{r}
+say(what = "holygrail",
+    by = "rabbit",
+    what_color = "#FF4500",
+    by_color = "red")
+```
+
+
+`colors()` are all supported as are any `rgb` values that evaluate to a string.
+
+```{r, warning=FALSE}
+say(what = "arresteddevelopment", 
+    by = sample(names(animals), 1),
+    what_color = rgb(.1, .2, .3),
+    by_color = sample(colors(), 1),
+    type = "warning")
+```
+
+
+The main advantage of using `crayon` functions instead of color strings is the ability to combine styles together.
+
+```{r}
+say(what = "simpsons",
+    by = "fish",
+    what_color = bgBlue$white$italic,
+    by_color = bold$green)
+```
+
+

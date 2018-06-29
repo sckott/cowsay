@@ -127,7 +127,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-27 09:25:24 
+#> 2018-06-29 11:19:12 
 #>  --------------
 #>     \
 #>       \
@@ -142,7 +142,6 @@ say('time')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -168,14 +167,14 @@ say("ain't that some shit", "chicken")
 #>             _| _|
 #>             /` /` [nosig]
 #> 
-#> 
 ```
 
 Add some color: 
 
 
 ```r
-say("boo!", "ghost", color = "cyan")
+say("boo!", "ghost", 
+    what_color = "cyan", by_color = "saddlebrown")
 #> 
 #> 
 #>  ----- 
@@ -193,7 +192,8 @@ say("boo!", "ghost", color = "cyan")
 
 
 ```r
-say("I love hooo you are!", "owl")
+say("I love hooo you are!", "owl", 
+    what_color = rgb(0, 1, 1), by_color = "#FF0000")
 #> 
 #>  ----- 
 #> I love hooo you are! 
@@ -207,6 +207,65 @@ say("I love hooo you are!", "owl")
 #>        |    \ \
 #>         \___/_/       [ab] 
 #>           | |
+```
+
+String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
+
+
+```r
+say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic)
+#> 
+#> 
+#>  ----- 
+#>  Richard Stallman's anti-virus programs cures HIV. 
+#>  ------ 
+#>     \   
+#>      \
+#>                     @@@@@@ @
+#>                   @@@@     @@
+#>                  @@@@ =   =  @@ 
+#>                 @@@ @ _   _   @@ 
+#>                  @@@ @(0)|(0)  @@ 
+#>                 @@@@   ~ | ~   @@
+#>                 @@@ @  (o1o)    @@
+#>                @@@    #######    @
+#>                @@@   ##{+++}##   @@
+#>               @@@@@ ## ##### ## @@@@
+#>               @@@@@#############@@@@
+#>              @@@@@@@###########@@@@@@
+#>             @@@@@@@#############@@@@@
+#>             @@@@@@@### ## ### ###@@@@
+#>              @ @  @              @  @
+#>                @                    @
+```
+
+This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+
+
+```r
+say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
+    by = "trilobite", 
+    what_color = bgBlue$cyan$italic,
+    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+#> 
+#>   
+#>  -------------- 
+#> hello there world 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>           _____
+#>        .'` ,-. `'.
+#>       /   ([ ])   \
+#>      /.-""`(`)`""-.\
+#>       <'```(.)```'>
+#>       <'```(.)```'>
+#>        <'``(.)``'>
+#>    sk   <``\_/``>
+#>          `'---'`
 #> 
 ```
 
@@ -232,7 +291,6 @@ say("hell no!")
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -331,7 +389,6 @@ say("it's caturday", "longcat")
 #>     U "  U
 #>         [BoingBoing]
 #> 
-#> 
 ```
 
 ### Grumpy cat
@@ -350,7 +407,6 @@ say('NO!', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
-#> 
 ```
 
 
@@ -366,7 +422,6 @@ say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
 #> 
 ```
 
@@ -384,7 +439,6 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
 #> 
-#> 
 ```
 
 ### Bunny Holding a sign
@@ -400,7 +454,6 @@ say(by='signbunny')
 #> (•ㅅ•) ||
 #> /   づ
 #>           [nosig]
-#> 
 #> 
 ```
 
@@ -419,7 +472,6 @@ say(by='fish')
 #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 #>       Kiyoko Gotanda
 #> 
-#> 
 ```
 
 ### R fortunes
@@ -431,10 +483,11 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> My institution has a particularly diabolical policy on intellectual property, especially on software.
-#>  Ross Ihaka
+#> Just now I had an apparently insurmountable problem that's been bugging me for days, but phrasing my question in a form suitable for the R-help list enabled me to solve my own problem in two minutes flat.
+#> Thanks everyone.
+#>  Robin Hankin
 #>  R-help
-#>  August 2003 
+#>  March 2005 
 #>  --------------
 #>     \
 #>       \
@@ -449,7 +502,6 @@ say('fortune','cat')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -482,7 +534,6 @@ say(fortune=100)
 #>       jgs  //_// ___/
 #>                \_)
 #> 
-#> 
 ```
 
 
@@ -492,11 +543,11 @@ say(fortune='whatever')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-#> Joshua Ulrich: That's the magic_pony function.
-#>  Justin and Joshua Ulrich
-#>  stackoverflow.com
-#>  June 2013 
+#> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+#> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+#>  Tom Backer Johnsen and Barry Rowlingson
+#>  R-help
+#>  February 2006 
 #>  --------------
 #>     \
 #>       \
@@ -511,7 +562,6 @@ say(fortune='whatever')
 #>            \| | |_|/\
 #>       jgs  //_// ___/
 #>                \_)
-#> 
 #> 
 ```
 
@@ -537,7 +587,6 @@ say("Hi there :)", by='trilobite')
 #>        <'``(.)``'>
 #>    sk   <``\_/``>
 #>          `'---'`
-#> 
 #> 
 ```
 
@@ -580,7 +629,6 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 #>      :--``             )/
 #>   '
 #> 
-#> 
 ```
 
 ### Buffalo
@@ -610,7 +658,6 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 #>                        \( \(     |/   |/
 #>           mic & dwb  /_(/_(    /_(  /_(
 #> 
-#> 
 ```
 
 ### Clippy
@@ -639,7 +686,6 @@ say(fortune=59, by="clippy")
 #>   || ||
 #>   |\_/|
 #>   \___/ GB
-#> 
 ```
 
 ### Yoda
@@ -672,7 +718,6 @@ say("hi, i'm a bat", by="bat")
 #>   '._    .'     '.''.    .''.'     '.    _.'
 #>      '-./            \  /           \.-'
 #>                       ''mrf
-#> 
 ```
 
 See also `bat2`
@@ -687,11 +732,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Finally, as author of the code used to put CG in optim, I'll advise against its use. One of my least successful pieces of code. Rcgmin is better, but you really do need analytic derivatives to make it sing. For 5 parameters, use NM, or better the nmk from dfoptim package.
-#>  John C. Nash
-#>  in a discussion about optimization of a multinomial log-likelihood
+#> Igor Sosa Mayor: The problem is that it gives the result that I want.
+#> Sarah Goslee: That's a new sort of problem.
+#>  Igor Sosa Mayor and Sarah Goslee
 #>  R-help
-#>  May 2012 
+#>  March 2012 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -709,7 +754,6 @@ say("fortune", by = "monkey")
 #>                /   /    \  /
 #>           ,--`,--'\/\    /
 #>           '-- "--'  '--'
-#> 
 ```
 
 ### Daemon!
@@ -721,11 +765,12 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> I think the amount of people on this list who understand your question is roughly zero.
-#>  Uwe Ligges
-#>  in response to a non-reproducible problem for which additionally subject and body did not match well
+#> So it ***do not refuse*** to read the data. I do not expect some dwarf climbs out from your computer and says he will not read your data. Or is he?
+#> ?read.table gives you more details about how to read some data.
+#>  Petr Pikal
+#>  after a post that said read.table() refuses to read unbalanced data
 #>  R-help
-#>  January 2012 
+#>  October 2004 
 #>  ------ 
 #>     \   
 #>      \  
@@ -749,7 +794,6 @@ say("fortune", by = "daemon")
 #>         ______( (_  / \______
 #>       ,'  ,-----'   |        \
 #>       `--{__________)        \/ [nosig]
-#> 
 ```
 
 ### Egret
@@ -774,7 +818,6 @@ say("je ne regrette rien", by = "egret")
 #>            ||\  \`|,
 #>  jgs      _|| `=`-'
 #>          ~~`~`
-#> 
 ```
 
 
@@ -837,7 +880,6 @@ library("magrittr")
 #>         \
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
-#> 
 #> 
 ```
 

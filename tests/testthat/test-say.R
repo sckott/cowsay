@@ -1,3 +1,5 @@
+library(crayon)
+
 context("say")
 
 test_that("say types works as expected", {
@@ -11,9 +13,32 @@ test_that("say types works as expected", {
   expect_is(say(type = "string"), "character")
   
   expect_equal(
-    length(say("foo", color = "cyan")) + 1,
-    length(say("foo", type = "warning"))
+    length(suppressMessages(say("foo", by_color = "cyan"))) + 1,
+    length(suppressWarnings(say("foo", type = "warning")))
   )
+  
+  expect_error(
+    say(by_color = 123),
+    "by_color must be of class character or crayon"
+  )
+  
+  expect_error(
+    say(what_color = mean),
+    "what_color must be of class character or crayon"
+  )
+  
+  expect_silent(
+    suppressMessages(say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic))
+  )
+  
+  # blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"
+  # 
+  # expect_equal(
+  #   blue_poop,
+  #   suppressMessages(say("salut", "poop", by_color = "cyan", what_color = "pink", type = "string"))
+  # )
 })
 
 test_that("say by works as expected", {

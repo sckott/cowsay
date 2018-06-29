@@ -31,10 +31,11 @@ Imports:
     fortunes,
     rmsfact
 Suggests:
+    curl,
     roxygen2 (>= 6.0.1),
     jsonlite,
     testthat,
     knitr,
     rmarkdown
 Enhances: magrittr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000

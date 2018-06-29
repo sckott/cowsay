@@ -4,8 +4,8 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message", color = NULL,
-  length = 18, fortune = NULL, ...)
+say(what = "Hello world!", by = "cat", type = "message",
+  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, ...)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -24,8 +24,15 @@ no other animal that starts with "g".}
 \item{type}{(character) One of message (default), warning, or string 
 (returns string)}
 
-\item{color}{(character) If \code{type} is "message", a 
-\href{https://github.com/r-lib/crayon}{\code{crayon}}-suported text color.}
+\item{what_color}{(character or crayon function) A 
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color 
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.}
+
+\item{by_color}{(character or crayon function) A 
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{who}.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
@@ -71,9 +78,9 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
-say("meow", "cat", color = "blue")
+say("meow", "cat", what_color = "blue")
 say('time')
-say('time', "poop", color = "bold")
+say('time', "poop", by_color = "cyan", what_color = "pink")
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")
 say("icanhazpdf?", "cat")
