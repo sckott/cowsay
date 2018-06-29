@@ -127,7 +127,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-28 22:53:09 
+#> 2018-06-29 11:19:12 
 #>  --------------
 #>     \
 #>       \
@@ -219,7 +219,7 @@ say(what = "rms", by = "rms",
 #> 
 #> 
 #>  ----- 
-#>  Richard Stallman's beard makes ads for Gillette and Braun appear. 
+#>  Richard Stallman's anti-virus programs cures HIV. 
 #>  ------ 
 #>     \   
 #>      \
@@ -241,6 +241,33 @@ say(what = "rms", by = "rms",
 #>                @                    @
 ```
 
+This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+
+
+```r
+say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
+    by = "trilobite", 
+    what_color = bgBlue$cyan$italic,
+    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+#> 
+#>   
+#>  -------------- 
+#> hello there world 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>           _____
+#>        .'` ,-. `'.
+#>       /   ([ ])   \
+#>      /.-""`(`)`""-.\
+#>       <'```(.)```'>
+#>       <'```(.)```'>
+#>        <'``(.)``'>
+#>    sk   <``\_/``>
+#>          `'---'`
+#> 
+```
 
 ### Vary type of output, default calls message()
 
@@ -456,12 +483,11 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Uwe Ligges: Please stop sending unsensible bug reports! Those have to be handled manually in the bug repository!
-#> Barry Rowlingson: Really? They seem to be being handled automatically and frighteningly well by the Uwe-bot at the moment. Congratulations, you've passed the Turing Test.
-#>  Uwe Ligges and Barry Rowlingson
-#>  after several nonsensical mails to R-bugs
-#>  R-devel
-#>  July 2004 
+#> Just now I had an apparently insurmountable problem that's been bugging me for days, but phrasing my question in a form suitable for the R-help list enabled me to solve my own problem in two minutes flat.
+#> Thanks everyone.
+#>  Robin Hankin
+#>  R-help
+#>  March 2005 
 #>  --------------
 #>     \
 #>       \
@@ -706,11 +732,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Most optimization problems have more than one answer, and the "wrong" ones often seem to be easier to find.
-#>  John C. Nash
-#>  about nonlinear optimization problems
+#> Igor Sosa Mayor: The problem is that it gives the result that I want.
+#> Sarah Goslee: That's a new sort of problem.
+#>  Igor Sosa Mayor and Sarah Goslee
 #>  R-help
-#>  April 2013 
+#>  March 2012 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -739,12 +765,12 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> Excellent, Berwin!
-#> Specifically the part about why the bug never really triggers wrong behavior. Your mail should be saved in 'The Annals of R' ...
-#>  Martin Maechler
-#>  after Berwin A Turlach reported a buglet in 'spline_eval'
-#>  R-devel
-#>  July 2005 
+#> So it ***do not refuse*** to read the data. I do not expect some dwarf climbs out from your computer and says he will not read your data. Or is he?
+#> ?read.table gives you more details about how to read some data.
+#>  Petr Pikal
+#>  after a post that said read.table() refuses to read unbalanced data
+#>  R-help
+#>  October 2004 
 #>  ------ 
 #>     \   
 #>      \  

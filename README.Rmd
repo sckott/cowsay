@@ -145,6 +145,14 @@ say(what = "rms", by = "rms",
         by_color = cyan$italic)
 ```
 
+This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+
+```{r}
+say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
+    by = "trilobite", 
+    what_color = bgBlue$cyan$italic,
+    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+```
 
 ### Vary type of output, default calls message()
 
