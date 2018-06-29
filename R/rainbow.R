@@ -44,7 +44,7 @@ make_rainbow <- function(who) {
   # Assign a color for every possible character index based on the longest line
   dict <- 
     tibble(num = max_assigned) %>% 
-    left_join(rainbow_dict) %>% 
+    left_join(rainbow_dict, by = "num") %>% 
     mutate(
       char = max_char %>% 
         str_split("") %>% .[[1]],
@@ -65,6 +65,7 @@ make_rainbow <- function(who) {
     mutate(
       rn = row_number()
     ) %>% 
+    # Assign colors by char position
     left_join(dict, by = "rn") %>% 
     select(-lines) %>% 
     rowwise() %>% 
@@ -75,6 +76,7 @@ make_rainbow <- function(who) {
     ) %>% 
     ungroup() %>% 
     group_by(line_id) %>% 
+    # Re-add a newline at the end of the last character of every line
     mutate(
       res = ifelse(rn == max(rn),
                    styled %>% paste("\n", sep = ""),
@@ -83,7 +85,6 @@ make_rainbow <- function(who) {
   
   tbl$res %>% 
     str_c(collapse = "") %>% cat()
-
 }
 
 
