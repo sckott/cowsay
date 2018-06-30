@@ -28,10 +28,13 @@ LazyData: yes
 VignetteBuilder: knitr
 Imports:
     crayon,
+    dplyr,
     fortunes,
-    rmsfact
+    purrr,
+    rmsfact,
+    tibble,
+    tidyr
 Suggests:
-    curl,
     roxygen2 (>= 6.0.1),
     jsonlite,
     testthat,

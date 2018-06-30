@@ -33,6 +33,12 @@ test_that("say types works as expected", {
         by_color = cyan$italic))
   )
   
+  expect_silent(
+    suppressMessages(say(say = "I'm a rare Irish buffalo", 
+        by = "buffalo", what_color = "pink", 
+        by_color = c("green", "white", "orange")))
+  )
+  
   # blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"
   # 
   # expect_equal(

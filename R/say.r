@@ -128,6 +128,11 @@ say <- function(what="Hello world!", by="cat",
     stop("by_color must be of class character or crayon",
          call. = FALSE)
   }
+  
+  if (length(by_color) > 1 & !all(is.character(by_color))) {
+    stop("If by_color is > length 1, all colors must be of class character",
+         call. = FALSE)
+  }
 
   if (what == "catfact") {
     check4jsonlite()
@@ -165,6 +170,11 @@ say <- function(what="Hello world!", by="cat",
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
   
+  what_pos_start <- 
+    regexpr('%s', who)[1] - 1
+  
+  what_pos_end <- what_pos_start + 3
+  
   if (!is.null(what_color) & is.character(what_color)) {
     what_color <- crayon::make_style(what_color)
   } else if (!is.null(what_color) & is.function(what_color)) {
@@ -173,22 +183,24 @@ say <- function(what="Hello world!", by="cat",
     what_color <- function(x) x
   }
   
-  if (!is.null(by_color) & is.character(by_color)) {
-    by_color <- crayon::make_style(by_color)
-  } else if (!is.null(by_color) & is.function(by_color)) {
-    by_color <- by_color
-  } else {
-    by_color <- function(x) x
+  if (length(by_color) == 1) {
+    if (!is.null(by_color) & is.character(by_color)) {
+      by_color <- crayon::make_style(by_color)
+    } else if (!is.null(by_color) & is.function(by_color)) {
+      by_color <- by_color
+    } else {
+      by_color <- function(x) x
+    }
+    out <- paste0(by_color(substr(who, 1, what_pos_start)),
+                  what_color(what),
+                  by_color(substr(who, what_pos_end, nchar(who))))
+  } else if (length(by_color) > 1) {
+    out <- paste0(multi_color(substr(who, 1, what_pos_start),
+                              colors = by_color),
+                  what_color(what),
+                  multi_color(substr(who, what_pos_end, nchar(who)),
+                              colors = by_color))
   }
-  
-  what_pos_start <- 
-    regexpr('%s', who)[1] - 1
-    
-  what_pos_end <- what_pos_start + 3
-  
-  out <- paste0(by_color(substr(who, 1, what_pos_start)),
-                what_color(what),
-                by_color(substr(who, what_pos_end, nchar(who))))
   
   switch(type,
          message = message(out),
