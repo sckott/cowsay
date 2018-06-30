@@ -34,9 +34,17 @@ test_that("say types works as expected", {
   )
   
   expect_silent(
-    suppressMessages(say(say = "I'm a rare Irish buffalo", 
+    suppressMessages(say(what = "I'm a rare Irish buffalo", 
         by = "buffalo", what_color = "pink", 
         by_color = c("green", "white", "orange")))
+  )
+  
+  expect_silent(
+    suppressMessages(
+      say("I'm not dying, you're dying", "yoda", 
+          what_color = green,
+          by_color = colors())
+    )
   )
   
   # blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"

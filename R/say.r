@@ -183,7 +183,7 @@ say <- function(what="Hello world!", by="cat",
     what_color <- function(x) x
   }
   
-  if (length(by_color) == 1) {
+  if (length(by_color) < 2) {
     if (!is.null(by_color) & is.character(by_color)) {
       by_color <- crayon::make_style(by_color)
     } else if (!is.null(by_color) & is.function(by_color)) {

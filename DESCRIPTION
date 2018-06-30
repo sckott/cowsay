@@ -32,13 +32,14 @@ Imports:
     fortunes,
     purrr,
     rmsfact,
+    stringr,
     tibble,
     tidyr
 Suggests:
-    roxygen2 (>= 6.0.1),
     jsonlite,
-    testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    roxygen2 (>= 6.0.1),
+    testthat
 Enhances: magrittr
 RoxygenNote: 6.0.1.9000
