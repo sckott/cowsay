@@ -1,6 +1,43 @@
+#' Multi-color text
+#'
+#' @export
+#'
+#' @param txt (character) Some text to color.
+#' @param colors (character) A vector of colors, defaulting to 
+#' c("red", "orange", "yellow", "green", "blue", "purple")
+#' @param as_string (logical) If TRUE, the response is a plain, 
+#' uncolored string with ascii color tags attached. 
+#' If FALSE, the string is passed to \code{cat}
+#' and colored text is returned.
+#' @param ... Further args.
+#' 
+#' @details This function evenly (ish) divides up your string into 
+#' these colors in the order they appear in \code{colors}.
+#' 
+#' Any colors in \code{colors()} or hex values (see \code{?rgb})
+#' are fair game.
+#' 
+#' @return A string if \code{as_string} is TRUE, or colored 
+#' text if FALSE.
+#'
+#' @examples
+#' multi_color("ahoy")
+#' 
+#' animals[["buffalo"]] %>% 
+#'   multi_color("green", "white", "orange")
+#' 
+#' rms %>% 
+#'   multi_color(sample(colors(), 10))
 
-multi_color <- function(who = NULL, colors = c("red", "orange", "yellow",
-                                         "green", "blue", "purple")) {
+multi_color <- function(txt = NULL, 
+                        colors = c("red", "orange", "yellow",
+                                  "green", "blue", "purple"), 
+                        as_string = FALSE,
+                        ...) {
+  
+  if (!any(is.character(colors))) {
+    stop("All multi colors must be of type character.")
+  }
   
   rainbow_dict <- 
     tibble::tibble(
@@ -10,10 +47,10 @@ multi_color <- function(who = NULL, colors = c("red", "orange", "yellow",
   
   whose_line <- 
     tibble::tibble(
-      full = who
+      full = txt
     ) %>% 
     dplyr::mutate(
-      lines = who %>% stringr::str_split("\\n") 
+      lines = txt %>% stringr::str_split("\\n") 
     ) %>% 
     tidyr::unnest(lines) %>% 
     dplyr::mutate(
@@ -80,5 +117,10 @@ multi_color <- function(who = NULL, colors = c("red", "orange", "yellow",
   out <- tbl$res %>% 
     stringr::str_c(collapse = "")
   
-  return(out)
+  if (as_string == TRUE) {
+    return(out)
+  } else {
+    out %>% cat()
+  }
 }
+

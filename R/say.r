@@ -196,10 +196,12 @@ say <- function(what="Hello world!", by="cat",
                   by_color(substr(who, what_pos_end, nchar(who))))
   } else if (length(by_color) > 1) {
     out <- paste0(multi_color(substr(who, 1, what_pos_start),
-                              colors = by_color),
+                              colors = by_color,
+                              as_string = TRUE),
                   what_color(what),
                   multi_color(substr(who, what_pos_end, nchar(who)),
-                              colors = by_color))
+                              colors = by_color,
+                              as_string = TRUE))
   }
   
   switch(type,

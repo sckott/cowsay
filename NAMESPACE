@@ -2,6 +2,8 @@
 
 export(animals)
 export(endless_horse)
+export(multi_color)
 export(say)
 importFrom(fortunes,fortune)
+importFrom(magrittr,"%>%")
 importFrom(rmsfact,rmsfact)
