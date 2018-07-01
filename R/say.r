@@ -129,9 +129,18 @@ say <- function(what="Hello world!", by="cat",
          call. = FALSE)
   }
   
-  if (length(by_color) > 1 & !all(is.character(by_color))) {
-    stop("If by_color is > length 1, all colors must be of class character",
-         call. = FALSE)
+  if (length(what_color) | length(by_color)) {
+    if (!requireNamespace("multicolor", quietly = TRUE)) {
+      stop("The multicolor package is required for multiple colors", call. = FALSE)
+    } else {
+      invisible(TRUE)
+    }
+    
+    if ((length(what_color) > 1 & !all(is.character(what_color)) |
+        (length(by_color) > 1 & !all(is.character(by_color))))) {
+          stop("If color arguments have > length 1, all colors must be of class character",
+               call. = FALSE)
+        }
   }
 
   if (what == "catfact") {
@@ -175,34 +184,67 @@ say <- function(what="Hello world!", by="cat",
   
   what_pos_end <- what_pos_start + 3
   
-  if (!is.null(what_color) & is.character(what_color)) {
-    what_color <- crayon::make_style(what_color)
-  } else if (!is.null(what_color) & is.function(what_color)) {
-    what_color <- what_color
-  } else {
-    what_color <- function(x) x
+  color_text <- function(txt, c) {
+    if (is.null(c)) {
+      out <- txt
+    } else if (!is.null(c) & is.function(c)) {
+      out <- c(txt)
+    } else if (!is.null(c) & is.character(c)) {
+      if (length(c) <= 1) {
+        c <- crayon::make_style(c)
+        out <- c(txt)
+      } else if (length(c) >= 1) {
+        out <- multicolor::multi_color(txt, c,
+                                       type = "string")
+      }
+    }
+    return(out)
   }
   
-  if (length(by_color) < 2) {
-    if (!is.null(by_color) & is.character(by_color)) {
-      by_color <- crayon::make_style(by_color)
-    } else if (!is.null(by_color) & is.function(by_color)) {
-      by_color <- by_color
-    } else {
-      by_color <- function(x) x
-    }
-    out <- paste0(by_color(substr(who, 1, what_pos_start)),
-                  what_color(what),
-                  by_color(substr(who, what_pos_end, nchar(who))))
-  } else if (length(by_color) > 1) {
-    out <- paste0(multi_color(substr(who, 1, what_pos_start),
-                              colors = by_color,
-                              as_string = TRUE),
-                  what_color(what),
-                  multi_color(substr(who, what_pos_end, nchar(who)),
-                              colors = by_color,
-                              as_string = TRUE))
-  }
+  # switch(type,
+  #        message = message(sprintf(who, what)),
+  #        warning = warning(sprintf(who, what)),
+  #        string = sprintf(who, what))
+  
+  # what <- color_text(what, what_color)
+  # who <- color_text(by, by_color)
+  
+  out <- paste0(color_text(substr(who, 1, what_pos_start),
+                           by_color),
+                color_text(what,
+                           what_color),
+                color_text(substr(who, what_pos_end, nchar(who)),
+                           by_color))
+  
+  # 
+  # if (!is.null(what_color) & is.character(what_color)) {
+  #   what_color <- crayon::make_style(what_color)
+  # } else if (!is.null(what_color) & is.function(what_color)) {
+  #   what_color <- what_color
+  # } else {
+  #   what_color <- function(x) x
+  # }
+  # 
+  # if (length(by_color) <= 1) {
+  #   if (!is.null(by_color) & is.character(by_color)) {
+  #     by_color <- crayon::make_style(by_color)
+  #   } else if (!is.null(by_color) & is.function(by_color)) {
+  #     by_color <- by_color
+  #   } else {
+  #     by_color <- function(x) x
+  #   }
+  #   out <- paste0(by_color(substr(who, 1, what_pos_start)),
+  #                 what_color(what),
+  #                 by_color(substr(who, what_pos_end, nchar(who))))
+  # } else if (length(by_color) > 1) {
+  #   out <- paste0(multicolor::multi_color(substr(who, 1, what_pos_start),
+  #                             colors = by_color,
+  #                             as_string = TRUE),
+  #                 what_color(what),
+  #                 multicolor::multi_color(substr(who, what_pos_end, nchar(who)),
+  #                             colors = by_color,
+  #                             as_string = TRUE))
+  # }
   
   switch(type,
          message = message(out),
