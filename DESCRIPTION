@@ -28,6 +28,7 @@ LazyData: yes
 VignetteBuilder: knitr
 Imports: 
     crayon,
+    curl,
     dplyr,
     fortunes,
     purrr,
