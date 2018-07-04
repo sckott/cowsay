@@ -119,25 +119,27 @@ say <- function(what="Hello world!", by="cat",
     stop("what has to be of length 1", call. = FALSE)
   }
   
-  if (!is.null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
+  if (!is.null(what_color) && !(inherits(what_color, c("crayon", "character")))) {
     stop("what_color must be of class character or crayon",
          call. = FALSE)
   }
 
-  if (!is.null(by_color) & !(inherits(by_color, c("crayon", "character")))) {
+  if (!is.null(by_color) && !(inherits(by_color, c("crayon", "character")))) {
     stop("by_color must be of class character or crayon",
          call. = FALSE)
   }
   
-  if (length(what_color) | length(by_color)) {
+  if (length(what_color) > 1 || length(by_color) > 1) {
     if (!requireNamespace("multicolor", quietly = TRUE)) {
       stop("The multicolor package is required for multiple colors", call. = FALSE)
     } else {
       invisible(TRUE)
     }
     
-    if ((length(what_color) > 1 & !all(is.character(what_color)) |
-        (length(by_color) > 1 & !all(is.character(by_color))))) {
+    if (type == "warning") stop("If multiple colors are supplied, type cannot be warning.")
+    
+    if ((!all(is.character(what_color))) ||
+        (!all(is.character(by_color)))) {
           stop("If color arguments have > length 1, all colors must be of class character",
                call. = FALSE)
         }
@@ -187,9 +189,9 @@ say <- function(what="Hello world!", by="cat",
   color_text <- function(txt, c) {
     if (is.null(c)) {
       out <- txt
-    } else if (!is.null(c) & is.function(c)) {
+    } else if (!is.null(c) && is.function(c)) {
       out <- c(txt)
-    } else if (!is.null(c) & is.character(c)) {
+    } else if (!is.null(c) && is.character(c)) {
       if (length(c) <= 1) {
         c <- crayon::make_style(c)
         out <- c(txt)

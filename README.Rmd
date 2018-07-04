@@ -35,7 +35,8 @@ peeps <- c(
   "Guangchuang Yu",
   "Paolo Sonego",
   "Philipp Boersch-Supan",
-  "Andreas Brandmaier"
+  "Andreas Brandmaier",
+  "Amanda Dobbyn"
 )
 ```
 
@@ -128,6 +129,11 @@ say("ain't that some shit", "chicken")
 Add some color: 
 
 ```{r}
+library(multicolor)
+```
+
+
+```{r}
 say("boo!", "ghost", 
     what_color = "cyan", by_color = "saddlebrown")
 ```
@@ -153,6 +159,17 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
     what_color = bgBlue$cyan$italic,
     by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 ```
+
+
+Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
+
+```{r}
+say(what = "I'm a rare Irish buffalo",
+    by = "buffalo", 
+    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+    by_color = c("green", "white", "orange"))
+```
+
 
 ### Vary type of output, default calls message()
 

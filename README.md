@@ -32,8 +32,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
  * Paolo Sonego
  * Philipp Boersch-Supan
  * Andreas Brandmaier
+ * Amanda Dobbyn
 
-That's right, it takes 15 people to make `cowsay` - it's that hard.
+That's right, it takes 16 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -127,7 +128,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-06-29 11:19:12 
+#> 2018-07-03 21:08:37 
 #>  --------------
 #>     \
 #>       \
@@ -170,6 +171,12 @@ say("ain't that some shit", "chicken")
 ```
 
 Add some color: 
+
+
+```r
+library(multicolor)
+```
+
 
 
 ```r
@@ -219,7 +226,7 @@ say(what = "rms", by = "rms",
 #> 
 #> 
 #>  ----- 
-#>  Richard Stallman's anti-virus programs cures HIV. 
+#>  Richard Stallman can determine whether an arbitrary program will terminate. 
 #>  ------ 
 #>     \   
 #>      \
@@ -268,6 +275,39 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
 #>          `'---'`
 #> 
 ```
+
+
+Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
+
+
+```r
+say(what = "I'm a rare Irish buffalo",
+    by = "buffalo", 
+    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+    by_color = c("green", "white", "orange"))
+#>     
+#>  -------------- 
+#> I'm a rare Irish buffalo
+#>  
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>                    _.-````'-,_
+#>          _,.,_ ,-'`           `'-.,_
+#>        /)     (                   '``-.
+#>       ((      ) )                      `\
+#>         \)    (_/                        )\
+#>         |       /)           '    ,'    / \
+#>         `\    ^'            '     (    /  ))
+#>           |      _/\ ,     /    ,,`\   (  "`
+#>           \Y,   |   \  \  | ````| / \_ \
+#>             `)_/      \  \  )    ( >  ( >
+#>                        \( \(     |/   |/
+#>           mic & dwb  /_(/_(    /_(  /_(
+#> 
+```
+
 
 ### Vary type of output, default calls message()
 
@@ -483,11 +523,11 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Just now I had an apparently insurmountable problem that's been bugging me for days, but phrasing my question in a form suitable for the R-help list enabled me to solve my own problem in two minutes flat.
-#> Thanks everyone.
-#>  Robin Hankin
+#> This is a bit like asking how should I tweak my sailboat so I can explore the ocean floor.
+#>  Roger Koenker
+#>  in response to a question about tweaking the quantreg package to handle probit and heckit models
 #>  R-help
-#>  March 2005 
+#>  May 2013 
 #>  --------------
 #>     \
 #>       \
@@ -732,11 +772,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Igor Sosa Mayor: The problem is that it gives the result that I want.
-#> Sarah Goslee: That's a new sort of problem.
-#>  Igor Sosa Mayor and Sarah Goslee
+#> When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.
+#>  Rolf Turner
+#>  in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed
 #>  R-help
-#>  March 2012 
+#>  December 2003 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -765,12 +805,10 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> So it ***do not refuse*** to read the data. I do not expect some dwarf climbs out from your computer and says he will not read your data. Or is he?
-#> ?read.table gives you more details about how to read some data.
-#>  Petr Pikal
-#>  after a post that said read.table() refuses to read unbalanced data
-#>  R-help
-#>  October 2004 
+#> A big computer, a complex algorithm and a long time does not equal science.
+#>  Robert Gentleman
+#>  SSC 2003, Halifax
+#>  June 2003 
 #>  ------ 
 #>     \   
 #>      \  

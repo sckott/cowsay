@@ -8,6 +8,8 @@ License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
       email = "myrmecocystus@gmail.com"),
+    person("Amanda", "Dobbyn", role = c("aut"), 
+      email = "amanda.e.dobbyn@gmail.com"),
     person("Tyler", "Rinker", role = "ctb"),
     person("Thomas", "Leeper", role = "ctb"),
     person("Noam", "Ross", role = "ctb"),
@@ -28,15 +30,8 @@ LazyData: yes
 VignetteBuilder: knitr
 Imports: 
     crayon,
-    curl,
-    dplyr,
     fortunes,
-    purrr,
-    rmsfact,
-    stringr,
-    tibble,
-    tidyr,
-    magrittr
+    rmsfact
 Suggests:
     jsonlite,
     knitr,
