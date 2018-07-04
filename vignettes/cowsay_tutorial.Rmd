@@ -126,7 +126,7 @@ say(what = "arresteddevelopment",
     by = sample(names(animals), 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
-    type = "warning")
+    type = "message")
 ```
 
 

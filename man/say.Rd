@@ -22,7 +22,8 @@ words that don't conflict with others, like "g" for "ghost" because there's
 no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string 
-(returns string)}
+(returns string). If multiple colors are supplied to \code{what_color} or 
+\code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)}
 
 \item{what_color}{(character or crayon function) A 
 \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color 
