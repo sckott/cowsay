@@ -40,4 +40,4 @@ Suggests:
     roxygen2 (>= 6.0.1),
     testthat
 Remotes: github::aedobbyn/multicolor
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.0.1

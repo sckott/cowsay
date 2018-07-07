@@ -137,8 +137,6 @@ say <- function(what="Hello world!", by="cat",
       invisible(TRUE)
     }
     
-    if (type == "warning") stop("If multiple colors are supplied, type cannot be warning.")
-    
     if ((!all(is.character(what_color))) ||
         (!all(is.character(by_color)))) {
           stop("If color arguments have > length 1, all colors must be of class character",

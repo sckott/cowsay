@@ -39,13 +39,6 @@ test_that("say types works as expected", {
         by_color = c("green", "white", "orange")))
   )
   
-  expect_error(
-    suppressMessages(say(what = "warnings aren't allowed", 
-                         by = "stretchycat", what_color = "white", 
-                         by_color = c("red", "white", "green"),
-                         type = "warning"))
-  )
-  
   expect_silent(
     suppressMessages(
       say("I'm not dying, you're dying", "yoda", 
