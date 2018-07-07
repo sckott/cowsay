@@ -2,3 +2,8 @@ language: r
 sudo: false
 cache: packages
 warnings_are_errors: true
+
+branches:
+  only:
+  - master
+  - color-messages
