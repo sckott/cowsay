@@ -16,14 +16,16 @@
 #' @param type (character) One of message (default), warning, or string 
 #' (returns string). If multiple colors are supplied to \code{what_color} or 
 #' \code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)
-#' @param what_color (character or crayon function) A 
-#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color 
+#' @param what_color (character or crayon function) One or more 
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s) 
 #' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
 #'  \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
-#' @param by_color (character or crayon function) A 
-#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color
+#' Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").
+#' @param by_color (character or crayon function) One or more 
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s)
 #' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
 #'  \code{who}.
+#'  Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer specifying the row number of fortunes.data. 
 #' Alternatively which can be a character and grep is used to try to find a 
@@ -65,6 +67,12 @@
 #' say("meow", "cat", what_color = "blue")
 #' say('time')
 #' say('time', "poop", by_color = "cyan", what_color = "pink")
+#' say("arresteddevelopment",
+#'     what_color = c("royalblue1", "tomato2"),
+#'     by_color = c("rainbow", "rainbow"))
+#' say("holygrail",
+#'     what_color = crayon::cyan$bgMagenta,
+#'     by_color = c("salmon1", "springgreen"))
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
@@ -120,30 +128,9 @@ say <- function(what="Hello world!", by="cat",
     stop("what has to be of length 1", call. = FALSE)
   }
   
-  if (!is.null(what_color) && !(inherits(what_color, c("crayon", "character")))) {
-    stop("what_color must be of class character or crayon",
-         call. = FALSE)
-  }
-
-  if (!is.null(by_color) && !(inherits(by_color, c("crayon", "character")))) {
-    stop("by_color must be of class character or crayon",
-         call. = FALSE)
-  }
+  check_color(what_color)
+  check_color(by_color)
   
-  if (length(what_color) > 1 || length(by_color) > 1) {
-    if (!requireNamespace("multicolor", quietly = TRUE)) {
-      stop("The multicolor package is required for multiple colors", call. = FALSE)
-    } else {
-      invisible(TRUE)
-    }
-    
-    if ((!all(is.character(what_color))) ||
-        (!all(is.character(by_color)))) {
-          stop("If color arguments have > length 1, all colors must be of class character",
-               call. = FALSE)
-        }
-  }
-
   if (what == "catfact") {
     check4jsonlite()
     what <- 
@@ -188,7 +175,7 @@ say <- function(what="Hello world!", by="cat",
   color_text <- function(txt, c) {
     if (is.null(c)) {
       out <- txt
-    } else if (!is.null(c) && is.function(c)) {
+    } else if (!is.null(c) && inherits(c, "crayon")) {
       out <- c(txt)
     } else if (!is.null(c) && is.character(c)) {
       if (length(c) <= 1) {

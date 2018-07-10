@@ -19,12 +19,12 @@ test_that("say types works as expected", {
   
   expect_error(
     say(by_color = 123),
-    "by_color must be of class character or crayon"
+    "All colors must be of class character or crayon"
   )
   
   expect_error(
     say(what_color = mean),
-    "what_color must be of class character or crayon"
+    "All colors must be of class character or crayon"
   )
   
   expect_silent(
@@ -44,6 +44,14 @@ test_that("say types works as expected", {
       say("I'm not dying, you're dying", "yoda", 
           what_color = "green",
           by_color = colors())
+    )
+  )
+  
+  expect_silent(
+    suppressMessages(
+      say("asdfghjkl;'", "chicken", 
+          what_color = blue,
+          by_color = c("rainbow", colors()[sample(100, 1)], "rainbow"))
     )
   )
   

@@ -121,7 +121,7 @@ say(what = "holygrail",
 
 `colors()` are all supported as are any `rgb` values that evaluate to a string. Supplying multiple colors for `what_color` or `by_color` is allowed, as long as they're in a character vector.
 
-```{r, warning=FALSE}
+```{r}
 say(what = "arresteddevelopment", 
     by = sample(names(animals), 1),
     what_color = rgb(.1, .2, .3),
