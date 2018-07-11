@@ -68,14 +68,14 @@
 #' say('time')
 #' say('time', "poop", by_color = "cyan", what_color = "pink")
 #' 
-#' \dontrun{
-#' say("arresteddevelopment",
+#' say("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+#'      sed do eiusmod tempor incididunt",
 #'     what_color = c("royalblue1", "tomato2"),
 #'     by_color = c("rainbow", "rainbow"))
-#' say("holygrail",
+#' say(" ut labore et dolore magna aliqua. Ut enim ad minim 
+#'     veniam, quis nostrud exercitation ullamco laboris",
 #'     what_color = crayon::cyan$bgMagenta,
 #'     by_color = c("salmon1", "springgreen"))
-#' }
 #'     
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
