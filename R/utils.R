@@ -10,11 +10,7 @@ check_color <- function(clr) {
   
   if (all(inherits(clr, "character"))) {
     if (length(clr) > 1) {
-      if (!requireNamespace("multicolor", quietly = TRUE)) {
-        stop("The multicolor package is required for multiple colors", call. = FALSE)
-      } else {
-        invisible(TRUE)
-      }
+      check4pkg("multicolor")
       
       if (!all(is.character(clr))) {
         stop("If color arguments have > length 1, all colors must be of class character",
@@ -22,5 +18,6 @@ check_color <- function(clr) {
       }
     }
   }
+  return(clr)
 }
 

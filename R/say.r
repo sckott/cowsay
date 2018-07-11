@@ -128,11 +128,11 @@ say <- function(what="Hello world!", by="cat",
     stop("what has to be of length 1", call. = FALSE)
   }
   
-  check_color(what_color)
-  check_color(by_color)
+  what_color <- check_color(what_color)
+  by_color <- check_color(by_color)
   
   if (what == "catfact") {
-    check4jsonlite()
+    check4pkg("jsonlite")
     what <- 
       jsonlite::fromJSON(
         'https://catfact.ninja/fact')$fact
@@ -161,7 +161,7 @@ say <- function(what="Hello world!", by="cat",
   }  
   
   if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum")) {
-    check4jsonlite()
+    check4pkg("jsonlite")
     what <- 
       jsonlite::fromJSON(
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
