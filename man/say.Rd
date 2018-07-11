@@ -85,12 +85,11 @@ say("meow", "cat", what_color = "blue")
 say('time')
 say('time', "poop", by_color = "cyan", what_color = "pink")
 
-say("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-     sed do eiusmod tempor incididunt",
+library(jsonlite)
+say("arresteddevelopment",
     what_color = c("royalblue1", "tomato2"),
     by_color = c("rainbow", "rainbow"))
-say(" ut labore et dolore magna aliqua. Ut enim ad minim 
-    veniam, quis nostrud exercitation ullamco laboris",
+say("simpsons",
     what_color = crayon::cyan$bgMagenta,
     by_color = c("salmon1", "springgreen"))
     
