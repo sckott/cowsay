@@ -30,6 +30,7 @@ LazyData: yes
 VignetteBuilder: knitr
 Imports: 
     crayon,
+    curl,
     fortunes,
     rmsfact
 Suggests:
