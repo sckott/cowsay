@@ -109,7 +109,6 @@ say("hello world", by = "cow", type = "string")
 ## Add color
 
 ```{r}
-library("curl")
 library("jsonlite")
 library("multicolor")
 ```
