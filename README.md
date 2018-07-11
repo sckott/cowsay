@@ -128,7 +128,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-07-03 21:08:37 
+#> 2018-07-11 11:21:22 
 #>  --------------
 #>     \
 #>       \
@@ -226,7 +226,7 @@ say(what = "rms", by = "rms",
 #> 
 #> 
 #>  ----- 
-#>  Richard Stallman can determine whether an arbitrary program will terminate. 
+#>  Richard Stallman is my shephurd, and I am his GNU. 
 #>  ------ 
 #>     \   
 #>      \
@@ -285,27 +285,27 @@ say(what = "I'm a rare Irish buffalo",
     by = "buffalo", 
     what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
     by_color = c("green", "white", "orange"))
-#>     
-#>  -------------- 
-#> I'm a rare Irish buffalo
-#>  
-#>  --------------
-#>     \
-#>       \
-#>         \
-#>                    _.-````'-,_
-#>          _,.,_ ,-'`           `'-.,_
-#>        /)     (                   '``-.
-#>       ((      ) )                      `\
-#>         \)    (_/                        )\
-#>         |       /)           '    ,'    / \
-#>         `\    ^'            '     (    /  ))
-#>           |      _/\ ,     /    ,,`\   (  "`
-#>           \Y,   |   \  \  | ````| / \_ \
-#>             `)_/      \  \  )    ( >  ( >
-#>                        \( \(     |/   |/
-#>           mic & dwb  /_(/_(    /_(  /_(
-#> 
+#> [32m    [39m
+#> [32m -----[39m[37m-----[39m[33m---- [39m
+#> [90mI'm a [39m[36mrare I[39m[90mrish b[39m[36muffalo[39m
+#> [32m 
+#> [32m --------------[39m
+#> [32m    \[39m
+#> [32m      \[39m
+#> [32m        \[39m
+#> [32m               [39m[37m    _.-````'-,[39m[33m_
+#> [32m         _,.,_ [39m[37m,-'`          [39m[33m `'-.,_[39m
+#> [32m       /)     ([39m[37m              [39m[33m     '``-.[39m
+#> [32m      ((      )[39m[37m )            [39m[33m          `\[39m
+#> [32m        \)    ([39m[37m_/            [39m[33m            )\[39m
+#> [32m        |      [39m[37m /)           [39m[33m'    ,'    / \[39m
+#> [32m        `\    ^[39m[37m'            '[39m[33m     (    /  ))[39m
+#> [32m          |    [39m[37m  _/\ ,     / [39m[33m   ,,`\   (  "`[39m
+#> [32m          \Y,  [39m[37m |   \  \  | `[39m[33m```| / \_ \[39m
+#> [32m            `)_[39m[37m/      \  \  )[39m[33m    ( >  ( >[39m
+#> [32m               [39m[37m        \( \( [39m[33m    |/   |/[39m
+#> [32m          mic &[39m[37m dwb  /_(/_(  [39m[33m  /_(  /_([39m
+#> [32m    [39m
 ```
 
 
@@ -523,11 +523,12 @@ say('fortune','cat')
 #> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> This is a bit like asking how should I tweak my sailboat so I can explore the ocean floor.
-#>  Roger Koenker
-#>  in response to a question about tweaking the quantreg package to handle probit and heckit models
-#>  R-help
-#>  May 2013 
+#> Ole F. Christensen: Brain, Thank you very much for your help.
+#> Peter Dalgaard: You seem to be using call-by-value semantics rather than call-by-name...
+#>  Ole F. Christensen and Peter Dalgaard
+#>  thanking *Brian* D. Ripley for help
+#>  R-devel
+#>  January 2006 
 #>  --------------
 #>     \
 #>       \
@@ -772,11 +773,11 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.
-#>  Rolf Turner
-#>  in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed
-#>  R-help
-#>  December 2003 
+#> No matter how much progress is made by the developers of screen readers somehow PDF remains less than accessible. It's a bit like a failed relationship in which one partner tries to win the other back with expensive gifts.
+#>  Paul R. Stanley
+#>  in a discussion about text-to-speech processors for the benefit of blind users of LaTeX
+#>  texhax mailing list
+#>  March 2009 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -805,10 +806,10 @@ say("fortune", by = "daemon")
 #> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> A big computer, a complex algorithm and a long time does not equal science.
-#>  Robert Gentleman
-#>  SSC 2003, Halifax
-#>  June 2003 
+#> Firstly, don't call your matrix 'matrix'. Would you call your dog 'dog'? Anyway, it might clash with the function 'matrix'.
+#>  Barry Rowlingson
+#>  R-help
+#>  October 2004 
 #>  ------ 
 #>     \   
 #>      \  
@@ -907,6 +908,11 @@ endless_horse()
 
 ```r
 library("magrittr")
+#> 
+#> Attaching package: 'magrittr'
+#> The following objects are masked from 'package:testthat':
+#> 
+#>     equals, is_less_than, not
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 #> 
 #>    

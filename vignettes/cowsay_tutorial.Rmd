@@ -38,8 +38,7 @@ devtools::install_github("sckott/cowsay")
 ```
 
 ```{r}
-library("cowsay")
-library("crayon")
+library(cowsay)
 ```
 
 ## The animals
@@ -109,8 +108,8 @@ say("hello world", by = "cow", type = "string")
 ## Add color
 
 ```{r}
-library("jsonlite")
-library("multicolor")
+library(jsonlite)
+library(multicolor)
 ```
 
 
@@ -156,6 +155,8 @@ say(what = "foobar",
 The main advantage of using `crayon` functions instead of color strings is the ability to combine styles together.
 
 ```{r}
+library(crayon)
+
 say(what = "simpsons",
     by = "fish",
     what_color = bgBlue$white$italic,
