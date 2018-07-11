@@ -109,9 +109,9 @@ say("hello world", by = "cow", type = "string")
 ## Add color
 
 ```{r}
-requireNamespace("curl")
-requireNamespace("jsonlite")
-requireNamespace("multicolor")
+library("curl")
+library("jsonlite")
+library("multicolor")
 ```
 
 

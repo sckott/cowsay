@@ -7,3 +7,4 @@ branches:
   only:
   - master
   - color-messages
+  - c4p
