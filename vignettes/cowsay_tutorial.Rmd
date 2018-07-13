@@ -158,7 +158,7 @@ The main advantage of using `crayon` functions instead of color strings is the a
 library(crayon)
 
 say(what = "simpsons",
-    by = "fish",
+    by = "egret",
     what_color = bgBlue$white$italic,
     by_color = bold$green)
 ```
