@@ -5,12 +5,12 @@ check_color <- function(clr) {
          call. = FALSE)
   }
   
-  # Change "rainbow" into roygbiv
-  clr <- multicolor::insert_rainbow(clr)
-  
   if (all(inherits(clr, "character"))) {
-    if (length(clr) > 1) {
+    if (length(clr) > 1 || clr == "rainbow") {
       check4pkg("multicolor")
+      
+      # Change "rainbow" into roygbiv
+      clr <- multicolor::insert_rainbow(clr)
       
       if (!all(is.character(clr))) {
         stop("If color arguments have > length 1, all colors must be of class character",
