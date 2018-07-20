@@ -87,6 +87,7 @@ say('time', "poop", by_color = "cyan", what_color = "pink")
 
 library(jsonlite)
 say("arresteddevelopment",
+    by = "hypnotoad",
     what_color = c("royalblue1", "tomato2"),
     by_color = c("rainbow", "rainbow"))
 say("simpsons",
