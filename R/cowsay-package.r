@@ -5,20 +5,22 @@
 #' 
 #' Contributors:
 #' \itemize{
-#'  \item Scott Chamberlain
-#'  \item Tyler Rinker
-#'  \item Thomas Leeper
-#'  \item Noam Ross
-#'  \item Rich FitzJohn
-#'  \item Kiyoko Gotanda
-#'  \item Carson Sievert
+#'  \item Amanda Dobbyn
+#'  \item Andreas Brandmaier
 #'  \item Andy Teucher
-#'  \item Karl Broman
+#'  \item Carson Sievert
 #'  \item Franz-Sebastian Krah
-#'  \item Lucy D'Agostino McGowan
 #'  \item Guangchuang Yu
+#'  \item Karl Broman
+#'  \item Kiyoko Gotanda
+#'  \item Lucy D'Agostino McGowan
+#'  \item Noam Ross
 #'  \item Paolo Sonego
 #'  \item Philipp Boersch-Supan
+#'  \item Rich FitzJohn
+#'  \item Scott Chamberlain
+#'  \item Thomas Leeper
+#'  \item Tyler Rinker
 #' }
 #' 
 #' 
