@@ -1,3 +1,5 @@
+library(crayon)
+
 context("say")
 
 test_that("say types works as expected", {
@@ -10,6 +12,49 @@ test_that("say types works as expected", {
   # expect string on type=string
   expect_is(say(type = "string"), "character")
   
+  expect_equal(
+    length(suppressMessages(say("foo", by_color = "cyan"))) + 1,
+    length(suppressWarnings(say("foo", type = "warning")))
+  )
+  
+  expect_error(
+    say(by_color = 123),
+    "All colors must be of class character or crayon"
+  )
+  
+  expect_error(
+    say(what_color = mean),
+    "All colors must be of class character or crayon"
+  )
+  
+  expect_silent(
+    suppressMessages(say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic))
+  )
+  
+  expect_silent(
+    suppressMessages(say(what = "I'm a rare Irish buffalo", 
+        by = "buffalo", what_color = "pink", 
+        by_color = c("green", "white", "orange")))
+  )
+  
+  expect_silent(
+    suppressMessages(
+      say("I'm not dying, you're dying", "yoda", 
+          what_color = "green",
+          by_color = colors())
+    )
+  )
+  
+  expect_silent(
+    suppressMessages(
+      say("asdfghjkl;'", "chicken", 
+          what_color = blue,
+          by_color = c("rainbow", colors()[sample(100, 1)], "rainbow"))
+    )
+  )
+
   # hypnotoad can say anything
   expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
 })

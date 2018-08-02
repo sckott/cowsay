@@ -4,8 +4,8 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message", length = 18,
-  fortune = NULL, ...)
+say(what = "Hello world!", by = "cat", type = "message",
+  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, ...)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -22,7 +22,20 @@ words that don't conflict with others, like "g" for "ghost" because there's
 no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, or string 
-(returns string)}
+(returns string). If multiple colors are supplied to \code{what_color} or 
+\code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)}
+
+\item{what_color}{(character or crayon function) One or more 
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s) 
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
+Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").}
+
+\item{by_color}{(character or crayon function) One or more 
+\href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s)
+or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
+ \code{who}.
+ Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
@@ -68,8 +81,19 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
+say("meow", "cat", what_color = "blue")
 say('time')
-say('time', "poop")
+say('time', "poop", by_color = "cyan", what_color = "pink")
+
+library(jsonlite)
+say("arresteddevelopment",
+    by = "hypnotoad",
+    what_color = c("royalblue1", "tomato2"),
+    by_color = c("rainbow", "rainbow"))
+say("simpsons",
+    what_color = crayon::cyan$bgMagenta,
+    by_color = c("salmon1", "springgreen"))
+    
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")
 say("icanhazpdf?", "cat")

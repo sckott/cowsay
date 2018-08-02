@@ -32,8 +32,9 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
  * Paolo Sonego
  * Philipp Boersch-Supan
  * Andreas Brandmaier
+ * Amanda Dobbyn
 
-That's right, it takes 15 people to make `cowsay` - it's that hard.
+That's right, it takes 16 people to make `cowsay` - it's that hard.
 
 ### Where to find ASCII animal art
 
@@ -127,7 +128,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-05-15 10:34:25 
+#> 2018-07-11 11:21:22 
 #>  --------------
 #>     \
 #>       \
@@ -169,9 +170,18 @@ say("ain't that some shit", "chicken")
 #> 
 ```
 
+Add some color: 
+
 
 ```r
-say("boo!", "ghost")
+library(multicolor)
+```
+
+
+
+```r
+say("boo!", "ghost", 
+    what_color = "cyan", by_color = "saddlebrown")
 #> 
 #> 
 #>  ----- 
@@ -189,7 +199,8 @@ say("boo!", "ghost")
 
 
 ```r
-say("I love hooo you are!", "owl")
+say("I love hooo you are!", "owl", 
+    what_color = rgb(0, 1, 1), by_color = "#FF0000")
 #> 
 #>  ----- 
 #> I love hooo you are! 
@@ -204,6 +215,99 @@ say("I love hooo you are!", "owl")
 #>         \___/_/       [ab] 
 #>           | |
 ```
+
+String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
+
+
+```r
+say(what = "rms", by = "rms", 
+        what_color = yellow$bgMagenta$bold,
+        by_color = cyan$italic)
+#> 
+#> 
+#>  ----- 
+#>  Richard Stallman is my shephurd, and I am his GNU. 
+#>  ------ 
+#>     \   
+#>      \
+#>                     @@@@@@ @
+#>                   @@@@     @@
+#>                  @@@@ =   =  @@ 
+#>                 @@@ @ _   _   @@ 
+#>                  @@@ @(0)|(0)  @@ 
+#>                 @@@@   ~ | ~   @@
+#>                 @@@ @  (o1o)    @@
+#>                @@@    #######    @
+#>                @@@   ##{+++}##   @@
+#>               @@@@@ ## ##### ## @@@@
+#>               @@@@@#############@@@@
+#>              @@@@@@@###########@@@@@@
+#>             @@@@@@@#############@@@@@
+#>             @@@@@@@### ## ### ###@@@@
+#>              @ @  @              @  @
+#>                @                    @
+```
+
+This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+
+
+```r
+say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
+    by = "trilobite", 
+    what_color = bgBlue$cyan$italic,
+    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+#> 
+#>   
+#>  -------------- 
+#> hello there world 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>           _____
+#>        .'` ,-. `'.
+#>       /   ([ ])   \
+#>      /.-""`(`)`""-.\
+#>       <'```(.)```'>
+#>       <'```(.)```'>
+#>        <'``(.)``'>
+#>    sk   <``\_/``>
+#>          `'---'`
+#> 
+```
+
+
+Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
+
+
+```r
+say(what = "I'm a rare Irish buffalo",
+    by = "buffalo", 
+    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+    by_color = c("green", "white", "orange"))
+#> [32m    [39m
+#> [32m -----[39m[37m-----[39m[33m---- [39m
+#> [90mI'm a [39m[36mrare I[39m[90mrish b[39m[36muffalo[39m
+#> [32m 
+#> [32m --------------[39m
+#> [32m    \[39m
+#> [32m      \[39m
+#> [32m        \[39m
+#> [32m               [39m[37m    _.-````'-,[39m[33m_
+#> [32m         _,.,_ [39m[37m,-'`          [39m[33m `'-.,_[39m
+#> [32m       /)     ([39m[37m              [39m[33m     '``-.[39m
+#> [32m      ((      )[39m[37m )            [39m[33m          `\[39m
+#> [32m        \)    ([39m[37m_/            [39m[33m            )\[39m
+#> [32m        |      [39m[37m /)           [39m[33m'    ,'    / \[39m
+#> [32m        `\    ^[39m[37m'            '[39m[33m     (    /  ))[39m
+#> [32m          |    [39m[37m  _/\ ,     / [39m[33m   ,,`\   (  "`[39m
+#> [32m          \Y,  [39m[37m |   \  \  | `[39m[33m```| / \_ \[39m
+#> [32m            `)_[39m[37m/      \  \  )[39m[33m    ( >  ( >[39m
+#> [32m               [39m[37m        \( \( [39m[33m    |/   |/[39m
+#> [32m          mic &[39m[37m dwb  /_(/_(  [39m[33m  /_(  /_([39m
+#> [32m    [39m
+```
+
 
 ### Vary type of output, default calls message()
 
@@ -415,12 +519,16 @@ say(by='fish')
 
 ```r
 say('fortune','cat')
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> So apparently you wish to report as a bug the fact that R 1.8.0 is different from R 1.4.0.
-#>  Douglas Bates
+#> Ole F. Christensen: Brain, Thank you very much for your help.
+#> Peter Dalgaard: You seem to be using call-by-value semantics rather than call-by-name...
+#>  Ole F. Christensen and Peter Dalgaard
+#>  thanking *Brian* D. Ripley for help
 #>  R-devel
-#>  October 2003 
+#>  January 2006 
 #>  --------------
 #>     \
 #>       \
@@ -443,6 +551,8 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 
 ```r
 say(fortune=100)
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
 #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
@@ -470,6 +580,8 @@ say(fortune=100)
 
 ```r
 say(fortune='whatever')
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
 #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
@@ -594,6 +706,8 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 ```r
 say(fortune=59, by="clippy")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ----- 
@@ -654,13 +768,16 @@ See also `bat2`
 
 ```r
 say("fortune", by = "monkey")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ------------- 
-#> My best advice regarding R^2 statistics with nonlinear models is, as Nancy Reagan suggested, "Just say no.".
-#>  Douglas Bates
-#>  R-help
-#>  August 2000 
+#> No matter how much progress is made by the developers of screen readers somehow PDF remains less than accessible. It's a bit like a failed relationship in which one partner tries to win the other back with expensive gifts.
+#>  Paul R. Stanley
+#>  in a discussion about text-to-speech processors for the benefit of blind users of LaTeX
+#>  texhax mailing list
+#>  March 2009 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -685,13 +802,14 @@ say("fortune", by = "monkey")
 
 ```r
 say("fortune", by = "daemon")
+#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
+#> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> For recursive objects, search for recursive objects.
+#> Firstly, don't call your matrix 'matrix'. Would you call your dog 'dog'? Anyway, it might clash with the function 'matrix'.
 #>  Barry Rowlingson
-#>  in a thread about "Recursive objects" and how to search for former discussions about the topic
-#>  R-devel
-#>  May 2011 
+#>  R-help
+#>  October 2004 
 #>  ------ 
 #>     \   
 #>      \  
@@ -790,6 +908,11 @@ endless_horse()
 
 ```r
 library("magrittr")
+#> 
+#> Attaching package: 'magrittr'
+#> The following objects are masked from 'package:testthat':
+#> 
+#>     equals, is_less_than, not
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 #> 
 #>    
