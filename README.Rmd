@@ -130,6 +130,7 @@ Add some color:
 
 ```{r}
 library(multicolor)
+library(crayon)
 ```
 
 
@@ -163,11 +164,30 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
 
 Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
 
-```{r}
+```{r eval=FALSE}
 say(what = "I'm a rare Irish buffalo",
     by = "buffalo", 
     what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
     by_color = c("green", "white", "orange"))
+#>  --------------
+#> I'm a rare Irish buffalo
+#> 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>                    _.-````'-,_
+#>          _,.,_ ,-'`           `'-.,_
+#>        /)     (                   '``-.
+#>       ((      ) )                      `\
+#>         \)    (_/                        )\
+#>         |       /)           '    ,'    / \
+#>         `\    ^'            '     (    /  ))
+#>           |      _/\ ,     /    ,,`\   (  "`
+#>           \Y,   |   \  \  | ````| / \_ \
+#>             `)_/      \  \  )    ( >  ( >
+#>                        \( \(     |/   |/
+#>           mic & dwb  /_(/_(    /_(  /_(
 ```
 
 

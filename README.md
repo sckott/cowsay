@@ -128,7 +128,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-07-11 11:21:22 
+#> 2018-08-02 11:51:40 
 #>  --------------
 #>     \
 #>       \
@@ -175,6 +175,7 @@ Add some color:
 
 ```r
 library(multicolor)
+library(crayon)
 ```
 
 
@@ -226,7 +227,7 @@ say(what = "rms", by = "rms",
 #> 
 #> 
 #>  ----- 
-#>  Richard Stallman is my shephurd, and I am his GNU. 
+#> Richard Stallman can write an anti-virus program that cures HIV. Too bad he never writes anti-virus programs. 
 #>  ------ 
 #>     \   
 #>      \
@@ -285,27 +286,25 @@ say(what = "I'm a rare Irish buffalo",
     by = "buffalo", 
     what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
     by_color = c("green", "white", "orange"))
-#> [32m    [39m
-#> [32m -----[39m[37m-----[39m[33m---- [39m
-#> [90mI'm a [39m[36mrare I[39m[90mrish b[39m[36muffalo[39m
-#> [32m 
-#> [32m --------------[39m
-#> [32m    \[39m
-#> [32m      \[39m
-#> [32m        \[39m
-#> [32m               [39m[37m    _.-````'-,[39m[33m_
-#> [32m         _,.,_ [39m[37m,-'`          [39m[33m `'-.,_[39m
-#> [32m       /)     ([39m[37m              [39m[33m     '``-.[39m
-#> [32m      ((      )[39m[37m )            [39m[33m          `\[39m
-#> [32m        \)    ([39m[37m_/            [39m[33m            )\[39m
-#> [32m        |      [39m[37m /)           [39m[33m'    ,'    / \[39m
-#> [32m        `\    ^[39m[37m'            '[39m[33m     (    /  ))[39m
-#> [32m          |    [39m[37m  _/\ ,     / [39m[33m   ,,`\   (  "`[39m
-#> [32m          \Y,  [39m[37m |   \  \  | `[39m[33m```| / \_ \[39m
-#> [32m            `)_[39m[37m/      \  \  )[39m[33m    ( >  ( >[39m
-#> [32m               [39m[37m        \( \( [39m[33m    |/   |/[39m
-#> [32m          mic &[39m[37m dwb  /_(/_(  [39m[33m  /_(  /_([39m
-#> [32m    [39m
+#>  --------------
+#> I'm a rare Irish buffalo
+#> 
+#>  --------------
+#>     \
+#>       \
+#>         \
+#>                    _.-````'-,_
+#>          _,.,_ ,-'`           `'-.,_
+#>        /)     (                   '``-.
+#>       ((      ) )                      `\
+#>         \)    (_/                        )\
+#>         |       /)           '    ,'    / \
+#>         `\    ^'            '     (    /  ))
+#>           |      _/\ ,     /    ,,`\   (  "`
+#>           \Y,   |   \  \  | ````| / \_ \
+#>             `)_/      \  \  )    ( >  ( >
+#>                        \( \(     |/   |/
+#>           mic & dwb  /_(/_(    /_(  /_(
 ```
 
 
@@ -519,16 +518,13 @@ say(by='fish')
 
 ```r
 say('fortune','cat')
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Ole F. Christensen: Brain, Thank you very much for your help.
-#> Peter Dalgaard: You seem to be using call-by-value semantics rather than call-by-name...
-#>  Ole F. Christensen and Peter Dalgaard
-#>  thanking *Brian* D. Ripley for help
-#>  R-devel
-#>  January 2006 
+#> Well..... SAS is SAS, but R is FREE...
+#>  Abhishek Rathore
+#>  in a discussion about R vs. SAS
+#>  LinkedIn Group Stat-Math Statistics
+#>  July 2011 
 #>  --------------
 #>     \
 #>       \
@@ -551,8 +547,6 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 
 ```r
 say(fortune=100)
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
 #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
@@ -580,15 +574,13 @@ say(fortune=100)
 
 ```r
 say(fortune='whatever')
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #>  -------------- 
-#> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-#> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-#>  Tom Backer Johnsen and Barry Rowlingson
-#>  R-help
-#>  February 2006 
+#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+#> Joshua Ulrich: That's the magic_pony function.
+#>  Justin and Joshua Ulrich
+#>  stackoverflow.com
+#>  June 2013 
 #>  --------------
 #>     \
 #>       \
@@ -706,8 +698,6 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 ```r
 say(fortune=59, by="clippy")
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ----- 
@@ -768,16 +758,13 @@ See also `bat2`
 
 ```r
 say("fortune", by = "monkey")
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #> 
 #>  ------------- 
-#> No matter how much progress is made by the developers of screen readers somehow PDF remains less than accessible. It's a bit like a failed relationship in which one partner tries to win the other back with expensive gifts.
-#>  Paul R. Stanley
-#>  in a discussion about text-to-speech processors for the benefit of blind users of LaTeX
-#>  texhax mailing list
-#>  March 2009 
+#> Some OSX users know that OSX is really Unix [...], others think that OSX is cooler Windows, and they have ontological problems with non-Apple phenomena and constructs.
+#>  Roger Bivand
+#>  R-SIG-Geo
+#>  May 2012 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -802,14 +789,12 @@ say("fortune", by = "monkey")
 
 ```r
 say("fortune", by = "daemon")
-#> Warning in seq.default(along = rownames(fortunes.data)): partial argument
-#> match of 'along' to 'along.with'
 #> 
 #>  ----- 
-#> Firstly, don't call your matrix 'matrix'. Would you call your dog 'dog'? Anyway, it might clash with the function 'matrix'.
-#>  Barry Rowlingson
-#>  R-help
-#>  October 2004 
+#> The computational ease with which an abundance of parameters can be estimated should not be allowed to obscure the probable unwisdom of such estimation from limited data.
+#>  Arthur P. Dempster
+#>  in "Covariance selection", Biometrics 28 (1), 157-175
+#>  March 1972 
 #>  ------ 
 #>     \   
 #>      \  
@@ -908,11 +893,6 @@ endless_horse()
 
 ```r
 library("magrittr")
-#> 
-#> Attaching package: 'magrittr'
-#> The following objects are masked from 'package:testthat':
-#> 
-#>     equals, is_less_than, not
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
 #> 
 #>    
