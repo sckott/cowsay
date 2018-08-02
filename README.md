@@ -2,6 +2,7 @@ cowsay
 ======
 
 
+
 [![cran checks](https://cranchecks.info/badges/worst/cowsay)](https://cranchecks.info/pkgs/cowsay)
 [![Build Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
@@ -12,27 +13,27 @@ cowsay
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
 
-### Contributors
+### Contributors (alphebetical)
 
 
 
 
- * Scott Chamberlain
- * Tyler Rinker
- * Thomas Leeper
- * Noam Ross
- * Rich FitzJohn
- * Kiyoko Gotanda
- * Carson Sievert
+ * Amanda Dobbyn
+ * Andreas Brandmaier
  * Andy Teucher
- * Karl Broman
+ * Carson Sievert
  * Franz-Sebastian Krah
- * Lucy D'Agostino McGowan
  * Guangchuang Yu
+ * Karl Broman
+ * Kiyoko Gotanda
+ * Lucy D'Agostino McGowan
+ * Noam Ross
  * Paolo Sonego
  * Philipp Boersch-Supan
- * Andreas Brandmaier
- * Amanda Dobbyn
+ * Rich FitzJohn
+ * Scott Chamberlain
+ * Thomas Leeper
+ * Tyler Rinker
 
 That's right, it takes 16 people to make `cowsay` - it's that hard.
 
@@ -128,7 +129,7 @@ sort(names(animals))
 say('time')
 #> 
 #>  -------------- 
-#> 2018-08-02 11:51:40 
+#> 2018-08-02 11:54:09 
 #>  --------------
 #>     \
 #>       \
@@ -227,7 +228,7 @@ say(what = "rms", by = "rms",
 #> 
 #> 
 #>  ----- 
-#> Richard Stallman can write an anti-virus program that cures HIV. Too bad he never writes anti-virus programs. 
+#> Richard Stallman will never die, but may some day go to /dev/null. 
 #>  ------ 
 #>     \   
 #>      \
@@ -520,11 +521,10 @@ say(by='fish')
 say('fortune','cat')
 #> 
 #>  -------------- 
-#> Well..... SAS is SAS, but R is FREE...
-#>  Abhishek Rathore
-#>  in a discussion about R vs. SAS
-#>  LinkedIn Group Stat-Math Statistics
-#>  July 2011 
+#> Some OSX users know that OSX is really Unix [...], others think that OSX is cooler Windows, and they have ontological problems with non-Apple phenomena and constructs.
+#>  Roger Bivand
+#>  R-SIG-Geo
+#>  May 2012 
 #>  --------------
 #>     \
 #>       \
@@ -576,11 +576,11 @@ say(fortune=100)
 say(fortune='whatever')
 #> 
 #>  -------------- 
-#> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-#> Joshua Ulrich: That's the magic_pony function.
-#>  Justin and Joshua Ulrich
-#>  stackoverflow.com
-#>  June 2013 
+#> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+#> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+#>  Tom Backer Johnsen and Barry Rowlingson
+#>  R-help
+#>  February 2006 
 #>  --------------
 #>     \
 #>       \
@@ -761,10 +761,12 @@ say("fortune", by = "monkey")
 #> 
 #> 
 #>  ------------- 
-#> Some OSX users know that OSX is really Unix [...], others think that OSX is cooler Windows, and they have ontological problems with non-Apple phenomena and constructs.
-#>  Roger Bivand
-#>  R-SIG-Geo
-#>  May 2012 
+#> Gregor Gorjanc: But imagine how hard would it be to have two separate modes ... argh, probably a mess^2 or have I missed something obvious.
+#> Martin Maechler: Yes, exactly: "Mess ^ 2" -- and if you allow both 'drop' and 'na.rm' options, it's "Mess ^ 3" -- not something anyone really wants!
+#>  Gregor Gorjanc and Martin Maechler
+#>  in a discussion whether 'drop' should be set in options(), possibly depending on different user vs. programmer modes
+#>  R-devel
+#>  September 2006 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -791,10 +793,10 @@ say("fortune", by = "monkey")
 say("fortune", by = "daemon")
 #> 
 #>  ----- 
-#> The computational ease with which an abundance of parameters can be estimated should not be allowed to obscure the probable unwisdom of such estimation from limited data.
-#>  Arthur P. Dempster
-#>  in "Covariance selection", Biometrics 28 (1), 157-175
-#>  March 1972 
+#> The documentation level of R is already much higher than average for open source software and even than some commercial packages (esp. SPSS is notorious for its attitude of "You want to do one of these things. If you don't understand what the output means, click help and we'll pop up five lines of mumbo-jumbo that you're not going to understand either.")
+#>  Peter Dalgaard
+#>  R-help
+#>  April 2002 
 #>  ------ 
 #>     \   
 #>      \  

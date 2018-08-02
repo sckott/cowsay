@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
 
-### Contributors
+### Contributors (alphebetical)
 
 ```{r echo=FALSE}
 peeps <- c(
@@ -42,7 +42,7 @@ peeps <- c(
 ```
 
 ```{r results='asis', echo=FALSE}
-cat(c("", peeps), sep = "\n * ")
+cat(c("", sort(peeps)), sep = "\n * ")
 ```
 
 That's right, it takes `r length(peeps)` people to make `cowsay` - it's that hard.
