@@ -156,7 +156,7 @@ say <- function(what="Hello world!", by="cat",
     what <- gsub("<x>", "\n", paste(as.character(what), collapse = "\n "))
   }
 
-  if (by == "hypnotoad") {
+  if (by == "hypnotoad" && what == "Hello world!") {
     what <- "All Glory to the HYPNO TOAD!"
   }
   

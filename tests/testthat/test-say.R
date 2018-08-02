@@ -54,13 +54,9 @@ test_that("say types works as expected", {
           by_color = c("rainbow", colors()[sample(100, 1)], "rainbow"))
     )
   )
-  
-  # blue_poop <- "\033[36m\n\n ----- \n\033[39m\033[38;5;224msalut\033[39m\033[36m \n ------ \n    \\   \n     \\\n     (   )\n  (   ) (\n   ) _   )\n    ( \\_\n  _(_\\ \\)__\n (____\\ ___)) [nosig]\033[39m"
-  # 
-  # expect_equal(
-  #   blue_poop,
-  #   suppressMessages(say("salut", "poop", by_color = "cyan", what_color = "pink", type = "string"))
-  # )
+
+  # hypnotoad can say anything
+  expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
 })
 
 test_that("say by works as expected", {
