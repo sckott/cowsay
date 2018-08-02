@@ -5,7 +5,8 @@
 \title{Sling messages and warnings with flair}
 \usage{
 say(what = "Hello world!", by = "cat", type = "message",
-  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, ...)
+  what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
+  ...)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
