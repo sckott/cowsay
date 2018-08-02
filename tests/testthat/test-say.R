@@ -9,6 +9,9 @@ test_that("say types works as expected", {
   
   # expect string on type=string
   expect_is(say(type = "string"), "character")
+  
+  # hypnotoad can say anything
+  expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
 })
 
 test_that("say by works as expected", {
