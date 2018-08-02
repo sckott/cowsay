@@ -39,7 +39,7 @@ Suggests:
     knitr,
     multicolor,
     rmarkdown,
-    roxygen2 (>= 6.0.1),
+    roxygen2 (>= 6.1.0),
     testthat
 Remotes: github::aedobbyn/multicolor
 RoxygenNote: 6.1.0
