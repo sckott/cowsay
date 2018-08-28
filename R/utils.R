@@ -5,12 +5,6 @@ check_color <- function(clr) {
          call. = FALSE)
   }
   
-  if (crayon::has_color() == FALSE) {
-    message("Colors cannot be applied in this environment. Try using a terminal or RStudio.")
-    clr <- NULL
-    return(clr)
-  }
-  
   if (all(inherits(clr, "character"))) {
     if (length(clr) > 1 || clr == "rainbow") {
       check4pkg("multicolor")
@@ -26,4 +20,3 @@ check_color <- function(clr) {
   }
   return(clr)
 }
-
