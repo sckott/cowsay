@@ -17,16 +17,6 @@ test_that("say types works as expected", {
     length(suppressWarnings(say("foo", type = "warning")))
   )
   
-  expect_error(
-    say(by_color = 123),
-    "All colors must be of class character or crayon"
-  )
-  
-  expect_error(
-    say(what_color = mean),
-    "All colors must be of class character or crayon"
-  )
-  
   expect_silent(
     suppressMessages(say(what = "rms", by = "rms", 
         what_color = yellow$bgMagenta$bold,
@@ -57,6 +47,17 @@ test_that("say types works as expected", {
 
   # hypnotoad can say anything
   expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
+  
+  skip_if(!crayon::has_color(), message = "Shouldn't fail if colors can't be applied.")
+  expect_error(
+    say(by_color = 123),
+    "All colors must be of class character or crayon"
+  )
+  
+  expect_error(
+    say(what_color = mean),
+    "All colors must be of class character or crayon"
+  )
 })
 
 test_that("say by works as expected", {
