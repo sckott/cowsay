@@ -1,0 +1,255 @@
+
+R version 3.5.1 Patched (2018-08-12 r75119) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "multicolor"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('multicolor')
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("insert_rainbow")
+> ### * insert_rainbow
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: insert_rainbow
+> ### Title: Insert Rainbow
+> ### Aliases: insert_rainbow
+> 
+> ### ** Examples
+> 
+> 
+> insert_rainbow("rainbow")
+[1] "red"    "orange" "yellow" "green"  "blue"   "purple"
+> insert_rainbow(c("lightsteelblue", "rainbow", "lightsalmon"))
+[1] "lightsteelblue" "red"            "orange"         "yellow"        
+[5] "green"          "blue"           "purple"         "lightsalmon"   
+> 
+> 
+> 
+> cleanEx()
+> nameEx("multi_color")
+> ### * multi_color
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: multi_color
+> ### Title: Multi-color text
+> ### Aliases: multi_color
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D multi_color()
+> ##D 
+> ##D multi_color("ahoy")
+> ##D 
+> ##D multi_color("taste the rainbow",
+> ##D             c("mediumpurple",
+> ##D               "rainbow",
+> ##D              "cyan3"))
+> ##D 
+> ##D multi_color(colors = c(rgb(0.1, 0.2, 0.5),
+> ##D                        "yellow",
+> ##D                        rgb(0.2, 0.9, 0.1)))
+> ##D 
+> ##D multi_color(
+> ##D   cowsay::animals[["buffalo"]],
+> ##D   c("mediumorchid4", "dodgerblue1", "lemonchiffon1"))
+> ##D 
+> ##D multi_color(cowsay:::rms, sample(colors(), 10))
+> ##D 
+> ##D # Mystery Bulgarian animal
+> ##D multi_color(things[[sample(length(things), 1)]],
+> ##D             c("white", "darkgreen", "darkred"),
+> ##D             direction = "horizontal")
+> ##D 
+> ##D # Mystery Italian animal
+> ##D multi_color(things[[sample(length(things), 1)]],
+> ##D             c("darkgreen", "white", "darkred"),
+> ##D             direction = "vertical")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("multi_colour")
+> ### * multi_colour
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: multi_colour
+> ### Title: Multi-colour text
+> ### Aliases: multi_colour
+> 
+> ### ** Examples
+> 
+> multi_color()
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;196mhe\033[39m\033[38;5;214mll\033[39m\033[38;5;226mo \033[39m\033[38;5;46mwo\033[39m\033[38;5;21mrl\033[39m\033[38;5;129md!\033[39m"
+> 
+> multi_color("ahoy")
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;196ma\033[38;5;214mh\033[38;5;46mo\033[38;5;129my"
+> 
+> multi_color("taste the rainbow",
++             c("mediumpurple",
++               "rainbow",
++              "cyan3"))
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;141mtas\033[39m\033[38;5;196mte\033[39m\033[38;5;214m t\033[39m\033[38;5;226mhe\033[39m\033[38;5;46m r\033[39m\033[38;5;21mai\033[39m\033[38;5;129mnb\033[39m\033[38;5;44mow\033[39m"
+> 
+> multi_color(colors = c(rgb(0.1, 0.2, 0.5),
++                        "yellow",
++                        rgb(0.2, 0.9, 0.1)))
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;25mhell\033[39m\033[38;5;226mo wo\033[39m\033[38;5;82mrld!\033[39m"
+> 
+> multi_color(
++   cowsay::animals[["buffalo"]],
++   c("mediumorchid4", "dodgerblue1", "lemonchiffon1"))
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;97m    \033[39m\n\033[38;5;97m --------------\033[39m\033[38;5;39m \n\033[38;5;97m%s \033[39m\n\033[38;5;97m --------------\033[39m\n\033[38;5;97m    \\\033[39m\n\033[38;5;97m      \\\033[39m\n\033[38;5;97m        \\\033[39m\n\033[38;5;97m               \033[39m\033[38;5;39m    _.-````'-,\033[39m\033[38;5;230m_\n\033[38;5;97m         _,.,_ \033[39m\033[38;5;39m,-'`          \033[39m\033[38;5;230m `'-.,_\033[39m\n\033[38;5;97m       /)     (\033[39m\033[38;5;39m              \033[39m\033[38;5;230m     '``-.\033[39m\n\033[38;5;97m      ((      )\033[39m\033[38;5;39m )            \033[39m\033[38;5;230m          `\\\033[39m\n\033[38;5;97m        \\)    (\033[39m\033[38;5;39m_/            \033[39m\033[38;5;230m            )\\\033[39m\n\033[38;5;97m        |      \033[39m\033[38;5;39m /)           \033[39m\033[38;5;230m'    ,'    / \\\033[39m\n\033[38;5;97m        `\\    ^\033[39m\033[38;5;39m'            '\033[39m\033[38;5;230m     (    /  ))\033[39m\n\033[38;5;97m          |    \033[39m\033[38;5;39m  _/\\ ,     / \033[39m\033[38;5;230m   ,,`\\   (  \"`\033[39m\n\033[38;5;97m          \\Y,  \033[39m\033[38;5;39m |   \\  \\  | `\033[39m\033[38;5;230m```| / \\_ \\\033[39m\n\033[38;5;97m            `)_\033[39m\033[38;5;39m/      \\  \\  )\033[39m\033[38;5;230m    ( >  ( >\033[39m\n\033[38;5;97m               \033[39m\033[38;5;39m        \\( \\( \033[39m\033[38;5;230m    |/   |/\033[39m\n\033[38;5;97m          mic &\033[39m\033[38;5;39m dwb  /_(/_(  \033[39m\033[38;5;230m  /_(  /_(\033[39m\n\033[38;5;97m    \033[39m\n"
+> 
+> multi_color(cowsay:::rms, sample(colors(), 10))
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;237m ---\033[39m\033[38;5;253m-- \033[39m\n\033[38;5;237m%s \033[39m\n\033[38;5;237m ---\033[39m\033[38;5;253m--- \033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m\\   \033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m \\\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m    \033[39m\033[38;5;209m @@\033[39m\033[38;5;74m@@@@\033[39m\033[38;5;153m @\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m   @\033[39m\033[38;5;209m@@@\033[39m\033[38;5;74m    \033[39m\033[38;5;153m @@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m  @@\033[39m\033[38;5;209m@@ \033[39m\033[38;5;74m=   \033[39m\033[38;5;153m=  \033[39m\033[38;5;109m@@ \033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m @@@\033[39m\033[38;5;209m @ \033[39m\033[38;5;74m_   \033[39m\033[38;5;153m_  \033[39m\033[38;5;109m @@ \033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m  @@\033[39m\033[38;5;209m@ @\033[39m\033[38;5;74m(0)|\033[39m\033[38;5;153m(0)\033[39m\033[38;5;109m  @@\033[39m\033[38;5;137m \n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m @@@\033[39m\033[38;5;209m@  \033[39m\033[38;5;74m ~ |\033[39m\033[38;5;153m ~ \033[39m\033[38;5;109m  @@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m @@@\033[39m\033[38;5;209m @ \033[39m\033[38;5;74m (o1\033[39m\033[38;5;153mo) \033[39m\033[38;5;109m   @\033[39m\033[38;5;137m@\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m@@@ \033[39m\033[38;5;209m   \033[39m\033[38;5;74m####\033[39m\033[38;5;153m###\033[39m\033[38;5;109m    \033[39m\033[38;5;137m@\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m@@@ \033[39m\033[38;5;209m  #\033[39m\033[38;5;74m#{++\033[39m\033[38;5;153m+}#\033[39m\033[38;5;109m#   \033[39m\033[38;5;137m@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m   @\033[39m\033[38;5;25m@@@@\033[39m\033[38;5;209m ##\033[39m\033[38;5;74m ###\033[39m\033[38;5;153m## \033[39m\033[38;5;109m## @\033[39m\033[38;5;137m@@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m   @\033[39m\033[38;5;25m@@@@\033[39m\033[38;5;209m###\033[39m\033[38;5;74m####\033[39m\033[38;5;153m###\033[39m\033[38;5;109m###@\033[39m\033[38;5;137m@@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m  @@\033[39m\033[38;5;25m@@@@\033[39m\033[38;5;209m@##\033[39m\033[38;5;74m####\033[39m\033[38;5;153m###\033[39m\033[38;5;109m##@@\033[39m\033[38;5;137m@@@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m @@@\033[39m\033[38;5;25m@@@@\033[39m\033[38;5;209m###\033[39m\033[38;5;74m####\033[39m\033[38;5;153m###\033[39m\033[38;5;109m###@\033[39m\033[38;5;137m@@@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m @@@\033[39m\033[38;5;25m@@@@\033[39m\033[38;5;209m###\033[39m\033[38;5;74m ## \033[39m\033[38;5;153m###\033[39m\033[38;5;109m ###\033[39m\033[38;5;137m@@@@\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m  @ \033[39m\033[38;5;25m@  @\033[39m\033[38;5;209m   \033[39m\033[38;5;74m    \033[39m\033[38;5;153m   \033[39m\033[38;5;109m    \033[39m\033[38;5;137m@  @\033[39m\n\033[38;5;237m    \033[39m\033[38;5;253m    \033[39m\033[38;5;131m   \033[39m\033[38;5;104m    \033[39m\033[38;5;25m@   \033[39m\033[38;5;209m   \033[39m\033[38;5;74m    \033[39m\033[38;5;153m   \033[39m\033[38;5;109m    \033[39m\033[38;5;137m   @\033[39m\n"
+> 
+> # Mystery Bulgarian animal
+> multi_color(things[[sample(length(things), 1)]],
++             c("white", "darkgreen", "darkred"),
++             direction = "horizontal")
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[37m\n\033[37m ----- \n\033[37m%s \n\033[37m ------ \n\033[37m    \\   \n\033[38;5;28m     \\\n\033[38;5;28m              |\n\033[38;5;28m              |\n\033[38;5;28m              |\n\033[38;5;28m             __\n\033[38;5;124m          | /  \\ |\n\033[38;5;124m         \\_\\\\  //_/\n\033[38;5;124m          .'/()\\'.\n\033[38;5;124m           \\\\  //  [nosig]\n\033[38;5;124m  \n"
+> 
+> # Mystery Italian animal
+> multi_color(things[[sample(length(things), 1)]],
++             c("darkgreen", "white", "darkred"),
++             direction = "vertical")
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;28m ----- \033[39m\n\033[38;5;28m%s \033[39m\n\033[38;5;28m ------\033[39m\033[37m \n\033[38;5;28m    \\  \033[39m\033[37m \n\033[38;5;28m     \\\033[39m\n\033[38;5;28m     .-\033[39m\033[37m.\n\033[38;5;28m    (o \033[39m\033[37mo)\033[39m\n\033[38;5;28m    | O\033[39m\033[37m \\\033[39m\n\033[38;5;28m     \\ \033[39m\033[37m  \\\033[39m\n\033[38;5;28m      `\033[39m\033[37m~~~' [\033[39m\033[38;5;124mnosig]\033[39m\n\033[38;5;28m  \033[39m\n"
+> 
+> 
+> 
+> cleanEx()
+
+detaching ‘package:bindrcpp’
+
+> nameEx("nix_first_newline")
+> ### * nix_first_newline
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: nix_first_newline
+> ### Title: Remove the first instance of a newline from a string
+> ### Aliases: nix_first_newline
+> 
+> ### ** Examples
+> 
+> nix_first_newline("onetwo\nthree\nfour")
+[1] "onetwothree\nfour"
+> 
+> # Nothing to remove
+> nix_first_newline("fivesixseven")
+[1] "fivesixseven"
+> 
+> 
+> 
+> cleanEx()
+> nameEx("things")
+> ### * things
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: things
+> ### Title: Things
+> ### Aliases: things
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> things[["turkey"]]
+[1] "\n\n ------------- \n%s \n -------------- \n              \\   \n               \\  \n                \\\n               .--.\n              /} p \\             /}\n             `~)-) /           /` }\n              ( / /          /`}.' }\n               / / .-'\"\"-.  / ' }-'}\n              / (.'       \\/ '.'}_.}\n             |            `}   .}._}\n             |     .-=-';   } ' }_.}\n             \\    `.-=-;'  } '.}.-}\n              '.   -=-'    ;,}._.}\n                `-,_  __.'` '-._}\n              jgs   `|||\n                   .=='=,\n"
+> things[["rms"]] %>% cat()
+
+
+ ----- 
+%s 
+ ------ 
+    \   
+     \
+                    @@@@@@ @
+                  @@@@     @@
+                 @@@@ =   =  @@ 
+                @@@ @ _   _   @@ 
+                 @@@ @(0)|(0)  @@ 
+                @@@@   ~ | ~   @@
+                @@@ @  (o1o)    @@
+               @@@    #######    @
+               @@@   ##{+++}##   @@
+              @@@@@ ## ##### ## @@@@
+              @@@@@#############@@@@
+             @@@@@@@###########@@@@@@
+            @@@@@@@#############@@@@@
+            @@@@@@@### ## ### ###@@@@
+             @ @  @              @  @
+               @                    @
+> names(things)
+ [1] "cow"          "chicken"      "clippy"       "poop"         "bigcat"      
+ [6] "ant"          "pumpkin"      "ghost"        "spider"       "rabbit"      
+[11] "pig"          "snowman"      "frog"         "hypnotoad"    "shortcat"    
+[16] "longcat"      "fish"         "signbunny"    "facecat"      "behindcat"   
+[21] "stretchycat"  "anxiouscat"   "longtailcat"  "cat"          "trilobite"   
+[26] "shark"        "buffalo"      "grumpycat"    "smallcat"     "yoda"        
+[31] "mushroom"     "endlesshorse" "bat"          "bat2"         "turkey"      
+[36] "monkey"       "daemon"       "egret"        "duckling"     "duck"        
+[41] "owl"          "rms"         
+> multi_color(things[["stretchycat"]])  # To say something, use the cowsay package
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Auto-setting type to string.
+[1] "\033[38;5;196m ---------\033[39m\033[38;5;214m----- \033[39m\n\033[38;5;196m%s \033[39m\n\033[38;5;196m ---------\033[39m\033[38;5;214m-----\033[39m\n\033[38;5;196m    \\\033[39m\n\033[38;5;196m      \\\033[39m\n\033[38;5;196m        \\\033[39m\n\033[38;5;196m          \033[39m\033[38;5;214m          \033[39m\033[38;5;226m    ,/|  \033[39m\033[38;5;46m       _.-\033[39m\033[38;5;21m-‛‛^``-..\033[39m\033[38;5;129m.___.._.,;\033[39m\n\033[38;5;196m          \033[39m\033[38;5;214m          \033[39m\033[38;5;226m  /, \\‛. \033[39m\033[38;5;46m    _-‛   \033[39m\033[38;5;21m       ,-\033[39m\033[38;5;129m-,,,--‛‛‛\033[39m\n\033[38;5;196m          \033[39m\033[38;5;214m          \033[39m\033[38;5;226m {  \\    \033[39m\033[38;5;46m`_-‛‛     \033[39m\033[38;5;21m  ‛    /}\033[39m\033[38;5;129m‛\n\033[38;5;196mJill      \033[39m\033[38;5;214m          \033[39m\033[38;5;226m    `;;‛ \033[39m\033[38;5;46m          \033[39m\033[38;5;21m  ;   ; ;\033[39m\n\033[38;5;196m          \033[39m\033[38;5;214m        ._\033[39m\033[38;5;226m.--‛‛    \033[39m\033[38;5;46m ._,,, _..\033[39m\033[38;5;21m‛  .;.‛\033[39m\n\033[38;5;196m          \033[39m\033[38;5;214m        (,\033[39m\033[38;5;226m_....----\033[39m\033[38;5;46m‛‛‛     (,\033[39m\033[38;5;21m..--‛‛\033[39m\n\033[38;5;196m  \033[39m\n"
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.865 0.028 0.896 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

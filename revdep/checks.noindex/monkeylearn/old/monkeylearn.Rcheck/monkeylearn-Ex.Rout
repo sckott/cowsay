@@ -1,0 +1,196 @@
+
+R version 3.5.1 Patched (2018-08-12 r75119) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "monkeylearn"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('monkeylearn')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("monkey_classify")
+> ### * monkey_classify
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: monkey_classify
+> ### Title: Monkeylearn classify from a dataframe column or vector of texts
+> ### Aliases: monkey_classify
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D text1 <- "Hauràs de dirigir-te al punt de trobada del grup al que et vulguis unir."
+> ##D text2 <- "i want to buy an iphone"
+> ##D text3 <- "Je déteste ne plus avoir de dentifrice."
+> ##D text_4 <- "I hate not having any toothpaste."
+> ##D request_df <- tibble::as_tibble(list(txt = c(text1, text2, text3, text_4)))
+> ##D monkey_classify(request_df, txt, texts_per_req = 2, unnest = TRUE)
+> ##D attr(output, "headers")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("monkey_extract")
+> ### * monkey_extract
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: monkey_extract
+> ### Title: Monkeylearn extract from a dataframe column or vector of texts
+> ### Aliases: monkey_extract
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D text <- "In the 19th century, the major European powers had gone to great lengths
+> ##D to maintain a balance of power throughout Europe, resulting in the existence of
+> ##D a complex network of political and military alliances throughout the continent by 1900.[7]
+> ##D These had started in 1815, with the Holy Alliance between Prussia, Russia, and Austria.
+> ##D Then, in October 1873, German Chancellor Otto von Bismarck negotiated the League of
+> ##D the Three Emperors (German: Dreikaiserbund) between the monarchs of Austria-Hungary,
+> ##D Russia and Germany."
+> ##D output <- monkeylearn_extract(request = text)
+> ##D output
+> ##D 
+> ##D 
+> ##D # Example with parameters
+> ##D text <- "A panel of Goldman Sachs employees spent a recent Tuesday night at the
+> ##D Columbia University faculty club trying to convince a packed room of potential
+> ##D recruits that Wall Street, not Silicon Valley, was the place to be for computer
+> ##D scientists.\n\n The Goldman employees knew they had an uphill battle. They were
+> ##D fighting against perceptions of Wall Street as boring and regulation-bound and
+> ##D Silicon Valley as the promised land of flip-flops, beanbag chairs and million-dollar
+> ##D stock options.\n\n Their argument to the room of technologically inclined students
+> ##D was that Wall Street was where they could find far more challenging, diverse and,
+> ##D yes, lucrative jobs working on some of the worlds most difficult technical problems."
+> ##D 
+> ##D output <- monkey_extract(text,
+> ##D                             extractor_id = "ex_y7BPYzNG",
+> ##D                             params = list(max_keywords = 3,
+> ##D                             use_company_names = 1))
+> ##D attr(output, "headers")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("monkeylearn_classifiers")
+> ### * monkeylearn_classifiers
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: monkeylearn_classifiers
+> ### Title: monkeylearn_classifiers
+> ### Aliases: monkeylearn_classifiers
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D monkeylearn_classifiers(private = FALSE)
+> ##D monkeylearn_classifiers(private = TRUE)
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("monkeylearn_classify")
+> ### * monkeylearn_classify
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: monkeylearn_classify
+> ### Title: monkeylearn_classify
+> ### Aliases: monkeylearn_classify
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D text1 <- "my dog is an avid rice eater"
+> ##D text2 <- "i want to buy an iphone"
+> ##D request <- c(text1, text2)
+> ##D output <- monkeylearn_classify(request)
+> ##D output
+> ##D attr(output, "headers")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("monkeylearn_extract")
+> ### * monkeylearn_extract
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: monkeylearn_extract
+> ### Title: monkeylearn_extract
+> ### Aliases: monkeylearn_extract
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D text <- "In the 19th century, the major European powers had gone to great lengths
+> ##D to maintain a balance of power throughout Europe, resulting in the existence of
+> ##D  a complex network of political and military alliances throughout the continent by 1900.[7]
+> ##D   These had started in 1815, with the Holy Alliance between Prussia, Russia, and Austria.
+> ##D   Then, in October 1873, German Chancellor Otto von Bismarck negotiated the League of
+> ##D    the Three Emperors (German: Dreikaiserbund) between the monarchs of Austria-Hungary,
+> ##D     Russia and Germany."
+> ##D output <- monkeylearn_extract(request = text)
+> ##D output
+> ##D # example with parameters
+> ##D text <- "A panel of Goldman Sachs employees spent a recent Tuesday night at the
+> ##D Columbia University faculty club trying to convince a packed room of potential
+> ##D recruits that Wall Street, not Silicon Valley, was the place to be for computer
+> ##D scientists.\n\n The Goldman employees knew they had an uphill battle. They were
+> ##D fighting against perceptions of Wall Street as boring and regulation-bound and
+> ##D Silicon Valley as the promised land of flip-flops, beanbag chairs and million-dollar
+> ##D stock options.\n\n Their argument to the room of technologically inclined students
+> ##D was that Wall Street was where they could find far more challenging, diverse and,
+> ##D yes, lucrative jobs working on some of the worlds most difficult technical problems."
+> ##D 
+> ##D output <- monkeylearn_extract(text,
+> ##D                               extractor_id = "ex_y7BPYzNG",
+> ##D                               params = list(max_keywords = 3,
+> ##D                                             use_company_names = 1))
+> ##D attr(output, "headers")
+> ## End(Not run)
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.1 0.016 0.119 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

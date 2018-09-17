@@ -1,0 +1,484 @@
+Hmm ... looks like a package
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./Rd2.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.dfu)))
+Writing index file Rd2.idx
+No file Rd2.aux.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [1{/usr/local/texl
+ive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [2]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.42914pt too wide) in paragraph at lines 153--154
+[]\T1/ptm/m/n/10 (boolean) Does this con-tain day-old poul-try? See [][]$\T1/zi
+4/m/n/10 https : / / pe . usps . com / text /
+[3]
+Overfull \hbox (19.86792pt too wide) in paragraph at lines 181--182
+\T1/ptm/m/n/10 query to the [][]"Postage Price Cal-cu-la-tor"[][] in dataframe 
+for-mat. The in-puts \T1/zi4/m/n/10 origin_zip\T1/ptm/m/n/10 , \T1/zi4/m/n/10 d
+estination_zip\T1/ptm/m/n/10 ,
+[4] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [5]
+Overfull \hbox (14.66603pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Displays the re-sult of a query to the ["Get Zone Chart"](http
+s://postcalc.usps.com/DomesticZoneChart/)
+
+Overfull \hbox (21.17842pt too wide) in paragraph at lines 275--276
+\T1/ptm/m/n/10 tab. If you just want to sup-ply two 5-digit zips and get a sin-
+gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [6]
+Overfull \hbox (52.85823pt too wide) in paragraph at lines 317--320
+[]\T1/ptm/m/n/10 (boolean) Ex-tract ex-tra stuff from the re-sponse? Specif-i-c
+ally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (36.81017pt too wide) in paragraph at lines 317--320
+\T1/zi4/m/n/10 local\T1/ptm/m/n/10 , \T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , an
+d \T1/zi4/m/n/10 full_response\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/1
+0 zone_detail_definitions\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [7]
+Overfull \hbox (89.6278pt too wide) in paragraph at lines 383--386
+[]\T1/ptm/m/n/10 (boolean) Should columns with more de-tails be re-tained? Spec
+if-i-cally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (67.29015pt too wide) in paragraph at lines 383--386
+\T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , and \T1/zi4/m/n/10 has_five_digit_excep
+tions\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/10 zone_detail_definitions
+\T1/ptm/m/n/10 . 
+
+Overfull \hbox (39.90804pt too wide) in paragraph at lines 394--395
+\T1/ptm/m/n/10 web-site. If you just want to sup-ply two 5-digit zips and get a
+ sin-gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+[8] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+Overfull \hbox (64.40938pt too wide) in paragraph at lines 444--446
+[]\T1/ptm/m/n/10 To get postage in-for-ma-tion, use \T1/zi4/m/n/10 fetch_mail\T
+1/ptm/m/n/10 . To get zones, use \T1/zi4/m/n/10 get_zone_three_digit \T1/ptm/m/
+n/10 or \T1/zi4/m/n/10 get_zone_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.25867pt too wide) in paragraph at lines 469--470
+\T1/ptm/m/n/10 to nu-meric, and splits \T1/zi4/m/n/10 delivery_day \T1/ptm/m/n/
+10 into YYYY-MM-DD \T1/zi4/m/n/10 delivery_date \T1/ptm/m/n/10 and \T1/zi4/m/n/
+10 delivery_by_time
+
+Overfull \hbox (55.61934pt too wide) in paragraph at lines 475--476
+\T1/zi4/m/n/10 delivery_by_time\T1/ptm/m/n/10 , from which \T1/zi4/m/n/10 deliv
+ery_duration \T1/ptm/m/n/10 in days is cal-cu-lated (\T1/zi4/m/n/10 delivery_da
+te - shipping_date\T1/ptm/m/n/10 ). 
+[9] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (9.49698pt too wide) in paragraph at lines 494--495
+[]\T1/ptm/m/n/10 A ran-dom sam-ple of all 3-digit zips and zones. The re-sult o
+f run-ning fetch_all() with \T1/zi4/m/n/10 as_range = TRUE
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+No file Rd2.ind.
+[10] (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2017/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
+enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8
+a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (10 pages, 99965 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (19 entries accepted, 0 rejected).
+Sorting entries....done (86 comparisons).
+Generating output file Rd2.ind....done (40 lines written, 1 warning).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./Rd2.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.dfu)))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [2]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.42914pt too wide) in paragraph at lines 153--154
+[]\T1/ptm/m/n/10 (boolean) Does this con-tain day-old poul-try? See [][]$\T1/zi
+4/m/n/10 https : / / pe . usps . com / text /
+[3]
+Overfull \hbox (19.86792pt too wide) in paragraph at lines 181--182
+\T1/ptm/m/n/10 query to the [][]"Postage Price Cal-cu-la-tor"[][] in dataframe 
+for-mat. The in-puts \T1/zi4/m/n/10 origin_zip\T1/ptm/m/n/10 , \T1/zi4/m/n/10 d
+estination_zip\T1/ptm/m/n/10 ,
+[4] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [5]
+Overfull \hbox (14.66603pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Displays the re-sult of a query to the ["Get Zone Chart"](http
+s://postcalc.usps.com/DomesticZoneChart/)
+
+Overfull \hbox (21.17842pt too wide) in paragraph at lines 275--276
+\T1/ptm/m/n/10 tab. If you just want to sup-ply two 5-digit zips and get a sin-
+gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [6]
+Overfull \hbox (52.85823pt too wide) in paragraph at lines 317--320
+[]\T1/ptm/m/n/10 (boolean) Ex-tract ex-tra stuff from the re-sponse? Specif-i-c
+ally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (36.81017pt too wide) in paragraph at lines 317--320
+\T1/zi4/m/n/10 local\T1/ptm/m/n/10 , \T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , an
+d \T1/zi4/m/n/10 full_response\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/1
+0 zone_detail_definitions\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [7]
+Overfull \hbox (89.6278pt too wide) in paragraph at lines 383--386
+[]\T1/ptm/m/n/10 (boolean) Should columns with more de-tails be re-tained? Spec
+if-i-cally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (67.29015pt too wide) in paragraph at lines 383--386
+\T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , and \T1/zi4/m/n/10 has_five_digit_excep
+tions\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/10 zone_detail_definitions
+\T1/ptm/m/n/10 . 
+
+Overfull \hbox (39.90804pt too wide) in paragraph at lines 394--395
+\T1/ptm/m/n/10 web-site. If you just want to sup-ply two 5-digit zips and get a
+ sin-gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+[8] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+Overfull \hbox (64.40938pt too wide) in paragraph at lines 444--446
+[]\T1/ptm/m/n/10 To get postage in-for-ma-tion, use \T1/zi4/m/n/10 fetch_mail\T
+1/ptm/m/n/10 . To get zones, use \T1/zi4/m/n/10 get_zone_three_digit \T1/ptm/m/
+n/10 or \T1/zi4/m/n/10 get_zone_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.25867pt too wide) in paragraph at lines 469--470
+\T1/ptm/m/n/10 to nu-meric, and splits \T1/zi4/m/n/10 delivery_day \T1/ptm/m/n/
+10 into YYYY-MM-DD \T1/zi4/m/n/10 delivery_date \T1/ptm/m/n/10 and \T1/zi4/m/n/
+10 delivery_by_time
+
+Overfull \hbox (55.61934pt too wide) in paragraph at lines 475--476
+\T1/zi4/m/n/10 delivery_by_time\T1/ptm/m/n/10 , from which \T1/zi4/m/n/10 deliv
+ery_duration \T1/ptm/m/n/10 in days is cal-cu-lated (\T1/zi4/m/n/10 delivery_da
+te - shipping_date\T1/ptm/m/n/10 ). 
+[9] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (9.49698pt too wide) in paragraph at lines 494--495
+[]\T1/ptm/m/n/10 A ran-dom sam-ple of all 3-digit zips and zones. The re-sult o
+f run-ning fetch_all() with \T1/zi4/m/n/10 as_range = TRUE
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) (./Rd2.ind
+[10]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 27.
+
+[11]) (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2017/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
+enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (11 pages, 110674 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (19 entries accepted, 0 rejected).
+Sorting entries....done (86 comparisons).
+Generating output file Rd2.ind....done (40 lines written, 1 warning).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./Rd2.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.dfu)))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [2]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.42914pt too wide) in paragraph at lines 153--154
+[]\T1/ptm/m/n/10 (boolean) Does this con-tain day-old poul-try? See [][]$\T1/zi
+4/m/n/10 https : / / pe . usps . com / text /
+[3]
+Overfull \hbox (19.86792pt too wide) in paragraph at lines 181--182
+\T1/ptm/m/n/10 query to the [][]"Postage Price Cal-cu-la-tor"[][] in dataframe 
+for-mat. The in-puts \T1/zi4/m/n/10 origin_zip\T1/ptm/m/n/10 , \T1/zi4/m/n/10 d
+estination_zip\T1/ptm/m/n/10 ,
+[4] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [5]
+Overfull \hbox (14.66603pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Displays the re-sult of a query to the ["Get Zone Chart"](http
+s://postcalc.usps.com/DomesticZoneChart/)
+
+Overfull \hbox (21.17842pt too wide) in paragraph at lines 275--276
+\T1/ptm/m/n/10 tab. If you just want to sup-ply two 5-digit zips and get a sin-
+gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [6]
+Overfull \hbox (52.85823pt too wide) in paragraph at lines 317--320
+[]\T1/ptm/m/n/10 (boolean) Ex-tract ex-tra stuff from the re-sponse? Specif-i-c
+ally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (36.81017pt too wide) in paragraph at lines 317--320
+\T1/zi4/m/n/10 local\T1/ptm/m/n/10 , \T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , an
+d \T1/zi4/m/n/10 full_response\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/1
+0 zone_detail_definitions\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) [7]
+Overfull \hbox (89.6278pt too wide) in paragraph at lines 383--386
+[]\T1/ptm/m/n/10 (boolean) Should columns with more de-tails be re-tained? Spec
+if-i-cally: \T1/zi4/m/n/10 specific_to_priority_mail\T1/ptm/m/n/10 ,
+
+Overfull \hbox (67.29015pt too wide) in paragraph at lines 383--386
+\T1/zi4/m/n/10 same_ndc\T1/ptm/m/n/10 , and \T1/zi4/m/n/10 has_five_digit_excep
+tions\T1/ptm/m/n/10 . Get more info with \T1/zi4/m/n/10 zone_detail_definitions
+\T1/ptm/m/n/10 . 
+
+Overfull \hbox (39.90804pt too wide) in paragraph at lines 394--395
+\T1/ptm/m/n/10 web-site. If you just want to sup-ply two 5-digit zips and get a
+ sin-gle zone back, use \T1/zi4/m/n/10 fetch_zones_five_digit\T1/ptm/m/n/10 . 
+[8] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+Overfull \hbox (64.40938pt too wide) in paragraph at lines 444--446
+[]\T1/ptm/m/n/10 To get postage in-for-ma-tion, use \T1/zi4/m/n/10 fetch_mail\T
+1/ptm/m/n/10 . To get zones, use \T1/zi4/m/n/10 get_zone_three_digit \T1/ptm/m/
+n/10 or \T1/zi4/m/n/10 get_zone_five_digit\T1/ptm/m/n/10 . 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (2.25867pt too wide) in paragraph at lines 469--470
+\T1/ptm/m/n/10 to nu-meric, and splits \T1/zi4/m/n/10 delivery_day \T1/ptm/m/n/
+10 into YYYY-MM-DD \T1/zi4/m/n/10 delivery_date \T1/ptm/m/n/10 and \T1/zi4/m/n/
+10 delivery_by_time
+
+Overfull \hbox (55.61934pt too wide) in paragraph at lines 475--476
+\T1/zi4/m/n/10 delivery_by_time\T1/ptm/m/n/10 , from which \T1/zi4/m/n/10 deliv
+ery_duration \T1/ptm/m/n/10 in days is cal-cu-lated (\T1/zi4/m/n/10 delivery_da
+te - shipping_date\T1/ptm/m/n/10 ). 
+[9] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (9.49698pt too wide) in paragraph at lines 494--495
+[]\T1/ptm/m/n/10 A ran-dom sam-ple of all 3-digit zips and zones. The re-sult o
+f run-ning fetch_all() with \T1/zi4/m/n/10 as_range = TRUE
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def) (./Rd2.ind
+[10]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 27.
+
+[11]) (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2017/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
+enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (11 pages, 110887 bytes).
+Transcript written on Rd2.log.
+Saving output to ‘postal-manual.pdf’ ...
+Done
+You may want to clean up by 'rm -Rf /var/folders/fc/n7g_vrvn0sx_st0p8lxb3ts40000gn/T//RtmpTgr9QF/Rd2pdf684f4151a215'
