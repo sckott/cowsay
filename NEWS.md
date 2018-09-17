@@ -1,3 +1,11 @@
+cowsay 0.7
+==========
+
+### NEW FEATURES
+
+* `cowsay` now supports colors via the `multicolor` package from [Amanda Dobbyn](https://github.com/aedobbyn). supports coloring by the thing being said (new `what_color` parameter) or the thing saying it (new `by_color` parameter). supports more than one color. thanks Amanda! (#59) (#61) 
+
+
 cowsay 0.6
 ==========
 
