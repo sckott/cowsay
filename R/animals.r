@@ -609,11 +609,11 @@ owl =
 # beer by Andreas Brandmaier, @brandmaier
   beer =
   "\n ----- \n%s \n ------ \n    \\\   \n     \\\  \n      \\\
-.~~~~.
-|cooɔ|
-|cooɔ|-]
-|cooɔ|-] 
-\cooɔ/
+    .~~~~.
+    |cooɔ|
+    |cooɔ|-]
+    |cooɔ|-] 
+    \\cooɔ/
 "
 )
 
