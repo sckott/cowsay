@@ -135,6 +135,15 @@ say <- function(what="Hello world!", by="cat",
   what_color <- check_color(what_color)
   by_color <- check_color(by_color)
   
+  if (crayon::has_color() == FALSE && !is.null(what_color) && !is.null(by_color)) {
+    message("Colors cannot be applied in this environment :( Try using a terminal or RStudio.")
+    what_color <- NULL
+    by_color <- NULL
+  } else {
+    what_color <- check_color(what_color)
+    by_color <- check_color(by_color)
+  }
+
   if (what == "catfact") {
     check4pkg("jsonlite")
     what <- 
