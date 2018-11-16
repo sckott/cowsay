@@ -49,7 +49,7 @@ That's right, it takes `r length(peeps)` people to make `cowsay` - it's that har
 
 ### Contributing
 
-See [CONTRIBUTING.md][.github/CONTRIBUTING.md]
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md)
 
 ### Where to find ASCII animal art
 
