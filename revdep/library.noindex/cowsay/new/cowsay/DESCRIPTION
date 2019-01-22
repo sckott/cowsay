@@ -1,0 +1,54 @@
+Package: cowsay
+Title: Messages, Warnings, Strings with Ascii Animals
+Description: Allows printing of character strings as messages/warnings/etc.
+    with ASCII animals, including cats, cows, frogs, chickens, ghosts,
+    and more.
+Version: 0.7.0
+License: MIT + file LICENSE
+Authors@R: c(
+    person("Scott", "Chamberlain", role = c("aut", "cre"), 
+      email = "myrmecocystus@gmail.com"),
+    person("Amanda", "Dobbyn", role = c("aut"), 
+      email = "amanda.e.dobbyn@gmail.com"),
+    person("Tyler", "Rinker", role = "ctb"),
+    person("Thomas", "Leeper", role = "ctb"),
+    person("Noam", "Ross", role = "ctb"),
+    person("Rich", "FitzJohn", role = "ctb"),
+    person("Carson", "Sievert", role = "ctb"),
+    person("Kiyoko", "Gotanda", role = "ctb"),
+    person("Andy", "Teucher", role = "ctb"),
+    person("Karl", "Broman", role = "ctb"),
+    person("Franz-Sebastian", "Krah", role = "ctb"),
+    person("Lucy", "D'Agostino McGowan", role = "ctb"),
+    person("Guangchuang", "Yu", role = "ctb"),
+    person("Philipp", "Boersch-Supan", role = "ctb"),
+    person("Andreas","Brandmaier", role="ctb")
+    )
+URL: https://github.com/sckott/cowsay
+BugReports: https://github.com/sckott/cowsay/issues
+LazyData: yes
+Encoding: UTF-8
+VignetteBuilder: knitr
+Imports: crayon, fortunes, rmsfact
+Suggests: curl, jsonlite, knitr, multicolor, rmarkdown, roxygen2 (>=
+        6.1.0), testthat
+RoxygenNote: 6.1.0
+RemoteType: local
+RemoteUrl: /Users/sckott/github/sac/cowsay
+Author: Scott Chamberlain [aut, cre],
+  Amanda Dobbyn [aut],
+  Tyler Rinker [ctb],
+  Thomas Leeper [ctb],
+  Noam Ross [ctb],
+  Rich FitzJohn [ctb],
+  Carson Sievert [ctb],
+  Kiyoko Gotanda [ctb],
+  Andy Teucher [ctb],
+  Karl Broman [ctb],
+  Franz-Sebastian Krah [ctb],
+  Lucy D'Agostino McGowan [ctb],
+  Guangchuang Yu [ctb],
+  Philipp Boersch-Supan [ctb],
+  Andreas Brandmaier [ctb]
+Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Built: R 3.5.1; ; 2018-09-17 22:28:59 UTC; unix

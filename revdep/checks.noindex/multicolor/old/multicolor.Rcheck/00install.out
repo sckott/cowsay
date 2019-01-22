@@ -1,0 +1,10 @@
+* installing *source* package ‘multicolor’ ...
+** package ‘multicolor’ successfully unpacked and MD5 sums checked
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+* DONE (multicolor)
