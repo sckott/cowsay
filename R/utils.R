@@ -20,4 +20,3 @@ check_color <- function(clr) {
   }
   return(clr)
 }
-

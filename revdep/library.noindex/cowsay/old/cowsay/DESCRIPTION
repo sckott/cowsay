@@ -1,0 +1,52 @@
+Package: cowsay
+Title: Messages, Warnings, Strings with Ascii Animals
+Description: Allows printing of character strings as messages/warnings/etc.
+    with ASCII animals, including cats, cows, frogs, chickens, ghosts,
+    and more.
+Version: 0.6.0
+License: MIT + file LICENSE
+Authors@R: c(
+    person("Scott", "Chamberlain", role = c("aut", "cre"), 
+      email = "myrmecocystus@gmail.com"),
+    person("Tyler", "Rinker", role = "ctb"),
+    person("Thomas", "Leeper", role = "ctb"),
+    person("Noam", "Ross", role = "ctb"),
+    person("Rich", "FitzJohn", role = "ctb"),
+    person("Carson", "Sievert", role = "ctb"),
+    person("Kiyoko", "Gotanda", role = "ctb"),
+    person("Andy", "Teucher", role = "ctb"),
+    person("Karl", "Broman", role = "ctb"),
+    person("Franz-Sebastian", "Krah", role = "ctb"),
+    person("Lucy", "D'Agostino McGowan", role = "ctb"),
+    person("Guangchuang", "Yu", role = "ctb"),
+    person("Philipp", "Boersch-Supan", role = "ctb"),
+    person("Andreas","Brandmaier", role="ctb")
+    )
+URL: https://github.com/sckott/cowsay
+BugReports: https://github.com/sckott/cowsay/issues
+LazyData: yes
+VignetteBuilder: knitr
+Imports: fortunes, rmsfact
+Suggests: roxygen2 (>= 6.0.1), jsonlite, testthat, knitr, rmarkdown
+Enhances: magrittr
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-05-15 17:47:58 UTC; sckott
+Author: Scott Chamberlain [aut, cre],
+  Tyler Rinker [ctb],
+  Thomas Leeper [ctb],
+  Noam Ross [ctb],
+  Rich FitzJohn [ctb],
+  Carson Sievert [ctb],
+  Kiyoko Gotanda [ctb],
+  Andy Teucher [ctb],
+  Karl Broman [ctb],
+  Franz-Sebastian Krah [ctb],
+  Lucy D'Agostino McGowan [ctb],
+  Guangchuang Yu [ctb],
+  Philipp Boersch-Supan [ctb],
+  Andreas Brandmaier [ctb]
+Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Repository: CRAN
+Date/Publication: 2018-05-15 18:13:05 UTC
+Built: R 3.5.0; ; 2018-05-16 10:23:19 UTC; unix

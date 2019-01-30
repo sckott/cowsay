@@ -37,6 +37,10 @@ If you are familiar with `cowsay` on the cli, then you know what this is, but fo
 
 That's right, it takes 16 people to make `cowsay` - it's that hard.
 
+### Contributing
+
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+
 ### Where to find ASCII animal art
 
 Sources to look in:
@@ -127,9 +131,10 @@ sort(names(animals))
 
 ```r
 say('time')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
-#> 2018-08-02 11:54:09 
+#> 2018-11-16 09:40:29 
 #>  --------------
 #>     \
 #>       \
@@ -150,6 +155,7 @@ say('time')
 
 ```r
 say("ain't that some shit", "chicken")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
@@ -176,6 +182,7 @@ Add some color:
 
 ```r
 library(multicolor)
+#> Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
 library(crayon)
 ```
 
@@ -184,6 +191,7 @@ library(crayon)
 ```r
 say("boo!", "ghost", 
     what_color = "cyan", by_color = "saddlebrown")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
@@ -203,6 +211,7 @@ say("boo!", "ghost",
 ```r
 say("I love hooo you are!", "owl", 
     what_color = rgb(0, 1, 1), by_color = "#FF0000")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  ----- 
 #> I love hooo you are! 
@@ -225,10 +234,11 @@ String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
 say(what = "rms", by = "rms", 
         what_color = yellow$bgMagenta$bold,
         by_color = cyan$italic)
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
-#> Richard Stallman will never die, but may some day go to /dev/null. 
+#> Richard Stallman is in fact also a little sad that Steve Jobs is gone because it has diminished the size of the loyal opposition. 
 #>  ------ 
 #>     \   
 #>      \
@@ -258,6 +268,7 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
     by = "trilobite", 
     what_color = bgBlue$cyan$italic,
     by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>   
 #>  -------------- 
@@ -314,6 +325,7 @@ say(what = "I'm a rare Irish buffalo",
 
 ```r
 say("hell no!")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
 #> hell no! 
@@ -338,6 +350,7 @@ say("hell no!")
 
 ```r
 say("hell no!", type="warning")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> Warning in say("hell no!", type = "warning"): 
 #>  -------------- 
 #> hell no! 
@@ -362,6 +375,7 @@ say("hell no!", type="warning")
 
 ```r
 say("hell no!", type="string")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "
 ```
 
@@ -398,6 +412,7 @@ From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/stat
 
 ```r
 say("it's caturday", "longcat")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
@@ -436,6 +451,7 @@ say("it's caturday", "longcat")
 
 ```r
 say('NO!', by='grumpycat')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>    
 #>  -------------- 
@@ -452,6 +468,7 @@ say('NO!', by='grumpycat')
 
 ```r
 say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>    
 #>  -------------- 
@@ -468,6 +485,7 @@ say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
 
 ```r
 say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>    
 #>  -------------- 
@@ -486,6 +504,7 @@ say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
 
 ```r
 say(by='signbunny')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
 #> Hello world! 
@@ -502,6 +521,7 @@ say(by='signbunny')
 
 ```r
 say(by='fish')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
@@ -519,12 +539,13 @@ say(by='fish')
 
 ```r
 say('fortune','cat')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
-#> Some OSX users know that OSX is really Unix [...], others think that OSX is cooler Windows, and they have ontological problems with non-Apple phenomena and constructs.
-#>  Roger Bivand
-#>  R-SIG-Geo
-#>  May 2012 
+#> As to whether you can do a Lilliefors test for several groups, that depends entirely on your ability to understand what the underlying question would be (see Adams D 1979).
+#>  Knut M. Wittkowski
+#>  R-help
+#>  February 2004 
 #>  --------------
 #>     \
 #>       \
@@ -547,6 +568,7 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 
 ```r
 say(fortune=100)
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
 #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
@@ -574,6 +596,7 @@ say(fortune=100)
 
 ```r
 say(fortune='whatever')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  -------------- 
 #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
@@ -603,6 +626,7 @@ say(fortune='whatever')
 
 ```r
 say("Hi there :)", by='trilobite')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>   
 #>  -------------- 
@@ -628,6 +652,7 @@ say("Hi there :)", by='trilobite')
 
 ```r
 say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>     
 #>  -------------- 
@@ -669,6 +694,7 @@ say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 
 ```r
 say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>     
 #>  -------------- 
@@ -698,6 +724,7 @@ say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 ```r
 say(fortune=59, by="clippy")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ----- 
@@ -731,6 +758,7 @@ say("starwars", by = "yoda")
 
 ```r
 say("hi, i'm a bat", by="bat")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ------------- 
@@ -758,15 +786,14 @@ See also `bat2`
 
 ```r
 say("fortune", by = "monkey")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #> 
 #>  ------------- 
-#> Gregor Gorjanc: But imagine how hard would it be to have two separate modes ... argh, probably a mess^2 or have I missed something obvious.
-#> Martin Maechler: Yes, exactly: "Mess ^ 2" -- and if you allow both 'drop' and 'na.rm' options, it's "Mess ^ 3" -- not something anyone really wants!
-#>  Gregor Gorjanc and Martin Maechler
-#>  in a discussion whether 'drop' should be set in options(), possibly depending on different user vs. programmer modes
-#>  R-devel
-#>  September 2006 
+#> Overall, SAS is about 11 years behind R and S-Plus in statistical capabilities (last year it was about 10 years behind) in my estimation.
+#>  Frank Harrell (SAS User, 1969-1991)
+#>  R-help
+#>  September 2003 
 #>  -------------- 
 #>               \   
 #>                \  
@@ -791,12 +818,13 @@ say("fortune", by = "monkey")
 
 ```r
 say("fortune", by = "daemon")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  ----- 
-#> The documentation level of R is already much higher than average for open source software and even than some commercial packages (esp. SPSS is notorious for its attitude of "You want to do one of these things. If you don't understand what the output means, click help and we'll pop up five lines of mumbo-jumbo that you're not going to understand either.")
-#>  Peter Dalgaard
+#> The only people who should use the assign function are those who fully understand why you should never use the assign function.
+#>  Greg Snow
 #>  R-help
-#>  April 2002 
+#>  July 2009 
 #>  ------ 
 #>     \   
 #>      \  
@@ -827,6 +855,7 @@ say("fortune", by = "daemon")
 
 ```r
 say("je ne regrette rien", by = "egret")
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>  ----- 
 #> je ne regrette rien 
@@ -896,6 +925,7 @@ endless_horse()
 ```r
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+#> Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #> 
 #>    
 #>  -------------- 

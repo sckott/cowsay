@@ -1,0 +1,14 @@
+* installing *source* package ‘monkeylearn’ ...
+** package ‘monkeylearn’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Please indicate your Monkeylearn plan in the MONKEYLEARN_PLAN environment variable
+
+          Now using 'free' by default
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (monkeylearn)
