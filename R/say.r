@@ -13,9 +13,9 @@
 #' We use \code{\link{match.arg}} internally, so you can use unique parts of
 #' words that don't conflict with others, like "g" for "ghost" because there's 
 #' no other animal that starts with "g".
-#' @param type (character) One of message (default), warning, or string 
-#' (returns string). If multiple colors are supplied to \code{what_color} or 
+#' @param type (character) One of message (default), warning, print (default in non-interactive mode), or string (returns string). If multiple colors are supplied to \code{what_color} or 
 #' \code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)
+#' If run in non-interactive mode default type is print, so that output goes to stdout rather than stderr, where messages and warnings go. 
 #' @param what_color (character or crayon function) One or more 
 #' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s) 
 #' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
@@ -124,7 +124,7 @@
 #' say(fortune=59, by="clippy")
 
 say <- function(what="Hello world!", by="cat", 
-                type="message", 
+                type=NULL, 
                 what_color=NULL, by_color=NULL,  
                 length=18, fortune=NULL, ...) {
 
@@ -139,6 +139,14 @@ say <- function(what="Hello world!", by="cat",
   } else {
     what_color <- check_color(what_color)
     by_color <- check_color(by_color)
+  }
+  
+  if (is.null(type)) {
+    if (interactive()) {
+      type <- "message"
+    } else {
+      type <- "print"
+    }
   }
 
   if (what == "catfact") {
@@ -232,5 +240,6 @@ say <- function(what="Hello world!", by="cat",
   switch(type,
          message = message(out),
          warning = warning(out),
+         print = cat(out),
          string = out)
 }
