@@ -17,32 +17,36 @@ test_that("say types works as expected", {
     length(suppressWarnings(say("foo", type = "warning")))
   )
   
-  expect_silent(
-    suppressMessages(say(what = "rms", by = "rms", 
+  expect_equal(
+    say(what = "rms", by = "rms",
         what_color = yellow$bgMagenta$bold,
-        by_color = cyan$italic))
+        by_color = cyan$italic),
+    say(what = "rms", by = "rms", type = "print")
   )
   
-  expect_silent(
-    suppressMessages(say(what = "I'm a rare Irish buffalo", 
-        by = "buffalo", what_color = "pink", 
-        by_color = c("green", "white", "orange")))
+  expect_equal(
+    say(what = "I'm a rare Irish buffalo", 
+        by = "buffalo", 
+        what_color = "pink", 
+        by_color = c("green", "white", "orange")),
+    say(what = "I'm a rare Irish buffalo", 
+        by = "buffalo",
+        type = "print")
   )
   
-  expect_silent(
-    suppressMessages(
-      say("I'm not dying, you're dying", "yoda", 
-          what_color = "green",
-          by_color = colors())
-    )
+  expect_equal(
+    say("I'm not dying, you're dying", "yoda",
+        what_color = "green",
+        by_color = colors()),
+    say("I'm not dying, you're dying", "yoda",
+        type = "print")
   )
-  
-  expect_silent(
-    suppressMessages(
-      say("asdfghjkl;'", "chicken", 
+
+  expect_equal(
+    say("asdfghjkl;'", "chicken",
           what_color = blue,
-          by_color = c("rainbow", colors()[sample(100, 1)], "rainbow"))
-    )
+          by_color = c("rainbow", colors()[sample(100, 1)], "rainbow")),
+    say("asdfghjkl;'", "chicken", type = "print")
   )
 
   # hypnotoad can say anything
