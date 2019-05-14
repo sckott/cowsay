@@ -4,7 +4,7 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = "message",
+say(what = "Hello world!", by = "cat", type = NULL,
   what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
   ...)
 }
@@ -22,9 +22,9 @@ We use \code{\link{match.arg}} internally, so you can use unique parts of
 words that don't conflict with others, like "g" for "ghost" because there's 
 no other animal that starts with "g".}
 
-\item{type}{(character) One of message (default), warning, or string 
-(returns string). If multiple colors are supplied to \code{what_color} or 
-\code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)}
+\item{type}{(character) One of message (default), warning, print (default in non-interactive mode), or string (returns string). If multiple colors are supplied to \code{what_color} or 
+\code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)
+If run in non-interactive mode default type is print, so that output goes to stdout rather than stderr, where messages and warnings go.}
 
 \item{what_color}{(character or crayon function) One or more 
 \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s) 
