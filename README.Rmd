@@ -151,7 +151,7 @@ say("boo!", "ghost",
 
 
 <p align="left">
-  <img src="./man/img/ghost.jpg" alt="ghost" height="50px">
+  <img src="./man/img/ghost.jpg" alt="ghost" height="200px">
 </p>
 
 
@@ -162,7 +162,7 @@ say("I love hooo you are!", "owl",
 
 
 <p align="left">
-  <img src="./man/img/owl.jpg" alt="owl" height="50px">
+  <img src="./man/img/owl.jpg" alt="owl" height="200px">
 </p>
 
 
@@ -177,7 +177,7 @@ say(what = "rms", by = "rms",
 
 
 <p align="left">
-  <img src="./man/img/rms.jpg" alt="rms" height="50px">
+  <img src="./man/img/rms.jpg" alt="rms" height="350px">
 </p>
 
 
@@ -193,7 +193,7 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
 
 
 <p align="left">
-  <img src="./man/img/trilobite.jpg" alt="trilobite" height="50px">
+  <img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
 </p>
 
 
@@ -209,7 +209,7 @@ say(what = "I'm a rare Irish buffalo",
 
 
 <p align="left">
-  <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="50px">
+  <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
 
 
