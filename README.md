@@ -125,7 +125,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2019-05-22 12:54:40 
+    #> 2019-05-22 13:06:16 
     #>  --------------
     #>     \
     #>       \
@@ -171,14 +171,13 @@ Add some color:
         what_color = "cyan", by_color = "saddlebrown")
 
 <p align="left">
-<img src="./man/img/ghost.jpg" alt="ghost" height="200px">
+<img src="./man/img/ghost.jpg" alt="ghost" height="50px">
 </p>
-
     say("I love hooo you are!", "owl", 
         what_color = rgb(0, 1, 1), by_color = "#FF0000")
 
 <p align="left">
-<img src="./man/img/owl.jpg" alt="owl" height="200px">
+<img src="./man/img/owl.jpg" alt="owl" height="50px">
 </p>
 String styles together
 [crayon-style](https://github.com/r-lib/crayon#styles):
@@ -188,7 +187,7 @@ String styles together
             by_color = cyan$italic)
 
 <p align="left">
-<img src="./man/img/rms.jpg" alt="rms" height="350px">
+<img src="./man/img/rms.jpg" alt="rms" height="50px">
 </p>
 This doesn’t preclude you from adding extra crayon colors to your `what`
 string directly.
@@ -199,7 +198,7 @@ string directly.
         by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 
 <p align="left">
-<img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
+<img src="./man/img/trilobite.jpg" alt="trilobite" height="50px">
 </p>
 Multiple colors are also possible (uses the
 [`multicolor`](https://github.com/aedobbyn/multicolor) package):
@@ -210,7 +209,7 @@ Multiple colors are also possible (uses the
         by_color = c("green", "white", "orange"))
 
 <p align="left">
-<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
+<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="50px">
 </p>
 ### Vary type of output, default calls message()
 
@@ -386,12 +385,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Patrick Burns: In the old days with S-PLUS, the rule of thumb was that you needed 10 times as much memory as your dataset. [...] R (and current versions of S-PLUS) are more frugal than S-PLUS was back then.
-    #> Ajay Shah: Hmm, so it'd be interesting to apply current prices of RAM and current prices of R, to work out the break-even point at which it's better to buy SAS! :-) Without making any calculations, I can't see how SAS can compete with the price of 4G of RAM.
-    #>  Patrick Burns and Ajay Shah
-    #>  on whether to use R, S-PLUS or SAS
-    #>  R-SIG-Finance
-    #>  December 2004 
+    #> We are teaching stuff like mathematics, statistics, statistical programming and so on, but we cannot teach each possible software product - we also don't teach how to analyze each possible dataset that might find its way to the statistician's desk, we just use the iris data and Anscombe's quartet. ;-)
+    #>  Uwe Ligges
+    #>  in a thread about whether universities have to teach students how to use commercial software
+    #>  R-help
+    #>  April 2005 
     #>  --------------
     #>     \
     #>       \
@@ -597,10 +595,14 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> For the S system, which has forever altered the way people analyze, visualize, and manipulate data .... S is an elegant, widely accepted, and enduring software system, with conceptual integrity, thanks to the insight, taste, and effort of John Chambers.
-    #>  Association for Computing Machinery
-    #>  ACM/Software System Award citation
-    #>  1998 
+    #> Paul Gilbert: [code comparing speed of apply(z,2,sum) vs. rep(1,10000)%*%z)] which seemed completely contrary to all my childhood teachings.
+    #> Douglas Bates: Must have had an interesting childhood if you spent it learning about the speeds of various matrix multiplication techniques.
+    #> Paul Gilbert: [...] why is apply so slow?
+    #> Brian Ripley: 'so slow' sic: what are you going to do in the 7ms you saved?
+    #>  Paul Gilbert, Douglas Bates, and Brian D. Ripley
+    #>  discussing 'the incredible lightness of crossprod'
+    #>  R-devel
+    #>  January 2005 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -624,12 +626,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Bert Gunter: However, I do not understand the substitute(...()) idiom. Would you care to explain it? (No is an acceptable answer!).
-    #> Bill Dunlap: I don't completely understand it either, I treat it as an idiom. I saw it on this list once.
-    #>  Bert Gunter and Bill Dunlap
-    #>  on how to recover object names when using the ... argument in a function
+    #> There are actual error messages, and until you show them, we can not help as the mind reading machine is currently off for repairs.
+    #>  Dirk Eddelbuettel
+    #>  after reports about errors with R CMD check
     #>  R-help
-    #>  October 2013 
+    #>  July 2010 
     #>  ------ 
     #>     \   
     #>      \  
