@@ -173,6 +173,7 @@ Add some color:
 <p align="left">
 <img src="./man/img/ghost.jpg" alt="ghost" height="200px">
 </p>
+
     say("I love hooo you are!", "owl", 
         what_color = rgb(0, 1, 1), by_color = "#FF0000")
 
