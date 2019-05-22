@@ -171,13 +171,13 @@ Add some color:
         what_color = "cyan", by_color = "saddlebrown")
 
 <p align="left">
-<img src="./man/img/ghost.jpg" alt="ghost" height="350px">
+<img src="./man/img/ghost.jpg" alt="ghost" height="200px">
 </p>
     say("I love hooo you are!", "owl", 
         what_color = rgb(0, 1, 1), by_color = "#FF0000")
 
 <p align="left">
-<img src="./man/img/owl.jpg" alt="owl" height="350px">
+<img src="./man/img/owl.jpg" alt="owl" height="200px">
 </p>
 String styles together
 [crayon-style](https://github.com/r-lib/crayon#styles):
@@ -198,7 +198,7 @@ string directly.
         by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 
 <p align="left">
-<img src="./man/img/trilobite.jpg" alt="trilobite" height="350px">
+<img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
 </p>
 Multiple colors are also possible (uses the
 [`multicolor`](https://github.com/aedobbyn/multicolor) package):
