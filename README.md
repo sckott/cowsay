@@ -171,13 +171,13 @@ Add some color:
         what_color = "cyan", by_color = "saddlebrown")
 
 <p align="left">
-<img src="./man/img/ghost.jpg" alt="ghost" height="50px">
+<img src="./man/img/ghost.jpg" alt="ghost" height="350px">
 </p>
     say("I love hooo you are!", "owl", 
         what_color = rgb(0, 1, 1), by_color = "#FF0000")
 
 <p align="left">
-<img src="./man/img/owl.jpg" alt="owl" height="50px">
+<img src="./man/img/owl.jpg" alt="owl" height="350px">
 </p>
 String styles together
 [crayon-style](https://github.com/r-lib/crayon#styles):
@@ -187,7 +187,7 @@ String styles together
             by_color = cyan$italic)
 
 <p align="left">
-<img src="./man/img/rms.jpg" alt="rms" height="50px">
+<img src="./man/img/rms.jpg" alt="rms" height="350px">
 </p>
 This doesn’t preclude you from adding extra crayon colors to your `what`
 string directly.
@@ -198,7 +198,7 @@ string directly.
         by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 
 <p align="left">
-<img src="./man/img/trilobite.jpg" alt="trilobite" height="50px">
+<img src="./man/img/trilobite.jpg" alt="trilobite" height="350px">
 </p>
 Multiple colors are also possible (uses the
 [`multicolor`](https://github.com/aedobbyn/multicolor) package):
@@ -209,7 +209,7 @@ Multiple colors are also possible (uses the
         by_color = c("green", "white", "orange"))
 
 <p align="left">
-<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="50px">
+<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
 ### Vary type of output, default calls message()
 
