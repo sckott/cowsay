@@ -125,7 +125,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2019-05-22 13:06:16 
+    #> 2019-05-22 13:09:01 
     #>  --------------
     #>     \
     #>       \
@@ -171,13 +171,13 @@ Add some color:
         what_color = "cyan", by_color = "saddlebrown")
 
 <p align="left">
-<img src="./man/img/ghost.jpg" alt="ghost" height="50px">
+<img src="./man/img/ghost.jpg" alt="ghost" height="200px">
 </p>
     say("I love hooo you are!", "owl", 
         what_color = rgb(0, 1, 1), by_color = "#FF0000")
 
 <p align="left">
-<img src="./man/img/owl.jpg" alt="owl" height="50px">
+<img src="./man/img/owl.jpg" alt="owl" height="200px">
 </p>
 String styles together
 [crayon-style](https://github.com/r-lib/crayon#styles):
@@ -187,7 +187,7 @@ String styles together
             by_color = cyan$italic)
 
 <p align="left">
-<img src="./man/img/rms.jpg" alt="rms" height="50px">
+<img src="./man/img/rms.jpg" alt="rms" height="350px">
 </p>
 This doesn’t preclude you from adding extra crayon colors to your `what`
 string directly.
@@ -198,7 +198,7 @@ string directly.
         by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 
 <p align="left">
-<img src="./man/img/trilobite.jpg" alt="trilobite" height="50px">
+<img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
 </p>
 Multiple colors are also possible (uses the
 [`multicolor`](https://github.com/aedobbyn/multicolor) package):
@@ -209,7 +209,7 @@ Multiple colors are also possible (uses the
         by_color = c("green", "white", "orange"))
 
 <p align="left">
-<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="50px">
+<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
 ### Vary type of output, default calls message()
 
@@ -385,11 +385,10 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> We are teaching stuff like mathematics, statistics, statistical programming and so on, but we cannot teach each possible software product - we also don't teach how to analyze each possible dataset that might find its way to the statistician's desk, we just use the iris data and Anscombe's quartet. ;-)
-    #>  Uwe Ligges
-    #>  in a thread about whether universities have to teach students how to use commercial software
+    #> I begin to think that R needs a _mis_fortunes package...
+    #>  Stephen L.R. Ellison
     #>  R-help
-    #>  April 2005 
+    #>  March 2010 
     #>  --------------
     #>     \
     #>       \
@@ -437,11 +436,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-    #> Joshua Ulrich: That's the magic_pony function.
-    #>  Justin and Joshua Ulrich
-    #>  stackoverflow.com
-    #>  June 2013 
+    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+    #>  Tom Backer Johnsen and Barry Rowlingson
+    #>  R-help
+    #>  February 2006 
     #>  --------------
     #>     \
     #>       \
@@ -595,14 +594,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> Paul Gilbert: [code comparing speed of apply(z,2,sum) vs. rep(1,10000)%*%z)] which seemed completely contrary to all my childhood teachings.
-    #> Douglas Bates: Must have had an interesting childhood if you spent it learning about the speeds of various matrix multiplication techniques.
-    #> Paul Gilbert: [...] why is apply so slow?
-    #> Brian Ripley: 'so slow' sic: what are you going to do in the 7ms you saved?
-    #>  Paul Gilbert, Douglas Bates, and Brian D. Ripley
-    #>  discussing 'the incredible lightness of crossprod'
-    #>  R-devel
-    #>  January 2005 
+    #> R is a complex program. If you can't work out how to find the documentation, I doubt you will be able to use R.
+    #>  David Kirby
+    #>  in response to a vague question on where to find documentation for R
+    #>  R-help
+    #>  February 2010 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -626,11 +622,10 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> There are actual error messages, and until you show them, we can not help as the mind reading machine is currently off for repairs.
-    #>  Dirk Eddelbuettel
-    #>  after reports about errors with R CMD check
+    #> In general, it's much easier to create output from a R object than create an R object from output.
+    #>  Hadley Wickham
     #>  R-help
-    #>  July 2010 
+    #>  December 2009 
     #>  ------ 
     #>     \   
     #>      \  
