@@ -21,6 +21,7 @@
 #'  \item Scott Chamberlain
 #'  \item Thomas Leeper
 #'  \item Tyler Rinker
+#'  \item Marion Louveaux
 #' }
 #' 
 #' 

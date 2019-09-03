@@ -42,7 +42,8 @@ peeps <- c(
   "Paolo Sonego",
   "Philipp Boersch-Supan",
   "Andreas Brandmaier",
-  "Amanda Dobbyn"
+  "Amanda Dobbyn",
+  "Marion Louveaux"
 )
 ```
 

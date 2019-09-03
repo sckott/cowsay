@@ -28,6 +28,7 @@ Contributors:
  \item Scott Chamberlain
  \item Thomas Leeper
  \item Tyler Rinker
+ \item Marion Louveaux
 }
 
 There is only one function in the cowsay package. Simplicity for the win.
