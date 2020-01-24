@@ -11,7 +11,7 @@
 
 <meta name="author" content="Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan" />
 
-<meta name="date" content="2018-05-15" />
+<meta name="date" content="2018-09-17" />
 
 <title>Introduction to cowsay</title>
 
@@ -1360,6 +1360,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -1484,7 +1487,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Introduction to cowsay</h1>
 <h4 class="author"><em>Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan</em></h4>
-<h4 class="date"><em>2018-05-15</em></h4>
+<h4 class="date"><em>2018-09-17</em></h4>
 
 </div>
 
@@ -1497,7 +1500,7 @@ div.tocify {
 <p>or dev version from GitHub</p>
 <pre class="r"><code>install.packages(&quot;devtools&quot;)
 devtools::install_github(&quot;sckott/cowsay&quot;)</code></pre>
-<pre class="r"><code>library(&quot;cowsay&quot;)</code></pre>
+<pre class="r"><code>library(cowsay)</code></pre>
 </div>
 <div id="the-animals" class="section level2">
 <h2>The animals</h2>
@@ -1533,6 +1536,7 @@ cat(cow)
 <h2>Say something</h2>
 <p>We expose the function <code>say()</code> in this package, which you can use to envoke any animal in the package, and make it say whatever you want. Some examples:</p>
 <pre class="r"><code>say(&quot;why did the chicken cross the road&quot;, &quot;chicken&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt; 
 #&gt;  ----- 
@@ -1553,6 +1557,7 @@ cat(cow)
 #&gt;             /` /` [nosig]
 #&gt; </code></pre>
 <pre class="r"><code>say(&quot;boo!&quot;, &quot;ghost&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt; 
 #&gt;  ----- 
@@ -1567,6 +1572,7 @@ cat(cow)
 #&gt;       `~~~' [nosig]
 #&gt; </code></pre>
 <pre class="r"><code>say(&quot;nope, don't do that&quot;, type = &quot;warning&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; Warning in say(&quot;nope, don't do that&quot;, type = &quot;warning&quot;): 
 #&gt;  -------------- 
 #&gt; nope, don't do that 
@@ -1587,9 +1593,10 @@ cat(cow)
 #&gt; </code></pre>
 <p>There’s the special <code>time</code>, that will print out the time</p>
 <pre class="r"><code>say('time')
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt;  -------------- 
-#&gt; 2018-05-15 10:47:57 
+#&gt; 2018-09-17 15:57:12 
 #&gt;  --------------
 #&gt;     \
 #&gt;       \
@@ -1611,6 +1618,7 @@ cat(cow)
 <p>You can use <code>say()</code> and give back a string, message, or warning</p>
 <p>Message</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt;  ----- 
 #&gt; hello world 
@@ -1622,6 +1630,7 @@ cat(cow)
 #&gt;              ||      ||</code></pre>
 <p>Warning</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;warning&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; Warning in say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;warning&quot;): 
 #&gt;  ----- 
 #&gt; hello world 
@@ -1633,7 +1642,149 @@ cat(cow)
 #&gt;              ||      ||</code></pre>
 <p>String</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;string&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; [1] &quot;\n ----- \nhello world \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||&quot;</code></pre>
+</div>
+<div id="add-color" class="section level2">
+<h2>Add color</h2>
+<pre class="r"><code>library(jsonlite)
+library(multicolor)</code></pre>
+<p>We rely on the <a href="https://github.com/r-lib/crayon"><code>crayon</code></a> package for color and the <a href="https://github.com/aedobbyn/multicolor"><code>multicolor</code></a> package for multiple colors. The arguments you supply to <code>what_color</code> and <code>by_color</code> can be strings – either the color name or a hex value – or a <a href="https://github.com/r-lib/crayon#styles">function of class <code>crayon</code></a>.</p>
+<pre class="r"><code>say(what = &quot;holygrail&quot;,
+    by = &quot;rabbit&quot;,
+    what_color = &quot;#FF4500&quot;,
+    by_color = &quot;red&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+#&gt; 
+#&gt; 
+#&gt;  ----- 
+#&gt; She looks like one. 
+#&gt;  ------ 
+#&gt;     \   
+#&gt;      \
+#&gt;       ( )_( )
+#&gt;       (='.'=)
+#&gt;       (^)_(^) [nosig]
+#&gt; </code></pre>
+<p><code>colors()</code> are all supported as are any <code>rgb</code> values that evaluate to a string. Supplying multiple colors for <code>what_color</code> or <code>by_color</code> is allowed, as long as they’re in a character vector. “rainbow” is also allowed.</p>
+<pre class="r"><code>say(what = &quot;arresteddevelopment&quot;, 
+    by = sample(names(animals), 1),
+    what_color = rgb(.1, .2, .3),
+    by_color = sample(colors(), 5),
+    type = &quot;message&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+#&gt; 
+#&gt;  ----- 
+#&gt; Steve Holt! 
+#&gt;  ------ 
+#&gt;     \   
+#&gt;      \  
+#&gt;       \
+#&gt;        \   _,
+#&gt;       -==&lt;' `
+#&gt;           ) /
+#&gt;          / (_.
+#&gt;         |  ,-,`\
+#&gt;          \\   \ \
+#&gt;           `\,  \ \
+#&gt;            ||\  \`|,
+#&gt;  jgs      _|| `=`-'
+#&gt;          ~~`~`</code></pre>
+<pre class="r"><code>say(what = &quot;arresteddevelopment&quot;, 
+    by = sample(names(animals), 1),
+    what_color = rgb(.1, .2, .3),
+    by_color = sample(colors(), 5),
+    type = &quot;message&quot;)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+#&gt; 
+#&gt; 
+#&gt;  ----- 
+#&gt; Michael! 
+#&gt;  ------ 
+#&gt;     \   
+#&gt;      \  
+#&gt;       \
+#&gt;        ,
+#&gt;     _,,)\.~,,._
+#&gt;      (()`  ``)\))),,_
+#&gt;       |     \ ''((\)))),,_          ____
+#&gt;       |6`   |   ''((\())) &quot;-.____.-&quot;    `-.-,
+#&gt;       |    .'\    ''))))'                  \)))
+#&gt;       |   |   `.     ''                     ((((
+#&gt;       \, _)     \/                          |))))
+#&gt;        `'        |                          (((((
+#&gt;                  \                  |       ))))))
+#&gt;                   `|    |           ,\     /((((((
+#&gt;                    |   / `-.______.&lt;  \   |  )))))
+#&gt;                    |   |  /         `. \  \  ((((
+#&gt;                    |  / \ |           `.\  | (((
+#&gt;                    \  | | |             )| |  ))
+#&gt;                     | | | |             || |  '   [endless.horse]
+#&gt;                     | | | |             || |</code></pre>
+<p><code>&quot;rainbow&quot;</code> is the same as <code>c(&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;purple&quot;)</code>. Saves you a bit of typing.</p>
+<pre class="r"><code>say(what = &quot;foobar&quot;,
+    by = &quot;shark&quot;,
+    what_color = &quot;rainbow&quot;,
+    by_color = c(&quot;rainbow&quot;, &quot;rainbow&quot;, &quot;rainbow&quot;))
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+#&gt; 
+#&gt;     
+#&gt;  -------------- 
+#&gt; foobar 
+#&gt;  --------------
+#&gt;     \
+#&gt;       \
+#&gt;         \
+#&gt;               /&quot;&quot;-._
+#&gt;               .       '-,
+#&gt;                :          '',
+#&gt;                 ;      *     '.
+#&gt;                  ' *         () '.
+#&gt;                    \               \
+#&gt;                     \      _.---.._ '.
+#&gt;                     :  .' _.--''-''  \ ,'
+#&gt;         .._           '/.'             . ;
+#&gt;         ; `-.          ,                \'
+#&gt;          ;   `,         ;              ._\
+#&gt;           ;    \     _,-'                ''--._
+#&gt;           :    \_,-'                          '-._
+#&gt;           \ ,-'                       .          '-._
+#&gt;           .'         __.-'';            \...,__       '.
+#&gt;         .'      _,-'        \              \   ''--.,__  '\
+#&gt;         /    _,--' ;         \              ;           \^.}
+#&gt;         ;_,-' )     \  )\      )            ;
+#&gt;              /       \/  \_.,-'             ;
+#&gt;             /                              ;
+#&gt;          ,-'  _,-'''-.    ,-.,            ;      PFA
+#&gt;       ,-' _.-'        \  /    |/'-._...--'
+#&gt;      :--``             )/
+#&gt;   '
+#&gt; </code></pre>
+<p>The main advantage of using <code>crayon</code> functions instead of color strings is the ability to combine styles together.</p>
+<pre class="r"><code>library(crayon)
+
+say(what = &quot;simpsons&quot;,
+    by = &quot;egret&quot;,
+    what_color = bgBlue$white$italic,
+    by_color = bold$green)
+#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+#&gt; 
+#&gt;  ----- 
+#&gt; I didn't get rich by signing checks. 
+#&gt;  ------ 
+#&gt;     \   
+#&gt;      \  
+#&gt;       \
+#&gt;        \   _,
+#&gt;       -==&lt;' `
+#&gt;           ) /
+#&gt;          / (_.
+#&gt;         |  ,-,`\
+#&gt;          \\   \ \
+#&gt;           `\,  \ \
+#&gt;            ||\  \`|,
+#&gt;  jgs      _|| `=`-'
+#&gt;          ~~`~`</code></pre>
 </div>
 
 

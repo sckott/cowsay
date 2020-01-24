@@ -11,3 +11,4 @@ CODE_OF_CONDUCT.md
 ^revdep$
 .github
 ^codemeta\.json$
+revdep/

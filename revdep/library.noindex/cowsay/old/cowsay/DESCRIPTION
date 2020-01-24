@@ -3,11 +3,13 @@ Title: Messages, Warnings, Strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc.
     with ASCII animals, including cats, cows, frogs, chickens, ghosts,
     and more.
-Version: 0.6.0
+Version: 0.7.0
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
       email = "myrmecocystus@gmail.com"),
+    person("Amanda", "Dobbyn", role = c("aut"), 
+      email = "amanda.e.dobbyn@gmail.com"),
     person("Tyler", "Rinker", role = "ctb"),
     person("Thomas", "Leeper", role = "ctb"),
     person("Noam", "Ross", role = "ctb"),
@@ -25,14 +27,16 @@ Authors@R: c(
 URL: https://github.com/sckott/cowsay
 BugReports: https://github.com/sckott/cowsay/issues
 LazyData: yes
+Encoding: UTF-8
 VignetteBuilder: knitr
-Imports: fortunes, rmsfact
-Suggests: roxygen2 (>= 6.0.1), jsonlite, testthat, knitr, rmarkdown
-Enhances: magrittr
-RoxygenNote: 6.0.1
+Imports: crayon, fortunes, rmsfact
+Suggests: curl, jsonlite, knitr, multicolor, rmarkdown, roxygen2 (>=
+        6.1.0), testthat
+RoxygenNote: 6.1.0
 NeedsCompilation: no
-Packaged: 2018-05-15 17:47:58 UTC; sckott
+Packaged: 2018-09-17 22:57:14 UTC; sckott
 Author: Scott Chamberlain [aut, cre],
+  Amanda Dobbyn [aut],
   Tyler Rinker [ctb],
   Thomas Leeper [ctb],
   Noam Ross [ctb],
@@ -48,5 +52,5 @@ Author: Scott Chamberlain [aut, cre],
   Andreas Brandmaier [ctb]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-05-15 18:13:05 UTC
-Built: R 3.5.0; ; 2018-05-16 10:23:19 UTC; unix
+Date/Publication: 2018-09-18 04:40:14 UTC
+Built: R 3.6.0; ; 2019-04-26 22:54:26 UTC; unix

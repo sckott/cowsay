@@ -1,5 +1,6 @@
 * installing *source* package ‘monkeylearn’ ...
 ** package ‘monkeylearn’ successfully unpacked and MD5 sums checked
+** using staged installation
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -10,5 +11,7 @@ Please indicate your Monkeylearn plan in the MONKEYLEARN_PLAN environment variab
 *** installing help indices
 ** building package indices
 ** installing vignettes
-** testing if installed package can be loaded
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
 * DONE (monkeylearn)

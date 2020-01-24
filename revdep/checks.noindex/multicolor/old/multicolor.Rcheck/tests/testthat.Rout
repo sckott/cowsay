@@ -1,6 +1,6 @@
 
-R version 3.5.1 Patched (2018-08-12 r75119) -- "Feather Spray"
-Copyright (C) 2018 The R Foundation for Statistical Computing
+R version 3.6.2 Patched (2019-12-12 r77564) -- "Dark and Stormy Night"
+Copyright (C) 2019 The R Foundation for Statistical Computing
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -18,11 +18,12 @@ Type 'q()' to quit R.
 > library(testthat)
 > library(multicolor)
 Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
 > 
 > test_check("multicolor")
 ══ testthat results  ═══════════════════════════════════════════════════════════
-OK: 24 SKIPPED: 0 FAILED: 0
+[ OK: 32 | SKIPPED: 1 | WARNINGS: 0 | FAILED: 0 ]
 > 
 > proc.time()
    user  system elapsed 
-  0.707   0.053   0.749 
+ 15.097   0.586  30.794 

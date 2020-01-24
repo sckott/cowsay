@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 #  devtools::install_github("sckott/cowsay")
 
 ## ------------------------------------------------------------------------
-library("cowsay")
+library(cowsay)
 
 ## ------------------------------------------------------------------------
 sort(names(animals))
@@ -41,4 +41,42 @@ say("hello world", by = "cow", type = "warning")
 
 ## ------------------------------------------------------------------------
 say("hello world", by = "cow", type = "string")
+
+## ------------------------------------------------------------------------
+library(jsonlite)
+library(multicolor)
+
+## ------------------------------------------------------------------------
+say(what = "holygrail",
+    by = "rabbit",
+    what_color = "#FF4500",
+    by_color = "red")
+
+## ------------------------------------------------------------------------
+say(what = "arresteddevelopment", 
+    by = sample(names(animals), 1),
+    what_color = rgb(.1, .2, .3),
+    by_color = sample(colors(), 5),
+    type = "message")
+
+## ------------------------------------------------------------------------
+say(what = "arresteddevelopment", 
+    by = sample(names(animals), 1),
+    what_color = rgb(.1, .2, .3),
+    by_color = sample(colors(), 5),
+    type = "message")
+
+## ------------------------------------------------------------------------
+say(what = "foobar",
+    by = "shark",
+    what_color = "rainbow",
+    by_color = c("rainbow", "rainbow", "rainbow"))
+
+## ------------------------------------------------------------------------
+library(crayon)
+
+say(what = "simpsons",
+    by = "egret",
+    what_color = bgBlue$white$italic,
+    by_color = bold$green)
 

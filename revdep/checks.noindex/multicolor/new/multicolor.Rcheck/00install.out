@@ -1,10 +1,18 @@
 * installing *source* package ‘multicolor’ ...
 ** package ‘multicolor’ successfully unpacked and MD5 sums checked
+** using staged installation
 ** R
+** inst
 ** byte-compile and prepare package for lazy loading
 ** help
 *** installing help indices
 ** building package indices
-** testing if installed package can be loaded
+** installing vignettes
+** testing if installed package can be loaded from temporary location
 Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+** testing if installed package can be loaded from final location
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+** testing if installed package keeps a record of temporary installation path
 * DONE (multicolor)

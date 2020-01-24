@@ -1,7 +1,8 @@
 * using log directory ‘/Users/sckott/github/sac/cowsay/revdep/checks.noindex/monkeylearn/new/monkeylearn.Rcheck’
-* using R version 3.5.1 Patched (2018-08-12 r75119)
+* using R version 3.6.2 Patched (2019-12-12 r77564)
 * using platform: x86_64-apple-darwin15.6.0 (64-bit)
 * using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘monkeylearn/DESCRIPTION’ ... OK
 * checking extension type ... Package
 * this is package ‘monkeylearn’ version ‘0.2.0’
@@ -55,7 +56,7 @@ Namespace in Imports field not imported from: ‘ratelimitr’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking running R code from vignettes ... NONE
-* checking re-building of vignette outputs ... OK
-* checking PDF version of manual ... OK
+  ‘monkeylearn_intro.Rmd’using ‘UTF-8’... OK
+* checking re-building of vignette outputs ... SKIPPED
 * DONE
 Status: 1 NOTE
