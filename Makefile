@@ -22,4 +22,4 @@ check: build
 	@rm -rf ${PACKAGE}.Rcheck
 
 readme:
-	${RSCRIPT} -e "knitr::knit('README.Rmd')"
+	${RSCRIPT} -e "rmarkdown::render('README.Rmd')"
