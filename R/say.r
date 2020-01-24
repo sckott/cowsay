@@ -6,45 +6,47 @@
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat,
 #' bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
 #' smallcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad,
-#' signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, mushroom, 
+#' signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, mushroom,
 #' monkey, egret, or rms for Richard Stallman.
-#' Alternatively, use "random" to have your message spoken by a random 
+#' Alternatively, use "random" to have your message spoken by a random
 #' character.
-#' We use \code{\link{match.arg}} internally, so you can use unique parts of
-#' words that don't conflict with others, like "g" for "ghost" because there's 
+#' We use [match.arg()] internally, so you can use unique parts of
+#' words that don't conflict with others, like "g" for "ghost" because there's
 #' no other animal that starts with "g".
-#' @param type (character) One of message (default), warning, print (default in non-interactive mode), or string (returns string). If multiple colors are supplied to \code{what_color} or 
-#' \code{by_color}, type cannot be warning. (This is a limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor} packcage :/.)
-#' If run in non-interactive mode default type is print, so that output goes to stdout rather than stderr, where messages and warnings go. 
-#' @param what_color (character or crayon function) One or more 
-#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s) 
-#' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
-#'  \code{what}. You might try \code{colors()} or \code{?rgb} for ideas.
+#' @param type (character) One of message (default), warning, print (default
+#' in non-interactive mode), or string (returns string). If multiple colors are
+#' supplied to `what_color` or `by_color`, type cannot be warning. (This is a
+#' limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor}
+#' packcage :/.) If run in non-interactive mode default type is print, so that
+#' output goes to stdout rather than stderr, where messages and warnings go.
+#' @param what_color (character or crayon function) One or more
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported
+#' text color(s) or
+#' \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}}
+#' to color `what`. You might try `colors()` or `?rgb` for ideas.
 #' Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").
-#' @param by_color (character or crayon function) One or more 
-#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported text color(s)
-#' or \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}} to color
-#'  \code{who}.
-#'  Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").
+#' @param by_color (character or crayon function) One or more
+#' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported
+#' text color(s) or
+#' \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}}
+#' to color `who`. Use "rainbow" for
+#' `c("red", "orange", "yellow", "green", "blue", "purple")`
 #' @param length (integer) Length of longcat. Ignored if other animals used.
-#' @param fortune An integer specifying the row number of fortunes.data. 
-#' Alternatively which can be a character and grep is used to try to find a 
+#' @param fortune An integer specifying the row number of fortunes.data.
+#' Alternatively which can be a character and grep is used to try to find a
 #' suitable row.
-#' @param ... Further args passed on to \code{\link[fortunes]{fortune}}
+#' @param ... Further args passed on to [fortunes::fortune()]
 #'
 #' @details You can put in any phrase you like, OR you can type in one of a few
 #' special phrases that do particular things. They are:
 #'
-#' \itemize{
-#'  \item catfact A random cat fact from https://catfact.ninja
-#'  \item fortune A random quote from an R coder, from fortunes library
-#'  \item time Print the current time
-#'  \item rms Prints a random 'fact' about Richard Stallman from the 
-#'  \code{\link[rmsfact]{rmsfact}}
-#'  package. Best paired with \code{by = "rms"}.
-#' }
+#' - catfact A random cat fact from https://catfact.ninja
+#' - fortune A random quote from an R coder, from fortunes library
+#' - time Print the current time
+#' - rms Prints a random 'fact' about Richard Stallman from the
+#'  [rmsfact::rmsfact()] package. Best paired with `by = "rms"`.
 #'
-#' Note that if you choose \code{by='hypnotoad'} the quote is forced to be, 
+#' Note that if you choose `by='hypnotoad'` the quote is forced to be,
 #' as you could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
 #' http://knowyourmeme.com/memes/hypnotoad
 #'
@@ -53,12 +55,12 @@
 #' they found the first use in this tweet:
 #' https://twitter.com/wei_bluebear/status/329101645780770817
 #'
-#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site 
+#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site
 #' down though)
 #'
-#' Note to Windows users: there are some animals (shortcat, longcat, fish, 
-#' signbunny, stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that 
-#' are not available because they use non-ASCII characters that don't display 
+#' Note to Windows users: there are some animals (shortcat, longcat, fish,
+#' signbunny, stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that
+#' are not available because they use non-ASCII characters that don't display
 #' properly in R on Windows.
 #'
 #' @examples
@@ -67,7 +69,7 @@
 #' say("meow", "cat", what_color = "blue")
 #' say('time')
 #' say('time', "poop", by_color = "cyan", what_color = "pink")
-#' 
+#'
 #' library(jsonlite)
 #' say("arresteddevelopment",
 #'     by = "hypnotoad",
@@ -76,7 +78,7 @@
 #' say("simpsons",
 #'     what_color = crayon::cyan$bgMagenta,
 #'     by_color = c("salmon1", "springgreen"))
-#'     
+#'
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
 #' say("icanhazpdf?", "cat")
@@ -97,7 +99,7 @@
 #'
 #' # Using fortunes
 #' say(what="fortune")
-#' ## you don't have to pass anything to the `what` parameter if `fortune` is 
+#' ## you don't have to pass anything to the `what` parameter if `fortune` is
 #' ## not null
 #' say(fortune=10)
 #' say(fortune=100)
@@ -123,15 +125,15 @@
 #' # Clippy
 #' say(fortune=59, by="clippy")
 
-say <- function(what="Hello world!", by="cat", 
-                type=NULL, 
-                what_color=NULL, by_color=NULL,  
+say <- function(what="Hello world!", by="cat",
+                type=NULL,
+                what_color=NULL, by_color=NULL,
                 length=18, fortune=NULL, ...) {
 
   if (length(what) > 1) {
     stop("what has to be of length 1", call. = FALSE)
   }
-  
+
   if (crayon::has_color() == FALSE && (!is.null(what_color) || !is.null(by_color))) {
     message("Colors cannot be applied in this environment :( Try using a terminal or RStudio.")
     what_color <- NULL
@@ -140,7 +142,7 @@ say <- function(what="Hello world!", by="cat",
     what_color <- check_color(what_color)
     by_color <- check_color(by_color)
   }
-  
+
   if (is.null(type)) {
     if (interactive()) {
       type <- "message"
@@ -151,7 +153,7 @@ say <- function(what="Hello world!", by="cat",
 
   if (what == "catfact") {
     check4pkg("jsonlite")
-    what <- 
+    what <-
       jsonlite::fromJSON(
         'https://catfact.ninja/fact')$fact
     by <- 'cat'
@@ -173,23 +175,23 @@ say <- function(what="Hello world!", by="cat",
   if (by == "hypnotoad" && what == "Hello world!") {
     what <- "All Glory to the HYPNO TOAD!"
   }
-  
+
   if (what == "rms") {
     what <- rmsfact::rmsfact()
-  }  
-  
+  }
+
   if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum")) {
     check4pkg("jsonlite")
-    what <- 
+    what <-
       jsonlite::fromJSON(
         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
-  
-  what_pos_start <- 
+
+  what_pos_start <-
     regexpr('%s', who)[1] - 1
-  
+
   what_pos_end <- what_pos_start + 3
-  
+
   color_text <- function(txt, c) {
     if (is.null(c)) {
       out <- txt
@@ -206,25 +208,25 @@ say <- function(what="Hello world!", by="cat",
     }
     return(out)
   }
-  
+
   # TODO: when multicolor doesn't color every character individually, this should be possible
   # and we can get rid of what_pos_start and what_pos_end
   # what <- color_text(what, what_color)
   # who <- color_text(who, by_color)
   # out <- sprintf(who, what)
-  
+
   # switch(type,
   #        message = message(sprintf(who, what)),
   #        warning = warning(sprintf(who, what)),
   #        string = sprintf(who, what))
-  
+
   out <- paste0(color_text(substr(who, 1, what_pos_start),
                            by_color),
                 color_text(what,
                            what_color),
                 color_text(substr(who, what_pos_end, nchar(who)),
                            by_color))
-  
+
   if (type == "warning") {
     if (nchar(out) < 100) {
       wl <- 100
@@ -236,7 +238,7 @@ say <- function(what="Hello world!", by="cat",
     warn_op <- options(warning.length = wl)
     on.exit(options(warn_op))
   }
-  
+
   switch(type,
          message = message(out),
          warning = warning(out),

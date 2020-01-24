@@ -1,4 +1,3 @@
-
 check_color <- function(clr) {
   if (!is.null(clr) && !all(inherits(clr, c("crayon", "character")))) {
     stop("All colors must be of class character or crayon",

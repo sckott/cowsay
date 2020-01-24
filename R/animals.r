@@ -2,7 +2,7 @@
 #'
 #' @description Named vector of animals
 #'
-#' @details \code{animals} is a named character vector of animals,
+#' @details `animals` is a named character vector of animals,
 #' with each element a character string of variable length specifying
 #' an ASCII animal. Note that some have unicode characters that won't
 #' play well on some operating systems.
