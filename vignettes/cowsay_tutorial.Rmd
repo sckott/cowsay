@@ -127,8 +127,15 @@ say(what = "holygrail",
 `colors()` are all supported as are any `rgb` values that evaluate to a string. Supplying multiple colors for `what_color` or `by_color` is allowed, as long as they're in a character vector. "rainbow" is also allowed.
 
 ```{r}
+# make a vector of animals safe to use on windows in case vignette built on windows
+not_on_windows <- c('shortcat','longcat','fish','signbunny','stretchycat',
+  'anxiouscat','longtailcat','grumpycat','mushroom')
+names_safe <- names(animals)[!names(animals) %in% not_on_windows]
+```
+
+```{r}
 say(what = "arresteddevelopment", 
-    by = sample(names(animals), 1),
+    by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
     type = "message")
@@ -137,7 +144,7 @@ say(what = "arresteddevelopment",
 
 ```{r}
 say(what = "arresteddevelopment", 
-    by = sample(names(animals), 1),
+    by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
     type = "message")
