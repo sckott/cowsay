@@ -16,8 +16,8 @@ knitr::opts_chunk$set(
 [![cran checks](https://cranchecks.info/badges/worst/cowsay)](https://cranchecks.info/pkgs/cowsay)
 [![Build Status](https://travis-ci.org/sckott/cowsay.svg?branch=master)](https://travis-ci.org/sckott/cowsay)
 [![Build status](https://ci.appveyor.com/api/projects/status/frfd77fcaxib2qkr/branch/master)](https://ci.appveyor.com/project/sckott/cowsay/branch/master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
 ### What is this?
 
@@ -422,4 +422,6 @@ animals['clippy']
 ## Meta
 
 * License: MIT
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+
+[coc]: https://github.com/sckott/cowsay/blob/master/CODE_OF_CONDUCT.md
