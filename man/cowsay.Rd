@@ -3,7 +3,6 @@
 \docType{package}
 \name{cowsay}
 \alias{cowsay}
-\alias{cowsay-package}
 \title{Sling messages and warnings with flair}
 \description{
 If you are familiar with `cowsay` on the cli, then you know what this 
@@ -31,7 +30,8 @@ Contributors:
  \item Marion Louveaux
 }
 
-There is only one function in the cowsay package. Simplicity for the win.
+
+There is only one function in the cowsay package. Simplicity for the win. 
 
 Say something:
 

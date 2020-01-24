@@ -4,8 +4,13 @@
 \alias{endless_horse}
 \title{Endless horse}
 \usage{
-endless_horse(what = "Hello world!", endless = TRUE, wait = 0.5,
-  what_color = NULL, horse_color = NULL)
+endless_horse(
+  what = "Hello world!",
+  endless = TRUE,
+  wait = 0.5,
+  what_color = NULL,
+  horse_color = NULL
+)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}

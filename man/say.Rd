@@ -4,9 +4,16 @@
 \alias{say}
 \title{Sling messages and warnings with flair}
 \usage{
-say(what = "Hello world!", by = "cat", type = NULL,
-  what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
-  ...)
+say(
+  what = "Hello world!",
+  by = "cat",
+  type = NULL,
+  what_color = NULL,
+  by_color = NULL,
+  length = 18,
+  fortune = NULL,
+  ...
+)
 }
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
@@ -133,10 +140,10 @@ say(by="hypnotoad")
 say(by='trilobite')
 
 # Shark
-say('Q: What do you call a solitary shark\\nA: A lone shark', by='shark')
+say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
 
 # Buffalo
-say('Q: What do you call a single buffalo?\\nA: A buffalonely', by='buffalo')
+say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
 
 # Clippy
 say(fortune=59, by="clippy")
