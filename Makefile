@@ -1,35 +1,26 @@
-PKGNAME := $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
-PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
-PKGSRC  := $(shell basename `pwd`)
+PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
+RSCRIPT = Rscript --no-init-file
 
-all: rd readme check clean
-
-rd:
-	Rscript -e 'roxygen2::roxygenise(".")'
-
-readme:
-	Rscript -e 'rmarkdown::render("README.rmd", "md_document")'
+install: doc build
+	R CMD INSTALL . && rm *.tar.gz
 
 build:
-	cd ..;\
-	R CMD build $(PKGSRC)
+	R CMD build .
 
-build2:
-	cd ..;\
-	R CMD build --no-build-vignettes $(PKGSRC)
+doc:
+	${RSCRIPT} -e "devtools::document()"
 
-install:
-	cd ..;\
-	R CMD INSTALL $(PKGNAME)_$(PKGVERS).tar.gz
+eg:
+	${RSCRIPT} -e "devtools::run_examples()"
 
+test:
+	${RSCRIPT} -e "devtools::test()"
 
 check: build
-	cd ..;\
-	R CMD check $(PKGNAME)_$(PKGVERS).tar.gz
+	_R_CHECK_CRAN_INCOMING_=FALSE R CMD CHECK --as-cran --no-manual `ls -1tr ${PACKAGE}*gz | tail -n1`
+	@rm -f `ls -1tr ${PACKAGE}*gz | tail -n1`
+	@rm -rf ${PACKAGE}.Rcheck
 
-clean:
-	cd ..;\
-	$(RM) -r $(PKGNAME).Rcheck/
-
-test: build2 install
-	Rscript -e 'library(cowsay); say("hello there", names(animals)[length(animals)])'
+readme:
+	${RSCRIPT} -e "rmarkdown::render('details.md')"
+	${RSCRIPT} -e "knitr::knit('README.Rmd')"
