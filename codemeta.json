@@ -1,0 +1,237 @@
+{
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "cowsay",
+  "description": "Allows printing of character strings as messages/warnings/etc.\n    with ASCII animals, including cats, cows, frogs, chickens, ghosts,\n    and more.",
+  "name": "cowsay: Messages, Warnings, Strings with Ascii Animals",
+  "codeRepository": "https://github.com/sckott/cowsay",
+  "issueTracker": "https://github.com/sckott/cowsay/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.8.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.6.2",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Scott",
+      "familyName": "Chamberlain",
+      "email": "myrmecocystus@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Amanda",
+      "familyName": "Dobbyn",
+      "email": "amanda.e.dobbyn@gmail.com"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Tyler",
+      "familyName": "Rinker"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Thomas",
+      "familyName": "Leeper"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Noam",
+      "familyName": "Ross"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Rich",
+      "familyName": "FitzJohn"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Carson",
+      "familyName": "Sievert"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Kiyoko",
+      "familyName": "Gotanda"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Andy",
+      "familyName": "Teucher"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Karl",
+      "familyName": "Broman"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Franz-Sebastian",
+      "familyName": "Krah"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Lucy",
+      "familyName": "D'Agostino McGowan"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Guangchuang",
+      "familyName": "Yu"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Philipp",
+      "familyName": "Boersch-Supan"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Andreas",
+      "familyName": "Brandmaier"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Marion",
+      "familyName": "Louveaux"
+    }
+  ],
+  "copyrightHolder": {},
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Scott",
+      "familyName": "Chamberlain",
+      "email": "myrmecocystus@gmail.com"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "curl",
+      "name": "curl",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=curl"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "multicolor",
+      "name": "multicolor",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=multicolor"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "crayon",
+      "name": "crayon",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=crayon"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "fortunes",
+      "name": "fortunes",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=fortunes"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmsfact",
+      "name": "rmsfact",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmsfact"
+    }
+  ],
+  "releaseNotes": "https://github.com/sckott/cowsay/blob/master/NEWS.md",
+  "readme": "https://github.com/sckott/cowsay/blob/master/README.md",
+  "fileSize": "216.181KB",
+  "contIntegration": ["https://travis-ci.org/sckott/cowsay", "https://ci.appveyor.com/project/sckott/cowsay/branch/master"],
+  "keywords": ["ascii-art", "rstats", "r", "r-stats"]
+}
