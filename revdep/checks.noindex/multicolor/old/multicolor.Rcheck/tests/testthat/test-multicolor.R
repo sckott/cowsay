@@ -127,25 +127,27 @@ test_that("colors(), including grays, rainbow, and rbg work", {
 })
 
 
-test_that("integration with cowsay", {
-  expect_silent(
-    suppressMessages(cowsay::say(
-      what = "I'm a rare Irish buffalo",
-      by = "buffalo",
-      what_color = "pink",
-      by_color = c("green", "white", "orange")
-    ))
-  )
+if (interactive()) {
+  test_that("integration with cowsay", {
+    expect_silent(
+      suppressMessages(cowsay::say(
+        what = "I'm a rare Irish buffalo",
+        by = "buffalo",
+        what_color = "pink",
+        by_color = c("green", "white", "orange")
+      ))
+    )
 
-  expect_silent(
-    suppressMessages(
-      cowsay::say("I'm not crying, you're crying",
-        what_color = "green", # green,
-        by_color = colors()
+    expect_silent(
+      suppressMessages(
+        cowsay::say("I'm not crying, you're crying",
+                    what_color = "green", # green,
+                    by_color = colors()
+        )
       )
     )
-  )
-})
+  })
+}
 
 
 test_that("logo", {

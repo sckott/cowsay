@@ -38,7 +38,7 @@ RoxygenNote: 7.0.2
 RemoteType: local
 RemoteUrl: /Users/sckott/github/sac/cowsay
 NeedsCompilation: no
-Packaged: 2020-01-24 18:07:02 UTC; sckott
+Packaged: 2020-02-05 18:18:18 UTC; sckott
 Author: Scott Chamberlain [aut, cre],
   Amanda Dobbyn [aut],
   Tyler Rinker [ctb],
@@ -56,4 +56,4 @@ Author: Scott Chamberlain [aut, cre],
   Andreas Brandmaier [ctb],
   Marion Louveaux [ctb]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
-Built: R 3.6.2; ; 2020-01-24 18:07:02 UTC; unix
+Built: R 3.6.2; ; 2020-02-05 18:18:19 UTC; unix

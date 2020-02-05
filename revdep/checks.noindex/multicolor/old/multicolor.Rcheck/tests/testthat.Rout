@@ -1,6 +1,6 @@
 
-R version 3.6.2 Patched (2019-12-12 r77564) -- "Dark and Stormy Night"
-Copyright (C) 2019 The R Foundation for Statistical Computing
+R version 3.6.2 Patched (2020-01-25 r77715) -- "Dark and Stormy Night"
+Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -22,8 +22,8 @@ Colors cannot be applied in this environment. Please use another application, su
 > 
 > test_check("multicolor")
 ══ testthat results  ═══════════════════════════════════════════════════════════
-[ OK: 32 | SKIPPED: 1 | WARNINGS: 0 | FAILED: 0 ]
+[ OK: 30 | SKIPPED: 1 | WARNINGS: 0 | FAILED: 0 ]
 > 
 > proc.time()
    user  system elapsed 
- 15.097   0.586  30.794 
+ 10.892   0.187  12.722 

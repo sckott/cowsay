@@ -1,6 +1,6 @@
 
-R version 3.6.2 Patched (2019-12-12 r77564) -- "Dark and Stormy Night"
-Copyright (C) 2019 The R Foundation for Statistical Computing
+R version 3.6.2 Patched (2020-01-25 r77715) -- "Dark and Stormy Night"
+Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -184,7 +184,7 @@ Type 'q()' to quit R.
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.101 0.007 0.11 0 0 
+Time elapsed:  0.094 0.009 0.158 0 0 
 > grDevices::dev.off()
 null device 
           1 
