@@ -23,3 +23,6 @@ check: build
 
 readme:
 	${RSCRIPT} -e "rmarkdown::render('README.Rmd')"
+
+check_windows:
+	${RSCRIPT} -e "devtools::check_win_devel(); devtools::check_win_release()"
