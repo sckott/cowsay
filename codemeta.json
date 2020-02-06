@@ -234,7 +234,7 @@
   ],
   "releaseNotes": "https://github.com/sckott/cowsay/blob/master/NEWS.md",
   "readme": "https://github.com/sckott/cowsay/blob/master/README.md",
-  "fileSize": "216.391KB",
+  "fileSize": "216.482KB",
   "contIntegration": ["https://travis-ci.org/sckott/cowsay", "https://ci.appveyor.com/project/sckott/cowsay/branch/master"],
   "keywords": [
     "ascii-art",

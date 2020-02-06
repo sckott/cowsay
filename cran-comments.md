@@ -15,6 +15,7 @@ Checked the 3 downstream dependencies. There was a problem in one package (multi
 ---
 
 This version adds some more ascii animal options, and fixes some issues.
+This is a re-submission of this version fixing a README link.
 
 Thanks! 
 Scott Chamberlain
