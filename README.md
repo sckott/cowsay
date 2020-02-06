@@ -41,7 +41,8 @@ That’s right, it takes 17 people to make `cowsay` - it’s that hard.
 
 ### Contributing
 
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+See
+[CONTRIBUTING.md](https://github.com/sckott/cowsay/blob/master/.github/CONTRIBUTING.md)
 
 ### Where to find ASCII animal art
 
@@ -101,8 +102,7 @@ From CRAN
 
 Dev version
 
-    install.packages("devtools")
-    devtools::install_github("sckott/cowsay")
+    remotes::install_github("sckott/cowsay")
 
     library("cowsay")
 
@@ -124,7 +124,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2020-01-24 09:43:51 
+    #> 2020-02-06 10:59:19 
     #>  --------------
     #>     \
     #>       \
@@ -389,13 +389,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Robin Hankin: I'd say that without a tool like R you cannot learn statistics.
-    #> David Whiting: I believe Fisher and a few others managed to get by without it.
-    #> Peter Dalgaard: But think how far they could have got with R!
-    #>  Robin Hankin, David Whiting, and Peter Dalgaard
-    #>  on teaching/learning statistics with R
+    #> Awkwardly worded questions will get much better answers if they are accompanied by some test data.
+    #>  David Winsemius
+    #>  in response to a poster's apology for an 'awkwardly worded question'
     #>  R-help
-    #>  December 2004 
+    #>  September 2012 
     #>  --------------
     #>     \
     #>       \
@@ -571,7 +569,7 @@ the `what` parameter (the 1st parameter)
 
 ### Yoda
 
-    say("starwars", by = "yoda")
+    say("fortune", by = "yoda")
 
 ### Bats!
 
@@ -601,11 +599,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> It seems that you are facing a very serious fortune(122) problem.
-    #>  Jean R. Lobry
-    #>  in reply to a user that quickly needed help for his PhD thesis, without properly checking the documentation
+    #> It's not a question of trying variations, rather of following instructions.
+    #>  Brian D. Ripley
+    #>  about using 'Writing R Extensions'
     #>  R-help
-    #>  May 2006 
+    #>  January 2006 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -629,11 +627,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Just now I had an apparently insurmountable problem that's been bugging me for days, but phrasing my question in a form suitable for the R-help list enabled me to solve my own problem in two minutes flat.
-    #> Thanks everyone.
-    #>  Robin Hankin
+    #> The fact that some people murder doesn't mean we should copy them. And murdering data, though not as serious, should also be avoided.
+    #>  Frank E. Harrell
+    #>  answering a question on categorization of continuous variables in survival modelling
     #>  R-help
-    #>  March 2005 
+    #>  July 2005 
     #>  ------ 
     #>     \   
     #>      \  

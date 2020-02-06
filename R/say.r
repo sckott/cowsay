@@ -2,7 +2,7 @@
 #'
 #' @export
 #'
-#' @param what (character) What do you want to say? See details.
+#' @param what (character) What do you want to say? See Details.
 #' @param by (character) Type of thing, one of cow, chicken, poop, cat, facecat,
 #' bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
 #' smallcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad,
@@ -37,25 +37,32 @@
 #' suitable row.
 #' @param ... Further args passed on to [fortunes::fortune()]
 #'
-#' @details You can put in any phrase you like, OR you can type in one of a few
-#' special phrases that do particular things. They are:
+#' @section what:
+#' You can put in any phrase you like to the `what` parameter, OR you
+#' can type in one of a few special phrases that do particular things.
+#' They are:
 #'
-#' - catfact A random cat fact from https://catfact.ninja
-#' - fortune A random quote from an R coder, from fortunes library
-#' - time Print the current time
-#' - rms Prints a random 'fact' about Richard Stallman from the
+#' - "catfact": A random cat fact from https://catfact.ninja
+#' - "fortune": A random quote from an R coder, from fortunes library
+#' - "time": Print the current time
+#' - "rms": Prints a random 'fact' about Richard Stallman from the
 #'  [rmsfact::rmsfact()] package. Best paired with `by = "rms"`.
+#' - The fillerama API was an option ("arresteddevelopment", "doctorwho",
+#' "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum"),
+#' a text generator with quotes from shows and movies. However,
+#' the API is currently down so you cannot use this option anymore.
 #'
+#' @section by:
 #' Note that if you choose `by='hypnotoad'` the quote is forced to be,
 #' as you could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
 #' http://knowyourmeme.com/memes/hypnotoad
 #'
-#' Signbunny: It's not for sure known who invented signbunny, but this article
+#' signbunny: It's not for sure known who invented signbunny, but this article
 #' http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained thinks
 #' they found the first use in this tweet:
 #' https://twitter.com/wei_bluebear/status/329101645780770817
 #'
-#' Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site
+#' trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site
 #' down though)
 #'
 #' Note to Windows users: there are some animals (shortcat, longcat, fish,
@@ -71,11 +78,11 @@
 #' say('time', "poop", by_color = "cyan", what_color = "pink")
 #'
 #' library(jsonlite)
-#' say("arresteddevelopment",
+#' say("hello world",
 #'     by = "hypnotoad",
 #'     what_color = c("royalblue1", "tomato2"),
 #'     by_color = c("rainbow", "rainbow"))
-#' say("simpsons",
+#' say("whats up",
 #'     what_color = crayon::cyan$bgMagenta,
 #'     by_color = c("salmon1", "springgreen"))
 #'
@@ -180,11 +187,14 @@ say <- function(what="Hello world!", by="cat",
     what <- rmsfact::rmsfact()
   }
 
-  if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum")) {
-    check4pkg("jsonlite")
-    what <-
-      jsonlite::fromJSON(
-        paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
+  if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama",
+    "holygrail", "simpsons", "starwars", "loremipsum")
+  ) {
+    stop("sorry, fillerama API is down", call.=FALSE)
+    # check4pkg("jsonlite")
+    # what <-
+    #   jsonlite::fromJSON(
+    #     paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
   }
 
   what_pos_start <-

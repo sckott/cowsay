@@ -331,7 +331,7 @@ say(fortune=59, by="clippy")
 ### Yoda
 
 ```{r eval=FALSE}
-say("starwars", by = "yoda")
+say("fortune", by = "yoda")
 ```
 
 ### Bats!

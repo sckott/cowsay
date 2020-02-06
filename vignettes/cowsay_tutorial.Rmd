@@ -117,7 +117,7 @@ We rely on the [`crayon`](https://github.com/r-lib/crayon) package for color and
 
 
 ```{r}
-say(what = "holygrail",
+say(what = "fortune",
     by = "rabbit",
     what_color = "#FF4500",
     by_color = "red")
@@ -134,7 +134,7 @@ names_safe <- names(animals)[!names(animals) %in% not_on_windows]
 ```
 
 ```{r}
-say(what = "arresteddevelopment", 
+say(what = "fortune", 
     by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
@@ -143,7 +143,7 @@ say(what = "arresteddevelopment",
 
 
 ```{r}
-say(what = "arresteddevelopment", 
+say(what = "fortune", 
     by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
@@ -164,7 +164,7 @@ The main advantage of using `crayon` functions instead of color strings is the a
 ```{r}
 library(crayon)
 
-say(what = "simpsons",
+say(what = "fortune",
     by = "egret",
     what_color = bgBlue$white$italic,
     by_color = bold$green)

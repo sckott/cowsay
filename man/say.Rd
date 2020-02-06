@@ -16,7 +16,7 @@ say(
 )
 }
 \arguments{
-\item{what}{(character) What do you want to say? See details.}
+\item{what}{(character) What do you want to say? See Details.}
 
 \item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat,
 bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
@@ -61,27 +61,36 @@ suitable row.}
 \description{
 Sling messages and warnings with flair
 }
-\details{
-You can put in any phrase you like, OR you can type in one of a few
-special phrases that do particular things. They are:
+\section{what}{
+
+You can put in any phrase you like to the \code{what} parameter, OR you
+can type in one of a few special phrases that do particular things.
+They are:
 \itemize{
-\item catfact A random cat fact from https://catfact.ninja
-\item fortune A random quote from an R coder, from fortunes library
-\item time Print the current time
-\item rms Prints a random 'fact' about Richard Stallman from the
+\item "catfact": A random cat fact from https://catfact.ninja
+\item "fortune": A random quote from an R coder, from fortunes library
+\item "time": Print the current time
+\item "rms": Prints a random 'fact' about Richard Stallman from the
 \code{\link[rmsfact:rmsfact]{rmsfact::rmsfact()}} package. Best paired with \code{by = "rms"}.
+\item The fillerama API was an option ("arresteddevelopment", "doctorwho",
+"dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum"),
+a text generator with quotes from shows and movies. However,
+the API is currently down so you cannot use this option anymore.
 }
+}
+
+\section{by}{
 
 Note that if you choose \code{by='hypnotoad'} the quote is forced to be,
 as you could imagine, 'All Glory to the HYPNO TOAD!'. For reference see
 http://knowyourmeme.com/memes/hypnotoad
 
-Signbunny: It's not for sure known who invented signbunny, but this article
+signbunny: It's not for sure known who invented signbunny, but this article
 http://www.vox.com/2014/9/18/6331753/sign-bunny-meme-explained thinks
 they found the first use in this tweet:
 https://twitter.com/wei_bluebear/status/329101645780770817
 
-Trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site
+trilobite: from http://www.retrojunkie.com/asciiart/animals/dinos.htm (site
 down though)
 
 Note to Windows users: there are some animals (shortcat, longcat, fish,
@@ -89,6 +98,7 @@ signbunny, stretchycat, anxiouscat, longtailcat, grumpycat, mushroom) that
 are not available because they use non-ASCII characters that don't display
 properly in R on Windows.
 }
+
 \examples{
 say()
 say("what")
@@ -97,11 +107,11 @@ say('time')
 say('time', "poop", by_color = "cyan", what_color = "pink")
 
 library(jsonlite)
-say("arresteddevelopment",
+say("hello world",
     by = "hypnotoad",
     what_color = c("royalblue1", "tomato2"),
     by_color = c("rainbow", "rainbow"))
-say("simpsons",
+say("whats up",
     what_color = crayon::cyan$bgMagenta,
     by_color = c("salmon1", "springgreen"))
 
