@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "cowsay",
   "description": "Allows printing of character strings as messages/warnings/etc.\n    with ASCII animals, including cats, cows, frogs, chickens, ghosts,\n    and more.",
@@ -14,7 +17,7 @@
     "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 3.6.2 Patched (2020-01-25 r77715)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -231,7 +234,12 @@
   ],
   "releaseNotes": "https://github.com/sckott/cowsay/blob/master/NEWS.md",
   "readme": "https://github.com/sckott/cowsay/blob/master/README.md",
-  "fileSize": "216.181KB",
+  "fileSize": "216.391KB",
   "contIntegration": ["https://travis-ci.org/sckott/cowsay", "https://ci.appveyor.com/project/sckott/cowsay/branch/master"],
-  "keywords": ["ascii-art", "rstats", "r", "r-stats"]
+  "keywords": [
+    "ascii-art",
+    "rstats",
+    "r",
+    "r-stats"
+  ]
 }
