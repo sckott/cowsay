@@ -56,7 +56,7 @@ to color \code{who}. Use "rainbow" for
 Alternatively which can be a character and grep is used to try to find a
 suitable row.}
 
-\item{...}{Further args passed on to \code{\link[fortunes:fortune]{fortunes::fortune()}}}
+\item{...}{Further args passed on to \code{\link[fortunes:fortunes]{fortunes::fortune()}}}
 }
 \description{
 Sling messages and warnings with flair
