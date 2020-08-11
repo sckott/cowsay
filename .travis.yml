@@ -1,9 +1,0 @@
-language: r
-cache: packages
-warnings_are_errors: true
-
-branches:
-  only:
-  - master
-  - color-messages
-  - c4p
