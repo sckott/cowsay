@@ -33,8 +33,7 @@ install.packages("cowsay")
 or dev version from GitHub
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("sckott/cowsay")
+remotes::install_github("sckott/cowsay")
 ```
 
 ```{r}
