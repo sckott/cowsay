@@ -5,7 +5,7 @@
 \alias{animals}
 \title{Animals}
 \format{
-An object of class \code{character} of length 45.
+An object of class \code{character} of length 46.
 }
 \usage{
 animals
