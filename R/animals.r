@@ -645,7 +645,7 @@ squirrel =
      /////////   \\  /  \\      
  ML     \\\\\\\\\\\\___/_/___/      
 ",
-#max strandburg, https://www.asciiart.eu/animals/fish
+#Art by Max Strandberg, https://www.asciiart.eu/animals/fish
 goldfish="
 ------ 
 %s 
