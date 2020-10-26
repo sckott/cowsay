@@ -70,13 +70,14 @@
 
       
 
-      </header><script src="cowsay_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="cowsay_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="cowsay_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="cowsay_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Introduction to cowsay</h1>
                         <h4 class="author">Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan</h4>
             
-            <h4 class="date">2020-08-11</h4>
+            <h4 class="date">2020-10-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sckott/cowsay/blob/master/vignettes/cowsay.Rmd"><code>vignettes/cowsay.Rmd</code></a></small>
       <div class="hidden name"><code>cowsay.Rmd</code></div>
@@ -90,30 +91,36 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Stable version from CRAN</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"cowsay"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"cowsay"</span><span class="op">)</span></pre></div>
 <p>or dev version from GitHub</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"sckott/cowsay"</span>)</pre></body></html></div>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">cowsay</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"sckott/cowsay"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sckott/cowsay">cowsay</a></span><span class="op">)</span></pre></div>
 </div>
 <div id="the-animals" class="section level2">
 <h2 class="hasAnchor">
 <a href="#the-animals" class="anchor"></a>The animals</h2>
 <p>The animals, and other ascii creatures, are all in a single named character vector that is exported from the package. Thus, you can access each animal yourself, and do whatever you want with it.</p>
-<p>As of this writing, there are 44 animals.</p>
+<p>As of this writing, there are 49 animals.</p>
 <p>The names of the animals:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="no">animals</span>))
-<span class="co">#&gt;  [1] "ant"          "anxiouscat"   "bat"          "bat2"         "behindcat"   </span>
-<span class="co">#&gt;  [6] "bigcat"       "buffalo"      "cat"          "chicken"      "chuck"       </span>
-<span class="co">#&gt; [11] "clippy"       "cow"          "daemon"       "duck"         "duckling"    </span>
-<span class="co">#&gt; [16] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        </span>
-<span class="co">#&gt; [21] "ghost"        "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" </span>
-<span class="co">#&gt; [26] "monkey"       "mushroom"     "owl"          "pig"          "poop"        </span>
-<span class="co">#&gt; [31] "pumpkin"      "rabbit"       "shark"        "shortcat"     "signbunny"   </span>
-<span class="co">#&gt; [36] "smallcat"     "snowman"      "spider"       "squirrel"     "squirrel2"   </span>
-<span class="co">#&gt; [41] "stretchycat"  "trilobite"    "turkey"       "yoda"</span></pre></body></html></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt;  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        </span>
+<span class="co">#&gt;  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     </span>
+<span class="co">#&gt; [11] "chuck"        "clippy"       "cow"          "daemon"       "duck"        </span>
+<span class="co">#&gt; [16] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        </span>
+<span class="co">#&gt; [21] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   </span>
+<span class="co">#&gt; [26] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         </span>
+<span class="co">#&gt; [31] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       </span>
+<span class="co">#&gt; [36] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      </span>
+<span class="co">#&gt; [41] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   </span>
+<span class="co">#&gt; [46] "turkey"       "whale"        "wolf"         "yoda"</span></pre></div>
 <p>For example, access the cow</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">cow</span> <span class="kw">&lt;-</span> <span class="no">animals</span><span class="kw">[[</span><span class="st">'cow'</span>]]
-<span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span>(<span class="no">cow</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="va">cow</span> <span class="op">&lt;-</span> <span class="va">animals</span><span class="op">[[</span><span class="st">'cow'</span><span class="op">]</span><span class="op">]</span>
+<span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">cow</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
 <span class="co">#&gt; %s </span>
@@ -122,13 +129,14 @@
 <span class="co">#&gt;      \  (oo)\ ________ </span>
 <span class="co">#&gt;         (__)\         )\ /\ </span>
 <span class="co">#&gt;              ||------w|</span>
-<span class="co">#&gt;              ||      ||</span></pre></body></html></div>
+<span class="co">#&gt;              ||      ||</span></pre></div>
 </div>
 <div id="say-something" class="section level2">
 <h2 class="hasAnchor">
 <a href="#say-something" class="anchor"></a>Say something</h2>
 <p>We expose the function <code><a href="../reference/say.html">say()</a></code> in this package, which you can use to envoke any animal in the package, and make it say whatever you want. Some examples:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"why did the chicken cross the road"</span>, <span class="st">"chicken"</span>)
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"why did the chicken cross the road"</span>, <span class="st">"chicken"</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
 <span class="co">#&gt; why did the chicken cross the road </span>
@@ -146,8 +154,9 @@
 <span class="co">#&gt;             `;-..'</span>
 <span class="co">#&gt;             _| _|</span>
 <span class="co">#&gt;             /` /` [nosig]</span>
-<span class="co">#&gt; </span></pre></body></html></div>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"boo!"</span>, <span class="st">"ghost"</span>)
+<span class="co">#&gt; </span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"boo!"</span>, <span class="st">"ghost"</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
 <span class="co">#&gt; boo! </span>
@@ -159,8 +168,9 @@
 <span class="co">#&gt;     | O \</span>
 <span class="co">#&gt;      \   \</span>
 <span class="co">#&gt;       `~~~' [nosig]</span>
-<span class="co">#&gt; </span></pre></body></html></div>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"nope, don't do that"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"warning"</span>)
+<span class="co">#&gt; </span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"nope, don't do that"</span>, type <span class="op">=</span> <span class="st">"warning"</span><span class="op">)</span>
 <span class="co">#&gt; Warning in say("nope, don't do that", type = "warning"): </span>
 <span class="co">#&gt;  -------------- </span>
 <span class="co">#&gt; nope, don't do that </span>
@@ -178,12 +188,13 @@
 <span class="co">#&gt;            \| | |_|/\</span>
 <span class="co">#&gt;       jgs  //_// ___/</span>
 <span class="co">#&gt;                \_)</span>
-<span class="co">#&gt; </span></pre></body></html></div>
+<span class="co">#&gt; </span></pre></div>
 <p>There’s the special <code>time</code>, that will print out the time</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">'time'</span>)
+<div class="sourceCode" id="cb9"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  -------------- </span>
-<span class="co">#&gt; 2020-08-11 16:18:10 </span>
+<span class="co">#&gt; 2020-10-26 16:05:30 </span>
 <span class="co">#&gt;  --------------</span>
 <span class="co">#&gt;     \</span>
 <span class="co">#&gt;       \</span>
@@ -198,14 +209,15 @@
 <span class="co">#&gt;            \| | |_|/\</span>
 <span class="co">#&gt;       jgs  //_// ___/</span>
 <span class="co">#&gt;                \_)</span>
-<span class="co">#&gt; </span></pre></body></html></div>
+<span class="co">#&gt; </span></pre></div>
 </div>
 <div id="its-how-you-say-it" class="section level2">
 <h2 class="hasAnchor">
 <a href="#its-how-you-say-it" class="anchor"></a>It’s how you say it</h2>
 <p>You can use <code><a href="../reference/say.html">say()</a></code> and give back a string, message, or warning</p>
 <p>Message</p>
-<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"hello world"</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="st">"cow"</span>)
+<div class="sourceCode" id="cb10"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
 <span class="co">#&gt; hello world </span>
@@ -214,9 +226,10 @@
 <span class="co">#&gt;      \  (oo)\ ________ </span>
 <span class="co">#&gt;         (__)\         )\ /\ </span>
 <span class="co">#&gt;              ||------w|</span>
-<span class="co">#&gt;              ||      ||</span></pre></body></html></div>
+<span class="co">#&gt;              ||      ||</span></pre></div>
 <p>Warning</p>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"hello world"</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="st">"cow"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"warning"</span>)
+<div class="sourceCode" id="cb11"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span>, type <span class="op">=</span> <span class="st">"warning"</span><span class="op">)</span>
 <span class="co">#&gt; Warning in say("hello world", by = "cow", type = "warning"): </span>
 <span class="co">#&gt;  ----- </span>
 <span class="co">#&gt; hello world </span>
@@ -225,101 +238,102 @@
 <span class="co">#&gt;      \  (oo)\ ________ </span>
 <span class="co">#&gt;         (__)\         )\ /\ </span>
 <span class="co">#&gt;              ||------w|</span>
-<span class="co">#&gt;              ||      ||</span></pre></body></html></div>
+<span class="co">#&gt;              ||      ||</span></pre></div>
 <p>String</p>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="st">"hello world"</span>, <span class="kw">by</span> <span class="kw">=</span> <span class="st">"cow"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"string"</span>)
-<span class="co">#&gt; [1] "\n ----- \nhello world \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"</span></pre></body></html></div>
+<div class="sourceCode" id="cb12"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span>, type <span class="op">=</span> <span class="st">"string"</span><span class="op">)</span>
+<span class="co">#&gt; [1] "\n ----- \nhello world \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"</span></pre></div>
 </div>
 <div id="add-color" class="section level2">
 <h2 class="hasAnchor">
 <a href="#add-color" class="anchor"></a>Add color</h2>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">jsonlite</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">multicolor</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb13"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://arxiv.org/abs/1403.2805">jsonlite</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://github.com/aedobbyn/multicolor/">multicolor</a></span><span class="op">)</span></pre></div>
 <p>We rely on the <a href="https://github.com/r-lib/crayon"><code>crayon</code></a> package for color and the <a href="https://github.com/aedobbyn/multicolor"><code>multicolor</code></a> package for multiple colors. The arguments you supply to <code>what_color</code> and <code>by_color</code> can be strings – either the color name or a hex value – or a <a href="https://github.com/r-lib/crayon#styles">function of class <code>crayon</code></a>.</p>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="kw">what</span> <span class="kw">=</span> <span class="st">"fortune"</span>,
-    <span class="kw">by</span> <span class="kw">=</span> <span class="st">"rabbit"</span>,
-    <span class="kw">what_color</span> <span class="kw">=</span> <span class="st">"#FF4500"</span>,
-    <span class="kw">by_color</span> <span class="kw">=</span> <span class="st">"red"</span>)
+<div class="sourceCode" id="cb14"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>,
+    by <span class="op">=</span> <span class="st">"rabbit"</span>,
+    what_color <span class="op">=</span> <span class="st">"#FF4500"</span>,
+    by_color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; Please do think hard before you tell other people what they 'should' do for you.</span>
-<span class="co">#&gt;  Brian D. Ripley</span>
-<span class="co">#&gt;  R-devel</span>
-<span class="co">#&gt;  January 2006 </span>
+<span class="co">#&gt; I see three drivers of problems with R.</span>
+<span class="co">#&gt; The first is that R is useful. [...]</span>
+<span class="co">#&gt; The second driver of problems with R is that it is both a programming language and an interactive language. There is a tension there that is unavoidable. [...]</span>
+<span class="co">#&gt; The third big driver of problems is that R is not software, it is a community.</span>
+<span class="co">#&gt;  Patrick Burns</span>
+<span class="co">#&gt;  Inferno-ish R</span>
+<span class="co">#&gt;  CambR User Group Meeting, Cambridge</span>
+<span class="co">#&gt;  May 2012 </span>
 <span class="co">#&gt;  ------ </span>
 <span class="co">#&gt;     \   </span>
 <span class="co">#&gt;      \</span>
 <span class="co">#&gt;       ( )_( )</span>
 <span class="co">#&gt;       (='.'=)</span>
 <span class="co">#&gt;       (^)_(^) [nosig]</span>
-<span class="co">#&gt; </span></pre></body></html></div>
+<span class="co">#&gt; </span></pre></div>
 <p><code><a href="https://rdrr.io/r/grDevices/colors.html">colors()</a></code> are all supported as are any <code>rgb</code> values that evaluate to a string. Supplying multiple colors for <code>what_color</code> or <code>by_color</code> is allowed, as long as they’re in a character vector. “rainbow” is also allowed.</p>
-<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># make a vector of animals safe to use on windows in case vignette built on windows</span>
-<span class="no">not_on_windows</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">'shortcat'</span>,<span class="st">'longcat'</span>,<span class="st">'fish'</span>,<span class="st">'signbunny'</span>,<span class="st">'stretchycat'</span>,
-  <span class="st">'anxiouscat'</span>,<span class="st">'longtailcat'</span>,<span class="st">'grumpycat'</span>,<span class="st">'mushroom'</span>)
-<span class="no">names_safe</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="no">animals</span>)[!<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="no">animals</span>) <span class="kw">%in%</span> <span class="no">not_on_windows</span>]</pre></body></html></div>
-<div class="sourceCode" id="cb16"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="kw">what</span> <span class="kw">=</span> <span class="st">"fortune"</span>,
-    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="no">names_safe</span>, <span class="fl">1</span>),
-    <span class="kw">what_color</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span>(<span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span>),
-    <span class="kw">by_color</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html">colors</a></span>(), <span class="fl">5</span>),
-    <span class="kw">type</span> <span class="kw">=</span> <span class="st">"message"</span>)
+<div class="sourceCode" id="cb15"><pre class="downlit">
+<span class="co"># make a vector of animals safe to use on windows in case vignette built on windows</span>
+<span class="va">not_on_windows</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'shortcat'</span>,<span class="st">'longcat'</span>,<span class="st">'fish'</span>,<span class="st">'signbunny'</span>,<span class="st">'stretchycat'</span>,
+  <span class="st">'anxiouscat'</span>,<span class="st">'longtailcat'</span>,<span class="st">'grumpycat'</span>,<span class="st">'mushroom'</span><span class="op">)</span>
+<span class="va">names_safe</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span> <span class="op">%in%</span> <span class="va">not_on_windows</span><span class="op">]</span></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>, 
+    by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">names_safe</span>, <span class="fl">1</span><span class="op">)</span>,
+    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span><span class="op">)</span>,
+    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html">colors</a></span><span class="op">(</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span>,
+    type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; You are going to need a few more sessions for this therapy to be useful, we cannot read your computer's mind, just interpret what you tell us. I don't want to jump ahead, but can you tell us the childhood of your crashes, etc.</span>
-<span class="co">#&gt;  Romain Francois</span>
-<span class="co">#&gt;  in a 'psychotherapy' session trying to understand the sources of a useR's problems</span>
+<span class="co">#&gt; Eric Lecoutre: I don't want to die being idiot...</span>
+<span class="co">#&gt; Peter Dalgaard: With age, most of us come to realise that that is the only possible outcome.</span>
+<span class="co">#&gt;  Eric Lecoutre and Peter Dalgaard</span>
 <span class="co">#&gt;  R-help</span>
-<span class="co">#&gt;  November 2009 </span>
-<span class="co">#&gt;  ------ </span>
-<span class="co">#&gt;     \   </span>
-<span class="co">#&gt;      \</span>
-<span class="co">#&gt;      .-.</span>
-<span class="co">#&gt;     (o o)</span>
-<span class="co">#&gt;     | O \</span>
-<span class="co">#&gt;      \   \</span>
-<span class="co">#&gt;       `~~~' [nosig]</span>
-<span class="co">#&gt; </span></pre></body></html></div>
-<div class="sourceCode" id="cb17"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="kw">what</span> <span class="kw">=</span> <span class="st">"fortune"</span>,
-    <span class="kw">by</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="no">names_safe</span>, <span class="fl">1</span>),
-    <span class="kw">what_color</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span>(<span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span>),
-    <span class="kw">by_color</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html">colors</a></span>(), <span class="fl">5</span>),
-    <span class="kw">type</span> <span class="kw">=</span> <span class="st">"message"</span>)
-<span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; The "right" place to store information like this in Windows is in the registry, but we've been reluctant to use it, for various historical reasons. In fact, we were just told today that editing the registry is not allowed by software used by the US government. I think they'll be moving back to the abacus, if they want to stay with Windows.</span>
-<span class="co">#&gt;  Duncan Murdoch</span>
-<span class="co">#&gt;  about where to store some Windows GUI preferences</span>
-<span class="co">#&gt;  R-devel</span>
-<span class="co">#&gt;  January 2008 </span>
+<span class="co">#&gt;  October 2004 </span>
 <span class="co">#&gt;  ------ </span>
 <span class="co">#&gt;     \   </span>
 <span class="co">#&gt;      \  </span>
 <span class="co">#&gt;       \</span>
-<span class="co">#&gt;        ,</span>
-<span class="co">#&gt;     _,,)\.~,,._</span>
-<span class="co">#&gt;      (()`  ``)\))),,_</span>
-<span class="co">#&gt;       |     \ ''((\)))),,_          ____</span>
-<span class="co">#&gt;       |6`   |   ''((\())) "-.____.-"    `-.-,</span>
-<span class="co">#&gt;       |    .'\    ''))))'                  \)))</span>
-<span class="co">#&gt;       |   |   `.     ''                     ((((</span>
-<span class="co">#&gt;       \, _)     \/                          |))))</span>
-<span class="co">#&gt;        `'        |                          (((((</span>
-<span class="co">#&gt;                  \                  |       ))))))</span>
-<span class="co">#&gt;                   `|    |           ,\     /((((((</span>
-<span class="co">#&gt;                    |   / `-.______.&lt;  \   |  )))))</span>
-<span class="co">#&gt;                    |   |  /         `. \  \  ((((</span>
-<span class="co">#&gt;                    |  / \ |           `.\  | (((</span>
-<span class="co">#&gt;                    \  | | |             )| |  ))</span>
-<span class="co">#&gt;                     | | | |             || |  '   [endless.horse]</span>
-<span class="co">#&gt;                     | | | |             || |</span></pre></body></html></div>
+<span class="co">#&gt;          __</span>
+<span class="co">#&gt;         /o \</span>
+<span class="co">#&gt;       &lt;=   |         ==</span>
+<span class="co">#&gt;         |__|        /===</span>
+<span class="co">#&gt;         |   \______/  =</span>
+<span class="co">#&gt;         \     ====   /</span>
+<span class="co">#&gt;          \__________/     [ab]</span></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>, 
+    by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">names_safe</span>, <span class="fl">1</span><span class="op">)</span>,
+    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html">rgb</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span><span class="op">)</span>,
+    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html">colors</a></span><span class="op">(</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span>,
+    type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span>
+<span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;  ----- </span>
+<span class="co">#&gt; You might also consider a more informative subject line. "Help needed" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?</span>
+<span class="co">#&gt;  Peter Ehlers</span>
+<span class="co">#&gt;  after answering a help request</span>
+<span class="co">#&gt;  R-help</span>
+<span class="co">#&gt;  April 2011 </span>
+<span class="co">#&gt;  ------ </span>
+<span class="co">#&gt;     \   </span>
+<span class="co">#&gt;      \</span>
+<span class="co">#&gt;        _//| .-~~~-.</span>
+<span class="co">#&gt;      _/oo  }       }-@</span>
+<span class="co">#&gt;     ('')_  }       |</span>
+<span class="co">#&gt;      `--'| { }--{  }</span>
+<span class="co">#&gt;           //_/  /_/ [nosig]</span>
+<span class="co">#&gt; </span></pre></div>
 <p><code>"rainbow"</code> is the same as <code><a href="https://rdrr.io/r/base/c.html">c("red", "orange", "yellow", "green", "blue", "purple")</a></code>. Saves you a bit of typing.</p>
-<div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="fu"><a href="../reference/say.html">say</a></span>(<span class="kw">what</span> <span class="kw">=</span> <span class="st">"foobar"</span>,
-    <span class="kw">by</span> <span class="kw">=</span> <span class="st">"shark"</span>,
-    <span class="kw">what_color</span> <span class="kw">=</span> <span class="st">"rainbow"</span>,
-    <span class="kw">by_color</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"rainbow"</span>, <span class="st">"rainbow"</span>, <span class="st">"rainbow"</span>))
+<div class="sourceCode" id="cb18"><pre class="downlit">
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"foobar"</span>,
+    by <span class="op">=</span> <span class="st">"shark"</span>,
+    what_color <span class="op">=</span> <span class="st">"rainbow"</span>,
+    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"rainbow"</span>, <span class="st">"rainbow"</span>, <span class="st">"rainbow"</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  -------------- </span>
@@ -352,22 +366,24 @@
 <span class="co">#&gt;       ,-' _.-'        \  /    |/'-._...--'</span>
 <span class="co">#&gt;      :--``             )/</span>
 <span class="co">#&gt;   '</span>
-<span class="co">#&gt; </span></pre></body></html></div>
+<span class="co">#&gt; </span></pre></div>
 <p>The main advantage of using <code>crayon</code> functions instead of color strings is the ability to combine styles together.</p>
-<div class="sourceCode" id="cb19"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">crayon</span>)
+<div class="sourceCode" id="cb19"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-lib/crayon#readme">crayon</a></span><span class="op">)</span>
 
-<span class="fu"><a href="../reference/say.html">say</a></span>(<span class="kw">what</span> <span class="kw">=</span> <span class="st">"fortune"</span>,
-    <span class="kw">by</span> <span class="kw">=</span> <span class="st">"egret"</span>,
-    <span class="kw">what_color</span> <span class="kw">=</span> <span class="no">bgBlue</span>$<span class="no">white</span>$<span class="no">italic</span>,
-    <span class="kw">by_color</span> <span class="kw">=</span> <span class="no">bold</span>$<span class="no">green</span>)
+<span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>,
+    by <span class="op">=</span> <span class="st">"egret"</span>,
+    what_color <span class="op">=</span> <span class="va">bgBlue</span><span class="op">$</span><span class="va">white</span><span class="op">$</span><span class="va">italic</span>,
+    by_color <span class="op">=</span> <span class="va">bold</span><span class="op">$</span><span class="va">green</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; Personally I have never regretted trying not to underestimate my own future stupidity.</span>
-<span class="co">#&gt;  Greg Snow</span>
-<span class="co">#&gt;  explaining why eval(parse(...)) is often suboptimal, answering a question triggered by the infamous fortune(106)</span>
-<span class="co">#&gt;  R-help</span>
-<span class="co">#&gt;  January 2007 </span>
+<span class="co">#&gt; Excellent, Berwin!</span>
+<span class="co">#&gt; Specifically the part about why the bug never really triggers wrong behavior. Your mail should be saved in 'The Annals of R' ...</span>
+<span class="co">#&gt;  Martin Maechler</span>
+<span class="co">#&gt;  after Berwin A Turlach reported a buglet in 'spline_eval'</span>
+<span class="co">#&gt;  R-devel</span>
+<span class="co">#&gt;  July 2005 </span>
 <span class="co">#&gt;  ------ </span>
 <span class="co">#&gt;     \   </span>
 <span class="co">#&gt;      \  </span>
@@ -381,7 +397,7 @@
 <span class="co">#&gt;           `\,  \ \</span>
 <span class="co">#&gt;            ||\  \`|,</span>
 <span class="co">#&gt;  jgs      _|| `=`-'</span>
-<span class="co">#&gt;          ~~`~`</span></pre></body></html></div>
+<span class="co">#&gt;          ~~`~`</span></pre></div>
 </div>
   </div>
 
@@ -400,7 +416,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

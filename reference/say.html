@@ -123,16 +123,16 @@
     <p>Sling messages and warnings with flair</p>
     </div>
 
-    <pre class="usage"><span class='fu'>say</span>(
-  <span class='kw'>what</span> <span class='kw'>=</span> <span class='st'>"Hello world!"</span>,
-  <span class='kw'>by</span> <span class='kw'>=</span> <span class='st'>"cat"</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>what_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>by_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>length</span> <span class='kw'>=</span> <span class='fl'>18</span>,
-  <span class='kw'>fortune</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>say</span><span class='op'>(</span>
+  what <span class='op'>=</span> <span class='st'>"Hello world!"</span>,
+  by <span class='op'>=</span> <span class='st'>"cat"</span>,
+  type <span class='op'>=</span> <span class='cn'>NULL</span>,
+  what_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  by_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  length <span class='op'>=</span> <span class='fl'>18</span>,
+  fortune <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -234,7 +234,8 @@ are not available because they use non-ASCII characters that don't display
 properly in R on Windows.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>say</span>()</div><div class='output co'>#&gt; 
+    <pre class="examples"><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Hello world! 
 #&gt;  --------------
@@ -251,7 +252,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"what"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"what"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; what 
 #&gt;  --------------
@@ -268,7 +270,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"meow"</span>, <span class='st'>"cat"</span>, <span class='kw'>what_color</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"meow"</span>, <span class='st'>"cat"</span>, what_color <span class='op'>=</span> <span class='st'>"blue"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; <span style='color: #0000BB;'>meow</span><span> 
 #&gt;  --------------
@@ -285,9 +288,10 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>'time'</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
-#&gt; 2020-08-11 16:18:07 
+#&gt; 2020-10-26 16:05:26 
 #&gt;  --------------
 #&gt;     \
 #&gt;       \
@@ -302,9 +306,10 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>'time'</span>, <span class='st'>"poop"</span>, <span class='kw'>by_color</span> <span class='kw'>=</span> <span class='st'>"cyan"</span>, <span class='kw'>what_color</span> <span class='kw'>=</span> <span class='st'>"pink"</span>)</div><div class='output co'>#&gt; </span><span style='color: #00BBBB;'>
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span>, <span class='st'>"poop"</span>, by_color <span class='op'>=</span> <span class='st'>"cyan"</span>, what_color <span class='op'>=</span> <span class='st'>"pink"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #00BBBB;'>
 #&gt;  ----- 
-#&gt; </span><span style='color: #555555;'>2020-08-11 16:18:07</span><span style='color: #00BBBB;'> 
+#&gt; </span><span style='color: #555555;'>2020-10-26 16:05:26</span><span style='color: #00BBBB;'> 
 #&gt;  ------ 
 #&gt;     \   
 #&gt;      \
@@ -314,11 +319,12 @@ properly in R on Windows.</p>
 #&gt;     ( \_
 #&gt;   _(_\ \)__
 #&gt;  (____\ ___)) [nosig]</span><span></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>jsonlite</span>)
-<span class='fu'>say</span>(<span class='st'>"hello world"</span>,
-    <span class='kw'>by</span> <span class='kw'>=</span> <span class='st'>"hypnotoad"</span>,
-    <span class='kw'>what_color</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"royalblue1"</span>, <span class='st'>"tomato2"</span>),
-    <span class='kw'>by_color</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"rainbow"</span>, <span class='st'>"rainbow"</span>))</div><div class='output co'>#&gt; </span><span style='color: #FF0000;'> </span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'>-</span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'> </span><span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
+<span class='fu'>say</span><span class='op'>(</span><span class='st'>"hello world"</span>,
+    by <span class='op'>=</span> <span class='st'>"hypnotoad"</span>,
+    what_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"royalblue1"</span>, <span class='st'>"tomato2"</span><span class='op'>)</span>,
+    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"rainbow"</span>, <span class='st'>"rainbow"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #FF0000;'> </span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'>-</span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'> </span><span>
 #&gt; </span><span style='color: #5F87FF;'>hello </span><span style='color: #FF875F;'>world</span><span style='color: #FF0000;'> </span><span>
 #&gt; </span><span style='color: #FF0000;'> ----</span><span style='color: #FFAF00;'>--</span><span>
 #&gt; </span><span style='color: #FF0000;'>    \</span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> ,'``</span><span style='color: #0000FF;'>.._ </span><span style='color: #AF00FF;'>  ,'`</span><span style='color: #FF0000;'>`.</span><span>
@@ -340,9 +346,10 @@ properly in R on Windows.</p>
 #&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   `</span><span style='color: #00FF00;'>-. `.</span><span style='color: #0000FF;'>`.``</span><span style='color: #AF00FF;'>-----</span><span style='color: #FF0000;'>``--</span><span style='color: #FFAF00;'>,  .'</span><span>
 #&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> |/`.</span><span style='color: #0000FF;'>\`' </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  ,'</span><span style='color: #FFAF00;'>,'); </span><span style='color: #FFFF00;'>SSt</span><span>
 #&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>`   </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'> (/ </span><span style='color: #FFAF00;'> (/</span><span>
-#&gt; </span><span style='color: #FF0000;'>  </span><span></div><div class='input'><span class='fu'>say</span>(<span class='st'>"whats up"</span>,
-    <span class='kw'>what_color</span> <span class='kw'>=</span> <span class='kw pkg'>crayon</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/crayon/man/crayon.html'>cyan</a></span>$<span class='no'>bgMagenta</span>,
-    <span class='kw'>by_color</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"salmon1"</span>, <span class='st'>"springgreen"</span>))</div><div class='output co'>#&gt; </span><span style='color: #FFAF87;'> -------</span><span style='color: #00FF87;'>------- </span><span>
+#&gt; </span><span style='color: #FF0000;'>  </span><span></div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"whats up"</span>,
+    what_color <span class='op'>=</span> <span class='fu'>crayon</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/crayon/man/crayon.html'>cyan</a></span><span class='op'>$</span><span class='va'>bgMagenta</span>,
+    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"salmon1"</span>, <span class='st'>"springgreen"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #FFAF87;'> -------</span><span style='color: #00FF87;'>------- </span><span>
 #&gt; </span><span style='color: #00BBBB;background-color: #BB00BB;'>whats up</span><span style='color: #FFAF87;'> </span><span>
 #&gt; </span><span style='color: #FFAF87;'> ----------</span><span style='color: #00FF87;'>----</span><span>
 #&gt; </span><span style='color: #FFAF87;'>    \</span><span>
@@ -359,7 +366,8 @@ properly in R on Windows.</p>
 #&gt; </span><span style='color: #FFAF87;'>      jgs  </span><span style='color: #00FF87;'>//_// ___/</span><span>
 #&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>    \_)</span><span>
 #&gt; </span><span style='color: #FFAF87;'>  </span><span></div><div class='input'>
-<span class='fu'>say</span>(<span class='st'>"who you callin chicken"</span>, <span class='st'>"chicken"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span><span class='st'>"who you callin chicken"</span>, <span class='st'>"chicken"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; who you callin chicken 
 #&gt;  ------ 
@@ -376,7 +384,8 @@ properly in R on Windows.</p>
 #&gt;             `;-..'
 #&gt;             _| _|
 #&gt;             /` /` [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"ain't that some shit"</span>, <span class='st'>"poop"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"ain't that some shit"</span>, <span class='st'>"poop"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; ain't that some shit 
 #&gt;  ------ 
@@ -387,7 +396,8 @@ properly in R on Windows.</p>
 #&gt;    ) _   )
 #&gt;     ( \_
 #&gt;   _(_\ \)__
-#&gt;  (____\ ___)) [nosig]</div><div class='input'><span class='fu'>say</span>(<span class='st'>"icanhazpdf?"</span>, <span class='st'>"cat"</span>)</div><div class='output co'>#&gt; 
+#&gt;  (____\ ___)) [nosig]</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"icanhazpdf?"</span>, <span class='st'>"cat"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; icanhazpdf? 
 #&gt;  --------------
@@ -404,7 +414,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"boo!"</span>, <span class='st'>"pumpkin"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"boo!"</span>, <span class='st'>"pumpkin"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; boo! 
 #&gt;  ------ 
@@ -419,7 +430,8 @@ properly in R on Windows.</p>
 #&gt;         ;   | ''--...--'' |  ;
 #&gt;          \  ''---.....--''  /
 #&gt;           ''*-.,_______,.-*'  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"hot diggity"</span>, <span class='st'>"frog"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hot diggity"</span>, <span class='st'>"frog"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; hot diggity 
 #&gt;  ------ 
@@ -431,7 +443,8 @@ properly in R on Windows.</p>
 #&gt;   __\ ( (     ) ) /__
 #&gt;   )   /\ \._./ /\   (
 #&gt;    )_/ /|\   /|\ \_(  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"spider"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"spider"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; Warning: Although abusing R was not proved to be addictive, it should be noted that it often leads to harder stuff.
 #&gt;  Ivan Mizera (self-confessed abuseR)
@@ -448,7 +461,8 @@ properly in R on Windows.</p>
 #&gt;          \_\\  //_/
 #&gt;           .'/()\'.
 #&gt;            \\  //  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"facecat"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"facecat"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; 1st mail: One of the reasons that SAM is popular, is that it is popular (i.e. since everyone has heard of it, it makes reviewers happy). So, it would be nice to be able to point to publications in good journals so that reviewers will be comfortable. (I personally, am quite comfortable with SAM).
 #&gt; 2nd mail: Oops, must have been a Freudian slip. Actually, I am not perfectly comfortable with SAM. But I am quite comfortable with limma.
@@ -463,7 +477,8 @@ properly in R on Windows.</p>
 #&gt;          (O o)
 #&gt;         =(:^:)=
 #&gt;            U      [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"behindcat"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"behindcat"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; The existence of a method is not a sufficient reason to use that method.
 #&gt;  Jari Oksanen
@@ -486,7 +501,8 @@ properly in R on Windows.</p>
 #&gt;               ( (
 #&gt;                ) )
 #&gt;               (_(
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"smallcat"</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"smallcat"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Seldom are prizes, credit, and gratitude given, else Brian would be drowning in them.
 #&gt;  Anthony Rossini
@@ -500,7 +516,8 @@ properly in R on Windows.</p>
 #&gt;          /\_/\
 #&gt;         ( o.o )
 #&gt;          &gt; ^ &lt;      [nosig]
-#&gt; </div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"monkey"</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"monkey"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ------------- 
 #&gt; 3-D bar plots are an abomination. Just because Excel can do them doesn't mean you should.
 #&gt; (Dismount pulpit).
@@ -523,7 +540,8 @@ properly in R on Windows.</p>
 #&gt;                 /`  /`~\   |//
 #&gt;                /   /    \  /
 #&gt;           ,--`,--'\/\    /
-#&gt;           '-- "--'  '--'</div><div class='input'><span class='fu'>say</span>(<span class='st'>"fortune"</span>, <span class='st'>"egret"</span>)</div><div class='output co'>#&gt; 
+#&gt;           '-- "--'  '--'</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"egret"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; If anything, there should be a Law: Thou Shalt Not Even Think Of Producing A Graph That Looks Like Anything From A Spreadsheet.
 #&gt;  Ted Harding
@@ -543,7 +561,8 @@ properly in R on Windows.</p>
 #&gt;           `\,  \ \
 #&gt;            ||\  \`|,
 #&gt;  jgs      _|| `=`-'
-#&gt;          ~~`~`</div><div class='input'><span class='fu'>say</span>(<span class='st'>"rms"</span>, <span class='st'>"rms"</span>)</div><div class='output co'>#&gt; 
+#&gt;          ~~`~`</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"rms"</span>, <span class='st'>"rms"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; 
 #&gt;  ----- 
 #&gt; Richard Stallman can touch MC Hammer. 
@@ -567,7 +586,8 @@ properly in R on Windows.</p>
 #&gt;              @ @  @              @  @
 #&gt;                @                    @</div><div class='input'>
 <span class='co'># Vary type of output, default calls message()</span>
-<span class='fu'>say</span>(<span class='st'>"hell no!"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; hell no! 
 #&gt;  --------------
@@ -584,7 +604,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='st'>"hell no!"</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"warning"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: </span>
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"warning"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: </span>
 #&gt; <span class='warning'> -------------- </span>
 #&gt; <span class='warning'>hell no! </span>
 #&gt; <span class='warning'> --------------</span>
@@ -601,9 +622,11 @@ properly in R on Windows.</p>
 #&gt; <span class='warning'>           \| | |_|/\</span>
 #&gt; <span class='warning'>      jgs  //_// ___/</span>
 #&gt; <span class='warning'>               \_)</span>
-#&gt; <span class='warning'>  </span></div><div class='input'><span class='fu'>say</span>(<span class='st'>"hell no!"</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"string"</span>)</div><div class='output co'>#&gt; [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "</div><div class='input'>
+#&gt; <span class='warning'>  </span></div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"string"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "</div><div class='input'>
 <span class='co'># Using fortunes</span>
-<span class='fu'>say</span>(<span class='kw'>what</span><span class='kw'>=</span><span class='st'>"fortune"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span>what<span class='op'>=</span><span class='st'>"fortune"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; [Listing original copyright holders in R packages is] especially useful if there are areas of doubt and uncertainty (eg code published on ftp sites before people worried about licenses), since it at least gives you rigidly defined areas of doubt and uncertainty.[5]
 #&gt; [5] Adams D, (1978) Hitchhiker's Guide. BBC Radio.
@@ -627,7 +650,8 @@ properly in R on Windows.</p>
 #&gt;                \_)
 #&gt;   </div><div class='input'><span class='co'>## you don't have to pass anything to the `what` parameter if `fortune` is</span>
 <span class='co'>## not null</span>
-<span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='fl'>10</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Overall, SAS is about 11 years behind R and S-Plus in statistical capabilities (last year it was about 10 years behind) in my estimation.
 #&gt;  Frank Harrell (SAS User, 1969-1991)
@@ -647,7 +671,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='fl'>100</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>100</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
 #&gt;  Peter Dalgaard
@@ -668,7 +693,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='st'>'whatever'</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='st'>'whatever'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
 #&gt; Joshua Ulrich: That's the magic_pony function.
@@ -689,7 +715,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='fl'>7</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>7</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; What we have is nice, but we need something very different.
 #&gt;  Robert Gentleman
@@ -709,7 +736,8 @@ properly in R on Windows.</p>
 #&gt;            \| | |_|/\
 #&gt;       jgs  //_// ___/
 #&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='fl'>45</span>)</div><div class='output co'>#&gt; 
+#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>45</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; It seems to me against the spirit of Open Source software to attempt to monitor distribution. We could ask R to 'call home' on first use (in the way e.g. pine does) but I suspect many users would find that objectionable.
 #&gt;  Brian D. Ripley
@@ -735,7 +763,8 @@ properly in R on Windows.</p>
 <span class='co'># say("catfact", "cat")</span>
 
 <span class='co'># The hypnotoad</span>
-<span class='fu'>say</span>(<span class='kw'>by</span><span class='kw'>=</span><span class='st'>"hypnotoad"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>"hypnotoad"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  ----- 
 #&gt; All Glory to the HYPNO TOAD! 
 #&gt;  ------
@@ -760,7 +789,8 @@ properly in R on Windows.</p>
 #&gt;                    `         (/  (/
 #&gt;   </div><div class='input'>
 <span class='co'># Trilobite</span>
-<span class='fu'>say</span>(<span class='kw'>by</span><span class='kw'>=</span><span class='st'>'trilobite'</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>'trilobite'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Hello world! 
 #&gt;  --------------
@@ -778,7 +808,8 @@ properly in R on Windows.</p>
 #&gt;          `'---'`
 #&gt;   </div><div class='input'>
 <span class='co'># Shark</span>
-<span class='fu'>say</span>(<span class='st'>'Q: What do you call a solitary shark\nA: A lone shark'</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='st'>'shark'</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a solitary shark\nA: A lone shark'</span>, by<span class='op'>=</span><span class='st'>'shark'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Q: What do you call a solitary shark
 #&gt; A: A lone shark 
@@ -812,7 +843,8 @@ properly in R on Windows.</p>
 #&gt;   '
 #&gt;   </div><div class='input'>
 <span class='co'># Buffalo</span>
-<span class='fu'>say</span>(<span class='st'>'Q: What do you call a single buffalo?\nA: A buffalonely'</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='st'>'buffalo'</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a single buffalo?\nA: A buffalonely'</span>, by<span class='op'>=</span><span class='st'>'buffalo'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt;  -------------- 
 #&gt; Q: What do you call a single buffalo?
 #&gt; A: A buffalonely 
@@ -834,7 +866,8 @@ properly in R on Windows.</p>
 #&gt;           mic &amp; dwb  /_(/_(    /_(  /_(
 #&gt;     </div><div class='input'>
 <span class='co'># Clippy</span>
-<span class='fu'>say</span>(<span class='kw'>fortune</span><span class='kw'>=</span><span class='fl'>59</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='st'>"clippy"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>59</span>, by<span class='op'>=</span><span class='st'>"clippy"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; 
 #&gt;  ----- 
 #&gt; Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
@@ -867,7 +900,7 @@ properly in R on Windows.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
