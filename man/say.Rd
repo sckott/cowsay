@@ -18,11 +18,14 @@ say(
 \arguments{
 \item{what}{(character) What do you want to say? See Details.}
 
-\item{by}{(character) Type of thing, one of cow, chicken, poop, cat, facecat,
-bigcat, longcat, shortcat, behindcat, longtailcat, anxiouscat, grumpycat,
-smallcat, ant, pumpkin, ghost, spider, rabbit, pig, snowman, frog, hypnotoad,
-signbunny, stretchycat, fish, trilobite, shark, buffalo, clippy, mushroom,
-monkey, egret, or rms for Richard Stallman.
+\item{by}{(character) Type of thing, one of cow, chicken, chuck,
+clippy, poop, bigcat, ant, pumpkin, ghost, spider, rabbit, pig,
+snowman, frog, hypnotoad, shortcat, longcat, fish, signbunny,
+facecat, behindcat, stretchycat, anxiouscat, longtailcat, cat,
+trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom,
+endlesshorse, bat, bat2, turkey, monkey, daemon, egret, duckling,
+duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
+whale, wolf, or rms for Richard Stallman.
 Alternatively, use "random" to have your message spoken by a random
 character.
 We use \code{\link[=match.arg]{match.arg()}} internally, so you can use unique parts of
