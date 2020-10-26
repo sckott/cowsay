@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">cowsay</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.0.92</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.1.91</span>
       </span>
     </div>
 
@@ -194,7 +194,7 @@
 <span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  -------------- </span>
-<span class="co">#&gt; 2020-10-26 16:05:30 </span>
+<span class="co">#&gt; 2020-10-26 16:08:28 </span>
 <span class="co">#&gt;  --------------</span>
 <span class="co">#&gt;     \</span>
 <span class="co">#&gt;       \</span>
@@ -259,14 +259,18 @@
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; I see three drivers of problems with R.</span>
-<span class="co">#&gt; The first is that R is useful. [...]</span>
-<span class="co">#&gt; The second driver of problems with R is that it is both a programming language and an interactive language. There is a tension there that is unavoidable. [...]</span>
-<span class="co">#&gt; The third big driver of problems is that R is not software, it is a community.</span>
-<span class="co">#&gt;  Patrick Burns</span>
-<span class="co">#&gt;  Inferno-ish R</span>
-<span class="co">#&gt;  CambR User Group Meeting, Cambridge</span>
-<span class="co">#&gt;  May 2012 </span>
+<span class="co">#&gt; This reminds me of a famous FORTRAN code snippet:</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; 10 STOP</span>
+<span class="co">#&gt; STOP</span>
+<span class="co">#&gt; STOP</span>
+<span class="co">#&gt; ! IN CASE STILL SKIDDING</span>
+<span class="co">#&gt; GOTO 10</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;  Carl Witthoft</span>
+<span class="co">#&gt;  in response to the question how to completely stop R scripts after stop()</span>
+<span class="co">#&gt;  R-help</span>
+<span class="co">#&gt;  January 2011 </span>
 <span class="co">#&gt;  ------ </span>
 <span class="co">#&gt;     \   </span>
 <span class="co">#&gt;      \</span>
@@ -288,23 +292,27 @@
     type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; Eric Lecoutre: I don't want to die being idiot...</span>
-<span class="co">#&gt; Peter Dalgaard: With age, most of us come to realise that that is the only possible outcome.</span>
-<span class="co">#&gt;  Eric Lecoutre and Peter Dalgaard</span>
+<span class="co">#&gt;               ------ </span>
+<span class="co">#&gt;              I cannot remember if I have been using 14 or 14, I think it was 14 and I am not near the machine to check.</span>
+<span class="co">#&gt;  John Kane</span>
+<span class="co">#&gt;  confused about his SPSS version</span>
 <span class="co">#&gt;  R-help</span>
-<span class="co">#&gt;  October 2004 </span>
-<span class="co">#&gt;  ------ </span>
-<span class="co">#&gt;     \   </span>
-<span class="co">#&gt;      \  </span>
-<span class="co">#&gt;       \</span>
-<span class="co">#&gt;          __</span>
-<span class="co">#&gt;         /o \</span>
-<span class="co">#&gt;       &lt;=   |         ==</span>
-<span class="co">#&gt;         |__|        /===</span>
-<span class="co">#&gt;         |   \______/  =</span>
-<span class="co">#&gt;         \     ====   /</span>
-<span class="co">#&gt;          \__________/     [ab]</span></pre></div>
+<span class="co">#&gt;  April 2007 </span>
+<span class="co">#&gt;               ------ </span>
+<span class="co">#&gt;                   \   </span>
+<span class="co">#&gt;                    \  </span>
+<span class="co">#&gt;                     \</span>
+<span class="co">#&gt;                     .</span>
+<span class="co">#&gt;                    / V\</span>
+<span class="co">#&gt;                   / `  /</span>
+<span class="co">#&gt;                  &lt;&lt;   |</span>
+<span class="co">#&gt;                  /    |</span>
+<span class="co">#&gt;                /      |</span>
+<span class="co">#&gt;              /        |</span>
+<span class="co">#&gt;            /    \  \ /</span>
+<span class="co">#&gt;           (      ) | |</span>
+<span class="co">#&gt;   ________|   _/_  | |</span>
+<span class="co">#&gt; &lt;__________\______)\__)</span></pre></div>
 <div class="sourceCode" id="cb17"><pre class="downlit">
 <span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>, 
     by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">names_safe</span>, <span class="fl">1</span><span class="op">)</span>,
@@ -313,21 +321,28 @@
     type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span>
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; You might also consider a more informative subject line. "Help needed" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?</span>
-<span class="co">#&gt;  Peter Ehlers</span>
-<span class="co">#&gt;  after answering a help request</span>
-<span class="co">#&gt;  R-help</span>
-<span class="co">#&gt;  April 2011 </span>
-<span class="co">#&gt;  ------ </span>
-<span class="co">#&gt;     \   </span>
-<span class="co">#&gt;      \</span>
-<span class="co">#&gt;        _//| .-~~~-.</span>
-<span class="co">#&gt;      _/oo  }       }-@</span>
-<span class="co">#&gt;     ('')_  }       |</span>
-<span class="co">#&gt;      `--'| { }--{  }</span>
-<span class="co">#&gt;           //_/  /_/ [nosig]</span>
-<span class="co">#&gt; </span></pre></div>
+<span class="co">#&gt;  ------------- </span>
+<span class="co">#&gt; If you give people a linear model function you give them something dangerous.</span>
+<span class="co">#&gt;  John Fox</span>
+<span class="co">#&gt;  useR! 2004, Vienna</span>
+<span class="co">#&gt;  May 2004 </span>
+<span class="co">#&gt;  -------------- </span>
+<span class="co">#&gt;               \   </span>
+<span class="co">#&gt;                \  </span>
+<span class="co">#&gt;                 \</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;                   .="=.</span>
+<span class="co">#&gt;                 _/.-.-.\_     _</span>
+<span class="co">#&gt;                ( ( o o ) )    ))</span>
+<span class="co">#&gt;                 |/  "  \|    //</span>
+<span class="co">#&gt;                  \'---'/    //</span>
+<span class="co">#&gt;            jgs   /`"""`\\  ((</span>
+<span class="co">#&gt;                 / /_,_\ \\  \\</span>
+<span class="co">#&gt;                 \_\_'__/  \  ))</span>
+<span class="co">#&gt;                 /`  /`~\   |//</span>
+<span class="co">#&gt;                /   /    \  /</span>
+<span class="co">#&gt;           ,--`,--'\/\    /</span>
+<span class="co">#&gt;           '-- "--'  '--'</span></pre></div>
 <p><code>"rainbow"</code> is the same as <code><a href="https://rdrr.io/r/base/c.html">c("red", "orange", "yellow", "green", "blue", "purple")</a></code>. Saves you a bit of typing.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit">
 <span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"foobar"</span>,
@@ -378,12 +393,11 @@
 <span class="co">#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;  ----- </span>
-<span class="co">#&gt; Excellent, Berwin!</span>
-<span class="co">#&gt; Specifically the part about why the bug never really triggers wrong behavior. Your mail should be saved in 'The Annals of R' ...</span>
-<span class="co">#&gt;  Martin Maechler</span>
-<span class="co">#&gt;  after Berwin A Turlach reported a buglet in 'spline_eval'</span>
-<span class="co">#&gt;  R-devel</span>
-<span class="co">#&gt;  July 2005 </span>
+<span class="co">#&gt; 4 bits are not enough for me!</span>
+<span class="co">#&gt;  Philippe Grosjean</span>
+<span class="co">#&gt;  after conference dinner incl. wine in a conversation about the representation of data in the ff package</span>
+<span class="co">#&gt;  useR! 2009, Rennes</span>
+<span class="co">#&gt;  July 2009 </span>
 <span class="co">#&gt;  ------ </span>
 <span class="co">#&gt;     \   </span>
 <span class="co">#&gt;      \  </span>
