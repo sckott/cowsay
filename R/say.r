@@ -193,11 +193,11 @@ say <- function(what="Hello world!", by="cat",
   if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama",
     "holygrail", "simpsons", "starwars", "loremipsum")
   ) {
-    stop("sorry, fillerama API is down", call.=FALSE)
-    # check4pkg("jsonlite")
-    # what <-
-    #   jsonlite::fromJSON(
-    #     paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
+    #stop("sorry, fillerama API is down", call.=FALSE)
+    check4pkg("jsonlite")
+    try(what <-
+       jsonlite::fromJSON(
+         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote )
   }
 
   what_pos_start <-
