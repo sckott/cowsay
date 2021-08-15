@@ -27,3 +27,9 @@ check4pkg <- function(pkg) {
     invisible(TRUE)
   }
 }
+
+filleramaIsBroken <- function(e) {
+  return("I'm sorry Dave, I'm afraid I can't do that.")
+}
+
+

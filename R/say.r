@@ -195,10 +195,11 @@ say <- function(what="Hello world!", by="cat",
   ) {
     #stop("sorry, fillerama API is down", call.=FALSE)
     check4pkg("jsonlite")
-    try(what <-
-       jsonlite::fromJSON(
-         paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote )
+    what <- tryCatch(
+      jsonlite::fromJSON(paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote,
+      error = filleramaIsBroken )
   }
+  
 
   what_pos_start <-
     regexpr('%s', who)[1] - 1
