@@ -11,7 +11,7 @@ cowsay
 If you are familiar with `cowsay` on the cli, then you know what this
 is, but for R. If not, read below. Why? Why not?
 
-### Contributors (alphebetical)
+### Contributors (alphabetical)
 
 -   Amanda Dobbyn
 -   Andreas Brandmaier
