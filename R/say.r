@@ -190,16 +190,20 @@ say <- function(what="Hello world!", by="cat",
     what <- rmsfact::rmsfact()
   }
 
-  if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama",
-    "holygrail", "simpsons", "starwars", "loremipsum")
-  ) {
-    #stop("sorry, fillerama API is down", call.=FALSE)
-    check4pkg("jsonlite")
+
+  if (what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum")) {
+    what_orig <- what
+    
+    check4jsonlite()
     what <- tryCatch(
-      jsonlite::fromJSON(paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote,
-      error = filleramaIsBroken )
+      jsonlite::fromJSON(paste0("http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=", what))$db$quote,
+      error =
+        function(e) {
+          return(paste0("`", what_orig, "` isn't available right now :("))
+        }
+    )
   }
-  
+
 
   what_pos_start <-
     regexpr('%s', who)[1] - 1
