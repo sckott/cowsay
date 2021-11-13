@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,7 +97,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/sckott/cowsay/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -182,7 +182,7 @@ Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").</p></
 text color(s) or
 <a href='https://github.com/r-lib/crayon#styles'><code>crayon style function</code></a>
 to color <code>who</code>. Use "rainbow" for
-<code><a href='https://rdrr.io/r/base/c.html'>c("red", "orange", "yellow", "green", "blue", "purple")</a></code></p></td>
+<code>c("red", "orange", "yellow", "green", "blue", "purple")</code></p></td>
     </tr>
     <tr>
       <th>length</th>
@@ -237,657 +237,690 @@ are not available because they use non-ASCII characters that don't display
 properly in R on Windows.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Hello world! 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"what"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; what 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"meow"</span>, <span class='st'>"cat"</span>, what_color <span class='op'>=</span> <span class='st'>"blue"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; <span style='color: #0000BB;'>meow</span><span> 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; 2020-10-26 16:08:17 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span>, <span class='st'>"poop"</span>, by_color <span class='op'>=</span> <span class='st'>"cyan"</span>, what_color <span class='op'>=</span> <span class='st'>"pink"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; </span><span style='color: #00BBBB;'>
-#&gt;  ----- 
-#&gt; </span><span style='color: #555555;'>2020-10-26 16:08:17</span><span style='color: #00BBBB;'> 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;      (   )
-#&gt;   (   ) (
-#&gt;    ) _   )
-#&gt;     ( \_
-#&gt;   _(_\ \)__
-#&gt;  (____\ ___)) [nosig]</span><span></div><div class='input'>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
-<span class='fu'>say</span><span class='op'>(</span><span class='st'>"hello world"</span>,
-    by <span class='op'>=</span> <span class='st'>"hypnotoad"</span>,
-    what_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"royalblue1"</span>, <span class='st'>"tomato2"</span><span class='op'>)</span>,
-    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"rainbow"</span>, <span class='st'>"rainbow"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; </span><span style='color: #FF0000;'> </span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'>-</span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'> </span><span>
-#&gt; </span><span style='color: #5F87FF;'>hello </span><span style='color: #FF875F;'>world</span><span style='color: #FF0000;'> </span><span>
-#&gt; </span><span style='color: #FF0000;'> ----</span><span style='color: #FFAF00;'>--</span><span>
-#&gt; </span><span style='color: #FF0000;'>    \</span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> ,'``</span><span style='color: #0000FF;'>.._ </span><span style='color: #AF00FF;'>  ,'`</span><span style='color: #FF0000;'>`.</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>\    </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>:,--.</span><span style='color: #0000FF;'>_:)\</span><span style='color: #AF00FF;'>,:,._</span><span style='color: #FF0000;'>,.:</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'> \   </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>:`--,</span><span style='color: #0000FF;'>''  </span><span style='color: #AF00FF;'> :`..</span><span style='color: #FF0000;'>.';\</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> `,' </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>  `--</span><span style='color: #FF0000;'>-'  </span><span style='color: #FFAF00;'>`.</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> /   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'> :</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>/    </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'>  \</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>  ,'</span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'>   :\</span><span style='color: #FFFF00;'>.___</span><span style='color: #00FF00;'>,-.</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'> `..</span><span style='color: #00FF00;'>.,---</span><span style='color: #0000FF;'>'```</span><span style='color: #AF00FF;'>```-.</span><span style='color: #FF0000;'>.._ </span><span style='color: #FFAF00;'>   |:</span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>   \</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   (</span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>   )</span><span style='color: #FFAF00;'>   ;:</span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)   \</span><span style='color: #0000FF;'>  _,</span><span style='color: #AF00FF;'>-.</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>`.   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  ( </span><span style='color: #FFAF00;'>  // </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>`'  </span><span style='color: #AF00FF;'>  \</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> :   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>   `</span><span style='color: #FFAF00;'>.//  </span><span style='color: #FFFF00;'>)   </span><span style='color: #00FF00;'>   ) </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>, ;</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   ,</span><span style='color: #00FF00;'>-|`. </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  _,</span><span style='color: #FFAF00;'>'/   </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)    </span><span style='color: #0000FF;'>) ,'</span><span style='color: #AF00FF;'> ,'</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>  ( </span><span style='color: #00FF00;'> :`.`</span><span style='color: #0000FF;'>-.._</span><span style='color: #AF00FF;'>___..</span><span style='color: #FF0000;'>=:.-</span><span style='color: #FFAF00;'>':   </span><span style='color: #FFFF00;'>  . </span><span style='color: #00FF00;'>    _</span><span style='color: #0000FF;'>,' ,</span><span style='color: #AF00FF;'>'</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   `</span><span style='color: #00FF00;'>,'\ `</span><span style='color: #0000FF;'>`--.</span><span style='color: #AF00FF;'>...-)</span><span style='color: #FF0000;'>='  </span><span style='color: #FFAF00;'>  `._</span><span style='color: #FFFF00;'>,  \</span><span style='color: #00FF00;'>  ,')</span><span style='color: #0000FF;'> _ '</span><span style='color: #AF00FF;'>``._</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>_.-/</span><span style='color: #00FF00;'> _ `.</span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>   (_</span><span style='color: #FF0000;'>)   </span><span style='color: #FFAF00;'>   / </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)' ; </span><span style='color: #0000FF;'>/ \ </span><span style='color: #AF00FF;'>\`-.'</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>    `</span><span style='color: #FFFF00;'>--( </span><span style='color: #00FF00;'>  `-:</span><span style='color: #0000FF;'>`.  </span><span style='color: #AF00FF;'>   `'</span><span style='color: #FF0000;'> ___</span><span style='color: #FFAF00;'>..'  </span><span style='color: #FFFF00;'>_,-'</span><span style='color: #00FF00;'>   |/</span><span style='color: #0000FF;'>   `</span><span style='color: #AF00FF;'>.)</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   `</span><span style='color: #00FF00;'>-. `.</span><span style='color: #0000FF;'>`.``</span><span style='color: #AF00FF;'>-----</span><span style='color: #FF0000;'>``--</span><span style='color: #FFAF00;'>,  .'</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> |/`.</span><span style='color: #0000FF;'>\`' </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  ,'</span><span style='color: #FFAF00;'>,'); </span><span style='color: #FFFF00;'>SSt</span><span>
-#&gt; </span><span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>`   </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'> (/ </span><span style='color: #FFAF00;'> (/</span><span>
-#&gt; </span><span style='color: #FF0000;'>  </span><span></div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"whats up"</span>,
-    what_color <span class='op'>=</span> <span class='fu'>crayon</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/crayon/man/crayon.html'>cyan</a></span><span class='op'>$</span><span class='va'>bgMagenta</span>,
-    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"salmon1"</span>, <span class='st'>"springgreen"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; </span><span style='color: #FFAF87;'> -------</span><span style='color: #00FF87;'>------- </span><span>
-#&gt; </span><span style='color: #00BBBB;background-color: #BB00BB;'>whats up</span><span style='color: #FFAF87;'> </span><span>
-#&gt; </span><span style='color: #FFAF87;'> ----------</span><span style='color: #00FF87;'>----</span><span>
-#&gt; </span><span style='color: #FFAF87;'>    \</span><span>
-#&gt; </span><span style='color: #FFAF87;'>      \</span><span>
-#&gt; </span><span style='color: #FFAF87;'>        \</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> |\___/|</span><span>
-#&gt; </span><span style='color: #FFAF87;'>          =</span><span style='color: #00FF87;'>=) ^Y^ (==</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> \  ^  /</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>  )=*=(</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> /     \</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> |     |</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>/| | | |\</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>\| | |_|/\</span><span>
-#&gt; </span><span style='color: #FFAF87;'>      jgs  </span><span style='color: #00FF87;'>//_// ___/</span><span>
-#&gt; </span><span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>    \_)</span><span>
-#&gt; </span><span style='color: #FFAF87;'>  </span><span></div><div class='input'>
-<span class='fu'>say</span><span class='op'>(</span><span class='st'>"who you callin chicken"</span>, <span class='st'>"chicken"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; who you callin chicken 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;          _
-#&gt;        _/ }
-#&gt;       `&gt;' \
-#&gt;       `|   \
-#&gt;        |   /'-.     .-.
-#&gt;         \'     ';`--' .'
-#&gt;          \'.    `'-./
-#&gt;           '.`-..-;`
-#&gt;             `;-..'
-#&gt;             _| _|
-#&gt;             /` /` [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"ain't that some shit"</span>, <span class='st'>"poop"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; ain't that some shit 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;      (   )
-#&gt;   (   ) (
-#&gt;    ) _   )
-#&gt;     ( \_
-#&gt;   _(_\ \)__
-#&gt;  (____\ ___)) [nosig]</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"icanhazpdf?"</span>, <span class='st'>"cat"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; icanhazpdf? 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"boo!"</span>, <span class='st'>"pumpkin"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; boo! 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;                   ___
-#&gt;                ___)__|_
-#&gt;           .-*'          '*-,
-#&gt;          /      /|   |\     \
-#&gt;         ;      /_|   |_\     ;
-#&gt;         ;   |\           /|  ;
-#&gt;         ;   | ''--...--'' |  ;
-#&gt;          \  ''---.....--''  /
-#&gt;           ''*-.,_______,.-*'  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hot diggity"</span>, <span class='st'>"frog"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; hot diggity 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;         (.)_(.)
-#&gt;      _ (   _   ) _
-#&gt;     / \/`-----'\/ \
-#&gt;   __\ ( (     ) ) /__
-#&gt;   )   /\ \._./ /\   (
-#&gt;    )_/ /|\   /|\ \_(  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"spider"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; Warning: Although abusing R was not proved to be addictive, it should be noted that it often leads to harder stuff.
-#&gt;  Ivan Mizera (self-confessed abuseR)
-#&gt;  useR! 2006, Vienna
-#&gt;  June 2006 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;               |
-#&gt;               |
-#&gt;               |
-#&gt;              __
-#&gt;           | /  \ |
-#&gt;          \_\\  //_/
-#&gt;           .'/()\'.
-#&gt;            \\  //  [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"facecat"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; 1st mail: One of the reasons that SAM is popular, is that it is popular (i.e. since everyone has heard of it, it makes reviewers happy). So, it would be nice to be able to point to publications in good journals so that reviewers will be comfortable. (I personally, am quite comfortable with SAM).
-#&gt; 2nd mail: Oops, must have been a Freudian slip. Actually, I am not perfectly comfortable with SAM. But I am quite comfortable with limma.
-#&gt;  Naomi Altman
-#&gt;  answering the question whether anyone had published data using limma for microarray analysis
-#&gt;  bioconductor
-#&gt;  June 2004 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;          /\ /\
-#&gt;          (O o)
-#&gt;         =(:^:)=
-#&gt;            U      [nosig]
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"behindcat"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; The existence of a method is not a sufficient reason to use that method.
-#&gt;  Jari Oksanen
-#&gt;  about relative advantages of several multivariate analysis methods
-#&gt;  R-SIG-Ecology
-#&gt;  November 2013 
-#&gt;  --------------
-#&gt;       \
-#&gt;         \
-#&gt;           \
-#&gt;             |\___/|
-#&gt;             )     (
-#&gt;            =\     /=
-#&gt;              )===(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /       \
-#&gt;            \       /
-#&gt;       jgs   \__  _/
-#&gt;               ( (
-#&gt;                ) )
-#&gt;               (_(
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"smallcat"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Seldom are prizes, credit, and gratitude given, else Brian would be drowning in them.
-#&gt;  Anthony Rossini
-#&gt;  about the merits of implementing software
-#&gt;  R-help
-#&gt;  May 2004 
-#&gt;  --------------
-#&gt;     \
-#&gt;      \
-#&gt;       \
-#&gt;          /\_/\
-#&gt;         ( o.o )
-#&gt;          &gt; ^ &lt;      [nosig]
-#&gt; </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"monkey"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ------------- 
-#&gt; 3-D bar plots are an abomination. Just because Excel can do them doesn't mean you should.
-#&gt; (Dismount pulpit).
-#&gt;  Berton Gunter
-#&gt;  R-help
-#&gt;  October 2007 
-#&gt;  -------------- 
-#&gt;               \   
-#&gt;                \  
-#&gt;                 \
-#&gt; 
-#&gt;                   .="=.
-#&gt;                 _/.-.-.\_     _
-#&gt;                ( ( o o ) )    ))
-#&gt;                 |/  "  \|    //
-#&gt;                  \'---'/    //
-#&gt;            jgs   /`"""`\\  ((
-#&gt;                 / /_,_\ \\  \\
-#&gt;                 \_\_'__/  \  ))
-#&gt;                 /`  /`~\   |//
-#&gt;                /   /    \  /
-#&gt;           ,--`,--'\/\    /
-#&gt;           '-- "--'  '--'</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"egret"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; If anything, there should be a Law: Thou Shalt Not Even Think Of Producing A Graph That Looks Like Anything From A Spreadsheet.
-#&gt;  Ted Harding
-#&gt;  in a discussion about producing graphics
-#&gt;  R-help
-#&gt;  August 2007 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \  
-#&gt;       \
-#&gt;        \   _,
-#&gt;       -==&lt;' `
-#&gt;           ) /
-#&gt;          / (_.
-#&gt;         |  ,-,`\
-#&gt;          \\   \ \
-#&gt;           `\,  \ \
-#&gt;            ||\  \`|,
-#&gt;  jgs      _|| `=`-'
-#&gt;          ~~`~`</div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"rms"</span>, <span class='st'>"rms"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt; 
-#&gt;  ----- 
-#&gt; Richard Stallman can touch MC Hammer. 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \
-#&gt;                     @@@@@@ @
-#&gt;                   @@@@     @@
-#&gt;                  @@@@ =   =  @@ 
-#&gt;                 @@@ @ _   _   @@ 
-#&gt;                  @@@ @(0)|(0)  @@ 
-#&gt;                 @@@@   ~ | ~   @@
-#&gt;                 @@@ @  (o1o)    @@
-#&gt;                @@@    #######    @
-#&gt;                @@@   ##{+++}##   @@
-#&gt;               @@@@@ ## ##### ## @@@@
-#&gt;               @@@@@#############@@@@
-#&gt;              @@@@@@@###########@@@@@@
-#&gt;             @@@@@@@#############@@@@@
-#&gt;             @@@@@@@### ## ### ###@@@@
-#&gt;              @ @  @              @  @
-#&gt;                @                    @</div><div class='input'>
-<span class='co'># Vary type of output, default calls message()</span>
-<span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; hell no! 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"warning"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: </span>
-#&gt; <span class='warning'> -------------- </span>
-#&gt; <span class='warning'>hell no! </span>
-#&gt; <span class='warning'> --------------</span>
-#&gt; <span class='warning'>    \</span>
-#&gt; <span class='warning'>      \</span>
-#&gt; <span class='warning'>        \</span>
-#&gt; <span class='warning'>            |\___/|</span>
-#&gt; <span class='warning'>          ==) ^Y^ (==</span>
-#&gt; <span class='warning'>            \  ^  /</span>
-#&gt; <span class='warning'>             )=*=(</span>
-#&gt; <span class='warning'>            /     \</span>
-#&gt; <span class='warning'>            |     |</span>
-#&gt; <span class='warning'>           /| | | |\</span>
-#&gt; <span class='warning'>           \| | |_|/\</span>
-#&gt; <span class='warning'>      jgs  //_// ___/</span>
-#&gt; <span class='warning'>               \_)</span>
-#&gt; <span class='warning'>  </span></div><div class='input'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"string"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "</div><div class='input'>
-<span class='co'># Using fortunes</span>
-<span class='fu'>say</span><span class='op'>(</span>what<span class='op'>=</span><span class='st'>"fortune"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; [Listing original copyright holders in R packages is] especially useful if there are areas of doubt and uncertainty (eg code published on ftp sites before people worried about licenses), since it at least gives you rigidly defined areas of doubt and uncertainty.[5]
-#&gt; [5] Adams D, (1978) Hitchhiker's Guide. BBC Radio.
-#&gt;  Thomas Lumley
-#&gt;  in a discussion about copyright vs. licenses
-#&gt;  R-devel
-#&gt;  January 2010 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='co'>## you don't have to pass anything to the `what` parameter if `fortune` is</span>
-<span class='co'>## not null</span>
-<span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Overall, SAS is about 11 years behind R and S-Plus in statistical capabilities (last year it was about 10 years behind) in my estimation.
-#&gt;  Frank Harrell (SAS User, 1969-1991)
-#&gt;  R-help
-#&gt;  September 2003 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>100</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
-#&gt;  Peter Dalgaard
-#&gt;  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
-#&gt;  R-help
-#&gt;  January 2005 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='st'>'whatever'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-#&gt; Joshua Ulrich: That's the magic_pony function.
-#&gt;  Justin and Joshua Ulrich
-#&gt;  stackoverflow.com
-#&gt;  June 2013 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>7</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; What we have is nice, but we need something very different.
-#&gt;  Robert Gentleman
-#&gt;  Statistical Computing 2003, Reisensburg
-#&gt;  June 2003 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>45</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; It seems to me against the spirit of Open Source software to attempt to monitor distribution. We could ask R to 'call home' on first use (in the way e.g. pine does) but I suspect many users would find that objectionable.
-#&gt;  Brian D. Ripley
-#&gt;  in a discussion about trying to estimate the number of R users
-#&gt;  R-help
-#&gt;  April 2004 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;             |\___/|
-#&gt;           ==) ^Y^ (==
-#&gt;             \  ^  /
-#&gt;              )=*=(
-#&gt;             /     \
-#&gt;             |     |
-#&gt;            /| | | |\
-#&gt;            \| | |_|/\
-#&gt;       jgs  //_// ___/
-#&gt;                \_)
-#&gt;   </div><div class='input'>
-<span class='co'># Using catfacts</span>
-<span class='co'># say("catfact", "cat")</span>
-
-<span class='co'># The hypnotoad</span>
-<span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>"hypnotoad"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  ----- 
-#&gt; All Glory to the HYPNO TOAD! 
-#&gt;  ------
-#&gt;     \          ,'``.._   ,'``.
-#&gt;      \        :,--._:)\,:,._,.:
-#&gt;       \       :`--,''   :`...';\
-#&gt;                `,'       `---'  `.
-#&gt;                /                 :
-#&gt;               /                   \
-#&gt;             ,'                     :\.___,-.
-#&gt;            `...,---'``````-..._    |:       \
-#&gt;              (                 )   ;:    )   \  _,-.
-#&gt;               `.              (   //          `'    \
-#&gt;                :               `.//  )      )     , ;
-#&gt;              ,-|`.            _,'/       )    ) ,' ,'
-#&gt;             (  :`.`-..____..=:.-':     .     _,' ,'
-#&gt;              `,'\ ``--....-)='    `._,  \  ,') _ '``._
-#&gt;           _.-/ _ `.       (_)      /     )' ; / \ \`-.'
-#&gt;          `--(   `-:`.     `' ___..'  _,-'   |/   `.)
-#&gt;              `-. `.`.``-----``--,  .'
-#&gt;                |/`.\`'        ,','); SSt
-#&gt;                    `         (/  (/
-#&gt;   </div><div class='input'>
-<span class='co'># Trilobite</span>
-<span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>'trilobite'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Hello world! 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;           _____
-#&gt;        .'` ,-. `'.
-#&gt;       /   ([ ])   \
-#&gt;      /.-""`(`)`""-.\
-#&gt;       &lt;'```(.)```'&gt;
-#&gt;       &lt;'```(.)```'&gt;
-#&gt;        &lt;'``(.)``'&gt;
-#&gt;    sk   &lt;``\_/``&gt;
-#&gt;          `'---'`
-#&gt;   </div><div class='input'>
-<span class='co'># Shark</span>
-<span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a solitary shark\nA: A lone shark'</span>, by<span class='op'>=</span><span class='st'>'shark'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Q: What do you call a solitary shark
-#&gt; A: A lone shark 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;               /""-._
-#&gt;               .       '-,
-#&gt;                :          '',
-#&gt;                 ;      *     '.
-#&gt;                  ' *         () '.
-#&gt;                    \               \
-#&gt;                     \      _.---.._ '.
-#&gt;                     :  .' _.--''-''  \ ,'
-#&gt;         .._           '/.'             . ;
-#&gt;         ; `-.          ,                \'
-#&gt;          ;   `,         ;              ._\
-#&gt;           ;    \     _,-'                ''--._
-#&gt;           :    \_,-'                          '-._
-#&gt;           \ ,-'                       .          '-._
-#&gt;           .'         __.-'';            \...,__       '.
-#&gt;         .'      _,-'        \              \   ''--.,__  '\
-#&gt;         /    _,--' ;         \              ;           \^.}
-#&gt;         ;_,-' )     \  )\      )            ;
-#&gt;              /       \/  \_.,-'             ;
-#&gt;             /                              ;
-#&gt;          ,-'  _,-'''-.    ,-.,            ;      PFA
-#&gt;       ,-' _.-'        \  /    |/'-._...--'
-#&gt;      :--``             )/
-#&gt;   '
-#&gt;   </div><div class='input'>
-<span class='co'># Buffalo</span>
-<span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a single buffalo?\nA: A buffalonely'</span>, by<span class='op'>=</span><span class='st'>'buffalo'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt;  -------------- 
-#&gt; Q: What do you call a single buffalo?
-#&gt; A: A buffalonely 
-#&gt;  --------------
-#&gt;     \
-#&gt;       \
-#&gt;         \
-#&gt;                    _.-````'-,_
-#&gt;          _,.,_ ,-'`           `'-.,_
-#&gt;        /)     (                   '``-.
-#&gt;       ((      ) )                      `\
-#&gt;         \)    (_/                        )\
-#&gt;         |       /)           '    ,'    / \
-#&gt;         `\    ^'            '     (    /  ))
-#&gt;           |      _/\ ,     /    ,,`\   (  "`
-#&gt;           \Y,   |   \  \  | ````| / \_ \
-#&gt;             `)_/      \  \  )    ( &gt;  ( &gt;
-#&gt;                        \( \(     |/   |/
-#&gt;           mic &amp; dwb  /_(/_(    /_(  /_(
-#&gt;     </div><div class='input'>
-<span class='co'># Clippy</span>
-<span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>59</span>, by<span class='op'>=</span><span class='st'>"clippy"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt; 
-#&gt;  ----- 
-#&gt; Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
-#&gt;  Brian D. Ripley
-#&gt;  'Statistical Methods Need Software: A View of Statistical Computing'
-#&gt;  Opening lecture RSS 2002, Plymouth
-#&gt;  September 2002 
-#&gt;  ------ 
-#&gt;     \   
-#&gt;      \   __
-#&gt;    / \
-#&gt;    | |
-#&gt;    @ @
-#&gt;   || ||
-#&gt;   || ||
-#&gt;   |\_/|
-#&gt;   \___/ GB</div></span></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Hello world! </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"what"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> what </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"meow"</span>, <span class='st'>"cat"</span>, what_color <span class='op'>=</span> <span class='st'>"blue"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #0000BB;'>meow</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 2021-11-13 18:24:25 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'time'</span>, <span class='st'>"poop"</span>, by_color <span class='op'>=</span> <span class='st'>"cyan"</span>, what_color <span class='op'>=</span> <span class='st'>"pink"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'> ----- </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFD7D7;'>2021-11-13 18:24:25</span><span style='color: #00BBBB;'> </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'> ------ </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>    \   </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>     \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>     (   )</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>  (   ) (</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>   ) _   )</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>    ( \_</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'>  _(_\ \)__</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB;'> (____\ ___)) [nosig]</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hello world"</span>,</span>
+<span class='r-in'>    by <span class='op'>=</span> <span class='st'>"hypnotoad"</span>,</span>
+<span class='r-in'>    what_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"royalblue1"</span>, <span class='st'>"tomato2"</span><span class='op'>)</span>,</span>
+<span class='r-in'>    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"rainbow"</span>, <span class='st'>"rainbow"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'> </span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'>-</span><span style='color: #FFAF00;'>-</span><span style='color: #00FF00;'>-</span><span style='color: #AF00FF;'> </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #5F87FF;'>hello </span><span style='color: #FF875F;'>world</span><span style='color: #FF0000;'> </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'> ----</span><span style='color: #FFAF00;'>--</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>    \</span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> ,'``</span><span style='color: #0000FF;'>.._ </span><span style='color: #AF00FF;'>  ,'`</span><span style='color: #FF0000;'>`.</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>\    </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>:,--.</span><span style='color: #0000FF;'>_:)\</span><span style='color: #AF00FF;'>,:,._</span><span style='color: #FF0000;'>,.:</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'> \   </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>:`--,</span><span style='color: #0000FF;'>''  </span><span style='color: #AF00FF;'> :`..</span><span style='color: #FF0000;'>.';\</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> `,' </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>  `--</span><span style='color: #FF0000;'>-'  </span><span style='color: #FFAF00;'>`.</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> /   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'> :</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>/    </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'>  \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>  ,'</span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>    </span><span style='color: #FFAF00;'>   :\</span><span style='color: #FFFF00;'>.___</span><span style='color: #00FF00;'>,-.</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'> `..</span><span style='color: #00FF00;'>.,---</span><span style='color: #0000FF;'>'```</span><span style='color: #AF00FF;'>```-.</span><span style='color: #FF0000;'>.._ </span><span style='color: #FFAF00;'>   |:</span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>   \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   (</span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>   )</span><span style='color: #FFAF00;'>   ;:</span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)   \</span><span style='color: #0000FF;'>  _,</span><span style='color: #AF00FF;'>-.</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>`.   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  ( </span><span style='color: #FFAF00;'>  // </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>`'  </span><span style='color: #AF00FF;'>  \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> :   </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>   `</span><span style='color: #FFAF00;'>.//  </span><span style='color: #FFFF00;'>)   </span><span style='color: #00FF00;'>   ) </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>, ;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   ,</span><span style='color: #00FF00;'>-|`. </span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  _,</span><span style='color: #FFAF00;'>'/   </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)    </span><span style='color: #0000FF;'>) ,'</span><span style='color: #AF00FF;'> ,'</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>  ( </span><span style='color: #00FF00;'> :`.`</span><span style='color: #0000FF;'>-.._</span><span style='color: #AF00FF;'>___..</span><span style='color: #FF0000;'>=:.-</span><span style='color: #FFAF00;'>':   </span><span style='color: #FFFF00;'>  . </span><span style='color: #00FF00;'>    _</span><span style='color: #0000FF;'>,' ,</span><span style='color: #AF00FF;'>'</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   `</span><span style='color: #00FF00;'>,'\ `</span><span style='color: #0000FF;'>`--.</span><span style='color: #AF00FF;'>...-)</span><span style='color: #FF0000;'>='  </span><span style='color: #FFAF00;'>  `._</span><span style='color: #FFFF00;'>,  \</span><span style='color: #00FF00;'>  ,')</span><span style='color: #0000FF;'> _ '</span><span style='color: #AF00FF;'>``._</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>_.-/</span><span style='color: #00FF00;'> _ `.</span><span style='color: #0000FF;'>    </span><span style='color: #AF00FF;'>   (_</span><span style='color: #FF0000;'>)   </span><span style='color: #FFAF00;'>   / </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>)' ; </span><span style='color: #0000FF;'>/ \ </span><span style='color: #AF00FF;'>\`-.'</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>    `</span><span style='color: #FFFF00;'>--( </span><span style='color: #00FF00;'>  `-:</span><span style='color: #0000FF;'>`.  </span><span style='color: #AF00FF;'>   `'</span><span style='color: #FF0000;'> ___</span><span style='color: #FFAF00;'>..'  </span><span style='color: #FFFF00;'>_,-'</span><span style='color: #00FF00;'>   |/</span><span style='color: #0000FF;'>   `</span><span style='color: #AF00FF;'>.)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>   `</span><span style='color: #00FF00;'>-. `.</span><span style='color: #0000FF;'>`.``</span><span style='color: #AF00FF;'>-----</span><span style='color: #FF0000;'>``--</span><span style='color: #FFAF00;'>,  .'</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'> |/`.</span><span style='color: #0000FF;'>\`' </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'>  ,'</span><span style='color: #FFAF00;'>,'); </span><span style='color: #FFFF00;'>SSt</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>     </span><span style='color: #FFAF00;'>     </span><span style='color: #FFFF00;'>    </span><span style='color: #00FF00;'>     </span><span style='color: #0000FF;'>`   </span><span style='color: #AF00FF;'>     </span><span style='color: #FF0000;'> (/ </span><span style='color: #FFAF00;'> (/</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FF0000;'>  </span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"whats up"</span>,</span>
+<span class='r-in'>    what_color <span class='op'>=</span> <span class='fu'>crayon</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/crayon/man/crayon.html'>cyan</a></span><span class='op'>$</span><span class='va'>bgMagenta</span>,</span>
+<span class='r-in'>    by_color <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"salmon1"</span>, <span class='st'>"springgreen"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'> -------</span><span style='color: #00FF87;'>------- </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #00BBBB; background-color: #BB00BB;'>whats up</span><span style='color: #FFAF87;'> </span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'> ----------</span><span style='color: #00FF87;'>----</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>    \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>      \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>        \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> |\___/|</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>          =</span><span style='color: #00FF87;'>=) ^Y^ (==</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> \  ^  /</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>  )=*=(</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> /     \</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'> |     |</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>/| | | |\</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>\| | |_|/\</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>      jgs  </span><span style='color: #00FF87;'>//_// ___/</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>           </span><span style='color: #00FF87;'>    \_)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #FFAF87;'>  </span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"who you callin chicken"</span>, <span class='st'>"chicken"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> who you callin chicken </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          _</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        _/ }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       `&gt;' \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       `|   \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        |   /'-.     .-.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \'     ';`--' .'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          \'.    `'-./</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           '.`-..-;`</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             `;-..'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             _| _|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /` /` [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"ain't that some shit"</span>, <span class='st'>"poop"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> ain't that some shit </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      (   )</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   (   ) (</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    ) _   )</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     ( \_</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   _(_\ \)__</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  (____\ ___)) [nosig]</span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"icanhazpdf?"</span>, <span class='st'>"cat"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> icanhazpdf? </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"boo!"</span>, <span class='st'>"pumpkin"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> boo! </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                   ___</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                ___)__|_</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           .-*'          '*-,</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          /      /|   |\     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ;      /_|   |_\     ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ;   |\           /|  ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ;   | ''--...--'' |  ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          \  ''---.....--''  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ''*-.,_______,.-*'  [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hot diggity"</span>, <span class='st'>"frog"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> hot diggity </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         (.)_(.)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      _ (   _   ) _</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     / \/`-----'\/ \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   __\ ( (     ) ) /__</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   )   /\ \._./ /\   (</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    )_/ /|\   /|\ \_(  [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"spider"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Warning: Although abusing R was not proved to be addictive, it should be noted that it often leads to harder stuff.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Ivan Mizera (self-confessed abuseR)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  useR! 2006, Vienna</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  June 2006 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              __</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           | /  \ |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          \_\\  //_/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           .'/()\'.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \\  //  [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"facecat"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1st mail: One of the reasons that SAM is popular, is that it is popular (i.e. since everyone has heard of it, it makes reviewers happy). So, it would be nice to be able to point to publications in good journals so that reviewers will be comfortable. (I personally, am quite comfortable with SAM).</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 2nd mail: Oops, must have been a Freudian slip. Actually, I am not perfectly comfortable with SAM. But I am quite comfortable with limma.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Naomi Altman</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  answering the question whether anyone had published data using limma for microarray analysis</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  bioconductor</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  June 2004 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          /\ /\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          (O o)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         =(:^:)=</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            U      [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"behindcat"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> The existence of a method is not a sufficient reason to use that method.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Jari Oksanen</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  about relative advantages of several multivariate analysis methods</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-SIG-Ecology</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  November 2013 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             )     (</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            =\     /=</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )===(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \       /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs   \__  _/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               ( (</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                ) )</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               (_(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"smallcat"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Seldom are prizes, credit, and gratitude given, else Brian would be drowning in them.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Anthony Rossini</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  about the merits of implementing software</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  May 2004 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          /\_/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ( o.o )</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          &gt; ^ &lt;      [nosig]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"monkey"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 3-D bar plots are an abomination. Just because Excel can do them doesn't mean you should.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> (Dismount pulpit).</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Berton Gunter</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  October 2007 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                   .="=.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 _/.-.-.\_     _</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                ( ( o o ) )    ))</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 |/  "  \|    //</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                  \'---'/    //</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            jgs   /`"""`\\  ((</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 / /_,_\ \\  \\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 \_\_'__/  \  ))</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 /`  /`~\   |//</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                /   /    \  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ,--`,--'\/\    /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           '-- "--'  '--'</span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"fortune"</span>, <span class='st'>"egret"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> If anything, there should be a Law: Thou Shalt Not Even Think Of Producing A Graph That Looks Like Anything From A Spreadsheet.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Ted Harding</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  in a discussion about producing graphics</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  August 2007 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        \   _,</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       -==&lt;' `</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ) /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          / (_.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         |  ,-,`\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          \\   \ \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           `\,  \ \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            ||\  \`|,</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  jgs      _|| `=`-'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          ~~`~`</span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"rms"</span>, <span class='st'>"rms"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Richard Stallman can touch MC Hammer. </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                     @@@@@@ @</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                   @@@@     @@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                  @@@@ =   =  @@ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 @@@ @ _   _   @@ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                  @@@ @(0)|(0)  @@ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 @@@@   ~ | ~   @@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 @@@ @  (o1o)    @@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                @@@    #######    @</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                @@@   ##{+++}##   @@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               @@@@@ ## ##### ## @@@@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               @@@@@#############@@@@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              @@@@@@@###########@@@@@@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             @@@@@@@#############@@@@@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             @@@@@@@### ## ### ###@@@@</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              @ @  @              @  @</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                @                    @</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Vary type of output, default calls message()</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> hell no! </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"warning"</span><span class='op'>)</span></span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span> <span class='warning'>Warning: </span></span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span> hell no! </span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>"hell no!"</span>, type<span class='op'>=</span><span class='st'>"string"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Using fortunes</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>what<span class='op'>=</span><span class='st'>"fortune"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [Listing original copyright holders in R packages is] especially useful if there are areas of doubt and uncertainty (eg code published on ftp sites before people worried about licenses), since it at least gives you rigidly defined areas of doubt and uncertainty.[5]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [5] Adams D, (1978) Hitchhiker's Guide. BBC Radio.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Thomas Lumley</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  in a discussion about copyright vs. licenses</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-devel</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  January 2010 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='co'>## you don't have to pass anything to the `what` parameter if `fortune` is</span></span>
+<span class='r-in'><span class='co'>## not null</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Overall, SAS is about 11 years behind R and S-Plus in statistical capabilities (last year it was about 10 years behind) in my estimation.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Frank Harrell (SAS User, 1969-1991)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  September 2003 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>100</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Peter Dalgaard</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  January 2005 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='st'>'whatever'</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Joshua Ulrich: That's the magic_pony function.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Justin and Joshua Ulrich</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  stackoverflow.com</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  June 2013 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>7</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> What we have is nice, but we need something very different.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Robert Gentleman</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Statistical Computing 2003, Reisensburg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  June 2003 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>45</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> It seems to me against the spirit of Open Source software to attempt to monitor distribution. We could ask R to 'call home' on first use (in the way e.g. pine does) but I suspect many users would find that objectionable.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Brian D. Ripley</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  in a discussion about trying to estimate the number of R users</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  R-help</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  April 2004 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |\___/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ==) ^Y^ (==</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             \  ^  /</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              )=*=(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             |     |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            /| | | |\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            \| | |_|/\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       jgs  //_// ___/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                \_)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Using catfacts</span></span>
+<span class='r-in'><span class='co'># say("catfact", "cat")</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># The hypnotoad</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>"hypnotoad"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> All Glory to the HYPNO TOAD! </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \          ,'``.._   ,'``.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \        :,--._:)\,:,._,.:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \       :`--,''   :`...';\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                `,'       `---'  `.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                /                 :</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               /                   \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             ,'                     :\.___,-.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            `...,---'``````-..._    |:       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              (                 )   ;:    )   \  _,-.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               `.              (   //          `'    \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                :               `.//  )      )     , ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              ,-|`.            _,'/       )    ) ,' ,'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             (  :`.`-..____..=:.-':     .     _,' ,'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              `,'\ ``--....-)='    `._,  \  ,') _ '``._</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           _.-/ _ `.       (_)      /     )' ; / \ \`-.'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          `--(   `-:`.     `' ___..'  _,-'   |/   `.)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              `-. `.`.``-----``--,  .'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                |/`.\`'        ,','); SSt</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                    `         (/  (/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Trilobite</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>by<span class='op'>=</span><span class='st'>'trilobite'</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Hello world! </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           _____</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        .'` ,-. `'.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       /   ([ ])   \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      /.-""`(`)`""-.\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;'```(.)```'&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;'```(.)```'&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        &lt;'``(.)``'&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    sk   &lt;``\_/``&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          `'---'`</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Shark</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a solitary shark\nA: A lone shark'</span>, by<span class='op'>=</span><span class='st'>'shark'</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Q: What do you call a solitary shark</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> A: A lone shark </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               /""-._</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>               .       '-,</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                :          '',</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                 ;      *     '.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                  ' *         () '.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                    \               \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                     \      _.---.._ '.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                     :  .' _.--''-''  \ ,'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         .._           '/.'             . ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ; `-.          ,                \'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          ;   `,         ;              ._\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           ;    \     _,-'                ''--._</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           :    \_,-'                          '-._</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           \ ,-'                       .          '-._</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           .'         __.-'';            \...,__       '.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         .'      _,-'        \              \   ''--.,__  '\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         /    _,--' ;         \              ;           \^.}</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         ;_,-' )     \  )\      )            ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>              /       \/  \_.,-'             ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             /                              ;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          ,-'  _,-'''-.    ,-.,            ;      PFA</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       ,-' _.-'        \  /    |/'-._...--'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      :--``             )/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   '</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Buffalo</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span><span class='st'>'Q: What do you call a single buffalo?\nA: A buffalonely'</span>, by<span class='op'>=</span><span class='st'>'buffalo'</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  -------------- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Q: What do you call a single buffalo?</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> A: A buffalonely </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  --------------</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                    _.-````'-,_</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>          _,.,_ ,-'`           `'-.,_</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        /)     (                   '``-.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       ((      ) )                      `\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         \)    (_/                        )\</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         |       /)           '    ,'    / \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         `\    ^'            '     (    /  ))</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           |      _/\ ,     /    ,,`\   (  "`</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           \Y,   |   \  \  | ````| / \_ \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             `)_/      \  \  )    ( &gt;  ( &gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                        \( \(     |/   |/</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           mic &amp; dwb  /_(/_(    /_(  /_(</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     </span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Clippy</span></span>
+<span class='r-in'><span class='fu'>say</span><span class='op'>(</span>fortune<span class='op'>=</span><span class='fl'>59</span>, by<span class='op'>=</span><span class='st'>"clippy"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ----- </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Brian D. Ripley</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  'Statistical Methods Need Software: A View of Statistical Computing'</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  Opening lecture RSS 2002, Plymouth</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  September 2002 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>  ------ </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     \   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      \   __</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    / \</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    | |</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    @ @</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   || ||</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   || ||</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   |\_/|</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   \___/ GB</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

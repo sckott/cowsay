@@ -41,7 +41,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -58,7 +58,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/sckott/cowsay/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -83,9 +83,9 @@
 <a href="#what-is-this" class="anchor"></a>What is this?</h3>
 <p>If you are familiar with <code>cowsay</code> on the cli, then you know what this is, but for R. If not, read below. Why? Why not?</p>
 </div>
-<div id="contributors-alphebetical" class="section level3">
+<div id="contributors-alphabetical" class="section level3">
 <h3 class="hasAnchor">
-<a href="#contributors-alphebetical" class="anchor"></a>Contributors (alphebetical)</h3>
+<a href="#contributors-alphabetical" class="anchor"></a>Contributors (alphabetical)</h3>
 <ul>
 <li>Amanda Dobbyn</li>
 <li>Andreas Brandmaier</li>
@@ -110,7 +110,7 @@
 <div id="contributing" class="section level3">
 <h3 class="hasAnchor">
 <a href="#contributing" class="anchor"></a>Contributing</h3>
-<p>See <a href="https://github.com/sckott/cowsay/blob/master/.github/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<p>See <a href="https://github.com/sckott/cowsay/blob/main/.github/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 </div>
 <div id="where-to-find-ascii-animal-art" class="section level3">
 <h3 class="hasAnchor">
@@ -169,15 +169,16 @@
 <h3 class="hasAnchor">
 <a href="#the-animals" class="anchor"></a>The animals</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">sort</span>(<span class="kw">names</span>(animals))</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt;  [1] "ant"          "anxiouscat"   "bat"          "bat2"         "behindcat"   </span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt;  [6] "bigcat"       "buffalo"      "cat"          "chicken"      "chuck"       </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; [11] "clippy"       "cow"          "daemon"       "duck"         "duckling"    </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; [16] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; [21] "ghost"        "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" </span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; [26] "monkey"       "mushroom"     "owl"          "pig"          "poop"        </span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; [31] "pumpkin"      "rabbit"       "shark"        "shortcat"     "signbunny"   </span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; [36] "smallcat"     "snowman"      "spider"       "squirrel"     "squirrel2"   </span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; [41] "stretchycat"  "trilobite"    "turkey"       "yoda"</span></span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt;  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        </span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt;  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     </span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; [11] "chuck"        "clippy"       "cow"          "daemon"       "duck"        </span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; [16] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        </span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; [21] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   </span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; [26] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         </span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; [31] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; [36] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      </span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; [41] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   </span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt; [46] "turkey"       "whale"        "wolf"         "yoda"</span></span></code></pre></div>
 </div>
 <div id="say-something" class="section level3">
 <h3 class="hasAnchor">
@@ -185,7 +186,7 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">say</span>(<span class="st">'time'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; </span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt; 2020-02-06 10:59:19 </span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt; 2021-11-13 10:20:49 </span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt;  --------------</span></span>
 <span id="cb5-6"><a href="#cb5-6"></a><span class="co">#&gt;     \</span></span>
 <span id="cb5-7"><a href="#cb5-7"></a><span class="co">#&gt;       \</span></span>
@@ -431,26 +432,27 @@
 <div class="sourceCode" id="cb17"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">say</span>(<span class="st">'fortune'</span>,<span class="st">'cat'</span>)</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="co">#&gt; </span></span>
 <span id="cb17-3"><a href="#cb17-3"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co">#&gt; Awkwardly worded questions will get much better answers if they are accompanied by some test data.</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="co">#&gt;  David Winsemius</span></span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="co">#&gt;  in response to a poster's apology for an 'awkwardly worded question'</span></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="co">#&gt;  R-help</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a><span class="co">#&gt;  September 2012 </span></span>
-<span id="cb17-9"><a href="#cb17-9"></a><span class="co">#&gt;  --------------</span></span>
-<span id="cb17-10"><a href="#cb17-10"></a><span class="co">#&gt;     \</span></span>
-<span id="cb17-11"><a href="#cb17-11"></a><span class="co">#&gt;       \</span></span>
-<span id="cb17-12"><a href="#cb17-12"></a><span class="co">#&gt;         \</span></span>
-<span id="cb17-13"><a href="#cb17-13"></a><span class="co">#&gt;             |\___/|</span></span>
-<span id="cb17-14"><a href="#cb17-14"></a><span class="co">#&gt;           ==) ^Y^ (==</span></span>
-<span id="cb17-15"><a href="#cb17-15"></a><span class="co">#&gt;             \  ^  /</span></span>
-<span id="cb17-16"><a href="#cb17-16"></a><span class="co">#&gt;              )=*=(</span></span>
-<span id="cb17-17"><a href="#cb17-17"></a><span class="co">#&gt;             /     \</span></span>
-<span id="cb17-18"><a href="#cb17-18"></a><span class="co">#&gt;             |     |</span></span>
-<span id="cb17-19"><a href="#cb17-19"></a><span class="co">#&gt;            /| | | |\</span></span>
-<span id="cb17-20"><a href="#cb17-20"></a><span class="co">#&gt;            \| | |_|/\</span></span>
-<span id="cb17-21"><a href="#cb17-21"></a><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span id="cb17-22"><a href="#cb17-22"></a><span class="co">#&gt;                \_)</span></span>
-<span id="cb17-23"><a href="#cb17-23"></a><span class="co">#&gt; </span></span></code></pre></div>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co">#&gt; Michael Dewey: When I started I found the free documents useful but I made most progress when I bought MASS. I do realise that liking books is a bit last millennium.</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="co">#&gt; Thomas Lumley: Very late last millenium, though. "When I were young[er] we didn't have all these fancy yellow books."</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="co">#&gt;  Michael Dewey and Thomas Lumley</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="co">#&gt;  about different kinds of documentation for R</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="co">#&gt;  January 2006 </span></span>
+<span id="cb17-10"><a href="#cb17-10"></a><span class="co">#&gt;  --------------</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="co">#&gt;     \</span></span>
+<span id="cb17-12"><a href="#cb17-12"></a><span class="co">#&gt;       \</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a><span class="co">#&gt;         \</span></span>
+<span id="cb17-14"><a href="#cb17-14"></a><span class="co">#&gt;             |\___/|</span></span>
+<span id="cb17-15"><a href="#cb17-15"></a><span class="co">#&gt;           ==) ^Y^ (==</span></span>
+<span id="cb17-16"><a href="#cb17-16"></a><span class="co">#&gt;             \  ^  /</span></span>
+<span id="cb17-17"><a href="#cb17-17"></a><span class="co">#&gt;              )=*=(</span></span>
+<span id="cb17-18"><a href="#cb17-18"></a><span class="co">#&gt;             /     \</span></span>
+<span id="cb17-19"><a href="#cb17-19"></a><span class="co">#&gt;             |     |</span></span>
+<span id="cb17-20"><a href="#cb17-20"></a><span class="co">#&gt;            /| | | |\</span></span>
+<span id="cb17-21"><a href="#cb17-21"></a><span class="co">#&gt;            \| | |_|/\</span></span>
+<span id="cb17-22"><a href="#cb17-22"></a><span class="co">#&gt;       jgs  //_// ___/</span></span>
+<span id="cb17-23"><a href="#cb17-23"></a><span class="co">#&gt;                \_)</span></span>
+<span id="cb17-24"><a href="#cb17-24"></a><span class="co">#&gt; </span></span></code></pre></div>
 <p>You can also pick a particular fortune by number or regex search - if the <code>fortune</code> parameter is not <code>NULL</code> you don’t have pass anything to the <code>what</code> parameter (the 1st parameter)</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">say</span>(<span class="dt">fortune=</span><span class="dv">100</span>)</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="co">#&gt; </span></span>
@@ -479,11 +481,11 @@
 <span id="cb18-25"><a href="#cb18-25"></a><span class="kw">say</span>(<span class="dt">fortune=</span><span class="st">'whatever'</span>)</span>
 <span id="cb18-26"><a href="#cb18-26"></a><span class="co">#&gt; </span></span>
 <span id="cb18-27"><a href="#cb18-27"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb18-28"><a href="#cb18-28"></a><span class="co">#&gt; Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.</span></span>
-<span id="cb18-29"><a href="#cb18-29"></a><span class="co">#&gt; Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.</span></span>
-<span id="cb18-30"><a href="#cb18-30"></a><span class="co">#&gt;  Tom Backer Johnsen and Barry Rowlingson</span></span>
-<span id="cb18-31"><a href="#cb18-31"></a><span class="co">#&gt;  R-help</span></span>
-<span id="cb18-32"><a href="#cb18-32"></a><span class="co">#&gt;  February 2006 </span></span>
+<span id="cb18-28"><a href="#cb18-28"></a><span class="co">#&gt; Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?</span></span>
+<span id="cb18-29"><a href="#cb18-29"></a><span class="co">#&gt; Joshua Ulrich: That's the magic_pony function.</span></span>
+<span id="cb18-30"><a href="#cb18-30"></a><span class="co">#&gt;  Justin and Joshua Ulrich</span></span>
+<span id="cb18-31"><a href="#cb18-31"></a><span class="co">#&gt;  stackoverflow.com</span></span>
+<span id="cb18-32"><a href="#cb18-32"></a><span class="co">#&gt;  June 2013 </span></span>
 <span id="cb18-33"><a href="#cb18-33"></a><span class="co">#&gt;  --------------</span></span>
 <span id="cb18-34"><a href="#cb18-34"></a><span class="co">#&gt;     \</span></span>
 <span id="cb18-35"><a href="#cb18-35"></a><span class="co">#&gt;       \</span></span>
@@ -643,28 +645,27 @@
 <div class="sourceCode" id="cb25"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">say</span>(<span class="st">"fortune"</span>, <span class="dt">by =</span> <span class="st">"monkey"</span>)</span>
 <span id="cb25-2"><a href="#cb25-2"></a><span class="co">#&gt; </span></span>
 <span id="cb25-3"><a href="#cb25-3"></a><span class="co">#&gt;  ------------- </span></span>
-<span id="cb25-4"><a href="#cb25-4"></a><span class="co">#&gt; It's not a question of trying variations, rather of following instructions.</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a><span class="co">#&gt;  Brian D. Ripley</span></span>
-<span id="cb25-6"><a href="#cb25-6"></a><span class="co">#&gt;  about using 'Writing R Extensions'</span></span>
-<span id="cb25-7"><a href="#cb25-7"></a><span class="co">#&gt;  R-help</span></span>
-<span id="cb25-8"><a href="#cb25-8"></a><span class="co">#&gt;  January 2006 </span></span>
-<span id="cb25-9"><a href="#cb25-9"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb25-10"><a href="#cb25-10"></a><span class="co">#&gt;               \   </span></span>
-<span id="cb25-11"><a href="#cb25-11"></a><span class="co">#&gt;                \  </span></span>
-<span id="cb25-12"><a href="#cb25-12"></a><span class="co">#&gt;                 \</span></span>
-<span id="cb25-13"><a href="#cb25-13"></a><span class="co">#&gt; </span></span>
-<span id="cb25-14"><a href="#cb25-14"></a><span class="co">#&gt;                   .="=.</span></span>
-<span id="cb25-15"><a href="#cb25-15"></a><span class="co">#&gt;                 _/.-.-.\_     _</span></span>
-<span id="cb25-16"><a href="#cb25-16"></a><span class="co">#&gt;                ( ( o o ) )    ))</span></span>
-<span id="cb25-17"><a href="#cb25-17"></a><span class="co">#&gt;                 |/  "  \|    //</span></span>
-<span id="cb25-18"><a href="#cb25-18"></a><span class="co">#&gt;                  \'---'/    //</span></span>
-<span id="cb25-19"><a href="#cb25-19"></a><span class="co">#&gt;            jgs   /`"""`\\  ((</span></span>
-<span id="cb25-20"><a href="#cb25-20"></a><span class="co">#&gt;                 / /_,_\ \\  \\</span></span>
-<span id="cb25-21"><a href="#cb25-21"></a><span class="co">#&gt;                 \_\_'__/  \  ))</span></span>
-<span id="cb25-22"><a href="#cb25-22"></a><span class="co">#&gt;                 /`  /`~\   |//</span></span>
-<span id="cb25-23"><a href="#cb25-23"></a><span class="co">#&gt;                /   /    \  /</span></span>
-<span id="cb25-24"><a href="#cb25-24"></a><span class="co">#&gt;           ,--`,--'\/\    /</span></span>
-<span id="cb25-25"><a href="#cb25-25"></a><span class="co">#&gt;           '-- "--'  '--'</span></span></code></pre></div>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="co">#&gt; I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="co">#&gt;  Frank Harrell</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="co">#&gt;  November 2003 </span></span>
+<span id="cb25-8"><a href="#cb25-8"></a><span class="co">#&gt;  -------------- </span></span>
+<span id="cb25-9"><a href="#cb25-9"></a><span class="co">#&gt;               \   </span></span>
+<span id="cb25-10"><a href="#cb25-10"></a><span class="co">#&gt;                \  </span></span>
+<span id="cb25-11"><a href="#cb25-11"></a><span class="co">#&gt;                 \</span></span>
+<span id="cb25-12"><a href="#cb25-12"></a><span class="co">#&gt; </span></span>
+<span id="cb25-13"><a href="#cb25-13"></a><span class="co">#&gt;                   .="=.</span></span>
+<span id="cb25-14"><a href="#cb25-14"></a><span class="co">#&gt;                 _/.-.-.\_     _</span></span>
+<span id="cb25-15"><a href="#cb25-15"></a><span class="co">#&gt;                ( ( o o ) )    ))</span></span>
+<span id="cb25-16"><a href="#cb25-16"></a><span class="co">#&gt;                 |/  "  \|    //</span></span>
+<span id="cb25-17"><a href="#cb25-17"></a><span class="co">#&gt;                  \'---'/    //</span></span>
+<span id="cb25-18"><a href="#cb25-18"></a><span class="co">#&gt;            jgs   /`"""`\\  ((</span></span>
+<span id="cb25-19"><a href="#cb25-19"></a><span class="co">#&gt;                 / /_,_\ \\  \\</span></span>
+<span id="cb25-20"><a href="#cb25-20"></a><span class="co">#&gt;                 \_\_'__/  \  ))</span></span>
+<span id="cb25-21"><a href="#cb25-21"></a><span class="co">#&gt;                 /`  /`~\   |//</span></span>
+<span id="cb25-22"><a href="#cb25-22"></a><span class="co">#&gt;                /   /    \  /</span></span>
+<span id="cb25-23"><a href="#cb25-23"></a><span class="co">#&gt;           ,--`,--'\/\    /</span></span>
+<span id="cb25-24"><a href="#cb25-24"></a><span class="co">#&gt;           '-- "--'  '--'</span></span></code></pre></div>
 </div>
 <div id="daemon" class="section level3">
 <h3 class="hasAnchor">
@@ -672,11 +673,11 @@
 <div class="sourceCode" id="cb26"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">say</span>(<span class="st">"fortune"</span>, <span class="dt">by =</span> <span class="st">"daemon"</span>)</span>
 <span id="cb26-2"><a href="#cb26-2"></a><span class="co">#&gt; </span></span>
 <span id="cb26-3"><a href="#cb26-3"></a><span class="co">#&gt;  ----- </span></span>
-<span id="cb26-4"><a href="#cb26-4"></a><span class="co">#&gt; The fact that some people murder doesn't mean we should copy them. And murdering data, though not as serious, should also be avoided.</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a><span class="co">#&gt;  Frank E. Harrell</span></span>
-<span id="cb26-6"><a href="#cb26-6"></a><span class="co">#&gt;  answering a question on categorization of continuous variables in survival modelling</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="co">#&gt; Vaishali Sadaphal: I need to give my R code to my client to use. I would like to protect the logic/algorithms that have been coded in R. This means that I would not like anyone to be able to read the code.</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a><span class="co">#&gt; Duncan Murdoch: R is an open source project, so providing ways for you to do this is not one of our goals. [...] If you think your client will steal from you, then you should find another client.</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a><span class="co">#&gt;  Vaishali Sadaphal and Duncan Murdoch</span></span>
 <span id="cb26-7"><a href="#cb26-7"></a><span class="co">#&gt;  R-help</span></span>
-<span id="cb26-8"><a href="#cb26-8"></a><span class="co">#&gt;  July 2005 </span></span>
+<span id="cb26-8"><a href="#cb26-8"></a><span class="co">#&gt;  July 2011 </span></span>
 <span id="cb26-9"><a href="#cb26-9"></a><span class="co">#&gt;  ------ </span></span>
 <span id="cb26-10"><a href="#cb26-10"></a><span class="co">#&gt;     \   </span></span>
 <span id="cb26-11"><a href="#cb26-11"></a><span class="co">#&gt;      \  </span></span>
@@ -792,7 +793,7 @@
 <a href="#meta" class="anchor"></a>Meta</h2>
 <ul>
 <li>License: MIT</li>
-<li>Please note that this project is released with a <a href="https://github.com/sckott/cowsay/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</li>
+<li>Please note that this project is released with a <a href="https://github.com/sckott/cowsay/blob/main/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</li>
 </ul>
 </div>
 </div>
