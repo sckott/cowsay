@@ -11,7 +11,7 @@ We're looking for ASCII art that can be recognized immediately. So we'd like to 
 
 ### Size
 
-Art must be no bigger than the following three examples: [hypnotoad](https://github.com/sckott/cowsay/blob/master/R/animals.r#L157), [shark](https://github.com/sckott/cowsay/blob/master/R/animals.r#L325), [bat2](https://github.com/sckott/cowsay/blob/master/R/animals.r#L489)
+Art must be no bigger than the following three examples: [hypnotoad](https://github.com/sckott/cowsay/blob/main/R/animals.r#L157), [shark](https://github.com/sckott/cowsay/blob/main/R/animals.r#L325), [bat2](https://github.com/sckott/cowsay/blob/main/R/animals.r#L489)
 
 ### Not sure about scope?
 

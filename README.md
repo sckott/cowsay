@@ -1,10 +1,12 @@
-cowsay
-======
+# cowsay
 
-[![cran checks](https://cranchecks.info/badges/worst/cowsay)](https://cranchecks.info/pkgs/cowsay)
+[![cran
+checks](https://cranchecks.info/badges/worst/cowsay)](https://cranchecks.info/pkgs/cowsay)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
+[![rstudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
+[![cran
+version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
 ### What is this?
 
@@ -36,22 +38,20 @@ That’s right, it takes 17 people to make `cowsay` - it’s that hard.
 ### Contributing
 
 See
-[CONTRIBUTING.md](https://github.com/sckott/cowsay/blob/master/.github/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/sckott/cowsay/blob/main/.github/CONTRIBUTING.md)
 
 ### Where to find ASCII animal art
 
 Sources to look in:
 
--   <a href="http://www.chris.com/ascii/" class="uri">http://www.chris.com/ascii/</a> -
-    again, this person only collects them - no mention of license,
-    permissions, etc.
--   <a href="http://www.asciiworld.com/" class="uri">http://www.asciiworld.com/</a>
+-   <http://www.chris.com/ascii/> - again, this person only collects
+    them - no mention of license, permissions, etc.
+-   <http://www.asciiworld.com/>
 
 Permissions
 
 In the ascii art mailing list
-<a href="https://groups.google.com/forum/#!forum/alt.ascii-art" class="uri">https://groups.google.com/forum/#!forum/alt.ascii-art</a>
-they say:
+<https://groups.google.com/forum/#!forum/alt.ascii-art> they say:
 
      As for posting other people's ASCII art,
         after a discussion in news:alt.ascii-art       _     ___
@@ -85,8 +85,7 @@ in this pkg, include signature if there, and if no signature, put in a
 
 ### Quick watch start
 
-Asciicast:
-<a href="https://asciinema.org/a/7745" class="uri">https://asciinema.org/a/7745</a>
+Asciicast: <https://asciinema.org/a/7745>
 
 ### Install
 
@@ -103,22 +102,23 @@ Dev version
 ### The animals
 
     sort(names(animals))
-    #>  [1] "ant"          "anxiouscat"   "bat"          "bat2"         "behindcat"   
-    #>  [6] "bigcat"       "buffalo"      "cat"          "chicken"      "chuck"       
-    #> [11] "clippy"       "cow"          "daemon"       "duck"         "duckling"    
-    #> [16] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        
-    #> [21] "ghost"        "grumpycat"    "hypnotoad"    "longcat"      "longtailcat" 
-    #> [26] "monkey"       "mushroom"     "owl"          "pig"          "poop"        
-    #> [31] "pumpkin"      "rabbit"       "shark"        "shortcat"     "signbunny"   
-    #> [36] "smallcat"     "snowman"      "spider"       "squirrel"     "squirrel2"   
-    #> [41] "stretchycat"  "trilobite"    "turkey"       "yoda"
+    #>  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        
+    #>  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     
+    #> [11] "chuck"        "clippy"       "cow"          "daemon"       "duck"        
+    #> [16] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        
+    #> [21] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   
+    #> [26] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         
+    #> [31] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       
+    #> [36] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      
+    #> [41] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   
+    #> [46] "turkey"       "whale"        "wolf"         "yoda"
 
 ### Say Something
 
     say('time')
     #> 
     #>  -------------- 
-    #> 2020-02-06 10:59:19 
+    #> 2021-11-13 10:20:49 
     #>  --------------
     #>     \
     #>       \
@@ -256,8 +256,7 @@ Multiple colors are also possible (uses the
 
 ### Catfacts!!!!
 
-From the catfacts API at
-<a href="https://catfact.ninja" class="uri">https://catfact.ninja</a>
+From the catfacts API at <https://catfact.ninja>
 
     say("catfact", "cat")
     #> --------------
@@ -383,11 +382,12 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Awkwardly worded questions will get much better answers if they are accompanied by some test data.
-    #>  David Winsemius
-    #>  in response to a poster's apology for an 'awkwardly worded question'
+    #> Michael Dewey: When I started I found the free documents useful but I made most progress when I bought MASS. I do realise that liking books is a bit last millennium.
+    #> Thomas Lumley: Very late last millenium, though. "When I were young[er] we didn't have all these fancy yellow books."
+    #>  Michael Dewey and Thomas Lumley
+    #>  about different kinds of documentation for R
     #>  R-help
-    #>  September 2012 
+    #>  January 2006 
     #>  --------------
     #>     \
     #>       \
@@ -435,11 +435,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-    #>  Tom Backer Johnsen and Barry Rowlingson
-    #>  R-help
-    #>  February 2006 
+    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+    #> Joshua Ulrich: That's the magic_pony function.
+    #>  Justin and Joshua Ulrich
+    #>  stackoverflow.com
+    #>  June 2013 
     #>  --------------
     #>     \
     #>       \
@@ -593,11 +593,10 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> It's not a question of trying variations, rather of following instructions.
-    #>  Brian D. Ripley
-    #>  about using 'Writing R Extensions'
+    #> I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.
+    #>  Frank Harrell
     #>  R-help
-    #>  January 2006 
+    #>  November 2003 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -621,11 +620,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> The fact that some people murder doesn't mean we should copy them. And murdering data, though not as serious, should also be avoided.
-    #>  Frank E. Harrell
-    #>  answering a question on categorization of continuous variables in survival modelling
+    #> Vaishali Sadaphal: I need to give my R code to my client to use. I would like to protect the logic/algorithms that have been coded in R. This means that I would not like anyone to be able to read the code.
+    #> Duncan Murdoch: R is an open source project, so providing ways for you to do this is not one of our goals. [...] If you think your client will steal from you, then you should find another client.
+    #>  Vaishali Sadaphal and Duncan Murdoch
     #>  R-help
-    #>  July 2005 
+    #>  July 2011 
     #>  ------ 
     #>     \   
     #>      \  
@@ -735,11 +734,10 @@ and you can select the animal you want by name.
     #>                                                                                                                    clippy 
     #> "\n\n ----- \n%s \n ------ \n    \\   \n     \\   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
 
-Meta
-----
+## Meta
 
 -   License: MIT
 -   Please note that this project is released with a [Contributor Code
     of
-    Conduct](https://github.com/sckott/cowsay/blob/master/CODE_OF_CONDUCT.md).
+    Conduct](https://github.com/sckott/cowsay/blob/main/CODE_OF_CONDUCT.md).
     By participating in this project you agree to abide by its terms.

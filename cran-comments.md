@@ -10,7 +10,7 @@
 
 ## Reverse dependencies
 
-Checked the 3 downstream dependencies. There was a problem in one package (multicolor), but the maintainer has already submitted a new version and is up on CRAN. See the summary at <https://github.com/sckott/cowsay/blob/master/revdep/README.md>
+Checked the 3 downstream dependencies. There was a problem in one package (multicolor), but the maintainer has already submitted a new version and is up on CRAN. See the summary at <https://github.com/sckott/cowsay/blob/main/revdep/README.md>
 
 ---
 

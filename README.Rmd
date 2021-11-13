@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
 
-### Contributors (alphebetical)
+### Contributors (alphabetical)
 
 ```{r echo=FALSE}
 peeps <- c(
@@ -422,5 +422,5 @@ animals['clippy']
 * License: MIT
 * Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
-[coc]: https://github.com/sckott/cowsay/blob/master/CODE_OF_CONDUCT.md
-[contrib]: https://github.com/sckott/cowsay/blob/master/.github/CONTRIBUTING.md
+[coc]: https://github.com/sckott/cowsay/blob/main/CODE_OF_CONDUCT.md
+[contrib]: https://github.com/sckott/cowsay/blob/main/.github/CONTRIBUTING.md
