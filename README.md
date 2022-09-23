@@ -1,7 +1,7 @@
 # cowsay
 
 [![cran
-checks](https://cranchecks.info/badges/worst/cowsay)](https://cranchecks.info/pkgs/cowsay)
+checks](https://badges.cranchecks.info/worst/cowsay.svg)](https://cloud.r-project.org/web/checks/check_results_cowsay.html)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
 [![rstudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
@@ -118,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2021-11-13 10:20:49 
+    #> 2022-09-23 11:49:12 
     #>  --------------
     #>     \
     #>       \
@@ -382,12 +382,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Michael Dewey: When I started I found the free documents useful but I made most progress when I bought MASS. I do realise that liking books is a bit last millennium.
-    #> Thomas Lumley: Very late last millenium, though. "When I were young[er] we didn't have all these fancy yellow books."
-    #>  Michael Dewey and Thomas Lumley
-    #>  about different kinds of documentation for R
+    #> It is wrong to blame ANY tool for our own shortcomings!
+    #>  Robert Baer
+    #>  about the perils of using PowerPoint
     #>  R-help
-    #>  January 2006 
+    #>  September 2005 
     #>  --------------
     #>     \
     #>       \
@@ -435,11 +434,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-    #> Joshua Ulrich: That's the magic_pony function.
-    #>  Justin and Joshua Ulrich
-    #>  stackoverflow.com
-    #>  June 2013 
+    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+    #>  Tom Backer Johnsen and Barry Rowlingson
+    #>  R-help
+    #>  February 2006 
     #>  --------------
     #>     \
     #>       \
@@ -593,10 +592,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.
-    #>  Frank Harrell
-    #>  R-help
-    #>  November 2003 
+    #> You say yourself it wasn't reproducible. So it could have been anything that "crashed" your R, cosmic radiation, a bolt of lightning reversing a bit in your computer memory, ... :-)
+    #>  Martin Maechler
+    #>  replying to a bug report
+    #>  R-devel
+    #>  July 2005 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -620,11 +620,12 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Vaishali Sadaphal: I need to give my R code to my client to use. I would like to protect the logic/algorithms that have been coded in R. This means that I would not like anyone to be able to read the code.
-    #> Duncan Murdoch: R is an open source project, so providing ways for you to do this is not one of our goals. [...] If you think your client will steal from you, then you should find another client.
-    #>  Vaishali Sadaphal and Duncan Murdoch
+    #> Roger D. Peng: I don't think anyone actually believes that R is designed to make *everyone* happy. For me, R does about 99% of the things I need to do, but sadly, when I need to order a pizza, I still have to pick up the telephone.
+    #> Douglas Bates: There are several chains of pizzerias in the U.S. that provide for Internet-based ordering (e.g. www.papajohnsonline.com) so, with the Internet modules in R, it's only a matter of time before you will have a pizza-ordering function available.
+    #> Brian D. Ripley: Indeed, the GraphApp toolkit (used for the RGui interface under R for Windows, but Guido forgot to include it) provides one (for use in Sydney, Australia, we presume as that is where the GraphApp author hails from). Alternatively, a Padovian has no need of ordering pizzas with both home and neighbourhood restaurants ....
+    #>  Roger D. Peng, Douglas Bates, and Brian D. Ripley
     #>  R-help
-    #>  July 2011 
+    #>  June 2004 
     #>  ------ 
     #>     \   
     #>      \  
