@@ -105,8 +105,11 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
-say("meow", "cat", what_color = "blue")
 say('time')
+
+if (requireNamespace("multicolor", quietly=TRUE) && 
+requireNamespace("jsonlite", quietly=TRUE)) {
+say("meow", "cat", what_color = "blue")
 say('time', "poop", by_color = "cyan", what_color = "pink")
 
 library(jsonlite)
@@ -117,6 +120,7 @@ say("hello world",
 say("whats up",
     what_color = crayon::cyan$bgMagenta,
     by_color = c("salmon1", "springgreen"))
+}
 
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")

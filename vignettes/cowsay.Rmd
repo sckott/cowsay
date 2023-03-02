@@ -14,6 +14,7 @@ vignette: >
 ---
 
 ```{r echo=FALSE}
+has_multicolor <- requireNamespace("multicolor", quietly = TRUE)
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE
@@ -106,7 +107,7 @@ say("hello world", by = "cow", type = "string")
 
 ## Add color
 
-```{r}
+```{r eval = has_multicolor}
 library(jsonlite)
 library(multicolor)
 ```
@@ -115,7 +116,7 @@ library(multicolor)
 We rely on the [`crayon`](https://github.com/r-lib/crayon) package for color and the [`multicolor`](https://github.com/aedobbyn/multicolor) package for multiple colors. The arguments you supply to `what_color` and `by_color` can be strings -- either the color name or a hex value -- or a [function of class `crayon`](https://github.com/r-lib/crayon#styles).
 
 
-```{r}
+```{r eval = has_multicolor}
 say(what = "fortune",
     by = "rabbit",
     what_color = "#FF4500",
@@ -125,14 +126,14 @@ say(what = "fortune",
 
 `colors()` are all supported as are any `rgb` values that evaluate to a string. Supplying multiple colors for `what_color` or `by_color` is allowed, as long as they're in a character vector. "rainbow" is also allowed.
 
-```{r}
+```{r eval = has_multicolor}
 # make a vector of animals safe to use on windows in case vignette built on windows
 not_on_windows <- c('shortcat','longcat','fish','signbunny','stretchycat',
   'anxiouscat','longtailcat','grumpycat','mushroom')
 names_safe <- names(animals)[!names(animals) %in% not_on_windows]
 ```
 
-```{r}
+```{r eval = has_multicolor}
 say(what = "fortune", 
     by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
@@ -141,7 +142,7 @@ say(what = "fortune",
 ```
 
 
-```{r}
+```{r eval = has_multicolor}
 say(what = "fortune", 
     by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
@@ -151,7 +152,7 @@ say(what = "fortune",
 
 `"rainbow"` is the same as `c("red", "orange", "yellow", "green", "blue", "purple")`. Saves you a bit of typing.
 
-```{r}
+```{r eval = has_multicolor}
 say(what = "foobar",
     by = "shark",
     what_color = "rainbow",
@@ -160,7 +161,7 @@ say(what = "foobar",
 
 The main advantage of using `crayon` functions instead of color strings is the ability to combine styles together.
 
-```{r}
+```{r eval = has_multicolor}
 library(crayon)
 
 say(what = "fortune",

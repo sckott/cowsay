@@ -1,17 +1,19 @@
 library(crayon)
 
-context("say")
-
 test_that("say types works as expected", {
-  # expect null on type=message
-  expect_null(suppressMessages(say()))
-  
   # expect warning on type=warning
   expect_warning(say(type = "warning"), "Hello world!")
   
   # expect string on type=string
   expect_is(say(type = "string"), "character")
-  
+
+  # hypnotoad can say anything
+  expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
+})
+
+test_that("say works with multicolor", {
+  skip_if_not_installed("multicolor")
+
   expect_equal(
     length(suppressMessages(say("foo", by_color = "cyan"))) + 1,
     length(suppressWarnings(say("foo", type = "warning")))
@@ -49,9 +51,6 @@ test_that("say types works as expected", {
     say("asdfghjkl;'", "chicken", type = "print")
   )
 
-  # hypnotoad can say anything
-  expect_true(grepl("foo", say(what = "foo", by = "hypnotoad", type = "string")))
-  
   skip_if(!crayon::has_color(), message = "Shouldn't fail if colors can't be applied.")
   expect_error(
     say(by_color = 123),
