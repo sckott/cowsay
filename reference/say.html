@@ -206,7 +206,40 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
+<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-02 19:38:56 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         \</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             |\___/|</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           ==) ^Y^ (==</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             \  ^  /</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              )=*=(</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             /     \</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             |     |</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            /| | | |\</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            \| | |_|/\</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"multicolor"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;&amp;</span> </span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"jsonlite"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"meow"</span>, <span class="st">"cat"</span>, what_color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span>, <span class="st">"poop"</span>, by_color <span class="op">=</span> <span class="st">"cyan"</span>, what_color <span class="op">=</span> <span class="st">"pink"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://arxiv.org/abs/1403.2805" class="external-link">jsonlite</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"hello world"</span>,</span></span>
+<span class="r-in"><span>    by <span class="op">=</span> <span class="st">"hypnotoad"</span>,</span></span>
+<span class="r-in"><span>    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"royalblue1"</span>, <span class="st">"tomato2"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rainbow"</span>, <span class="st">"rainbow"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"whats up"</span>,</span></span>
+<span class="r-in"><span>    what_color <span class="op">=</span> <span class="fu">crayon</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/crayon/man/crayon.html" class="external-link">cyan</a></span><span class="op">$</span><span class="va">bgMagenta</span>,</span></span>
+<span class="r-in"><span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"salmon1"</span>, <span class="st">"springgreen"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">meow</span> </span>
@@ -225,29 +258,8 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
-<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-23 18:55:12 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         \</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             |\___/|</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           ==) ^Y^ (==</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             \  ^  /</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>              )=*=(</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             /     \</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             |     |</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            /| | | |\</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            \| | |_|/\</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
-<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span>, <span class="st">"poop"</span>, by_color <span class="op">=</span> <span class="st">"cyan"</span>, what_color <span class="op">=</span> <span class="st">"pink"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;"> ----- </span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFD7D7;">2022-09-23 18:55:12</span><span style="color: #00BBBB;"> </span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFD7D7;">2023-03-02 19:38:56</span><span style="color: #00BBBB;"> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;"> ------ </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">    \   </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">     \</span></span>
@@ -256,14 +268,7 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">   ) _   )</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">    ( \_</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">  _(_\ \)__</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;"> (____\ ___)) [nosig]</span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://arxiv.org/abs/1403.2805" class="external-link">jsonlite</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"hello world"</span>,</span></span>
-<span class="r-in"><span>    by <span class="op">=</span> <span class="st">"hypnotoad"</span>,</span></span>
-<span class="r-in"><span>    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"royalblue1"</span>, <span class="st">"tomato2"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rainbow"</span>, <span class="st">"rainbow"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;"> </span><span style="color: #FFAF00;">-</span><span style="color: #00FF00;">-</span><span style="color: #AF00FF;">-</span><span style="color: #FFAF00;">-</span><span style="color: #00FF00;">-</span><span style="color: #AF00FF;"> </span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;"> (____\ ___)) [nosig]</span><span style="color: #FF0000;"> </span><span style="color: #FFAF00;">-</span><span style="color: #00FF00;">-</span><span style="color: #AF00FF;">-</span><span style="color: #FFAF00;">-</span><span style="color: #00FF00;">-</span><span style="color: #AF00FF;"> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87FF;">hello </span><span style="color: #FF875F;">world</span><span style="color: #FF0000;"> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;"> ----</span><span style="color: #FFAF00;">--</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">    \</span><span style="color: #FFAF00;">     </span><span style="color: #FFFF00;">    </span><span style="color: #00FF00;"> ,'``</span><span style="color: #0000FF;">.._ </span><span style="color: #AF00FF;">  ,'`</span><span style="color: #FF0000;">`.</span></span>
@@ -286,9 +291,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">     </span><span style="color: #FFAF00;">     </span><span style="color: #FFFF00;">    </span><span style="color: #00FF00;"> |/`.</span><span style="color: #0000FF;">\`' </span><span style="color: #AF00FF;">     </span><span style="color: #FF0000;">  ,'</span><span style="color: #FFAF00;">,'); </span><span style="color: #FFFF00;">SSt</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">     </span><span style="color: #FFAF00;">     </span><span style="color: #FFFF00;">    </span><span style="color: #00FF00;">     </span><span style="color: #0000FF;">`   </span><span style="color: #AF00FF;">     </span><span style="color: #FF0000;"> (/ </span><span style="color: #FFAF00;"> (/</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">  </span></span>
-<span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"whats up"</span>,</span></span>
-<span class="r-in"><span>    what_color <span class="op">=</span> <span class="fu">crayon</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/crayon/man/crayon.html" class="external-link">cyan</a></span><span class="op">$</span><span class="va">bgMagenta</span>,</span></span>
-<span class="r-in"><span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"salmon1"</span>, <span class="st">"springgreen"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAF87;"> -------</span><span style="color: #00FF87;">------- </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB; background-color: #BB00BB;">whats up</span><span style="color: #FFAF87;"> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAF87;"> ----------</span><span style="color: #00FF87;">----</span></span>
@@ -392,11 +394,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"spider"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Henrik Bengtsson: Is there a way to turn off the (annoying) beep that occurs when one calls the locator() command and clicks the mouse? [...]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Brian D. Ripley: It's a feature of the windows() device. Windows is fond of beeping, and I just mute the sound.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Henrik Bengtsson and Brian D. Ripley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Either I am misunderstanding your intent or you need another cup of coffee.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Rolf Turner</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  in response to a user who did not understand his advice</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  July 2001 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  November 2013 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -412,10 +414,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"facecat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'They' did write documentation that told you that Perl was needed, but 'they' can't read it for you.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> It is a mistake to assume that everything is known about even the common approximations used in statistical practice, and this area is still opening up.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bill Venables</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  in a discussion about how fitted generalized linear mixed models can be compared</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2001 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  April 2005 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -427,11 +430,10 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"behindcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> You must realize that R is written by experts in statistics and statistical computing who, despite popular opinion, do not believe that everything in SAS and SPSS is worth copying. Some things done in such packages, which trace their roots back to the days of punched cards and magnetic tape when fitting a single linear model may take several days because your first 5 attempts failed due to syntax errors in the JCL or the SAS code, still reflect the approach of "give me every possible statistic that could be calculated from this model, whether or not it makes sense". The approach taken in R is different. The underlying assumption is that the useR is thinking about the analysis while doing it.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Douglas Bates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  in reply to the suggestion to include type III sums of squares and lsmeans in base R to make it more similar to SAS or SPSS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Suggesting a Usenet newsgroup is a generation thing. I think some of the younger users would prefer a Wiki or a Forum (these are words I've seen, but I wouldn't visit places like this, talking about my g-g-generation).</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Jari Oksanen</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2007 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  December 2004 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         \</span>
@@ -452,11 +454,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"smallcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bret Collier: I hope this is not a uniformed question, but I am a little lost.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Peter Dalgaard: Don't worry, they all look alike... ;-)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Bret Collier and Peter Dalgaard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Shan-Ho Chou: I got a question about eigenvector. I've tried input a symmetric matrix to both R (using eigen function) and Minitab, but the result is really different. Can anyone tell me what's wrong with that?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bill Venables: Simple. Minitab must be broken. Have you reported it to them?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shan-Ho Chou and Bill Venables</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  April 2004 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  July 2007 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -468,10 +470,12 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"monkey"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> On average, any data manipulation that can be described in a sentence or two of English can be programmed in one line in R. If you find yourself writing a long 'for' loop to do something that sounds simple, take a step back and research if an existing combination of functions can easily handle your request.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Erik Iverson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Roger D. Peng: I don't think anyone actually believes that R is designed to make *everyone* happy. For me, R does about 99% of the things I need to do, but sadly, when I need to order a pizza, I still have to pick up the telephone.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Douglas Bates: There are several chains of pizzerias in the U.S. that provide for Internet-based ordering (e.g. www.papajohnsonline.com) so, with the Internet modules in R, it's only a matter of time before you will have a pizza-ordering function available.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Brian D. Ripley: Indeed, the GraphApp toolkit (used for the RGui interface under R for Windows, but Guido forgot to include it) provides one (for use in Sydney, Australia, we presume as that is where the GraphApp author hails from). Alternatively, a Padovian has no need of ordering pizzas with both home and neighbourhood restaurants ....</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Roger D. Peng, Douglas Bates, and Brian D. Ripley</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  June 2010 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  June 2004 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \  </span>
@@ -492,19 +496,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"egret"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I recently read the small print on the academic license our site has for SAS. You have to:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1 inform SAS of any taught courses that use SAS,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2 inform SAS of any research projects using SAS,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3 allow SAS to refer to your institution as a SAS user,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4 allow SAS to review your taught courses,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5 ensure your courses are taught using qualified personnel,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   6 give SAS your first-born male offspring.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I spoke to our site's licensing supremos and they say they've never heard of anyone complying with 1 or 2. Point 4 sounds like petty fiddling in our educational business, and point 5 left 'qualified' undefined. Point 6 doesn't bother me since I don't have kids.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Barry Rowlingson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Mathematical conventions are just that, conventions. They differ by field of mathematics. Don't ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  answering a question why the layouts of print(x) and image(x) are different</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2008 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  August 2004 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \  </span>
@@ -523,7 +519,7 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Some people wear Linus Torvalds pyjamas to bed, Linus Torvalds wears Richard Stallman pyjamas. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> There were no double rainbows before Richard Stallman. </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -590,10 +586,10 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span>what<span class="op">=</span><span class="st">"fortune"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Any doubts about R's big-league status should be put to rest, now that we have a Sudoku Puzzle Solver. Take that, SAS!</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  David Brahm</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  announcing the sudoku package</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  R-packages</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> It's not a question of trying variations, rather of following instructions.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about using 'Writing R Extensions'</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  January 2006 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
@@ -870,7 +866,7 @@ properly in R on Windows.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
