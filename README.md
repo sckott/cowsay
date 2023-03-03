@@ -3,6 +3,7 @@
 [![cran
 checks](https://badges.cranchecks.info/worst/cowsay.svg)](https://cloud.r-project.org/web/checks/check_results_cowsay.html)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
+[![codecov](https://codecov.io/github/sckott/cowsay/branch/master/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/github/sckott/cowsay)
 [![rstudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
 [![cran
@@ -118,7 +119,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2022-09-23 11:49:12 
+    #> 2023-03-03 06:29:22 
     #>  --------------
     #>     \
     #>       \
@@ -382,11 +383,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> It is wrong to blame ANY tool for our own shortcomings!
-    #>  Robert Baer
-    #>  about the perils of using PowerPoint
+    #> John Miller: How do I prevent google search to post my questions asked here??
+    #> Martin Maechler: you don't: R-help is famous and celebrity can't be gotten rid off ;-)
+    #>  John Miller and Martin Maechler
     #>  R-help
-    #>  September 2005 
+    #>  June 2004 
     #>  --------------
     #>     \
     #>       \
@@ -592,11 +593,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> You say yourself it wasn't reproducible. So it could have been anything that "crashed" your R, cosmic radiation, a bolt of lightning reversing a bit in your computer memory, ... :-)
-    #>  Martin Maechler
-    #>  replying to a bug report
-    #>  R-devel
-    #>  July 2005 
+    #> Thank your for your entry in the Poorly Capitalized and Inadequately Searched Posting Contest. You will be advised of your ranking in due course.
+    #>  David Winsemius
+    #>  in response to an all-lower-case question on a simple clustering task
+    #>  R-help
+    #>  August 2011 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -620,12 +621,10 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Roger D. Peng: I don't think anyone actually believes that R is designed to make *everyone* happy. For me, R does about 99% of the things I need to do, but sadly, when I need to order a pizza, I still have to pick up the telephone.
-    #> Douglas Bates: There are several chains of pizzerias in the U.S. that provide for Internet-based ordering (e.g. www.papajohnsonline.com) so, with the Internet modules in R, it's only a matter of time before you will have a pizza-ordering function available.
-    #> Brian D. Ripley: Indeed, the GraphApp toolkit (used for the RGui interface under R for Windows, but Guido forgot to include it) provides one (for use in Sydney, Australia, we presume as that is where the GraphApp author hails from). Alternatively, a Padovian has no need of ordering pizzas with both home and neighbourhood restaurants ....
-    #>  Roger D. Peng, Douglas Bates, and Brian D. Ripley
-    #>  R-help
-    #>  June 2004 
+    #> I've been reading Data Analysis Using Regression and Multilevel/Hierarchical Models by Gelman and Hill. I'm getting acquainted with my new cartoon character friends Elmer (lmer) and Bugs, and at some point it may become clear what is going on. At the moment though, the whole thing seems a bit Looney Tunes.
+    #>  Paul Miller
+    #>  R-SIG-Mixed-Models
+    #>  August 2011 
     #>  ------ 
     #>     \   
     #>      \  
