@@ -1,3 +1,9 @@
+cowsay 0.8.2
+============
+
+* makes sure to use a suggested package multicolor conditionally throughout the package (tests, examples, vignettes)
+
+
 cowsay 0.8
 ==========
 

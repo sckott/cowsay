@@ -1,23 +1,19 @@
 {
-  "@context": [
-    "https://doi.org/10.5063/schema/codemeta-2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "cowsay",
-  "description": "Allows printing of character strings as messages/warnings/etc.\n    with ASCII animals, including cats, cows, frogs, chickens, ghosts,\n    and more.",
+  "description": "Allows printing of character strings as messages/warnings/etc. with ASCII animals, including cats, cows, frogs, chickens, ghosts, and more.",
   "name": "cowsay: Messages, Warnings, Strings with Ascii Animals",
   "codeRepository": "https://github.com/sckott/cowsay",
   "issueTracker": "https://github.com/sckott/cowsay/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2020-01-25 r77715)",
+  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -110,8 +106,6 @@
       "familyName": "Louveaux"
     }
   ],
-  "copyrightHolder": {},
-  "funder": {},
   "maintainer": [
     {
       "@type": "Person",
@@ -194,8 +188,8 @@
       "sameAs": "https://CRAN.R-project.org/package=testthat"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "crayon",
       "name": "crayon",
@@ -207,7 +201,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=crayon"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "fortunes",
       "name": "fortunes",
@@ -219,7 +213,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=fortunes"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "rmsfact",
       "name": "rmsfact",
@@ -230,16 +224,8 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rmsfact"
-    }
-  ],
-  "releaseNotes": "https://github.com/sckott/cowsay/blob/master/NEWS.md",
-  "readme": "https://github.com/sckott/cowsay/blob/master/README.md",
-  "fileSize": "216.482KB",
-  "contIntegration": ["https://travis-ci.org/sckott/cowsay", "https://ci.appveyor.com/project/sckott/cowsay/branch/master"],
-  "keywords": [
-    "ascii-art",
-    "rstats",
-    "r",
-    "r-stats"
-  ]
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "336.83KB"
 }
