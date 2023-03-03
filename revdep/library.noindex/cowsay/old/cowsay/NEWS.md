@@ -1,3 +1,23 @@
+cowsay 0.8
+==========
+
+### NEW FEATURES
+
+* `say()` parameter `what` loses the fillerama options ("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum") because the API is down
+* gains two squirrels `squirrel` and `squirrel2` (#74) from @marionlouveaux
+* gains chuck norris `chuck` (#62) from @bgreenwell
+* the `type` parameter in `say()` gains new option `print`, the default option in non-interactive environments. `type="print"` will `cat()` output (#70) (#72)
+
+### MINOR IMPROVEMENTS
+
+* standardize spacing above first line in animals (#68) (#69)
+* add examples to readme of using colors (#73)
+
+### BUG FIXES
+
+* fix to use of colors: if colors can not be used in certain computing environments, tell users that and set colors to `NULL` (#65) (#66)
+
+
 cowsay 0.7
 ==========
 

@@ -35,21 +35,6 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-## Not run: 
-##D crawl()
-##D 
-##D crawl("It was a dark and stormy night")
-##D 
-##D crawl("Taste the rainbow", colors = "rainbow")
-##D 
-##D crawl(things[["hypnotoad"]], colors = c("purple", "blue", "cyan"),
-##D   direction = "horizontal", recycle_chars = TRUE, pause = 0.01)
-##D 
-##D options("keep.source = FALSE")
-##D crawl('\014A long time ago in a galaxy far, far away...
-##D It is a period of civil war. Rebel spaceships, striking from a hidden base,
-##D have won their first victory against the evil Galactic Empire.')
-## End(Not run)
 
 
 
@@ -83,41 +68,6 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-## Not run: 
-##D multi_color()
-##D 
-##D multi_color("ahoy")
-##D 
-##D multi_color("taste the rainbow",
-##D             c("rainbow", "cyan", "cyan", "rainbow"))
-##D multi_color("taste the rainbow",
-##D             c("mediumpurple",
-##D               "rainbow",
-##D              "cyan3"))
-##D 
-##D multi_color(colors = c(rgb(0.1, 0.2, 0.5),
-##D                        "yellow",
-##D                        rgb(0.2, 0.9, 0.1)))
-##D 
-##D multi_color(
-##D   things$buffalo,
-##D   c("mediumorchid4", "dodgerblue1", "lemonchiffon1"))
-##D 
-##D # Built-in color palette
-##D multi_color(things$cow, colors = palettes$lacroix)
-##D 
-##D multi_color(cowsay:::rms, sample(colors(), 10))
-##D 
-##D # Mystery Bulgarian animal
-##D multi_color(things[[sample(length(things), 1)]],
-##D             c("white", "darkgreen", "darkred"),
-##D             direction = "horizontal")
-##D 
-##D # Mystery Italian animal
-##D multi_color(things[[sample(length(things), 1)]],
-##D             c("darkgreen", "white", "darkred"),
-##D             direction = "vertical")
-## End(Not run)
 
 
 
@@ -133,41 +83,6 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-## Not run: 
-##D multi_colour()
-##D 
-##D multi_colour("ahoy")
-##D 
-##D multi_colour("taste the rainbow",
-##D             c("rainbow", "cyan", "cyan", "rainbow"))
-##D multi_colour("taste the rainbow",
-##D             c("mediumpurple",
-##D               "rainbow",
-##D              "cyan3"))
-##D 
-##D multi_colour(colours = c(rgb(0.1, 0.2, 0.5),
-##D                        "yellow",
-##D                        rgb(0.2, 0.9, 0.1)))
-##D 
-##D multi_colour(
-##D   things$buffalo,
-##D   c("mediumorchid4", "dodgerblue1", "lemonchiffon1"))
-##D 
-##D # Built-in colour palette
-##D multi_colour(things$cow, colours = palettes$lacroix)
-##D 
-##D multi_colour(cowsay:::rms, sample(colours(), 10))
-##D 
-##D # Mystery Bulgarian animal
-##D multi_colour(things[[sample(length(things), 1)]],
-##D             c("white", "darkgreen", "darkred"),
-##D             direction = "horizontal")
-##D 
-##D # Mystery Italian animal
-##D multi_colour(things[[sample(length(things), 1)]],
-##D             c("darkgreen", "white", "darkred"),
-##D             direction = "vertical")
-## End(Not run)
 
 
 
@@ -243,7 +158,7 @@ things[["turkey"]]
 things[["chuck"]] %>% cat()
 cowsay::animals[3] %>% cat()
 names(things)
-multi_color(things[["stretchycat"]])  # To say something, use the cowsay package
+multi_color(things[["stretchycat"]]) # To say something, use the cowsay package
 
 
 

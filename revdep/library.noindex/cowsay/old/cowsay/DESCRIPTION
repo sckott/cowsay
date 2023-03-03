@@ -3,7 +3,7 @@ Title: Messages, Warnings, Strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc.
     with ASCII animals, including cats, cows, frogs, chickens, ghosts,
     and more.
-Version: 0.7.0
+Version: 0.8.0
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -22,19 +22,20 @@ Authors@R: c(
     person("Lucy", "D'Agostino McGowan", role = "ctb"),
     person("Guangchuang", "Yu", role = "ctb"),
     person("Philipp", "Boersch-Supan", role = "ctb"),
-    person("Andreas","Brandmaier", role="ctb")
+    person("Andreas", "Brandmaier", role="ctb"),
+    person("Marion", "Louveaux", role="ctb")
     )
 URL: https://github.com/sckott/cowsay
 BugReports: https://github.com/sckott/cowsay/issues
 LazyData: yes
 Encoding: UTF-8
+Language: en-US
 VignetteBuilder: knitr
 Imports: crayon, fortunes, rmsfact
-Suggests: curl, jsonlite, knitr, multicolor, rmarkdown, roxygen2 (>=
-        6.1.0), testthat
-RoxygenNote: 6.1.0
+Suggests: curl, jsonlite, knitr, multicolor, rmarkdown, testthat
+RoxygenNote: 7.0.2
 NeedsCompilation: no
-Packaged: 2018-09-17 22:57:14 UTC; sckott
+Packaged: 2020-02-06 20:00:09 UTC; sckott
 Author: Scott Chamberlain [aut, cre],
   Amanda Dobbyn [aut],
   Tyler Rinker [ctb],
@@ -49,8 +50,9 @@ Author: Scott Chamberlain [aut, cre],
   Lucy D'Agostino McGowan [ctb],
   Guangchuang Yu [ctb],
   Philipp Boersch-Supan [ctb],
-  Andreas Brandmaier [ctb]
+  Andreas Brandmaier [ctb],
+  Marion Louveaux [ctb]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-09-18 04:40:14 UTC
-Built: R 3.6.0; ; 2019-04-26 22:54:26 UTC; unix
+Date/Publication: 2020-02-06 20:30:02 UTC
+Built: R 4.2.2; ; 2023-03-03 14:38:44 UTC; unix

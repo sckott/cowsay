@@ -4,6 +4,7 @@ library(testthat)
 context("multicolor")
 
 skip_on_os("windows")
+skip_on_os("linux")
 
 test_that("baseline works", {
   expect_error(
@@ -141,8 +142,8 @@ if (interactive()) {
     expect_silent(
       suppressMessages(
         cowsay::say("I'm not crying, you're crying",
-                    what_color = "green", # green,
-                    by_color = colors()
+          what_color = "green", # green,
+          by_color = colors()
         )
       )
     )

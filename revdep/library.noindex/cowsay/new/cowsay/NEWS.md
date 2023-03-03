@@ -1,8 +1,17 @@
+cowsay 0.8.2
+============
+
+### MINOR IMPROVEMENTS
+
+* xxx
+
+
 cowsay 0.8
 ==========
 
 ### NEW FEATURES
 
+* `say()` parameter `what` loses the fillerama options ("arresteddevelopment", "doctorwho", "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum") because the API is down
 * gains two squirrels `squirrel` and `squirrel2` (#74) from @marionlouveaux
 * gains chuck norris `chuck` (#62) from @bgreenwell
 * the `type` parameter in `say()` gains new option `print`, the default option in non-interactive environments. `type="print"` will `cat()` output (#70) (#72)

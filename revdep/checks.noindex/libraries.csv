@@ -1,2 +1,5 @@
 package,old,new,delta
-cowsay,0.7.0,0.8.0,*
+cowsay,0.8.0,0.8.2,*
+crayon,NA,1.5.2,*
+fortunes,1.5-4,1.5-4,
+rmsfact,0.0.3,0.0.3,

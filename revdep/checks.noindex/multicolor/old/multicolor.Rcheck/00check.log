@@ -1,11 +1,11 @@
-* using log directory ‘/Users/sckott/github/sac/cowsay/revdep/checks.noindex/multicolor/old/multicolor.Rcheck’
-* using R version 3.6.2 Patched (2020-01-25 r77715)
-* using platform: x86_64-apple-darwin15.6.0 (64-bit)
+* using log directory ‘/Users/sckott/github/sckott/cowsay/revdep/checks.noindex/multicolor/old/multicolor.Rcheck’
+* using R version 4.2.2 (2022-10-31)
+* using platform: aarch64-apple-darwin21.6.0 (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-manual --no-build-vignettes’
 * checking for file ‘multicolor/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘multicolor’ version ‘0.1.4’
+* this is package ‘multicolor’ version ‘0.1.7’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK
@@ -31,6 +31,7 @@
 * checking whether the package can be unloaded cleanly ... OK
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
 * checking dependencies in R code ... NOTE
 Namespace in Imports field not imported from: ‘cowsay’
   All declared Imports should be used.
@@ -50,12 +51,29 @@ Namespace in Imports field not imported from: ‘cowsay’
 * checking files in ‘vignettes’ ... OK
 * checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... OK
+* checking tests ... ERROR
   Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+  Colors cannot be applied in this environment. Please use another application, such as RStudio or a color-enabled terminal.
+  > 
+  > test_check("multicolor")
+  [ FAIL 1 | WARN 0 | SKIP 1 | PASS 29 ]
+  
+  ══ Skipped tests ═══════════════════════════════════════════════════════════════
+  • use_color() is not TRUE (1)
+  
+  ══ Failed tests ════════════════════════════════════════════════════════════════
+  ── Failure ('test-multicolor.R:104'): colors(), including grays, rainbow, and rbg work ──
+  `suppressMessages(...)` produced warnings.
+  
+  [ FAIL 1 | WARN 0 | SKIP 1 | PASS 29 ]
+  Error: Test failures
+  Execution halted
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking running R code from vignettes ... NONE
-  ‘rmd.Rmd’using ‘UTF-8’... OK
+  ‘rmd.Rmd’ using ‘UTF-8’... OK
 * checking re-building of vignette outputs ... SKIPPED
 * DONE
-Status: 1 NOTE
+Status: 1 ERROR, 1 NOTE

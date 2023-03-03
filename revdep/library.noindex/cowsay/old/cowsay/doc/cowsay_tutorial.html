@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan" />
 
-<meta name="date" content="2018-09-17" />
+<meta name="date" content="2020-02-06" />
 
 <title>Introduction to cowsay</title>
 
@@ -81,8 +81,6 @@ overflow: auto;
 margin-left: 2%;
 position: fixed;
 border: 1px solid #ccc;
-webkit-border-radius: 6px;
-moz-border-radius: 6px;
 border-radius: 6px;
 }
 
@@ -110,9 +108,14 @@ font-size: 12px;
 .tocify-subheader .tocify-subheader {
 text-indent: 30px;
 }
-
 .tocify-subheader .tocify-subheader .tocify-subheader {
 text-indent: 40px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader {
+text-indent: 50px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader .tocify-subheader {
+text-indent: 60px;
 }
 
 .tocify .tocify-item > a, .tocify .nav-list .nav-header {
@@ -516,13 +519,13 @@ float: none;
 
           item.append($("<a/>", {
 
-            "text": self.text()
+            "html": self.html()
 
           }));
 
         } else {
 
-          item.text(self.text());
+          item.html(self.html());
 
         }
 
@@ -1339,9 +1342,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -1355,7 +1356,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -1366,50 +1366,73 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
-
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -1423,6 +1446,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -1458,8 +1487,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -1468,6 +1495,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -1486,8 +1523,8 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Introduction to cowsay</h1>
-<h4 class="author"><em>Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan</em></h4>
-<h4 class="date"><em>2018-09-17</em></h4>
+<h4 class="author">Scott Chamberlain, Tyler Rinker, Thomas Leeper, Noam Ross, Rich FitzJohn, Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman, Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo Sonego, and Philipp Boersch-Supan</h4>
+<h4 class="date">2020-02-06</h4>
 
 </div>
 
@@ -1505,22 +1542,20 @@ devtools::install_github(&quot;sckott/cowsay&quot;)</code></pre>
 <div id="the-animals" class="section level2">
 <h2>The animals</h2>
 <p>The animals, and other ascii creatures, are all in a single named character vector that is exported from the package. Thus, you can access each animal yourself, and do whatever you want with it.</p>
-<p>As of this writing, there are 41 animals.</p>
+<p>As of this writing, there are 44 animals.</p>
 <p>The names of the animals:</p>
 <pre class="r"><code>sort(names(animals))
-#&gt;  [1] &quot;ant&quot;          &quot;anxiouscat&quot;   &quot;bat&quot;          &quot;bat2&quot;        
-#&gt;  [5] &quot;behindcat&quot;    &quot;bigcat&quot;       &quot;buffalo&quot;      &quot;cat&quot;         
-#&gt;  [9] &quot;chicken&quot;      &quot;clippy&quot;       &quot;cow&quot;          &quot;daemon&quot;      
-#&gt; [13] &quot;duck&quot;         &quot;duckling&quot;     &quot;egret&quot;        &quot;endlesshorse&quot;
-#&gt; [17] &quot;facecat&quot;      &quot;fish&quot;         &quot;frog&quot;         &quot;ghost&quot;       
-#&gt; [21] &quot;grumpycat&quot;    &quot;hypnotoad&quot;    &quot;longcat&quot;      &quot;longtailcat&quot; 
-#&gt; [25] &quot;monkey&quot;       &quot;mushroom&quot;     &quot;owl&quot;          &quot;pig&quot;         
-#&gt; [29] &quot;poop&quot;         &quot;pumpkin&quot;      &quot;rabbit&quot;       &quot;shark&quot;       
-#&gt; [33] &quot;shortcat&quot;     &quot;signbunny&quot;    &quot;smallcat&quot;     &quot;snowman&quot;     
-#&gt; [37] &quot;spider&quot;       &quot;stretchycat&quot;  &quot;trilobite&quot;    &quot;turkey&quot;      
-#&gt; [41] &quot;yoda&quot;</code></pre>
+#&gt;  [1] &quot;ant&quot;          &quot;anxiouscat&quot;   &quot;bat&quot;          &quot;bat2&quot;         &quot;behindcat&quot;   
+#&gt;  [6] &quot;bigcat&quot;       &quot;buffalo&quot;      &quot;cat&quot;          &quot;chicken&quot;      &quot;chuck&quot;       
+#&gt; [11] &quot;clippy&quot;       &quot;cow&quot;          &quot;daemon&quot;       &quot;duck&quot;         &quot;duckling&quot;    
+#&gt; [16] &quot;egret&quot;        &quot;endlesshorse&quot; &quot;facecat&quot;      &quot;fish&quot;         &quot;frog&quot;        
+#&gt; [21] &quot;ghost&quot;        &quot;grumpycat&quot;    &quot;hypnotoad&quot;    &quot;longcat&quot;      &quot;longtailcat&quot; 
+#&gt; [26] &quot;monkey&quot;       &quot;mushroom&quot;     &quot;owl&quot;          &quot;pig&quot;          &quot;poop&quot;        
+#&gt; [31] &quot;pumpkin&quot;      &quot;rabbit&quot;       &quot;shark&quot;        &quot;shortcat&quot;     &quot;signbunny&quot;   
+#&gt; [36] &quot;smallcat&quot;     &quot;snowman&quot;      &quot;spider&quot;       &quot;squirrel&quot;     &quot;squirrel2&quot;   
+#&gt; [41] &quot;stretchycat&quot;  &quot;trilobite&quot;    &quot;turkey&quot;       &quot;yoda&quot;</code></pre>
 <p>For example, access the cow</p>
-<pre class="r"><code>cow &lt;- animals[['cow']]
+<pre class="r"><code>cow &lt;- animals[[&#39;cow&#39;]]
 cat(cow)
 #&gt; 
 #&gt;  ----- 
@@ -1536,8 +1571,6 @@ cat(cow)
 <h2>Say something</h2>
 <p>We expose the function <code>say()</code> in this package, which you can use to envoke any animal in the package, and make it say whatever you want. Some examples:</p>
 <pre class="r"><code>say(&quot;why did the chicken cross the road&quot;, &quot;chicken&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
-#&gt; 
 #&gt; 
 #&gt;  ----- 
 #&gt; why did the chicken cross the road 
@@ -1546,19 +1579,17 @@ cat(cow)
 #&gt;      \
 #&gt;          _
 #&gt;        _/ }
-#&gt;       `&gt;' \
+#&gt;       `&gt;&#39; \
 #&gt;       `|   \
-#&gt;        |   /'-.     .-.
-#&gt;         \'     ';`--' .'
-#&gt;          \'.    `'-./
-#&gt;           '.`-..-;`
-#&gt;             `;-..'
+#&gt;        |   /&#39;-.     .-.
+#&gt;         \&#39;     &#39;;`--&#39; .&#39;
+#&gt;          \&#39;.    `&#39;-./
+#&gt;           &#39;.`-..-;`
+#&gt;             `;-..&#39;
 #&gt;             _| _|
 #&gt;             /` /` [nosig]
 #&gt; </code></pre>
 <pre class="r"><code>say(&quot;boo!&quot;, &quot;ghost&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
-#&gt; 
 #&gt; 
 #&gt;  ----- 
 #&gt; boo! 
@@ -1569,13 +1600,12 @@ cat(cow)
 #&gt;     (o o)
 #&gt;     | O \
 #&gt;      \   \
-#&gt;       `~~~' [nosig]
+#&gt;       `~~~&#39; [nosig]
 #&gt; </code></pre>
-<pre class="r"><code>say(&quot;nope, don't do that&quot;, type = &quot;warning&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
-#&gt; Warning in say(&quot;nope, don't do that&quot;, type = &quot;warning&quot;): 
+<pre class="r"><code>say(&quot;nope, don&#39;t do that&quot;, type = &quot;warning&quot;)
+#&gt; Warning in say(&quot;nope, don&#39;t do that&quot;, type = &quot;warning&quot;): 
 #&gt;  -------------- 
-#&gt; nope, don't do that 
+#&gt; nope, don&#39;t do that 
 #&gt;  --------------
 #&gt;     \
 #&gt;       \
@@ -1592,11 +1622,10 @@ cat(cow)
 #&gt;                \_)
 #&gt; </code></pre>
 <p>There’s the special <code>time</code>, that will print out the time</p>
-<pre class="r"><code>say('time')
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
+<pre class="r"><code>say(&#39;time&#39;)
 #&gt; 
 #&gt;  -------------- 
-#&gt; 2018-09-17 15:57:12 
+#&gt; 2020-02-06 12:00:09 
 #&gt;  --------------
 #&gt;     \
 #&gt;       \
@@ -1618,7 +1647,6 @@ cat(cow)
 <p>You can use <code>say()</code> and give back a string, message, or warning</p>
 <p>Message</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt;  ----- 
 #&gt; hello world 
@@ -1630,7 +1658,6 @@ cat(cow)
 #&gt;              ||      ||</code></pre>
 <p>Warning</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;warning&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; Warning in say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;warning&quot;): 
 #&gt;  ----- 
 #&gt; hello world 
@@ -1642,7 +1669,6 @@ cat(cow)
 #&gt;              ||      ||</code></pre>
 <p>String</p>
 <pre class="r"><code>say(&quot;hello world&quot;, by = &quot;cow&quot;, type = &quot;string&quot;)
-#&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; [1] &quot;\n ----- \nhello world \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||&quot;</code></pre>
 </div>
 <div id="add-color" class="section level2">
@@ -1650,56 +1676,66 @@ cat(cow)
 <pre class="r"><code>library(jsonlite)
 library(multicolor)</code></pre>
 <p>We rely on the <a href="https://github.com/r-lib/crayon"><code>crayon</code></a> package for color and the <a href="https://github.com/aedobbyn/multicolor"><code>multicolor</code></a> package for multiple colors. The arguments you supply to <code>what_color</code> and <code>by_color</code> can be strings – either the color name or a hex value – or a <a href="https://github.com/r-lib/crayon#styles">function of class <code>crayon</code></a>.</p>
-<pre class="r"><code>say(what = &quot;holygrail&quot;,
+<pre class="r"><code>say(what = &quot;fortune&quot;,
     by = &quot;rabbit&quot;,
     what_color = &quot;#FF4500&quot;,
     by_color = &quot;red&quot;)
 #&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
-#&gt; 
 #&gt;  ----- 
-#&gt; She looks like one. 
+#&gt; Some OSX users know that OSX is really Unix [...], others think that OSX is cooler Windows, and they have ontological problems with non-Apple phenomena and constructs.
+#&gt;  Roger Bivand
+#&gt;  R-SIG-Geo
+#&gt;  May 2012 
 #&gt;  ------ 
 #&gt;     \   
 #&gt;      \
 #&gt;       ( )_( )
-#&gt;       (='.'=)
+#&gt;       (=&#39;.&#39;=)
 #&gt;       (^)_(^) [nosig]
 #&gt; </code></pre>
 <p><code>colors()</code> are all supported as are any <code>rgb</code> values that evaluate to a string. Supplying multiple colors for <code>what_color</code> or <code>by_color</code> is allowed, as long as they’re in a character vector. “rainbow” is also allowed.</p>
-<pre class="r"><code>say(what = &quot;arresteddevelopment&quot;, 
-    by = sample(names(animals), 1),
+<pre class="r"><code># make a vector of animals safe to use on windows in case vignette built on windows
+not_on_windows &lt;- c(&#39;shortcat&#39;,&#39;longcat&#39;,&#39;fish&#39;,&#39;signbunny&#39;,&#39;stretchycat&#39;,
+  &#39;anxiouscat&#39;,&#39;longtailcat&#39;,&#39;grumpycat&#39;,&#39;mushroom&#39;)
+names_safe &lt;- names(animals)[!names(animals) %in% not_on_windows]</code></pre>
+<pre class="r"><code>say(what = &quot;fortune&quot;, 
+    by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
     type = &quot;message&quot;)
 #&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt;  ----- 
-#&gt; Steve Holt! 
+#&gt; For almost 40 years SAS has been the primary tool for statisticians worldwide and its easy-to-learn syntax, unsurpassed graphical system, powerful macro language and recent graphical user interfaces have made SAS the number one statistical software choice for both beginners and advanced users.
+#&gt;  Rolf Poalis, Biostatistics Denmark
+#&gt;  announcement of the SAS to R parser sas2R
+#&gt;  R-help
+#&gt;  April 1, 2004 
 #&gt;  ------ 
 #&gt;     \   
 #&gt;      \  
 #&gt;       \
-#&gt;        \   _,
-#&gt;       -==&lt;' `
-#&gt;           ) /
-#&gt;          / (_.
-#&gt;         |  ,-,`\
-#&gt;          \\   \ \
-#&gt;           `\,  \ \
-#&gt;            ||\  \`|,
-#&gt;  jgs      _|| `=`-'
-#&gt;          ~~`~`</code></pre>
-<pre class="r"><code>say(what = &quot;arresteddevelopment&quot;, 
-    by = sample(names(animals), 1),
+#&gt;          __
+#&gt;         /o \
+#&gt;       &lt;=   |         ==
+#&gt;         |__|        /===
+#&gt;         |   \______/  =
+#&gt;         \     ====   /
+#&gt;          \__________/     [ab]</code></pre>
+<pre class="r"><code>say(what = &quot;fortune&quot;, 
+    by = sample(names_safe, 1),
     what_color = rgb(.1, .2, .3),
     by_color = sample(colors(), 5),
     type = &quot;message&quot;)
 #&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
-#&gt; 
 #&gt;  ----- 
-#&gt; Michael! 
+#&gt; I think [R] addresses a niche market for high-end data analysts that want free, readily available code. [...] We have customers who build engines for aircraft. I am happy they are not using freeware when I get on a jet.
+#&gt;  Anne H. Milley
+#&gt;  director of technology product marketing at SAS, quoted in Ashlee Vance&#39;s article &quot;Data Analysts Captivated by R&#39;s Power&quot;
+#&gt;  The New York Times
+#&gt;  January 2009 
 #&gt;  ------ 
 #&gt;     \   
 #&gt;      \  
@@ -1707,19 +1743,19 @@ library(multicolor)</code></pre>
 #&gt;        ,
 #&gt;     _,,)\.~,,._
 #&gt;      (()`  ``)\))),,_
-#&gt;       |     \ ''((\)))),,_          ____
-#&gt;       |6`   |   ''((\())) &quot;-.____.-&quot;    `-.-,
-#&gt;       |    .'\    ''))))'                  \)))
-#&gt;       |   |   `.     ''                     ((((
+#&gt;       |     \ &#39;&#39;((\)))),,_          ____
+#&gt;       |6`   |   &#39;&#39;((\())) &quot;-.____.-&quot;    `-.-,
+#&gt;       |    .&#39;\    &#39;&#39;))))&#39;                  \)))
+#&gt;       |   |   `.     &#39;&#39;                     ((((
 #&gt;       \, _)     \/                          |))))
-#&gt;        `'        |                          (((((
+#&gt;        `&#39;        |                          (((((
 #&gt;                  \                  |       ))))))
 #&gt;                   `|    |           ,\     /((((((
 #&gt;                    |   / `-.______.&lt;  \   |  )))))
 #&gt;                    |   |  /         `. \  \  ((((
 #&gt;                    |  / \ |           `.\  | (((
 #&gt;                    \  | | |             )| |  ))
-#&gt;                     | | | |             || |  '   [endless.horse]
+#&gt;                     | | | |             || |  &#39;   [endless.horse]
 #&gt;                     | | | |             || |</code></pre>
 <p><code>&quot;rainbow&quot;</code> is the same as <code>c(&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;purple&quot;)</code>. Saves you a bit of typing.</p>
 <pre class="r"><code>say(what = &quot;foobar&quot;,
@@ -1728,7 +1764,6 @@ library(multicolor)</code></pre>
     by_color = c(&quot;rainbow&quot;, &quot;rainbow&quot;, &quot;rainbow&quot;))
 #&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
-#&gt;     
 #&gt;  -------------- 
 #&gt; foobar 
 #&gt;  --------------
@@ -1736,54 +1771,57 @@ library(multicolor)</code></pre>
 #&gt;       \
 #&gt;         \
 #&gt;               /&quot;&quot;-._
-#&gt;               .       '-,
-#&gt;                :          '',
-#&gt;                 ;      *     '.
-#&gt;                  ' *         () '.
+#&gt;               .       &#39;-,
+#&gt;                :          &#39;&#39;,
+#&gt;                 ;      *     &#39;.
+#&gt;                  &#39; *         () &#39;.
 #&gt;                    \               \
-#&gt;                     \      _.---.._ '.
-#&gt;                     :  .' _.--''-''  \ ,'
-#&gt;         .._           '/.'             . ;
-#&gt;         ; `-.          ,                \'
+#&gt;                     \      _.---.._ &#39;.
+#&gt;                     :  .&#39; _.--&#39;&#39;-&#39;&#39;  \ ,&#39;
+#&gt;         .._           &#39;/.&#39;             . ;
+#&gt;         ; `-.          ,                \&#39;
 #&gt;          ;   `,         ;              ._\
-#&gt;           ;    \     _,-'                ''--._
-#&gt;           :    \_,-'                          '-._
-#&gt;           \ ,-'                       .          '-._
-#&gt;           .'         __.-'';            \...,__       '.
-#&gt;         .'      _,-'        \              \   ''--.,__  '\
-#&gt;         /    _,--' ;         \              ;           \^.}
-#&gt;         ;_,-' )     \  )\      )            ;
-#&gt;              /       \/  \_.,-'             ;
+#&gt;           ;    \     _,-&#39;                &#39;&#39;--._
+#&gt;           :    \_,-&#39;                          &#39;-._
+#&gt;           \ ,-&#39;                       .          &#39;-._
+#&gt;           .&#39;         __.-&#39;&#39;;            \...,__       &#39;.
+#&gt;         .&#39;      _,-&#39;        \              \   &#39;&#39;--.,__  &#39;\
+#&gt;         /    _,--&#39; ;         \              ;           \^.}
+#&gt;         ;_,-&#39; )     \  )\      )            ;
+#&gt;              /       \/  \_.,-&#39;             ;
 #&gt;             /                              ;
-#&gt;          ,-'  _,-'''-.    ,-.,            ;      PFA
-#&gt;       ,-' _.-'        \  /    |/'-._...--'
+#&gt;          ,-&#39;  _,-&#39;&#39;&#39;-.    ,-.,            ;      PFA
+#&gt;       ,-&#39; _.-&#39;        \  /    |/&#39;-._...--&#39;
 #&gt;      :--``             )/
-#&gt;   '
+#&gt;   &#39;
 #&gt; </code></pre>
 <p>The main advantage of using <code>crayon</code> functions instead of color strings is the ability to combine styles together.</p>
 <pre class="r"><code>library(crayon)
 
-say(what = &quot;simpsons&quot;,
+say(what = &quot;fortune&quot;,
     by = &quot;egret&quot;,
     what_color = bgBlue$white$italic,
     by_color = bold$green)
 #&gt; Colors cannot be applied in this environment :( Try using a terminal or RStudio.
 #&gt; 
 #&gt;  ----- 
-#&gt; I didn't get rich by signing checks. 
+#&gt; I&#39;m always thrilled when people discover what lexical scoping really means.
+#&gt;  Robert Gentleman
+#&gt;  Statistical Computing 2003, Reisensburg
+#&gt;  June 2003 
 #&gt;  ------ 
 #&gt;     \   
 #&gt;      \  
 #&gt;       \
 #&gt;        \   _,
-#&gt;       -==&lt;' `
+#&gt;       -==&lt;&#39; `
 #&gt;           ) /
 #&gt;          / (_.
 #&gt;         |  ,-,`\
 #&gt;          \\   \ \
 #&gt;           `\,  \ \
 #&gt;            ||\  \`|,
-#&gt;  jgs      _|| `=`-'
+#&gt;  jgs      _|| `=`-&#39;
 #&gt;          ~~`~`</code></pre>
 </div>
 
@@ -1805,6 +1843,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
