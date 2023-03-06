@@ -28,7 +28,6 @@ Authors@R: c(
 URL: https://github.com/sckott/cowsay
 BugReports: https://github.com/sckott/cowsay/issues
 Roxygen: list(markdown = TRUE)
-LazyData: yes
 Encoding: UTF-8
 Language: en-US
 VignetteBuilder: knitr
