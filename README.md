@@ -2,7 +2,7 @@
 
 ![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://app.codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
+[![codecov](https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
 [![rstudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/r-hub/cranlogs.app)
 [![cran
@@ -118,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-03-06 12:50:36 
+    #> 2023-03-06 12:53:45 
     #>  --------------
     #>     \
     #>       \
@@ -382,11 +382,12 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> You may have not been long enough on this list to see that some of the old-time gurus have reached a demigod like status. Demigods have all rights to be 'rude' (that's almost a definition of a demi-deity).
-    #>  Jari Oksanen
-    #>  in a discussion on whether answers on R-help should be more polite
+    #> Michael Watson: Hopefully this one isn't in the manual or I am about to get shot :-S
+    #> Peter Dalgaard: *Kapow*...
+    #>  Michael Watson and Peter Dalgaard
+    #>  question on axis()
     #>  R-help
-    #>  December 2004 
+    #>  February 2006 
     #>  --------------
     #>     \
     #>       \
@@ -434,11 +435,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-    #>  Tom Backer Johnsen and Barry Rowlingson
-    #>  R-help
-    #>  February 2006 
+    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+    #> Joshua Ulrich: That's the magic_pony function.
+    #>  Justin and Joshua Ulrich
+    #>  stackoverflow.com
+    #>  June 2013 
     #>  --------------
     #>     \
     #>       \
@@ -592,18 +593,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> This reminds me of a famous FORTRAN code snippet:
-    #> 
-    #> 10 STOP
-    #> STOP
-    #> STOP
-    #> ! IN CASE STILL SKIDDING
-    #> GOTO 10
-    #> 
-    #>  Carl Witthoft
-    #>  in response to the question how to completely stop R scripts after stop()
+    #> Getting flamed for asking dumb questions on a public mailing list is all part of growing up and being a man/woman.
+    #>  Michael Watson
+    #>  in a discussion on whether answers on R-help should be more polite
     #>  R-help
-    #>  January 2011 
+    #>  December 2004 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -627,12 +621,10 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Anand Patil: Can this be fixed without requiring the user to do anything?
-    #> Brian D. Ripley: The fix requires 'the user' to read the documentation.
-    #>  Anand Patil and Brian D. Ripley
-    #>  about some compiler problems under Windows Vista
+    #> I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.
+    #>  Frank Harrell
     #>  R-help
-    #>  September 2007 
+    #>  November 2003 
     #>  ------ 
     #>     \   
     #>      \  
