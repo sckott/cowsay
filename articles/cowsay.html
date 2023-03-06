@@ -76,7 +76,7 @@ Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman,
 Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo
 Sonego, and Philipp Boersch-Supan</h4>
             
-            <h4 data-toc-skip class="date">2023-03-03</h4>
+            <h4 data-toc-skip class="date">2023-03-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sckott/cowsay/blob/HEAD/vignettes/cowsay.Rmd" class="external-link"><code>vignettes/cowsay.Rmd</code></a></small>
       <div class="hidden name"><code>cowsay.Rmd</code></div>
@@ -199,7 +199,7 @@ time</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  -------------- </span></span>
-<span><span class="co">#&gt; 2023-03-03 15:52:41 </span></span>
+<span><span class="co">#&gt; 2023-03-06 20:45:39 </span></span>
 <span><span class="co">#&gt;  --------------</span></span>
 <span><span class="co">#&gt;     \</span></span>
 <span><span class="co">#&gt;       \</span></span>
@@ -269,11 +269,11 @@ either the color name or a hex value – or a <a href="https://github.com/r-lib/
 <span>    by_color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co"><span style="color: #BB0000;">#&gt;  ----- </span></span></span>
-<span><span class="co"><span style="color: #BB0000;">#&gt; </span><span style="color: #FF5F00;">I think this is kind of like asking "will your Land Rover make it up my driveway?", but I'll assume the question was asked in all seriousness.</span></span></span>
-<span><span class="co"><span style="color: #FF5F00;">#&gt;  Ista Zahn</span></span></span>
-<span><span class="co"><span style="color: #FF5F00;">#&gt;  in response to a request for replication of some data preprocessing done in SAS</span></span></span>
-<span><span class="co"><span style="color: #FF5F00;">#&gt;  R-help</span></span></span>
-<span><span class="co"><span style="color: #FF5F00;">#&gt;  April 2011</span><span style="color: #BB0000;"> </span></span></span>
+<span><span class="co"><span style="color: #BB0000;">#&gt; </span><span style="color: #FF5F00;">It [the effort of learning how to use R] is the price paid, just as the dollars or euros for a commercial package would be. For that price, I've learnt a great deal - and not only about R. And I shall remember it when I next have to find a heavyweight solution for a big problem presented by a small charitable client with an invisible budget. It's a huge, awe-inspiring package - easier to perceive as such because the power is not hidden beneath a cosmetic veneer.</span></span></span>
+<span><span class="co"><span style="color: #FF5F00;">#&gt;  Felix Grant</span></span></span>
+<span><span class="co"><span style="color: #FF5F00;">#&gt;  in an article about free statistics software</span></span></span>
+<span><span class="co"><span style="color: #FF5F00;">#&gt;  Scientific Computing World</span></span></span>
+<span><span class="co"><span style="color: #FF5F00;">#&gt;  November 2004</span><span style="color: #BB0000;"> </span></span></span>
 <span><span class="co"><span style="color: #BB0000;">#&gt;  ------ </span></span></span>
 <span><span class="co"><span style="color: #BB0000;">#&gt;     \   </span></span></span>
 <span><span class="co"><span style="color: #BB0000;">#&gt;      \</span></span></span>
@@ -296,58 +296,50 @@ they’re in a character vector. “rainbow” is also allowed.</p>
 <span>    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">rgb</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span><span class="op">)</span>,</span>
 <span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">colors</a></span><span class="op">(</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span>,</span>
 <span>    type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;"> -</span><span style="color: #D7875F;">-</span><span style="color: #808080;">-</span><span style="color: #9E9E9E;">-</span><span style="color: #87D7D7;">- </span></span></span>
-<span><span class="co">#&gt; <span style="color: #005F5F;">I begin to think that R needs a _mis_fortunes package...</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  Stephen L.R. Ellison</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;"> -</span><span style="color: #FF87AF;">-</span><span style="color: #0000D7;">-</span><span style="color: #1C1C1C;">-</span><span style="color: #3A3A3A;">- </span></span></span>
+<span><span class="co">#&gt; <span style="color: #005F5F;">Although there is almost never a "No" in R, the best short answer is: "No".</span></span></span>
+<span><span class="co"><span style="color: #005F5F;">#&gt;  Uwe Ligges</span></span></span>
+<span><span class="co"><span style="color: #005F5F;">#&gt;  in response to the question whether R has a concept of "const objects" as in C++ that avoid modification</span></span></span>
 <span><span class="co"><span style="color: #005F5F;">#&gt;  R-help</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  March 2010</span><span style="color: #AF8787;"> </span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;"> ------</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">    \      </span><span style="color: #D7875F;">    ,'``.._</span><span style="color: #808080;">   ,'``.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">     \     </span><span style="color: #D7875F;">   :,--._:)</span><span style="color: #808080;">\,:,._,.:</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">      \    </span><span style="color: #D7875F;">   :`--,'' </span><span style="color: #808080;">  :`...';\</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">    `,'    </span><span style="color: #808080;">   `---'  `</span><span style="color: #9E9E9E;">.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">    /      </span><span style="color: #808080;">           </span><span style="color: #9E9E9E;">:</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">   /       </span><span style="color: #808080;">           </span><span style="color: #9E9E9E;"> \</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;"> ,'        </span><span style="color: #808080;">           </span><span style="color: #9E9E9E;">  :\.___,-.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">`...,---'``</span><span style="color: #808080;">````-..._  </span><span style="color: #9E9E9E;">  |:       </span><span style="color: #87D7D7;">\</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">  (        </span><span style="color: #808080;">         ) </span><span style="color: #9E9E9E;">  ;:    )  </span><span style="color: #87D7D7;"> \  _,-.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">   `.      </span><span style="color: #808080;">        (  </span><span style="color: #9E9E9E;"> //        </span><span style="color: #87D7D7;">  `'    \</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">    :      </span><span style="color: #808080;">         `.</span><span style="color: #9E9E9E;">//  )      </span><span style="color: #87D7D7;">)     , ;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">  ,-|`.    </span><span style="color: #808080;">        _,'</span><span style="color: #9E9E9E;">/       )  </span><span style="color: #87D7D7;">  ) ,' ,'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;"> (  :`.`-..</span><span style="color: #808080;">____..=:.-'</span><span style="color: #9E9E9E;">:     .    </span><span style="color: #87D7D7;"> _,' ,'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">  `,'\ ``--</span><span style="color: #808080;">....-)='   </span><span style="color: #9E9E9E;"> `._,  \  ,</span><span style="color: #87D7D7;">') _ '``._</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">          _</span><span style="color: #D7875F;">.-/ _ `.   </span><span style="color: #808080;">    (_)    </span><span style="color: #9E9E9E;">  /     )' </span><span style="color: #87D7D7;">; / \ \`-.'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">         `-</span><span style="color: #D7875F;">-(   `-:`. </span><span style="color: #808080;">    `' ___.</span><span style="color: #9E9E9E;">.'  _,-'   </span><span style="color: #87D7D7;">|/   `.)</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">  `-. `.`.`</span><span style="color: #808080;">`-----``--,</span><span style="color: #9E9E9E;">  .'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">    |/`.\`'</span><span style="color: #808080;">        ,',</span><span style="color: #9E9E9E;">'); SSt</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">           </span><span style="color: #D7875F;">        `  </span><span style="color: #808080;">       (/  </span><span style="color: #9E9E9E;">(/</span></span></span>
-<span><span class="co">#&gt; <span style="color: #AF8787;">  </span></span></span></code></pre></div>
+<span><span class="co"><span style="color: #005F5F;">#&gt;  March 2011</span><span style="color: #FFFFFF;"> </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;"> ------ </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">    \   </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">     \</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">       </span><span style="color: #0000D7;">   ___</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">       </span><span style="color: #0000D7;">___)__|</span><span style="color: #1C1C1C;">_</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">  .-*' </span><span style="color: #0000D7;">       </span><span style="color: #1C1C1C;">  '*-,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;"> /     </span><span style="color: #0000D7;"> /|   |</span><span style="color: #1C1C1C;">\     \</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">;      </span><span style="color: #0000D7;">/_|   |</span><span style="color: #1C1C1C;">_\     </span><span style="color: #3A3A3A;">;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">;   |\ </span><span style="color: #0000D7;">       </span><span style="color: #1C1C1C;">   /|  </span><span style="color: #3A3A3A;">;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">;   | '</span><span style="color: #0000D7;">'--...-</span><span style="color: #1C1C1C;">-'' |  </span><span style="color: #3A3A3A;">;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;"> \  ''-</span><span style="color: #0000D7;">--.....</span><span style="color: #1C1C1C;">--''  /</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">        </span><span style="color: #FF87AF;">  ''*-.</span><span style="color: #0000D7;">,______</span><span style="color: #1C1C1C;">_,.-*' </span><span style="color: #3A3A3A;"> [nosig]</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFFF;">  </span></span></span></code></pre></div>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span>what <span class="op">=</span> <span class="st">"fortune"</span>, </span>
 <span>    by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">names_safe</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>    what_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">rgb</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.3</span><span class="op">)</span>,</span>
 <span>    by_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">colors</a></span><span class="op">(</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span>,</span>
 <span>    type <span class="op">=</span> <span class="st">"message"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;"> --</span><span style="color: #DADADA;">---</span><span style="color: #AF0000;">---</span><span style="color: #B2B2B2;">---</span><span style="color: #FF8787;">-- </span></span></span>
-<span><span class="co">#&gt; <span style="color: #005F5F;">If you don't go with R now, you will someday.</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  David Kane</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  on whether to use R or S-PLUS</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  R-SIG-Finance</span></span></span>
-<span><span class="co"><span style="color: #005F5F;">#&gt;  November 2004</span><span style="color: #8A8A8A;"> </span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;"> ---------</span><span style="color: #DADADA;">----- </span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">          </span><span style="color: #DADADA;">    \   </span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">          </span><span style="color: #DADADA;">     \  </span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">          </span><span style="color: #DADADA;">      \</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">        __</span><span style="color: #DADADA;">.--'\    </span><span style="color: #AF0000;"> \.__./  </span><span style="color: #B2B2B2;">   /'--._</span><span style="color: #FF8787;">_</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">    _.-'  </span><span style="color: #DADADA;">     '.__</span><span style="color: #AF0000;">.'    '._</span><span style="color: #B2B2B2;">_.'      </span><span style="color: #FF8787;"> '-._</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">  .'      </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">         </span><span style="color: #B2B2B2;">         </span><span style="color: #FF8787;">     '.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;"> /        </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">         </span><span style="color: #B2B2B2;">         </span><span style="color: #FF8787;">       \</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">|         </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">         </span><span style="color: #B2B2B2;">         </span><span style="color: #FF8787;">        |</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">|         </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">         </span><span style="color: #B2B2B2;">         </span><span style="color: #FF8787;">        |</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;"> \        </span><span style="color: #DADADA;"> .---.   </span><span style="color: #AF0000;">         </span><span style="color: #B2B2B2;">  .---.  </span><span style="color: #FF8787;">       /</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">  '._    .</span><span style="color: #DADADA;">'     '.'</span><span style="color: #AF0000;">'.    .''</span><span style="color: #B2B2B2;">.'     '.</span><span style="color: #FF8787;">    _.'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">     '-./ </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">  \  /   </span><span style="color: #B2B2B2;">        \</span><span style="color: #FF8787;">.-'</span></span></span>
-<span><span class="co">#&gt; <span style="color: #8A8A8A;">          </span><span style="color: #DADADA;">         </span><span style="color: #AF0000;">   ''mrf</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;"> -</span><span style="color: #FF00FF;">-</span><span style="color: #0000FF;">-</span><span style="color: #4E4E4E;">-</span><span style="color: #AF0000;">- </span></span></span>
+<span><span class="co">#&gt; <span style="color: #005F5F;">The job of computer output, in my view, is to be as informative as possible while keeping the output as terse as possible.</span></span></span>
+<span><span class="co"><span style="color: #005F5F;">#&gt;   John Maindonald</span></span></span>
+<span><span class="co"><span style="color: #005F5F;">#&gt;  R-SIG-Mixed-Models</span></span></span>
+<span><span class="co"><span style="color: #005F5F;">#&gt;  June 2013</span><span style="color: #FFFFD7;"> </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;"> ---</span><span style="color: #FF00FF;">--- </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">\   </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;"> \  </span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">  \</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">   \</span><span style="color: #0000FF;">   _</span><span style="color: #4E4E4E;">,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">  -=</span><span style="color: #0000FF;">=&lt;' </span><span style="color: #4E4E4E;">`</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;">  ) </span><span style="color: #4E4E4E;">/</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;"> / (</span><span style="color: #4E4E4E;">_.</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;">|  ,</span><span style="color: #4E4E4E;">-,`\</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;"> \\ </span><span style="color: #4E4E4E;">  \ </span><span style="color: #AF0000;">\</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;">  `\</span><span style="color: #4E4E4E;">,  \</span><span style="color: #AF0000;"> \</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;">   |</span><span style="color: #4E4E4E;">|\  </span><span style="color: #AF0000;">\`|,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;"> jgs</span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;">  _|</span><span style="color: #4E4E4E;">| `=</span><span style="color: #AF0000;">`-'</span></span></span>
+<span><span class="co">#&gt; <span style="color: #FFFFD7;">    </span><span style="color: #FF00FF;">    </span><span style="color: #0000FF;"> ~~`</span><span style="color: #4E4E4E;">~`</span></span></span></code></pre></div>
 <p><code>"rainbow"</code> is the same as
 <code>c("red", "orange", "yellow", "green", "blue", "purple")</code>.
 Saves you a bit of typing.</p>
@@ -398,11 +390,13 @@ color strings is the ability to combine styles together.</p>
 <span>    by_color <span class="op">=</span> <span class="va">bold</span><span class="op">$</span><span class="va">green</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt;  ----- </span></span></span>
-<span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt; </span><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">If your ultimate interest is in real scientific progress, I'd suggest that you ignore that sentence (and any conclusion drawn subsequent to it).</span></span></span>
-<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  Andy Liaw</span></span></span>
-<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  in response to a question on the meaning of the sentence: 'Independent variables whose correlation with the response variable was not significant at 5% level were removed'</span></span></span>
+<span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt; </span><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">JPM Miao: Why can't R understand if(num!=NA)?</span></span></span>
+<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt; Peter Dalgaard: Because comparison with an unknown value yields an unknown result.</span></span></span>
+<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt; David Winsemius: Anything else would violate the Second Law of Thermodynamics. We cannot have comparisons reducing entropy, now can we? Uncertainty cannot run uphill.</span></span></span>
+<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  JPM Miao, Peter Dalgaard, and David Winsemius</span></span></span>
+<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  on why is.na() is needed</span></span></span>
 <span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  R-help</span></span></span>
-<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  March 2010</span><span style="color: #00BB00; font-weight: bold;"> </span></span></span>
+<span><span class="co"><span style="color: #BBBBBB; background-color: #0000BB; font-style: italic;">#&gt;  May 2013</span><span style="color: #00BB00; font-weight: bold;"> </span></span></span>
 <span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt;  ------ </span></span></span>
 <span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt;     \   </span></span></span>
 <span><span class="co"><span style="color: #00BB00; font-weight: bold;">#&gt;      \  </span></span></span>
