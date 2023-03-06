@@ -3,7 +3,7 @@
 [![cran
 checks](https://badges.cranchecks.info/worst/cowsay.svg)](https://cloud.r-project.org/web/checks/check_results_cowsay.html)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://codecov.io/github/sckott/cowsay/branch/master/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/github/sckott/cowsay)
+[![codecov](https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/gh/sckott/cowsay)
 [![rstudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
 [![cran
@@ -119,7 +119,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-03-03 06:29:22 
+    #> 2023-03-06 12:38:58 
     #>  --------------
     #>     \
     #>       \
@@ -383,11 +383,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> John Miller: How do I prevent google search to post my questions asked here??
-    #> Martin Maechler: you don't: R-help is famous and celebrity can't be gotten rid off ;-)
-    #>  John Miller and Martin Maechler
-    #>  R-help
-    #>  June 2004 
+    #> The existence of a method is not a sufficient reason to use that method.
+    #>  Jari Oksanen
+    #>  about relative advantages of several multivariate analysis methods
+    #>  R-SIG-Ecology
+    #>  November 2013 
     #>  --------------
     #>     \
     #>       \
@@ -593,11 +593,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> Thank your for your entry in the Poorly Capitalized and Inadequately Searched Posting Contest. You will be advised of your ranking in due course.
-    #>  David Winsemius
-    #>  in response to an all-lower-case question on a simple clustering task
+    #> It currently works (because I can't figure out how to make it an error) but you really should not do it.
+    #>  Hadley Wickham
+    #>  discussing a user's ggplot experiences
     #>  R-help
-    #>  August 2011 
+    #>  October 2009 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -621,10 +621,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> I've been reading Data Analysis Using Regression and Multilevel/Hierarchical Models by Gelman and Hill. I'm getting acquainted with my new cartoon character friends Elmer (lmer) and Bugs, and at some point it may become clear what is going on. At the moment though, the whole thing seems a bit Looney Tunes.
-    #>  Paul Miller
-    #>  R-SIG-Mixed-Models
-    #>  August 2011 
+    #> Is this English or American (you know, the language referred to in the USA as 'English')? [...] As an English English speaker, my sense and my employer's dictionary both suggest doubling here.
+    #>  Brian D. Ripley
+    #>  in a discussion whether it is 'subsetable' or 'subsettable'
+    #>  R-devel
+    #>  February 2004 
     #>  ------ 
     #>     \   
     #>      \  
