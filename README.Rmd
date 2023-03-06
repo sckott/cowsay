@@ -13,10 +13,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)](https://cloud.r-project.org/web/checks/check_results_cowsay.html)
+![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/gh/sckott/cowsay)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
+[![codecov](https://app.codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
 ### What is this?
@@ -61,8 +61,8 @@ See [CONTRIBUTING.md][contrib]
 
 Sources to look in:
 
-* http://www.chris.com/ascii/ - again, this person only collects them - no mention of license, permissions, etc.
-* http://www.asciiworld.com/
+* https://asciiart.website/ - again, this person only collects them - no mention of license, permissions, etc.
+* https://www.asciiworld.com/
 
 Permissions
 

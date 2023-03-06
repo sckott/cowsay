@@ -1,11 +1,10 @@
 # cowsay
 
-[![cran
-checks](https://badges.cranchecks.info/worst/cowsay.svg)](https://cloud.r-project.org/web/checks/check_results_cowsay.html)
+![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/gh/sckott/cowsay)
+[![codecov](https://app.codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
 [![rstudio mirror
-downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/metacran/cranlogs.app)
+downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/r-hub/cranlogs.app)
 [![cran
 version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
@@ -45,9 +44,9 @@ See
 
 Sources to look in:
 
--   <http://www.chris.com/ascii/> - again, this person only collects
+-   <https://asciiart.website/> - again, this person only collects
     them - no mention of license, permissions, etc.
--   <http://www.asciiworld.com/>
+-   <https://www.asciiworld.com/>
 
 Permissions
 
@@ -119,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-03-06 12:38:58 
+    #> 2023-03-06 12:50:36 
     #>  --------------
     #>     \
     #>       \
@@ -383,11 +382,11 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> The existence of a method is not a sufficient reason to use that method.
+    #> You may have not been long enough on this list to see that some of the old-time gurus have reached a demigod like status. Demigods have all rights to be 'rude' (that's almost a definition of a demi-deity).
     #>  Jari Oksanen
-    #>  about relative advantages of several multivariate analysis methods
-    #>  R-SIG-Ecology
-    #>  November 2013 
+    #>  in a discussion on whether answers on R-help should be more polite
+    #>  R-help
+    #>  December 2004 
     #>  --------------
     #>     \
     #>       \
@@ -593,11 +592,18 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> It currently works (because I can't figure out how to make it an error) but you really should not do it.
-    #>  Hadley Wickham
-    #>  discussing a user's ggplot experiences
+    #> This reminds me of a famous FORTRAN code snippet:
+    #> 
+    #> 10 STOP
+    #> STOP
+    #> STOP
+    #> ! IN CASE STILL SKIDDING
+    #> GOTO 10
+    #> 
+    #>  Carl Witthoft
+    #>  in response to the question how to completely stop R scripts after stop()
     #>  R-help
-    #>  October 2009 
+    #>  January 2011 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -621,11 +627,12 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Is this English or American (you know, the language referred to in the USA as 'English')? [...] As an English English speaker, my sense and my employer's dictionary both suggest doubling here.
-    #>  Brian D. Ripley
-    #>  in a discussion whether it is 'subsetable' or 'subsettable'
-    #>  R-devel
-    #>  February 2004 
+    #> Anand Patil: Can this be fixed without requiring the user to do anything?
+    #> Brian D. Ripley: The fix requires 'the user' to read the documentation.
+    #>  Anand Patil and Brian D. Ripley
+    #>  about some compiler problems under Windows Vista
+    #>  R-help
+    #>  September 2007 
     #>  ------ 
     #>     \   
     #>      \  
