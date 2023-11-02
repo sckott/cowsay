@@ -1,3 +1,11 @@
+cowsay 0.9.0
+============
+
+* remove `multicolor` temporarily as it is no longer on CRAN (#86)
+* use new special "sentinel" "PACKAGE" prefixed with an underscore for the package level manual file (84)
+* new animals alligator, goldfish, stegosaurus, whale, and wolf from @harriscw (#79)
+
+
 cowsay 0.8.2
 ============
 
