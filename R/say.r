@@ -77,21 +77,6 @@
 #' say()
 #' say("what")
 #' say('time')
-#' 
-#' if (requireNamespace("multicolor", quietly=TRUE) && 
-#' requireNamespace("jsonlite", quietly=TRUE)) {
-#' say("meow", "cat", what_color = "blue")
-#' say('time', "poop", by_color = "cyan", what_color = "pink")
-#'
-#' library(jsonlite)
-#' say("hello world",
-#'     by = "hypnotoad",
-#'     what_color = c("royalblue1", "tomato2"),
-#'     by_color = c("rainbow", "rainbow"))
-#' say("whats up",
-#'     what_color = crayon::cyan$bgMagenta,
-#'     by_color = c("salmon1", "springgreen"))
-#' }
 #'
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
@@ -219,8 +204,9 @@ say <- function(what="Hello world!", by="cat",
         c <- crayon::make_style(c)
         out <- c(txt)
       } else if (length(c) >= 1) {
-        out <- multicolor::multi_color(txt, c,
-                                       type = "string")
+        stop("this functionality requires multicolor, which is temporarily not on CRAN")
+        # out <- multicolor::multi_color(txt, c,
+        #                                type = "string")
       }
     }
     return(out)

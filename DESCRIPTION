@@ -39,7 +39,6 @@ Suggests:
     curl,
     jsonlite,
     knitr,
-    multicolor,
     rmarkdown,
     testthat
 RoxygenNote: 7.2.3
