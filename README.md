@@ -117,7 +117,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-11-02 07:15:07.945956 
+    #> 2023-11-02 07:16:42.618198 
     #>  --------------
     #>     \
     #>       \
@@ -384,12 +384,11 @@ From the a Boing Boing tweet on 2014-05-10
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Thomas Lumley: The precedence of ^ is higher than that of unary minus. It may be surprising, [...]
-    #> Herve Pages: No, it's not surprising. At least to me... In the country where I grew up, I've been teached that -x^2 means -(x^2) not (-x)^2.
-    #>  Thomas Lumley and Herve Pages
-    #>  both explaining that operator precedence is working perfectly well
-    #>  R-devel
-    #>  January 2006 
+    #> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
+    #>  Brian D. Ripley
+    #>  'Statistical Methods Need Software: A View of Statistical Computing'
+    #>  Opening lecture RSS 2002, Plymouth
+    #>  September 2002 
     #>  --------------
     #>     \
     #>       \
@@ -437,11 +436,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-    #>  Tom Backer Johnsen and Barry Rowlingson
-    #>  R-help
-    #>  February 2006 
+    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
+    #> Joshua Ulrich: That's the magic_pony function.
+    #>  Justin and Joshua Ulrich
+    #>  stackoverflow.com
+    #>  June 2013 
     #>  --------------
     #>     \
     #>       \
@@ -595,11 +594,16 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> I think the rule is that you can do anything as long as you don't complain. If you want to complain, you must follow the instructions.
-    #>  Jari Oksanen
-    #>  about not following the instructions when compiling R-devel
-    #>  R-devel
-    #>  February 2013 
+    #> Corinna Schmitt: How can I divide the number 0.285 with 2. I need a function.
+    #>   Result: 0.285 / 2 = 0.1425
+    #> Gabor Csardi: Well, i think
+    #>   half.of.0.285 <- function() {
+    #>     0.1425
+    #>   }
+    #> would do the trick.
+    #>  Corinna Schmitt and Gabor Csardi
+    #>  R-help
+    #>  April 2007 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -623,14 +627,14 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Happy families are all alike; every unhappy family is unhappy in its own way.
-    #> Leo Tolstoy
-    #> 
-    #> and every messy data is messy in its own way - it's easy to define the characteristics of a clean dataset (rows are observations, columns are variables, columns contain values of consistent types). If you start to look at real life data you'll see every way you can imagine data being messy (and many that you can't)!
-    #>  Hadley Wickham
-    #>  answering 'in what way messy data sets are messy'
-    #>  R-help
-    #>  January 2008 
+    #> Tony Plate: There looks to be a typo in the R-exts manual: [...]
+    #> Peter Dalgaard: 'svn blame' tells me that this was Brian's addition in rev.35362 [...]
+    #> Brian D. Ripley: I prefer 'svn praise' myself.
+    #> Peter Dalgaard: Or 'svn annotate'. I think it depends on what I'm looking for, plus the risk that the author (perpetrator, contributor) might be me...
+    #>  Tony Plate, Peter Dalgaard, and Brian D. Ripley
+    #>  about a typo in the documentation
+    #>  R-devel
+    #>  April 2007 
     #>  ------ 
     #>     \   
     #>      \  
@@ -745,5 +749,5 @@ and you can select the animal you want by name.
 -   License: MIT
 -   Please note that this project is released with a [Contributor Code
     of
-    Conduct](https://github.com/sckott/cowsay/blob/main/CODE_OF_CONDUCT.md).
+    Conduct](https://github.com/sckott/cowsay/blob/main/.github/CODE_OF_CONDUCT.md).
     By participating in this project you agree to abide by its terms.
