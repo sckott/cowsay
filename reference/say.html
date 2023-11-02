@@ -209,7 +209,7 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-02 13:52:16.945714 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-02 14:17:22.56751 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -311,11 +311,10 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"spider"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> As Obi-Wan Kenobi may have said in Star Wars: "Use the source, Luke!"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Barry Rowlingson</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  answering a question on the documentation of some implementation details</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  R-devel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  January 2010 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I think what we are seeking is the marginal variance-covariance matrix of the parameter estimators (marginal with respect to the random effects random variable, B), which would have the form of the inverse of the crossproduct of a (q+p) by p matrix composed of the vertical concatenation of - L^{-1}RZX RX^{-1} and RX^{-1}. (Note: You do *not* want to calculate the first term by inverting L, use solve(L, RZX, system = "L") - [...] don't even think about using solve(L) - don't!, don't!, don't! - have I made myself clear? - don't do that (and we all know that someone will do exactly that for a very large L and then send out messages about "R is SOOOOO SLOOOOW!!!!" :-) )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Douglas Bates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-SIG-Mixed-Models</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2010 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -331,11 +330,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"facecat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Some people familiar with R describe it as a supercharged version of Microsoft's Excel spreadsheet software.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Ashlee Vance</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  in his article "Data Analysts Captivated by R's Power"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  The New York Times</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  January 2009 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Maybe I'll become a theoretician. Nobody expects you to maintain a theorem.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Doug Bates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about keeping both Matrix and RcppEigen in sync with CHOLMOD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  lme4-authors</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  September 2013 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -347,11 +346,12 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"behindcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  John W. Tukey</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  the first of six "basics" against statistician's hubrises</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  in "Sunset Salvo", The American Statistician 40(1), 72-76</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  February 1986 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Etienne B. Racine: I haven't seen any documentation about this behavior.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Etienne B. Racine, Edzer Pebesma, and Tom Gottfried</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-SIG-Geo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2012 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         \</span>
@@ -372,10 +372,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"smallcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> If one doesn't understand the output of lm(), then one's knowledge of statistics is insufficient to warrant using lm().</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Peter Ehlers</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> In many cases a) often looks difficult, but on closer inspection turns out to be impossible.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bill Venables</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about calculating the negative log-likelihood from a non-independence model</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  October 2009 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  April 2008 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -387,11 +388,12 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"monkey"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  'Statistical Methods Need Software: A View of Statistical Computing'</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Opening lecture RSS 2002, Plymouth</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  September 2002 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Thomas Lumley: The algorithm in glm.fit, while not perfect, is a little smarter than a simple IRLS. It uses step-halving to back away from the edge, and when the parameter space is convex it has a reasonable chance of creeping along the boundary to the true MLE.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Peter Dalgaard: Hmm. That wasn't my experience. I had a situation where there was like a (virtual) maximum outside the boundary, and the algorithm would basically stay on the path to that peak, banging its little head into the same point of the wall repeatedly, so to speak.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Thomas Lumley and Peter Dalgaard</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about problems with constrained optimzation in GLMs and "the little optimizer that couldn't"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  November 2004 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \  </span>
@@ -412,10 +414,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"egret"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> The keyboard is the standard Italian layout, which is missing the ~ (tilde) key. [...] Can anyone advice how to produce the ~ symbol, short of a copy/paste from MS Word?</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Federico Calboli</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> R is Open Source and so you can modify it to emulate the bugs in other software: that is not one of the aims of its developers so please don't expect us to do so for you.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  answering a request for a change to Excel-like non IEC 60559 standard conform rounding</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2004 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2009 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \  </span>
@@ -434,7 +437,7 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Richard Stallman can make infinite loops end. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Richard Stallman doesn't read web pages. They write to him. </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -501,12 +504,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span>what<span class="op">=</span><span class="st">"fortune"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ole F. Christensen: Brain, Thank you very much for your help.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Peter Dalgaard: You seem to be using call-by-value semantics rather than call-by-name...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Ole F. Christensen and Peter Dalgaard</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  thanking *Brian* D. Ripley for help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  R-devel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  January 2006 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dirk Eddelbuettel: Devel is in the detail.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Douglas Bates: Typo or profound insight?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Dirk Eddelbuettel and Douglas Bates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Rcpp-devel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2012 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
