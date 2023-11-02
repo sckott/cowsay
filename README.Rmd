@@ -139,7 +139,6 @@ say("ain't that some shit", "chicken")
 Add some color: 
 
 ```{r}
-library(multicolor)
 library(crayon)
 ```
 
@@ -197,7 +196,7 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
 </p>
 
 
-Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
+<!-- Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
 
 
 ```{r eval=FALSE}
@@ -211,7 +210,7 @@ say(what = "I'm a rare Irish buffalo",
 <p align="left">
   <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
-
+ -->
 
 ### Vary type of output, default calls message()
 

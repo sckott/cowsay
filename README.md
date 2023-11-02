@@ -118,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-03-06 12:53:45 
+    #> 2023-11-02 06:34:54.573303 
     #>  --------------
     #>     \
     #>       \
@@ -157,7 +157,6 @@ Dev version
 
 Add some color:
 
-    library(multicolor)
     library(crayon)
 
     say("boo!", "ghost", 
@@ -196,18 +195,22 @@ string directly.
 <p align="left">
 <img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
 </p>
+<!-- Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
 
-Multiple colors are also possible (uses the
-[`multicolor`](https://github.com/aedobbyn/multicolor) package):
 
-    say(what = "I'm a rare Irish buffalo",
-        by = "buffalo", 
-        what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
-        by_color = c("green", "white", "orange"))
+
+```r
+say(what = "I'm a rare Irish buffalo",
+    by = "buffalo", 
+    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+    by_color = c("green", "white", "orange"))
+```
+
 
 <p align="left">
-<img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
+  <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
+ -->
 
 ### Vary type of output, default calls message()
 
@@ -382,12 +385,10 @@ From the [a Boing Boing tweet on
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Michael Watson: Hopefully this one isn't in the manual or I am about to get shot :-S
-    #> Peter Dalgaard: *Kapow*...
-    #>  Michael Watson and Peter Dalgaard
-    #>  question on axis()
-    #>  R-help
-    #>  February 2006 
+    #> /* some real insanity to keep Duncan sane */
+    #>  Luke Tierney
+    #>  in src/main/context.c
+    #>  June 2001 
     #>  --------------
     #>     \
     #>       \
@@ -593,11 +594,12 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> Getting flamed for asking dumb questions on a public mailing list is all part of growing up and being a man/woman.
-    #>  Michael Watson
-    #>  in a discussion on whether answers on R-help should be more polite
+    #> Douglas Bates: If you really want to be cautious you could use an octal representation like sep="\\007" to get a character that is very unlikely to occur in a factor level.
+    #> Ed L. Cashin: I definitely want to be cautious. Instead of the bell character I think I'll use the field separator character, "\\034", just because this is the first time I've been able to use it for it's intended purpose! ;)
+    #> Douglas Bates: Yes, but with "\\034" you don't get to make obscure James Bond references :-)
+    #>  Douglas Bates and Ed L. Cashin
     #>  R-help
-    #>  December 2004 
+    #>  April 2004 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -621,10 +623,12 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.
-    #>  Frank Harrell
-    #>  R-help
-    #>  November 2003 
+    #> Etienne B. Racine: I haven't seen any documentation about this behavior.
+    #> Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?
+    #> Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.
+    #>  Etienne B. Racine, Edzer Pebesma, and Tom Gottfried
+    #>  R-SIG-Geo
+    #>  February 2012 
     #>  ------ 
     #>     \   
     #>      \  
