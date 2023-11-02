@@ -209,7 +209,7 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-02 14:17:22.56751 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-02 14:19:14.043946 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -311,10 +311,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"spider"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I think what we are seeking is the marginal variance-covariance matrix of the parameter estimators (marginal with respect to the random effects random variable, B), which would have the form of the inverse of the crossproduct of a (q+p) by p matrix composed of the vertical concatenation of - L^{-1}RZX RX^{-1} and RX^{-1}. (Note: You do *not* want to calculate the first term by inverting L, use solve(L, RZX, system = "L") - [...] don't even think about using solve(L) - don't!, don't!, don't! - have I made myself clear? - don't do that (and we all know that someone will do exactly that for a very large L and then send out messages about "R is SOOOOO SLOOOOW!!!!" :-) )</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Douglas Bates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  R-SIG-Mixed-Models</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2010 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> If we do that, I predict that the total amount of r-help time wasted on it will exceed the CPU time saved by orders of magnitude.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Duncan Murdoch</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  after a specialized function speeding up detection of NAs was suggested for base R</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-devel</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  April 2006 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -330,11 +331,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"facecat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Maybe I'll become a theoretician. Nobody expects you to maintain a theorem.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Doug Bates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  about keeping both Matrix and RcppEigen in sync with CHOLMOD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  lme4-authors</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  September 2013 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> If you think you can learn all of R, you are wrong. For the foreseeable future you will not even be able to keep up with the new additions.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Patrick Burns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Inferno-ish R</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  CambR User Group Meeting, Cambridge</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  May 2012 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -346,12 +347,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"behindcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Etienne B. Racine: I haven't seen any documentation about this behavior.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Etienne B. Racine, Edzer Pebesma, and Tom Gottfried</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  R-SIG-Geo</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2012 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I've already got an apartment reserved for me in one of Pat Burns's "R Inferno" levels, and I don't want to descend even further.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Berton Gunter</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  commenting on his own somewhat off-topic comment</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2013 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         \</span>
@@ -372,11 +372,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"smallcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> In many cases a) often looks difficult, but on closer inspection turns out to be impossible.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Bill Venables</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  about calculating the negative log-likelihood from a non-independence model</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I wish to perform brain surgery this afternoon at 4pm and don't know where to start. My background is the history of great statistician sports legends but I am willing to learn. I know there are courses and numerous books on brain surgery but I don't have the time for those. Please direct me to the appropriate HowTos, and be on standby for solving any problem I may encounter while in the operating room. Some of you might ask for specifics of the case, but that would require my following the posting guide and spending even more time than I am already taking to write this note.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  I. Ben Fooled</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  aka Frank Harrell</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  April 2008 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  April 1, 2005 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -388,12 +388,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"monkey"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Thomas Lumley: The algorithm in glm.fit, while not perfect, is a little smarter than a simple IRLS. It uses step-halving to back away from the edge, and when the parameter space is convex it has a reasonable chance of creeping along the boundary to the true MLE.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Peter Dalgaard: Hmm. That wasn't my experience. I had a situation where there was like a (virtual) maximum outside the boundary, and the algorithm would basically stay on the path to that peak, banging its little head into the same point of the wall repeatedly, so to speak.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Thomas Lumley and Peter Dalgaard</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  about problems with constrained optimzation in GLMs and "the little optimizer that couldn't"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Soon, they'll be speaking R on the subway.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Michael Rennie</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  giving 'Kudos to the R support team'</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  November 2004 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  July 2004 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \  </span>
@@ -414,11 +413,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"egret"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R is Open Source and so you can modify it to emulate the bugs in other software: that is not one of the aims of its developers so please don't expect us to do so for you.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> If things are not readily available in R it is always good to pause and reflect if there might be a good reason.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  Brian D. Ripley</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  answering a request for a change to Excel-like non IEC 60559 standard conform rounding</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about how to get t statistics for arima()</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2009 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  March 2013 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \  </span>
@@ -437,7 +436,7 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ----- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Richard Stallman doesn't read web pages. They write to him. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Richard Stallman programmed himself before he could even exist </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \   </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      \</span>
@@ -504,11 +503,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span>what<span class="op">=</span><span class="st">"fortune"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dirk Eddelbuettel: Devel is in the detail.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Douglas Bates: Typo or profound insight?</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Dirk Eddelbuettel and Douglas Bates</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Rcpp-devel</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2012 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Running as administrator is like heroin... any problems it solves it replaces with worse problems.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Jeff Newmiller</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  about running R CMD check as administrator</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2013 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
@@ -574,11 +573,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span>fortune<span class="op">=</span><span class="st">'whatever'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -------------- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Joshua Ulrich: That's the magic_pony function.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Justin and Joshua Ulrich</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  stackoverflow.com</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  June 2013 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Tom Backer Johnsen and Barry Rowlingson</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  R-help</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  February 2006 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  --------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
