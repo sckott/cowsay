@@ -62,7 +62,6 @@ See [CONTRIBUTING.md][contrib]
 Sources to look in:
 
 * https://asciiart.website/ - again, this person only collects them - no mention of license, permissions, etc.
-* https://www.asciiworld.com/
 
 Permissions
 
@@ -255,7 +254,7 @@ say("catfact", "cat")
 
 ### Long cat
 
-From the [a Boing Boing tweet on 2014-05-10](https://twitter.com/BoingBoing/status/465170473194512384)
+From the a Boing Boing tweet on 2014-05-10 "twitter.com/BoingBoing/status/465170473194512384" (post may be gone)
 
 ```{r}
 say("it's caturday", "longcat")
