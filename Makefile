@@ -1,6 +1,8 @@
 PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
 RSCRIPT = Rscript --no-init-file
 
+.PHONY: docs
+
 install: doc build
 	R CMD INSTALL . && rm *.tar.gz
 
@@ -9,6 +11,9 @@ build:
 
 doc:
 	${RSCRIPT} -e "devtools::document()"
+
+docs:
+	${RSCRIPT} -e "pkgdown::build_site()"
 
 eg:
 	${RSCRIPT} -e "devtools::run_examples()"

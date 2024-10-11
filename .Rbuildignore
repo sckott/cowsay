@@ -12,3 +12,6 @@ CODE_OF_CONDUCT.md
 .github
 ^codemeta\.json$
 revdep/
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

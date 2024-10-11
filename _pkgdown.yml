@@ -1,0 +1,4 @@
+url: https://sckott.github.io/cowsay
+template:
+  bootstrap: 5
+  light-switch: true
