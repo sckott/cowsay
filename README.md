@@ -19,6 +19,7 @@ is, but for R. If not, read below. Why? Why not?
 -   Andreas Brandmaier
 -   Andy Teucher
 -   Carson Sievert
+-   David Schoch
 -   Franz-Sebastian Krah
 -   Guangchuang Yu
 -   Karl Broman
@@ -33,7 +34,7 @@ is, but for R. If not, read below. Why? Why not?
 -   Thomas Leeper
 -   Tyler Rinker
 
-That’s right, it takes 17 people to make `cowsay` - it’s that hard.
+That’s right, it takes 18 people to make `cowsay` - it’s that hard.
 
 ### Contributing
 
@@ -117,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2023-11-02 07:16:42.618198 
+    #> 2024-10-11 09:43:29.201287 
     #>  --------------
     #>     \
     #>       \
@@ -198,7 +199,7 @@ string directly.
 
 
 
-```r
+``` r
 say(what = "I'm a rare Irish buffalo",
     by = "buffalo", 
     what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
@@ -384,11 +385,11 @@ From the a Boing Boing tweet on 2014-05-10
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
-    #>  Brian D. Ripley
-    #>  'Statistical Methods Need Software: A View of Statistical Computing'
-    #>  Opening lecture RSS 2002, Plymouth
-    #>  September 2002 
+    #> I think, therefore I R.
+    #>  William B. King
+    #>  in his R tutorials
+    #>  http://ww2.coastal.edu/kingw/statistics/R-tutorials/
+    #>  July 2010 
     #>  --------------
     #>     \
     #>       \
@@ -436,11 +437,11 @@ the `what` parameter (the 1st parameter)
     say(fortune='whatever')
     #> 
     #>  -------------- 
-    #> Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?
-    #> Joshua Ulrich: That's the magic_pony function.
-    #>  Justin and Joshua Ulrich
-    #>  stackoverflow.com
-    #>  June 2013 
+    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
+    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
+    #>  Tom Backer Johnsen and Barry Rowlingson
+    #>  R-help
+    #>  February 2006 
     #>  --------------
     #>     \
     #>       \
@@ -460,6 +461,7 @@ the `what` parameter (the 1st parameter)
 ### Trilobite
 
     say("Hi there :)", by='trilobite')
+
     #> 
     #>  -------------- 
     #> Hi there :) 
@@ -518,6 +520,7 @@ the `what` parameter (the 1st parameter)
 ### Buffalo
 
     say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+
     #> 
     #>  -------------- 
     #> Q: What do you call a single buffalo?
@@ -594,16 +597,12 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> Corinna Schmitt: How can I divide the number 0.285 with 2. I need a function.
-    #>   Result: 0.285 / 2 = 0.1425
-    #> Gabor Csardi: Well, i think
-    #>   half.of.0.285 <- function() {
-    #>     0.1425
-    #>   }
-    #> would do the trick.
-    #>  Corinna Schmitt and Gabor Csardi
+    #> Michael Watson: Hopefully this one isn't in the manual or I am about to get shot :-S
+    #> Peter Dalgaard: *Kapow*...
+    #>  Michael Watson and Peter Dalgaard
+    #>  question on axis()
     #>  R-help
-    #>  April 2007 
+    #>  February 2006 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -627,14 +626,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> Tony Plate: There looks to be a typo in the R-exts manual: [...]
-    #> Peter Dalgaard: 'svn blame' tells me that this was Brian's addition in rev.35362 [...]
-    #> Brian D. Ripley: I prefer 'svn praise' myself.
-    #> Peter Dalgaard: Or 'svn annotate'. I think it depends on what I'm looking for, plus the risk that the author (perpetrator, contributor) might be me...
-    #>  Tony Plate, Peter Dalgaard, and Brian D. Ripley
-    #>  about a typo in the documentation
-    #>  R-devel
-    #>  April 2007 
+    #> RAM is cheap and thinking hurts.
+    #>  Uwe Ligges
+    #>  about memory requirements in R
+    #>  R-help
+    #>  June 2007 
     #>  ------ 
     #>     \   
     #>      \  
