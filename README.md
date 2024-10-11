@@ -2,7 +2,7 @@
 
 ![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
+[![codecov](https://codecov.io/gh/sckott/cowsay/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/gh/sckott/cowsay)
 [![rstudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/r-hub/cranlogs.app)
 [![cran
@@ -118,7 +118,7 @@ Dev version
     say('time')
     #> 
     #>  -------------- 
-    #> 2024-10-11 09:43:29.201287 
+    #> 2024-10-11 09:45:13.793342 
     #>  --------------
     #>     \
     #>       \
@@ -385,11 +385,10 @@ From the a Boing Boing tweet on 2014-05-10
     say('fortune','cat')
     #> 
     #>  -------------- 
-    #> I think, therefore I R.
-    #>  William B. King
-    #>  in his R tutorials
-    #>  http://ww2.coastal.edu/kingw/statistics/R-tutorials/
-    #>  July 2010 
+    #> If the answer is parse() you should usually rethink the question.
+    #>  Thomas Lumley
+    #>  R-help
+    #>  February 2005 
     #>  --------------
     #>     \
     #>       \
@@ -597,12 +596,11 @@ See also `bat2`
     say("fortune", by = "monkey")
     #> 
     #>  ------------- 
-    #> Michael Watson: Hopefully this one isn't in the manual or I am about to get shot :-S
-    #> Peter Dalgaard: *Kapow*...
-    #>  Michael Watson and Peter Dalgaard
-    #>  question on axis()
+    #> When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.
+    #>  Rolf Turner
+    #>  in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed
     #>  R-help
-    #>  February 2006 
+    #>  December 2003 
     #>  -------------- 
     #>               \   
     #>                \  
@@ -626,11 +624,11 @@ See also `bat2`
     say("fortune", by = "daemon")
     #> 
     #>  ----- 
-    #> RAM is cheap and thinking hurts.
-    #>  Uwe Ligges
-    #>  about memory requirements in R
+    #> You might also consider a more informative subject line. "Help needed" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?
+    #>  Peter Ehlers
+    #>  after answering a help request
     #>  R-help
-    #>  June 2007 
+    #>  April 2011 
     #>  ------ 
     #>     \   
     #>      \  
