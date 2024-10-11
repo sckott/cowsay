@@ -71,7 +71,7 @@
 <div class="section level1">
 <div class="page-header"><h1 id="cowsay">cowsay<a class="anchor" aria-label="anchor" href="#cowsay"></a>
 </h1></div>
-<p><img src="https://badges.cranchecks.info/worst/cowsay.svg" alt="cran checks"><a href="https://github.com/sckott/cowsay/actions?query=workflow%3AR-check" class="external-link"><img src="https://github.com/sckott/cowsay/workflows/R-check/badge.svg" alt="R-check"></a> <a href="https://app.codecov.io/gh/sckott/cowsay" class="external-link"><img src="https://codecov.io/gh/sckott/cowsay/branch/main/graph/badge.svg?token=fewxwGHXfv" alt="codecov"></a> <a href="https://github.com/r-hub/cranlogs.app" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/cowsay" alt="rstudio mirror downloads"></a> <a href="https://cran.r-project.org/package=cowsay" class="external-link"><img src="https://www.r-pkg.org/badges/version/cowsay" alt="cran version"></a></p>
+<p><img src="https://badges.cranchecks.info/worst/cowsay.svg" alt="cran checks"><a href="https://github.com/sckott/cowsay/actions?query=workflow%3AR-check" class="external-link"><img src="https://github.com/sckott/cowsay/workflows/R-check/badge.svg" alt="R-check"></a> <a href="https://codecov.io/gh/sckott/cowsay" class="external-link"><img src="https://codecov.io/gh/sckott/cowsay/graph/badge.svg?token=fewxwGHXfv" alt="codecov"></a> <a href="https://github.com/r-hub/cranlogs.app" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/cowsay" alt="rstudio mirror downloads"></a> <a href="https://cran.r-project.org/package=cowsay" class="external-link"><img src="https://www.r-pkg.org/badges/version/cowsay" alt="cran version"></a></p>
 <div class="section level3">
 <h3 id="what-is-this">What is this?<a class="anchor" aria-label="anchor" href="#what-is-this"></a>
 </h3>
@@ -85,6 +85,7 @@
 <li>Andreas Brandmaier</li>
 <li>Andy Teucher</li>
 <li>Carson Sievert</li>
+<li>David Schoch</li>
 <li>Franz-Sebastian Krah</li>
 <li>Guangchuang Yu</li>
 <li>Karl Broman</li>
@@ -99,7 +100,7 @@
 <li>Thomas Leeper</li>
 <li>Tyler Rinker</li>
 </ul>
-<p>That’s right, it takes 17 people to make <code>cowsay</code> - it’s that hard.</p>
+<p>That’s right, it takes 18 people to make <code>cowsay</code> - it’s that hard.</p>
 </div>
 <div class="section level3">
 <h3 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -179,7 +180,7 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">'time'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 2023-11-02 07:16:42.618198 </span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 2024-10-11 09:45:13.793342 </span></span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
 <span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
@@ -243,7 +244,7 @@
 
 
 
-```r
+``` r
 say(what = "I'm a rare Irish buffalo",
     by = "buffalo",
     what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
@@ -433,26 +434,25 @@ say(what = "I'm a rare Irish buffalo",
 <div class="sourceCode" id="cb16"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">'fortune'</span>,<span class="st">'cat'</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="co">#&gt; Let's not kid ourselves: the most widely used piece of software for statistics is Excel.</span></span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a><span class="co">#&gt;  Brian D. Ripley</span></span>
-<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="co">#&gt;  'Statistical Methods Need Software: A View of Statistical Computing'</span></span>
-<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a><span class="co">#&gt;  Opening lecture RSS 2002, Plymouth</span></span>
-<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a><span class="co">#&gt;  September 2002 </span></span>
-<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
-<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
-<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
-<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
-<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a><span class="co">#&gt;             |\___/|</span></span>
-<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a><span class="co">#&gt;           ==) ^Y^ (==</span></span>
-<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a><span class="co">#&gt;             \  ^  /</span></span>
-<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a><span class="co">#&gt;              )=*=(</span></span>
-<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a><span class="co">#&gt;             /     \</span></span>
-<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a><span class="co">#&gt;             |     |</span></span>
-<span id="cb16-19"><a href="#cb16-19" tabindex="-1"></a><span class="co">#&gt;            /| | | |\</span></span>
-<span id="cb16-20"><a href="#cb16-20" tabindex="-1"></a><span class="co">#&gt;            \| | |_|/\</span></span>
-<span id="cb16-21"><a href="#cb16-21" tabindex="-1"></a><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span id="cb16-22"><a href="#cb16-22" tabindex="-1"></a><span class="co">#&gt;                \_)</span></span>
-<span id="cb16-23"><a href="#cb16-23" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="co">#&gt; If the answer is parse() you should usually rethink the question.</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a><span class="co">#&gt;  Thomas Lumley</span></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a><span class="co">#&gt;  February 2005 </span></span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a><span class="co">#&gt;             |\___/|</span></span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a><span class="co">#&gt;           ==) ^Y^ (==</span></span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a><span class="co">#&gt;             \  ^  /</span></span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a><span class="co">#&gt;              )=*=(</span></span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a><span class="co">#&gt;             /     \</span></span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a><span class="co">#&gt;             |     |</span></span>
+<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a><span class="co">#&gt;            /| | | |\</span></span>
+<span id="cb16-19"><a href="#cb16-19" tabindex="-1"></a><span class="co">#&gt;            \| | |_|/\</span></span>
+<span id="cb16-20"><a href="#cb16-20" tabindex="-1"></a><span class="co">#&gt;       jgs  //_// ___/</span></span>
+<span id="cb16-21"><a href="#cb16-21" tabindex="-1"></a><span class="co">#&gt;                \_)</span></span>
+<span id="cb16-22"><a href="#cb16-22" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
 <p>You can also pick a particular fortune by number or regex search - if the <code>fortune</code> parameter is not <code>NULL</code> you don’t have pass anything to the <code>what</code> parameter (the 1st parameter)</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">say</span>(<span class="at">fortune=</span><span class="dv">100</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
@@ -481,11 +481,11 @@ say(what = "I'm a rare Irish buffalo",
 <span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a><span class="fu">say</span>(<span class="at">fortune=</span><span class="st">'whatever'</span>)</span>
 <span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb17-28"><a href="#cb17-28" tabindex="-1"></a><span class="co">#&gt; Justin: Is there a function that just does whatever I'm thinking (aka whatever my homework question is...)?</span></span>
-<span id="cb17-29"><a href="#cb17-29" tabindex="-1"></a><span class="co">#&gt; Joshua Ulrich: That's the magic_pony function.</span></span>
-<span id="cb17-30"><a href="#cb17-30" tabindex="-1"></a><span class="co">#&gt;  Justin and Joshua Ulrich</span></span>
-<span id="cb17-31"><a href="#cb17-31" tabindex="-1"></a><span class="co">#&gt;  stackoverflow.com</span></span>
-<span id="cb17-32"><a href="#cb17-32" tabindex="-1"></a><span class="co">#&gt;  June 2013 </span></span>
+<span id="cb17-28"><a href="#cb17-28" tabindex="-1"></a><span class="co">#&gt; Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.</span></span>
+<span id="cb17-29"><a href="#cb17-29" tabindex="-1"></a><span class="co">#&gt; Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.</span></span>
+<span id="cb17-30"><a href="#cb17-30" tabindex="-1"></a><span class="co">#&gt;  Tom Backer Johnsen and Barry Rowlingson</span></span>
+<span id="cb17-31"><a href="#cb17-31" tabindex="-1"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb17-32"><a href="#cb17-32" tabindex="-1"></a><span class="co">#&gt;  February 2006 </span></span>
 <span id="cb17-33"><a href="#cb17-33" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
 <span id="cb17-34"><a href="#cb17-34" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
 <span id="cb17-35"><a href="#cb17-35" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
@@ -506,23 +506,24 @@ say(what = "I'm a rare Irish buffalo",
 <h3 id="trilobite">Trilobite<a class="anchor" aria-label="anchor" href="#trilobite"></a>
 </h3>
 <div class="sourceCode" id="cb18"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">"Hi there :)"</span>, <span class="at">by=</span><span class="st">'trilobite'</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="co">#&gt; Hi there :) </span></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="co">#&gt;           _____</span></span>
-<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="co">#&gt;        .'` ,-. `'.</span></span>
-<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="co">#&gt;       /   ([ ])   \</span></span>
-<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a><span class="co">#&gt;      /.-""`(`)`""-.\</span></span>
-<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a><span class="co">#&gt;       &lt;'```(.)```'&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co">#&gt; Hi there :) </span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="co">#&gt;           _____</span></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="co">#&gt;        .'` ,-. `'.</span></span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a><span class="co">#&gt;       /   ([ ])   \</span></span>
+<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a><span class="co">#&gt;      /.-""`(`)`""-.\</span></span>
 <span id="cb18-14"><a href="#cb18-14" tabindex="-1"></a><span class="co">#&gt;       &lt;'```(.)```'&gt;</span></span>
-<span id="cb18-15"><a href="#cb18-15" tabindex="-1"></a><span class="co">#&gt;        &lt;'``(.)``'&gt;</span></span>
-<span id="cb18-16"><a href="#cb18-16" tabindex="-1"></a><span class="co">#&gt;    sk   &lt;``\_/``&gt;</span></span>
-<span id="cb18-17"><a href="#cb18-17" tabindex="-1"></a><span class="co">#&gt;          `'---'`</span></span>
-<span id="cb18-18"><a href="#cb18-18" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
+<span id="cb18-15"><a href="#cb18-15" tabindex="-1"></a><span class="co">#&gt;       &lt;'```(.)```'&gt;</span></span>
+<span id="cb18-16"><a href="#cb18-16" tabindex="-1"></a><span class="co">#&gt;        &lt;'``(.)``'&gt;</span></span>
+<span id="cb18-17"><a href="#cb18-17" tabindex="-1"></a><span class="co">#&gt;    sk   &lt;``\_/``&gt;</span></span>
+<span id="cb18-18"><a href="#cb18-18" tabindex="-1"></a><span class="co">#&gt;          `'---'`</span></span>
+<span id="cb18-19"><a href="#cb18-19" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="shark">Shark<a class="anchor" aria-label="anchor" href="#shark"></a>
@@ -566,27 +567,28 @@ say(what = "I'm a rare Irish buffalo",
 <h3 id="buffalo">Buffalo<a class="anchor" aria-label="anchor" href="#buffalo"></a>
 </h3>
 <div class="sourceCode" id="cb20"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">'Q: What do you call a single buffalo?</span><span class="sc">\n</span><span class="st">A: A buffalonely'</span>, <span class="at">by=</span><span class="st">'buffalo'</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co">#&gt; Q: What do you call a single buffalo?</span></span>
-<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a><span class="co">#&gt; A: A buffalonely </span></span>
-<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
-<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
-<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
-<span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
-<span id="cb20-10"><a href="#cb20-10" tabindex="-1"></a><span class="co">#&gt;                    _.-````'-,_</span></span>
-<span id="cb20-11"><a href="#cb20-11" tabindex="-1"></a><span class="co">#&gt;          _,.,_ ,-'`           `'-.,_</span></span>
-<span id="cb20-12"><a href="#cb20-12" tabindex="-1"></a><span class="co">#&gt;        /)     (                   '``-.</span></span>
-<span id="cb20-13"><a href="#cb20-13" tabindex="-1"></a><span class="co">#&gt;       ((      ) )                      `\</span></span>
-<span id="cb20-14"><a href="#cb20-14" tabindex="-1"></a><span class="co">#&gt;         \)    (_/                        )\</span></span>
-<span id="cb20-15"><a href="#cb20-15" tabindex="-1"></a><span class="co">#&gt;         |       /)           '    ,'    / \</span></span>
-<span id="cb20-16"><a href="#cb20-16" tabindex="-1"></a><span class="co">#&gt;         `\    ^'            '     (    /  ))</span></span>
-<span id="cb20-17"><a href="#cb20-17" tabindex="-1"></a><span class="co">#&gt;           |      _/\ ,     /    ,,`\   (  "`</span></span>
-<span id="cb20-18"><a href="#cb20-18" tabindex="-1"></a><span class="co">#&gt;           \Y,   |   \  \  | ````| / \_ \</span></span>
-<span id="cb20-19"><a href="#cb20-19" tabindex="-1"></a><span class="co">#&gt;             `)_/      \  \  )    ( &gt;  ( &gt;</span></span>
-<span id="cb20-20"><a href="#cb20-20" tabindex="-1"></a><span class="co">#&gt;                        \( \(     |/   |/</span></span>
-<span id="cb20-21"><a href="#cb20-21" tabindex="-1"></a><span class="co">#&gt;           mic &amp; dwb  /_(/_(    /_(  /_(</span></span>
-<span id="cb20-22"><a href="#cb20-22" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a><span class="co">#&gt; Q: What do you call a single buffalo?</span></span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="co">#&gt; A: A buffalonely </span></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">#&gt;  --------------</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a><span class="co">#&gt;     \</span></span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
+<span id="cb20-10"><a href="#cb20-10" tabindex="-1"></a><span class="co">#&gt;         \</span></span>
+<span id="cb20-11"><a href="#cb20-11" tabindex="-1"></a><span class="co">#&gt;                    _.-````'-,_</span></span>
+<span id="cb20-12"><a href="#cb20-12" tabindex="-1"></a><span class="co">#&gt;          _,.,_ ,-'`           `'-.,_</span></span>
+<span id="cb20-13"><a href="#cb20-13" tabindex="-1"></a><span class="co">#&gt;        /)     (                   '``-.</span></span>
+<span id="cb20-14"><a href="#cb20-14" tabindex="-1"></a><span class="co">#&gt;       ((      ) )                      `\</span></span>
+<span id="cb20-15"><a href="#cb20-15" tabindex="-1"></a><span class="co">#&gt;         \)    (_/                        )\</span></span>
+<span id="cb20-16"><a href="#cb20-16" tabindex="-1"></a><span class="co">#&gt;         |       /)           '    ,'    / \</span></span>
+<span id="cb20-17"><a href="#cb20-17" tabindex="-1"></a><span class="co">#&gt;         `\    ^'            '     (    /  ))</span></span>
+<span id="cb20-18"><a href="#cb20-18" tabindex="-1"></a><span class="co">#&gt;           |      _/\ ,     /    ,,`\   (  "`</span></span>
+<span id="cb20-19"><a href="#cb20-19" tabindex="-1"></a><span class="co">#&gt;           \Y,   |   \  \  | ````| / \_ \</span></span>
+<span id="cb20-20"><a href="#cb20-20" tabindex="-1"></a><span class="co">#&gt;             `)_/      \  \  )    ( &gt;  ( &gt;</span></span>
+<span id="cb20-21"><a href="#cb20-21" tabindex="-1"></a><span class="co">#&gt;                        \( \(     |/   |/</span></span>
+<span id="cb20-22"><a href="#cb20-22" tabindex="-1"></a><span class="co">#&gt;           mic &amp; dwb  /_(/_(    /_(  /_(</span></span>
+<span id="cb20-23"><a href="#cb20-23" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="clippy">Clippy<a class="anchor" aria-label="anchor" href="#clippy"></a>
@@ -645,33 +647,28 @@ say(what = "I'm a rare Irish buffalo",
 <div class="sourceCode" id="cb24"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">"fortune"</span>, <span class="at">by =</span> <span class="st">"monkey"</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="co">#&gt;  ------------- </span></span>
-<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="co">#&gt; Corinna Schmitt: How can I divide the number 0.285 with 2. I need a function.</span></span>
-<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="co">#&gt;   Result: 0.285 / 2 = 0.1425</span></span>
-<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a><span class="co">#&gt; Gabor Csardi: Well, i think</span></span>
-<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a><span class="co">#&gt;   half.of.0.285 &lt;- function() {</span></span>
-<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="co">#&gt;     0.1425</span></span>
-<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co">#&gt;   }</span></span>
-<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="co">#&gt; would do the trick.</span></span>
-<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">#&gt;  Corinna Schmitt and Gabor Csardi</span></span>
-<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="co">#&gt;  R-help</span></span>
-<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a><span class="co">#&gt;  April 2007 </span></span>
-<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
-<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a><span class="co">#&gt;               \   </span></span>
-<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a><span class="co">#&gt;                \  </span></span>
-<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a><span class="co">#&gt;                 \</span></span>
-<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="co">#&gt;                   .="=.</span></span>
-<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a><span class="co">#&gt;                 _/.-.-.\_     _</span></span>
-<span id="cb24-21"><a href="#cb24-21" tabindex="-1"></a><span class="co">#&gt;                ( ( o o ) )    ))</span></span>
-<span id="cb24-22"><a href="#cb24-22" tabindex="-1"></a><span class="co">#&gt;                 |/  "  \|    //</span></span>
-<span id="cb24-23"><a href="#cb24-23" tabindex="-1"></a><span class="co">#&gt;                  \'---'/    //</span></span>
-<span id="cb24-24"><a href="#cb24-24" tabindex="-1"></a><span class="co">#&gt;            jgs   /`"""`\\  ((</span></span>
-<span id="cb24-25"><a href="#cb24-25" tabindex="-1"></a><span class="co">#&gt;                 / /_,_\ \\  \\</span></span>
-<span id="cb24-26"><a href="#cb24-26" tabindex="-1"></a><span class="co">#&gt;                 \_\_'__/  \  ))</span></span>
-<span id="cb24-27"><a href="#cb24-27" tabindex="-1"></a><span class="co">#&gt;                 /`  /`~\   |//</span></span>
-<span id="cb24-28"><a href="#cb24-28" tabindex="-1"></a><span class="co">#&gt;                /   /    \  /</span></span>
-<span id="cb24-29"><a href="#cb24-29" tabindex="-1"></a><span class="co">#&gt;           ,--`,--'\/\    /</span></span>
-<span id="cb24-30"><a href="#cb24-30" tabindex="-1"></a><span class="co">#&gt;           '-- "--'  '--'</span></span></code></pre></div>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="co">#&gt; When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.</span></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="co">#&gt;  Rolf Turner</span></span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a><span class="co">#&gt;  in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed</span></span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="co">#&gt;  December 2003 </span></span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co">#&gt;  -------------- </span></span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="co">#&gt;               \   </span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">#&gt;                \  </span></span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="co">#&gt;                 \</span></span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a><span class="co">#&gt;                   .="=.</span></span>
+<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a><span class="co">#&gt;                 _/.-.-.\_     _</span></span>
+<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a><span class="co">#&gt;                ( ( o o ) )    ))</span></span>
+<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a><span class="co">#&gt;                 |/  "  \|    //</span></span>
+<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a><span class="co">#&gt;                  \'---'/    //</span></span>
+<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="co">#&gt;            jgs   /`"""`\\  ((</span></span>
+<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a><span class="co">#&gt;                 / /_,_\ \\  \\</span></span>
+<span id="cb24-21"><a href="#cb24-21" tabindex="-1"></a><span class="co">#&gt;                 \_\_'__/  \  ))</span></span>
+<span id="cb24-22"><a href="#cb24-22" tabindex="-1"></a><span class="co">#&gt;                 /`  /`~\   |//</span></span>
+<span id="cb24-23"><a href="#cb24-23" tabindex="-1"></a><span class="co">#&gt;                /   /    \  /</span></span>
+<span id="cb24-24"><a href="#cb24-24" tabindex="-1"></a><span class="co">#&gt;           ,--`,--'\/\    /</span></span>
+<span id="cb24-25"><a href="#cb24-25" tabindex="-1"></a><span class="co">#&gt;           '-- "--'  '--'</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="daemon">Daemon!<a class="anchor" aria-label="anchor" href="#daemon"></a>
@@ -679,37 +676,34 @@ say(what = "I'm a rare Irish buffalo",
 <div class="sourceCode" id="cb25"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">say</span>(<span class="st">"fortune"</span>, <span class="at">by =</span> <span class="st">"daemon"</span>)</span>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="co">#&gt;  ----- </span></span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="co">#&gt; Tony Plate: There looks to be a typo in the R-exts manual: [...]</span></span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt; Peter Dalgaard: 'svn blame' tells me that this was Brian's addition in rev.35362 [...]</span></span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt; Brian D. Ripley: I prefer 'svn praise' myself.</span></span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt; Peter Dalgaard: Or 'svn annotate'. I think it depends on what I'm looking for, plus the risk that the author (perpetrator, contributor) might be me...</span></span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt;  Tony Plate, Peter Dalgaard, and Brian D. Ripley</span></span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt;  about a typo in the documentation</span></span>
-<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt;  R-devel</span></span>
-<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a><span class="co">#&gt;  April 2007 </span></span>
-<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt;  ------ </span></span>
-<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt;     \   </span></span>
-<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt;      \  </span></span>
-<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
-<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt;             ,        ,</span></span>
-<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt;            /(        )`</span></span>
-<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a><span class="co">#&gt;            \ \___   / |</span></span>
-<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a><span class="co">#&gt;             /- _  `-/  '</span></span>
-<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a><span class="co">#&gt;            (/\/ \ \   /\</span></span>
-<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a><span class="co">#&gt;            / /   | `    </span></span>
-<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a><span class="co">#&gt;            O O   ) /    |</span></span>
-<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a><span class="co">#&gt;            `-^--'`&lt;     '</span></span>
-<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a><span class="co">#&gt;           (_.)  _  )   /</span></span>
-<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a><span class="co">#&gt;            `.___/`    /</span></span>
-<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a><span class="co">#&gt;              `-----' /</span></span>
-<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a><span class="co">#&gt; &lt;----.     __ / __   \</span></span>
-<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a><span class="co">#&gt; &lt;----|====O)))==) \) /====</span></span>
-<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a><span class="co">#&gt; &lt;----'    `--' `.__,' \</span></span>
-<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a><span class="co">#&gt;              |        |</span></span>
-<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a><span class="co">#&gt;               \       /</span></span>
-<span id="cb25-32"><a href="#cb25-32" tabindex="-1"></a><span class="co">#&gt;         ______( (_  / \______</span></span>
-<span id="cb25-33"><a href="#cb25-33" tabindex="-1"></a><span class="co">#&gt;       ,'  ,-----'   |        \</span></span>
-<span id="cb25-34"><a href="#cb25-34" tabindex="-1"></a><span class="co">#&gt;       `--{__________)        \/ [nosig]</span></span></code></pre></div>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="co">#&gt; You might also consider a more informative subject line. "Help needed" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt;  Peter Ehlers</span></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt;  after answering a help request</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt;  R-help</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt;  April 2011 </span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt;  ------ </span></span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt;     \   </span></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a><span class="co">#&gt;      \  </span></span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt;       \</span></span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt;             ,        ,</span></span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt;            /(        )`</span></span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt;            \ \___   / |</span></span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt;             /- _  `-/  '</span></span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt;            (/\/ \ \   /\</span></span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a><span class="co">#&gt;            / /   | `    </span></span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a><span class="co">#&gt;            O O   ) /    |</span></span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a><span class="co">#&gt;            `-^--'`&lt;     '</span></span>
+<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a><span class="co">#&gt;           (_.)  _  )   /</span></span>
+<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a><span class="co">#&gt;            `.___/`    /</span></span>
+<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a><span class="co">#&gt;              `-----' /</span></span>
+<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a><span class="co">#&gt; &lt;----.     __ / __   \</span></span>
+<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a><span class="co">#&gt; &lt;----|====O)))==) \) /====</span></span>
+<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a><span class="co">#&gt; &lt;----'    `--' `.__,' \</span></span>
+<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a><span class="co">#&gt;              |        |</span></span>
+<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a><span class="co">#&gt;               \       /</span></span>
+<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a><span class="co">#&gt;         ______( (_  / \______</span></span>
+<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a><span class="co">#&gt;       ,'  ,-----'   |        \</span></span>
+<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a><span class="co">#&gt;       `--{__________)        \/ [nosig]</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="egret">Egret<a class="anchor" aria-label="anchor" href="#egret"></a>
