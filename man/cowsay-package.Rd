@@ -40,6 +40,7 @@ Other contributors:
   \item Philipp Boersch-Supan [contributor]
   \item Andreas Brandmaier [contributor]
   \item Marion Louveaux [contributor]
+  \item David Schoch [contributor]
 }
 
 }
