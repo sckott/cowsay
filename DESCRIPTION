@@ -23,7 +23,8 @@ Authors@R: c(
     person("Guangchuang", "Yu", role = "ctb"),
     person("Philipp", "Boersch-Supan", role = "ctb"),
     person("Andreas", "Brandmaier", role="ctb"),
-    person("Marion", "Louveaux", role="ctb")
+    person("Marion", "Louveaux", role="ctb"),
+    person("David", "Schoch", role = "ctb")
     )
 URL: https://github.com/sckott/cowsay
 BugReports: https://github.com/sckott/cowsay/issues
