@@ -33,10 +33,8 @@ words that don't conflict with others, like "g" for "ghost" because there's
 no other animal that starts with "g".}
 
 \item{type}{(character) One of message (default), warning, print (default
-in non-interactive mode), or string (returns string). If multiple colors are
-supplied to \code{what_color} or \code{by_color}, type cannot be warning. (This is a
-limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor}
-packcage :/.) If run in non-interactive mode default type is print, so that
+in non-interactive mode), or string (returns string). If run in
+non-interactive mode default type is print, so that
 output goes to stdout rather than stderr, where messages and warnings go.}
 
 \item{what_color}{(character or crayon function) One or more
@@ -75,10 +73,6 @@ They are:
 \item "time": Print the current time
 \item "rms": Prints a random 'fact' about Richard Stallman from the
 \code{\link[rmsfact:rmsfact]{rmsfact::rmsfact()}} package. Best paired with \code{by = "rms"}.
-\item The fillerama API was an option ("arresteddevelopment", "doctorwho",
-"dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum"),
-a text generator with quotes from shows and movies. However,
-the API is currently down so you cannot use this option anymore.
 }
 }
 

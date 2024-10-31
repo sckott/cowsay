@@ -7,7 +7,7 @@
 #' clippy, poop, bigcat, ant, pumpkin, ghost, spider, rabbit, pig,
 #' snowman, frog, hypnotoad, shortcat, longcat, fish, signbunny,
 #' facecat, behindcat, stretchycat, anxiouscat, longtailcat, cat,
-#' trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom, 
+#' trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom,
 #' endlesshorse, bat, bat2, turkey, monkey, daemon, egret, duckling,
 #' duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
 #' whale, wolf, or rms for Richard Stallman.
@@ -17,10 +17,8 @@
 #' words that don't conflict with others, like "g" for "ghost" because there's
 #' no other animal that starts with "g".
 #' @param type (character) One of message (default), warning, print (default
-#' in non-interactive mode), or string (returns string). If multiple colors are
-#' supplied to `what_color` or `by_color`, type cannot be warning. (This is a
-#' limitation of the \href{https://github.com/aedobbyn/multicolor}{multicolor}
-#' packcage :/.) If run in non-interactive mode default type is print, so that
+#' in non-interactive mode), or string (returns string). If run in
+#' non-interactive mode default type is print, so that
 #' output goes to stdout rather than stderr, where messages and warnings go.
 #' @param what_color (character or crayon function) One or more
 #' \href{https://github.com/r-lib/crayon#256-colors}{\code{crayon}}-suported
@@ -50,10 +48,6 @@
 #' - "time": Print the current time
 #' - "rms": Prints a random 'fact' about Richard Stallman from the
 #'  [rmsfact::rmsfact()] package. Best paired with `by = "rms"`.
-#' - The fillerama API was an option ("arresteddevelopment", "doctorwho",
-#' "dexter", "futurama", "holygrail", "simpsons", "starwars", "loremipsum"),
-#' a text generator with quotes from shows and movies. However,
-#' the API is currently down so you cannot use this option anymore.
 #'
 #' @section by:
 #' Note that if you choose `by='hypnotoad'` the quote is forced to be,
@@ -182,11 +176,7 @@ say <- function(what="Hello world!", by="cat",
   if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama",
     "holygrail", "simpsons", "starwars", "loremipsum")
   ) {
-    stop("sorry, fillerama API is down", call.=FALSE)
-    # check4pkg("jsonlite")
-    # what <-
-    #   jsonlite::fromJSON(
-    #     paste0('http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=', what))$db$quote
+    stop("sorry, fillerama API is gone, sorry", call.=FALSE)
   }
 
   what_pos_start <-
@@ -205,23 +195,10 @@ say <- function(what="Hello world!", by="cat",
         out <- c(txt)
       } else if (length(c) >= 1) {
         stop("this functionality requires multicolor, which is temporarily not on CRAN")
-        # out <- multicolor::multi_color(txt, c,
-        #                                type = "string")
       }
     }
     return(out)
   }
-
-  # TODO: when multicolor doesn't color every character individually, this should be possible
-  # and we can get rid of what_pos_start and what_pos_end
-  # what <- color_text(what, what_color)
-  # who <- color_text(who, by_color)
-  # out <- sprintf(who, what)
-
-  # switch(type,
-  #        message = message(sprintf(who, what)),
-  #        warning = warning(sprintf(who, what)),
-  #        string = sprintf(who, what))
 
   out <- paste0(color_text(substr(who, 1, what_pos_start),
                            by_color),
