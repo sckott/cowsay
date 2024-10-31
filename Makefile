@@ -3,7 +3,10 @@ RSCRIPT = Rscript --no-init-file
 
 .PHONY: docs
 
-install: doc build
+deps:
+	Rscript -e "pak::local_install_dev_deps(root = '.')"
+
+install: deps doc build
 	R CMD INSTALL . && rm *.tar.gz
 
 build:
