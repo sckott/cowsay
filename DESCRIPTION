@@ -3,7 +3,7 @@ Title: Messages, Warnings, Strings with Ascii Animals
 Description: Allows printing of character strings as messages/warnings/etc.
     with ASCII animals, including cats, cows, frogs, chickens, ghosts,
     and more.
-Version: 0.9.0
+Version: 0.9.1.91
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"),
@@ -35,6 +35,7 @@ VignetteBuilder: knitr
 Imports:
     crayon,
     fortunes,
+    rlang,
     rmsfact
 Suggests:
     curl,

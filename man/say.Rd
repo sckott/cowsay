@@ -6,12 +6,14 @@
 \usage{
 say(
   what = "Hello world!",
-  by = "cat",
+  by = "cow",
   type = NULL,
   what_color = NULL,
   by_color = NULL,
   length = 18,
   fortune = NULL,
+  thought_sym = "o",
+  width = 60,
   ...
 )
 }
@@ -28,9 +30,8 @@ duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
 whale, wolf, or rms for Richard Stallman.
 Alternatively, use "random" to have your message spoken by a random
 character.
-We use \code{\link[=match.arg]{match.arg()}} internally, so you can use unique parts of
-words that don't conflict with others, like "g" for "ghost" because there's
-no other animal that starts with "g".}
+We use \code{\link[rlang:arg_match]{rlang::arg_match()}} internally, which does not support partial
+matching, so you'll get an informative error upon a partial match.}
 
 \item{type}{(character) One of message (default), warning, print (default
 in non-interactive mode), or string (returns string). If run in
@@ -56,6 +57,11 @@ to color \code{who}. Use "rainbow" for
 \item{fortune}{An integer specifying the row number of fortunes.data.
 Alternatively which can be a character and grep is used to try to find a
 suitable row.}
+
+\item{thought_sym}{(character) scalar character to use for the
+speech bubble tail (see \url{https://en.wikipedia.org/wiki/Speech_balloon})}
+
+\item{width}{(integer/numeric) width of each line. default: 60}
 
 \item{...}{Further args passed on to \code{\link[fortunes:fortunes]{fortunes::fortune()}}}
 }
@@ -99,7 +105,7 @@ properly in R on Windows.
 \examples{
 say()
 say("what")
-say('time')
+say("time")
 
 say("who you callin chicken", "chicken")
 say("ain't that some shit", "poop")
@@ -116,34 +122,34 @@ say("rms", "rms")
 
 # Vary type of output, default calls message()
 say("hell no!")
-say("hell no!", type="warning")
-say("hell no!", type="string")
+say("hell no!", type = "warning")
+say("hell no!", type = "string")
 
 # Using fortunes
-say(what="fortune")
+say(what = "fortune")
 ## you don't have to pass anything to the `what` parameter if `fortune` is
 ## not null
-say(fortune=10)
-say(fortune=100)
-say(fortune='whatever')
-say(fortune=7)
-say(fortune=45)
+say(fortune = 10)
+say(fortune = 100)
+say(fortune = "whatever")
+say(fortune = 7)
+say(fortune = 45)
 
 # Using catfacts
 # say("catfact", "cat")
 
 # The hypnotoad
-say(by="hypnotoad")
+say(by = "hypnotoad")
 
 # Trilobite
-say(by='trilobite')
+say(by = "trilobite")
 
 # Shark
-say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 
 # Buffalo
-say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 
 # Clippy
-say(fortune=59, by="clippy")
+say(fortune = 59, by = "clippy")
 }

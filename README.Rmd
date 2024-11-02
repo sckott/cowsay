@@ -144,7 +144,7 @@ library(crayon)
 
 
 ```{r eval=FALSE}
-say("boo!", "ghost", 
+say("boo!", "cow", 
     what_color = "cyan", by_color = "saddlebrown")
 ```
 
@@ -155,7 +155,7 @@ say("boo!", "ghost",
 
 
 ```{r eval=FALSE}
-say("I love hooo you are!", "owl", 
+say("I love hooo you are!", "cow", 
     what_color = rgb(0, 1, 1), by_color = "#FF0000")
 ```
 
@@ -185,7 +185,7 @@ This doesn't preclude you from adding extra crayon colors to your `what` string 
 
 ```{r eval=FALSE}
 say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
-    by = "trilobite", 
+    by = "cow", 
     what_color = bgBlue$cyan$italic,
     by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
 ```

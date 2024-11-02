@@ -13,9 +13,8 @@
 #' whale, wolf, or rms for Richard Stallman.
 #' Alternatively, use "random" to have your message spoken by a random
 #' character.
-#' We use [match.arg()] internally, so you can use unique parts of
-#' words that don't conflict with others, like "g" for "ghost" because there's
-#' no other animal that starts with "g".
+#' We use [rlang::arg_match()] internally, which does not support partial
+#' matching, so you'll get an informative error upon a partial match.
 #' @param type (character) One of message (default), warning, print (default
 #' in non-interactive mode), or string (returns string). If run in
 #' non-interactive mode default type is print, so that
@@ -36,6 +35,9 @@
 #' @param fortune An integer specifying the row number of fortunes.data.
 #' Alternatively which can be a character and grep is used to try to find a
 #' suitable row.
+#' @param thought_sym (character) scalar character to use for the
+#' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>)
+#' @param width (integer/numeric) width of each line. default: 60
 #' @param ... Further args passed on to [fortunes::fortune()]
 #'
 #' @section what:
@@ -70,7 +72,7 @@
 #' @examples
 #' say()
 #' say("what")
-#' say('time')
+#' say("time")
 #'
 #' say("who you callin chicken", "chicken")
 #' say("ain't that some shit", "poop")
@@ -87,48 +89,50 @@
 #'
 #' # Vary type of output, default calls message()
 #' say("hell no!")
-#' say("hell no!", type="warning")
-#' say("hell no!", type="string")
+#' say("hell no!", type = "warning")
+#' say("hell no!", type = "string")
 #'
 #' # Using fortunes
-#' say(what="fortune")
+#' say(what = "fortune")
 #' ## you don't have to pass anything to the `what` parameter if `fortune` is
 #' ## not null
-#' say(fortune=10)
-#' say(fortune=100)
-#' say(fortune='whatever')
-#' say(fortune=7)
-#' say(fortune=45)
+#' say(fortune = 10)
+#' say(fortune = 100)
+#' say(fortune = "whatever")
+#' say(fortune = 7)
+#' say(fortune = 45)
 #'
 #' # Using catfacts
 #' # say("catfact", "cat")
 #'
 #' # The hypnotoad
-#' say(by="hypnotoad")
+#' say(by = "hypnotoad")
 #'
 #' # Trilobite
-#' say(by='trilobite')
+#' say(by = "trilobite")
 #'
 #' # Shark
-#' say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+#' say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 #'
 #' # Buffalo
-#' say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+#' say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 #'
 #' # Clippy
-#' say(fortune=59, by="clippy")
+#' say(fortune = 59, by = "clippy")
+say <- function(what = "Hello world!", by = "cow", type = NULL,
+  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, 
+  thought_sym = "o", width = 60, ...) {
 
-say <- function(what="Hello world!", by="cat",
-                type=NULL,
-                what_color=NULL, by_color=NULL,
-                length=18, fortune=NULL, ...) {
+  stopifnot("what must be length 1" = has_length(what, 1))
 
-  if (length(what) > 1) {
-    stop("what has to be of length 1", call. = FALSE)
-  }
-
-  if (crayon::has_color() == FALSE && (!is.null(what_color) || !is.null(by_color))) {
-    message("Colors cannot be applied in this environment :( Try using a terminal or RStudio.")
+  if (
+    crayon::has_color() == FALSE &&
+      (!is_null(what_color) || !is_null(by_color))
+  ) {
+    inform(c(
+      "Colors cannot be applied in this environment :(",
+      "Try using a terminal or RStudio/Positron/etc."
+    ))
     what_color <- NULL
     by_color <- NULL
   } else {
@@ -136,7 +140,7 @@ say <- function(what="Hello world!", by="cat",
     by_color <- check_color(by_color)
   }
 
-  if (is.null(type)) {
+  if (is_null(type)) {
     if (interactive()) {
       type <- "message"
     } else {
@@ -145,24 +149,24 @@ say <- function(what="Hello world!", by="cat",
   }
 
   if (what == "catfact") {
-    check4pkg("jsonlite")
-    what <-
-      jsonlite::fromJSON(
-        'https://catfact.ninja/fact')$fact
-    by <- 'cat'
+    rlang::check_installed("jsonlite")
+    what <- jsonlite::fromJSON(catfact_api)$fact
+    by <- "cat"
   }
 
   who <- get_who(by, length = length)
 
-  if (!is.null(fortune)) what <- "fortune"
+  if (!is_null(fortune)) what <- "fortune"
 
-  if (what == "time")
+  if (what == "time") {
     what <- as.character(Sys.time())
+  }
+
   if (what == "fortune") {
-    if ( is.null(fortune) ) fortune <- sample(1:360, 1)
-    what <- fortune(which = fortune, ...)
-    what <- what[!is.na(what)] # remove missing pieces (e.g. "context")
-    what <- gsub("<x>", "\n", paste(as.character(what), collapse = "\n "))
+    if (is_null(fortune)) fortune <- sample(1:360, 1)
+    what <- as.character(fortune(which = fortune, ...))
+    what <- what[!are_na(what)] # remove missing pieces (e.g. "context")
+    what <- gsub("<x>", "\n", paste(what, collapse = "\n "))
   }
 
   if (by == "hypnotoad" && what == "Hello world!") {
@@ -173,55 +177,31 @@ say <- function(what="Hello world!", by="cat",
     what <- rmsfact::rmsfact()
   }
 
-  if ( what %in% c("arresteddevelopment", "doctorwho", "dexter", "futurama",
-    "holygrail", "simpsons", "starwars", "loremipsum")
-  ) {
-    stop("sorry, fillerama API is gone, sorry", call.=FALSE)
+  if (what %in% fillerama_what) {
+    abort("sorry, fillerama API is gone, sorry :(")
   }
 
-  what_pos_start <-
-    regexpr('%s', who)[1] - 1
-
-  what_pos_end <- what_pos_start + 3
-
-  color_text <- function(txt, c) {
-    if (is.null(c)) {
-      out <- txt
-    } else if (!is.null(c) && inherits(c, "crayon")) {
-      out <- c(txt)
-    } else if (!is.null(c) && is.character(c)) {
-      if (length(c) <= 1) {
-        c <- crayon::make_style(c)
-        out <- c(txt)
-      } else if (length(c) >= 1) {
-        stop("this functionality requires multicolor, which is temporarily not on CRAN")
-      }
-    }
-    return(out)
-  }
-
-  out <- paste0(color_text(substr(who, 1, what_pos_start),
-                           by_color),
-                color_text(what,
-                           what_color),
-                color_text(substr(who, what_pos_end, nchar(who)),
-                           by_color))
+  what_bubbled <- bubble(x = what, width = width, thought_sym = thought_sym)
+  what_styled <- color_text(what_bubbled, what_color)
+  who_styled <- color_text(who, by_color)
+  what_who <- paste(c(what_styled, who_styled), collapse = "\n")
 
   if (type == "warning") {
-    if (nchar(out) < 100) {
+    if (nchar(what_who) < 100) {
       wl <- 100
-    } else if (nchar(out) > 8170) {
+    } else if (nchar(what_who) > 8170) {
       wl <- 8170
     } else {
-      wl <- nchar(out) + 1
+      wl <- nchar(what_who) + 1
     }
     warn_op <- options(warning.length = wl)
     on.exit(options(warn_op))
   }
 
   switch(type,
-         message = message(out),
-         warning = warning(out),
-         print = cat(out),
-         string = out)
+    message = message(what_who),
+    warning = warning(what_who),
+    print = cat(what_who),
+    string = what_who
+  )
 }
