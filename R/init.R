@@ -1,3 +1,3 @@
 .onAttach <- function(libname, pkgname) {
-	options(error = rlang::entrace)
+  options(error = rlang::entrace)
 }

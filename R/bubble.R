@@ -1,5 +1,5 @@
 #' Speech bubble
-#' 
+#'
 #' @export
 #' @param x (character) a character vector
 #' @param width (integer/numeric) width of each line. default: 60
@@ -12,11 +12,11 @@
 #' library(fortunes)
 #' quote <- as.character(fortune())
 #' bubble(x = quote)
-#' 
+#'
 #' text_color <- sample(grDevices::colors(), 1)
 #' text_style <- crayon::make_style(text_color)
 #' text_style(bubble(quote))
-#' 
+#'
 #' cat(bubble(paste(quote, collapse = " ")), sep = "\n")
 bubble <- function(x, width = 60, thought_sym = "o") {
   empty_to_avoid_rlang_header <- ""

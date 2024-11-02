@@ -9,4 +9,4 @@ fillerama_what <- c(
   "loremipsum"
 )
 
-catfact_api <- 'https://catfact.ninja/fact'
+catfact_api <- "https://catfact.ninja/fact"

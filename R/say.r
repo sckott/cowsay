@@ -119,10 +119,10 @@
 #'
 #' # Clippy
 #' say(fortune = 59, by = "clippy")
-say <- function(what = "Hello world!", by = "cow", type = NULL,
-  what_color = NULL, by_color = NULL, length = 18, fortune = NULL, 
-  thought_sym = "o", width = 60, ...) {
-
+say <- function(
+    what = "Hello world!", by = "cow", type = NULL,
+    what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
+    thought_sym = "o", width = 60, ...) {
   stopifnot("what must be length 1" = has_length(what, 1))
 
   if (

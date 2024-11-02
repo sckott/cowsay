@@ -129,7 +129,7 @@ sort(names(animals))
 ### Say Something
 
 ```{r}
-say('time')
+say("time")
 ```
 
 ```{r}
@@ -144,8 +144,9 @@ library(crayon)
 
 
 ```{r eval=FALSE}
-say("boo!", "cow", 
-    what_color = "cyan", by_color = "saddlebrown")
+say("boo!", "cow",
+  what_color = "cyan", by_color = "saddlebrown"
+)
 ```
 
 
@@ -155,8 +156,9 @@ say("boo!", "cow",
 
 
 ```{r eval=FALSE}
-say("I love hooo you are!", "cow", 
-    what_color = rgb(0, 1, 1), by_color = "#FF0000")
+say("I love hooo you are!", "cow",
+  what_color = rgb(0, 1, 1), by_color = "#FF0000"
+)
 ```
 
 
@@ -169,9 +171,11 @@ String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
 
 
 ```{r eval=FALSE}
-say(what = "rms", by = "rms", 
-        what_color = yellow$bgMagenta$bold,
-        by_color = cyan$italic)
+say(
+  what = "rms", by = "rms",
+  what_color = yellow$bgMagenta$bold,
+  by_color = cyan$italic
+)
 ```
 
 
@@ -184,10 +188,12 @@ This doesn't preclude you from adding extra crayon colors to your `what` string 
 
 
 ```{r eval=FALSE}
-say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
-    by = "cow", 
-    what_color = bgBlue$cyan$italic,
-    by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+say(
+  what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")),
+  by = "cow",
+  what_color = bgBlue$cyan$italic,
+  by_color = "thistle"
+) # Don't ask me why "thistle" is pink/purple
 ```
 
 
@@ -200,10 +206,12 @@ say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")
 
 
 ```{r eval=FALSE}
-say(what = "I'm a rare Irish buffalo",
-    by = "buffalo", 
-    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
-    by_color = c("green", "white", "orange"))
+say(
+  what = "I'm a rare Irish buffalo",
+  by = "buffalo",
+  what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+  by_color = c("green", "white", "orange")
+)
 ```
 
 
@@ -220,12 +228,12 @@ say("hell no!")
 
 
 ```{r}
-say("hell no!", type="warning")
+say("hell no!", type = "warning")
 ```
 
 
 ```{r}
-say("hell no!", type="string")
+say("hell no!", type = "string")
 ```
 
 
@@ -264,67 +272,67 @@ say("it's caturday", "longcat")
 ### Grumpy cat
 
 ```{r}
-say('NO!', by='grumpycat')
+say("NO!", by = "grumpycat")
 ```
 
 ```{r}
-say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
 ```
 
 ```{r}
-say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
+say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
 ```
 
 ### Bunny Holding a sign
 
 ```{r}
-say(by='signbunny')
+say(by = "signbunny")
 ```
 
 ### Fish
 
 ```{r}
-say(by='fish')
+say(by = "fish")
 ```
 
 ### R fortunes
 
 ```{r}
-say('fortune','cat')
+say("fortune", "cat")
 ```
 
 You can also pick a particular fortune by number or regex search - if the `fortune` parameter is not `NULL` you don't have pass anything to the `what` parameter (the 1st parameter)
 
 ```{r}
-say(fortune=100)
+say(fortune = 100)
 ```
 
 ```{r}
-say(fortune='whatever')
+say(fortune = "whatever")
 ```
 
 ### Trilobite
 
 ```{r}
-say("Hi there :)", by='trilobite')
+say("Hi there :)", by = "trilobite")
 ```
 
 ### Shark
 
 ```{r}
-say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 ```
 
 ### Buffalo
 
 ```{r}
-say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 ```
 
 ### Clippy
 
 ```{r}
-say(fortune=59, by="clippy")
+say(fortune = 59, by = "clippy")
 ```
 
 ### Yoda
@@ -336,7 +344,7 @@ say("fortune", by = "yoda")
 ### Bats!
 
 ```{r}
-say("hi, i'm a bat", by="bat")
+say("hi, i'm a bat", by = "bat")
 ```
 
 See also `bat2`
@@ -406,7 +414,7 @@ endless_horse()
 
 ```{r}
 library("magrittr")
-"I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+"I HAD FUN ONCE, IT WAS AWFUL" %>% say("grumpycat")
 ```
 
 ### I just want the animals!
@@ -414,7 +422,7 @@ library("magrittr")
 Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
 
 ```{r}
-animals['clippy']
+animals["clippy"]
 ```
 
 ## Meta

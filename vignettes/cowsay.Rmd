@@ -55,7 +55,7 @@ sort(names(animals))
 For example, access the cow
 
 ```{r}
-cow <- animals[['cow']]
+cow <- animals[["cow"]]
 cat(cow)
 ```
 
@@ -78,7 +78,7 @@ say("nope, don't do that", type = "warning")
 There's the special `time`, that will print out the time
 
 ```{r}
-say('time')
+say("time")
 ```
 
 ## It's how you say it

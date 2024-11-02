@@ -23,9 +23,11 @@ test_that("say works with colors", {
   )
 
   expect_equal(
-    say(what = "rms", by = "rms",
-        what_color = yellow$bgMagenta$bold,
-        by_color = cyan$italic),
+    say(
+      what = "rms", by = "rms",
+      what_color = yellow$bgMagenta$bold,
+      by_color = cyan$italic
+    ),
     say(what = "rms", by = "rms", type = "print")
   )
 
@@ -57,4 +59,3 @@ test_that("say fails with certain characters on windows", {
   skip_on_os(c("mac", "linux", "solaris"))
   expect_error(say("Hi", by = "longcat"), "If you're on Windows, you can't use")
 })
-
