@@ -27,15 +27,11 @@
 endless_horse <- function(what = "Hello world!", endless = TRUE, wait = 0.5,
                           what_color = NULL, horse_color = NULL) {
   if (!is_null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
-    stop("what_color must be of class character or crayon",
-      call. = FALSE
-    )
+    abort("what_color must be of class character or crayon")
   }
 
   if (!is_null(horse_color) & !(inherits(horse_color, c("crayon", "character")))) {
-    stop("by_color must be of class character or crayon",
-      call. = FALSE
-    )
+    abort("by_color must be of class character or crayon")
   }
 
   if (!is_null(what_color) & is_character(what_color)) {
