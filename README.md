@@ -115,33 +115,28 @@ Dev version
 
 ### Say Something
 
-    say('time')
+    say("time")
     #> 
-    #>  -------------- 
-    #> 2024-10-11 09:45:13.793342 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
-    #>             |\___/|
-    #>           ==) ^Y^ (==
-    #>             \  ^  /
-    #>              )=*=(
-    #>             /     \
-    #>             |     |
-    #>            /| | | |\
-    #>            \| | |_|/\
-    #>       jgs  //_// ___/
-    #>                \_)
+    #> +------------------------------+
+    #> |2024-11-03 06:52:19.666524    |
+    #> +------------------------------+
+    #>          o
+    #>            o
     #> 
+    #>         ^__^ 
+    #>         (oo)\ ________ 
+    #>         (__)\         )\ /\ 
+    #>              ||------w|
+    #>              ||      ||
 
     say("ain't that some shit", "chicken")
     #> 
-    #>  ----- 
-    #> ain't that some shit 
-    #>  ------ 
-    #>     \   
-    #>      \
+    #> +------------------------+
+    #> |ain't that some shit    |
+    #> +------------------------+
+    #>        o
+    #>          o
+    #> 
     #>          _
     #>        _/ }
     #>       `>' \
@@ -159,56 +154,62 @@ Add some color:
 
     library(crayon)
 
-    say("boo!", "ghost", 
-        what_color = "cyan", by_color = "saddlebrown")
+    say("boo!", "ghost",
+      what_color = "cyan", by_color = "saddlebrown"
+    )
 
 <p align="left">
-<img src="./man/img/ghost.jpg" alt="ghost" height="200px">
+<img src="./man/figures/ghost.png" alt="ghost" height="200px">
 </p>
 
-    say("I love hooo you are!", "owl", 
-        what_color = rgb(0, 1, 1), by_color = "#FF0000")
+    say("I love hooo you are!", "owl",
+      what_color = rgb(0, 1, 1), by_color = "#FF0000"
+    )
 
 <p align="left">
-<img src="./man/img/owl.jpg" alt="owl" height="200px">
+<img src="./man/figures/owl.png" alt="owl" height="200px">
 </p>
 
 String styles together
 [crayon-style](https://github.com/r-lib/crayon#styles):
 
-    say(what = "rms", by = "rms", 
-            what_color = yellow$bgMagenta$bold,
-            by_color = cyan$italic)
+    say(
+      what = "rms", by = "rms",
+      what_color = yellow$bgMagenta$bold,
+      by_color = cyan$italic
+    )
 
 <p align="left">
-<img src="./man/img/rms.jpg" alt="rms" height="350px">
+<img src="./man/figures/rms.png" alt="rms" height="350px">
 </p>
 
 This doesn’t preclude you from adding extra crayon colors to your `what`
 string directly.
 
-    say(what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")), 
-        by = "trilobite", 
-        what_color = bgBlue$cyan$italic,
-        by_color = "thistle")  # Don't ask me why "thistle" is pink/purple
+    say(
+      what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")),
+      by = "trilobite"
+    )
 
 <p align="left">
-<img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
+<img src="./man/figures/trilobite.png" alt="trilobite" height="250px">
 </p>
 <!-- Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
 
 
 
 ``` r
-say(what = "I'm a rare Irish buffalo",
-    by = "buffalo", 
-    what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
-    by_color = c("green", "white", "orange"))
+say(
+  what = "I'm a rare Irish buffalo",
+  by = "buffalo",
+  what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
+  by_color = c("green", "white", "orange")
+)
 ```
 
 
 <p align="left">
-  <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
+  <img src="./man/figures/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
  -->
 
@@ -216,46 +217,34 @@ say(what = "I'm a rare Irish buffalo",
 
     say("hell no!")
     #> 
-    #>  -------------- 
-    #> hell no! 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
-    #>             |\___/|
-    #>           ==) ^Y^ (==
-    #>             \  ^  /
-    #>              )=*=(
-    #>             /     \
-    #>             |     |
-    #>            /| | | |\
-    #>            \| | |_|/\
-    #>       jgs  //_// ___/
-    #>                \_)
+    #> +------------+
+    #> |hell no!    |
+    #> +------------+
+    #>    o
+    #>      o
     #> 
+    #>         ^__^ 
+    #>         (oo)\ ________ 
+    #>         (__)\         )\ /\ 
+    #>              ||------w|
+    #>              ||      ||
 
-    say("hell no!", type="warning")
+    say("hell no!", type = "warning")
     #> Warning in say("hell no!", type = "warning"): 
-    #>  -------------- 
-    #> hell no! 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
-    #>             |\___/|
-    #>           ==) ^Y^ (==
-    #>             \  ^  /
-    #>              )=*=(
-    #>             /     \
-    #>             |     |
-    #>            /| | | |\
-    #>            \| | |_|/\
-    #>       jgs  //_// ___/
-    #>                \_)
+    #> +------------+
+    #> |hell no!    |
+    #> +------------+
+    #>    o
+    #>      o
     #> 
+    #>         ^__^ 
+    #>         (oo)\ ________ 
+    #>         (__)\         )\ /\ 
+    #>              ||------w|
+    #>              ||      ||
 
-    say("hell no!", type="string")
-    #> [1] "\n -------------- \nhell no! \n --------------\n    \\\n      \\\n        \\\n            |\\___/|\n          ==) ^Y^ (==\n            \\  ^  /\n             )=*=(\n            /     \\\n            |     |\n           /| | | |\\\n           \\| | |_|/\\\n      jgs  //_// ___/\n               \\_)\n  "
+    say("hell no!", type = "string")
+    #> [1] "\n+------------+\n|hell no!    |\n+------------+\n   o\n     o\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
 
 ### Catfacts!!!!
 
@@ -285,82 +274,77 @@ From the a Boing Boing tweet on 2014-05-10
 “twitter.com/BoingBoing/status/465170473194512384” (post may be gone)
 
     say("it's caturday", "longcat")
-    #> 
-    #>  ----- 
-    #> it's caturday 
-    #>  ------ 
-    #>     \   
-    #>      \
+    #> Warning in sprintf(animals["longcat"], "%s", body): one argument not used by format '
     #>     .ﾊ,,ﾊ
     #>     ( ﾟωﾟ)
     #>     |つ  つ
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
-    #>     |    |
+    #> %s
+    #>     U "  U
+    #>         [BoingBoing]
+    #>     '
+    #> 
+    #> +-----------------+
+    #> |it's caturday    |
+    #> +-----------------+
+    #>     o
+    #>       o
+    #> 
+    #>     .ﾊ,,ﾊ
+    #>     ( ﾟωﾟ)
+    #>     |つ  つ
+    #> %s
     #>     U "  U
     #>         [BoingBoing]
     #> 
 
 ### Grumpy cat
 
-    say('NO!', by='grumpycat')
+    say("NO!", by = "grumpycat")
     #> 
-    #>  -------------- 
-    #> NO! 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +-------+
+    #> |NO!    |
+    #> +-------+
+    #>  o
+    #>    o
+    #> 
     #>       ﾊ _ ﾊ
     #>       ಠ X ಠ
     #> 
 
-    say('WOKE UP TODAY, IT WAS TERRIBLE', by='grumpycat')
+    say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
     #> 
-    #>  -------------- 
-    #> WOKE UP TODAY, IT WAS TERRIBLE 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +----------------------------------+
+    #> |WOKE UP TODAY, IT WAS TERRIBLE    |
+    #> +----------------------------------+
+    #>           o
+    #>             o
+    #> 
     #>       ﾊ _ ﾊ
     #>       ಠ X ಠ
     #> 
 
-    say('I HAD FUN ONCE, IT WAS AWFUL', by='grumpycat')
+    say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
     #> 
-    #>  -------------- 
-    #> I HAD FUN ONCE, IT WAS AWFUL 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +--------------------------------+
+    #> |I HAD FUN ONCE, IT WAS AWFUL    |
+    #> +--------------------------------+
+    #>          o
+    #>            o
+    #> 
     #>       ﾊ _ ﾊ
     #>       ಠ X ಠ
     #> 
 
 ### Bunny Holding a sign
 
-    say(by='signbunny')
+    say(by = "signbunny")
     #> 
-    #>  -------------- 
-    #> Hello world! 
-    #>  --------------
+    #> +----------------+
+    #> |Hello world!    |
+    #> +----------------+
+    #>     o
+    #>       o
+    #> 
     #> (\__/) ||
     #> (•ㅅ•) ||
     #> /   づ
@@ -369,30 +353,31 @@ From the a Boing Boing tweet on 2014-05-10
 
 ### Fish
 
-    say(by='fish')
+    say(by = "fish")
     #> 
-    #>  ----- 
-    #> Hello world! 
-    #>  ------ 
-    #>     \   
-    #>      \
+    #> +----------------+
+    #> |Hello world!    |
+    #> +----------------+
+    #>     o
+    #>       o
+    #> 
     #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
     #>       Kiyoko Gotanda
     #> 
 
 ### R fortunes
 
-    say('fortune','cat')
+    say("fortune", "cat")
     #> 
-    #>  -------------- 
-    #> If the answer is parse() you should usually rethink the question.
-    #>  Thomas Lumley
-    #>  R-help
-    #>  February 2005 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +--------------------------------------------------------------+
+    #> |Any doubts about R's big-league status should be put to       |
+    #> |rest, now that we have a Sudoku Puzzle Solver. Take that,     |
+    #> |SAS!  David Brahm announcing the sudoku package R-packages    |
+    #> |January 2006                                                  |
+    #> +--------------------------------------------------------------+
+    #>                    o
+    #>                      o
+    #> 
     #>             |\___/|
     #>           ==) ^Y^ (==
     #>             \  ^  /
@@ -409,65 +394,57 @@ You can also pick a particular fortune by number or regex search - if
 the `fortune` parameter is not `NULL` you don’t have pass anything to
 the `what` parameter (the 1st parameter)
 
-    say(fortune=100)
+    say(fortune = 100)
     #> 
-    #>  -------------- 
-    #> I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.
-    #>  Peter Dalgaard
-    #>  after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'
-    #>  R-help
-    #>  January 2005 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
-    #>             |\___/|
-    #>           ==) ^Y^ (==
-    #>             \  ^  /
-    #>              )=*=(
-    #>             /     \
-    #>             |     |
-    #>            /| | | |\
-    #>            \| | |_|/\
-    #>       jgs  //_// ___/
-    #>                \_)
+    #> +---------------------------------------------------------------+
+    #> |I'm not sure I'd trust any computer recommendation from        |
+    #> |1976, no matter how famous the authors are.  Peter Dalgaard    |
+    #> |after Samuel Edward Kemp cited a recommendation about          |
+    #> |nonlinear least squares computer programs from                 |
+    #> |'Box-Jenkins, 1976' R-help January 2005                        |
+    #> +---------------------------------------------------------------+
+    #>                     o
+    #>                       o
     #> 
+    #>         ^__^ 
+    #>         (oo)\ ________ 
+    #>         (__)\         )\ /\ 
+    #>              ||------w|
+    #>              ||      ||
 
-    say(fortune='whatever')
+    say(fortune = "whatever")
     #> 
-    #>  -------------- 
-    #> Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.
-    #> Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.
-    #>  Tom Backer Johnsen and Barry Rowlingson
-    #>  R-help
-    #>  February 2006 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
-    #>             |\___/|
-    #>           ==) ^Y^ (==
-    #>             \  ^  /
-    #>              )=*=(
-    #>             /     \
-    #>             |     |
-    #>            /| | | |\
-    #>            \| | |_|/\
-    #>       jgs  //_// ___/
-    #>                \_)
+    #> +---------------------------------------------------------------+
+    #> |Tom Backer Johnsen: I have just started looking at R, and      |
+    #> |are getting more and more irritated at myself for not          |
+    #> |having done that before. However, one of the things I have     |
+    #> |not found in the documentation is some way of preparing        |
+    #> |output from R for convenient formatting into something like    |
+    #> |MS Word. Barry Rowlingson: Well whatever you do, don't         |
+    #> |start looking at LaTeX, because that will get you even more    |
+    #> |irritated at yourself for not having done it before.  Tom      |
+    #> |Backer Johnsen and Barry Rowlingson R-help February 2006       |
+    #> +---------------------------------------------------------------+
+    #>                     o
+    #>                       o
     #> 
+    #>         ^__^ 
+    #>         (oo)\ ________ 
+    #>         (__)\         )\ /\ 
+    #>              ||------w|
+    #>              ||      ||
 
 ### Trilobite
 
-    say("Hi there :)", by='trilobite')
+    say("Hi there :)", by = "trilobite")
 
     #> 
-    #>  -------------- 
-    #> Hi there :) 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +---------------+
+    #> |Hi there :)    |
+    #> +---------------+
+    #>     o
+    #>       o
+    #> 
     #>           _____
     #>        .'` ,-. `'.
     #>       /   ([ ])   \
@@ -481,15 +458,14 @@ the `what` parameter (the 1st parameter)
 
 ### Shark
 
-    say('Q: What do you call a solitary shark\nA: A lone shark', by='shark')
+    say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
     #> 
-    #>  -------------- 
-    #> Q: What do you call a solitary shark
-    #> A: A lone shark 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +--------------------------------------------------------+
+    #> |Q: What do you call a solitary shark A: A lone shark    |
+    #> +--------------------------------------------------------+
+    #>                  o
+    #>                    o
+    #> 
     #>               /""-._
     #>               .       '-,
     #>                :          '',
@@ -518,16 +494,15 @@ the `what` parameter (the 1st parameter)
 
 ### Buffalo
 
-    say('Q: What do you call a single buffalo?\nA: A buffalonely', by='buffalo')
+    say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 
     #> 
-    #>  -------------- 
-    #> Q: What do you call a single buffalo?
-    #> A: A buffalonely 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +----------------------------------------------------------+
+    #> |Q: What do you call a single buffalo? A: A buffalonely    |
+    #> +----------------------------------------------------------+
+    #>                   o
+    #>                     o
+    #> 
     #>                    _.-````'-,_
     #>          _,.,_ ,-'`           `'-.,_
     #>        /)     (                   '``-.
@@ -544,18 +519,19 @@ the `what` parameter (the 1st parameter)
 
 ### Clippy
 
-    say(fortune=59, by="clippy")
+    say(fortune = 59, by = "clippy")
     #> 
+    #> +-------------------------------------------------------------+
+    #> |Let's not kid ourselves: the most widely used piece of       |
+    #> |software for statistics is Excel.  Brian D. Ripley           |
+    #> |'Statistical Methods Need Software: A View of Statistical    |
+    #> |Computing' Opening lecture RSS 2002, Plymouth September      |
+    #> |2002                                                         |
+    #> +-------------------------------------------------------------+
+    #>                    o
+    #>                      o
     #> 
-    #>  ----- 
-    #> Let's not kid ourselves: the most widely used piece of software for statistics is Excel.
-    #>  Brian D. Ripley
-    #>  'Statistical Methods Need Software: A View of Statistical Computing'
-    #>  Opening lecture RSS 2002, Plymouth
-    #>  September 2002 
-    #>  ------ 
-    #>     \   
-    #>      \   __
+    #> __
     #>    / \
     #>    | |
     #>    @ @
@@ -570,14 +546,14 @@ the `what` parameter (the 1st parameter)
 
 ### Bats!
 
-    say("hi, i'm a bat", by="bat")
+    say("hi, i'm a bat", by = "bat")
     #> 
-    #>  ------------- 
-    #> hi, i'm a bat 
-    #>  -------------- 
-    #>               \   
-    #>                \  
-    #>                 \
+    #> +-----------------+
+    #> |hi, i'm a bat    |
+    #> +-----------------+
+    #>     o
+    #>       o
+    #> 
     #>         __.--'\     \.__./     /'--.__
     #>     _.-'       '.__.'    '.__.'       '-._
     #>   .'                                      '.
@@ -595,16 +571,16 @@ See also `bat2`
 
     say("fortune", by = "monkey")
     #> 
-    #>  ------------- 
-    #> When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.
-    #>  Rolf Turner
-    #>  in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed
-    #>  R-help
-    #>  December 2003 
-    #>  -------------- 
-    #>               \   
-    #>                \  
-    #>                 \
+    #> +---------------------------------------------------------------+
+    #> |Zhu Wang: I am trying to create a library which uses some      |
+    #> |Fortran source files [...] Douglas Bates: Someone named        |
+    #> |Martin Maechler will shortly be sending you email regarding    |
+    #> |the distinction between 'library' and 'package' :-) Zhu        |
+    #> |Wang and Douglas Bates R-help May 2004                         |
+    #> +---------------------------------------------------------------+
+    #>                     o
+    #>                       o
+    #> 
     #> 
     #>                   .="=.
     #>                 _/.-.-.\_     _
@@ -623,16 +599,28 @@ See also `bat2`
 
     say("fortune", by = "daemon")
     #> 
-    #>  ----- 
-    #> You might also consider a more informative subject line. "Help needed" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?
-    #>  Peter Ehlers
-    #>  after answering a help request
-    #>  R-help
-    #>  April 2011 
-    #>  ------ 
-    #>     \   
-    #>      \  
-    #>       \
+    #> +---------------------------------------------------------------+
+    #> |I'm really curious to know why the "two types" of sum of       |
+    #> |squares are called "Type I" and "Type III"! This is a very     |
+    #> |common misconception, particularly among SAS users who have    |
+    #> |been fed this nonsense quite often for all their               |
+    #> |professional lives. Fortunately the reality is much            |
+    #> |simpler. There is, by any sensible reckoning, only ONE type    |
+    #> |of sum of squares, and it always represents an improvement     |
+    #> |sum of squares of the outer (or alternative) model over the    |
+    #> |inner (or null hypothesis) model. What the SAS highly          |
+    #> |dubious classification of sums of squares does is to           |
+    #> |encourage users to concentrate on the null hypothesis model    |
+    #> |and to forget about the alternative. This is always a very     |
+    #> |bad idea and not surprisingly it can lead to nonsensical       |
+    #> |tests, as in the test it provides for main effects "even in    |
+    #> |the presence of interactions", something which beggars         |
+    #> |definition, let alone belief.  Bill Venables R-help            |
+    #> |November 2000                                                  |
+    #> +---------------------------------------------------------------+
+    #>                     o
+    #>                       o
+    #> 
     #>             ,        ,
     #>            /(        )`
     #>            \ \___   / |
@@ -657,12 +645,12 @@ See also `bat2`
 
     say("je ne regrette rien", by = "egret")
     #> 
-    #>  ----- 
-    #> je ne regrette rien 
-    #>  ------ 
-    #>     \   
-    #>      \  
-    #>       \
+    #> +-----------------------+
+    #> |je ne regrette rien    |
+    #> +-----------------------+
+    #>       o
+    #>         o
+    #> 
     #>        \   _,
     #>       -==<' `
     #>           ) /
@@ -717,14 +705,14 @@ See also `bat2`
 ### Using pipes
 
     library("magrittr")
-    "I HAD FUN ONCE, IT WAS AWFUL" %>% say('grumpycat')
+    "I HAD FUN ONCE, IT WAS AWFUL" %>% say("grumpycat")
     #> 
-    #>  -------------- 
-    #> I HAD FUN ONCE, IT WAS AWFUL 
-    #>  --------------
-    #>     \
-    #>       \
-    #>         \
+    #> +--------------------------------+
+    #> |I HAD FUN ONCE, IT WAS AWFUL    |
+    #> +--------------------------------+
+    #>          o
+    #>            o
+    #> 
     #>       ﾊ _ ﾊ
     #>       ಠ X ಠ
     #> 
@@ -734,9 +722,9 @@ See also `bat2`
 Okay, hold your endless horses. Just use the exported vector `animals`,
 and you can select the animal you want by name.
 
-    animals['clippy']
-    #>                                                                                                                    clippy 
-    #> "\n\n ----- \n%s \n ------ \n    \\   \n     \\   __\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
+    animals["clippy"]
+    #>                                                                     clippy 
+    #> "\n__\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
 
 ## Meta
 

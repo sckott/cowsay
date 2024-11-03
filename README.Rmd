@@ -144,26 +144,26 @@ library(crayon)
 
 
 ```{r eval=FALSE}
-say("boo!", "cow",
+say("boo!", "ghost",
   what_color = "cyan", by_color = "saddlebrown"
 )
 ```
 
 
 <p align="left">
-  <img src="./man/img/ghost.jpg" alt="ghost" height="200px">
+  <img src="./man/figures/ghost.png" alt="ghost" height="200px">
 </p>
 
 
 ```{r eval=FALSE}
-say("I love hooo you are!", "cow",
+say("I love hooo you are!", "owl",
   what_color = rgb(0, 1, 1), by_color = "#FF0000"
 )
 ```
 
 
 <p align="left">
-  <img src="./man/img/owl.jpg" alt="owl" height="200px">
+  <img src="./man/figures/owl.png" alt="owl" height="200px">
 </p>
 
 
@@ -180,7 +180,7 @@ say(
 
 
 <p align="left">
-  <img src="./man/img/rms.jpg" alt="rms" height="350px">
+  <img src="./man/figures/rms.png" alt="rms" height="350px">
 </p>
 
 
@@ -190,15 +190,13 @@ This doesn't preclude you from adding extra crayon colors to your `what` string 
 ```{r eval=FALSE}
 say(
   what = paste0("hello ", crayon::yellow("there "), crayon::underline("world")),
-  by = "cow",
-  what_color = bgBlue$cyan$italic,
-  by_color = "thistle"
-) # Don't ask me why "thistle" is pink/purple
+  by = "trilobite"
+)
 ```
 
 
 <p align="left">
-  <img src="./man/img/trilobite.jpg" alt="trilobite" height="250px">
+  <img src="./man/figures/trilobite.png" alt="trilobite" height="250px">
 </p>
 
 
@@ -216,7 +214,7 @@ say(
 
 
 <p align="left">
-  <img src="./man/img/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
+  <img src="./man/figures/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
 </p>
  -->
 
