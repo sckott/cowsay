@@ -1,8 +1,3 @@
----
-output:
-  md_document
----
-
 cowsay
 ======
 
@@ -199,25 +194,6 @@ say(
   <img src="./man/figures/trilobite.png" alt="trilobite" height="250px">
 </p>
 
-
-<!-- Multiple colors are also possible (uses the [`multicolor`](https://github.com/aedobbyn/multicolor) package):
-
-
-```{r eval=FALSE}
-say(
-  what = "I'm a rare Irish buffalo",
-  by = "buffalo",
-  what_color = c("salmon2", "darkcyan", "salmon2", "darkcyan"),
-  by_color = c("green", "white", "orange")
-)
-```
-
-
-<p align="left">
-  <img src="./man/figures/irish_buffalo.jpg" alt="irish_buffalo" height="350px">
-</p>
- -->
-
 ### Vary type of output, default calls message()
 
 ```{r}
@@ -239,24 +215,8 @@ say("hell no!", type = "string")
 
 From the catfacts API  at <https://catfact.ninja>
 
-```{r eval=FALSE}
+```{r}
 say("catfact", "cat")
-#> --------------
-#> When a domestic cat goes after mice, about 1 pounce in 3 results in a catch.
-#> --------------
-#>    \
-#>      \
-#>        \
-#>            |\___/|
-#>          ==) ^Y^ (==
-#>            \  ^  /
-#>             )=*=(
-#>            /     \
-#>            |     |
-#>           /| | | |\
-#>           \| | |_|/\
-#>      jgs  //_// ___/
-#>               \_)
 ```
 
 ### Long cat
