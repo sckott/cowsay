@@ -174,6 +174,7 @@ say <- function(
   }
 
   if (what == "rms") {
+    rlang::check_installed("rmsfact")
     what <- rmsfact::rmsfact()
   }
 

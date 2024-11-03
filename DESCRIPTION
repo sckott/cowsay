@@ -35,12 +35,12 @@ VignetteBuilder: knitr
 Imports:
     crayon,
     fortunes,
-    rlang,
-    rmsfact
+    rlang
 Suggests:
     curl,
     jsonlite,
     knitr,
     rmarkdown,
+    rmsfact,
     testthat
 RoxygenNote: 7.3.2
