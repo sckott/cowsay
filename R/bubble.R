@@ -8,7 +8,7 @@
 #' default: "o"
 #' @return character vector of length greater than the input `x`
 #' @note modified from <https://github.com/schochastics/startifyR>
-#' @examples
+#' @examplesIf rlang::is_installed("fortunes")
 #' library(fortunes)
 #' quote <- as.character(fortune())
 #' bubble(x = quote)

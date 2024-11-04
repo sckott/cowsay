@@ -32,13 +32,15 @@
 #' to color `who`. Use "rainbow" for
 #' `c("red", "orange", "yellow", "green", "blue", "purple")`
 #' @param length (integer) Length of longcat. Ignored if other animals used.
-#' @param fortune An integer specifying the row number of fortunes.data.
-#' Alternatively which can be a character and grep is used to try to find a
-#' suitable row.
+#' @param fortune An integer (or number that can be coerced
+#' to integer) specifying a fortune from the `fortunes` package - OR a 
+#' string which is used as a pattern passed to [grep()] (and a random one is
+#' selected upton multiple matches). Passed on to the `which` parameter of
+#' `fortunes::fortune`
 #' @param thought_sym (character) scalar character to use for the
 #' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>)
 #' @param width (integer/numeric) width of each line. default: 60
-#' @param ... Further args passed on to [fortunes::fortune()]
+#' @param ... Further args passed on to `fortunes::fortune()`
 #'
 #' @section what:
 #' You can put in any phrase you like to the `what` parameter, OR you
@@ -79,32 +81,12 @@
 #' say("icanhazpdf?", "cat")
 #' say("boo!", "pumpkin")
 #' say("hot diggity", "frog")
-#' say("fortune", "spider")
-#' say("fortune", "facecat")
-#' say("fortune", "behindcat")
-#' say("fortune", "smallcat")
-#' say("fortune", "monkey")
-#' say("fortune", "egret")
-#' say("rms", "rms")
 #'
 #' # Vary type of output, default calls message()
 #' say("hell no!")
 #' say("hell no!", type = "warning")
 #' say("hell no!", type = "string")
-#'
-#' # Using fortunes
-#' say(what = "fortune")
-#' ## you don't have to pass anything to the `what` parameter if `fortune` is
-#' ## not null
-#' say(fortune = 10)
-#' say(fortune = 100)
-#' say(fortune = "whatever")
-#' say(fortune = 7)
-#' say(fortune = 45)
-#'
-#' # Using catfacts
-#' # say("catfact", "cat")
-#'
+#' 
 #' # The hypnotoad
 #' say(by = "hypnotoad")
 #'
@@ -117,8 +99,34 @@
 #' # Buffalo
 #' say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 #'
+#' @examplesIf rlang::is_installed("fortunes")
+#' # Using fortunes
+#' library(fortunes)
+#' say(what = "fortune")
+#' ## you don't have to pass anything to the `what` parameter if `fortune` is
+#' ## not null
+#' say("fortune", "spider")
+#' say("fortune", "facecat")
+#' say("fortune", "behindcat")
+#' say("fortune", "smallcat")
+#' say("fortune", "monkey")
+#' say("fortune", "egret")
+#' say(fortune = 10)
+#' say(fortune = 100)
+#' say(fortune = "whatever")
+#' say(fortune = 7)
+#' say(fortune = 45)
 #' # Clippy
 #' say(fortune = 59, by = "clippy")
+#' 
+#' @examplesIf rlang::is_installed("rmsfact")
+#' library(rmsfact)
+#' say("rms", "rms")
+#' 
+#' @examplesIf rlang::is_installed("jsonlite")
+#' # Using the catfacts API
+#' library(jsonlite)
+#' say("catfact", "cat")
 say <- function(
     what = "Hello world!", by = "cow", type = NULL,
     what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
@@ -156,14 +164,20 @@ say <- function(
 
   who <- get_who(by, length = length)
 
-  if (!is_null(fortune)) what <- "fortune"
+  if (!is_null(fortune)) {
+    rlang::check_installed("fortunes")
+    what <- "fortune"
+  }
 
   if (what == "time") {
     what <- as.character(Sys.time())
   }
 
   if (what == "fortune") {
-    if (is_null(fortune)) fortune <- sample(1:360, 1)
+    rlang::check_installed("fortunes")
+    if (is_null(fortune)) {
+      fortune <- sample(1:360, 1)
+    }
     what <- as.character(fortune(which = fortune, ...))
     what <- what[!are_na(what)] # remove missing pieces (e.g. "context")
     what <- gsub("<x>", "\n", paste(what, collapse = "\n "))

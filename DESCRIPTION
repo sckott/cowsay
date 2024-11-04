@@ -34,13 +34,12 @@ Language: en-US
 VignetteBuilder: knitr
 Imports:
     crayon,
-    fortunes,
     rlang
 Suggests:
-    curl,
+    fortunes,
+    rmsfact,
     jsonlite,
     knitr,
     rmarkdown,
-    rmsfact,
     testthat
 RoxygenNote: 7.3.2

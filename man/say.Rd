@@ -54,16 +54,18 @@ to color \code{who}. Use "rainbow" for
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
-\item{fortune}{An integer specifying the row number of fortunes.data.
-Alternatively which can be a character and grep is used to try to find a
-suitable row.}
+\item{fortune}{An integer (or number that can be coerced
+to integer) specifying a fortune from the \code{fortunes} package - OR a
+string which is used as a pattern passed to \code{\link[=grep]{grep()}} (and a random one is
+selected upton multiple matches). Passed on to the \code{which} parameter of
+\code{fortunes::fortune}}
 
 \item{thought_sym}{(character) scalar character to use for the
 speech bubble tail (see \url{https://en.wikipedia.org/wiki/Speech_balloon})}
 
 \item{width}{(integer/numeric) width of each line. default: 60}
 
-\item{...}{Further args passed on to \code{\link[fortunes:fortunes]{fortunes::fortune()}}}
+\item{...}{Further args passed on to \code{fortunes::fortune()}}
 }
 \description{
 Sling messages and warnings with flair
@@ -112,31 +114,11 @@ say("ain't that some shit", "poop")
 say("icanhazpdf?", "cat")
 say("boo!", "pumpkin")
 say("hot diggity", "frog")
-say("fortune", "spider")
-say("fortune", "facecat")
-say("fortune", "behindcat")
-say("fortune", "smallcat")
-say("fortune", "monkey")
-say("fortune", "egret")
-say("rms", "rms")
 
 # Vary type of output, default calls message()
 say("hell no!")
 say("hell no!", type = "warning")
 say("hell no!", type = "string")
-
-# Using fortunes
-say(what = "fortune")
-## you don't have to pass anything to the `what` parameter if `fortune` is
-## not null
-say(fortune = 10)
-say(fortune = 100)
-say(fortune = "whatever")
-say(fortune = 7)
-say(fortune = 45)
-
-# Using catfacts
-# say("catfact", "cat")
 
 # The hypnotoad
 say(by = "hypnotoad")
@@ -150,6 +132,33 @@ say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 # Buffalo
 say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 
+\dontshow{if (rlang::is_installed("fortunes")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+# Using fortunes
+library(fortunes)
+say(what = "fortune")
+## you don't have to pass anything to the `what` parameter if `fortune` is
+## not null
+say("fortune", "spider")
+say("fortune", "facecat")
+say("fortune", "behindcat")
+say("fortune", "smallcat")
+say("fortune", "monkey")
+say("fortune", "egret")
+say(fortune = 10)
+say(fortune = 100)
+say(fortune = "whatever")
+say(fortune = 7)
+say(fortune = 45)
 # Clippy
 say(fortune = 59, by = "clippy")
+\dontshow{\}) # examplesIf}
+\dontshow{if (rlang::is_installed("rmsfact")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+library(rmsfact)
+say("rms", "rms")
+\dontshow{\}) # examplesIf}
+\dontshow{if (rlang::is_installed("jsonlite")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+# Using the catfacts API
+library(jsonlite)
+say("catfact", "cat")
+\dontshow{\}) # examplesIf}
 }

@@ -25,6 +25,7 @@ Speech bubble
 modified from \url{https://github.com/schochastics/startifyR}
 }
 \examples{
+\dontshow{if (rlang::is_installed("fortunes")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 library(fortunes)
 quote <- as.character(fortune())
 bubble(x = quote)
@@ -34,4 +35,5 @@ text_style <- crayon::make_style(text_color)
 text_style(bubble(quote))
 
 cat(bubble(paste(quote, collapse = " ")), sep = "\n")
+\dontshow{\}) # examplesIf}
 }
