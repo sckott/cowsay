@@ -2,7 +2,7 @@
 % Please edit documentation in R/bubble.R
 \name{bubble}
 \alias{bubble}
-\title{Speech bubble}
+\title{Thought/speech bubble/balloon}
 \usage{
 bubble(x, width = 60, thought_sym = "o")
 }
@@ -19,7 +19,7 @@ default: "o"}
 character vector of length greater than the input \code{x}
 }
 \description{
-Speech bubble
+Thought/speech bubble/balloon
 }
 \note{
 modified from \url{https://github.com/schochastics/startifyR}

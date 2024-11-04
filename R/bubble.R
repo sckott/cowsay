@@ -1,4 +1,4 @@
-#' Speech bubble
+#' Thought/speech bubble/balloon
 #'
 #' @export
 #' @param x (character) a character vector
@@ -32,11 +32,26 @@ bubble <- function(x, width = 60, thought_sym = "o") {
       quote[i] <- paste0("|", string_pad(x[i], n + 4, "left"), "|")
     }
   }
-  thought <- c(
-    string_pad(thought_sym, floor((n + 4) / 3), "left"),
-    string_pad(thought_sym, floor((n + 4) / 3) + 2, "left")
-  )
+  thought <- .tail(n, thought_sym)
   c(empty_to_avoid_rlang_header, top, quote, bottom, thought)
+}
+
+#' Make the tail part of a thought bubble 
+#' @keywords internal
+#' @param max_char_length (numeric) length of the maximum line. this is used
+#' to determine how much whitespace padding to add to the left of
+#' `thought_sym`
+#' @inheritParams bubble
+#' @examplesIf interactive()
+#' .tail(59)
+#' cat(.tail(59), sep = "\n")
+#' cat(.tail(11), sep = "\n")
+#' cat(.tail(11, "%"), sep = "\n")
+.tail <- function(max_char_length, thought_sym = "o") {
+  c(
+    string_pad(thought_sym, floor((max_char_length + 4) / 3), "left"),
+    string_pad(thought_sym, floor((max_char_length + 4) / 3) + 2, "left")
+  )
 }
 
 string_pad <- function(string, n, side) {
