@@ -4,16 +4,12 @@
 \alias{bubble}
 \title{Thought/speech bubble/balloon}
 \usage{
-bubble(x, width = 60, thought_sym = "o")
+bubble(x, width = 60)
 }
 \arguments{
 \item{x}{(character) a character vector}
 
 \item{width}{(integer/numeric) width of each line. default: 60}
-
-\item{thought_sym}{(character) scalar character to use for the
-speech bubble tail (see \url{https://en.wikipedia.org/wiki/Speech_balloon}).
-default: "o"}
 }
 \value{
 character vector of length greater than the input \code{x}

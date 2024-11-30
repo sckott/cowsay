@@ -196,10 +196,12 @@ say <- function(
     abort("sorry, fillerama API is gone, sorry :(")
   }
 
-  what_bubbled <- bubble(x = what, width = width, thought_sym = thought_sym)
+  what_bubbled <- bubble(x = what, width = width)
   what_styled <- color_text(what_bubbled, what_color)
+  what_tail <- bubble_tail(who, thought_sym = thought_sym)
+  tail_styled <- color_text(what_tail, what_color)
   who_styled <- color_text(who, by_color)
-  what_who <- paste(c(what_styled, who_styled), collapse = "\n")
+  what_who <- paste(c(what_styled, tail_styled, who_styled), collapse = "\n")
 
   if (type == "warning") {
     if (nchar(what_who) < 100) {

@@ -3,9 +3,6 @@
 #' @export
 #' @param x (character) a character vector
 #' @param width (integer/numeric) width of each line. default: 60
-#' @param thought_sym (character) scalar character to use for the
-#' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>).
-#' default: "o"
 #' @return character vector of length greater than the input `x`
 #' @note modified from <https://github.com/schochastics/startifyR>
 #' @examplesIf rlang::is_installed("fortunes")
@@ -18,7 +15,7 @@
 #' text_style(bubble(quote))
 #'
 #' cat(bubble(paste(quote, collapse = " ")), sep = "\n")
-bubble <- function(x, width = 60, thought_sym = "o") {
+bubble <- function(x, width = 60) {
   empty_to_avoid_rlang_header <- ""
   x <- strwrap(x, width = width)
   n <- max(nchar(x))
@@ -32,22 +29,43 @@ bubble <- function(x, width = 60, thought_sym = "o") {
       quote[i] <- paste0("|", string_pad(x[i], n + 4, "left"), "|")
     }
   }
-  thought <- .tail(n, thought_sym)
-  c(empty_to_avoid_rlang_header, top, quote, bottom, thought)
+  c(empty_to_avoid_rlang_header, top, quote, bottom)
 }
 
-#' Make the tail part of a thought bubble 
-#' @keywords internal
+#' Make the tail part of a thought bubble
+#' 
+#' @export
+#' @param animal (character) a string
+#' @param thought_sym (character) scalar character to use for the
+#' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>).
+#' default: "o"
 #' @param max_char_length (numeric) length of the maximum line. this is used
 #' to determine how much whitespace padding to add to the left of
 #' `thought_sym`
 #' @inheritParams bubble
 #' @examplesIf interactive()
-#' .tail(59)
-#' cat(.tail(59), sep = "\n")
-#' cat(.tail(11), sep = "\n")
-#' cat(.tail(11, "%"), sep = "\n")
-.tail <- function(max_char_length, thought_sym = "o") {
+#' bubble_tail(animals[["chicken"]])
+#' cat(bubble_tail(animals[["chicken"]]), sep = "\n")
+#' cat(bubble_tail(animals[["chicken"]]), sep = "\n")
+#' cat(bubble_tail(animals[["chicken"]], "%"), sep = "\n")
+#' 
+#' bubble_tail2(59)
+#' cat(bubble_tail2(59), sep = "\n")
+#' cat(bubble_tail2(11), sep = "\n")
+#' cat(bubble_tail2(11, "%"), sep = "\n")
+bubble_tail <- function(animal, thought_sym = "o") {
+  animal_split <- strsplit(animal, "\n")[[1]]
+  animal_split <- animal_split[nchar(animal_split) > 0]
+  n_first_spaces <- length(gregexpr("\\s", animal_split[1])[[1]])
+  c(
+    string_pad(thought_sym, n_first_spaces - 2, "left"),
+    string_pad(thought_sym, (n_first_spaces - 2) + 2, "left")
+  )
+}
+
+#' @export
+#' @rdname bubble_tail
+bubble_tail2 <- function(max_char_length, thought_sym = "o") {
   c(
     string_pad(thought_sym, floor((max_char_length + 4) / 3), "left"),
     string_pad(thought_sym, floor((max_char_length + 4) / 3) + 2, "left")

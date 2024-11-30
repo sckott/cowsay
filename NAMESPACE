@@ -2,6 +2,8 @@
 
 export(animals)
 export(bubble)
+export(bubble_tail)
+export(bubble_tail2)
 export(endless_horse)
 export(say)
 importFrom(rlang,abort)
