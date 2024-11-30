@@ -108,7 +108,8 @@ install.packages("cowsay")
 Dev version
 
 ```{r eval=FALSE}
-remotes::install_github("sckott/cowsay")
+# install.packages("pak")
+pak::pak("sckott/cowsay")
 ```
 
 ```{r}

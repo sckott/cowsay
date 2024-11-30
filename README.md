@@ -100,7 +100,8 @@ Dev version
 
 
 ``` r
-remotes::install_github("sckott/cowsay")
+# install.packages("pak")
+pak::pak("sckott/cowsay")
 ```
 
 
