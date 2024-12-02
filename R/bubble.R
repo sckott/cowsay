@@ -42,7 +42,6 @@ bubble <- function(x, width = 60) {
 #' @param max_char_length (numeric) length of the maximum line. this is used
 #' to determine how much whitespace padding to add to the left of
 #' `thought_sym`
-#' @inheritParams bubble
 #' @examplesIf interactive()
 #' bubble_tail(animals[["chicken"]])
 #' cat(bubble_tail(animals[["chicken"]]), sep = "\n")

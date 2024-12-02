@@ -30,7 +30,9 @@
 #' text color(s) or
 #' \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}}
 #' to color `who`. Use "rainbow" for
-#' `c("red", "orange", "yellow", "green", "blue", "purple")`
+#' `c("red", "orange", "yellow", "green", "blue", "purple")`. By default is
+#' set to be whatever color `what_color` is so you can have the same color
+#' for both with less typing.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer (or number that can be coerced
 #' to integer) specifying a fortune from the `fortunes` package - OR a 
@@ -129,7 +131,7 @@
 #' say("catfact", "cat")
 say <- function(
     what = "Hello world!", by = "cow", type = NULL,
-    what_color = NULL, by_color = NULL, length = 18, fortune = NULL,
+    what_color = NULL, by_color = what_color, length = 18, fortune = NULL,
     thought_sym = "o", width = 60, ...) {
   stopifnot("what must be length 1" = has_length(what, 1))
 

@@ -9,7 +9,7 @@ say(
   by = "cow",
   type = NULL,
   what_color = NULL,
-  by_color = NULL,
+  by_color = what_color,
   length = 18,
   fortune = NULL,
   thought_sym = "o",
@@ -50,7 +50,9 @@ Use "rainbow" for c("red", "orange", "yellow", "green", "blue", "purple").}
 text color(s) or
 \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}}
 to color \code{who}. Use "rainbow" for
-\code{c("red", "orange", "yellow", "green", "blue", "purple")}}
+\code{c("red", "orange", "yellow", "green", "blue", "purple")}. By default is
+set to be whatever color \code{what_color} is so you can have the same color
+for both with less typing.}
 
 \item{length}{(integer) Length of longcat. Ignored if other animals used.}
 
