@@ -13,6 +13,12 @@ cowsay
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
 
+### History
+
+cowsay was originally written by Tony Monroe, with the first code released in 1999. The version of cowsay you get via homebrew is a fork by Andrew Janke at <https://cowsay.diamonds/> ([code repo](https://github.com/cowsay-org/cowsay)). The code for the original can be found at [tnalpgge/rank-amateur-cowsay](https://github.com/tnalpgge/rank-amateur-cowsay) and the original website can be seen [on the Wayback Machine](https://web.archive.org/web/20120225123719/http://www.nog.net/~tony/warez/cowsay.shtml). Both the original and version by Janke are both written in Perl. The cowsay you get with `apt` on Linux machines is the last version Monroe released in 2016 (v3.0.4 or possibly v3.0.3). 
+
+This R package has some additional features the orginal cowsay doesn't have, but also lacks some features the original has. This package doesn't yet support custom eyes and tongue for the cow or any other animals.
+
 ### Contributors (alphabetical)
 
 
@@ -116,14 +122,16 @@ library("cowsay")
 sort(names(animals))
 #>  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        
 #>  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     
-#> [11] "chuck"        "clippy"       "cow"          "daemon"       "duck"        
-#> [16] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        
-#> [21] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   
-#> [26] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         
-#> [31] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       
-#> [36] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      
-#> [41] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   
-#> [46] "turkey"       "whale"        "wolf"         "yoda"
+#> [11] "chuck"        "clippy"       "cow"          "cow_borg"     "cow_dead"    
+#> [16] "cow_greedy"   "cow_sleepy"   "cow_tired"    "cow_wired"    "cow_young"   
+#> [21] "daemon"       "duck"         "duckling"     "egret"        "endlesshorse"
+#> [26] "facecat"      "fish"         "frog"         "ghost"        "goldfish"    
+#> [31] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat"  "monkey"      
+#> [36] "mushroom"     "owl"          "pig"          "poop"         "pumpkin"     
+#> [41] "rabbit"       "shark"        "shortcat"     "signbunny"    "smallcat"    
+#> [46] "snowman"      "spider"       "squirrel"     "squirrel2"    "stegosaurus" 
+#> [51] "stretchycat"  "trilobite"    "turkey"       "whale"        "wolf"        
+#> [56] "yoda"
 ```
 
 ### Say Something
@@ -133,7 +141,7 @@ sort(names(animals))
 say("time")
 #> 
 #>  ---------------------------- 
-#> < 2024-12-04 06:18:44.375102 >
+#> < 2024-12-04 11:28:15.054708 >
 #>  ---------------------------- 
 #>       \
 #>        \
@@ -288,12 +296,15 @@ From the catfacts API  at <https://catfact.ninja>
 ``` r
 say("catfact", "cat")
 #> 
-#>  ------------------------------------------------------- 
-#> / The lightest cat on record is a blue point Himalayan  \
-#> | called Tinker Toy, who weighed 1 pound, 6 ounces (616 |
-#> | g). Tinker Toy was 2.75 inches (7 cm) tall and 7.5    |
-#> \ inches (19 cm) long.                                  /
-#>  ------------------------------------------------------- 
+#>  --------------------------------------------------------- 
+#> / Two members of the cat family are distinct from all     \
+#> | others: the clouded leopard and the cheetah. The        |
+#> | clouded leopard does not roar like other big cats, nor  |
+#> | does it groom or rest like small cats. The cheetah is   |
+#> | unique because it is a running cat; all others are      |
+#> | leaping cats. They are leaping cats because they slowly |
+#> \ stalk their prey and then leap on it.                   /
+#>  --------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -431,22 +442,13 @@ say(by = "fish")
 library(fortunes)
 say("fortune", "cat")
 #> 
-#>  -------------------------------------------------------- 
-#> / Fabio Mulazzani: I need to obtain all the              \
-#> | 9.somethingExp157 permutations that can be given from  |
-#> | the numbers from 1 to 100. Ted Harding: To an adequate |
-#> | approximation there are 10^158 of them. Simply to      |
-#> | obtain them all (at a rate of 10^10 per second, which  |
-#> | is faster than the CPU frequency of most desktop       |
-#> | computers) would take 10^148 seconds, or slightly      |
-#> | longer than 3*(10^140) years. Current estimates of the |
-#> | age of the Universe are of the order of 1.5*(10^10)    |
-#> | years, so the Universe will have to last about         |
-#> | 2*(10^130) times as long as it has already existed,    |
-#> | before the task could be finished. So: why do you want |
-#> | to do this?  Fabio Mulazzani and Ted Harding R-help    |
-#> \ November 2008                                          /
-#>  -------------------------------------------------------- 
+#>  ----------------------------------------------------- 
+#> / To paraphrase provocatively, 'machine learning is   \
+#> | statistics minus any checking of models and         |
+#> | assumptions'.  Brian D. Ripley about the difference |
+#> | between machine learning and statistics useR! 2004, |
+#> \ Vienna May 2004                                     /
+#>  ----------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -491,16 +493,10 @@ say(fortune = 100)
 say(fortune = "whatever")
 #> 
 #>  --------------------------------------------------------- 
-#> / Tom Backer Johnsen: I have just started looking at R,   \
-#> | and are getting more and more irritated at myself for   |
-#> | not having done that before. However, one of the things |
-#> | I have not found in the documentation is some way of    |
-#> | preparing output from R for convenient formatting into  |
-#> | something like MS Word. Barry Rowlingson: Well whatever |
-#> | you do, don't start looking at LaTeX, because that will |
-#> | get you even more irritated at yourself for not having  |
-#> | done it before.  Tom Backer Johnsen and Barry           |
-#> \ Rowlingson R-help February 2006                         /
+#> / Justin: Is there a function that just does whatever I'm \
+#> | thinking (aka whatever my homework question is...)?     |
+#> | Joshua Ulrich: That's the magic_pony function.  Justin  |
+#> \ and Joshua Ulrich stackoverflow.com June 2013           /
 #>  --------------------------------------------------------- 
 #>       \
 #>        \
@@ -673,13 +669,16 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  ---------------------------------------------------- 
-#> / The good way to do it is to include the following  \
-#> | comment at the beginning: # This is a holy Script, |
-#> | please edit it not Kenn Konstabel on "... how to   |
-#> | protect R Script files from inadvertent editing by |
-#> \ users."  R-help April 2011                         /
-#>  ---------------------------------------------------- 
+#>  --------------------------------------------------------- 
+#> / JPM Miao: Why can't R understand if(num!=NA)? Peter     \
+#> | Dalgaard: Because comparison with an unknown value      |
+#> | yields an unknown result. David Winsemius: Anything     |
+#> | else would violate the Second Law of Thermodynamics. We |
+#> | cannot have comparisons reducing entropy, now can we?   |
+#> | Uncertainty cannot run uphill.  JPM Miao, Peter         |
+#> | Dalgaard, and David Winsemius on why is.na() is needed  |
+#> \ R-help May 2013                                         /
+#>  --------------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -703,11 +702,12 @@ say("fortune", by = "monkey")
 ``` r
 say("fortune", by = "daemon")
 #> 
-#>  --------------------------------------------------------- 
-#> / Soon, they'll be speaking R on the subway.  Michael     \
-#> | Rennie giving 'Kudos to the R support team' R-help July |
-#> \ 2004                                                    /
-#>  --------------------------------------------------------- 
+#>  ----------------------------------------------------- 
+#> / There is a reason that the speedometer in your car  \
+#> | doesn't just read "slow" and "fast".  Frank Harrell |
+#> | warning about the use of cutoffs after logistic     |
+#> \ regression R-help February 2011                     /
+#>  ----------------------------------------------------- 
 #>                  \
 #>                   \
 #>             ,        ,

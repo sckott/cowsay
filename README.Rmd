@@ -18,6 +18,12 @@ knitr::opts_chunk$set(
 
 If you are familiar with `cowsay` on the cli, then you know what this is, but for R.  If not, read below.  Why?  Why not?
 
+### History
+
+cowsay was originally written by Tony Monroe, with the first code released in 1999. The version of cowsay you get via homebrew is a fork by Andrew Janke at <https://cowsay.diamonds/> ([code repo](https://github.com/cowsay-org/cowsay)). The code for the original can be found at [tnalpgge/rank-amateur-cowsay](https://github.com/tnalpgge/rank-amateur-cowsay) and the original website can be seen [on the Wayback Machine](https://web.archive.org/web/20120225123719/http://www.nog.net/~tony/warez/cowsay.shtml). Both the original and version by Janke are both written in Perl. The cowsay you get with `apt` on Linux machines is the last version Monroe released in 2016 (v3.0.4 or possibly v3.0.3). 
+
+This R package has some additional features the orginal cowsay doesn't have, but also lacks some features the original has. This package doesn't yet support custom eyes and tongue for the cow or any other animals.
+
 ### Contributors (alphabetical)
 
 ```{r echo=FALSE}
