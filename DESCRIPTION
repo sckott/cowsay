@@ -26,7 +26,7 @@ Authors@R: c(
     person("Marion", "Louveaux", role="ctb"),
     person("David", "Schoch", role = "ctb")
     )
-URL: https://github.com/sckott/cowsay, https://sckott.github.io/cowsay
+URL: https://github.com/sckott/cowsay, https://sckott.github.io/cowsay/
 BugReports: https://github.com/sckott/cowsay/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8

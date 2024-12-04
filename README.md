@@ -5,7 +5,7 @@ cowsay
 
 ![cran checks](https://badges.cranchecks.info/worst/cowsay.svg)
 [![R-check](https://github.com/sckott/cowsay/workflows/R-check/badge.svg)](https://github.com/sckott/cowsay/actions?query=workflow%3AR-check)
-[![codecov](https://codecov.io/gh/sckott/cowsay/graph/badge.svg?token=fewxwGHXfv)](https://codecov.io/gh/sckott/cowsay)
+[![codecov](https://codecov.io/gh/sckott/cowsay/graph/badge.svg?token=fewxwGHXfv)](https://app.codecov.io/gh/sckott/cowsay)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/cowsay)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/cowsay)](https://cran.r-project.org/package=cowsay)
 
@@ -140,9 +140,9 @@ sort(names(animals))
 ``` r
 say("time")
 #> 
-#>  ---------------------------- 
-#> < 2024-12-04 11:28:15.054708 >
-#>  ---------------------------- 
+#>  --------------------------- 
+#> < 2024-12-04 14:37:40.80489 >
+#>  --------------------------- 
 #>       \
 #>        \
 #> 
@@ -296,15 +296,10 @@ From the catfacts API  at <https://catfact.ninja>
 ``` r
 say("catfact", "cat")
 #> 
-#>  --------------------------------------------------------- 
-#> / Two members of the cat family are distinct from all     \
-#> | others: the clouded leopard and the cheetah. The        |
-#> | clouded leopard does not roar like other big cats, nor  |
-#> | does it groom or rest like small cats. The cheetah is   |
-#> | unique because it is a running cat; all others are      |
-#> | leaping cats. They are leaping cats because they slowly |
-#> \ stalk their prey and then leap on it.                   /
-#>  --------------------------------------------------------- 
+#>  -------------------------------------------------------- 
+#> / Julius Ceasar, Henri II, Charles XI, and Napoleon were \
+#> \ all afraid of cats.                                    /
+#>  -------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -442,13 +437,13 @@ say(by = "fish")
 library(fortunes)
 say("fortune", "cat")
 #> 
-#>  ----------------------------------------------------- 
-#> / To paraphrase provocatively, 'machine learning is   \
-#> | statistics minus any checking of models and         |
-#> | assumptions'.  Brian D. Ripley about the difference |
-#> | between machine learning and statistics useR! 2004, |
-#> \ Vienna May 2004                                     /
-#>  ----------------------------------------------------- 
+#>  --------------------------------------------------------- 
+#> / If we do that, I predict that the total amount of       \
+#> | r-help time wasted on it will exceed the CPU time saved |
+#> | by orders of magnitude.  Duncan Murdoch after a         |
+#> | specialized function speeding up detection of NAs was   |
+#> \ suggested for base R R-devel April 2006                 /
+#>  --------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -669,16 +664,19 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  --------------------------------------------------------- 
-#> / JPM Miao: Why can't R understand if(num!=NA)? Peter     \
-#> | Dalgaard: Because comparison with an unknown value      |
-#> | yields an unknown result. David Winsemius: Anything     |
-#> | else would violate the Second Law of Thermodynamics. We |
-#> | cannot have comparisons reducing entropy, now can we?   |
-#> | Uncertainty cannot run uphill.  JPM Miao, Peter         |
-#> | Dalgaard, and David Winsemius on why is.na() is needed  |
-#> \ R-help May 2013                                         /
-#>  --------------------------------------------------------- 
+#>  -------------------------------------------------------- 
+#> / Happy families are all alike; every unhappy family is  \
+#> | unhappy in its own way. Leo Tolstoy                    |
+#> |                                                        |
+#> | and every messy data is messy in its own way - it's    |
+#> | easy to define the characteristics of a clean dataset  |
+#> | (rows are observations, columns are variables, columns |
+#> | contain values of consistent types). If you start to   |
+#> | look at real life data you'll see every way you can    |
+#> | imagine data being messy (and many that you can't)!    |
+#> | Hadley Wickham answering 'in what way messy data sets  |
+#> \ are messy' R-help January 2008                         /
+#>  -------------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -702,12 +700,15 @@ say("fortune", by = "monkey")
 ``` r
 say("fortune", by = "daemon")
 #> 
-#>  ----------------------------------------------------- 
-#> / There is a reason that the speedometer in your car  \
-#> | doesn't just read "slow" and "fast".  Frank Harrell |
-#> | warning about the use of cutoffs after logistic     |
-#> \ regression R-help February 2011                     /
-#>  ----------------------------------------------------- 
+#>  --------------------------------------------------------- 
+#> / It seems to me against the spirit of Open Source        \
+#> | software to attempt to monitor distribution. We could   |
+#> | ask R to 'call home' on first use (in the way e.g. pine |
+#> | does) but I suspect many users would find that          |
+#> | objectionable.  Brian D. Ripley in a discussion about   |
+#> | trying to estimate the number of R users R-help April   |
+#> \ 2004                                                    /
+#>  --------------------------------------------------------- 
 #>                  \
 #>                   \
 #>             ,        ,

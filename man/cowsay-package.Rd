@@ -12,7 +12,7 @@ Allows printing of character strings as messages/warnings/etc. with ASCII animal
 Useful links:
 \itemize{
   \item \url{https://github.com/sckott/cowsay}
-  \item \url{https://sckott.github.io/cowsay}
+  \item \url{https://sckott.github.io/cowsay/}
   \item Report bugs at \url{https://github.com/sckott/cowsay/issues}
 }
 
