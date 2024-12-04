@@ -180,7 +180,7 @@ say(
 </p>
 
 
-This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+This doesn't preclude you from adding extra crayon colors to your `what` string directly - but the results are not super pretty:
 
 
 ```{r eval=FALSE}
@@ -189,7 +189,6 @@ say(
   by = "trilobite"
 )
 ```
-
 
 <p align="left">
   <img src="./man/figures/trilobite.png" alt="trilobite" height="250px">
@@ -257,6 +256,7 @@ say(by = "fish")
 ### R fortunes
 
 ```{r}
+library(fortunes)
 say("fortune", "cat")
 ```
 

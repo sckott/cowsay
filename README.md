@@ -132,11 +132,11 @@ sort(names(animals))
 ``` r
 say("time")
 #> 
-#> +------------------------------+
-#> |2024-11-03 07:01:41.670953    |
-#> +------------------------------+
-#>          o
-#>            o
+#>  ---------------------------- 
+#> < 2024-12-04 06:18:44.375102 >
+#>  ---------------------------- 
+#>       \
+#>        \
 #> 
 #>         ^__^ 
 #>         (oo)\ ________ 
@@ -149,12 +149,11 @@ say("time")
 ``` r
 say("ain't that some shit", "chicken")
 #> 
-#> +------------------------+
-#> |ain't that some shit    |
-#> +------------------------+
-#>        o
-#>          o
-#> 
+#>  ---------------------- 
+#> < ain't that some shit >
+#>  ---------------------- 
+#>       \
+#>        \
 #>          _
 #>        _/ }
 #>       `>' \
@@ -221,7 +220,7 @@ say(
 </p>
 
 
-This doesn't preclude you from adding extra crayon colors to your `what` string directly.
+This doesn't preclude you from adding extra crayon colors to your `what` string directly - but the results are not super pretty:
 
 
 
@@ -231,7 +230,6 @@ say(
   by = "trilobite"
 )
 ```
-
 
 <p align="left">
   <img src="./man/figures/trilobite.png" alt="trilobite" height="250px">
@@ -243,11 +241,11 @@ say(
 ``` r
 say("hell no!")
 #> 
-#> +------------+
-#> |hell no!    |
-#> +------------+
-#>    o
-#>      o
+#>  ---------- 
+#> < hell no! >
+#>  ---------- 
+#>       \
+#>        \
 #> 
 #>         ^__^ 
 #>         (oo)\ ________ 
@@ -261,11 +259,11 @@ say("hell no!")
 ``` r
 say("hell no!", type = "warning")
 #> Warning in say("hell no!", type = "warning"): 
-#> +------------+
-#> |hell no!    |
-#> +------------+
-#>    o
-#>      o
+#>  ---------- 
+#> < hell no! >
+#>  ---------- 
+#>       \
+#>        \
 #> 
 #>         ^__^ 
 #>         (oo)\ ________ 
@@ -278,7 +276,7 @@ say("hell no!", type = "warning")
 
 ``` r
 say("hell no!", type = "string")
-#> [1] "\n+------------+\n|hell no!    |\n+------------+\n   o\n     o\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
+#> [1] "\n ---------- \n< hell no! >\n ---------- \n      \\\n       \\\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
 ```
 
 
@@ -290,11 +288,14 @@ From the catfacts API  at <https://catfact.ninja>
 ``` r
 say("catfact", "cat")
 #> 
-#> +-----------------------------------------------+
-#> |The cat's tail is used to maintain balance.    |
-#> +-----------------------------------------------+
-#>               o
-#>                 o
+#>  ------------------------------------------------------- 
+#> / The lightest cat on record is a blue point Himalayan  \
+#> | called Tinker Toy, who weighed 1 pound, 6 ounces (616 |
+#> | g). Tinker Toy was 2.75 inches (7 cm) tall and 7.5    |
+#> \ inches (19 cm) long.                                  /
+#>  ------------------------------------------------------- 
+#>          \
+#>           \
 #> 
 #>             |\___/|
 #>           ==) ^Y^ (==
@@ -325,11 +326,11 @@ say("it's caturday", "longcat")
 #>         [BoingBoing]
 #>     '
 #> 
-#> +-----------------+
-#> |it's caturday    |
-#> +-----------------+
-#>     o
-#>       o
+#>  --------------- 
+#> < it's caturday >
+#>  --------------- 
+#>  \
+#>   \
 #> 
 #>     .ﾊ,,ﾊ
 #>     ( ﾟωﾟ)
@@ -346,11 +347,11 @@ say("it's caturday", "longcat")
 ``` r
 say("NO!", by = "grumpycat")
 #> 
-#> +-------+
-#> |NO!    |
-#> +-------+
-#>  o
-#>    o
+#>  ----- 
+#> < NO! >
+#>  ----- 
+#>      \
+#>       \
 #> 
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
@@ -361,11 +362,11 @@ say("NO!", by = "grumpycat")
 ``` r
 say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
 #> 
-#> +----------------------------------+
-#> |WOKE UP TODAY, IT WAS TERRIBLE    |
-#> +----------------------------------+
-#>           o
-#>             o
+#>  -------------------------------- 
+#> < WOKE UP TODAY, IT WAS TERRIBLE >
+#>  -------------------------------- 
+#>      \
+#>       \
 #> 
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
@@ -376,11 +377,11 @@ say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
 ``` r
 say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
 #> 
-#> +--------------------------------+
-#> |I HAD FUN ONCE, IT WAS AWFUL    |
-#> +--------------------------------+
-#>          o
-#>            o
+#>  ------------------------------ 
+#> < I HAD FUN ONCE, IT WAS AWFUL >
+#>  ------------------------------ 
+#>      \
+#>       \
 #> 
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
@@ -393,11 +394,11 @@ say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
 ``` r
 say(by = "signbunny")
 #> 
-#> +----------------+
-#> |Hello world!    |
-#> +----------------+
-#>     o
-#>       o
+#>  -------------- 
+#> < Hello world! >
+#>  -------------- 
+#> \
+#> \
 #> 
 #> (\__/) ||
 #> (•ㅅ•) ||
@@ -412,11 +413,11 @@ say(by = "signbunny")
 ``` r
 say(by = "fish")
 #> 
-#> +----------------+
-#> |Hello world!    |
-#> +----------------+
-#>     o
-#>       o
+#>  -------------- 
+#> < Hello world! >
+#>  -------------- 
+#>        \
+#>         \
 #> 
 #>   ><((((º>  ><((((º>  ><((((º>  ><((((º>  ><((((º>
 #>       Kiyoko Gotanda
@@ -427,17 +428,27 @@ say(by = "fish")
 
 
 ``` r
+library(fortunes)
 say("fortune", "cat")
 #> 
-#> +--------------------------------------------------------------+
-#> |I thought RStudio was amazing, but RStudio with knitr is      |
-#> |approximately `formatC(round(runif(1, 1e8, 1e9)),             |
-#> |digits=10, big.mark=',')` times better than RStudio alone!    |
-#> |@Geneorama comment on RStudio's new web publishing service    |
-#> |RStudio blog June 2012                                        |
-#> +--------------------------------------------------------------+
-#>                    o
-#>                      o
+#>  -------------------------------------------------------- 
+#> / Fabio Mulazzani: I need to obtain all the              \
+#> | 9.somethingExp157 permutations that can be given from  |
+#> | the numbers from 1 to 100. Ted Harding: To an adequate |
+#> | approximation there are 10^158 of them. Simply to      |
+#> | obtain them all (at a rate of 10^10 per second, which  |
+#> | is faster than the CPU frequency of most desktop       |
+#> | computers) would take 10^148 seconds, or slightly      |
+#> | longer than 3*(10^140) years. Current estimates of the |
+#> | age of the Universe are of the order of 1.5*(10^10)    |
+#> | years, so the Universe will have to last about         |
+#> | 2*(10^130) times as long as it has already existed,    |
+#> | before the task could be finished. So: why do you want |
+#> | to do this?  Fabio Mulazzani and Ted Harding R-help    |
+#> \ November 2008                                          /
+#>  -------------------------------------------------------- 
+#>          \
+#>           \
 #> 
 #>             |\___/|
 #>           ==) ^Y^ (==
@@ -458,15 +469,15 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 ``` r
 say(fortune = 100)
 #> 
-#> +---------------------------------------------------------------+
-#> |I'm not sure I'd trust any computer recommendation from        |
-#> |1976, no matter how famous the authors are.  Peter Dalgaard    |
-#> |after Samuel Edward Kemp cited a recommendation about          |
-#> |nonlinear least squares computer programs from                 |
-#> |'Box-Jenkins, 1976' R-help January 2005                        |
-#> +---------------------------------------------------------------+
-#>                     o
-#>                       o
+#>  --------------------------------------------------------- 
+#> / I'm not sure I'd trust any computer recommendation from \
+#> | 1976, no matter how famous the authors are.  Peter      |
+#> | Dalgaard after Samuel Edward Kemp cited a               |
+#> | recommendation about nonlinear least squares computer   |
+#> \ programs from 'Box-Jenkins, 1976' R-help January 2005   /
+#>  --------------------------------------------------------- 
+#>       \
+#>        \
 #> 
 #>         ^__^ 
 #>         (oo)\ ________ 
@@ -479,19 +490,20 @@ say(fortune = 100)
 ``` r
 say(fortune = "whatever")
 #> 
-#> +---------------------------------------------------------------+
-#> |Tom Backer Johnsen: I have just started looking at R, and      |
-#> |are getting more and more irritated at myself for not          |
-#> |having done that before. However, one of the things I have     |
-#> |not found in the documentation is some way of preparing        |
-#> |output from R for convenient formatting into something like    |
-#> |MS Word. Barry Rowlingson: Well whatever you do, don't         |
-#> |start looking at LaTeX, because that will get you even more    |
-#> |irritated at yourself for not having done it before.  Tom      |
-#> |Backer Johnsen and Barry Rowlingson R-help February 2006       |
-#> +---------------------------------------------------------------+
-#>                     o
-#>                       o
+#>  --------------------------------------------------------- 
+#> / Tom Backer Johnsen: I have just started looking at R,   \
+#> | and are getting more and more irritated at myself for   |
+#> | not having done that before. However, one of the things |
+#> | I have not found in the documentation is some way of    |
+#> | preparing output from R for convenient formatting into  |
+#> | something like MS Word. Barry Rowlingson: Well whatever |
+#> | you do, don't start looking at LaTeX, because that will |
+#> | get you even more irritated at yourself for not having  |
+#> | done it before.  Tom Backer Johnsen and Barry           |
+#> \ Rowlingson R-help February 2006                         /
+#>  --------------------------------------------------------- 
+#>       \
+#>        \
 #> 
 #>         ^__^ 
 #>         (oo)\ ________ 
@@ -509,11 +521,11 @@ say("Hi there :)", by = "trilobite")
 
 ````
 #> 
-#> +---------------+
-#> |Hi there :)    |
-#> +---------------+
-#>     o
-#>       o
+#>  ------------- 
+#> < Hi there :) >
+#>  ------------- 
+#>        \
+#>         \
 #> 
 #>           _____
 #>        .'` ,-. `'.
@@ -533,11 +545,11 @@ say("Hi there :)", by = "trilobite")
 ``` r
 say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 #> 
-#> +--------------------------------------------------------+
-#> |Q: What do you call a solitary shark A: A lone shark    |
-#> +--------------------------------------------------------+
-#>                  o
-#>                    o
+#>  ------------------------------------------------------ 
+#> < Q: What do you call a solitary shark A: A lone shark >
+#>  ------------------------------------------------------ 
+#>            \
+#>             \
 #> 
 #>               /""-._
 #>               .       '-,
@@ -575,11 +587,11 @@ say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 
 `````
 #> 
-#> +----------------------------------------------------------+
-#> |Q: What do you call a single buffalo? A: A buffalonely    |
-#> +----------------------------------------------------------+
-#>                   o
-#>                     o
+#>  -------------------------------------------------------- 
+#> < Q: What do you call a single buffalo? A: A buffalonely >
+#>  -------------------------------------------------------- 
+#>                 \
+#>                  \
 #> 
 #>                    _.-````'-,_
 #>          _,.,_ ,-'`           `'-.,_
@@ -602,17 +614,17 @@ say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 ``` r
 say(fortune = 59, by = "clippy")
 #> 
-#> +-------------------------------------------------------------+
-#> |Let's not kid ourselves: the most widely used piece of       |
-#> |software for statistics is Excel.  Brian D. Ripley           |
-#> |'Statistical Methods Need Software: A View of Statistical    |
-#> |Computing' Opening lecture RSS 2002, Plymouth September      |
-#> |2002                                                         |
-#> +-------------------------------------------------------------+
-#>                    o
-#>                      o
+#>  -------------------------------------------------------- 
+#> / Let's not kid ourselves: the most widely used piece of \
+#> | software for statistics is Excel.  Brian D. Ripley     |
+#> | 'Statistical Methods Need Software: A View of          |
+#> | Statistical Computing' Opening lecture RSS 2002,       |
+#> \ Plymouth September 2002                                /
+#>  -------------------------------------------------------- 
+#>  \
+#>   \
 #> 
-#> __
+#>     _
 #>    / \
 #>    | |
 #>    @ @
@@ -635,11 +647,11 @@ say("fortune", by = "yoda")
 ``` r
 say("hi, i'm a bat", by = "bat")
 #> 
-#> +-----------------+
-#> |hi, i'm a bat    |
-#> +-----------------+
-#>     o
-#>       o
+#>  --------------- 
+#> < hi, i'm a bat >
+#>  --------------- 
+#>                \
+#>                 \
 #> 
 #>         __.--'\     \.__./     /'--.__
 #>     _.-'       '.__.'    '.__.'       '-._
@@ -661,17 +673,15 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#> +--------------------------------------------------------------+
-#> |That's a casual model, not a causal model - you can tell      |
-#> |the difference by looking for the word "excel".  Hadley       |
-#> |Wickham commenting on an Excel chart showing student's SAT    |
-#> |score increases with family income, without considering       |
-#> |further covariates http://twitter.com/#!/hadleywickham        |
-#> |February 2012                                                 |
-#> +--------------------------------------------------------------+
-#>                    o
-#>                      o
-#> 
+#>  ---------------------------------------------------- 
+#> / The good way to do it is to include the following  \
+#> | comment at the beginning: # This is a holy Script, |
+#> | please edit it not Kenn Konstabel on "... how to   |
+#> | protect R Script files from inadvertent editing by |
+#> \ users."  R-help April 2011                         /
+#>  ---------------------------------------------------- 
+#>                \
+#>                 \
 #> 
 #>                   .="=.
 #>                 _/.-.-.\_     _
@@ -693,17 +703,16 @@ say("fortune", by = "monkey")
 ``` r
 say("fortune", by = "daemon")
 #> 
-#> +------------------------------------------------------------+
-#> |I want a budget.  Peter Dalgaard in a talk about Tcl/Tk,    |
-#> |meaning to say 'I want a button widget' gR 2003, Aalborg    |
-#> |September 2003                                              |
-#> +------------------------------------------------------------+
-#>                    o
-#>                      o
-#> 
+#>  --------------------------------------------------------- 
+#> / Soon, they'll be speaking R on the subway.  Michael     \
+#> | Rennie giving 'Kudos to the R support team' R-help July |
+#> \ 2004                                                    /
+#>  --------------------------------------------------------- 
+#>                  \
+#>                   \
 #>             ,        ,
-#>            /(        )`
-#>            \ \___   / |
+#>             /(        )`
+#>             \ \___   / |
 #>             /- _  `-/  '
 #>            (/\/ \ \   /\
 #>            / /   | `    
@@ -728,13 +737,13 @@ say("fortune", by = "daemon")
 ``` r
 say("je ne regrette rien", by = "egret")
 #> 
-#> +-----------------------+
-#> |je ne regrette rien    |
-#> +-----------------------+
-#>       o
-#>         o
+#>  --------------------- 
+#> < je ne regrette rien >
+#>  --------------------- 
+#>         \
+#>          \
 #> 
-#>        \   _,
+#>            _,
 #>       -==<' `
 #>           ) /
 #>          / (_.
@@ -797,11 +806,11 @@ endless_horse()
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say("grumpycat")
 #> 
-#> +--------------------------------+
-#> |I HAD FUN ONCE, IT WAS AWFUL    |
-#> +--------------------------------+
-#>          o
-#>            o
+#>  ------------------------------ 
+#> < I HAD FUN ONCE, IT WAS AWFUL >
+#>  ------------------------------ 
+#>      \
+#>       \
 #> 
 #>       ﾊ _ ﾊ
 #>       ಠ X ಠ
@@ -815,8 +824,8 @@ Okay, hold your endless horses. Just use the exported vector `animals`, and you 
 
 ``` r
 animals["clippy"]
-#>                                                                     clippy 
-#> "\n__\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
+#>                                                                        clippy 
+#> "\n    _\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"
 ```
 
 ## Meta

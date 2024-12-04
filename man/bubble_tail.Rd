@@ -23,8 +23,13 @@ to determine how much whitespace padding to add to the left of
 \description{
 Make the tail part of a thought bubble
 }
+\details{
+\code{bubble_tail} uses the animal as input so that the tail is put
+close to the top of the animal, whereas \code{bubble_tail2} just puts the tail
+about a 1/3 of the way from the left most character given the max
+character length
+}
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 bubble_tail(animals[["chicken"]])
 cat(bubble_tail(animals[["chicken"]]), sep = "\n")
 cat(bubble_tail(animals[["chicken"]]), sep = "\n")
@@ -34,5 +39,4 @@ bubble_tail2(59)
 cat(bubble_tail2(59), sep = "\n")
 cat(bubble_tail2(11), sep = "\n")
 cat(bubble_tail2(11, "\%"), sep = "\n")
-\dontshow{\}) # examplesIf}
 }

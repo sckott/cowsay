@@ -1,3 +1,112 @@
+#' say/think factory
+#' @param thought_sym (character) scalar character to use for the
+#' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>).
+#' default: "o"
+#' @param say_or_think (character)
+#' @keywords internal
+say_think <- function(thought_sym, say_or_think) {
+  function(
+      what = "Hello world!", by = "cow", type = NULL,
+      what_color = NULL, by_color = what_color, length = 18, fortune = NULL,
+      width = 60, ...) {
+    stopifnot("what must be length 1" = has_length(what, 1))
+
+    if (
+      crayon::has_color() == FALSE &&
+        (!is_null(what_color) || !is_null(by_color))
+    ) {
+      inform(c(
+        "Colors cannot be applied in this environment :(",
+        "Try using a terminal or RStudio/Positron/etc."
+      ))
+      what_color <- NULL
+      by_color <- NULL
+    } else {
+      what_color <- check_color(what_color)
+      by_color <- check_color(by_color)
+    }
+
+    if (is_null(type)) {
+      if (interactive()) {
+        type <- "message"
+      } else {
+        type <- "print"
+      }
+    }
+
+    if (what == "catfact") {
+      rlang::check_installed("jsonlite")
+      what <- jsonlite::fromJSON(catfact_api)$fact
+      by <- "cat"
+    }
+
+    who <- get_who(by, length = length)
+
+    if (!is_null(fortune)) {
+      rlang::check_installed("fortunes")
+      what <- "fortune"
+    }
+
+    if (what == "time") {
+      what <- as.character(Sys.time())
+    }
+
+    if (what == "fortune") {
+      rlang::check_installed("fortunes")
+      if (is_null(fortune)) {
+        fortune <- sample(1:360, 1)
+      }
+      what <- as.character(fortune(which = fortune, ...))
+      what <- what[!are_na(what)] # remove missing pieces (e.g. "context")
+      what <- gsub("<x>", "\n", paste(what, collapse = "\n "))
+    }
+
+    if (by == "hypnotoad" && what == "Hello world!") {
+      what <- "All Glory to the HYPNO TOAD!"
+    }
+
+    if (what == "rms") {
+      rlang::check_installed("rmsfact")
+      what <- rmsfact::rmsfact()
+    }
+
+    if (what %in% fillerama_what) {
+      abort("sorry, fillerama API is gone, sorry :(")
+    }
+
+    what_bubbled <- switch(say_or_think,
+      say = bubble_say(x = what, width = width),
+      think = bubble_think(x = what, width = width),
+      abort("only 'say' and 'think' supported in say_think()")
+    )
+    what_styled <- color_text(what_bubbled, what_color)
+    what_tail <- bubble_tail(who, thought_sym = thought_sym)
+    tail_styled <- color_text(what_tail, what_color)
+    who_styled <- color_text(who, by_color)
+    what_who <- paste(c(what_styled, tail_styled, who_styled), collapse = "\n")
+
+    if (type == "warning") {
+      if (nchar(what_who) < 100) {
+        wl <- 100
+      } else if (nchar(what_who) > 8170) {
+        wl <- 8170
+      } else {
+        wl <- nchar(what_who) + 1
+      }
+      warn_op <- options(warning.length = wl)
+      on.exit(options(warn_op))
+    }
+
+    switch(type,
+      message = message(what_who),
+      warning = warning(what_who),
+      print = cat(what_who),
+      string = what_who
+    )
+  }
+}
+
+
 #' Sling messages and warnings with flair
 #'
 #' @export
@@ -39,8 +148,6 @@
 #' string which is used as a pattern passed to [grep()] (and a random one is
 #' selected upton multiple matches). Passed on to the `which` parameter of
 #' `fortunes::fortune`
-#' @param thought_sym (character) scalar character to use for the
-#' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>)
 #' @param width (integer/numeric) width of each line. default: 60
 #' @param ... Further args passed on to `fortunes::fortune()`
 #'
@@ -129,98 +236,8 @@
 #' # Using the catfacts API
 #' library(jsonlite)
 #' say("catfact", "cat")
-say <- function(
-    what = "Hello world!", by = "cow", type = NULL,
-    what_color = NULL, by_color = what_color, length = 18, fortune = NULL,
-    thought_sym = "o", width = 60, ...) {
-  stopifnot("what must be length 1" = has_length(what, 1))
+say <- say_think(thought_sym = "\\", say_or_think = "say")
 
-  if (
-    crayon::has_color() == FALSE &&
-      (!is_null(what_color) || !is_null(by_color))
-  ) {
-    inform(c(
-      "Colors cannot be applied in this environment :(",
-      "Try using a terminal or RStudio/Positron/etc."
-    ))
-    what_color <- NULL
-    by_color <- NULL
-  } else {
-    what_color <- check_color(what_color)
-    by_color <- check_color(by_color)
-  }
-
-  if (is_null(type)) {
-    if (interactive()) {
-      type <- "message"
-    } else {
-      type <- "print"
-    }
-  }
-
-  if (what == "catfact") {
-    rlang::check_installed("jsonlite")
-    what <- jsonlite::fromJSON(catfact_api)$fact
-    by <- "cat"
-  }
-
-  who <- get_who(by, length = length)
-
-  if (!is_null(fortune)) {
-    rlang::check_installed("fortunes")
-    what <- "fortune"
-  }
-
-  if (what == "time") {
-    what <- as.character(Sys.time())
-  }
-
-  if (what == "fortune") {
-    rlang::check_installed("fortunes")
-    if (is_null(fortune)) {
-      fortune <- sample(1:360, 1)
-    }
-    what <- as.character(fortune(which = fortune, ...))
-    what <- what[!are_na(what)] # remove missing pieces (e.g. "context")
-    what <- gsub("<x>", "\n", paste(what, collapse = "\n "))
-  }
-
-  if (by == "hypnotoad" && what == "Hello world!") {
-    what <- "All Glory to the HYPNO TOAD!"
-  }
-
-  if (what == "rms") {
-    rlang::check_installed("rmsfact")
-    what <- rmsfact::rmsfact()
-  }
-
-  if (what %in% fillerama_what) {
-    abort("sorry, fillerama API is gone, sorry :(")
-  }
-
-  what_bubbled <- bubble(x = what, width = width)
-  what_styled <- color_text(what_bubbled, what_color)
-  what_tail <- bubble_tail(who, thought_sym = thought_sym)
-  tail_styled <- color_text(what_tail, what_color)
-  who_styled <- color_text(who, by_color)
-  what_who <- paste(c(what_styled, tail_styled, who_styled), collapse = "\n")
-
-  if (type == "warning") {
-    if (nchar(what_who) < 100) {
-      wl <- 100
-    } else if (nchar(what_who) > 8170) {
-      wl <- 8170
-    } else {
-      wl <- nchar(what_who) + 1
-    }
-    warn_op <- options(warning.length = wl)
-    on.exit(options(warn_op))
-  }
-
-  switch(type,
-    message = message(what_who),
-    warning = warning(what_who),
-    print = cat(what_who),
-    string = what_who
-  )
-}
+#' @export
+#' @rdname say
+think <- say_think(thought_sym = "o", say_or_think = "think")

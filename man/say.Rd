@@ -2,6 +2,7 @@
 % Please edit documentation in R/say.R
 \name{say}
 \alias{say}
+\alias{think}
 \title{Sling messages and warnings with flair}
 \usage{
 say(
@@ -12,7 +13,18 @@ say(
   by_color = what_color,
   length = 18,
   fortune = NULL,
-  thought_sym = "o",
+  width = 60,
+  ...
+)
+
+think(
+  what = "Hello world!",
+  by = "cow",
+  type = NULL,
+  what_color = NULL,
+  by_color = what_color,
+  length = 18,
+  fortune = NULL,
   width = 60,
   ...
 )
@@ -61,9 +73,6 @@ to integer) specifying a fortune from the \code{fortunes} package - OR a
 string which is used as a pattern passed to \code{\link[=grep]{grep()}} (and a random one is
 selected upton multiple matches). Passed on to the \code{which} parameter of
 \code{fortunes::fortune}}
-
-\item{thought_sym}{(character) scalar character to use for the
-speech bubble tail (see \url{https://en.wikipedia.org/wiki/Speech_balloon})}
 
 \item{width}{(integer/numeric) width of each line. default: 60}
 
