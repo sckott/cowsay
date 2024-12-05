@@ -140,9 +140,9 @@ sort(names(animals))
 ``` r
 say("time")
 #> 
-#>  --------------------------- 
-#> < 2024-12-04 14:37:40.80489 >
-#>  --------------------------- 
+#>  ---------------------------- 
+#> < 2024-12-04 20:33:12.064934 >
+#>  ---------------------------- 
 #>       \
 #>        \
 #> 
@@ -297,8 +297,9 @@ From the catfacts API  at <https://catfact.ninja>
 say("catfact", "cat")
 #> 
 #>  -------------------------------------------------------- 
-#> / Julius Ceasar, Henri II, Charles XI, and Napoleon were \
-#> \ all afraid of cats.                                    /
+#> / In ancient Egypt, mummies were made of cats, and       \
+#> | embalmed mice were placed with them in their tombs. In |
+#> \ one ancient city, over 300,000 cat mummies were found. /
 #>  -------------------------------------------------------- 
 #>          \
 #>           \
@@ -323,14 +324,6 @@ From the a Boing Boing tweet on 2014-05-10 "twitter.com/BoingBoing/status/465170
 
 ``` r
 say("it's caturday", "longcat")
-#> Warning in sprintf(animals["longcat"], "%s", body): one argument not used by format '
-#>     .ﾊ,,ﾊ
-#>     ( ﾟωﾟ)
-#>     |つ  つ
-#> %s
-#>     U "  U
-#>         [BoingBoing]
-#>     '
 #> 
 #>  --------------- 
 #> < it's caturday >
@@ -341,7 +334,24 @@ say("it's caturday", "longcat")
 #>     .ﾊ,,ﾊ
 #>     ( ﾟωﾟ)
 #>     |つ  つ
-#> %s
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
+#>     |    |
 #>     U "  U
 #>         [BoingBoing]
 #> 
@@ -438,11 +448,11 @@ library(fortunes)
 say("fortune", "cat")
 #> 
 #>  --------------------------------------------------------- 
-#> / If we do that, I predict that the total amount of       \
-#> | r-help time wasted on it will exceed the CPU time saved |
-#> | by orders of magnitude.  Duncan Murdoch after a         |
-#> | specialized function speeding up detection of NAs was   |
-#> \ suggested for base R R-devel April 2006                 /
+#> / Maybe you should contact Microsoft, and get them to     \
+#> | modify their tools so they work on the R sources?       |
+#> | Duncan Murdoch answering the question if there is a way |
+#> | compiling the R sources using VisualC++ R-help April    |
+#> \ 2004                                                    /
 #>  --------------------------------------------------------- 
 #>          \
 #>           \
@@ -488,10 +498,16 @@ say(fortune = 100)
 say(fortune = "whatever")
 #> 
 #>  --------------------------------------------------------- 
-#> / Justin: Is there a function that just does whatever I'm \
-#> | thinking (aka whatever my homework question is...)?     |
-#> | Joshua Ulrich: That's the magic_pony function.  Justin  |
-#> \ and Joshua Ulrich stackoverflow.com June 2013           /
+#> / Tom Backer Johnsen: I have just started looking at R,   \
+#> | and are getting more and more irritated at myself for   |
+#> | not having done that before. However, one of the things |
+#> | I have not found in the documentation is some way of    |
+#> | preparing output from R for convenient formatting into  |
+#> | something like MS Word. Barry Rowlingson: Well whatever |
+#> | you do, don't start looking at LaTeX, because that will |
+#> | get you even more irritated at yourself for not having  |
+#> | done it before.  Tom Backer Johnsen and Barry           |
+#> \ Rowlingson R-help February 2006                         /
 #>  --------------------------------------------------------- 
 #>       \
 #>        \
@@ -664,19 +680,13 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  -------------------------------------------------------- 
-#> / Happy families are all alike; every unhappy family is  \
-#> | unhappy in its own way. Leo Tolstoy                    |
-#> |                                                        |
-#> | and every messy data is messy in its own way - it's    |
-#> | easy to define the characteristics of a clean dataset  |
-#> | (rows are observations, columns are variables, columns |
-#> | contain values of consistent types). If you start to   |
-#> | look at real life data you'll see every way you can    |
-#> | imagine data being messy (and many that you can't)!    |
-#> | Hadley Wickham answering 'in what way messy data sets  |
-#> \ are messy' R-help January 2008                         /
-#>  -------------------------------------------------------- 
+#>  --------------------------------------------------------- 
+#> / I'm not sure I'd trust any computer recommendation from \
+#> | 1976, no matter how famous the authors are.  Peter      |
+#> | Dalgaard after Samuel Edward Kemp cited a               |
+#> | recommendation about nonlinear least squares computer   |
+#> \ programs from 'Box-Jenkins, 1976' R-help January 2005   /
+#>  --------------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -701,13 +711,12 @@ say("fortune", by = "monkey")
 say("fortune", by = "daemon")
 #> 
 #>  --------------------------------------------------------- 
-#> / It seems to me against the spirit of Open Source        \
-#> | software to attempt to monitor distribution. We could   |
-#> | ask R to 'call home' on first use (in the way e.g. pine |
-#> | does) but I suspect many users would find that          |
-#> | objectionable.  Brian D. Ripley in a discussion about   |
-#> | trying to estimate the number of R users R-help April   |
-#> \ 2004                                                    /
+#> / What sort of editor would overlook this clear and       \
+#> | demonstrable message leaping out from the data in       |
+#> | favour of some arcane argument about "types of sums of  |
+#> | squares"? Several answers come to mind: A power freak,  |
+#> | a SAS afficianado, an idiot.  Bill Venables R-help July |
+#> \ 2007                                                    /
 #>  --------------------------------------------------------- 
 #>                  \
 #>                   \

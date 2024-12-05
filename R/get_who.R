@@ -36,7 +36,7 @@ make_longcat <- function(length) {
   if (length > 0) {
     body <- paste(rep("    |    |\n", length), collapse = "")
     body <- gsub("\n$", "", body)
-    sprintf(animals["longcat"], "%s", body)
+    sprintf(animals[["longcat"]], body)
   } else {
     animals["shortcat"]
   }

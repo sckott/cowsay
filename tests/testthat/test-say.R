@@ -57,5 +57,29 @@ test_that("say fails well", {
 
 test_that("say fails with certain characters on windows", {
   skip_on_os(c("mac", "linux", "solaris"))
-  expect_error(say("Hi", by = "longcat"), "If you're on Windows, you can't use")
+  expect_error(
+    say("Hi", by = "longcat"),
+    "If you're on Windows, you can't use"
+  )
+})
+
+length_long_cat <- function(x) {
+  z <- strsplit(x, "\n")[[1]]
+  length(grep("    \\|    \\|", z))
+}
+
+test_that("longcat works", {
+  expect_equal(
+    length_long_cat(
+      say("it's caturday", "longcat", length = 11, type = "string")
+    ),
+    11
+  )
+
+  expect_equal(
+    length_long_cat(
+      say("it's caturday", "longcat", length = 1000, type = "string")
+    ),
+    1000
+  )
 })
