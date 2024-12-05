@@ -1,7 +1,7 @@
 ## Test environments
 
-* local macOS install, R 4.3.1
-* ubuntu 22.04 (on github actions), R 4.3.1
+* local macOS install, R 4.4.2
+* ubuntu latest (on github actions), R 4.4.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -10,7 +10,7 @@
 
 ---
 
-This version adds use of the special sential _PACKAGE as requested, and some other minor changes.
+This version adds some new features and makes improvements.
 
 Thanks! 
 Scott Chamberlain
