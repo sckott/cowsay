@@ -5,11 +5,13 @@ cowsay 1.0.0
 
 * Though this may not cause your code to fail/etc. the bubbles have changed to match that of the original cowsay program created in Perl - both the `say` function and the new `think` function. This is breaking in the sense that the output of `say` is fundamentally different assuming you care about ascii art.
 * `say` color args change: `by_color` param now by default is whatever is set for `what_color` - allowing for setting one color for both the quote and the animal. If no colors are supplied behavior is unchanged from previous version. (#85)
+* Imports changed. `rmsfact` and `fortunes` were previously Imports but are now Suggests because they are not in fact needed for the main use case of the package. Simply load them if you need them and this package helps when needed. 
 
 ### NEW FEATURES
 
 * new function `think()` to duplicate what cowthink function does with command line cowsay - different bubble sides and tail (see examples) (#93)
-* A user (@oganm) suggested removing the speech bubble from the ascii art - and we agree! `say` has been refactored, now using separate new functions `bubble_say`/`bubble_think` and `bubble_tail` to construct the quote/speech bubble and its tail. You can use these separate new functions yourself to manually do what `say` and `think` do. See the docs for details (`?bubble_say`/`?bubble_tail`) (#67)
+* A user (@oganm) suggested removing the speech bubble from the ascii art - and we agree! `say` has been refactored, now using separate new functions `bubble_say`/`bubble_think` and `bubble_tail` to construct the quote/speech bubble and its tail. The tail from the bubble to the animal has changed position so that it attempts to be at a position that makes sense for the specific animal. You can use these separate new functions yourself to manually do what `say` and `think` do. See the docs for details (`?bubble_say`/`?bubble_tail`) (#67)
+* New special variants of cows added to match the original cowsay command line flags -b, -d, -g, -s, -t, -w, and -y, which refer to Borg, dead, greedy, sleepy, tired, wired, and young appearance modes for the cow, respectively. Instead of adding a new parameter for this (trying to avoid parameter bloat) - and since this is just for cow - you can get these cow variants by supplying for animal cow + dead as "cow_dead" for example, instead of just "cow".
 
 ### MINOR IMPROVEMENTS
 
