@@ -1,3 +1,26 @@
+cowsay 1.0.0
+============
+
+### BREAKING CHANGES
+
+* Though this may not cause your code to fail/etc. the bubbles have changed to match that of the original cowsay program created in Perl - both the `say` function and the new `think` function. This is breaking in the sense that the output of `say` is fundamentally different assuming you care about ascii art.
+* `say` color args change: `by_color` param now by default is whatever is set for `what_color` - allowing for setting one color for both the quote and the animal. If no colors are supplied behavior is unchanged from previous version. (#85)
+
+### NEW FEATURES
+
+* new function `think()` to duplicate what cowthink function does with command line cowsay - different bubble sides and tail (see examples) (#93)
+* A user (@oganm) suggested removing the speech bubble from the ascii art - and we agree! `say` has been refactored, now using separate new functions `bubble_say`/`bubble_think` and `bubble_tail` to construct the quote/speech bubble and its tail. You can use these separate new functions yourself to manually do what `say` and `think` do. See the docs for details (`?bubble_say`/`?bubble_tail`) (#67)
+
+### MINOR IMPROVEMENTS
+
+* Added notes about history of cowsay in readme (#94)
+* remove `multicolor` package for good as it's not coming back to CRAN (#90)
+
+### BUG FIXES
+
+* stegosaurus fixed! apparently the ascii art for the stegosaurus in this package was a diplodocus. thanks @stochastics ! (#88)
+
+
 cowsay 0.9.0
 ============
 

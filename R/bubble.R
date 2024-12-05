@@ -1,6 +1,7 @@
 #' Thought/speech bubble/balloon
 #'
 #' @export
+#' @family bubble
 #' @param x (character) a character vector
 #' @param width (integer/numeric) width of each line. default: 60
 #' @return character vector of length greater than the input `x`
@@ -87,6 +88,7 @@ bubble_think <- function(x, width = 60) {
 #' Make the tail part of a thought bubble
 #'
 #' @export
+#' @family bubble
 #' @param animal (character) a string
 #' @param thought_sym (character) scalar character to use for the
 #' speech bubble tail (see <https://en.wikipedia.org/wiki/Speech_balloon>).

@@ -46,3 +46,8 @@ text_style <- crayon::make_style(text_color)
 text_style(bubble_say(quote))
 \dontshow{\}) # examplesIf}
 }
+\seealso{
+Other bubble: 
+\code{\link{bubble_tail}()}
+}
+\concept{bubble}

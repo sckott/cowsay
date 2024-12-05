@@ -4,16 +4,17 @@
   "identifier": "cowsay",
   "description": "Allows printing of character strings as messages/warnings/etc. with ASCII animals, including cats, cows, frogs, chickens, ghosts, and more.",
   "name": "cowsay: Messages, Warnings, Strings with Ascii Animals",
+  "relatedLink": "https://sckott.github.io/cowsay/",
   "codeRepository": "https://github.com/sckott/cowsay",
   "issueTracker": "https://github.com/sckott/cowsay/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.1 (2023-06-16)",
+  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -104,6 +105,11 @@
       "@type": "Person",
       "givenName": "Marion",
       "familyName": "Louveaux"
+    },
+    {
+      "@type": "Person",
+      "givenName": "David",
+      "familyName": "Schoch"
     }
   ],
   "maintainer": [
@@ -117,15 +123,27 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "curl",
-      "name": "curl",
+      "identifier": "fortunes",
+      "name": "fortunes",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=curl"
+      "sameAs": "https://CRAN.R-project.org/package=fortunes"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmsfact",
+      "name": "rmsfact",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmsfact"
     },
     {
       "@type": "SoftwareApplication",
@@ -191,29 +209,17 @@
     },
     "2": {
       "@type": "SoftwareApplication",
-      "identifier": "fortunes",
-      "name": "fortunes",
+      "identifier": "rlang",
+      "name": "rlang",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=fortunes"
-    },
-    "3": {
-      "@type": "SoftwareApplication",
-      "identifier": "rmsfact",
-      "name": "rmsfact",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=rmsfact"
+      "sameAs": "https://CRAN.R-project.org/package=rlang"
     },
     "SystemRequirements": null
   },
-  "fileSize": "334.382KB"
+  "fileSize": "391.52KB"
 }

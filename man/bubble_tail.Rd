@@ -40,3 +40,8 @@ cat(bubble_tail2(59), sep = "\n")
 cat(bubble_tail2(11), sep = "\n")
 cat(bubble_tail2(11, "\%"), sep = "\n")
 }
+\seealso{
+Other bubble: 
+\code{\link{bubble_say}()}
+}
+\concept{bubble}
