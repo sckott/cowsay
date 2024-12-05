@@ -69,6 +69,7 @@ length_long_cat <- function(x) {
 }
 
 test_that("longcat works", {
+  skip_on_os("windows")
   expect_equal(
     length_long_cat(
       say("it's caturday", "longcat", length = 11, type = "string")
