@@ -8,8 +8,8 @@
 <title>Introduction to cowsay • cowsay</title>
 <script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to cowsay">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">cowsay</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@ Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman,
 Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo
 Sonego, and Philipp Boersch-Supan</h4>
             
-            <h4 data-toc-skip class="date">2024-10-31</h4>
+            <h4 data-toc-skip class="date">2024-12-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sckott/cowsay/blob/main/vignettes/cowsay.Rmd" class="external-link"><code>vignettes/cowsay.Rmd</code></a></small>
       <div class="d-none name"><code>cowsay.Rmd</code></div>
@@ -84,7 +84,8 @@ character strings with various animals and other creatures.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"cowsay"</span><span class="op">)</span></span></code></pre></div>
 <p>or dev version from GitHub</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"sckott/cowsay"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"sckott/cowsay"</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sckott/cowsay" class="external-link">cowsay</a></span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -94,30 +95,29 @@ character strings with various animals and other creatures.</p>
 <p>The animals, and other ascii creatures, are all in a single named
 character vector that is exported from the package. Thus, you can access
 each animal yourself, and do whatever you want with it.</p>
-<p>As of this writing, there are 49 animals.</p>
+<p>As of this writing, there are 56 animals.</p>
 <p>The names of the animals:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        </span></span>
 <span><span class="co">#&gt;  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     </span></span>
-<span><span class="co">#&gt; [11] "chuck"        "clippy"       "cow"          "daemon"       "duck"        </span></span>
-<span><span class="co">#&gt; [16] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        </span></span>
-<span><span class="co">#&gt; [21] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   </span></span>
-<span><span class="co">#&gt; [26] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         </span></span>
-<span><span class="co">#&gt; [31] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       </span></span>
-<span><span class="co">#&gt; [36] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      </span></span>
-<span><span class="co">#&gt; [41] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   </span></span>
-<span><span class="co">#&gt; [46] "turkey"       "whale"        "wolf"         "yoda"</span></span></code></pre></div>
+<span><span class="co">#&gt; [11] "chuck"        "clippy"       "cow"          "cow_borg"     "cow_dead"    </span></span>
+<span><span class="co">#&gt; [16] "cow_greedy"   "cow_sleepy"   "cow_tired"    "cow_wired"    "cow_young"   </span></span>
+<span><span class="co">#&gt; [21] "daemon"       "duck"         "duckling"     "egret"        "endlesshorse"</span></span>
+<span><span class="co">#&gt; [26] "facecat"      "fish"         "frog"         "ghost"        "goldfish"    </span></span>
+<span><span class="co">#&gt; [31] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat"  "monkey"      </span></span>
+<span><span class="co">#&gt; [36] "mushroom"     "owl"          "pig"          "poop"         "pumpkin"     </span></span>
+<span><span class="co">#&gt; [41] "rabbit"       "shark"        "shortcat"     "signbunny"    "smallcat"    </span></span>
+<span><span class="co">#&gt; [46] "snowman"      "spider"       "squirrel"     "squirrel2"    "stegosaurus" </span></span>
+<span><span class="co">#&gt; [51] "stretchycat"  "trilobite"    "turkey"       "whale"        "wolf"        </span></span>
+<span><span class="co">#&gt; [56] "yoda"</span></span></code></pre></div>
 <p>For example, access the cow</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">cow</span> <span class="op">&lt;-</span> <span class="va">animals</span><span class="op">[[</span><span class="st">'cow'</span><span class="op">]</span><span class="op">]</span></span>
+<code class="sourceCode R"><span><span class="va">cow</span> <span class="op">&lt;-</span> <span class="va">animals</span><span class="op">[[</span><span class="st">"cow"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">cow</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ----- </span></span>
-<span><span class="co">#&gt; %s </span></span>
-<span><span class="co">#&gt;  ------ </span></span>
-<span><span class="co">#&gt;     \   ^__^ </span></span>
-<span><span class="co">#&gt;      \  (oo)\ ________ </span></span>
+<span><span class="co">#&gt;         ^__^ </span></span>
+<span><span class="co">#&gt;         (oo)\ ________ </span></span>
 <span><span class="co">#&gt;         (__)\         )\ /\ </span></span>
 <span><span class="co">#&gt;              ||------w|</span></span>
 <span><span class="co">#&gt;              ||      ||</span></span></code></pre></div>
@@ -131,11 +131,11 @@ you want. Some examples:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"why did the chicken cross the road"</span>, <span class="st">"chicken"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ----- </span></span>
-<span><span class="co">#&gt; why did the chicken cross the road </span></span>
-<span><span class="co">#&gt;  ------ </span></span>
-<span><span class="co">#&gt;     \   </span></span>
-<span><span class="co">#&gt;      \</span></span>
+<span><span class="co">#&gt;  ------------------------------------ </span></span>
+<span><span class="co">#&gt; &lt; why did the chicken cross the road &gt;</span></span>
+<span><span class="co">#&gt;  ------------------------------------ </span></span>
+<span><span class="co">#&gt;       \</span></span>
+<span><span class="co">#&gt;        \</span></span>
 <span><span class="co">#&gt;          _</span></span>
 <span><span class="co">#&gt;        _/ }</span></span>
 <span><span class="co">#&gt;       `&gt;' \</span></span>
@@ -151,11 +151,12 @@ you want. Some examples:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"boo!"</span>, <span class="st">"ghost"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ----- </span></span>
-<span><span class="co">#&gt; boo! </span></span>
 <span><span class="co">#&gt;  ------ </span></span>
-<span><span class="co">#&gt;     \   </span></span>
-<span><span class="co">#&gt;      \</span></span>
+<span><span class="co">#&gt; &lt; boo! &gt;</span></span>
+<span><span class="co">#&gt;  ------ </span></span>
+<span><span class="co">#&gt;   \</span></span>
+<span><span class="co">#&gt;    \</span></span>
+<span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;      .-.</span></span>
 <span><span class="co">#&gt;     (o o)</span></span>
 <span><span class="co">#&gt;     | O \</span></span>
@@ -165,45 +166,33 @@ you want. Some examples:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"nope, don't do that"</span>, type <span class="op">=</span> <span class="st">"warning"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in say("nope, don't do that", type = "warning"): </span></span>
-<span><span class="co">#&gt;  -------------- </span></span>
-<span><span class="co">#&gt; nope, don't do that </span></span>
-<span><span class="co">#&gt;  --------------</span></span>
-<span><span class="co">#&gt;     \</span></span>
+<span><span class="co">#&gt;  --------------------- </span></span>
+<span><span class="co">#&gt; &lt; nope, don't do that &gt;</span></span>
+<span><span class="co">#&gt;  --------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
-<span><span class="co">#&gt;         \</span></span>
-<span><span class="co">#&gt;             |\___/|</span></span>
-<span><span class="co">#&gt;           ==) ^Y^ (==</span></span>
-<span><span class="co">#&gt;             \  ^  /</span></span>
-<span><span class="co">#&gt;              )=*=(</span></span>
-<span><span class="co">#&gt;             /     \</span></span>
-<span><span class="co">#&gt;             |     |</span></span>
-<span><span class="co">#&gt;            /| | | |\</span></span>
-<span><span class="co">#&gt;            \| | |_|/\</span></span>
-<span><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span><span class="co">#&gt;                \_)</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;        \</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         ^__^ </span></span>
+<span><span class="co">#&gt;         (oo)\ ________ </span></span>
+<span><span class="co">#&gt;         (__)\         )\ /\ </span></span>
+<span><span class="co">#&gt;              ||------w|</span></span>
+<span><span class="co">#&gt;              ||      ||</span></span></code></pre></div>
 <p>There’s the special <code>time</code>, that will print out the
 time</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">'time'</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"time"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  -------------- </span></span>
-<span><span class="co">#&gt; 2024-10-31 18:28:43.283698 </span></span>
-<span><span class="co">#&gt;  --------------</span></span>
-<span><span class="co">#&gt;     \</span></span>
+<span><span class="co">#&gt;  ---------------------------- </span></span>
+<span><span class="co">#&gt; &lt; 2024-12-05 06:16:58.533936 &gt;</span></span>
+<span><span class="co">#&gt;  ---------------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
-<span><span class="co">#&gt;         \</span></span>
-<span><span class="co">#&gt;             |\___/|</span></span>
-<span><span class="co">#&gt;           ==) ^Y^ (==</span></span>
-<span><span class="co">#&gt;             \  ^  /</span></span>
-<span><span class="co">#&gt;              )=*=(</span></span>
-<span><span class="co">#&gt;             /     \</span></span>
-<span><span class="co">#&gt;             |     |</span></span>
-<span><span class="co">#&gt;            /| | | |\</span></span>
-<span><span class="co">#&gt;            \| | |_|/\</span></span>
-<span><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span><span class="co">#&gt;                \_)</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;        \</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         ^__^ </span></span>
+<span><span class="co">#&gt;         (oo)\ ________ </span></span>
+<span><span class="co">#&gt;         (__)\         )\ /\ </span></span>
+<span><span class="co">#&gt;              ||------w|</span></span>
+<span><span class="co">#&gt;              ||      ||</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="its-how-you-say-it">It’s how you say it<a class="anchor" aria-label="anchor" href="#its-how-you-say-it"></a>
@@ -214,11 +203,14 @@ warning</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ----- </span></span>
-<span><span class="co">#&gt; hello world </span></span>
-<span><span class="co">#&gt;  ------ </span></span>
-<span><span class="co">#&gt;     \   ^__^ </span></span>
-<span><span class="co">#&gt;      \  (oo)\ ________ </span></span>
+<span><span class="co">#&gt;  ------------- </span></span>
+<span><span class="co">#&gt; &lt; hello world &gt;</span></span>
+<span><span class="co">#&gt;  ------------- </span></span>
+<span><span class="co">#&gt;       \</span></span>
+<span><span class="co">#&gt;        \</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         ^__^ </span></span>
+<span><span class="co">#&gt;         (oo)\ ________ </span></span>
 <span><span class="co">#&gt;         (__)\         )\ /\ </span></span>
 <span><span class="co">#&gt;              ||------w|</span></span>
 <span><span class="co">#&gt;              ||      ||</span></span></code></pre></div>
@@ -226,18 +218,21 @@ warning</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span>, type <span class="op">=</span> <span class="st">"warning"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in say("hello world", by = "cow", type = "warning"): </span></span>
-<span><span class="co">#&gt;  ----- </span></span>
-<span><span class="co">#&gt; hello world </span></span>
-<span><span class="co">#&gt;  ------ </span></span>
-<span><span class="co">#&gt;     \   ^__^ </span></span>
-<span><span class="co">#&gt;      \  (oo)\ ________ </span></span>
+<span><span class="co">#&gt;  ------------- </span></span>
+<span><span class="co">#&gt; &lt; hello world &gt;</span></span>
+<span><span class="co">#&gt;  ------------- </span></span>
+<span><span class="co">#&gt;       \</span></span>
+<span><span class="co">#&gt;        \</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         ^__^ </span></span>
+<span><span class="co">#&gt;         (oo)\ ________ </span></span>
 <span><span class="co">#&gt;         (__)\         )\ /\ </span></span>
 <span><span class="co">#&gt;              ||------w|</span></span>
 <span><span class="co">#&gt;              ||      ||</span></span></code></pre></div>
 <p>String</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"hello world"</span>, by <span class="op">=</span> <span class="st">"cow"</span>, type <span class="op">=</span> <span class="st">"string"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "\n ----- \nhello world \n ------ \n    \\   ^__^ \n     \\  (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "\n ------------- \n&lt; hello world &gt;\n ------------- \n      \\\n       \\\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
