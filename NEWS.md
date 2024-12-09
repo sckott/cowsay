@@ -1,3 +1,10 @@
+cowsay (development version)
+============
+
+### MINOR IMPROVEMENTS
+
+* change top of bubble to underscores from hyphens (#98)
+
 cowsay 1.0.0
 ============
 

@@ -25,7 +25,8 @@
 #' text_style <- crayon::make_style(text_color)
 #' text_style(bubble_say(quote))
 bubble_say <- function(x, width = 60) {
-  top <- bottom <- "-"
+  top <-  "_"
+  bottom <- "-"
   side <- "|"
   empty_to_avoid_rlang_header <- ""
   added_ws <- 2L
@@ -61,7 +62,8 @@ bubble_say <- function(x, width = 60) {
 #' @export
 #' @rdname bubble_say
 bubble_think <- function(x, width = 60) {
-  top <- bottom <- "-"
+  top <-  "_"
+  bottom <- "-"
   left <- "("
   right <- ")"
   empty_to_avoid_rlang_header <- ""

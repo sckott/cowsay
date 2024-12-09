@@ -140,8 +140,8 @@ sort(names(animals))
 ``` r
 say("time")
 #> 
-#>  ---------------------------- 
-#> < 2024-12-04 20:33:12.064934 >
+#>  ____________________________ 
+#> < 2024-12-09 09:56:18.661392 >
 #>  ---------------------------- 
 #>       \
 #>        \
@@ -157,7 +157,7 @@ say("time")
 ``` r
 say("ain't that some shit", "chicken")
 #> 
-#>  ---------------------- 
+#>  ______________________ 
 #> < ain't that some shit >
 #>  ---------------------- 
 #>       \
@@ -249,7 +249,7 @@ say(
 ``` r
 say("hell no!")
 #> 
-#>  ---------- 
+#>  __________ 
 #> < hell no! >
 #>  ---------- 
 #>       \
@@ -267,7 +267,7 @@ say("hell no!")
 ``` r
 say("hell no!", type = "warning")
 #> Warning in say("hell no!", type = "warning"): 
-#>  ---------- 
+#>  __________ 
 #> < hell no! >
 #>  ---------- 
 #>       \
@@ -284,7 +284,7 @@ say("hell no!", type = "warning")
 
 ``` r
 say("hell no!", type = "string")
-#> [1] "\n ---------- \n< hell no! >\n ---------- \n      \\\n       \\\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
+#> [1] "\n __________ \n< hell no! >\n ---------- \n      \\\n       \\\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
 ```
 
 
@@ -296,11 +296,13 @@ From the catfacts API  at <https://catfact.ninja>
 ``` r
 say("catfact", "cat")
 #> 
-#>  -------------------------------------------------------- 
-#> / In ancient Egypt, mummies were made of cats, and       \
-#> | embalmed mice were placed with them in their tombs. In |
-#> \ one ancient city, over 300,000 cat mummies were found. /
-#>  -------------------------------------------------------- 
+#>  _________________________________________________________ 
+#> / During the time of the Spanish Inquisition, Pope        \
+#> | Innocent VIII condemned cats as evil and thousands of   |
+#> | cats were burned. Unfortunately, the widespread killing |
+#> | of cats led to an explosion of the rat population,      |
+#> \ which exacerbated the effects of the Black Death.       /
+#>  --------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -325,7 +327,7 @@ From the a Boing Boing tweet on 2014-05-10 "twitter.com/BoingBoing/status/465170
 ``` r
 say("it's caturday", "longcat")
 #> 
-#>  --------------- 
+#>  _______________ 
 #> < it's caturday >
 #>  --------------- 
 #>  \
@@ -363,7 +365,7 @@ say("it's caturday", "longcat")
 ``` r
 say("NO!", by = "grumpycat")
 #> 
-#>  ----- 
+#>  _____ 
 #> < NO! >
 #>  ----- 
 #>      \
@@ -378,7 +380,7 @@ say("NO!", by = "grumpycat")
 ``` r
 say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
 #> 
-#>  -------------------------------- 
+#>  ________________________________ 
 #> < WOKE UP TODAY, IT WAS TERRIBLE >
 #>  -------------------------------- 
 #>      \
@@ -393,7 +395,7 @@ say("WOKE UP TODAY, IT WAS TERRIBLE", by = "grumpycat")
 ``` r
 say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
 #> 
-#>  ------------------------------ 
+#>  ______________________________ 
 #> < I HAD FUN ONCE, IT WAS AWFUL >
 #>  ------------------------------ 
 #>      \
@@ -410,7 +412,7 @@ say("I HAD FUN ONCE, IT WAS AWFUL", by = "grumpycat")
 ``` r
 say(by = "signbunny")
 #> 
-#>  -------------- 
+#>  ______________ 
 #> < Hello world! >
 #>  -------------- 
 #> \
@@ -429,7 +431,7 @@ say(by = "signbunny")
 ``` r
 say(by = "fish")
 #> 
-#>  -------------- 
+#>  ______________ 
 #> < Hello world! >
 #>  -------------- 
 #>        \
@@ -447,11 +449,12 @@ say(by = "fish")
 library(fortunes)
 say("fortune", "cat")
 #> 
-#>  --------------------------------------------------------- 
-#> / Maybe you should contact Microsoft, and get them to     \
-#> | modify their tools so they work on the R sources?       |
-#> | Duncan Murdoch answering the question if there is a way |
-#> | compiling the R sources using VisualC++ R-help April    |
+#>  _________________________________________________________ 
+#> / Zhu Wang: I am trying to create a library which uses    \
+#> | some Fortran source files [...] Douglas Bates: Someone  |
+#> | named Martin Maechler will shortly be sending you email |
+#> | regarding the distinction between 'library' and         |
+#> | 'package' :-) Zhu Wang and Douglas Bates R-help May     |
 #> \ 2004                                                    /
 #>  --------------------------------------------------------- 
 #>          \
@@ -476,7 +479,7 @@ You can also pick a particular fortune by number or regex search - if the `fortu
 ``` r
 say(fortune = 100)
 #> 
-#>  --------------------------------------------------------- 
+#>  _________________________________________________________ 
 #> / I'm not sure I'd trust any computer recommendation from \
 #> | 1976, no matter how famous the authors are.  Peter      |
 #> | Dalgaard after Samuel Edward Kemp cited a               |
@@ -497,7 +500,7 @@ say(fortune = 100)
 ``` r
 say(fortune = "whatever")
 #> 
-#>  --------------------------------------------------------- 
+#>  _________________________________________________________ 
 #> / Tom Backer Johnsen: I have just started looking at R,   \
 #> | and are getting more and more irritated at myself for   |
 #> | not having done that before. However, one of the things |
@@ -528,7 +531,7 @@ say("Hi there :)", by = "trilobite")
 
 ````
 #> 
-#>  ------------- 
+#>  _____________ 
 #> < Hi there :) >
 #>  ------------- 
 #>        \
@@ -552,7 +555,7 @@ say("Hi there :)", by = "trilobite")
 ``` r
 say("Q: What do you call a solitary shark\nA: A lone shark", by = "shark")
 #> 
-#>  ------------------------------------------------------ 
+#>  ______________________________________________________ 
 #> < Q: What do you call a solitary shark A: A lone shark >
 #>  ------------------------------------------------------ 
 #>            \
@@ -594,7 +597,7 @@ say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 
 `````
 #> 
-#>  -------------------------------------------------------- 
+#>  ________________________________________________________ 
 #> < Q: What do you call a single buffalo? A: A buffalonely >
 #>  -------------------------------------------------------- 
 #>                 \
@@ -621,7 +624,7 @@ say("Q: What do you call a single buffalo?\nA: A buffalonely", by = "buffalo")
 ``` r
 say(fortune = 59, by = "clippy")
 #> 
-#>  -------------------------------------------------------- 
+#>  ________________________________________________________ 
 #> / Let's not kid ourselves: the most widely used piece of \
 #> | software for statistics is Excel.  Brian D. Ripley     |
 #> | 'Statistical Methods Need Software: A View of          |
@@ -654,7 +657,7 @@ say("fortune", by = "yoda")
 ``` r
 say("hi, i'm a bat", by = "bat")
 #> 
-#>  --------------- 
+#>  _______________ 
 #> < hi, i'm a bat >
 #>  --------------- 
 #>                \
@@ -680,13 +683,10 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  --------------------------------------------------------- 
-#> / I'm not sure I'd trust any computer recommendation from \
-#> | 1976, no matter how famous the authors are.  Peter      |
-#> | Dalgaard after Samuel Edward Kemp cited a               |
-#> | recommendation about nonlinear least squares computer   |
-#> \ programs from 'Box-Jenkins, 1976' R-help January 2005   /
-#>  --------------------------------------------------------- 
+#>  ___________________________________________________ 
+#> / /* some real insanity to keep Duncan sane */ Luke \
+#> \ Tierney in src/main/context.c June 2001           /
+#>  --------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -710,13 +710,13 @@ say("fortune", by = "monkey")
 ``` r
 say("fortune", by = "daemon")
 #> 
-#>  --------------------------------------------------------- 
-#> / What sort of editor would overlook this clear and       \
-#> | demonstrable message leaping out from the data in       |
-#> | favour of some arcane argument about "types of sums of  |
-#> | squares"? Several answers come to mind: A power freak,  |
-#> | a SAS afficianado, an idiot.  Bill Venables R-help July |
-#> \ 2007                                                    /
+#>  _________________________________________________________ 
+#> / Achim Zeileis: Other visualizations of departures from  \
+#> | indepence include mosaicplots with shading or           |
+#> | association plots. See mosaicplot() and assocplot() and |
+#> | the package vcd. Peter Dalgaard: I see that you've      |
+#> | taken initive to abbriate statiscal concepts...  Achim  |
+#> \ Zeileis and Peter Dalgaard R-help January 2005          /
 #>  --------------------------------------------------------- 
 #>                  \
 #>                   \
@@ -747,7 +747,7 @@ say("fortune", by = "daemon")
 ``` r
 say("je ne regrette rien", by = "egret")
 #> 
-#>  --------------------- 
+#>  _____________________ 
 #> < je ne regrette rien >
 #>  --------------------- 
 #>         \
@@ -816,7 +816,7 @@ endless_horse()
 library("magrittr")
 "I HAD FUN ONCE, IT WAS AWFUL" %>% say("grumpycat")
 #> 
-#>  ------------------------------ 
+#>  ______________________________ 
 #> < I HAD FUN ONCE, IT WAS AWFUL >
 #>  ------------------------------ 
 #>      \
