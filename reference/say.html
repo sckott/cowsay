@@ -80,18 +80,17 @@
 
 
 <dt id="arg-by">by<a class="anchor" aria-label="anchor" href="#arg-by"></a></dt>
-<dd><p>(character) Type of thing, one of cow, chicken, chuck,
-clippy, poop, bigcat, ant, pumpkin, ghost, spider, rabbit, pig,
-snowman, frog, hypnotoad, shortcat, longcat, fish, signbunny,
-facecat, behindcat, stretchycat, anxiouscat, longtailcat, cat,
-trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom,
-endlesshorse, bat, bat2, turkey, monkey, daemon, egret, duckling,
-duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
-whale, wolf, or rms for Richard Stallman.
-Alternatively, use "random" to have your message spoken by a random
-character.
-We use <code><a href="https://rlang.r-lib.org/reference/arg_match.html" class="external-link">rlang::arg_match()</a></code> internally, which does not support partial
-matching, so you'll get an informative error upon a partial match.</p></dd>
+<dd><p>(character) Who should say or think it? One of: alligator, ant,
+anxiouscat, bat, bat2, beavis, behindcat, bigcat, blowfish, buffalo, cat,
+chicken, chuck, clippy, cow, cow_borg, cow_dead, cow_greedy, cow_sleepy,
+cow_tired, cow_wired, cow_young, daemon, dragon, duck, duckling, egret,
+endlesshorse, facecat, fish, frog, ghost, goldfish, grumpycat, hypnotoad,
+longcat, longtailcat, monkey, mushroom, owl, pig, poop, pumpkin, rabbit,
+rms, shark, shortcat, signbunny, smallcat, snowman, spider, squirrel,
+squirrel2, stegosaurus, stretchycat, trilobite, turkey, whale, wolf, yoda.
+Alternatively, use 'random' to have your message spoken by a random
+character.  We use <code><a href="https://rlang.r-lib.org/reference/arg_match.html" class="external-link">rlang::arg_match()</a></code> internally, which does not support
+partial matching, so you'll get an informative error upon a partial match.</p></dd>
 
 
 <dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
@@ -203,7 +202,7 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"time"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ____________________________ </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt; 2025-01-22 17:47:51.670337 &gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt; 2025-03-26 21:21:58.574172 &gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---------------------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        \</span>
@@ -232,7 +231,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             `;-..'</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             _| _|</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             /` /` [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"ain't that some shit"</span>, <span class="st">"poop"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ______________________ </span>
@@ -265,7 +263,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            \| | |_|/\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"boo!"</span>, <span class="st">"pumpkin"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ______ </span>
@@ -283,7 +280,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         ;   | ''--...--'' |  ;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          \  ''---.....--''  /</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           ''*-.,_______,.-*'  [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"hot diggity"</span>, <span class="st">"frog"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  _____________ </span>
@@ -298,7 +294,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   __\ ( (     ) ) /__</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   )   /\ \._./ /\   (</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    )_/ /|\   /|\ \_(  [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Vary type of output, default calls message()</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"hell no!"</span><span class="op">)</span></span></span>
@@ -358,7 +353,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              `-. `.`.``-----``--,  .'</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                |/`.\`'        ,','); SSt</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                    `         (/  (/</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Trilobite</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span>by <span class="op">=</span> <span class="st">"trilobite"</span><span class="op">)</span></span></span>
@@ -378,7 +372,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        &lt;'``(.)``'&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    sk   &lt;``\_/``&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          `'---'`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Shark</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"Q: What do you call a solitary shark\nA: A lone shark"</span>, by <span class="op">=</span> <span class="st">"shark"</span><span class="op">)</span></span></span>
@@ -413,7 +406,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       ,-' _.-'        \  /    |/'-._...--'</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      :--``             )/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   '</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Buffalo</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"Q: What do you call a single buffalo?\nA: A buffalonely"</span>, by <span class="op">=</span> <span class="st">"buffalo"</span><span class="op">)</span></span></span>
@@ -436,7 +428,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             `)_/      \  \  )    ( &gt;  ( &gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                        \( \(     |/   |/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           mic &amp; dwb  /_(/_(    /_(  /_(</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Using fortunes</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">fortunes</span><span class="op">)</span></span></span>
@@ -484,7 +475,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          \_\\  //_/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           .'/()\'.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            \\  //  [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"facecat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  _________________________________________________________ </span>
@@ -499,7 +489,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          (O o)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         =(:^:)=</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            U      [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"behindcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  _________________________________________________________ </span>
@@ -522,7 +511,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               ( (</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                ) )</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               (_(</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"smallcat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  _________________________________________________________ </span>
@@ -537,7 +525,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          /\_/\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         ( o.o )</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          &gt; ^ &lt;      [nosig]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"monkey"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ________________________________________________________ </span>
@@ -722,10 +709,11 @@ properly in R on Windows.</p>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jeroen.r-universe.dev/jsonlite" class="external-link">jsonlite</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">say</span><span class="op">(</span><span class="st">"catfact"</span>, <span class="st">"cat"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  _____________________________________________________ </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> / British cat owners spend roughly 550 million pounds \</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> \ yearly on cat food.                                 /</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  ----------------------------------------------------- </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ______________________________________________________ </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> / A cat's jaw has only up and down motion; it does not \</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> | have any lateral, side to side motion, like dogs and |</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> \ humans.                                              /</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  ------------------------------------------------------ </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           \</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -739,7 +727,6 @@ properly in R on Windows.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            \| | |_|/\</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       jgs  //_// ___/</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                \_)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

@@ -66,7 +66,7 @@ Kiyoko Gotanda, Carson Sievert, Andy Teucher, Karl Broman,
 Franz-Sebastian Krah, Lucy D’Agostino McGowan, Guangchuang Yu, Paolo
 Sonego, and Philipp Boersch-Supan</h4>
             
-            <h4 data-toc-skip class="date">2025-01-22</h4>
+            <h4 data-toc-skip class="date">2025-03-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/sckott/cowsay/blob/main/vignettes/cowsay.Rmd" class="external-link"><code>vignettes/cowsay.Rmd</code></a></small>
       <div class="d-none name"><code>cowsay.Rmd</code></div>
@@ -95,25 +95,14 @@ character strings with various animals and other creatures.</p>
 <p>The animals, and other ascii creatures, are all in a single named
 character vector that is exported from the package. Thus, you can access
 each animal yourself, and do whatever you want with it.</p>
-<p>As of this writing, there are 58 animals.</p>
+<p>As of this writing, there are 59 animals.</p>
 <p>The names of the animals:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        </span></span>
-<span><span class="co">#&gt;  [6] "beavis"       "behindcat"    "bigcat"       "blowfish"     "buffalo"     </span></span>
-<span><span class="co">#&gt; [11] "cat"          "chicken"      "chuck"        "clippy"       "cow"         </span></span>
-<span><span class="co">#&gt; [16] "cow_borg"     "cow_dead"     "cow_greedy"   "cow_sleepy"   "cow_tired"   </span></span>
-<span><span class="co">#&gt; [21] "cow_wired"    "cow_young"    "daemon"       "duck"         "duckling"    </span></span>
-<span><span class="co">#&gt; [26] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        </span></span>
-<span><span class="co">#&gt; [31] "ghost"        "goldfish"     "grumpycat"    "hypnotoad"    "longcat"     </span></span>
-<span><span class="co">#&gt; [36] "longtailcat"  "monkey"       "mushroom"     "owl"          "pig"         </span></span>
-<span><span class="co">#&gt; [41] "poop"         "pumpkin"      "rabbit"       "shark"        "shortcat"    </span></span>
-<span><span class="co">#&gt; [46] "signbunny"    "smallcat"     "snowman"      "spider"       "squirrel"    </span></span>
-<span><span class="co">#&gt; [51] "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"    "turkey"      </span></span>
-<span><span class="co">#&gt; [56] "whale"        "wolf"         "yoda"</span></span></code></pre></div>
+<span><span class="co">#&gt; NULL</span></span></code></pre></div>
 <p>For example, access the cow</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">cow</span> <span class="op">&lt;-</span> <span class="va">animals</span><span class="op">[[</span><span class="st">"cow"</span><span class="op">]</span><span class="op">]</span></span>
+<code class="sourceCode R"><span><span class="va">cow</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/animal_fetch.html">animal_fetch</a></span><span class="op">(</span><span class="st">'cow'</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">cow</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;         ^__^ </span></span>
@@ -146,8 +135,7 @@ you want. Some examples:</p>
 <span><span class="co">#&gt;           '.`-..-;`</span></span>
 <span><span class="co">#&gt;             `;-..'</span></span>
 <span><span class="co">#&gt;             _| _|</span></span>
-<span><span class="co">#&gt;             /` /` [nosig]</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;             /` /` [nosig]</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"boo!"</span>, <span class="st">"ghost"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -161,8 +149,7 @@ you want. Some examples:</p>
 <span><span class="co">#&gt;     (o o)</span></span>
 <span><span class="co">#&gt;     | O \</span></span>
 <span><span class="co">#&gt;      \   \</span></span>
-<span><span class="co">#&gt;       `~~~' [nosig]</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       `~~~' [nosig]</span></span></code></pre></div>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"nope, don't do that"</span>, type <span class="op">=</span> <span class="st">"warning"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in say("nope, don't do that", type = "warning"): </span></span>
@@ -183,7 +170,7 @@ time</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/say.html">say</a></span><span class="op">(</span><span class="st">"time"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  ____________________________ </span></span>
-<span><span class="co">#&gt; &lt; 2025-01-22 17:47:54.624901 &gt;</span></span>
+<span><span class="co">#&gt; &lt; 2025-03-26 21:22:01.427272 &gt;</span></span>
 <span><span class="co">#&gt;  ---------------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt;        \</span></span>

@@ -159,19 +159,19 @@
 <h3 id="the-animals">The animals<a class="anchor" aria-label="anchor" href="#the-animals"></a>
 </h3>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="va">animals</span><span class="op">)</span></span>
 <span><span class="co">#&gt;  [1] "alligator"    "ant"          "anxiouscat"   "bat"          "bat2"        </span></span>
-<span><span class="co">#&gt;  [6] "behindcat"    "bigcat"       "buffalo"      "cat"          "chicken"     </span></span>
-<span><span class="co">#&gt; [11] "chuck"        "clippy"       "cow"          "cow_borg"     "cow_dead"    </span></span>
-<span><span class="co">#&gt; [16] "cow_greedy"   "cow_sleepy"   "cow_tired"    "cow_wired"    "cow_young"   </span></span>
-<span><span class="co">#&gt; [21] "daemon"       "duck"         "duckling"     "egret"        "endlesshorse"</span></span>
-<span><span class="co">#&gt; [26] "facecat"      "fish"         "frog"         "ghost"        "goldfish"    </span></span>
-<span><span class="co">#&gt; [31] "grumpycat"    "hypnotoad"    "longcat"      "longtailcat"  "monkey"      </span></span>
-<span><span class="co">#&gt; [36] "mushroom"     "owl"          "pig"          "poop"         "pumpkin"     </span></span>
-<span><span class="co">#&gt; [41] "rabbit"       "shark"        "shortcat"     "signbunny"    "smallcat"    </span></span>
-<span><span class="co">#&gt; [46] "snowman"      "spider"       "squirrel"     "squirrel2"    "stegosaurus" </span></span>
-<span><span class="co">#&gt; [51] "stretchycat"  "trilobite"    "turkey"       "whale"        "wolf"        </span></span>
-<span><span class="co">#&gt; [56] "yoda"</span></span></code></pre></div>
+<span><span class="co">#&gt;  [6] "beavis"       "behindcat"    "bigcat"       "blowfish"     "buffalo"     </span></span>
+<span><span class="co">#&gt; [11] "cat"          "chicken"      "chuck"        "clippy"       "cow"         </span></span>
+<span><span class="co">#&gt; [16] "cow_borg"     "cow_dead"     "cow_greedy"   "cow_sleepy"   "cow_tired"   </span></span>
+<span><span class="co">#&gt; [21] "cow_wired"    "cow_young"    "daemon"       "duck"         "duckling"    </span></span>
+<span><span class="co">#&gt; [26] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        </span></span>
+<span><span class="co">#&gt; [31] "ghost"        "goldfish"     "grumpycat"    "hypnotoad"    "longcat"     </span></span>
+<span><span class="co">#&gt; [36] "longtailcat"  "monkey"       "mushroom"     "owl"          "pig"         </span></span>
+<span><span class="co">#&gt; [41] "poop"         "pumpkin"      "rabbit"       "shark"        "shortcat"    </span></span>
+<span><span class="co">#&gt; [46] "signbunny"    "smallcat"     "snowman"      "spider"       "squirrel"    </span></span>
+<span><span class="co">#&gt; [51] "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"    "turkey"      </span></span>
+<span><span class="co">#&gt; [56] "whale"        "wolf"         "yoda"</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="say-something">Say Something<a class="anchor" aria-label="anchor" href="#say-something"></a>
@@ -180,7 +180,7 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"time"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  ____________________________ </span></span>
-<span><span class="co">#&gt; &lt; 2024-12-09 09:56:18.661392 &gt;</span></span>
+<span><span class="co">#&gt; &lt; 2025-03-25 22:48:47.356922 &gt;</span></span>
 <span><span class="co">#&gt;  ---------------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt;        \</span></span>
@@ -208,8 +208,7 @@
 <span><span class="co">#&gt;           '.`-..-;`</span></span>
 <span><span class="co">#&gt;             `;-..'</span></span>
 <span><span class="co">#&gt;             _| _|</span></span>
-<span><span class="co">#&gt;             /` /` [nosig]</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;             /` /` [nosig]</span></span></code></pre></div>
 <p>Add some color:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-lib.github.io/crayon/" class="external-link">crayon</a></span><span class="op">)</span></span></code></pre></div>
@@ -286,11 +285,13 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"catfact"</span>, <span class="st">"cat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / During the time of the Spanish Inquisition, Pope        \</span></span>
-<span><span class="co">#&gt; | Innocent VIII condemned cats as evil and thousands of   |</span></span>
-<span><span class="co">#&gt; | cats were burned. Unfortunately, the widespread killing |</span></span>
-<span><span class="co">#&gt; | of cats led to an explosion of the rat population,      |</span></span>
-<span><span class="co">#&gt; \ which exacerbated the effects of the Black Death.       /</span></span>
+<span><span class="co">#&gt; / When a family cat died in ancient Egypt, family members \</span></span>
+<span><span class="co">#&gt; | would mourn by shaving off their eyebrows. They also    |</span></span>
+<span><span class="co">#&gt; | held elaborate funerals during which they drank wine    |</span></span>
+<span><span class="co">#&gt; | and beat their breasts. The cat was embalmed with a     |</span></span>
+<span><span class="co">#&gt; | sculpted wooden mask and the tiny mummy was placed in   |</span></span>
+<span><span class="co">#&gt; | the family tomb or in a pet cemetery with tiny mummies  |</span></span>
+<span><span class="co">#&gt; \ of mice.                                                /</span></span>
 <span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;          \</span></span>
 <span><span class="co">#&gt;           \</span></span>
@@ -304,8 +305,7 @@
 <span><span class="co">#&gt;            /| | | |\</span></span>
 <span><span class="co">#&gt;            \| | |_|/\</span></span>
 <span><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span><span class="co">#&gt;                \_)</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;                \_)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="long-cat">Long cat<a class="anchor" aria-label="anchor" href="#long-cat"></a>
@@ -342,8 +342,7 @@
 <span><span class="co">#&gt;     |    |</span></span>
 <span><span class="co">#&gt;     |    |</span></span>
 <span><span class="co">#&gt;     U "  U</span></span>
-<span><span class="co">#&gt;         [BoingBoing]</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;         [BoingBoing]</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="grumpy-cat">Grumpy cat<a class="anchor" aria-label="anchor" href="#grumpy-cat"></a>
@@ -358,8 +357,7 @@
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;       ﾊ _ ﾊ</span></span>
-<span><span class="co">#&gt;       ಠ X ಠ</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       ಠ X ಠ</span></span></code></pre></div>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"WOKE UP TODAY, IT WAS TERRIBLE"</span>, by <span class="op">=</span> <span class="st">"grumpycat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -370,8 +368,7 @@
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;       ﾊ _ ﾊ</span></span>
-<span><span class="co">#&gt;       ಠ X ಠ</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       ಠ X ಠ</span></span></code></pre></div>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"I HAD FUN ONCE, IT WAS AWFUL"</span>, by <span class="op">=</span> <span class="st">"grumpycat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -382,8 +379,7 @@
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;       ﾊ _ ﾊ</span></span>
-<span><span class="co">#&gt;       ಠ X ಠ</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       ಠ X ಠ</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="bunny-holding-a-sign">Bunny Holding a sign<a class="anchor" aria-label="anchor" href="#bunny-holding-a-sign"></a>
@@ -400,8 +396,7 @@
 <span><span class="co">#&gt; (\__/) ||</span></span>
 <span><span class="co">#&gt; (•ㅅ•) ||</span></span>
 <span><span class="co">#&gt; /   づ</span></span>
-<span><span class="co">#&gt;           [nosig]</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;           [nosig]</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="fish">Fish<a class="anchor" aria-label="anchor" href="#fish"></a>
@@ -416,8 +411,7 @@
 <span><span class="co">#&gt;         \</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;   &gt;&lt;((((º&gt;  &gt;&lt;((((º&gt;  &gt;&lt;((((º&gt;  &gt;&lt;((((º&gt;  &gt;&lt;((((º&gt;</span></span>
-<span><span class="co">#&gt;       Kiyoko Gotanda</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       Kiyoko Gotanda</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="r-fortunes">R fortunes<a class="anchor" aria-label="anchor" href="#r-fortunes"></a>
@@ -426,14 +420,12 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">fortunes</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"cat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / Zhu Wang: I am trying to create a library which uses    \</span></span>
-<span><span class="co">#&gt; | some Fortran source files [...] Douglas Bates: Someone  |</span></span>
-<span><span class="co">#&gt; | named Martin Maechler will shortly be sending you email |</span></span>
-<span><span class="co">#&gt; | regarding the distinction between 'library' and         |</span></span>
-<span><span class="co">#&gt; | 'package' :-) Zhu Wang and Douglas Bates R-help May     |</span></span>
-<span><span class="co">#&gt; \ 2004                                                    /</span></span>
-<span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
+<span><span class="co">#&gt;  ________________________________________________________ </span></span>
+<span><span class="co">#&gt; / Finally, a word of wisdom from a long-ago engineering  \</span></span>
+<span><span class="co">#&gt; | colleague: "Whenever I see an outlier, I'm never sure  |</span></span>
+<span><span class="co">#&gt; | whether to throw it away or patent it."  Berton Gunter |</span></span>
+<span><span class="co">#&gt; \ on outlier identification R-help December 2009         /</span></span>
+<span><span class="co">#&gt;  -------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;          \</span></span>
 <span><span class="co">#&gt;           \</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -446,8 +438,7 @@
 <span><span class="co">#&gt;            /| | | |\</span></span>
 <span><span class="co">#&gt;            \| | |_|/\</span></span>
 <span><span class="co">#&gt;       jgs  //_// ___/</span></span>
-<span><span class="co">#&gt;                \_)</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;                \_)</span></span></code></pre></div>
 <p>You can also pick a particular fortune by number or regex search - if the <code>fortune</code> parameter is not <code>NULL</code> you don’t have pass anything to the <code>what</code> parameter (the 1st parameter)</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span>fortune <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
@@ -471,16 +462,10 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span>fortune <span class="op">=</span> <span class="st">"whatever"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / Tom Backer Johnsen: I have just started looking at R,   \</span></span>
-<span><span class="co">#&gt; | and are getting more and more irritated at myself for   |</span></span>
-<span><span class="co">#&gt; | not having done that before. However, one of the things |</span></span>
-<span><span class="co">#&gt; | I have not found in the documentation is some way of    |</span></span>
-<span><span class="co">#&gt; | preparing output from R for convenient formatting into  |</span></span>
-<span><span class="co">#&gt; | something like MS Word. Barry Rowlingson: Well whatever |</span></span>
-<span><span class="co">#&gt; | you do, don't start looking at LaTeX, because that will |</span></span>
-<span><span class="co">#&gt; | get you even more irritated at yourself for not having  |</span></span>
-<span><span class="co">#&gt; | done it before.  Tom Backer Johnsen and Barry           |</span></span>
-<span><span class="co">#&gt; \ Rowlingson R-help February 2006                         /</span></span>
+<span><span class="co">#&gt; / Justin: Is there a function that just does whatever I'm \</span></span>
+<span><span class="co">#&gt; | thinking (aka whatever my homework question is...)?     |</span></span>
+<span><span class="co">#&gt; | Joshua Ulrich: That's the magic_pony function.  Justin  |</span></span>
+<span><span class="co">#&gt; \ and Joshua Ulrich stackoverflow.com June 2013           /</span></span>
 <span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt;        \</span></span>
@@ -511,8 +496,7 @@
 <span><span class="co">#&gt;       &lt;'```(.)```'&gt;</span></span>
 <span><span class="co">#&gt;        &lt;'``(.)``'&gt;</span></span>
 <span><span class="co">#&gt;    sk   &lt;``\_/``&gt;</span></span>
-<span><span class="co">#&gt;          `'---'`</span></span>
-<span><span class="co">#&gt; </span></span></code></pre>
+<span><span class="co">#&gt;          `'---'`</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="shark">Shark<a class="anchor" aria-label="anchor" href="#shark"></a>
@@ -549,8 +533,7 @@
 <span><span class="co">#&gt;          ,-'  _,-'''-.    ,-.,            ;      PFA</span></span>
 <span><span class="co">#&gt;       ,-' _.-'        \  /    |/'-._...--'</span></span>
 <span><span class="co">#&gt;      :--``             )/</span></span>
-<span><span class="co">#&gt;   '</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;   '</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="buffalo">Buffalo<a class="anchor" aria-label="anchor" href="#buffalo"></a>
@@ -575,8 +558,7 @@
 <span><span class="co">#&gt;           \Y,   |   \  \  | ````| / \_ \</span></span>
 <span><span class="co">#&gt;             `)_/      \  \  )    ( &gt;  ( &gt;</span></span>
 <span><span class="co">#&gt;                        \( \(     |/   |/</span></span>
-<span><span class="co">#&gt;           mic &amp; dwb  /_(/_(    /_(  /_(</span></span>
-<span><span class="co">#&gt; </span></span></code></pre>
+<span><span class="co">#&gt;           mic &amp; dwb  /_(/_(    /_(  /_(</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="clippy">Clippy<a class="anchor" aria-label="anchor" href="#clippy"></a>
@@ -639,10 +621,14 @@
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, by <span class="op">=</span> <span class="st">"monkey"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ___________________________________________________ </span></span>
-<span><span class="co">#&gt; / /* some real insanity to keep Duncan sane */ Luke \</span></span>
-<span><span class="co">#&gt; \ Tierney in src/main/context.c June 2001           /</span></span>
-<span><span class="co">#&gt;  --------------------------------------------------- </span></span>
+<span><span class="co">#&gt;  _________________________________________________________ </span></span>
+<span><span class="co">#&gt; / R is Open Source and so you can modify it to emulate    \</span></span>
+<span><span class="co">#&gt; | the bugs in other software: that is not one of the aims |</span></span>
+<span><span class="co">#&gt; | of its developers so please don't expect us to do so    |</span></span>
+<span><span class="co">#&gt; | for you.  Brian D. Ripley answering a request for a     |</span></span>
+<span><span class="co">#&gt; | change to Excel-like non IEC 60559 standard conform     |</span></span>
+<span><span class="co">#&gt; \ rounding R-help March 2009                              /</span></span>
+<span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;                \</span></span>
 <span><span class="co">#&gt;                 \</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -665,14 +651,13 @@
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, by <span class="op">=</span> <span class="st">"daemon"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / Achim Zeileis: Other visualizations of departures from  \</span></span>
-<span><span class="co">#&gt; | indepence include mosaicplots with shading or           |</span></span>
-<span><span class="co">#&gt; | association plots. See mosaicplot() and assocplot() and |</span></span>
-<span><span class="co">#&gt; | the package vcd. Peter Dalgaard: I see that you've      |</span></span>
-<span><span class="co">#&gt; | taken initive to abbriate statiscal concepts...  Achim  |</span></span>
-<span><span class="co">#&gt; \ Zeileis and Peter Dalgaard R-help January 2005          /</span></span>
-<span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
+<span><span class="co">#&gt;  ______________________________________________________ </span></span>
+<span><span class="co">#&gt; / The learning curve is steep - but then like many     \</span></span>
+<span><span class="co">#&gt; | people, I'd like to be able to do sophisticated      |</span></span>
+<span><span class="co">#&gt; | modelling with deep understanding and no effort :-)  |</span></span>
+<span><span class="co">#&gt; | Sean O'Riordain in a thread about the helpfulness of |</span></span>
+<span><span class="co">#&gt; \ documentation R-help July 2005                       /</span></span>
+<span><span class="co">#&gt;  ------------------------------------------------------ </span></span>
 <span><span class="co">#&gt;                  \</span></span>
 <span><span class="co">#&gt;                   \</span></span>
 <span><span class="co">#&gt;             ,        ,</span></span>
@@ -773,17 +758,15 @@
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;       ﾊ _ ﾊ</span></span>
-<span><span class="co">#&gt;       ಠ X ಠ</span></span>
-<span><span class="co">#&gt; </span></span></code></pre></div>
+<span><span class="co">#&gt;       ಠ X ಠ</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="i-just-want-the-animals">I just want the animals!<a class="anchor" aria-label="anchor" href="#i-just-want-the-animals"></a>
 </h3>
-<p>Okay, hold your endless horses. Just use the exported vector <code>animals</code>, and you can select the animal you want by name.</p>
+<p>Okay, hold your endless horses. Just use the function <code><a href="reference/animal_fetch.html">animal_fetch()</a></code> to select the animal you want by name.</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">animals</span><span class="op">[</span><span class="st">"clippy"</span><span class="op">]</span></span>
-<span><span class="co">#&gt;                                                                        clippy </span></span>
-<span><span class="co">#&gt; "\n    _\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB\n"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/animal_fetch.html">animal_fetch</a></span><span class="op">(</span><span class="st">"clippy"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "\n    _\n   / \\\n   | |\n   @ @\n  || ||\n  || ||\n  |\\_/|\n  \\___/ GB"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="meta">Meta<a class="anchor" aria-label="anchor" href="#meta"></a>
