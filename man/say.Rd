@@ -32,18 +32,17 @@ think(
 \arguments{
 \item{what}{(character) What do you want to say? See Details.}
 
-\item{by}{(character) Type of thing, one of cow, chicken, chuck,
-clippy, poop, bigcat, ant, pumpkin, ghost, spider, rabbit, pig,
-snowman, frog, hypnotoad, shortcat, longcat, fish, signbunny,
-facecat, behindcat, stretchycat, anxiouscat, longtailcat, cat,
-trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom,
-endlesshorse, bat, bat2, turkey, monkey, daemon, egret, duckling,
-duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
-whale, wolf, or rms for Richard Stallman.
-Alternatively, use "random" to have your message spoken by a random
-character.
-We use \code{\link[rlang:arg_match]{rlang::arg_match()}} internally, which does not support partial
-matching, so you'll get an informative error upon a partial match.}
+\item{by}{(character) Who should say or think it? One of: alligator, ant,
+anxiouscat, bat, bat2, beavis, behindcat, bigcat, blowfish, buffalo, cat,
+chicken, chuck, clippy, cow, cow_borg, cow_dead, cow_greedy, cow_sleepy,
+cow_tired, cow_wired, cow_young, daemon, dragon, duck, duckling, egret,
+endlesshorse, facecat, fish, frog, ghost, goldfish, grumpycat, hypnotoad,
+longcat, longtailcat, monkey, mushroom, owl, pig, poop, pumpkin, rabbit,
+rms, shark, shortcat, signbunny, smallcat, snowman, spider, squirrel,
+squirrel2, stegosaurus, stretchycat, trilobite, turkey, whale, wolf, yoda.
+Alternatively, use 'random' to have your message spoken by a random
+character.  We use \code{\link[rlang:arg_match]{rlang::arg_match()}} internally, which does not support
+partial matching, so you'll get an informative error upon a partial match.}
 
 \item{type}{(character) One of message (default), warning, print (default
 in non-interactive mode), or string (returns string). If run in

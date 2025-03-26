@@ -106,24 +106,25 @@ say_think <- function(thought_sym, say_or_think) {
   }
 }
 
+param_by <- function() {
+  tmp <- sprintf("
+    @param by (character) Who should say or think it? One of:
+    %s. Alternatively, use 'random' to have your message spoken by a random
+    character.  We use [rlang::arg_match()] internally, which does not
+    support partial matching, so you'll get an informative error upon a partial
+    match.",
+    paste0(sort(c(animals, "rms")), collapse = ", ")
+  )
+  strwrap(tmp, 75)
+}
+
 
 #' Sling messages and warnings with flair
 #'
 #' @export
 #'
 #' @param what (character) What do you want to say? See Details.
-#' @param by (character) Type of thing, one of cow, chicken, chuck,
-#' clippy, poop, bigcat, ant, pumpkin, ghost, spider, rabbit, pig,
-#' snowman, frog, hypnotoad, shortcat, longcat, fish, signbunny,
-#' facecat, behindcat, stretchycat, anxiouscat, longtailcat, cat,
-#' trilobite, shark, buffalo, grumpycat, smallcat, yoda, mushroom,
-#' endlesshorse, bat, bat2, turkey, monkey, daemon, egret, duckling,
-#' duck, owl, squirrel, squirrel2, goldfish, alligator, stegosaurus,
-#' whale, wolf, or rms for Richard Stallman.
-#' Alternatively, use "random" to have your message spoken by a random
-#' character.
-#' We use [rlang::arg_match()] internally, which does not support partial
-#' matching, so you'll get an informative error upon a partial match.
+#' @eval param_by()
 #' @param type (character) One of message (default), warning, print (default
 #' in non-interactive mode), or string (returns string). If run in
 #' non-interactive mode default type is print, so that
