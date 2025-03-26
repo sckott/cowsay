@@ -125,7 +125,7 @@ library("cowsay")
 ### The animals
 
 ```{r}
-sort(names(animals))
+sort(animals)
 ```
 
 ### Say Something
@@ -384,10 +384,10 @@ library("magrittr")
 
 ### I just want the animals!
 
-Okay, hold your endless horses. Just use the exported vector `animals`, and you can select the animal you want by name.
+Okay, hold your endless horses. Just use the function `animal_fetch()` to  select the animal you want by name.
 
 ```{r}
-animals["clippy"]
+animal_fetch("clippy")
 ```
 
 ## Meta

@@ -46,11 +46,6 @@ test_that("say works with colors", {
   )
 })
 
-# test_that("say by works as expected", {
-#   expect_equal(suppressMessages(say('%s', by = "chicken", type = "string")), animals[["chicken"]])
-#   expect_equal(suppressMessages(say('%s', by = "ghost", type = "string")), animals[["ghost"]])
-# })
-
 test_that("say fails well", {
   expect_error(say(list(4, 5)), "what must be length 1")
 })

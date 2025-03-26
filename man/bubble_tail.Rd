@@ -30,10 +30,10 @@ about a 1/3 of the way from the left most character given the max
 character length
 }
 \examples{
-bubble_tail(animals[["chicken"]])
-cat(bubble_tail(animals[["chicken"]]), sep = "\n")
-cat(bubble_tail(animals[["chicken"]]), sep = "\n")
-cat(bubble_tail(animals[["chicken"]], "\%"), sep = "\n")
+bubble_tail(animal_fetch('chicken'))
+cat(bubble_tail(animal_fetch('chicken')), sep = "\n")
+cat(bubble_tail(animal_fetch('chicken')), sep = "\n")
+cat(bubble_tail(animal_fetch('chicken'), "\%"), sep = "\n")
 
 bubble_tail2(59)
 cat(bubble_tail2(59), sep = "\n")

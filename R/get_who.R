@@ -1,8 +1,15 @@
 get_who <- function(by, length) {
   if (.Platform$OS.type == "windows") {
     ua <- c(
-      "shortcat", "longcat", "fish", "signbunny", "stretchycat",
-      "anxiouscat", "longtailcat", "grumpycat", "mushroom"
+      "shortcat",
+      "longcat",
+      "fish",
+      "signbunny",
+      "stretchycat",
+      "anxiouscat",
+      "longtailcat",
+      "grumpycat",
+      "mushroom"
     )
 
     if (by %in% ua) {
@@ -12,32 +19,28 @@ get_who <- function(by, length) {
       ))
     }
 
-    animals <- animals[setdiff(names(animals), ua)]
+    animals <- setdiff(animals, ua)
   }
 
   by <- arg_match(
     arg = by,
-    values = c(names(animals), "rms", "random"),
+    values = c(animals, "rms", "random"),
     error_call = parent.frame()
   )
 
   if (by == "random") {
-    by <- sample(c("rms", names(animals)), 1)
+    by <- sample(c("rms", animals), 1)
   }
 
-  switch(by,
-    rms = rms,
-    longcat = make_longcat(length),
-    animals[by]
-  )
+  switch(by, rms = rms, longcat = make_longcat(length), animal_fetch(by))
 }
 
 make_longcat <- function(length) {
   if (length > 0) {
     body <- paste(rep("    |    |\n", length), collapse = "")
     body <- gsub("\n$", "", body)
-    sprintf(animals[["longcat"]], body)
+    sprintf(animal_fetch("longcat"), body)
   } else {
-    animals["shortcat"]
+    animal_fetch("shortcat")
   }
 }

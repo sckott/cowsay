@@ -36,7 +36,7 @@ quote <- as.character(fortune())
 bubble_say(x = quote)
 
 cat(bubble_say(paste(quote, collapse = " ")), sep = "\n")
-ch <- animals[["chicken"]]
+ch <- animal_fetch('chicken')
 z <- paste(c(bubble_say(quote), bubble_tail(ch, "\\\\"), ch), collapse = "\n")
 cat(z)
 \dontshow{\}) # examplesIf}

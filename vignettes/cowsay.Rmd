@@ -56,7 +56,7 @@ sort(names(animals))
 For example, access the cow
 
 ```{r}
-cow <- animals[["cow"]]
+cow <- animal_fetch('cow')
 cat(cow)
 ```
 
