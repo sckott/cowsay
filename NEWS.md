@@ -3,7 +3,10 @@ cowsay (development version)
 
 ### MINOR IMPROVEMENTS
 
+* moved animals from a single R file to separate `.cow` files in `inst/cows/`; each animal is in a separate file now; update contributing docs accordingly (#95)
+* added some additional animals: dragon, beavis, blowfish (#96) (#100) thanks @Saru2003
 * change top of bubble to underscores from hyphens (#98)
+* fix `endless_horse()`: bubble and bubble tail was removed accidentally in `v1.0` (#99)
 
 cowsay 1.0.0
 ============

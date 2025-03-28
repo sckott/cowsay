@@ -1,7 +1,7 @@
 ## Test environments
 
-* local macOS install, R 4.4.2
-* ubuntu latest (on github actions), R 4.4.2
+* local macOS install, R 4.4.3
+* ubuntu latest (on github actions), R 4.4.3
 * win-builder (devel and release)
 
 ## R CMD check results
