@@ -15,7 +15,7 @@ endless_horse(
 \arguments{
 \item{what}{(character) What do you want to say? See details.}
 
-\item{endless}{(logical) Should horse be enless, you better say yes.
+\item{endless}{(logical) Should horse be endless, you better say yes.
 Default: \code{TRUE}}
 
 \item{wait}{How long to wait between leg segments (time grows
@@ -39,8 +39,9 @@ to color your steed.}
 Each time you press enter, the horse keeps going...and going...
 }
 \examples{
-\dontrun{
-endless_horse()
 endless_horse(endless = FALSE)
-}
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+endless_horse()
+endless_horse(what_color = crayon::bgBlue)
+\dontshow{\}) # examplesIf}
 }

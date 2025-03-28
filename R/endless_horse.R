@@ -4,7 +4,7 @@
 #'
 #' @export
 #' @param what (character) What do you want to say? See details.
-#' @param endless (logical) Should horse be enless, you better say yes.
+#' @param endless (logical) Should horse be endless, you better say yes.
 #' Default: `TRUE`
 #' @param wait How long to wait between leg segments (time grows
 #' geometrically after the first iteration in order to keep the horse
@@ -20,58 +20,60 @@
 #' text color or
 #' \href{https://github.com/r-lib/crayon#styles}{\code{crayon style function}}
 #' to color your steed.
-#' @examples \dontrun{
-#' endless_horse()
+#' @examples
 #' endless_horse(endless = FALSE)
-#' }
-endless_horse <- function(what = "Hello world!", endless = TRUE, wait = 0.5,
-                          what_color = NULL, horse_color = NULL) {
-  if (!is_null(what_color) & !(inherits(what_color, c("crayon", "character")))) {
-    abort("what_color must be of class character or crayon")
-  }
-
-  if (!is_null(horse_color) & !(inherits(horse_color, c("crayon", "character")))) {
-    abort("by_color must be of class character or crayon")
-  }
-
-  if (!is_null(what_color) & is_character(what_color)) {
-    what_color <- crayon::make_style(what_color)
-  } else if (!is_null(what_color) & is.function(what_color)) {
-    what_color <- what_color
+#' @examplesIf interactive()
+#' endless_horse()
+#' endless_horse(what_color = crayon::bgBlue)
+endless_horse <- function(
+  what = "Hello world!",
+  endless = TRUE,
+  wait = 0.5,
+  what_color = NULL,
+  horse_color = NULL
+) {
+  if (
+    crayon::has_color() == FALSE &&
+      (!is_null(what_color) || !is_null(horse_color))
+  ) {
+    inform(c(
+      "Colors cannot be applied in this environment :(",
+      "Try using a terminal or RStudio/Positron/etc."
+    ))
+    what_color <- NULL
+    horse_color <- NULL
   } else {
-    what_color <- function(x) x
+    what_color <- check_color(what_color)
+    horse_color <- check_color(horse_color)
   }
-
-  if (!is_null(horse_color) & is_character(horse_color)) {
-    horse_color <- crayon::make_style(horse_color)
-  } else if (!is_null(horse_color) & is.function(horse_color)) {
-    horse_color <- horse_color
-  } else {
-    horse_color <- function(x) x
-  }
-
 
   horse <- get_who("endlesshorse", NULL)
-
-  what_pos_start <-
-    regexpr("%s", horse)[1] - 1
-
+  what_pos_start <- regexpr("%s", horse)[1] - 1
   what_pos_end <- what_pos_start + 3
 
   horse <- paste0(
-    horse_color(substr(horse, 1, what_pos_start)),
-    what_color(what),
-    horse_color(substr(horse, what_pos_end, nchar(horse)))
+    c(
+      color_text(bubble_say(what), what_color),
+      bubble_tail(horse, thought_sym = "\\"),
+      color_text(substr(horse, what_pos_end, nchar(horse)), horse_color)
+    ),
+    collapse = "\n"
   )
 
   message(horse)
   while (endless) {
-    tryCatch(interrupt = function(e) {
-      endless <<- FALSE
-    }, {
-      Sys.sleep(wait)
-      message(horse_color("                    | | | |             || |"))
-      wait <- wait * 1.1
-    })
+    tryCatch(
+      interrupt = function(e) {
+        endless <<- FALSE
+      },
+      {
+        Sys.sleep(wait)
+        message(color_text(
+          "                    | | | |             || |",
+          horse_color
+        ))
+        wait <- wait * 1.1
+      }
+    )
   }
 }
