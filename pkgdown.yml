@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   cowsay: cowsay.html
-last_built: 2025-03-26T21:21Z
+last_built: 2025-03-28T22:16Z
 urls:
   reference: https://sckott.github.io/cowsay/reference
   article: https://sckott.github.io/cowsay/articles
