@@ -99,7 +99,8 @@ From CRAN
 
 
 ``` r
-install.packages("cowsay")
+# install.packages("pak")
+pak::pak("cowsay")
 ```
 
 Dev version
@@ -124,14 +125,14 @@ sort(animals)
 #>  [6] "beavis"       "behindcat"    "bigcat"       "blowfish"     "buffalo"     
 #> [11] "cat"          "chicken"      "chuck"        "clippy"       "cow"         
 #> [16] "cow_borg"     "cow_dead"     "cow_greedy"   "cow_sleepy"   "cow_tired"   
-#> [21] "cow_wired"    "cow_young"    "daemon"       "duck"         "duckling"    
-#> [26] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        
-#> [31] "ghost"        "goldfish"     "grumpycat"    "hypnotoad"    "longcat"     
-#> [36] "longtailcat"  "monkey"       "mushroom"     "owl"          "pig"         
-#> [41] "poop"         "pumpkin"      "rabbit"       "shark"        "shortcat"    
-#> [46] "signbunny"    "smallcat"     "snowman"      "spider"       "squirrel"    
-#> [51] "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"    "turkey"      
-#> [56] "whale"        "wolf"         "yoda"
+#> [21] "cow_wired"    "cow_young"    "daemon"       "dragon"       "duck"        
+#> [26] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        
+#> [31] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   
+#> [36] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         
+#> [41] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       
+#> [46] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      
+#> [51] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   
+#> [56] "turkey"       "whale"        "wolf"         "yoda"
 ```
 
 ### Say Something
@@ -141,7 +142,7 @@ sort(animals)
 say("time")
 #> 
 #>  ____________________________ 
-#> < 2025-03-25 22:48:47.356922 >
+#> < 2025-03-28 15:30:56.460987 >
 #>  ---------------------------- 
 #>       \
 #>        \
@@ -295,15 +296,9 @@ From the catfacts API  at <https://catfact.ninja>
 ``` r
 say("catfact", "cat")
 #> 
-#>  _________________________________________________________ 
-#> / When a family cat died in ancient Egypt, family members \
-#> | would mourn by shaving off their eyebrows. They also    |
-#> | held elaborate funerals during which they drank wine    |
-#> | and beat their breasts. The cat was embalmed with a     |
-#> | sculpted wooden mask and the tiny mummy was placed in   |
-#> | the family tomb or in a pet cemetery with tiny mummies  |
-#> \ of mice.                                                /
-#>  --------------------------------------------------------- 
+#>  ________________________________________________________ 
+#> < About 37% of American homes today have at least 1 cat. >
+#>  -------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -444,10 +439,10 @@ library(fortunes)
 say("fortune", "cat")
 #> 
 #>  ________________________________________________________ 
-#> / Finally, a word of wisdom from a long-ago engineering  \
-#> | colleague: "Whenever I see an outlier, I'm never sure  |
-#> | whether to throw it away or patent it."  Berton Gunter |
-#> \ on outlier identification R-help December 2009         /
+#> / It is unusual for the actual data not to be available  \
+#> | in real problems.  Brian D. Ripley in reply to a       |
+#> | question how to fit a distribution if not the data but |
+#> \ only their histogram is available R-help June 2006     /
 #>  -------------------------------------------------------- 
 #>          \
 #>           \
@@ -665,14 +660,13 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  _________________________________________________________ 
-#> / R is Open Source and so you can modify it to emulate    \
-#> | the bugs in other software: that is not one of the aims |
-#> | of its developers so please don't expect us to do so    |
-#> | for you.  Brian D. Ripley answering a request for a     |
-#> | change to Excel-like non IEC 60559 standard conform     |
-#> \ rounding R-help March 2009                              /
-#>  --------------------------------------------------------- 
+#>  ________________________________________________________ 
+#> / Duncan Murdoch: Others need to run under ESS. Francois \
+#> | Pinard: While this is a good things for Emacs lovers,  |
+#> | the requirement is rather unwelcome for pagans! :-)    |
+#> | Duncan Murdoch and Francois Pinard on the availability |
+#> \ of command completion R-help May 2006                  /
+#>  -------------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -696,13 +690,13 @@ say("fortune", by = "monkey")
 ``` r
 say("fortune", by = "daemon")
 #> 
-#>  ______________________________________________________ 
-#> / The learning curve is steep - but then like many     \
-#> | people, I'd like to be able to do sophisticated      |
-#> | modelling with deep understanding and no effort :-)  |
-#> | Sean O'Riordain in a thread about the helpfulness of |
-#> \ documentation R-help July 2005                       /
-#>  ------------------------------------------------------ 
+#>  _______________________________________________________ 
+#> / I wish <<- had never been invented, as it makes an    \
+#> | esoteric and dangerous feature of the language *seem* |
+#> | normal and reasonable. If you want to dumb down R/S   |
+#> | into a macro language, this is the operator for you.  |
+#> \ Bill Venables R-help July 2001                        /
+#>  ------------------------------------------------------- 
 #>                  \
 #>                   \
 #>             ,        ,
@@ -755,43 +749,35 @@ See also `bat2`
 
 ### Endless horse
 
+With `endless=FALSE` cause we gotta compile the .md yo
+
 
 ``` r
-endless_horse()
-## -----
-## Hello world!
-## ------
-##    \
-##     \
-##      \
-##       ,
-##    _,,)\.~,,._
-##     (()`  ``)\))),,_
-##      |     \ ''((\)))),,_          ____
-##      |6`   |   ''((\())) "-.____.-"    `-.-,
-##      |    .'\    ''))))'                  \)))
-##      |   |   `.     ''                     ((((
-##      \, _)     \/                          |))))
-##       `'        |                          (((((
-##                 \                  |       ))))))
-##                  `|    |           ,\     /((((((
-##                   |   / `-.______.<  \   |  )))))
-##                   |   |  /         `. \  \  ((((
-##                   |  / \ |           `.\  | (((
-##                   \  | | |             )| |  ))
-##                    | | | |             || |  '   [endless.horse]
-##                    | | | |             || |
-##
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
+endless_horse(endless = FALSE)
+#> 
+#>  ______________ 
+#> < Hello world! >
+#>  -------------- 
+#>     \
+#>      \
+#> 
+#>        ,
+#>     _,,)\.~,,._
+#>      (()`  ``)\))),,_
+#>       |     \ ''((\)))),,_          ____
+#>       |6`   |   ''((\())) "-.____.-"    `-.-,
+#>       |    .'\    ''))))'                  \)))
+#>       |   |   `.     ''                     ((((
+#>       \, _)     \/                          |))))
+#>        `'        |                          (((((
+#>                  \                  |       ))))))
+#>                   `|    |           ,\     /((((((
+#>                    |   / `-.______.<  \   |  )))))
+#>                    |   |  /         `. \  \  ((((
+#>                    |  / \ |           `.\  | (((
+#>                    \  | | |             )| |  ))
+#>                     | | | |             || |  '   [endless.horse]
+#>                     | | | |             || |
 ```
 
 ### Using pipes

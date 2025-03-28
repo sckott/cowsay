@@ -108,7 +108,8 @@ Asciicast: <https://asciinema.org/a/7745>
 From CRAN
 
 ```{r eval=FALSE}
-install.packages("cowsay")
+# install.packages("pak")
+pak::pak("cowsay")
 ```
 
 Dev version
@@ -337,42 +338,10 @@ See also `bat2`
 
 ### Endless horse
 
-```{r eval=FALSE}
-endless_horse()
-## -----
-## Hello world!
-## ------
-##    \
-##     \
-##      \
-##       ,
-##    _,,)\.~,,._
-##     (()`  ``)\))),,_
-##      |     \ ''((\)))),,_          ____
-##      |6`   |   ''((\())) "-.____.-"    `-.-,
-##      |    .'\    ''))))'                  \)))
-##      |   |   `.     ''                     ((((
-##      \, _)     \/                          |))))
-##       `'        |                          (((((
-##                 \                  |       ))))))
-##                  `|    |           ,\     /((((((
-##                   |   / `-.______.<  \   |  )))))
-##                   |   |  /         `. \  \  ((((
-##                   |  / \ |           `.\  | (((
-##                   \  | | |             )| |  ))
-##                    | | | |             || |  '   [endless.horse]
-##                    | | | |             || |
-##
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
-##                    | | | |             || |
+With `endless=FALSE` cause we gotta compile the .md yo
+
+```{r}
+endless_horse(endless = FALSE)
 ```
 
 ### Using pipes
