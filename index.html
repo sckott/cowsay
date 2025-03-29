@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">cowsay</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1.91</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,7 +147,8 @@
 </h3>
 <p>From CRAN</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"cowsay"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"cowsay"</span><span class="op">)</span></span></code></pre></div>
 <p>Dev version</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
@@ -164,14 +165,14 @@
 <span><span class="co">#&gt;  [6] "beavis"       "behindcat"    "bigcat"       "blowfish"     "buffalo"     </span></span>
 <span><span class="co">#&gt; [11] "cat"          "chicken"      "chuck"        "clippy"       "cow"         </span></span>
 <span><span class="co">#&gt; [16] "cow_borg"     "cow_dead"     "cow_greedy"   "cow_sleepy"   "cow_tired"   </span></span>
-<span><span class="co">#&gt; [21] "cow_wired"    "cow_young"    "daemon"       "duck"         "duckling"    </span></span>
-<span><span class="co">#&gt; [26] "egret"        "endlesshorse" "facecat"      "fish"         "frog"        </span></span>
-<span><span class="co">#&gt; [31] "ghost"        "goldfish"     "grumpycat"    "hypnotoad"    "longcat"     </span></span>
-<span><span class="co">#&gt; [36] "longtailcat"  "monkey"       "mushroom"     "owl"          "pig"         </span></span>
-<span><span class="co">#&gt; [41] "poop"         "pumpkin"      "rabbit"       "shark"        "shortcat"    </span></span>
-<span><span class="co">#&gt; [46] "signbunny"    "smallcat"     "snowman"      "spider"       "squirrel"    </span></span>
-<span><span class="co">#&gt; [51] "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"    "turkey"      </span></span>
-<span><span class="co">#&gt; [56] "whale"        "wolf"         "yoda"</span></span></code></pre></div>
+<span><span class="co">#&gt; [21] "cow_wired"    "cow_young"    "daemon"       "dragon"       "duck"        </span></span>
+<span><span class="co">#&gt; [26] "duckling"     "egret"        "endlesshorse" "facecat"      "fish"        </span></span>
+<span><span class="co">#&gt; [31] "frog"         "ghost"        "goldfish"     "grumpycat"    "hypnotoad"   </span></span>
+<span><span class="co">#&gt; [36] "longcat"      "longtailcat"  "monkey"       "mushroom"     "owl"         </span></span>
+<span><span class="co">#&gt; [41] "pig"          "poop"         "pumpkin"      "rabbit"       "shark"       </span></span>
+<span><span class="co">#&gt; [46] "shortcat"     "signbunny"    "smallcat"     "snowman"      "spider"      </span></span>
+<span><span class="co">#&gt; [51] "squirrel"     "squirrel2"    "stegosaurus"  "stretchycat"  "trilobite"   </span></span>
+<span><span class="co">#&gt; [56] "turkey"       "whale"        "wolf"         "yoda"</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="say-something">Say Something<a class="anchor" aria-label="anchor" href="#say-something"></a>
@@ -180,7 +181,7 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"time"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  ____________________________ </span></span>
-<span><span class="co">#&gt; &lt; 2025-03-25 22:48:47.356922 &gt;</span></span>
+<span><span class="co">#&gt; &lt; 2025-03-28 15:30:56.460987 &gt;</span></span>
 <span><span class="co">#&gt;  ---------------------------- </span></span>
 <span><span class="co">#&gt;       \</span></span>
 <span><span class="co">#&gt;        \</span></span>
@@ -284,15 +285,9 @@
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"catfact"</span>, <span class="st">"cat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / When a family cat died in ancient Egypt, family members \</span></span>
-<span><span class="co">#&gt; | would mourn by shaving off their eyebrows. They also    |</span></span>
-<span><span class="co">#&gt; | held elaborate funerals during which they drank wine    |</span></span>
-<span><span class="co">#&gt; | and beat their breasts. The cat was embalmed with a     |</span></span>
-<span><span class="co">#&gt; | sculpted wooden mask and the tiny mummy was placed in   |</span></span>
-<span><span class="co">#&gt; | the family tomb or in a pet cemetery with tiny mummies  |</span></span>
-<span><span class="co">#&gt; \ of mice.                                                /</span></span>
-<span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
+<span><span class="co">#&gt;  ________________________________________________________ </span></span>
+<span><span class="co">#&gt; &lt; About 37% of American homes today have at least 1 cat. &gt;</span></span>
+<span><span class="co">#&gt;  -------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;          \</span></span>
 <span><span class="co">#&gt;           \</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -421,10 +416,10 @@
 <span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, <span class="st">"cat"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  ________________________________________________________ </span></span>
-<span><span class="co">#&gt; / Finally, a word of wisdom from a long-ago engineering  \</span></span>
-<span><span class="co">#&gt; | colleague: "Whenever I see an outlier, I'm never sure  |</span></span>
-<span><span class="co">#&gt; | whether to throw it away or patent it."  Berton Gunter |</span></span>
-<span><span class="co">#&gt; \ on outlier identification R-help December 2009         /</span></span>
+<span><span class="co">#&gt; / It is unusual for the actual data not to be available  \</span></span>
+<span><span class="co">#&gt; | in real problems.  Brian D. Ripley in reply to a       |</span></span>
+<span><span class="co">#&gt; | question how to fit a distribution if not the data but |</span></span>
+<span><span class="co">#&gt; \ only their histogram is available R-help June 2006     /</span></span>
 <span><span class="co">#&gt;  -------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;          \</span></span>
 <span><span class="co">#&gt;           \</span></span>
@@ -621,14 +616,13 @@
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, by <span class="op">=</span> <span class="st">"monkey"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  _________________________________________________________ </span></span>
-<span><span class="co">#&gt; / R is Open Source and so you can modify it to emulate    \</span></span>
-<span><span class="co">#&gt; | the bugs in other software: that is not one of the aims |</span></span>
-<span><span class="co">#&gt; | of its developers so please don't expect us to do so    |</span></span>
-<span><span class="co">#&gt; | for you.  Brian D. Ripley answering a request for a     |</span></span>
-<span><span class="co">#&gt; | change to Excel-like non IEC 60559 standard conform     |</span></span>
-<span><span class="co">#&gt; \ rounding R-help March 2009                              /</span></span>
-<span><span class="co">#&gt;  --------------------------------------------------------- </span></span>
+<span><span class="co">#&gt;  ________________________________________________________ </span></span>
+<span><span class="co">#&gt; / Duncan Murdoch: Others need to run under ESS. Francois \</span></span>
+<span><span class="co">#&gt; | Pinard: While this is a good things for Emacs lovers,  |</span></span>
+<span><span class="co">#&gt; | the requirement is rather unwelcome for pagans! :-)    |</span></span>
+<span><span class="co">#&gt; | Duncan Murdoch and Francois Pinard on the availability |</span></span>
+<span><span class="co">#&gt; \ of command completion R-help May 2006                  /</span></span>
+<span><span class="co">#&gt;  -------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;                \</span></span>
 <span><span class="co">#&gt;                 \</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -651,13 +645,13 @@
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/say.html">say</a></span><span class="op">(</span><span class="st">"fortune"</span>, by <span class="op">=</span> <span class="st">"daemon"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  ______________________________________________________ </span></span>
-<span><span class="co">#&gt; / The learning curve is steep - but then like many     \</span></span>
-<span><span class="co">#&gt; | people, I'd like to be able to do sophisticated      |</span></span>
-<span><span class="co">#&gt; | modelling with deep understanding and no effort :-)  |</span></span>
-<span><span class="co">#&gt; | Sean O'Riordain in a thread about the helpfulness of |</span></span>
-<span><span class="co">#&gt; \ documentation R-help July 2005                       /</span></span>
-<span><span class="co">#&gt;  ------------------------------------------------------ </span></span>
+<span><span class="co">#&gt;  _______________________________________________________ </span></span>
+<span><span class="co">#&gt; / I wish &lt;&lt;- had never been invented, as it makes an    \</span></span>
+<span><span class="co">#&gt; | esoteric and dangerous feature of the language *seem* |</span></span>
+<span><span class="co">#&gt; | normal and reasonable. If you want to dumb down R/S   |</span></span>
+<span><span class="co">#&gt; | into a macro language, this is the operator for you.  |</span></span>
+<span><span class="co">#&gt; \ Bill Venables R-help July 2001                        /</span></span>
+<span><span class="co">#&gt;  ------------------------------------------------------- </span></span>
 <span><span class="co">#&gt;                  \</span></span>
 <span><span class="co">#&gt;                   \</span></span>
 <span><span class="co">#&gt;             ,        ,</span></span>
@@ -707,42 +701,33 @@
 <div class="section level3">
 <h3 id="endless-horse">Endless horse<a class="anchor" aria-label="anchor" href="#endless-horse"></a>
 </h3>
+<p>With <code>endless=FALSE</code> cause we gotta compile the .md yo</p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/endless_horse.html">endless_horse</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">## -----</span></span>
-<span><span class="co">## Hello world!</span></span>
-<span><span class="co">## ------</span></span>
-<span><span class="co">##    \</span></span>
-<span><span class="co">##     \</span></span>
-<span><span class="co">##      \</span></span>
-<span><span class="co">##       ,</span></span>
-<span><span class="co">##    _,,)\.~,,._</span></span>
-<span><span class="co">##     (()`  ``)\))),,_</span></span>
-<span><span class="co">##      |     \ ''((\)))),,_          ____</span></span>
-<span><span class="co">##      |6`   |   ''((\())) "-.____.-"    `-.-,</span></span>
-<span><span class="co">##      |    .'\    ''))))'                  \)))</span></span>
-<span><span class="co">##      |   |   `.     ''                     ((((</span></span>
-<span><span class="co">##      \, _)     \/                          |))))</span></span>
-<span><span class="co">##       `'        |                          (((((</span></span>
-<span><span class="co">##                 \                  |       ))))))</span></span>
-<span><span class="co">##                  `|    |           ,\     /((((((</span></span>
-<span><span class="co">##                   |   / `-.______.&lt;  \   |  )))))</span></span>
-<span><span class="co">##                   |   |  /         `. \  \  ((((</span></span>
-<span><span class="co">##                   |  / \ |           `.\  | (((</span></span>
-<span><span class="co">##                   \  | | |             )| |  ))</span></span>
-<span><span class="co">##                    | | | |             || |  '   [endless.horse]</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span>
-<span><span class="co">##                    | | | |             || |</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/endless_horse.html">endless_horse</a></span><span class="op">(</span>endless <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  ______________ </span></span>
+<span><span class="co">#&gt; &lt; Hello world! &gt;</span></span>
+<span><span class="co">#&gt;  -------------- </span></span>
+<span><span class="co">#&gt;     \</span></span>
+<span><span class="co">#&gt;      \</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;        ,</span></span>
+<span><span class="co">#&gt;     _,,)\.~,,._</span></span>
+<span><span class="co">#&gt;      (()`  ``)\))),,_</span></span>
+<span><span class="co">#&gt;       |     \ ''((\)))),,_          ____</span></span>
+<span><span class="co">#&gt;       |6`   |   ''((\())) "-.____.-"    `-.-,</span></span>
+<span><span class="co">#&gt;       |    .'\    ''))))'                  \)))</span></span>
+<span><span class="co">#&gt;       |   |   `.     ''                     ((((</span></span>
+<span><span class="co">#&gt;       \, _)     \/                          |))))</span></span>
+<span><span class="co">#&gt;        `'        |                          (((((</span></span>
+<span><span class="co">#&gt;                  \                  |       ))))))</span></span>
+<span><span class="co">#&gt;                   `|    |           ,\     /((((((</span></span>
+<span><span class="co">#&gt;                    |   / `-.______.&lt;  \   |  )))))</span></span>
+<span><span class="co">#&gt;                    |   |  /         `. \  \  ((((</span></span>
+<span><span class="co">#&gt;                    |  / \ |           `.\  | (((</span></span>
+<span><span class="co">#&gt;                    \  | | |             )| |  ))</span></span>
+<span><span class="co">#&gt;                     | | | |             || |  '   [endless.horse]</span></span>
+<span><span class="co">#&gt;                     | | | |             || |</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="using-pipes">Using pipes<a class="anchor" aria-label="anchor" href="#using-pipes"></a>

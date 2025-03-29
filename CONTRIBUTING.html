@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="index.html">cowsay</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1.91</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
 </ul></div>
 <div class="section level3">
 <h3 id="size">Size<a class="anchor" aria-label="anchor" href="#size"></a></h3>
-<p>Art must be no bigger than the following three examples: <a href="https://github.com/sckott/cowsay/blob/main/R/animals.r#L157" class="external-link">hypnotoad</a>, <a href="https://github.com/sckott/cowsay/blob/main/R/animals.r#L325" class="external-link">shark</a>, <a href="https://github.com/sckott/cowsay/blob/main/R/animals.r#L489" class="external-link">bat2</a></p>
+<p>Art must be no bigger than the following three examples: <a href="https://github.com/sckott/cowsay/blob/main/inst/cows/hypnotoad.cow" class="external-link">hypnotoad</a>, <a href="https://github.com/sckott/cowsay/blob/main/inst/cows/shark.cow" class="external-link">shark</a>, <a href="https://github.com/sckott/cowsay/blob/main/inst/cows/bat2.cow" class="external-link">bat2</a></p>
 </div>
 <div class="section level3">
 <h3 id="not-sure-about-scope">Not sure about scope?<a class="anchor" aria-label="anchor" href="#not-sure-about-scope"></a></h3>
@@ -63,9 +63,9 @@
 <h2 id="contributing-code-to-cowsay">Contributing code to <code>cowsay</code>
 <a class="anchor" aria-label="anchor" href="#contributing-code-to-cowsay"></a></h2>
 <ol style="list-style-type: decimal"><li>Fork this repo</li>
-<li>Add an ascii art animal in the <code>animals</code> vector in <code>animals.r</code> - just follow the other examples, and try to execute the code as a character in your console until it looks right. Be careful not to use auto-indenting in your editor on this file as it will wreck the formatting of the animals.</li>
+<li>Add an ascii art animal in a separate <code>.cow</code> file in <code>inst/cows/</code> - follow the other examples there, and iterate on it locally until it looks right. Be careful not to use auto-indenting in your editor on this file as it will wreck the formatting of the animals.</li>
 <li>If your animal contains non-ascii characters, it will not display properly in Windows. Please add it to the list of animals that don’t work in Windows in the <code>@details</code> section in the help for the <code>say</code> function.</li>
-<li>Push back up to your account, then send a pull request to <code>sckott/cowsay</code>.</li>
+<li>Push back up to your fork, then send a pull request to <code>sckott/cowsay</code>.</li>
 </ol><p>If you want to submit an issue, then go to the <a href="https://github.com/sckott/cowsay/issues?state=open" class="external-link">issues page</a> and do that.</p>
 </div>
 
