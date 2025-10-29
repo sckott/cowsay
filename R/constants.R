@@ -8,5 +8,3 @@ fillerama_what <- c(
   "starwars",
   "loremipsum"
 )
-
-catfact_api <- "https://catfact.ninja/fact"

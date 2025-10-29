@@ -6,9 +6,16 @@
 #' @keywords internal
 say_think <- function(thought_sym, say_or_think) {
   function(
-      what = "Hello world!", by = "cow", type = NULL,
-      what_color = NULL, by_color = what_color, length = 18, fortune = NULL,
-      width = 60, ...) {
+    what = "Hello world!",
+    by = "cow",
+    type = NULL,
+    what_color = NULL,
+    by_color = what_color,
+    length = 18,
+    fortune = NULL,
+    width = 60,
+    ...
+  ) {
     stopifnot("what must be length 1" = has_length(what, 1))
 
     if (
@@ -32,12 +39,6 @@ say_think <- function(thought_sym, say_or_think) {
       } else {
         type <- "print"
       }
-    }
-
-    if (what == "catfact") {
-      rlang::check_installed("jsonlite")
-      what <- jsonlite::fromJSON(catfact_api)$fact
-      by <- "cat"
     }
 
     who <- get_who(by, length = length)
@@ -74,7 +75,8 @@ say_think <- function(thought_sym, say_or_think) {
       abort("sorry, fillerama API is gone, sorry :(")
     }
 
-    what_bubbled <- switch(say_or_think,
+    what_bubbled <- switch(
+      say_or_think,
       say = bubble_say(x = what, width = width),
       think = bubble_think(x = what, width = width),
       abort("only 'say' and 'think' supported in say_think()")
@@ -97,7 +99,8 @@ say_think <- function(thought_sym, say_or_think) {
       on.exit(options(warn_op))
     }
 
-    switch(type,
+    switch(
+      type,
       message = message(what_who),
       warning = warning(what_who),
       print = cat(what_who),
@@ -107,7 +110,8 @@ say_think <- function(thought_sym, say_or_think) {
 }
 
 param_by <- function() {
-  tmp <- sprintf("
+  tmp <- sprintf(
+    "
     @param by (character) Who should say or think it? One of:
     %s. Alternatively, use 'random' to have your message spoken by a random
     character.  We use [rlang::arg_match()] internally, which does not
@@ -145,7 +149,7 @@ param_by <- function() {
 #' for both with less typing.
 #' @param length (integer) Length of longcat. Ignored if other animals used.
 #' @param fortune An integer (or number that can be coerced
-#' to integer) specifying a fortune from the `fortunes` package - OR a 
+#' to integer) specifying a fortune from the `fortunes` package - OR a
 #' string which is used as a pattern passed to [grep()] (and a random one is
 #' selected upton multiple matches). Passed on to the `which` parameter of
 #' `fortunes::fortune`
@@ -157,7 +161,6 @@ param_by <- function() {
 #' can type in one of a few special phrases that do particular things.
 #' They are:
 #'
-#' - "catfact": A random cat fact from https://catfact.ninja
 #' - "fortune": A random quote from an R coder, from fortunes library
 #' - "time": Print the current time
 #' - "rms": Prints a random 'fact' about Richard Stallman from the
@@ -196,7 +199,7 @@ param_by <- function() {
 #' say("hell no!")
 #' say("hell no!", type = "warning")
 #' say("hell no!", type = "string")
-#' 
+#'
 #' # The hypnotoad
 #' say(by = "hypnotoad")
 #'
@@ -228,15 +231,10 @@ param_by <- function() {
 #' say(fortune = 45)
 #' # Clippy
 #' say(fortune = 59, by = "clippy")
-#' 
+#'
 #' @examplesIf rlang::is_installed("rmsfact")
 #' library(rmsfact)
 #' say("rms", "rms")
-#' 
-#' @examplesIf rlang::is_installed("jsonlite")
-#' # Using the catfacts API
-#' library(jsonlite)
-#' say("catfact", "cat")
 say <- say_think(thought_sym = "\\", say_or_think = "say")
 
 #' @export

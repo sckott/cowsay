@@ -147,9 +147,7 @@ library(crayon)
 
 
 ```{r eval=FALSE}
-say("boo!", "ghost",
-  what_color = "cyan", by_color = "saddlebrown"
-)
+say("boo!", "ghost", what_color = "cyan", by_color = "saddlebrown")
 ```
 
 
@@ -159,8 +157,11 @@ say("boo!", "ghost",
 
 
 ```{r eval=FALSE}
-say("I love hooo you are!", "owl",
-  what_color = rgb(0, 1, 1), by_color = "#FF0000"
+say(
+  "I love hooo you are!",
+  "owl",
+  what_color = rgb(0, 1, 1),
+  by_color = "#FF0000"
 )
 ```
 
@@ -175,7 +176,8 @@ String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
 
 ```{r eval=FALSE}
 say(
-  what = "rms", by = "rms",
+  what = "rms",
+  by = "rms",
   what_color = yellow$bgMagenta$bold,
   by_color = cyan$italic
 )
@@ -215,15 +217,6 @@ say("hell no!", type = "warning")
 
 ```{r}
 say("hell no!", type = "string")
-```
-
-
-### Catfacts!!!!
-
-From the catfacts API  at <https://catfact.ninja>
-
-```{r}
-say("catfact", "cat")
 ```
 
 ### Long cat

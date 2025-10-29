@@ -1,3 +1,8 @@
+cowsay 1.2.2
+============
+
+* remove catfact api (#101)
+
 cowsay 1.2.0
 ============
 

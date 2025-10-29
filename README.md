@@ -142,7 +142,7 @@ sort(animals)
 say("time")
 #> 
 #>  ____________________________ 
-#> < 2025-03-28 15:30:56.460987 >
+#> < 2025-10-28 22:36:13.574411 >
 #>  ---------------------------- 
 #>       \
 #>        \
@@ -186,9 +186,7 @@ library(crayon)
 
 
 ``` r
-say("boo!", "ghost",
-  what_color = "cyan", by_color = "saddlebrown"
-)
+say("boo!", "ghost", what_color = "cyan", by_color = "saddlebrown")
 ```
 
 
@@ -199,8 +197,11 @@ say("boo!", "ghost",
 
 
 ``` r
-say("I love hooo you are!", "owl",
-  what_color = rgb(0, 1, 1), by_color = "#FF0000"
+say(
+  "I love hooo you are!",
+  "owl",
+  what_color = rgb(0, 1, 1),
+  by_color = "#FF0000"
 )
 ```
 
@@ -216,7 +217,8 @@ String styles together [crayon-style](https://github.com/r-lib/crayon#styles):
 
 ``` r
 say(
-  what = "rms", by = "rms",
+  what = "rms",
+  by = "rms",
   what_color = yellow$bgMagenta$bold,
   by_color = cyan$italic
 )
@@ -285,33 +287,6 @@ say("hell no!", type = "warning")
 ``` r
 say("hell no!", type = "string")
 #> [1] "\n __________ \n< hell no! >\n ---------- \n      \\\n       \\\n\n        ^__^ \n        (oo)\\ ________ \n        (__)\\         )\\ /\\ \n             ||------w|\n             ||      ||"
-```
-
-
-### Catfacts!!!!
-
-From the catfacts API  at <https://catfact.ninja>
-
-
-``` r
-say("catfact", "cat")
-#> 
-#>  ________________________________________________________ 
-#> < About 37% of American homes today have at least 1 cat. >
-#>  -------------------------------------------------------- 
-#>          \
-#>           \
-#> 
-#>             |\___/|
-#>           ==) ^Y^ (==
-#>             \  ^  /
-#>              )=*=(
-#>             /     \
-#>             |     |
-#>            /| | | |\
-#>            \| | |_|/\
-#>       jgs  //_// ___/
-#>                \_)
 ```
 
 ### Long cat
@@ -438,12 +413,15 @@ say(by = "fish")
 library(fortunes)
 say("fortune", "cat")
 #> 
-#>  ________________________________________________________ 
-#> / It is unusual for the actual data not to be available  \
-#> | in real problems.  Brian D. Ripley in reply to a       |
-#> | question how to fit a distribution if not the data but |
-#> \ only their histogram is available R-help June 2006     /
-#>  -------------------------------------------------------- 
+#>  _________________________________________________________ 
+#> / I'll go back to lurking in the daily R-Helps and not    \
+#> | ask any more questions until I've read all the old      |
+#> | R-help messages. I'm working on December 1998 right now |
+#> | and reading forward. Perhaps by next year I'll will     |
+#> | have read all the old R-help postings and I'll dare ask |
+#> | another question then.  Earl F. Glynn R-help January    |
+#> \ 2012                                                    /
+#>  --------------------------------------------------------- 
 #>          \
 #>           \
 #> 
@@ -660,13 +638,14 @@ See also `bat2`
 ``` r
 say("fortune", by = "monkey")
 #> 
-#>  ________________________________________________________ 
-#> / Duncan Murdoch: Others need to run under ESS. Francois \
-#> | Pinard: While this is a good things for Emacs lovers,  |
-#> | the requirement is rather unwelcome for pagans! :-)    |
-#> | Duncan Murdoch and Francois Pinard on the availability |
-#> \ of command completion R-help May 2006                  /
-#>  -------------------------------------------------------- 
+#>  _________________________________________________________ 
+#> / Karl Ove Hufthammer: Why not use 'predict.loess' (i.e., \
+#> | 'predict' on a loess object) directly? Greg Snow:       |
+#> | Because that would be simple, straightforward, and make |
+#> | sense, and not require knowledge about less obvious     |
+#> | functions.  Karl Ove Hufthammer and Greg Snow R-help    |
+#> \ May 2010                                                /
+#>  --------------------------------------------------------- 
 #>                \
 #>                 \
 #> 
@@ -691,11 +670,11 @@ say("fortune", by = "monkey")
 say("fortune", by = "daemon")
 #> 
 #>  _______________________________________________________ 
-#> / I wish <<- had never been invented, as it makes an    \
-#> | esoteric and dangerous feature of the language *seem* |
-#> | normal and reasonable. If you want to dumb down R/S   |
-#> | into a macro language, this is the operator for you.  |
-#> \ Bill Venables R-help July 2001                        /
+#> / Some people familiar with R describe it as a          \
+#> | supercharged version of Microsoft's Excel spreadsheet |
+#> | software.  Ashlee Vance in his article "Data Analysts |
+#> | Captivated by R's Power" The New York Times January   |
+#> \ 2009                                                  /
 #>  ------------------------------------------------------- 
 #>                  \
 #>                   \

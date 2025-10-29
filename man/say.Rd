@@ -86,7 +86,6 @@ You can put in any phrase you like to the \code{what} parameter, OR you
 can type in one of a few special phrases that do particular things.
 They are:
 \itemize{
-\item "catfact": A random cat fact from https://catfact.ninja
 \item "fortune": A random quote from an R coder, from fortunes library
 \item "time": Print the current time
 \item "rms": Prints a random 'fact' about Richard Stallman from the
@@ -165,10 +164,5 @@ say(fortune = 59, by = "clippy")
 \dontshow{if (rlang::is_installed("rmsfact")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 library(rmsfact)
 say("rms", "rms")
-\dontshow{\}) # examplesIf}
-\dontshow{if (rlang::is_installed("jsonlite")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-# Using the catfacts API
-library(jsonlite)
-say("catfact", "cat")
 \dontshow{\}) # examplesIf}
 }
