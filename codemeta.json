@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/sckott/cowsay",
   "issueTracker": "https://github.com/sckott/cowsay/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.2 (2024-10-31)",
+  "runtimePlatform": "R Under development (unstable) (2025-07-21 r88439)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -147,18 +147,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "jsonlite",
-      "name": "jsonlite",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
       "provider": {
@@ -221,5 +209,5 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "391.52KB"
+  "fileSize": "390.091KB"
 }
